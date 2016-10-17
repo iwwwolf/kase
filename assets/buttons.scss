@@ -1,0 +1,19 @@
+.btn {
+  font-size: 100%;
+  border: none;
+  transition: all 300ms;
+  &:active, &:focus {
+    outline: none;
+  }
+  &.btn-default {
+    //background: $btnBg;
+    color: #fff;
+    &:hover {
+      //background: darken($btnBg, 5%);
+    }
+  }
+  &.big {
+    border-radius: 22px;
+    padding: 12px 35px;
+  }
+}

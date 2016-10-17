@@ -1,0 +1,19 @@
+.header-search {
+	width: 100%;
+	padding: 8px 0;
+	background: #fff;
+	box-shadow: 0 3px 10px -4px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 100%;
+	left: 0;
+	form {
+		display: flex;
+		align-items: streth;
+	}
+}
+.header-search__input {
+	width: 100%;
+	margin-right: 5px;
+	border: 1px solid #e8edf0;
+	padding: 0 15px;
+}

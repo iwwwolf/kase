@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url('/build/fonts/MuseoSansCyrl-100.ttf'),
+  url('/build/fonts/MuseoSansCyrl-100.woff'),
+  url('/build/fonts/MuseoSansCyrl-100.otf'),
+  url('/build/fonts/MuseoSansCyrl-100.eot');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url('/build/fonts/MuseoSansCyrl-300.ttf'),
+  url('/build/fonts/MuseoSansCyrl-300.woff'),
+  url('/build/fonts/MuseoSansCyrl-300.otf'),
+  url('/build/fonts/MuseoSansCyrl-300.eot');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url('/build/fonts/MuseoSansCyrl-500.ttf'),
+  url('/build/fonts/MuseoSansCyrl-500.woff'),
+  url('/build/fonts/MuseoSansCyrl-500.otf'),
+  url('/build/fonts/MuseoSansCyrl-500.eot');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url('/build/fonts/MuseoSansCyrl-700.ttf'),
+  url('/build/fonts/MuseoSansCyrl-700.woff'),
+  url('/build/fonts/MuseoSansCyrl-700.otf'),
+  url('/build/fonts/MuseoSansCyrl-700.eot');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url('/build/fonts/MuseoSansCyrl-900.ttf'),
+  url('/build/fonts/MuseoSansCyrl-900.woff'),
+  url('/build/fonts/MuseoSansCyrl-900.otf'),
+  url('/build/fonts/MuseoSansCyrl-900.eot');
+  font-weight: 900;
+  font-style: normal;
+}
+
+$indexFont: 'MuseoSansCyrl', 'Arial', sans-serif;
+
+$defaultColor: #45464f;
+$minorColor: #169d1b;
+
+$fz10: 71.429%;
+$fz11: 78.572%;
+$fz12: 85.714%;
+$fz13: 92.86%;
+$fz14: 100%;
+$fz15: 107.142%;
+$fz16: 114.286%;
+$fz18: 128.572%;
+$fz19: 135.714%;
+$fz21: 150%;
+$fz24: 171.428%;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font: normal 14px/1.357 $indexFont;
+  color: $defaultColor;
+  min-width: 320px;
+  background: #f8fafb;
+  position: relative;
+  overflow-y: auto;
+  padding-right: 0 !important;
+  &.modal-open {
+    padding-right: 17px !important;
+  }
+}
+
+*:focus, *:active {
+  outline: none;
+}
+
+/* стиль для прижатия футера */
+#wrap {
+  min-height: 100%;
+  margin: 0 auto -100px;
+  padding: 0 0 100px;
+  position: relative;
+  background: #f8fafb;
+}
+
+a {
+  color: #1666bc;
+  transition: all 300ms;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.container {
+	padding: {
+		left: 20px;
+		right: 20px;
+	}
+}
+.row {
+  margin: 0 -20px;
+}
+[class*="col-"] {
+  padding: 0 20px;
+}

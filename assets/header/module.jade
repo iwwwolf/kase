@@ -1,0 +1,48 @@
+include ../menu/module
+header#header
+	include ../header-search/module
+	.container
+		.header__content
+			.header__left-col
+				a#menuBtn.header__menu-button(href="#")
+					img(src="images/menu-icon.svg", alt="Menu")
+				.header__logo
+					.header__logo-img
+						img(src="images/logo.svg", alt="KASE")
+					.header__logo-text
+						div Қазақстан қор биржасы
+						div Казахстанская фондовая биржа
+						div Kazakhstan Stock Exchange
+			.header__right-col
+				a(href="#", id="searchBtn", class="header__search-button")
+					img(src="images/search-icon.svg", alt="Search")
+				.header__language
+					ul.header__language-list.clearfix
+						li.active: a(href="#") Рус 
+						li: a(href="#") Қаз 
+						li: a(href="#") Eng 
+					.dropdown
+						a.dropdown-link(href="#", data-toggle="dropdown", role="button") Рус
+						ul(class="dropdown-menu")
+							li: a(href="#") Қаз
+							li: a(href="#") Eng
+				.header__login
+					.header__login--mobile
+						a(href="#")
+							img(src="images/login-mob.svg", alt="")
+
+							//- Когда юзер авторизован:
+							//-img(src="images/user-icon.svg", alt="")
+					.header__login--desctop
+						a(href="#")
+							//- по-русски
+							img(src="images/login-ru.svg", alt="Войти")
+
+							//- по-казахски
+							//-img(src="images/login-kaz.svg", alt="Кiру")
+
+							//- по-английски
+							//-img(src="images/login-en.svg", alt="Login")
+
+							//- Когда юзер авторизован:
+							//- img(src="images/user-icon.svg", alt="")
