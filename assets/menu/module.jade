@@ -1,167 +1,168 @@
 #menu.menu(style="display: none;")
 	a#menuClose.menu__close(href="#")
 		img(src="images/close-white.svg", alt="Закрыть")
-	.container
-		#accordion(role="tablist", aria-multiselectable="true")
-			.panel.menu__panel
-				#headingOne.panel-heading(role="tab")
-					.panel-title
-						a(href="#collapseOne", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseOne") Рынки и торги
-				#collapseOne.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingOne")
-					.panel-body
-						.menu__cols
-							.menu__col
-								.title.first Рынки
-								ul
-									li: a(href="#") Акции
-									li: a(href="#") Паи
-									li: a(href="#") Корпоративные облигации
-									li: a(href="#") Ценные бумаги МФО
-									li: a(href="#") Государственные ценные бумаги
-									li: a(href="#") Иностранные валюты
-									li: a(href="#") Операции репо
-									li: a(href="#") Деривативы
-							.menu__col
-								.title.first Индикаторы
-								ul
-									li: a(href="#") Фондовый рынок
-									li: a(href="#") Денежный рынок
-									li: a(href="#") Совместные индексы
-							.menu__col
-								.title.first Торги
-								ul
-									li: a(href="#") Список инструментов
-									li: a(href="#") Просмотр торгов
-									li: a(href="#") Регламент торгов и клиринга
-									li: a(href="#") Клиринг и расчеты
-							.menu__col
-								.title.first Оценка и параметры
-								ul
-									li: a(href="#") Рыночная оценка
-									li: a(href="#") Риск-параметры акций
-									li: a(href="#") Средневзвешенные цены
+	.scroll-block
+		.container
+			#accordion(role="tablist", aria-multiselectable="true")
+				.panel.menu__panel
+					#headingOne.panel-heading(role="tab")
+						.panel-title
+							a(href="#collapseOne", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseOne") Рынки и торги
+					#collapseOne.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingOne")
+						.panel-body
+							.menu__cols
+								.menu__col
+									.title.first Рынки
+									ul
+										li: a(href="#") Акции
+										li: a(href="#") Паи
+										li: a(href="#") Корпоративные облигации
+										li: a(href="#") Ценные бумаги МФО
+										li: a(href="#") Государственные ценные бумаги
+										li: a(href="#") Иностранные валюты
+										li: a(href="#") Операции репо
+										li: a(href="#") Деривативы
+								.menu__col
+									.title.first Индикаторы
+									ul
+										li: a(href="#") Фондовый рынок
+										li: a(href="#") Денежный рынок
+										li: a(href="#") Совместные индексы
+								.menu__col
+									.title.first Торги
+									ul
+										li: a(href="#") Список инструментов
+										li: a(href="#") Просмотр торгов
+										li: a(href="#") Регламент торгов и клиринга
+										li: a(href="#") Клиринг и расчеты
+								.menu__col
+									.title.first Оценка и параметры
+									ul
+										li: a(href="#") Рыночная оценка
+										li: a(href="#") Риск-параметры акций
+										li: a(href="#") Средневзвешенные цены
 
-			.panel.menu__panel
-				#headingTwo.panel-heading(role="tab")
-					.panel-title
-						a(href="#collapseTwo", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseTwo") Продукты и услуги
-				#collapseTwo.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingTwo")
-					.panel-body
-						.menu__cols
-							.menu__col
-								.title.first Листинг
-								ul
-									li: a(href="#") Список компаний
-									li: a(href="#") Что такое листинг
-									li: a(href="#") Листинг на KASE
-									li: a(href="#") IPO
-									li: a(href="#") Нелистинговый сектор
-									li: a(href="#") Дипломанты номинаций
-							.menu__col
-								.title.first Членство
-								ul
-									li: a(href="#") Список членов KASE
-									li: a(href="#") Рэнкинг активности
-									li: a(href="#") Дипломанты номинаций 
-							.menu__col
-								.title.first Торговая система
-								ul
-									li: a(href="#") Как подключиться к KASE
-									li: a(href="#") Загрузки
-									li: a(href="#") Инструкции
-									li: a(href="#") FIX протокол
-							.menu__col
-								.title.first Информационные продукты
-								ul
-									li: a(href="#") Биржевая информация и программное обеспечение
+				.panel.menu__panel
+					#headingTwo.panel-heading(role="tab")
+						.panel-title
+							a(href="#collapseTwo", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseTwo") Продукты и услуги
+					#collapseTwo.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingTwo")
+						.panel-body
+							.menu__cols
+								.menu__col
+									.title.first Листинг
+									ul
+										li: a(href="#") Список компаний
+										li: a(href="#") Что такое листинг
+										li: a(href="#") Листинг на KASE
+										li: a(href="#") IPO
+										li: a(href="#") Нелистинговый сектор
+										li: a(href="#") Дипломанты номинаций
+								.menu__col
+									.title.first Членство
+									ul
+										li: a(href="#") Список членов KASE
+										li: a(href="#") Рэнкинг активности
+										li: a(href="#") Дипломанты номинаций 
+								.menu__col
+									.title.first Торговая система
+									ul
+										li: a(href="#") Как подключиться к KASE
+										li: a(href="#") Загрузки
+										li: a(href="#") Инструкции
+										li: a(href="#") FIX протокол
+								.menu__col
+									.title.first Информационные продукты
+									ul
+										li: a(href="#") Биржевая информация и программное обеспечение
 
-			.panel.menu__panel
-				#headingThree.panel-heading(role="tab")
-					.panel-title
-						a(href="#collapseThree", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseThree") Правила
-				#collapseThree.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingThree")
-					.panel-body
-						.menu__cols
-							.menu__col
-								.title.first Правила KASE
-								ul
-									li: a(href="#") Листинг
-									li: a(href="#") Членство
-									li: a(href="#") Торги
-									li: a(href="#") Клиринг
-									li: a(href="#") Расчеты
-									li: a(href="#") Информация
-									li: a(href="#") Методики 
-							.menu__col
-								.title.first Корпоративное управление
+				.panel.menu__panel
+					#headingThree.panel-heading(role="tab")
+						.panel-title
+							a(href="#collapseThree", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseThree") Правила
+					#collapseThree.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingThree")
+						.panel-body
+							.menu__cols
+								.menu__col
+									.title.first Правила KASE
+									ul
+										li: a(href="#") Листинг
+										li: a(href="#") Членство
+										li: a(href="#") Торги
+										li: a(href="#") Клиринг
+										li: a(href="#") Расчеты
+										li: a(href="#") Информация
+										li: a(href="#") Методики 
+								.menu__col
+									.title.first Корпоративное управление
 
-								ul
-									li: a(href="#") Материалы и статьи Международной финансовой корпорации (IFC)
-									li: a(href="#") Материалы и статьи Организации экономического сотрудничества и развития (OECD) 
-							.menu__col
-								.title.first Законодательство
-								ul
-									li: a(href="#") Рынок ценных бумаг
-									li: a(href="#") Акционерные общества
-									li: a(href="#") Инвестиционные фонды
-									li: a(href="#") Государственные ценные бумаги
-							.menu__col
-								.title: a(href="#") Дополнительные материалы
+									ul
+										li: a(href="#") Материалы и статьи Международной финансовой корпорации (IFC)
+										li: a(href="#") Материалы и статьи Организации экономического сотрудничества и развития (OECD) 
+								.menu__col
+									.title.first Законодательство
+									ul
+										li: a(href="#") Рынок ценных бумаг
+										li: a(href="#") Акционерные общества
+										li: a(href="#") Инвестиционные фонды
+										li: a(href="#") Государственные ценные бумаги
+								.menu__col
+									.title: a(href="#") Дополнительные материалы
 
-			.panel.menu__panel
-				#headingFour.panel-heading(role="tab")
-					.panel-title
-						a(href="#collapseFour", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseFour") Пресс-центр
-				#collapseFour.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingFour")
-					.panel-body
-						.menu__cols
-							.menu__col
-								.title.first Новости
-								ul
-									li: a(href="#") Новости рынков
-									li: a(href="#") Новости компаний
-									li: a(href="#") Новости Биржи
-							.menu__col
-								ul
-									li.title: a(href="#") Информационная поддержка
-									li.title: a(href="#") Мероприятия
-									li.title: a(href="#") Доклады и презентации
-							.menu__col
-								ul
-									li.title: a(href="#") Пресс-релизы
-									li.title: a(href="#") СМИ о нас
-							.menu__col
-								ul
-									li.title: a(href="#") Корпоративный стиль
-									li.title: a(href="#") Контакты пресс-центра
+				.panel.menu__panel
+					#headingFour.panel-heading(role="tab")
+						.panel-title
+							a(href="#collapseFour", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseFour") Пресс-центр
+					#collapseFour.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingFour")
+						.panel-body
+							.menu__cols
+								.menu__col
+									.title.first Новости
+									ul
+										li: a(href="#") Новости рынков
+										li: a(href="#") Новости компаний
+										li: a(href="#") Новости Биржи
+								.menu__col
+									ul
+										li.title: a(href="#") Информационная поддержка
+										li.title: a(href="#") Мероприятия
+										li.title: a(href="#") Доклады и презентации
+								.menu__col
+									ul
+										li.title: a(href="#") Пресс-релизы
+										li.title: a(href="#") СМИ о нас
+								.menu__col
+									ul
+										li.title: a(href="#") Корпоративный стиль
+										li.title: a(href="#") Контакты пресс-центра
 
-			.panel.menu__panel
-				#headingFive.panel-heading(role="tab")
-					.panel-title
-						a(href="#collapseFive", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseFive") О Бирже
-				#collapseFive.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingFive")
-					.panel-body
-						.menu__cols
-							.menu__col
-								.title.first О нас
-								ul
-									li: a(href="#") История
-									li: a(href="#") Миссия и ценности
-									li: a(href="#") Руководство
-									li: a(href="#") Комитеты и комиссии
-									li: a(href="#") Участие в профессиональных организациях
-									li: a(href="#") Корпоративные документы
-							.menu__col
-								.title.first Акционерам
-								ul
-									li: a(href="#") Отчетность
-									li: a(href="#") Новости и уведомления
-							.menu__col
-								ul
-									li.title: a(href="#") Закупки
-									li.title: a(href="#") Реквизиты
-							.menu__col
-								ul
-									li.title: a(href="#") Вакансии
-									li.title: a(href="#") Контакты
-									
+				.panel.menu__panel
+					#headingFive.panel-heading(role="tab")
+						.panel-title
+							a(href="#collapseFive", role="button", data-toggle="collapse", data-parent="#accordion",  aria-expanded="true", aria-controls="collapseFive") О Бирже
+					#collapseFive.panel-collapse.collapse(role="tabpanel", aria-labelledby="headingFive")
+						.panel-body
+							.menu__cols
+								.menu__col
+									.title.first О нас
+									ul
+										li: a(href="#") История
+										li: a(href="#") Миссия и ценности
+										li: a(href="#") Руководство
+										li: a(href="#") Комитеты и комиссии
+										li: a(href="#") Участие в профессиональных организациях
+										li: a(href="#") Корпоративные документы
+								.menu__col
+									.title.first Акционерам
+									ul
+										li: a(href="#") Отчетность
+										li: a(href="#") Новости и уведомления
+								.menu__col
+									ul
+										li.title: a(href="#") Закупки
+										li.title: a(href="#") Реквизиты
+								.menu__col
+									ul
+										li.title: a(href="#") Вакансии
+										li.title: a(href="#") Контакты
+										

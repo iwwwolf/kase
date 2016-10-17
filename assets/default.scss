@@ -112,3 +112,47 @@ a {
 [class*="col-"] {
   padding: 0 20px;
 }
+
+.scroll-block {
+  position: relative;
+  overflow: visible;
+  &:hover {
+    .jspVerticalBar {
+      opacity: 0.5;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    }
+  }
+  .jspPane {
+    width: 100% !important;
+    min-height: 100%;
+  }
+  .mCSB_inside>.mCSB_container {
+    margin-right: 0;
+  }
+  .jspVerticalBar {
+    background: none;
+    width: 4px;
+    transition: all 300ms;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    .jspTrack {
+      width: 4px;
+      background: #e8edf0;
+      margin: 0;
+      border-radius: 2px;
+    }
+    .jspDrag {
+      background: #828282;
+      border-radius: 2px;
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .scroll-block {
+    overflow: hidden;
+    height: 100%;
+  }
+}
