@@ -9,6 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jquery.jscrollpane.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
     <link href="css/owl.carousel.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -280,13 +281,42 @@
           </div>
         </div>
       </header>
-      <div>content</div>
+      <div id="greatSlider" class="great-slider swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="great-slider__item"><img src="img-content/img-1.jpg" alt="" class="great-slider__image">
+              <div class="great-slider__item-content">
+                <div>
+                  <div class="great-slider__title">Будь в Trade <span class="great-slider__title--green">вместе с KASE</span></div>
+                  <div class="great-slider__text">Узнай как успешно торговать на бирже</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="great-slider__item"><img src="img-content/img-2.jpg" alt="" class="great-slider__image">
+              <div class="great-slider__item-content">
+                <div>
+                  <div class="great-slider__title">Будь в Trade <span class="great-slider__title--green">вместе с KASE</span></div>
+                  <div class="great-slider__text">Узнай как успешно торговать на бирже</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="greatSliderPages" class="great-slider__pagination"></div>
+        <div class="great-slider__arrows">
+          <div id="greatSliderNext" class="great-slider__arrow"> <img src="images/arrow-up-white.svg" alt=""></div>
+          <div id="greatSliderPrev" class="great-slider__arrow"><img src="images/arrow-down-white.svg" alt=""></div>
+        </div>
+      </div>
     </div>
     <footer></footer>
     <script type="text/javascript" src="js/jquery-3.0.0.min.js"> </script>
     <script type="text/javascript" src="js/bootstrap.min.js"> </script>
     <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+    <script type="text/javascript" src="js/swiper.3.3.1.jquery.min.js"> </script>
     <script type="text/javascript" src="js/owl.carousel.min.js"> </script>
     <script type="text/javascript" src="js/main.js"> </script>
   </body>

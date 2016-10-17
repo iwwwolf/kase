@@ -17,3 +17,10 @@
 	border: 1px solid #e8edf0;
 	padding: 0 15px;
 }
+
+@media (min-width: 992px) {
+	.header-search {
+		background: rgba(255, 255, 255, 0.6);
+		box-shadow: none;
+	}
+}
