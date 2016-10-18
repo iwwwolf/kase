@@ -1,0 +1,31 @@
+.fixed-social {
+	display: none;
+	font-size: $fz19;
+	position: fixed;
+	left: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		border: 1px solid #b0b2b6;
+		border-radius: 50%;
+		color: #b0b2b6;
+		margin-bottom: 4px;
+	}
+}
+@media (min-width: 1260px){
+	.fixed-social {
+		display: block;
+		left: 10px;
+	}
+}
+@media (min-width: 1330px){
+	.fixed-social {
+		left: 50px;
+	}
+}

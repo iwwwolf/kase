@@ -4,7 +4,7 @@ $(document).ready(function(){
     var winWidth = $(window).width();
 
     /* скроллинг в блоках */
-    if(!mobile || winWidth >= 991){
+    if(!mobile){
 	    if($('.scroll-block').length){
 	    	var scrollBlock = $('.scroll-block').jScrollPane({
 	    		autoReinitialise: true,
@@ -19,4 +19,5 @@ $(document).ready(function(){
 	//= require "header-search/script.js"
 	//= require "menu/script.js"
 	//= require "great-slider/script.js"
+	//= require "home-news/script.js"
 });

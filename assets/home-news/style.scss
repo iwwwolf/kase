@@ -1,0 +1,157 @@
+.home-news {
+	background: #fff;
+	margin: 0 -15px 9px;
+	border: 1px solid #d1d1d1;
+	padding: 18px 15px 18px;
+	.date {
+		margin-bottom: 2px;
+	}
+}
+.home-news__item {
+	margin-bottom: 10px;
+	p {
+		margin: 0;
+	}
+}
+.home-news__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #e1e1e3;
+	padding-bottom: 2px;
+	margin-bottom: 16px;
+	.title {
+		font-weight: 500;
+		a {
+			color: $minorColor;
+		}
+		i {
+			margin-left: 20px;
+		}
+	}
+}
+.home-news__pagination {
+	.swiper-pagination-bullet {
+		width: 8px;
+		height: 8px;
+		background: transparent;
+		border: 1px solid $minorColor;
+		opacity: 1;
+		transition: background 300ms;
+		margin-left: 5px;
+		&.swiper-pagination-bullet-active {
+			background: $minorColor;
+		}
+	}
+}
+.home-news__footer {
+	display: none;
+	text-align: center;
+	font-size: $fz12;
+	font-weight: 300;
+	padding-top: 20px;
+	a {
+		color: $defaultColor;
+		opacity: 0;
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px){
+	.home-news {
+		margin: {
+			left: -30px;
+			right: -30px;
+			bottom: 18px;
+		};
+		padding: 30px 30px 36px;
+	}
+	.home-news__header {
+		padding-bottom: 5px;
+		margin-bottom: 32px;
+		.title {
+			font-size: $fz28;
+			i {
+				vertical-align: middle;
+				margin-left: 38px;
+			}
+		}
+	}
+	.home-news__pagination {
+		.swiper-pagination-bullet {
+			width: 14px;
+			height: 14px;
+			margin-left: 10px;
+		}
+	}
+	.home-news__item {
+		p {
+			font-size: $fz28;
+		}
+	}
+}
+
+@media (min-width: 769px){
+	.home-news__parent {
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			.col-md-4 {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.home-news {
+		border: none;
+		background: none;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+	}
+	.home-news__header {
+		padding-bottom: 5px;
+		margin-bottom: 32px;
+		.title {
+			font-size: $fz21;
+			font-weight: 300;
+			i {
+				vertical-align: middle;
+				margin-left: 38px;
+			}
+		}
+	}
+}
+@media (min-width: 992px){
+	.home-news__parent {
+		margin-bottom: 30px;
+	}
+	.swiper-container-horizontal {
+		.swiper-wrapper.scroll-block {
+			overflow: visible;
+		}
+	}
+}
+@media (min-width: 1080px) {
+	.home-news {
+		.scroll-block {
+			padding-top: 12px;
+			height: 366px;
+		}
+		&:hover {
+			.home-news__footer {
+				a {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.home-news__item {
+		padding-right: 15px;
+	}
+	.home-news__header {
+		margin-bottom: 0;
+	}
+	.home-news__footer {
+		display: block;
+	}
+}

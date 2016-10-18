@@ -10,3 +10,11 @@ block content
 				.col-md-4.col-sm-6
 					include ../quotes-info/module
 
+		- var newsTitle = ["Рынки", "Компании", "Биржа"];
+		.home-news__parent
+			h2 Новости
+			.row
+				for title in newsTitle
+					.col-md-4.col-sm-6
+						include ../home-news/module
+
