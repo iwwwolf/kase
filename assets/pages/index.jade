@@ -3,3 +3,10 @@ block content
 	include ../great-slider/module
 	.container
 		include ../navigation/module
+
+		- var quotesTitle = ["Акции", "Валюты", "Деньги"];
+		.row.quotes-info__parent
+			for title in quotesTitle
+				.col-md-4.col-sm-6
+					include ../quotes-info/module
+

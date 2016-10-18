@@ -47,7 +47,7 @@
 $indexFont: 'MuseoSansCyrl', 'Arial', sans-serif;
 
 $defaultColor: #45464f;
-$minorColor: #169d1b;
+$minorColor: #038726;
 
 $fz10: 71.429%;
 $fz11: 78.572%;
@@ -60,7 +60,10 @@ $fz18: 128.572%;
 $fz19: 135.714%;
 $fz21: 150%;
 $fz24: 171.428%;
+$fz26: 185.7142857142857%;
 $fz28: 200%;
+$fz30: 214.2857142857143%;
+$fz38: 271.4285714285714%;
 
 html,
 body {
@@ -107,15 +110,15 @@ img {
 
 .container {
 	padding: {
-		left: 20px;
-		right: 20px;
+		left: 15px;
+		right: 15px;
 	}
 }
 .row {
-  margin: 0 -20px;
+  margin: 0 -15px;
 }
 [class*="col-"] {
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .scroll-block {
@@ -153,6 +156,12 @@ img {
       border-radius: 2px;
     }
   }
+}
+.red {
+  color: #ff382c;
+}
+.green {
+  color: #359e3f;
 }
 
 @media (min-width: 992px){
