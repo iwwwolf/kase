@@ -169,7 +169,16 @@ img {
   font-weight: 500;
 }
 
+h2, .h2 {
+  font-size: $fz15;
+  margin: 0 0 12px;
+}
+
 @media (min-width: 649px) and (max-width: 768px){
+  h2, .h2 {
+    font-size: $fz30;
+    margin: 0 0 24px;
+  }
   .container {
     padding: {
       left: 30px;
@@ -185,6 +194,13 @@ img {
   }
   .date {
     font-size: $fz24;
+  }
+}
+
+@media (min-width: 769px){
+  h2, .h2 {
+    font-size: $fz26;
+    margin-bottom: 20px;
   }
 }
 

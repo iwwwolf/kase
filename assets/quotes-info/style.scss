@@ -66,8 +66,14 @@
 		}
 	}
 }
+.quotes-info__parent {
+	margin-bottom: 20px;
+}
 
 @media (min-width: 649px) and (max-width: 768px){
+	.quotes-info__parent {
+		margin-bottom: 30px;
+	}
 	.quotes-info {
 		margin: {
 			left: -30px;
@@ -101,6 +107,7 @@
 
 @media (min-width: 769px){
 	.quotes-info__parent {
+		//margin-bottom: 20px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: stretch;
@@ -175,5 +182,10 @@
 				font-size: $fz14;
 			}
 		}
+	}
+}
+@media (min-width: 992px){
+	.quotes-info__parent {
+		margin-bottom: 30px;
 	}
 }
