@@ -16,9 +16,9 @@
   <body>
     <div id="wrap">
       <div class="fixed-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-youtube"></i></a></div>
-      <div id="menu" style="display: none;" class="menu"><a id="menuClose" href="#" class="menu__close"><img src="images/close-white.svg" alt="Закрыть"></a>
-        <div class="scroll-block">
-          <div class="container">
+      <div id="menu" class="menu">
+        <div class="menu__container">
+          <div class="container"><a id="menuClose" href="#" class="menu__close"><img src="images/close-white.svg" alt="Закрыть"></a>
             <div id="accordion" role="tablist" aria-multiselectable="true">
               <div class="panel menu__panel">
                 <div id="headingOne" role="tab" class="panel-heading">
@@ -239,50 +239,52 @@
           </div>
         </div>
       </div>
-      <header id="header">
-        <div id="headerSearch" style="display: none;" class="header-search">
-          <div class="container">
-            <form action="">
-              <input type="text" placeholder="Найти..." class="header-search__input">
-              <button type="submit" class="btn">Искать</button>
-            </form>
-          </div>
-        </div>
+      <div id="headerSearch" style="display: none;" class="header-search">
         <div class="container">
-          <div class="header__content">
-            <div class="header__left-col"><a id="menuBtn" href="#" class="header__menu-button"><img src="images/menu-icon.svg" alt="Menu"></a>
-              <div class="header__logo">
-                <div class="header__logo-img"><img src="images/logo.svg" alt="KASE"></div>
-                <div class="header__logo-text">
-                  <div>Қазақстан қор биржасы</div>
-                  <div>Казахстанская фондовая биржа</div>
-                  <div>Kazakhstan Stock Exchange</div>
+          <form action="">
+            <input type="text" placeholder="Найти..." class="header-search__input">
+            <button type="submit" class="btn">Искать</button>
+          </form>
+        </div>
+      </div>
+      <header id="header">
+        <div class="header__container">
+          <div class="container">
+            <div class="header__content">
+              <div class="header__left-col"><a id="menuBtn" href="#" class="header__menu-button"><img src="images/menu-border.svg" alt=""><span class="header__menu-button-lines"><span></span><span></span><span></span></span></a>
+                <div class="header__logo">
+                  <div class="header__logo-img"><img src="images/logo.svg" alt="KASE"></div>
+                  <div class="header__logo-text">
+                    <div>Қазақстан қор биржасы</div>
+                    <div>Казахстанская фондовая биржа</div>
+                    <div>Kazakhstan Stock Exchange</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="header__right-col"><a href="#" id="searchBtn" class="header__search-button"><img src="images/search-icon.svg" alt="Search"></a>
-              <div class="header__language">
-                <ul class="header__language-list clearfix">
-                  <li class="active"><a href="#">Рус </a></li>
-                  <li><a href="#">Қаз </a></li>
-                  <li><a href="#">Eng </a></li>
-                </ul>
-                <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рус</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Қаз</a></li>
-                    <li><a href="#">Eng</a></li>
+              <div class="header__right-col"><a href="#" id="searchBtn" class="header__search-button"><img src="images/search-icon.svg" alt="Search"></a>
+                <div class="header__language">
+                  <ul class="header__language-list clearfix">
+                    <li class="active"><a href="#">Рус </a></li>
+                    <li><a href="#">Қаз </a></li>
+                    <li><a href="#">Eng </a></li>
                   </ul>
+                  <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рус</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Қаз</a></li>
+                      <li><a href="#">Eng</a></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="header__login">
-                <div class="header__login--mobile"><a href="#"><img src="images/login-mob.svg" alt=""></a></div>
-                <div class="header__login--desctop"><a href="#"><img src="images/login-ru.svg" alt="Войти"></a></div>
+                <div class="header__login">
+                  <div class="header__login--mobile"><a href="#"><img src="images/login-mob.svg" alt=""></a></div>
+                  <div class="header__login--desctop"><a href="#"><img src="images/login-border.svg" alt="Войти"><span class="header__login-text">Войти<span class="arr">&rarr;</span></span></a></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <div class="container">
+      <div class="great-slider__parent container">
         <div id="greatSlider" class="great-slider swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -308,10 +310,12 @@
           </div>
           <div id="greatSliderPages" class="great-slider__pagination"></div>
           <div class="great-slider__arrows">
-            <div id="greatSliderNext" class="great-slider__arrow"> <img src="images/arrow-up-white.svg" alt=""></div>
-            <div id="greatSliderPrev" class="great-slider__arrow"><img src="images/arrow-down-white.svg" alt=""></div>
+            <div id="greatSliderNext" class="great-slider__arrow great-slider__arrow--prev"> <img src="images/arrow-up-white.svg" alt=""></div>
+            <div id="greatSliderPrev" class="great-slider__arrow great-slider__arrow--next"><img src="images/arrow-down-white.svg" alt=""></div>
           </div>
         </div>
+      </div>
+      <div class="container">
         <div class="navigation">
           <ul>
             <li><a href="#">Компаниям</a></li>
@@ -325,7 +329,7 @@
             <div class="quotes-info">
               <div class="quotes-info__container">
                 <div class="quotes-info__header">
-                  <div class="title"><a href="#">Акции</a><i class="fa fa-angle-right"></i></div><a class="quotes-info__menu"><img src="images/menu-mini-icon.svg" alt=""></a>
+                  <div class="title"><a href="#">Акции<i class="fa fa-angle-right"></i></a></div><a class="quotes-info__menu"><img src="images/menu-mini-icon.svg" alt=""></a>
                 </div>
                 <div class="quotes-info__content">
                   <table class="quotes-info__table">
@@ -340,7 +344,7 @@
                     </thead>
                     <tfoot>
                       <tr>
-                        <td>Индекс KASE</td>
+                        <td><a href="#">Индекс KASE</a></td>
                         <td>1 018,15</td>
                         <td><span class="green">+7,81</span></td>
                         <td><span class="green">+7,81</span></td>
@@ -349,35 +353,35 @@
                     </tfoot>
                     <tbody>
                       <tr>
-                        <td>KEGC</td>
+                        <td><a href="#">KEGC</a></td>
                         <td>920,33</td>
                         <td><span class="red">-0,09</span></td>
                         <td><span class="red">-0,09</span></td>
                         <td><img src="images/graph-red.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
                         <td><img src="images/graph-green.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KEGC</td>
+                        <td><a href="#">KEGC</a></td>
                         <td>920,33</td>
                         <td><span class="red">-0,09</span></td>
                         <td><span class="red">-0,09</span></td>
                         <td><img src="images/graph-red.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
                         <td><img src="images/graph-green.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
@@ -393,7 +397,7 @@
             <div class="quotes-info">
               <div class="quotes-info__container">
                 <div class="quotes-info__header">
-                  <div class="title"><a href="#">Валюты</a><i class="fa fa-angle-right"></i></div><a class="quotes-info__menu"><img src="images/menu-mini-icon.svg" alt=""></a>
+                  <div class="title"><a href="#">Валюты<i class="fa fa-angle-right"></i></a></div><a class="quotes-info__menu"><img src="images/menu-mini-icon.svg" alt=""></a>
                 </div>
                 <div class="quotes-info__content">
                   <table class="quotes-info__table">
@@ -408,7 +412,7 @@
                     </thead>
                     <tfoot>
                       <tr>
-                        <td>Индекс KASE</td>
+                        <td><a href="#">Индекс KASE</a></td>
                         <td>1 018,15</td>
                         <td><span class="green">+7,81</span></td>
                         <td><span class="green">+7,81</span></td>
@@ -417,35 +421,35 @@
                     </tfoot>
                     <tbody>
                       <tr>
-                        <td>KEGC</td>
+                        <td><a href="#">KEGC</a></td>
                         <td>920,33</td>
                         <td><span class="red">-0,09</span></td>
                         <td><span class="red">-0,09</span></td>
                         <td><img src="images/graph-red.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
                         <td><img src="images/graph-green.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KEGC</td>
+                        <td><a href="#">KEGC</a></td>
                         <td>920,33</td>
                         <td><span class="red">-0,09</span></td>
                         <td><span class="red">-0,09</span></td>
                         <td><img src="images/graph-red.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
                         <td><img src="images/graph-green.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
@@ -461,7 +465,7 @@
             <div class="quotes-info">
               <div class="quotes-info__container">
                 <div class="quotes-info__header">
-                  <div class="title"><a href="#">Деньги</a><i class="fa fa-angle-right"></i></div><a class="quotes-info__menu"><img src="images/menu-mini-icon.svg" alt=""></a>
+                  <div class="title"><a href="#">Деньги<i class="fa fa-angle-right"></i></a></div><a class="quotes-info__menu"><img src="images/menu-mini-icon.svg" alt=""></a>
                 </div>
                 <div class="quotes-info__content">
                   <table class="quotes-info__table">
@@ -476,7 +480,7 @@
                     </thead>
                     <tfoot>
                       <tr>
-                        <td>Индекс KASE</td>
+                        <td><a href="#">Индекс KASE</a></td>
                         <td>1 018,15</td>
                         <td><span class="green">+7,81</span></td>
                         <td><span class="green">+7,81</span></td>
@@ -485,35 +489,35 @@
                     </tfoot>
                     <tbody>
                       <tr>
-                        <td>KEGC</td>
+                        <td><a href="#">KEGC</a></td>
                         <td>920,33</td>
                         <td><span class="red">-0,09</span></td>
                         <td><span class="red">-0,09</span></td>
                         <td><img src="images/graph-red.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
                         <td><img src="images/graph-green.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KEGC</td>
+                        <td><a href="#">KEGC</a></td>
                         <td>920,33</td>
                         <td><span class="red">-0,09</span></td>
                         <td><span class="red">-0,09</span></td>
                         <td><img src="images/graph-red.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>
                         <td><img src="images/graph-green.png" alt=""></td>
                       </tr>
                       <tr>
-                        <td>KZTO</td>
+                        <td><a href="#">KZTO</a></td>
                         <td>7 510,56</td>
                         <td><span class="green">+20,18</span></td>
                         <td><span class="green">+20,18</span></td>

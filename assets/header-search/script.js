@@ -2,9 +2,9 @@ $('#searchBtn').on('click', function(e){
 	e.preventDefault();
 	if(!$(this).hasClass('active')){
 		$(this).addClass('active');
-		$('#headerSearch').fadeIn();
+		$('#headerSearch').slideDown();
 	} else {
 		$(this).removeClass('active');
-		$('#headerSearch').fadeOut();
+		$('#headerSearch').slideUp();
 	}
 })

@@ -1,5 +1,5 @@
 if(winWidth >= 992) {
-	var headerHeight = $('#header').outerHeight();
+	var headerHeight = $('#header .header__container').outerHeight();
 
 	$('body').append('<style>.great-slider__item:after{top: ' + headerHeight + 'px;}</style>');
 

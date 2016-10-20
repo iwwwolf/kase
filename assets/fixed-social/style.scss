@@ -16,6 +16,10 @@
 		border-radius: 50%;
 		color: #b0b2b6;
 		margin-bottom: 4px;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 @media (min-width: 1260px){

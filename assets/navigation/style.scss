@@ -47,12 +47,12 @@
 		height: 56px;
 		margin: -56px 0 30px;
 		text-align: center;
-		font-size: $fz13;
+		font-size: $fz15;
 		ul {
 			display: inline-block;
 			white-space: nowrap;
 			margin: 0;
-			padding: 15px 30px 0;
+			padding: 0 30px 0;
 			position: relative;
 			&:after {
 				width: 100%;
@@ -74,12 +74,28 @@
 			}
 		}
 		a {
-			padding: 0;
+			padding: 15px 0 0;
 			background: none;
 			color: rgba(255,255,255,0.8);
+			position: relative;
+			&:after {
+				display: block;
+				width: 100%;
+				height: 0;
+				background-color: #fff;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: height 150ms;
+				content: "";
+			}
 			&:hover, &:active {
 				background: none;
 				color: #fff;
+				&:after {
+					height: 3px;
+				}
+
 			}
 		}
 	}

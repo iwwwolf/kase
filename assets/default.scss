@@ -63,6 +63,8 @@ $fz24: 171.428%;
 $fz26: 185.7142857142857%;
 $fz28: 200%;
 $fz30: 214.2857142857143%;
+$fz32: 228.5714285714286%;
+$fz36: 257.1428571428571%;
 $fz38: 271.4285714285714%;
 
 html,
@@ -77,10 +79,6 @@ body {
   background: #f8fafb;
   position: relative;
   overflow-y: auto;
-  padding-right: 0 !important;
-  &.modal-open {
-    padding-right: 17px !important;
-  }
 }
 
 *:focus, *:active {
@@ -94,6 +92,7 @@ body {
   padding: 0 0 50px;
   position: relative;
   background: #f8fafb;
+  overflow: hidden;
 }
 
 a {
@@ -126,7 +125,7 @@ img {
   overflow: visible;
   &:hover {
     .jspVerticalBar {
-      opacity: 1;
+      opacity: 0.2;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     }
   }
