@@ -59,6 +59,9 @@
 			max-width: none;
 			height: auto;
 		}
+		a {
+			@extend .underline;
+		}
 	}
 	tfoot {
 		tr {
@@ -157,7 +160,7 @@
 			}
 			i {
 				display: inline-block;
-				margin-left: 20px;
+				margin-left: 12px;
 				transform: translateX(0);
 				transition: transform 200ms;
 			}
@@ -173,11 +176,6 @@
 		td {
 			img {
 				width: 36px;
-			}
-			a {
-				&:hover {
-					text-decoration: underline;
-				}
 			}
 		}
 		thead {

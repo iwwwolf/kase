@@ -81,19 +81,22 @@
 			&:after {
 				display: block;
 				width: 100%;
-				height: 0;
+				height: 3px;
+				opacity: 0;
+				visibility: visible;
 				background-color: #fff;
 				position: absolute;
 				top: 0;
 				left: 0;
-				transition: height 150ms;
+				transition: all 500ms;
 				content: "";
 			}
 			&:hover, &:active {
 				background: none;
 				color: #fff;
 				&:after {
-					height: 3px;
+					opacity: 1;
+					visibility: visible;
 				}
 
 			}

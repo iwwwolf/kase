@@ -8,6 +8,8 @@ if($('#greatSlider').length){
 	var greatSlider = new Swiper ('#greatSlider', {
     	//direction: 'vertical',
     	effect: 'fade',
+        //preloadImages: false,
+        //lazyLoading: true,
     	speed: 400,
     	autoheight: true,
     	slidesPerView: 1,

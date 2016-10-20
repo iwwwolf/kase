@@ -7,7 +7,7 @@
 	text-align: center;
 	right: 100%;
 	bottom: 100%;
-	transition: all 700ms 500ms;
+	transition: all 500ms 500ms;
 	&:before {
 		display: block;
 		width: 200%;
@@ -17,23 +17,23 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
-		transition: all 700ms 500ms;
+		transition: all 500ms 400ms;
 		content: "";
 	}
 	&.active {
 		right: 0;
 		bottom: 0;
-		transition: all 700ms;
+		transition: all 500ms;
 		&:before {
 			right: -40%;
 			bottom: -40%;
-			transition: all 700ms;
+			transition: all 500ms;
 		}
 		.menu__container {
 			opacity: 1;
 			visibility: visible;
 			transform: translateY(0px);
-			transition: all 500ms 700ms;
+			transition: all 400ms 400ms;
 		}
 	}
 	a {
@@ -76,7 +76,7 @@
 	overflow: auto;
 	z-index: 1;
 	transform: translateY(60px);
-	transition: all 500ms;
+	transition: all 400ms;
 }
 .menu__close {
 	display: block;

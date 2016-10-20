@@ -19,6 +19,10 @@ footer {
 	}
 	a {
 		color: #fff;
+		@extend .underline;
+		&:hover {
+			color: $defaultColor;
+		}
 	}
 	.container {
 		position: relative;
@@ -78,9 +82,6 @@ footer {
 		}
 		a {
 			color: #696969;
-			&:hover {
-				text-decoration: underline;
-			}
 		}
 	}
 	.footer__nav {

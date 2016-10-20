@@ -1,5 +1,9 @@
 .header-search#headerSearch(style="display: none;")
 	.container
 		form(action="")
-			input.header-search__input(type="text", placeholder="Найти...")
-			button(type="submit", class="btn") Искать
+			input.header-search__input(type="text", placeholder="Что вы ищите?...")
+			button.header-search__button(type="submit")
+				img(src="images/search-icon.svg", alt="")
+				| Найти
+			.head-search__close
+				a#searchClose(href="#"): img(src="images/close-gray.svg", alt="")

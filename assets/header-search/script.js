@@ -8,3 +8,8 @@ $('#searchBtn').on('click', function(e){
 		$('#headerSearch').slideUp();
 	}
 })
+$('#searchClose').on('click', function(e){
+	e.preventDefault();
+	$('#searchBtn').removeClass('active');
+	$('#headerSearch').slideUp();
+})
