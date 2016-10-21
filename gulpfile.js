@@ -59,7 +59,7 @@ gulp.task('js:build', function () {
 /* собрать scss в css */
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
-        .pipe(wait(100))
+        .pipe(wait(200))
         .pipe(sass())
         .pipe(prefixer())
         .pipe(cssmin())
