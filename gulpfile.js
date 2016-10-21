@@ -20,12 +20,12 @@ var path = {
     },
     src: { // откуда брать
         html: 'assets/pages/*.jade',
-        js: 'assets/include.js',
+        js: 'assets/import.js',
         style: 'assets/import.scss'
     },
     watch: { // за чем наблюдать
         html: 'assets/**/*.jade',
-        js: 'assets/**/*.js',
+        //js: ['assets/**/*.js', 'assets/default.js'],
         style: 'assets/**/*.scss'
     },
     clean: './assets'
@@ -82,7 +82,7 @@ gulp.task('watch', function(){
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
     });
-    watch([path.watch.js], function(event, cb) {
+    watch(['assets/**/*.js', 'assets/default.js'], function(event, cb) {
         gulp.start('js:build');
     });
 });

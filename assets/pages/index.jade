@@ -1,18 +1,18 @@
 extends templates/base
 block content
-	.great-slider__parent.container
+	.great-slider__parent.container.hidden-block
 		include ../great-slider/module
 	.container
 		include ../navigation/module
 
 		- var quotesTitle = ["Акции", "Корпоративные облигации", "ГЦБ"];
-		.row.quotes-info__parent
+		.row.quotes-info__parent.hidden-block
 			for title in quotesTitle
 				.col-md-4.col-sm-6
 					include ../quotes-info/module
 
 		- var newsTitle = ["Рынки", "Компании", "Биржа"];
-		.home-news__parent
+		.home-news__parent.hidden-block
 			h2 Новости
 			.row
 				for title in newsTitle

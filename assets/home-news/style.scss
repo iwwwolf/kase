@@ -82,7 +82,9 @@
 	font-weight: 500;
 	padding-top: 20px;
 	a {
+		display: inline-block;
 		opacity: 0;
+		transform: translateY(5px);
 		@extend .underline;
 		&:hover {
 			.arr {
@@ -189,6 +191,7 @@
 			.home-news__footer {
 				a {
 					opacity: 1;
+					transform: translateY(0);
 				}
 			}
 		}
