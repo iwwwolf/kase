@@ -33,23 +33,23 @@ if($('.mini-menu__menu').length){
 			}).animate({
 				width: '290px',
 				padding: '0 25px'
-			}, 300, '', function(){
+			}, 250, '', function(){
 				target.animate({
 					padding: targetPadding,
 					height: targetHeight
 				});
-			}, 300);
+			}, 250);
 		} else {
 			$(this).removeClass('active');
 
 			target.animate({
 				height: '4px',
 				padding: '0 25px'
-			}, 300, '', function(){
+			}, 250, '', function(){
 				target.animate({
 					padding: 0,
 					width: 0
-				}, 300, '', function(){
+				}, 250, '', function(){
 					target.css({
 						display: 'none',
 						height: 'auto',
