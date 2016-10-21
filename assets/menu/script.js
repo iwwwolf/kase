@@ -3,7 +3,8 @@ if(!mobile){
 }
 $('#menuBtn').on('click', function(e){
 	e.preventDefault();
-	$('#menu').addClass('active');
+	$('#menu').fadeIn(600);
+	$('#wrap').addClass('scale-out');
 	if(!mobile) {
 		setTimeout(function(){
 			$('body').css({overflow: 'hidden', paddingRight: '17px'})
@@ -18,7 +19,8 @@ $('#menuBtn').on('click', function(e){
 });
 $('#menuClose').on('click', function(e){
 	e.preventDefault();
-	$('#menu').removeClass('active');
+	$('#menu').fadeOut(600);
+	$('#wrap').removeClass('scale-out');
 	if(!mobile) {
 		$('body').css({overflow: 'auto', paddingRight: '0'});
 		$('#menu .menu__container').css({overflow: 'hidden'});

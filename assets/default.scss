@@ -93,6 +93,12 @@ body {
   position: relative;
   background: #f8fafb;
   overflow: hidden;
+  transform: scale(1);
+  transform-origin: 50% 350px;
+  transition: transform 400ms;
+  &.scale-out {
+    transform: scale(0);
+  }
 }
 
 a {
