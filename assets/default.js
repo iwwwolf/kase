@@ -18,18 +18,20 @@ if(!mobile){
 };
 
 /* появление блогов на Главной странице */
-var blocks = $('.hidden-block')
+if($('.hidden-block').length){
+	var blocks = $('.hidden-block')
 
-$('.hidden-block').each(function(index, el){
-	var elemTop= $(blocks[index]).offset().top;
-	var winScroll = $(window).scrollTop()+winHeight;
-	if(elemTop <= winScroll){
-		$(el).addClass('show');
-	}
-	$(window).on('scroll',function(){
+	blocks.each(function(index, el){
+		var elemTop= $(blocks[index]).offset().top;
 		var winScroll = $(window).scrollTop()+winHeight;
-		if(elemTop < winScroll){
+		if(elemTop <= winScroll){
 			$(el).addClass('show');
 		}
+		$(window).on('scroll',function(){
+			var winScroll = $(window).scrollTop()+winHeight;
+			if(elemTop < winScroll){
+				$(el).addClass('show');
+			}
+		});
 	});
-});
+}

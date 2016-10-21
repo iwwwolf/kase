@@ -9,12 +9,12 @@ $('#menuBtn').on('click', function(e){
 		setTimeout(function(){
 			$('body').css({overflow: 'hidden', paddingRight: '17px'})
 			$('#menu .menu__container').css({overflow: 'auto'});
-		}, 1200);
+		}, 200);
 	} else {
 		setTimeout(function(){
 			$('body').css({overflow: 'hidden'})
 			$('#menu .menu__container').css({overflow: 'auto'});
-		}, 1200);
+		}, 200);
 	}
 });
 $('#menuClose').on('click', function(e){
@@ -32,9 +32,11 @@ $('#menuClose').on('click', function(e){
 
 // не складывает меню в аккордеон для десктопа
 
-if(!mobile || winWidth >= 992){
-	$('#accordion .collapse').collapse('show');
-	$('#accordion .panel-title a').on('click', function(){
-		return false;
-	});
+if($('#menu').length){
+	if(!mobile || winWidth >= 992){
+		$('#accordion .collapse').collapse('show');
+		$('#accordion .panel-title a').on('click', function(){
+			return false;
+		});
+	}
 }

@@ -1,7 +1,7 @@
 .fixed-social {
 	display: none;
 	font-size: $fz19;
-	position: fixed;
+	position: fixed !important;
 	left: 50px;
 	bottom: 50px;
 	z-index: 2;

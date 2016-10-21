@@ -7,7 +7,6 @@
 }
 .quotes-info__container {
 	position: relative;
-	z-index: 1;
 }
 .quotes-info__header {
 	display: flex;
@@ -24,14 +23,6 @@
 		i {
 			display: none;
 		}
-	}
-}
-.quotes-info__menu {
-	display: block;
-	width: 26px;
-	img {
-		width: 100%;
-		height: auto;
 	}
 }
 .quotes-info__content {
@@ -83,9 +74,6 @@
 			right: -30px;
 			bottom: 18px;
 		};
-	}
-	.quotes-info__menu {
-		width: 52px;
 	}
 	.quotes-info__header {
 		padding: 20px 40px;
@@ -149,7 +137,7 @@
 		border: none;
 		.title {
 			font-size: $fz18;
-			font-weight: 500;
+			font-weight: 300;
 			a {
 				color: $defaultColor;
 				&:hover {
@@ -167,7 +155,7 @@
 		}
 	}
 	.quotes-info__table {
-		font-weight: 500;
+		font-weight: 300;
 		th {
 			font-weight: 500;
 			padding-top: 5px;

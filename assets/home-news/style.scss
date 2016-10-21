@@ -47,7 +47,7 @@
 	.title {
 		font-weight: 500;
 		a {
-			color: $defaultColor;
+			color: $minorColor;
 			&:hover {
 				i {
 					transform: translateX(5px);
@@ -157,10 +157,7 @@
 		margin-bottom: 32px;
 		.title {
 			font-size: $fz21;
-			font-weight: 500;
-			a {
-				color: $defaultColor;
-			}
+			font-weight: 300;
 			i {
 				vertical-align: middle;
 				margin-left: 12px;
