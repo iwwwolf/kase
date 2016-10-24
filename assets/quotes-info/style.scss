@@ -43,6 +43,8 @@
 		}
 	}
 	td {
+		font-family: Arial;
+		font-weight: normal;
 		font-size: $fz12;
 		padding: 10px 5px;
 		img {
@@ -184,6 +186,6 @@
 }
 @media (min-width: 992px){
 	.quotes-info__parent {
-		margin-bottom: 30px;
+		margin-bottom: 23px;
 	}
 }
