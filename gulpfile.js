@@ -10,21 +10,25 @@ var gulp = require('gulp'),
     cssmin = require('gulp-clean-css'),
     wait = require('gulp-wait'),
     include = require('gulp-include'),
+    imagemin = require('gulp-imagemin'),
     uglify = require('gulp-uglify');
 
 var path = {
     build: { // куда складывать
         html: 'build/',
         js: 'build/js/',
+        images: 'build/images/',
         css: 'build/css/'
     },
     src: { // откуда брать
         html: 'assets/pages/*.jade',
         js: 'assets/import.js',
+        images: 'assets/libs/images/*.*',
         style: ['assets/libs/css/*.css', 'assets/import.scss']
     },
     watch: { // за чем наблюдать
         html: 'assets/**/*.jade',
+        images: 'assets/libs/images/*.*',
         //js: ['assets/**/*.js', 'assets/default.js'],
         style: 'assets/**/*.scss'
     },
@@ -67,11 +71,19 @@ gulp.task('style:build', function () {
         .pipe(gulp.dest(path.build.css))
 });
 
+/* собрать scss в css */
+gulp.task('images:build', function () {
+    gulp.src(path.src.images)
+        .pipe(imagemin())
+        .pipe(gulp.dest(path.build.images))
+});
+
 /* собрать всё */
 gulp.task('build', [
     'html:build',
     'js:build',
-    'style:build'
+    'style:build',
+    'images:build'
 ]);
 
 /* следить за изменениями */
@@ -84,6 +96,9 @@ gulp.task('watch', function(){
     });
     watch(['assets/**/*.js', 'assets/default.js'], function(event, cb) {
         gulp.start('js:build');
+    });
+    watch([path.watch.images], function(event, cb) {
+        gulp.start('images:build');
     });
 });
 
