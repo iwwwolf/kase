@@ -1,3 +1,4 @@
+//= require libs/js/*.js"
 $(document).ready(function(){
 
 	//= require default.js"

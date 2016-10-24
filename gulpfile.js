@@ -21,7 +21,7 @@ var path = {
     src: { // откуда брать
         html: 'assets/pages/*.jade',
         js: 'assets/import.js',
-        style: 'assets/import.scss'
+        style: ['assets/libs/css/*.css', 'assets/import.scss']
     },
     watch: { // за чем наблюдать
         html: 'assets/**/*.jade',
