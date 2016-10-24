@@ -57,8 +57,12 @@ header {
 }
 .header__logo {
 	display: block;
+	a {
+		display: block;
+	}
 }
 .header__logo-img {
+	display: block;
 	width: 80px;
 	img {
 		width: 100%;
@@ -71,6 +75,9 @@ header {
 	font-size: $fz12;
 	color: #45464f;
 	line-height: 1.25;
+	span {
+		display: block;
+	}
 }
 .header__search-button {
 	width: 20px;
@@ -299,8 +306,10 @@ header {
 		display: none;
 	}
 	.header__logo {
-		display: flex;
-		align-items: center;
+		a {
+			display: flex;
+			align-items: center;
+		}
 	}
 	.header__logo-img {
 		width: 128px;

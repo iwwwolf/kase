@@ -11,12 +11,13 @@ header#header
 							span
 							span
 					.header__logo
-						.header__logo-img
-							img(src="images/logo.svg", alt="KASE")
-						.header__logo-text
-							div Қазақстан қор биржасы
-							div Казахстанская фондовая биржа
-							div Kazakhstan Stock Exchange
+						a(href="/")
+							span.header__logo-img
+								img(src="images/logo.svg", alt="KASE")
+							span.header__logo-text
+								span Қазақстан қор биржасы
+								span Казахстанская фондовая биржа
+								span Kazakhstan Stock Exchange
 				.header__right-col
 					a(href="#", id="searchBtn", class="header__search-button")
 						img(src="images/search-icon.svg", alt="Search")

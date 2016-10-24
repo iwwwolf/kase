@@ -18,10 +18,11 @@ if($('.mini-menu__menu').length){
 		}
 	});
 
+	var miniMenuPadding = '0 25px';
+
 	$('.mini-menu__link').on('click', function(e){
 		var target = $(this).parent().find('.mini-menu__menu');
 		var targetHeight = target.height();
-		var targetPadding = '0 25px';
 
 		e.preventDefault();
 		if(!$(this).hasClass('active')){
@@ -35,7 +36,7 @@ if($('.mini-menu__menu').length){
 				padding: '0 25px'
 			}, 250, '', function(){
 				target.animate({
-					padding: targetPadding,
+					padding: miniMenuPadding,
 					height: targetHeight
 				});
 			}, 250);
@@ -53,10 +54,31 @@ if($('.mini-menu__menu').length){
 					target.css({
 						display: 'none',
 						height: 'auto',
-						padding: targetPadding
+						padding: miniMenuPadding
 					});
 				});
 			});
 		}
 	});
+	/*$('body').on('click', function(e){
+		if($('.mini-menu__link.active').length){
+			var target = $('.mini-menu__link.active').parent().find('.mini-menu__menu');
+			$('.mini-menu__link.active').removeClass('active');
+			target.animate({
+				height: '4px',
+				padding: '0 25px'
+			}, 250, '', function(){
+				target.animate({
+					padding: 0,
+					width: 0
+				}, 250, '', function(){
+					target.css({
+						display: 'none',
+						height: 'auto',
+						padding: miniMenuPadding
+					});
+				});
+			});
+		}
+	});*/
 }

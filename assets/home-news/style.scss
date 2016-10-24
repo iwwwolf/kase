@@ -4,7 +4,7 @@
 	border: 1px solid #d1d1d1;
 	padding: 18px 15px 18px;
 	.date {
-		margin-bottom: 2px;
+		margin-bottom: 5px;
 	}
 	.jspContainer {
 		&:before {
@@ -107,6 +107,9 @@
 			bottom: 18px;
 		};
 		padding: 30px 30px 36px;
+		.date {
+			margin-bottom: 10px;
+		}
 	}
 	.home-news__header {
 		padding-bottom: 15px;
@@ -136,6 +139,7 @@
 
 @media (min-width: 769px){
 	.home-news__parent {
+		margin-bottom: 47px;
 		.row {
 			display: flex;
 			flex-wrap: wrap;
@@ -165,12 +169,21 @@
 		}
 	}
 	.home-news__item {
-		margin-bottom: 30px;
+		margin-bottom: 17px;
+		padding-top: 16px;
+		line-height: 1.5;
+		border-top: 1px solid #d4d6d9;
+		&:first-child {
+			border: none;
+			padding-top: 5px;
+		}
 	}
 }
 @media (min-width: 992px){
-	.home-news__parent {
-		margin-bottom: 30px;
+	.home-news {
+		.date {
+			margin-bottom: 7px;
+		}
 	}
 	.swiper-container-horizontal {
 		.swiper-wrapper.scroll-block {

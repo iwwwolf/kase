@@ -100,7 +100,7 @@
 
 @media (min-width: 769px){
 	.quotes-info__parent {
-		//margin-bottom: 20px;
+		margin-bottom: 16px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: stretch;
@@ -185,7 +185,4 @@
 	}
 }
 @media (min-width: 992px){
-	.quotes-info__parent {
-		margin-bottom: 23px;
-	}
 }
