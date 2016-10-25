@@ -22,12 +22,15 @@ if($('.hidden-block').length){
 	var blocks = $('.hidden-block')
 
 	blocks.each(function(index, el){
-		var elemTop= $(blocks[index]).offset().top;
-		var winScroll = $(window).scrollTop()+winHeight;
-		if(elemTop <= winScroll){
-			$(el).addClass('show');
-		}
+		setTimeout(function(){
+			var elemTop= $(blocks[index]).offset().top;
+			var winScroll = $(window).scrollTop()+winHeight;
+			if(elemTop <= winScroll){
+				$(el).addClass('show');
+			}
+		},200);
 		$(window).on('scroll',function(){
+			var elemTop= $(blocks[index]).offset().top;
 			var winScroll = $(window).scrollTop()+winHeight;
 			if(elemTop < winScroll){
 				$(el).addClass('show');

@@ -264,14 +264,13 @@ header {
 @media (min-width: 992px){
 	.header__container {
 		width: 100%;
-		background: rgba(255, 255, 255, 0.8);
+		background: rgba(255, 255, 255, 0.9);
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
 	.header__content {
-		padding-top: 12px;
-		padding-bottom: 12px;
+		padding: 12px 15px;
 	}
 	.header__menu-button {
 		width: 52px;
