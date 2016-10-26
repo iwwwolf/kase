@@ -36,6 +36,12 @@
 		font-weight: 500;
 		vertical-align: top;
 		padding: 10px 5px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
 		a {
 			display: inline-block;
 			width: 16px;
@@ -50,7 +56,11 @@
 		vertical-align: top;
 		text-align: right;
 		&:first-child {
+			padding-left: 0;
 			text-align: left;
+		}
+		&:last-child {
+			padding-right: 0;
 		}
 		img {
 			width: 26px;
@@ -58,6 +68,7 @@
 			height: auto;
 		}
 		a {
+			white-space: nowrap;
 			color: $defaultColor;
 			@extend .underline;
 			&:hover {
