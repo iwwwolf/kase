@@ -47,13 +47,18 @@
 		font-weight: normal;
 		font-size: $fz12;
 		padding: 10px 5px;
+		vertical-align: top;
 		img {
 			width: 26px;
 			max-width: none;
 			height: auto;
 		}
 		a {
+			color: $defaultColor;
 			@extend .underline;
+			&:hover {
+				color: $linkColor;
+			}
 		}
 	}
 	tfoot {
@@ -61,9 +66,51 @@
 			border-top: 1px solid #ebebec;
 		}
 	}
+	&--with-date {
+		td {
+			padding-bottom: 2px;
+		}
+	}
+}
+.quotes-info__arrow {
+	position: relative;
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: rotate(0deg);
+		transition: all 500ms;
+		&:before {
+			display: block;
+			width: 1px;
+			height: 1px;
+			border: 5px solid transparent;
+			border-left-width: 4px;
+			border-right-width: 4px;
+			border-top: none;
+			border-bottom-color: #3cbd0d;
+			content: "";
+		}
+	}
+	&.reverse {
+		span {
+			//margin-top: -2px;
+			transform: rotate(-180deg);
+		}
+	}
 }
 .quotes-info__parent {
 	margin-bottom: 20px;
+	&.row {
+		&:before, &:after {
+			display: none;
+		}
+	}
 }
 
 @media (min-width: 649px) and (max-width: 768px){

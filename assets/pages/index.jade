@@ -5,11 +5,13 @@ block content
 	.container
 		include ../navigation/module
 
-		- var quotesTitle = ["Акции", "Корпоративные облигации", "ГЦБ"];
 		.row.quotes-info__parent.hidden-block
-			for title in quotesTitle
-				.col-md-4.col-sm-6
-					include ../quotes-info/module
+			.col-md-4.col-sm-6
+				include ../quotes-info/module
+			.col-md-4.col-sm-6
+				include ../quotes-info/module-2
+			.col-md-4.col-sm-6
+				include ../quotes-info/module-3
 
 		- var newsTitle = ["Рынки", "Компании", "Биржа"];
 		.home-news__parent.hidden-block

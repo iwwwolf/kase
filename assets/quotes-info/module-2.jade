@@ -2,56 +2,63 @@
 	.quotes-info__container
 		.quotes-info__header
 			.title
-				a(href="#") Акции
+				a(href="#") ГЦБ
 					i.fa.fa-angle-right
 			include ../mini-menu/module
 		.quotes-info__content
-			table.quotes-info__table
+			table.quotes-info__table.quotes-info__table--with-date
 				thead
 					tr
-						th 
-							span.text Лидеры роста
-							a.quotes-info__arrow(href="#")
-								img(src="images/square-border.svg", alt="")
-								span
-						th Послед. знач.
-						th %1D
-						th %MTD
+						th Код
+						th Объём, млн KZT
+						th %YTM
+						th DTM
 						th &nbsp;
-				tfoot
-					tr
-						td: a(href="#") Индекс KASE
-						td 1 018,15
-						td: span.green +7,81
-						td: span.green +7,81
-						td: img(src="images/graph-green.png", alt="")
 				tbody
 					tr
-						td: a(href="#") KEGC
+						td
+							a(href="#") USDKZT_TOD
+							.date 15:00
 						td 920,33
 						td: span.red -0,09
 						td: span.red -0,09
 						td: img(src="images/graph-red.png", alt="")
 					tr
-						td: a(href="#") KZTO
+						td
+							a(href="#") USDKZT_TOM
+							.date 11:24
 						td 7 510,56
 						td: span.green +20,18
 						td: span.green +20,18
 						td: img(src="images/graph-green.png", alt="")
 					tr
-						td: a(href="#") KEGC
+						td
+							a(href="#") EURKZT_TOD
+							.date 13:35
 						td 920,33
 						td: span.red -0,09
 						td: span.red -0,09
 						td: img(src="images/graph-red.png", alt="")
 					tr
-						td: a(href="#") KZTO
+						td
+							a(href="#") CNYKZT_TOD
+							.date 10:03
 						td 7 510,56
 						td: span.green +20,18
 						td: span.green +20,18
 						td: img(src="images/graph-green.png", alt="")
 					tr
-						td: a(href="#") KZTO
+						td
+							a(href="#") EURUSD_TOD
+							.date 03:54
+						td 7 510,56
+						td: span.green +20,18
+						td: span.green +20,18
+						td: img(src="images/graph-green.png", alt="")
+					tr
+						td
+							a(href="#") RUBKZT_TOD
+							.date 03:54
 						td 7 510,56
 						td: span.green +20,18
 						td: span.green +20,18

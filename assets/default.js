@@ -26,14 +26,14 @@ if($('.hidden-block').length){
 			var elemTop= $(blocks[index]).offset().top;
 			var winScroll = $(window).scrollTop()+winHeight;
 			if(elemTop <= winScroll){
-				$(el).addClass('show');
+				$(el).addClass('shown');
 			}
 		},200);
 		$(window).on('scroll',function(){
 			var elemTop= $(blocks[index]).offset().top;
 			var winScroll = $(window).scrollTop()+winHeight;
 			if(elemTop < winScroll){
-				$(el).addClass('show');
+				$(el).addClass('shown');
 			}
 		});
 	});

@@ -48,6 +48,7 @@ $indexFont: 'MuseoSansCyrl', 'Arial', sans-serif;
 
 $defaultColor: #45464f;
 $minorColor: #038726;
+$linkColor: #1666bc;
 
 $fz10: 71.429%;
 $fz11: 78.572%;
@@ -102,7 +103,7 @@ body {
 }
 
 a {
-  color: #1666bc;
+  color: $linkColor;
   transition: all 300ms;
   &:hover, &:focus {
     text-decoration: none;
@@ -208,7 +209,7 @@ h2, .h2 {
   transform: translateY(70px);
   opacity: 0;
   transition: all 800ms;
-  &.show {
+  &.shown {
     opacity: 1;
     transform: translateY(0);
   }
