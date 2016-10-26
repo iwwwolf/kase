@@ -48,6 +48,10 @@
 		font-size: $fz12;
 		padding: 10px 5px;
 		vertical-align: top;
+		text-align: right;
+		&:first-child {
+			text-align: left;
+		}
 		img {
 			width: 26px;
 			max-width: none;
