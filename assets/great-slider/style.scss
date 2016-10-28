@@ -5,6 +5,7 @@
 }
 .great-slider__item {
 	position: relative;
+	border: none !important;
 	&:after {
 		width: 100%;
 		height: 100%;
@@ -47,6 +48,7 @@
 	width: 100%;
 	text-align: center;
 	padding: 0;
+	line-height: 0;
 	position: absolute;
 	left: 0;
 	bottom: 15px;
@@ -118,6 +120,20 @@
 	&:hover {
 		img {
 			transform: translateY(-4px);
+		}
+	}
+}
+.great-slider__pause-link {
+	color: #fff;
+	font-size: 8px;
+	margin-left: 3px;
+	cursor: pointer;
+	&:before {
+		content: "\f04c";
+	}
+	&.paused {
+		&:before {
+			content: "\f04b";
 		}
 	}
 }

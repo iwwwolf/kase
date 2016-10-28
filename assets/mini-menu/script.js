@@ -34,23 +34,23 @@ if($('.mini-menu__menu').length){
 			}).animate({
 				width: '290px',
 				padding: '0 25px'
-			}, 250, '', function(){
+			}, 150, '', function(){
 				target.animate({
 					padding: miniMenuPadding,
 					height: targetHeight
 				});
-			}, 250);
+			}, 180);
 		} else {
 			$(this).removeClass('active');
 
 			target.animate({
 				height: '4px',
 				padding: '0 25px'
-			}, 250, '', function(){
+			}, 150, '', function(){
 				target.animate({
 					padding: 0,
 					width: 0
-				}, 250, '', function(){
+				}, 180, '', function(){
 					target.css({
 						display: 'none',
 						height: 'auto',

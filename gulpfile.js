@@ -51,6 +51,16 @@ gulp.task('html:build', function () {
     .pipe(gulp.dest(path.build.html))
 });
 
+/* собрать jade в html-модули */
+/*gulp.task('htmlModule:build', function () {
+  return gulp.src(path.src.html)
+    .pipe(gulpJade({
+      jade: jade,
+      pretty: true
+    }))
+    .pipe(gulp.dest())
+});*/
+
 /* собрать скрипты */
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
@@ -64,7 +74,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
         .pipe(wait(200))
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(concat('main.css'))
@@ -80,6 +90,7 @@ gulp.task('images:build', function () {
 
 /* собрать всё */
 gulp.task('build', [
+    //'htmlModule:build',
     'html:build',
     'js:build',
     'style:build',

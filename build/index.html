@@ -10,7 +10,11 @@
   <body>
     <div id="menu" style="display: none;" class="menu">
       <div class="menu__container">
-        <div class="container"><a id="menuClose" href="#" class="menu__close"><img src="images/close-white.svg" alt="Закрыть"></a>
+        <div class="container"><a id="menuClose" href="#" class="menu__close">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z"></path>
+            </svg></a>
           <div id="accordion" role="tablist" aria-multiselectable="true">
             <div class="panel menu__panel">
               <div id="headingOne" role="tab" class="panel-heading">
@@ -759,5 +763,19 @@
       </div>
     </footer>
     <script type="text/javascript" defer src="js/main.js"> </script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) { 
+          $('.quotes-info__arrow').on('click', function(e){
+              e.preventDefault();
+              if(!$(this).hasClass('reverse')){
+                  $(this).addClass('reverse');
+                  $(this).parent().children('.text').text('Лидеры падения');
+              } else {
+                  $(this).removeClass('reverse');
+                  $(this).parent().children('.text').text('Лидеры роста');
+              }
+          });  
+      });  
+    </script>
   </body>
 </html>

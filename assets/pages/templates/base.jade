@@ -16,4 +16,18 @@ html(lang="ru")
         include ../../footer/module
 
         //- файлы скриптов
+
         script(type="text/javascript", defer, src="js/main.js") 
+        script(type="text/javascript").
+            document.addEventListener("DOMContentLoaded", function(event) { 
+                $('.quotes-info__arrow').on('click', function(e){
+                    e.preventDefault();
+                    if(!$(this).hasClass('reverse')){
+                        $(this).addClass('reverse');
+                        $(this).parent().children('.text').text('Лидеры падения');
+                    } else {
+                        $(this).removeClass('reverse');
+                        $(this).parent().children('.text').text('Лидеры роста');
+                    }
+                });  
+            });  

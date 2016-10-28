@@ -5,7 +5,6 @@ $(document).ready(function(){
 	//= require "header-search/script.js"
 	//= require "menu/script.js"
 	//= require "great-slider/script.js"
-	//= require "quotes-info/script.js"
 	//= require "mini-menu/script.js"
 	//= require "home-news/script.js"
 	//= require "trade-info/script.js"
