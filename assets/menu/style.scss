@@ -29,9 +29,9 @@
 	.title {
 		font-weight: 700;
 		font-size: $fz16;
-		color: #0d8ce3;
+		color: $minorColor;
 		a {
-			color: #0d8ce3;
+			color: $minorColor;
 			@extend .underline;
 		}
 	}
@@ -173,7 +173,7 @@
 		width: 33,33333333333333%;
 	}
 	.menu__panel {
-		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		border-bottom: 1px solid #e9eee8;
 		&:last-child {
 			border-bottom: none;
 		}
