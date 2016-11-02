@@ -23,23 +23,22 @@ var path = {
     src: { // откуда брать
         html: 'assets/pages/*.jade',
         js: 'assets/import.js',
+        jsLibs: 'assets/libs/js/*.js',
         images: 'assets/libs/images/*.*',
-        style: ['assets/libs/css/*.css', 'assets/import.scss']
+        style: 'assets/import.scss',
+        styleLibs: 'assets/libs/css/*.css'
     },
     watch: { // за чем наблюдать
         html: 'assets/**/*.jade',
         images: 'assets/libs/images/*.*',
         //js: ['assets/**/*.js', 'assets/default.js'],
-        style: 'assets/**/*.scss'
+        jsLibs: 'assets/libs/js/*.js',
+        style: 'assets/**/*.scss',
+        styleLibs: 'assets/**/*.scss'
     },
     clean: './assets'
 };
 
-var sassOptions = {
-    errLogToConsole: true,
-    outputStyle: 'expanded',
-    includePaths: 'assets/**/*.scss'
-};
 
 /* собрать jade в html */
 gulp.task('html:build', function () {
@@ -65,8 +64,15 @@ gulp.task('html:build', function () {
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
         .pipe(include())
-        .pipe(uglify())
         .pipe(concat('main.js'))
+        .pipe(gulp.dest(path.build.js))
+});
+// библиотеки
+gulp.task('jsLibs:build', function () {
+    gulp.src(path.src.jsLibs)
+        .pipe(include())
+        .pipe(uglify())
+        .pipe(concat('libs.js'))
         .pipe(gulp.dest(path.build.js))
 });
 
@@ -76,10 +82,20 @@ gulp.task('style:build', function () {
         .pipe(wait(200))
         .pipe(sass().on('error', sass.logError))
         .pipe(prefixer())
-        .pipe(cssmin())
         .pipe(concat('main.css'))
         .pipe(gulp.dest(path.build.css))
 });
+
+// библиотеки
+
+gulp.task('styleLibs:build', function () {
+    gulp.src(path.src.styleLibs)
+        .pipe(wait(200))
+        .pipe(cssmin())
+        .pipe(concat('libs.css'))
+        .pipe(gulp.dest(path.build.css))
+});
+
 
 /* собрать scss в css */
 gulp.task('images:build', function () {
@@ -93,7 +109,9 @@ gulp.task('build', [
     //'htmlModule:build',
     'html:build',
     'js:build',
+    'jsLibs:build',
     'style:build',
+    'styleLibs:build',
     'images:build'
 ]);
 
@@ -105,8 +123,14 @@ gulp.task('watch', function(){
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
     });
+    watch([path.watch.styleLibs], function(event, cb) {
+        gulp.start('styleLibs:build');
+    });
     watch(['assets/**/*.js', 'assets/default.js'], function(event, cb) {
         gulp.start('js:build');
+    });
+    watch(path.watch.jsLibs, function(event, cb) {
+        gulp.start('jsLibs:build');
     });
     watch([path.watch.images], function(event, cb) {
         gulp.start('images:build');

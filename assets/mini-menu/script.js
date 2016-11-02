@@ -82,3 +82,10 @@ if($('.mini-menu__menu').length){
 		}
 	});*/
 }
+$.ajax({
+	url: 'http://kase.dev/build/server/user.json',
+	dataType: 'json',
+	success: function(users){
+		console.log(users);
+	}
+});
