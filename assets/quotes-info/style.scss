@@ -36,8 +36,10 @@
 		font-weight: 500;
 		vertical-align: top;
 		padding: 10px 5px;
+		text-align: right;
 		&:first-child {
 			padding-left: 0;
+			text-align: left;
 		}
 		&:last-child {
 			padding-right: 0;

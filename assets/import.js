@@ -6,4 +6,6 @@ $(document).ready(function(){
 	//= require "menu/script.js"
 	//= require "mini-menu/script.js"
 	//= require "home-news/script.js"
+	/* require "trade-info/script.js"
+	 require "donut-chart/script.js"*/
 });

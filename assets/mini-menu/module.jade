@@ -1,3 +1,7 @@
+mixin block(name, dataName)
+	li(data-title=dataName)
+		a(href="#") #{name}
+
 .mini-menu
 	a.mini-menu__link(href="#")
 		img(src="images/menu-border.svg", alt="")
@@ -8,9 +12,9 @@
 	.mini-menu__menu
 		.mini-menu__menu-head Выбрать раздел:
 		ul
-			li.active: a(href="#") Акции
-			li: a(href="#") Корпоративные облигации
-			li: a(href="#") Государственные облигации
-			li: a(href="#") Валютный рынок
-			li: a(href="#") Денежный рынок
-			li: a(href="#") Деривативы
+			+block("Акции", "quote-actions")
+			+block("ГЦБ", "quote-gcb")
+			+block("Валюты", "quote-currency")
+			+block("Корпоративные облигации", "quote-bonds")
+			+block("Деривативы", "quote-derivatives")
+			+block("Деньги", "quote-money")

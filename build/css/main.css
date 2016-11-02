@@ -1129,9 +1129,11 @@ footer {
     font-size: 92.86%;
     font-weight: 500;
     vertical-align: top;
-    padding: 10px 5px; }
+    padding: 10px 5px;
+    text-align: right; }
     .quotes-info__table th:first-child {
-      padding-left: 0; }
+      padding-left: 0;
+      text-align: left; }
     .quotes-info__table th:last-child {
       padding-right: 0; }
     .quotes-info__table th a {
@@ -1691,6 +1693,8 @@ footer {
   .trade-link__text {
     display: block; } }
 
+/* @import "trade-info/style.scss";
+@import "donut-chart/style.scss"; */
 .trade-table {
   width: 100%;
   overflow: auto;

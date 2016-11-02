@@ -1,65 +1,58 @@
-.quotes-info
+.quotes-info(id="quote-actions")
 	.quotes-info__container
 		.quotes-info__header
 			.title
-				a(href="#") ГЦБ
+				a(href="#") Акции
 					i.fa.fa-angle-right
 			include ../mini-menu/module
 		.quotes-info__content
-			table.quotes-info__table.quotes-info__table--with-date
+			table.quotes-info__table
 				thead
 					tr
-						th Индикатор
+						th 
+							span.text Лидеры роста
+							a.quotes-info__arrow(href="#")
+								img(src="images/square-border.svg", alt="")
+								span
 						th Послед. знач.
 						th %1D
 						th %MTD
 						th &nbsp;
+				tfoot
+					tr
+						td: a(href="#") Индекс KASE
+						td 1 018,15
+						td: span.green +7,81
+						td: span.green +7,81
+						td: img(src="images/graph-green.png", alt="")
 				tbody
 					tr
-						td
-							a(href="#") MM Index
-							.date 15:00
-						td 2,34
+						td: a(href="#") KEGC
+						td 920,33
 						td: span.red -0,09
 						td: span.red -0,09
 						td: img(src="images/graph-red.png", alt="")
 					tr
-						td
-							a(href="#") TONIA
-							.date 11:24
-						td 12,10
+						td: a(href="#") KZTO
+						td 7 510,56
 						td: span.green +20,18
 						td: span.green +20,18
 						td: img(src="images/graph-green.png", alt="")
 					tr
-						td
-							a(href="#") TWINA
-							.date 13:35
-						td 	12,13
+						td: a(href="#") KEGC
+						td 920,33
 						td: span.red -0,09
 						td: span.red -0,09
 						td: img(src="images/graph-red.png", alt="")
 					tr
-						td
-							a(href="#") SWAP-1D (USD)
-							.date 10:03
-						td 	11,86
+						td: a(href="#") KZTO
+						td 7 510,56
 						td: span.green +20,18
 						td: span.green +20,18
 						td: img(src="images/graph-green.png", alt="")
 					tr
-						td
-							a(href="#") SWAP-2D (USD)
-							.date 03:54
-						td 	12,13
-						td: span.green +20,18
-						td: span.green +20,18
-						td: img(src="images/graph-green.png", alt="")
-					tr
-						td
-							a(href="#") КazPrime (KZT)
-							.date 03:54
-						td 	11,86
+						td: a(href="#") KZTO
+						td 7 510,56
 						td: span.green +20,18
 						td: span.green +20,18
 						td: img(src="images/graph-green.png", alt="")

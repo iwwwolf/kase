@@ -50,15 +50,17 @@ gulp.task('html:build', function () {
     .pipe(gulp.dest(path.build.html))
 });
 
-/* собрать jade в html-модули */
-/*gulp.task('htmlModule:build', function () {
-  return gulp.src(path.src.html)
+/* блоки котировок для ajax */
+
+gulp.task('quotesBlock:build', function () {
+  return gulp.src('assets/quotes-info/*.jade')
     .pipe(gulpJade({
       jade: jade,
       pretty: true
     }))
-    .pipe(gulp.dest())
-});*/
+    .pipe(gulp.dest('build/server/quotes-info/'))
+});
+
 
 /* собрать скрипты */
 gulp.task('js:build', function () {
@@ -106,8 +108,8 @@ gulp.task('images:build', function () {
 
 /* собрать всё */
 gulp.task('build', [
-    //'htmlModule:build',
     'html:build',
+    'quotesBlock:build',
     'js:build',
     'jsLibs:build',
     'style:build',
@@ -119,6 +121,9 @@ gulp.task('build', [
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
+    });
+    watch(['assets/quotes-info/*.jade'], function(event, cb) {
+        gulp.start('quotesBlock:build');
     });
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
