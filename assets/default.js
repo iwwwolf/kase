@@ -41,6 +41,7 @@ if($('.hidden-block').length){
 
 
 //====== клик по body
-/*$('body').on('click', function(e) {
-	miniMenuClose(e);
-});*/
+$('body').on('click', function(e) {
+	//e.preventDefault();
+	miniMenuClose();
+});
