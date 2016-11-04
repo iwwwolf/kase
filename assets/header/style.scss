@@ -37,8 +37,8 @@ header {
 	}
 	img {
 		display: block;
-		width: 100%;
-		height: 100%;
+		width: inherit;
+		height: inherit;
 	}
 }
 .header__menu-button-lines {
@@ -272,12 +272,18 @@ header {
 }
 
 @media (min-width: 992px){
+	.body__home {
+		.header__container {
+			width: 100%;
+			background: rgba(255, 255, 255, 0.9);
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-shadow: none;
+		}
+	}
 	.header__container {
-		width: 100%;
-		background: rgba(255, 255, 255, 0.9);
-		position: absolute;
-		top: 0;
-		left: 0;
+		box-shadow: 0 5px 9px rgba(67, 68, 77, 0.05);
 	}
 	.header__content {
 		padding: 12px 15px;

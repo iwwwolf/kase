@@ -78,7 +78,7 @@ body {
   font: normal 14px/1.357 $indexFont;
   color: $defaultColor;
   min-width: 320px;
-  background: #f8fafb;
+  background: #fff;
   position: relative;
   overflow-y: auto;
 }
@@ -93,7 +93,7 @@ body {
   margin: 0 auto -50px;
   padding: 0 0 50px;
   position: relative;
-  background: #f8fafb;
+  background: #fff;
   overflow: hidden;
   //transform: scale(1);
   transform-origin: 50% 350px;
@@ -101,6 +101,9 @@ body {
   &.scale-out {
     transform: scale(0.85);
   }
+}
+.body__home, .body__home #wrap {
+  background-color: #f8fafb;
 }
 
 a {
