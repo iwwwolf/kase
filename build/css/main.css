@@ -39,7 +39,7 @@ body {
   min-width: 320px;
   background: #fff;
   position: relative;
-  overflow-y: auto; }
+  overflow: auto; }
 
 *:focus, *:active {
   outline: none; }

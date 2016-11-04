@@ -95,6 +95,52 @@ $(document).ready(function(){
 		}
 
 	});
+
+	
+
+	
+
+	
+
+	function getInternetExplorerVersion()
+
+	{
+
+	    var rv = -1;
+
+	    if (navigator.appName == 'Microsoft Internet Explorer')
+
+	    {
+
+	        var ua = navigator.userAgent;
+
+	        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+
+	        if (re.exec(ua) != null)
+
+	            rv = parseFloat( RegExp.$1 );
+
+	    }
+
+	    else if (navigator.appName == 'Netscape')
+
+	    {
+
+	        var ua = navigator.userAgent;
+
+	        var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+
+	        if (re.exec(ua) != null)
+
+	            rv = parseFloat( RegExp.$1 );
+
+	    }
+
+	    return rv;
+
+	}
+
+	
 	$('#searchBtn').on('click', function(e){
 		e.preventDefault();
 		if(!$(this).hasClass('active')){
@@ -159,7 +205,11 @@ $(document).ready(function(){
 		$('#wrap').addClass('scale-out');
 		if(!mobile) {
 			setTimeout(function(){
-				$('body').css({overflow: 'hidden', paddingRight: '17px'})
+				if((getInternetExplorerVersion()!==-1)){
+					$('body').css({overflow: 'hidden', paddingRight: '0'})
+				} else {
+					$('body').css({overflow: 'hidden', paddingRight: '17px'})
+				}
 				$('#menu .menu__container').css({overflow: 'auto'});
 			}, 200);
 		} else {
@@ -177,8 +227,13 @@ $(document).ready(function(){
 			greatSlider.slick('slickPlay');
 		}
 		if(!mobile) {
-			$('body').css({overflow: 'auto', paddingRight: '0'});
-			$('#menu .menu__container').css({overflow: 'hidden'});
+			if((getInternetExplorerVersion()!==-1)){
+				$('body').css({overflow: 'auto'});
+				$('#menu .menu__container').css({overflow: 'auto'});
+			} else {
+				$('body').css({overflow: 'auto', paddingRight: '0'});
+				$('#menu .menu__container').css({overflow: 'hidden'});
+			}
 		} else {
 			$('body').css({overflow: 'auto'});
 			$('#menu .menu__container').css({overflow: 'hidden'});
