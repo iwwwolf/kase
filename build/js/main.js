@@ -354,6 +354,7 @@ $(document).ready(function(){
 			});
 		}
 	}
+	$('.dropdown-toggle').dropdown()
 	/* require "trade-info/script.js"
 	 require "donut-chart/script.js"*/
 });

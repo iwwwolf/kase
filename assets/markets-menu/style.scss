@@ -1,0 +1,49 @@
+.markets-menu {
+	flex-basis: 100%;
+	//padding-right: 40px;
+	h3 {
+		display: none;
+	}
+	.dropdown-link {
+		display: block;
+		color: $defaultColor;
+		position: relative;
+		padding: 8px 25px 8px 0;
+		font-size: $fz16;
+		border-right: 1px solid #c9d4de;
+		&:after {
+			height: 0;
+			display: block;
+			font-size: $fz18;
+			line-height: 0;
+			font-family: "FontAwesome";
+			position: absolute;
+			top: 50%;
+			right: 9px;
+			content: '\f107';
+		}
+	}
+	.dropdown-menu {
+		margin: 0;
+		left: 0;
+		top: 100%;
+		border: none;
+		background: #f3fbf2;
+		margin-top: 1px;
+		&>li {
+			&>a {
+				padding: 4px 15px;
+			}
+		}
+	}
+	.dropdown {
+		position: static;
+		&.open {
+			.dropdown-link {
+				&:after {
+					content: '\f106';
+				}
+			}
+		}
+	}
+}
