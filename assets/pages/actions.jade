@@ -1,9 +1,36 @@
 extends templates/base
 
 block content
-	.markets-top.container
-		include ../markets-menu/module
-		include ../regulations/module
+	.markets-top
+		.container
+			include ../markets-menu/module
+			include ../regulations/module
 	.container
 		.center-column
-			div sfsdfsdfs
+			include ../breadcrumbs/module
+			h1 Акции
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Индикаторы
+						i.fa.fa-angle-down
+				.accordion__body
+					ul.accordion__nav
+						li.active: a(href="#") Индекс KASE
+						li: a(href="#") Объем торгов
+						li: a(href="#") Капитализация
+					img(src="img-content/img-3.jpg", alt="")
+
+			.accordion
+				.accordion__head
+					.small-dropdown.flex Период:
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
+
+							ul.dropdown-menu
+								li: a(href="#") 1 неделя
+								li: a(href="#") 1 месяц
+								li: a(href="#") 1 год
+					a.accordion__head-link(href="#") Наиболее ликвидные акции
+						i.fa.fa-angle-down
+				.accordion__body
+					.date Время последних данных: 19.08.2016 (17:35)

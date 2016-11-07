@@ -284,33 +284,107 @@
           </div>
         </div>
       </header>
-      <div class="markets-top container">
-        <div class="markets-menu">
-          <h3>Рынки</h3>
-          <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Акции</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Акции</a></li>
-              <li><a href="#">Паи</a></li>
-              <li><a href="#">Корпоративные облигации</a></li>
-              <li><a href="#">Ценные бумаги МФО</a></li>
-              <li><a href="#">Государствнные ценные бумаги</a></li>
-              <li><a href="#">Иностранные валюты</a></li>
-              <li><a href="#">Операции РЕПО</a></li>
-              <li><a href="#">Деривативы</a></li>
-            </ul>
+      <div class="markets-top">
+        <div class="container">
+          <div class="markets-menu">
+            <h3>Рынки</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Акции</a>
+              <ul class="dropdown-menu">
+                <li class="active"><a href="#">Акции</a></li>
+                <li><a href="#">Паи</a></li>
+                <li><a href="#">Корпоративные облигации</a></li>
+                <li><a href="#">Ценные бумаги МФО</a></li>
+                <li><a href="#">Государствнные ценные бумаги</a></li>
+                <li><a href="#">Иностранные валюты</a></li>
+                <li><a href="#">Операции РЕПО</a></li>
+                <li><a href="#">Деривативы</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div id="regulations" class="regulations">
-          <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"></i></a>
-            <div class="dropdown-menu">
-              <h5>Регламент</h5>
+          <div id="regulations" class="regulations">
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"></i></a>
+              <div class="dropdown-menu">
+                <h5>Регламент</h5>
+                <div class="regulations__timetable">
+                  <div>
+                    <div class="help-block">Акции первого класса ликвидности:</div>
+                    <div> <span>11:30 – 17:00</span>торговая сессия</div>
+                    <div> <span>17:20 – 18:00</span>клиринговая сессия</div>
+                  </div>
+                  <div>
+                    <div class="help-block">Акции второго и третьего классов ликвидности:</div>
+                    <div> <span>17:20 – 18:00</span>торговая сессия</div>
+                  </div>
+                </div>
+                <div class="regulations__download">
+                  <form>
+                    <label class="radiobutton">
+                      <input type="radio" name="prices"><span class="radiobutton__styled"></span><span class="radiobutton__label">Средневзвешенные цены</span>
+                    </label>
+                    <label class="radiobutton">
+                      <input type="radio" name="prices"><span class="radiobutton__styled"></span><span class="radiobutton__label">Риск-параметры акций</span>
+                    </label>
+                    <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
+                      <input type="date">
+                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
+                    </div>
+                    <div class="regulations__download-input"><i class="fa fa-calendar"></i>
+                      <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
+                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
+                    </div>
+                  </form>
+                </div>
+                <div class="regulations__links-list">
+                  <h5>Полезные ссылки</h5>
+                  <ul class="blue-list">
+                    <li><a href="#">Список акций</a></li>
+                    <li><a href="#">Просмотр торгов</a></li>
+                    <li><a href="#">Список брокеров</a></li>
+                    <li><a href="#">Маркет-мейкеры</a></li>
+                    <li><a href="#">Рыночная оценка</a></li>
+                    <li><a href="#">Правила торгов</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="container">
         <div class="center-column">
-          <div>sfsdfsdfs</div>
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Рынки</a></li>
+            <li><a href="#">Торги</a></li>
+            <li><a href="#">Акции</a></li>
+          </ul>
+          <h1>Акции</h1>
+          <div class="accordion">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Индикаторы<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <ul class="accordion__nav">
+                <li class="active"><a href="#">Индекс KASE</a></li>
+                <li><a href="#">Объем торгов</a></li>
+                <li><a href="#">Капитализация</a></li>
+              </ul><img src="img-content/img-3.jpg" alt="">
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="accordion__head">
+              <div class="small-dropdown flex">Период:
+                <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">1 день</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">1 неделя</a></li>
+                    <li><a href="#">1 месяц</a></li>
+                    <li><a href="#">1 год</a></li>
+                  </ul>
+                </div>
+              </div><a href="#" class="accordion__head-link">Наиболее ликвидные акции<i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="accordion__body">
+              <div class="date">Время последних данных: 19.08.2016 (17:35)</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

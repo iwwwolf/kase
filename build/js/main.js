@@ -78,7 +78,15 @@ $(document).ready(function(){
 
 		});
 
-	}
+	};
+
+	
+
+	$('.dropdown-menu').on('click', function(e){
+
+	    e.stopPropagation();
+
+	});
 
 	
 
@@ -354,7 +362,10 @@ $(document).ready(function(){
 			});
 		}
 	}
-	$('.dropdown-toggle').dropdown()
+	$('.datepicker').datepicker({
+		language: "ru",
+	    autoclose: true
+	});
 	/* require "trade-info/script.js"
 	 require "donut-chart/script.js"*/
 });

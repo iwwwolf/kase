@@ -37,7 +37,11 @@ if($('.hidden-block').length){
 			}
 		});
 	});
-}
+};
+
+$('.dropdown-menu').on('click', function(e){
+    e.stopPropagation();
+});
 
 
 //====== клик по body

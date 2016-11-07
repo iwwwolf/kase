@@ -1,6 +1,9 @@
 //@import "libs/css/*.css";
 @import "default.scss";
 @import "buttons.scss";
+@import "radiobutton/style.scss";
+@import "accordion/style.scss";
+@import "small-dropdown/style.scss";
 @import "menu/style.scss";
 @import "header/style.scss";
 @import "footer/style.scss";
@@ -15,5 +18,6 @@
 /* @import "trade-info/style.scss";
 @import "donut-chart/style.scss"; */
 @import "trade-table/style.scss";
+@import "breadcrumbs/style.scss";
 @import "markets-menu/style.scss";
 @import "regulations/style.scss";
