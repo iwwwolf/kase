@@ -20,9 +20,11 @@ block content
 						li: a(href="#") Капитализация
 					img(src="img-content/img-3.jpg", alt="")
 
-			.accordion
+			.accordion.closed
 				.accordion__head
-					.small-dropdown.flex Период:
+					a.accordion__head-link(href="#") Наиболее ликвидные акции
+						i.fa.fa-angle-down
+					.small-dropdown.flex.accordion__hide-in-closed Период:
 						.dropdown
 							a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
 
@@ -30,7 +32,191 @@ block content
 								li: a(href="#") 1 неделя
 								li: a(href="#") 1 месяц
 								li: a(href="#") 1 год
-					a.accordion__head-link(href="#") Наиболее ликвидные акции
-						i.fa.fa-angle-down
 				.accordion__body
 					.date Время последних данных: 19.08.2016 (17:35)
+					.table-parent
+						table.table.table-striped
+							thead
+								tr
+									td Код
+									td Компания
+									td: a.down(href="#") Kl
+									td: a.down(href="#") Число сделок
+									td: a.down(href="#") Объем, млн KZT
+									td: a.down(href="#") Объем, тыс USD
+									td: a.down(href="#") Доля рынка,%
+									td Последняя цена,KZT
+									td Mаркет-мейкеры
+									td Дата последней сделки
+							tbody
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 4.8
+									td 125
+									td 0.00007
+									td 0.00007
+									td 87
+									td 1 446 453
+									td M
+									td 20.07.2016
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 4.8
+									td 125
+									td 0.00007
+									td 0.00007
+									td 87
+									td 1 446 453
+									td M
+									td 20.07.2016
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 4.8
+									td 125
+									td 0.00007
+									td 0.00007
+									td 87
+									td 1 446 453
+									td M
+									td 20.07.2016
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 4.8
+									td 125
+									td 0.00007
+									td 0.00007
+									td 87
+									td 1 446 453
+									td M
+									td 20.07.2016
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 4.8
+									td 125
+									td 0.00007
+									td 0.00007
+									td 87
+									td 1 446 453
+									td M
+									td 20.07.2016
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 4.8
+									td 125
+									td 0.00007
+									td 0.00007
+									td 87
+									td 1 446 453
+									td M
+									td 20.07.2016
+					.help-block Без учета специализированных торгов *
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Лидеры роста и падения
+						i.fa.fa-angle-down
+
+				.accordion__body
+					ul.accordion__nav
+						li.active: a(href="#") Лидеры роста
+						li: a(href="#") Лидеры падения
+					.table-parent
+						table.table.table-striped
+							thead
+								tr
+									td Код
+									td Компания
+									td Последняя цена,KZT
+									td Изменение, KZT
+									td Изменение, %
+									td 1 месяц
+							tbody
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 1,004.00
+									td 1,004.00
+									td +10.10
+									td: img(src="img-content/img-4.jpg", alt="")
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 1,004.00
+									td 1,004.00
+									td +10.10
+									td: img(src="img-content/img-4.jpg", alt="")
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 1,004.00
+									td 1,004.00
+									td +10.10
+									td: img(src="img-content/img-4.jpg", alt="")
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 1,004.00
+									td 1,004.00
+									td +10.10
+									td: img(src="img-content/img-4.jpg", alt="")
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 1,004.00
+									td 1,004.00
+									td +10.10
+									td: img(src="img-content/img-4.jpg", alt="")
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 1,004.00
+									td 1,004.00
+									td +10.10
+									td: img(src="img-content/img-4.jpg", alt="")
+					.help-block Данные предоставляются с задержкой в 15 минут *
+					.help-block В расчет включаются акции первого класса ликвидности *
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Лидеры роста и падения
+						i.fa.fa-angle-down
+
+				.accordion__body
+					ul.accordion__nav
+						li.active: a(href="#") Лидеры роста
+						li: a(href="#") Лидеры падения
+					.table-parent
+						table.table.table-striped
+							thead
+								tr
+									td Код
+									td Компания
+									td Цена
+									td Объем, млн KZT
+									td Число сделок
+									td Спрос, % 
+									td Дата
+							tbody
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 11 000.00
+									td 800 016 129
+									td 485
+									td 325
+									td 21.07.2016
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 11 000.00
+									td 800 016 129
+									td 485
+									td 325
+									td 21.07.2016
+					.help-block Данные предоставляются с задержкой в 15 минут *

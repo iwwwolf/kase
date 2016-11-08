@@ -43,6 +43,16 @@ $('.dropdown-menu').on('click', function(e){
     e.stopPropagation();
 });
 
+$('.table a').on('click', function(e){
+    if($(this).hasClass('down')){
+        e.preventDefault();
+        $(this).removeClass('down').addClass('up');
+    }
+    else if($(this).hasClass('up')){
+        e.preventDefault();
+        $(this).removeClass('up').addClass('down');
+    }
+});
 
 //====== клик по body
 $('body').on('click', function() {

@@ -90,6 +90,26 @@ $(document).ready(function(){
 
 	
 
+	$('.table a').on('click', function(e){
+
+	    if($(this).hasClass('down')){
+
+	        e.preventDefault();
+
+	        $(this).removeClass('down').addClass('up');
+
+	    }
+
+	    else if($(this).hasClass('up')){
+
+	        e.preventDefault();
+
+	        $(this).removeClass('up').addClass('down');
+
+	    }
+
+	});
+
 	
 
 	//====== клик по body
@@ -365,6 +385,24 @@ $(document).ready(function(){
 	$('.datepicker').datepicker({
 		language: "ru",
 	    autoclose: true
+	});
+	/* раскрывающиеся блоки страницы */
+	if($('.accordion').length){
+		$('.accordion.closed').each(function(index, el){
+			$(el).find('.accordion__body').slideUp();
+		});
+	}
+	$('.accordion__head-link').on('click', function(e){
+		var parent = $(this).parents('.accordion');
+		var target = parent.find('.accordion__body');
+		e.preventDefault();
+		if(!parent.hasClass('closed')){
+			parent.addClass('closed');
+			target.slideUp();
+		} else {
+			parent.removeClass('closed');
+			target.slideDown();
+		}
 	});
 	/* require "trade-info/script.js"
 	 require "donut-chart/script.js"*/

@@ -1,6 +1,11 @@
 .accordion {
 	margin-bottom: 35px;
 	&.closed {
+		.accordion__head {
+			.small-dropdown {
+				position: absolute;
+			}
+		}
 		.accordion__head-link {
 			.fa {
 				&:before {
@@ -8,14 +13,38 @@
 				}
 			}
 		}
+		.accordion__hide-in-closed {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
+	.date {
+		font-weight: 100;
+		margin-bottom: 5px;
+	}
+	.help-block {
+		color: #a8b1ba;
+		text-align: right;
+		margin-bottom: 5px;
+		font-size: $fz12;
+	}
+}
+.accordion__body {
+	overflow: hidden;
+}
+.accordion__hide-in-closed {
+	opacity: 1;
+	visibility: visible;
+	transition: all 400ms;
 }
 .accordion__head {
 	position: relative;
 	padding: 15px 52px 15px 0;
 	border-top: 1px solid #c9d4de;
 	.small-dropdown {
-		float: right;
+		display: block;
+		position: relative;	
+		margin-top: 8px;
 	}
 }
 .accordion__head-link {

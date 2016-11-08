@@ -286,15 +286,17 @@ h5, .h5 {
 .blue-list {
   padding: 0;
   margin: 0;
+  font-size: $fz12;
   li {
     display: block;
     padding-left: 15px;
     position: relative;
+    margin-bottom: 4px;
     &:before {
       display: block;
       width: 6px;
       height: 6px;
-      border: 1px solid $linkColor;
+      border: 1px solid #0094de;
       border-radius: 50%;
       position: absolute;
       left: 0;
@@ -303,7 +305,7 @@ h5, .h5 {
     }
   }
   a {
-    color: $linkColor;
+    color: #0094de;
     @extend .underline
   }
 }
@@ -312,6 +314,7 @@ h5, .h5 {
   h1 {
     color: #3cbd0d;
     font-weight: 700;
+    margin: 13px 0 22px;
   }
 }
 
@@ -332,6 +335,77 @@ h5, .h5 {
     background: linear-gradient(45deg, #038726 0%,#3cbd0d 47%,#9ed110 100%);
     border: none;
     border-radius: 0;
+  }
+}
+
+.table-parent {
+  width: 100%;
+  overflow: auto;
+}
+.table {
+  min-width: 100%;
+  & > tbody {
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    & > tr > {
+      td, th {
+        border-top: none;
+      }
+    }
+  }
+  & > tfoot > tr > {
+    td, th {
+      border-top: none;
+    }
+  }
+  & > thead > tr > {
+    td, th {
+      border-top: none;
+    }
+  }
+}
+.table-striped {
+  font-size: $fz12;
+  thead {
+    tr {
+      background-color: #e4e9ee;
+    }
+    a {
+      color: $defaultColor;
+    }
+  }
+  &> tbody > tr:nth-of-type(odd) {
+    background-color: #f7f9fa;
+  }
+} 
+a.down {
+  &:after {
+    border: 4px solid transparent;
+    border-top: 5px solid $defaultColor;
+    border-bottom: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    position: relative;
+    top: -2px;
+    content: "";
+  }
+}
+a.up {
+  &:after {
+    border: 4px solid transparent;
+    border-bottom: 5px solid $defaultColor;
+    border-top: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    position: relative;
+    top: -2px;
+    content: "";
   }
 }
 
