@@ -42,7 +42,6 @@
 	padding: 15px 52px 15px 0;
 	border-top: 1px solid #c9d4de;
 	.small-dropdown {
-		display: block;
 		position: relative;	
 		margin-top: 8px;
 	}
@@ -109,6 +108,24 @@
 				opacity: 1;
 				visibility: visible;
 			}
+		}
+	}
+}
+
+@media (min-width: 649px) {
+	.accordion {
+		&.closed {
+			.accordion__head {
+				.small-dropdown {
+					position: relative;
+				}
+			}
+		}
+	}
+	.accordion__head {
+		.small-dropdown {
+			position: relative;
+			float: right;
 		}
 	}
 }

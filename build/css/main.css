@@ -469,7 +469,6 @@ a.up:after {
   padding: 15px 52px 15px 0;
   border-top: 1px solid #c9d4de; }
   .accordion__head .small-dropdown {
-    display: block;
     position: relative;
     margin-top: 8px; }
 
@@ -533,6 +532,13 @@ a.up:after {
     .accordion__nav li.active:before {
       opacity: 1;
       visibility: visible; }
+
+@media (min-width: 649px) {
+  .accordion.closed .accordion__head .small-dropdown {
+    position: relative; }
+  .accordion__head .small-dropdown {
+    position: relative;
+    float: right; } }
 
 .small-dropdown {
   display: inline-block; }
