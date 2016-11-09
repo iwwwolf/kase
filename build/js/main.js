@@ -337,7 +337,8 @@ $(document).ready(function(){
 				success: function(data){
 					var parentId = self.parents('.quotes-info').attr('id');
 	
-					$('#' + parentId).parent().html(data);
+					self.closest('.col-md-4').html(data);
+					//$('#' + parentId).parent().html(data);
 					activeLi.removeClass('active');
 					self.addClass('active');
 	
