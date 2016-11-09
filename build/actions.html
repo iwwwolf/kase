@@ -366,7 +366,25 @@
                 <li class="active"><a href="#">Индекс KASE</a></li>
                 <li><a href="#">Объем торгов</a></li>
                 <li><a href="#">Капитализация</a></li>
-              </ul><img src="img-content/img-3.jpg" alt="">
+              </ul>
+              <div class="actions__chart">
+                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                <script type="text/javascript">
+                  new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Asia/Almaty",
+                    "theme": "White",
+                    "style": "3",
+                    "locale": "ru",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": true,
+                    "hideideas": true
+                  });
+                </script>
+              </div>
             </div>
           </div>
           <div class="accordion closed">
@@ -616,20 +634,22 @@
       </div>
     </footer>
     <script type="text/javascript" defer src="js/libs.js"> </script>
-    <script type="text/javascript" defer src="js/main.js"> </script>
+    <script type="text/javascript" defer src="js/main.js"></script>
+    <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
     <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function(event) { 
-          $('.quotes-info__arrow').on('click', function(e){
-              e.preventDefault();
-              if(!$(this).hasClass('reverse')){
-                  $(this).addClass('reverse');
-                  $(this).parent().children('.text').text('Лидеры падения');
-              } else {
-                  $(this).removeClass('reverse');
-                  $(this).parent().children('.text').text('Лидеры роста');
-              }
-          });  
-      });  
+      new TradingView.widget({
+        "autosize": true,
+        "symbol": "NASDAQ:AAPL",
+        "interval": "D",
+        "timezone": "Asia/Almaty",
+        "theme": "White",
+        "style": "3",
+        "locale": "ru",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_top_toolbar": true,
+        "hideideas": true
+      });
     </script>
   </body>
 </html>

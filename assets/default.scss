@@ -409,6 +409,10 @@ a.up {
   }
 }
 
+.actions__chart {
+  height: 250px;
+}
+
 @media (min-width: 649px) and (max-width: 768px){
   h2, .h2 {
     font-size: $fz30;

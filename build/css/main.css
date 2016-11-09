@@ -315,6 +315,9 @@ a.up:after {
   top: -2px;
   content: ""; }
 
+.actions__chart {
+  height: 250px; }
+
 @media (min-width: 649px) and (max-width: 768px) {
   h2, .h2 {
     font-size: 214.28571%;
