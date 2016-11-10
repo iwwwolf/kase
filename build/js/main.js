@@ -306,8 +306,8 @@ $(document).ready(function(){
 			}
 		});
 	
-		/*$('.quotes-info__parent').on('click', '.mini-menu__link', function(e){*/
-		$('.quotes-info__parent').on('click', '.mini-menu__link, .quotes-info__arrow', function(e){
+		$('.quotes-info__parent').on('click', '.mini-menu__link', function(e){
+		
 			var target = $(this).parent().find('.mini-menu__menu');
 			e.preventDefault();
 	
@@ -322,7 +322,7 @@ $(document).ready(function(){
 		});
 		
 	
-		$('.quotes-info__parent').on('click', '.mini-menu .link', function(e){
+		$('.quotes-info__parent').on('click', '.mini-menu .link, .quotes-info__arrow', function(e){
 			
 			e.preventDefault();
 			
