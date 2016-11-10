@@ -59,7 +59,7 @@
 		color: #3cbd0d;
 		border: 1px solid #3cbd0d;
 		border-radius: 50%;
-		font-size: 140%;
+		font-size: $fz19;
 		position: absolute;
 		top: 12px;
 		right: 10px;
@@ -127,6 +127,49 @@
 			position: relative;
 			float: right;
 			margin-top: 0;
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px){
+	.accordion {
+		margin-bottom: 60px;
+		.date {
+			margin-bottom: 10px;
+		}
+		.help-block {
+			margin-bottom: 5px;
+			font-size: $fz24;
+		}
+	}
+	.accordion__head {
+		padding: 30px 104px 30px 0;
+		border-top: 2px solid #c9d4de;
+		.small-dropdown {
+			margin-top: 16px;
+			float: none;
+		}
+	}
+	.accordion__head-link {
+		font-size: $fz40;
+		.fa {
+			width: 64px;
+			height: 64px;
+			border: 2px solid #3cbd0d;
+			top: 24px;
+			right: 20px;
+		}
+	}
+	.accordion__nav {
+		margin: 0 0 20px;
+		font-size: $fz28;
+		li {
+			padding-left: 36px;
+			&:before {
+				width: 16px;
+				height: 16px;
+				top: 10px;
+			}
 		}
 	}
 }

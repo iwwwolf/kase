@@ -16,6 +16,9 @@
 				}
 			}
 		}
+		.dropdown-menu {
+			min-width: 100%;
+		}
 	}
 	.dropdown-link {
 		display: block;
@@ -40,6 +43,33 @@
 			top: 2px;
 			bottom: 2px;
 			content: '\f107';
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px){
+	.small-dropdown {
+		font-size: $fz28;
+		&.flex {
+			.dropdown {
+				margin-left: 20px;
+			}
+		}
+		.dropdown {
+			min-width: 220px;
+			.dropdown-menu {
+				font-size: 100%;
+			}
+		}
+		.dropdown-link {
+			border: 2px solid #c9d4de;
+			padding: 4px 72px 4px 20px;
+			&:after {
+				width: 56px;
+				border-left: 2px solid #c9d4de;
+				top: 4px;
+				bottom: 4px;
+			}
 		}
 	}
 }

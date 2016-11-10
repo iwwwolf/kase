@@ -60,3 +60,19 @@
 	color: rgba(51, 51, 51, 0.4);
 	transition: color 300ms;
 }
+
+@media (min-width: 649px) and (max-width: 768px){
+	.radiobutton {
+		margin-bottom: 14px;
+	}
+	.radiobutton__styled {
+		width: 36px;
+		height: 36px;
+		margin-right: 16px;
+		border: 2px solid #c9d4de;
+		&:before {
+			width: 16px;
+			height: 16px;
+		}
+	}
+}

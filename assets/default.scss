@@ -50,19 +50,19 @@ $defaultColor: #45464f;
 $minorColor: #038726;
 $linkColor: #1666bc;
 
-$fz10: 71.429%;
-$fz11: 78.572%;
-$fz12: 85.714%;
-$fz13: 92.86%;
+$fz10: 71.42857142857143%;
+$fz11: 78.57142857142857%;
+$fz12: 85.71428571428571%;
+$fz13: 92.85714285714286%;
 $fz14: 100%;
-$fz15: 107.142%;
-$fz16: 114.286%;
-$fz18: 128.572%;
-$fz19: 135.714%;
+$fz15: 107.1428571428571%;
+$fz16: 114.2857142857143%;
+$fz18: 128.5714285714286%;
+$fz19: 135.7142857142857%;
 $fz20: 142.8571428571429%;
 $fz21: 150%;
 $fz22: 157.1428571428571%;
-$fz24: 171.428%;
+$fz24: 171.4285714285714%;
 $fz26: 185.7142857142857%;
 $fz28: 200%;
 $fz30: 214.2857142857143%;
@@ -70,6 +70,9 @@ $fz31: 221.4285714285714%;
 $fz32: 228.5714285714286%;
 $fz36: 257.1428571428571%;
 $fz38: 271.4285714285714%;
+$fz40: 285.7142857142857%;
+$fz44: 314.2857142857143%;
+$fz62: 442.8571428571429%;
 
 html,
 body {
@@ -370,7 +373,7 @@ h5, .h5 {
     }
   }
 }
-.table-striped {
+.table-striped, .sorting-table {
   font-size: $fz12;
   thead {
     tr {
@@ -416,15 +419,31 @@ a.up {
 }
 
 @media (min-width: 649px) and (max-width: 768px){
+  .dropdown {
+    .dropdown-menu {
+      font-size: 200%;
+    }
+  }
+  h1, .h1 {
+    font-size: $fz62;
+    margin: 26px 0 44px;
+  }
   h2, .h2 {
     font-size: $fz30;
     margin: 0 0 24px;
+  }
+  h5, .h5 {
+    font-size: $fz32;
+    margin: 0 0 30px;
   }
   .container {
     padding: {
       left: 30px;
       right: 30px;
     }
+  }
+  .table-striped, .sorting-table {
+    font-size: $fz24;
   }
   .row {
     margin-left: -30px;
@@ -435,6 +454,19 @@ a.up {
   }
   .date {
     font-size: $fz24;
+  }
+  .blue-list {
+    font-size: $fz24;
+    li {
+      padding-left: 30px;
+      margin-bottom: 8px;
+      &:before {
+        width: 12px;
+        height: 12px;
+        border: 2px solid #0094de;
+        top: 10px;
+      }
+    }
   }
 }
 

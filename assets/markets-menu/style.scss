@@ -1,6 +1,7 @@
 .markets-menu {
-	flex-basis: 100%;
+	width: 87%;
 	//padding-right: 40px;
+	font-size: $fz18;
 	h3 {
 		display: none;
 		text-transform: uppercase;
@@ -10,8 +11,11 @@
 		color: $defaultColor;
 		position: relative;
 		padding: 15px 25px 15px 0;
-		font-size: $fz18;
+		font-size: 100%;
 		border-right: 1px solid #c9d4de;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 		&:after {
 			height: 0;
 			display: block;
@@ -31,7 +35,6 @@
 		border: none;
 		background: #f3fbf2;
 		margin-top: 1px;
-		font-size: $fz18;
 		&>li {
 			&>a {
 				padding: 12px 15px;
@@ -52,6 +55,48 @@
 			.dropdown-link {
 				&:after {
 					content: '\f106';
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px){
+	.markets-menu {
+		h3 {
+			display: none;
+			text-transform: uppercase;
+		}
+		.dropdown-link {
+			font-size: $fz36;
+			padding: 20px 70px 20px 0;
+			border-right: 2px solid #c9d4de;
+			&:after {
+				right: 18px;
+				content: '\f107';
+			}
+		}
+		.dropdown-menu {
+			margin-top: 2px;
+			&>li {
+				&>a {
+					padding: 24px 30px;
+				}
+				&.active {
+					&>a, &>a:hover {
+						background: none;
+						color: #3cbd0d;
+					}
+				}
+			}
+		}
+		.dropdown {
+			position: static;
+			&.open {
+				.dropdown-link {
+					&:after {
+						content: '\f106';
+					}
 				}
 			}
 		}

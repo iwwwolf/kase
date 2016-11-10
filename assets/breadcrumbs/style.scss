@@ -24,3 +24,15 @@
 		}
 	}
 }
+
+@media (min-width: 649px) and (max-width: 768px){
+	.breadcrumbs {
+		font-size: $fz24;
+		padding: 28px 0 30px;
+		li {
+			&:after {
+				margin: 0 4px;
+			}
+		}
+	}
+}
