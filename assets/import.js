@@ -8,6 +8,7 @@ $(document).ready(function(){
 	//= require "home-news/script.js"
 	//= require "regulations/script.js"
 	//= require "accordion/script.js"
+	//= require "sorting-table/script.js"
 	/* require "trade-info/script.js"
 	 require "donut-chart/script.js"*/
 });

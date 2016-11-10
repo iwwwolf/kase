@@ -1,0 +1,22 @@
+.dataTables_info,
+.dataTables_paginate,
+.dataTables_length,
+.dataTables_filter {
+	display: none;
+}
+.dataTables_wrapper.no-footer {
+	.dataTables_scrollBody {
+		border-bottom: none;
+	}
+}
+table.dataTable {
+	thead {
+		td, th {
+			border-bottom: none;
+			padding: 8px 10px;
+		}
+	}
+}
+table.dataTable.no-footer {
+	border-bottom: none;
+}

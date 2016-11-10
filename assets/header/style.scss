@@ -129,7 +129,7 @@ header {
 			&>li {
 				&>a {
 					padding: 2px 10px;
-					font-size: $fz19;
+					font-size: 100%;
 					background: none;
 					color: #6e737c;
 				}
@@ -233,7 +233,6 @@ header {
 				&>li {
 					&>a {
 						padding: 4px 20px;
-						font-size: $fz38;
 						background: none;
 						color: #6e737c;
 					}

@@ -20,24 +20,23 @@ block content
 						li: a(href="#") Капитализация
 					//- img(src="img-content/img-3.jpg", alt="")
 					.actions__chart
-						block scripts
-							//- TradingView Widget BEGIN
-							script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
-							script(type="text/javascript").
-								new TradingView.widget({
-								  "autosize": true,
-								  "symbol": "NASDAQ:AAPL",
-								  "interval": "D",
-								  "timezone": "Asia/Almaty",
-								  "theme": "White",
-								  "style": "3",
-								  "locale": "ru",
-								  "toolbar_bg": "#f1f3f6",
-								  "enable_publishing": false,
-								  "hide_top_toolbar": true,
-								  "hideideas": true
-								});
-							//- TradingView Widget END
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
 
 			.accordion.closed
 				.accordion__head
@@ -53,87 +52,87 @@ block content
 								li: a(href="#") 1 год
 				.accordion__body
 					.date Время последних данных: 19.08.2016 (17:35)
-					.table-parent
-						table.table.table-striped
-							thead
-								tr
-									td Код
-									td Компания
-									td: a.down(href="#") Kl
-									td: a.down(href="#") Число сделок
-									td: a.down(href="#") Объем, млн KZT
-									td: a.down(href="#") Объем, тыс USD
-									td: a.down(href="#") Доля рынка,%
-									td Последняя цена,KZT
-									td Mаркет-мейкеры
-									td Дата последней сделки
-							tbody
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 4.8
-									td 125
-									td 0.00007
-									td 0.00007
-									td 87
-									td 1 446 453
-									td M
-									td 20.07.2016
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 4.8
-									td 125
-									td 0.00007
-									td 0.00007
-									td 87
-									td 1 446 453
-									td M
-									td 20.07.2016
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 4.8
-									td 125
-									td 0.00007
-									td 0.00007
-									td 87
-									td 1 446 453
-									td M
-									td 20.07.2016
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 4.8
-									td 125
-									td 0.00007
-									td 0.00007
-									td 87
-									td 1 446 453
-									td M
-									td 20.07.2016
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 4.8
-									td 125
-									td 0.00007
-									td 0.00007
-									td 87
-									td 1 446 453
-									td M
-									td 20.07.2016
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 4.8
-									td 125
-									td 0.00007
-									td 0.00007
-									td 87
-									td 1 446 453
-									td M
-									td 20.07.2016
+					//-.table-parent
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th(class="sorting-false") Код
+								th(class="sorting-false") Компания
+								th Kl
+								th Число сделок
+								th Объем, млн KZT
+								th Объем, тыс USD
+								th Доля рынка,%
+								th(class="sorting-false") Последняя цена,KZT
+								th(class="sorting-false") Mаркет-мейкеры
+								th(class="sorting-false") Дата последней сделки
+						tbody
+							tr
+								td: a(href="#") KZ_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.005
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 120
+								td 0.00007
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
 					.help-block Без учета специализированных торгов *
 
 			.accordion.closed
@@ -145,59 +144,59 @@ block content
 					ul.accordion__nav
 						li.active: a(href="#") Лидеры роста
 						li: a(href="#") Лидеры падения
-					.table-parent
-						table.table.table-striped
-							thead
-								tr
-									td Код
-									td Компания
-									td Последняя цена,KZT
-									td Изменение, KZT
-									td Изменение, %
-									td 1 месяц
-							tbody
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 1,004.00
-									td 1,004.00
-									td +10.10
-									td: img(src="img-content/img-4.jpg", alt="")
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 1,004.00
-									td 1,004.00
-									td +10.10
-									td: img(src="img-content/img-4.jpg", alt="")
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 1,004.00
-									td 1,004.00
-									td +10.10
-									td: img(src="img-content/img-4.jpg", alt="")
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 1,004.00
-									td 1,004.00
-									td +10.10
-									td: img(src="img-content/img-4.jpg", alt="")
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 1,004.00
-									td 1,004.00
-									td +10.10
-									td: img(src="img-content/img-4.jpg", alt="")
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 1,004.00
-									td 1,004.00
-									td +10.10
-									td: img(src="img-content/img-4.jpg", alt="")
+					//-.table-parent
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th Код
+								th Компания
+								th Последняя цена,KZT
+								th Изменение, KZT
+								th Изменение, %
+								th 1 месяц
+						tbody
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
 					.help-block Данные предоставляются с задержкой в 15 минут *
 					.help-block В расчет включаются акции первого класса ликвидности *
 
@@ -210,17 +209,17 @@ block content
 					ul.accordion__nav
 						li.active: a(href="#") Лидеры роста
 						li: a(href="#") Лидеры падения
-					.table-parent
-						table.table.table-striped
+					//-.table-parent
+					table.sorting-table.table.table-striped
 							thead
 								tr
-									td Код
-									td Компания
-									td Цена
-									td Объем, млн KZT
-									td Число сделок
-									td Спрос, % 
-									td Дата
+									th Код
+									th Компания
+									th Цена
+									th Объем, млн KZT
+									th Число сделок
+									th Спрос, % 
+									th Дата
 							tbody
 								tr
 									td: a(href="#") RU_SBER

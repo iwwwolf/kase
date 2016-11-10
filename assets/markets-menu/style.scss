@@ -9,8 +9,8 @@
 		display: block;
 		color: $defaultColor;
 		position: relative;
-		padding: 10px 25px 10px 0;
-		font-size: $fz16;
+		padding: 15px 25px 15px 0;
+		font-size: $fz18;
 		border-right: 1px solid #c9d4de;
 		&:after {
 			height: 0;
@@ -31,9 +31,10 @@
 		border: none;
 		background: #f3fbf2;
 		margin-top: 1px;
+		font-size: $fz18;
 		&>li {
 			&>a {
-				padding: 4px 15px;
+				padding: 12px 15px;
 				font-size: $fz13;
 				@extend .underline;
 			}

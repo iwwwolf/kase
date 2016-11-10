@@ -306,7 +306,8 @@ $(document).ready(function(){
 			}
 		});
 	
-		$('.quotes-info__parent').on('click', '.mini-menu__link', function(e){
+		/*$('.quotes-info__parent').on('click', '.mini-menu__link', function(e){*/
+		$('.quotes-info__parent').on('click', '.mini-menu__link, .quotes-info__arrow', function(e){
 			var target = $(this).parent().find('.mini-menu__menu');
 			e.preventDefault();
 	
@@ -332,7 +333,8 @@ $(document).ready(function(){
 			var parent = self.parents('.quotes-info');
 			var activeLi = self.parent().find('.active');
 			$.ajax({
-				url: 'http://kase.dev/build/server/quotes-info/' + title + '.html',
+				//url: 'http://kase.dev/build/server/quotes-info/' + title + '.html',
+				url: 'ajax/' + title + '/',
 				dataType: 'html',
 				success: function(data){
 					var parentId = self.parents('.quotes-info').attr('id');
@@ -405,6 +407,11 @@ $(document).ready(function(){
 			target.slideDown();
 		}
 	});
+	if($('.sorting-table').length){	
+		$('.sorting-table').DataTable({
+			"scrollX": true
+		});
+	}
 	/* require "trade-info/script.js"
 	 require "donut-chart/script.js"*/
 });

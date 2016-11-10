@@ -365,6 +365,8 @@ h5, .h5 {
   & > thead > tr > {
     td, th {
       border-top: none;
+      font-weight: normal;
+      vertical-align: top;
     }
   }
 }
