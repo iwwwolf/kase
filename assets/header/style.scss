@@ -152,6 +152,9 @@ header {
 	}
 	a {
 		color: #6e737c;
+		&:hover {
+			color: #169d1b;
+		}
 	}
 	.active {
 		a {

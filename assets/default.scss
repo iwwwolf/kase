@@ -292,9 +292,13 @@ h5, .h5 {
   font-size: $fz12;
   li {
     display: block;
+    margin-bottom: 4px;
+  }
+  a {
     padding-left: 15px;
     position: relative;
-    margin-bottom: 4px;
+    color: #0094de;
+    @extend .underline;
     &:before {
       display: block;
       width: 6px;
@@ -305,11 +309,13 @@ h5, .h5 {
       left: 0;
       top: 5px;
       content: "";
+      transition: background 300ms;
     }
-  }
-  a {
-    color: #0094de;
-    @extend .underline
+    &:hover {
+      &:before {
+        background: #0094de;
+      }
+    }
   }
 }
 

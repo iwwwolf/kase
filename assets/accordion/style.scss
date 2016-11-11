@@ -7,9 +7,17 @@
 			}
 		}
 		.accordion__head-link {
+			&:hover {
+				.fa {
+					&:before {
+						transform: translateY(3px) rotate(0);
+					}
+				}
+			}
 			.fa {
 				&:before {
-					content: '\f107';
+					//content: '\f107';
+					transform: translateY(0) rotate(0);
 				}
 			}
 		}
@@ -52,6 +60,11 @@
 	color: $defaultColor;
 	&:hover {
 		color: #3cbd0d;
+		.fa {
+			&:before {
+				transform: translateY(-3px) rotate(180deg);
+			}
+		}
 	}
 	.fa {
 		width: 32px;
@@ -64,10 +77,22 @@
 		top: 12px;
 		right: 10px;
 		&:before {
+			width: 100%;
+			height: 100%;
+			line-height: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			content: '\f106';
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			content: '\f107';
+			transition: all 300ms;
+		}
+		&:before {
+			transform: translateY(0) rotate(180deg);
 		}
 	}
 }

@@ -107,6 +107,7 @@
 	.markets-menu {
 		width: 195px;
 		padding-right: 30px;
+		font-size: 100%;
 		position: absolute;
 		left: 15px;
 		top: 0;
@@ -133,7 +134,7 @@
 					padding: 0;
 					&:hover {
 						background: none;
-						color: $defaultColor;
+						color: #3cbd0d;
 					}
 				}
 			}
