@@ -4,6 +4,27 @@
 .dataTables_filter {
 	display: none;
 }
+.dataTables_filter {
+	float: none;
+	width: 100%;
+	background-color: #f4f6f8;
+	padding: 18px 17px 13px;
+	font-size: 100%;
+	label {
+		font-weight: normal;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+	input {
+		width: 100%;
+		padding: 0 15px;
+		background-color: #fff;
+		height: 40px;
+		border: 1px solid #c9d4de;
+		margin: 0 !important;
+	}
+}
 .dataTables_wrapper.no-footer {
 	.dataTables_scrollBody {
 		border-bottom: none;
@@ -14,6 +35,7 @@ table.dataTable {
 		td, th {
 			border-bottom: none;
 			padding: 8px 18px 8px 10px;
+			min-width: 90px;
 		}
 	}
 	tbody {
@@ -24,6 +46,26 @@ table.dataTable {
 }
 table.dataTable.no-footer {
 	border-bottom: none;
+}
+
+.dataTables_scroll {
+	position: relative;
+	&:after {
+		display: block;
+		width: 30px;
+		height: 100%;
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 80%);
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		content: "";
+	}
+}
+.sortin-table--with-search {
+	.dataTables_filter {
+		display: block;
+	}
 }
 
 @media (min-width: 649px) and (max-width: 768px){
@@ -37,6 +79,15 @@ table.dataTable.no-footer {
 			td {
 			    padding: 16px 20px;
 			}
+		}
+	}
+	.dataTables_filter {
+		font-size: $fz18;
+		padding: 30px 34px 26px;
+		input {
+			padding: 0 20px;
+			height: 60px;
+			border: 2px solid #c9d4de;
 		}
 	}
 }

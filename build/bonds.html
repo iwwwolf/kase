@@ -22,6 +22,7 @@
       	-webkit-transform: scale(0.85);
       	transform: scale(0.85); 
       }
+      
     </style>
     <div id="menu" style="display: none;" class="menu">
       <div class="menu__container">
@@ -318,26 +319,16 @@
           <div id="regulations" class="regulations">
             <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"><span class="line1"></span><span class="line2"></span></i></a>
               <div class="dropdown-menu">
-                <h5>Регламент</h5>
                 <div class="regulations__timetable">
+                  <h5>Регламент</h5>
                   <div>
                     <div class="help-block">Акции первого класса ликвидности:</div>
                     <div> <span>11:30 – 17:00</span>торговая сессия</div>
-                    <div> <span>17:20 – 18:00</span>клиринговая сессия</div>
-                  </div>
-                  <div>
-                    <div class="help-block">Акции второго и третьего классов ликвидности:</div>
-                    <div> <span>17:20 – 18:00</span>торговая сессия</div>
                   </div>
                 </div>
                 <div class="regulations__download">
                   <form>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices"><span class="radiobutton__styled"></span><span class="radiobutton__label">Средневзвешенные цены</span>
-                    </label>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices"><span class="radiobutton__styled"></span><span class="radiobutton__label">Риск-параметры акций</span>
-                    </label>
+                    <h5>Средневзвешенные цены</h5>
                     <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
                       <input type="date">
                       <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
@@ -351,12 +342,25 @@
                 <div class="regulations__links-list">
                   <h5>Полезные ссылки</h5>
                   <ul class="blue-list">
-                    <li><a href="#">Список акций</a></li>
+                    <li><a href="#">Список облигаций</a></li>
                     <li><a href="#">Просмотр торгов</a></li>
                     <li><a href="#">Список брокеров</a></li>
                     <li><a href="#">Маркет-мейкеры</a></li>
                     <li><a href="#">Рыночная оценка</a></li>
                     <li><a href="#">Правила торгов</a></li>
+                  </ul>
+                </div>
+                <div class="regulations__nearest-auction">
+                  <h5>Ближайший аукцион</h5>
+                  <ul>
+                    <li>
+                      <div><span class="big">AGKKb1</span><span class="small">10 лет</span></div>
+                      <div>10 млрд KZT</div>
+                    </li>
+                    <li>
+                      <div><span class="big">AGKKb1</span><span class="small">10 лет</span></div>
+                      <div>10 млрд KZT</div>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -402,226 +406,184 @@
             </div>
           </div>
           <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Наиболее ликвидные акции<i class="fa fa-angle-down"></i></a>
-              <div class="small-dropdown flex accordion__hide-in-closed">Период:
-                <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">1 день</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">1 неделя</a></li>
-                    <li><a href="#">1 месяц</a></li>
-                    <li><a href="#">1 год</a></li>
-                  </ul>
-                </div>
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Все инструменты<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <div class="sortin-table--with-search">
+                <table class="sorting-table table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Код</th>
+                      <th>Валюта</th>
+                      <th>Доход., % годовых</th>
+                      <th>Купон, %</th>
+                      <th>Дата погаш.</th>
+                      <th>Объем послед. сделки, млн KZT</th>
+                      <th>Объем послед. сделки, тыс USD</th>
+                      <th>Маркет-мейкер</th>
+                      <th>Дата послед. сделки</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">CCBNb19</a></td>
+                      <td>$</td>
+                      <td>16.77</td>
+                      <td>16.77</td>
+                      <td>25.05.2015</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb18</a></td>
+                      <td>$</td>
+                      <td>16.77</td>
+                      <td>16.77</td>
+                      <td>25.05.2015</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb17</a></td>
+                      <td>$</td>
+                      <td>16.77</td>
+                      <td>16.77</td>
+                      <td>25.05.2015</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb16</a></td>
+                      <td>$</td>
+                      <td>16.77</td>
+                      <td>16.77</td>
+                      <td>25.05.2015</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb15</a></td>
+                      <td>$</td>
+                      <td>16.77</td>
+                      <td>16.77</td>
+                      <td>25.05.2015</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb14</a></td>
+                      <td>$</td>
+                      <td>16.77</td>
+                      <td>16.77</td>
+                      <td>25.05.2015</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </div>
-            <div class="accordion__body">
-              <div class="date">Время последних данных: 19.08.2016 (17:35)</div>
-              <table class="sorting-table table table-striped">
-                <thead>
-                  <tr>
-                    <th class="sorting-false">Код</th>
-                    <th class="sorting-false">Компания</th>
-                    <th>Kl</th>
-                    <th>Число сделок</th>
-                    <th>Объем, млн KZT</th>
-                    <th>Объем, тыс USD</th>
-                    <th>Доля рынка,%</th>
-                    <th class="sorting-false">Последняя цена,KZT</th>
-                    <th class="sorting-false">Mаркет-мейкеры</th>
-                    <th class="sorting-false">Дата последней сделки</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#">KZ_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.005</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>120</td>
-                    <td>0.00007</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                </tbody>
-              </table>
               <div class="help-block">Без учета специализированных торгов *</div>
+              <div class="help-block">Данные предоставляются с задержкой в 15 мин *</div>
             </div>
           </div>
           <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Лидеры роста и падения<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Последние размещения<i class="fa fa-angle-down"></i></a></div>
             <div class="accordion__body">
-              <ul class="accordion__nav">
-                <li class="active"><a href="#">Лидеры роста</a></li>
-                <li><a href="#">Лидеры падения</a></li>
-              </ul>
               <table class="sorting-table table table-striped">
                 <thead>
                   <tr>
                     <th>Код</th>
                     <th>Компания</th>
-                    <th>Последняя цена,KZT</th>
-                    <th>Изменение, KZT</th>
-                    <th>Изменение, %</th>
-                    <th>1 месяц</th>
+                    <th>Валюта</th>
+                    <th>Объём выпуска</th>
+                    <th>Объем размещ., %</th>
+                    <th>Доля размещ., %</th>
+                    <th>Купон, %</th>
+                    <th>Цена, %</th>
+                    <th>Дата погашения</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
+                    <td><a href="#">CCBNb19</a></td>
+                    <td><a href="#">АО "Банк ЦентрКредит"</a></td>
+                    <td>$</td>
+                    <td>0.1000</td>
+                    <td>0.1000</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>23.10.2016</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
+                    <td><a href="#">CCBNb19</a></td>
+                    <td><a href="#">АО "Банк ЦентрКредит"</a></td>
+                    <td>$</td>
+                    <td>0.1000</td>
+                    <td>0.1000</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>23.10.2016</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
+                    <td><a href="#">CCBNb19</a></td>
+                    <td><a href="#">АО "Банк ЦентрКредит"</a></td>
+                    <td>$</td>
+                    <td>0.1000</td>
+                    <td>0.1000</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>23.10.2016</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
+                    <td><a href="#">CCBNb19</a></td>
+                    <td><a href="#">АО "Банк ЦентрКредит"</a></td>
+                    <td>$</td>
+                    <td>0.1000</td>
+                    <td>0.1000</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>23.10.2016</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
+                    <td><a href="#">CCBNb19</a></td>
+                    <td><a href="#">АО "Банк ЦентрКредит"</a></td>
+                    <td>$</td>
+                    <td>0.1000</td>
+                    <td>0.1000</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>23.10.2016</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
+                    <td><a href="#">CCBNb19</a></td>
+                    <td><a href="#">АО "Банк ЦентрКредит"</a></td>
+                    <td>$</td>
+                    <td>0.1000</td>
+                    <td>0.1000</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>0.00</td>
+                    <td>23.10.2016</td>
                   </tr>
                 </tbody>
               </table>
-              <div class="help-block">Данные предоставляются с задержкой в 15 минут *</div>
-              <div class="help-block">В расчет включаются акции первого класса ликвидности *</div>
-            </div>
-          </div>
-          <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Лидеры роста и падения<i class="fa fa-angle-down"></i></a></div>
-            <div class="accordion__body">
-              <ul class="accordion__nav">
-                <li class="active"><a href="#">Лидеры роста</a></li>
-                <li><a href="#">Лидеры падения</a></li>
-              </ul>
-              <table class="sorting-table table table-striped">
-                <thead>
-                  <tr>
-                    <th>Код</th>
-                    <th>Компания</th>
-                    <th>Цена</th>
-                    <th>Объем, млн KZT</th>
-                    <th>Число сделок</th>
-                    <th>Спрос, % </th>
-                    <th>Дата</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>11 000.00</td>
-                    <td>800 016 129</td>
-                    <td>485</td>
-                    <td>325</td>
-                    <td>21.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>11 000.00</td>
-                    <td>800 016 129</td>
-                    <td>485</td>
-                    <td>325</td>
-                    <td>21.07.2016</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="help-block">Данные предоставляются с задержкой в 15 минут *</div>
+              <div class="help-block">Данные за последние 6 месяцев *</div>
             </div>
           </div>
         </div>

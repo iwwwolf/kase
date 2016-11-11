@@ -4,7 +4,57 @@ block content
 	.markets-top
 		.container
 			include ../markets-menu/module
-			include ../regulations/module
+			//- include ../regulations/module
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Регламент
+							div
+								.help-block Акции первого класса ликвидности:
+								div 
+									span 11:30 – 17:00
+									|торговая сессия
+								div 
+									span 17:20 – 18:00
+									|клиринговая сессия
+							div
+								.help-block Акции второго и третьего классов ликвидности:
+								div 
+									span 17:20 – 18:00
+									|торговая сессия
+						.regulations__download
+							form
+								- var radioName = "prices"
+								- var radioLabels = ["Средневзвешенные цены", "Риск-параметры акций"];
+								for radioLabel in radioLabels
+									include ../radiobutton/module
+								.regulations__download-input.regulations__download-input--mobile
+									i.fa.fa-calendar
+									input(type="date")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+								.regulations__download-input
+									i.fa.fa-calendar
+									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Список акций
+								li: a(href="#") Просмотр торгов
+								li: a(href="#") Список брокеров
+								li: a(href="#") Маркет-мейкеры
+								li: a(href="#") Рыночная оценка
+								li: a(href="#") Правила торгов
 	.container
 		#centerColumn.center-column
 			include ../breadcrumbs/module
@@ -56,23 +106,21 @@ block content
 					table.sorting-table.table.table-striped
 						thead
 							tr
-								th(class="sorting-false") Код
-								th(class="sorting-false") Компания
+								th Код
+								th Компания
 								th Kl
 								th Число сделок
 								th Объем, млн KZT
-								th Объем, тыс USD
 								th Доля рынка,%
-								th(class="sorting-false") Последняя цена,KZT
-								th(class="sorting-false") Mаркет-мейкеры
-								th(class="sorting-false") Дата последней сделки
+								th Последняя цена,KZT
+								th Mаркет-мейкеры
+								th Дата последней сделки
 						tbody
 							tr
 								td: a(href="#") KZ_SBER
 								td: a(href="#") Название
 								td 4.8
 								td 125
-								td 0.00007
 								td 0.00007
 								td 87
 								td 1 446 453
@@ -83,7 +131,6 @@ block content
 								td: a(href="#") Название
 								td 4.8
 								td 125
-								td 0.00007
 								td 0.00007
 								td 87
 								td 1 446 453
@@ -95,7 +142,6 @@ block content
 								td 4.8
 								td 125
 								td 0.005
-								td 0.00007
 								td 87
 								td 1 446 453
 								td M
@@ -106,7 +152,6 @@ block content
 								td 4.8
 								td 120
 								td 0.00007
-								td 0.00007
 								td 87
 								td 1 446 453
 								td M
@@ -117,7 +162,6 @@ block content
 								td 4.8
 								td 125
 								td 0.00007
-								td 0.00007
 								td 87
 								td 1 446 453
 								td M
@@ -127,7 +171,6 @@ block content
 								td: a(href="#") Название
 								td 4.8
 								td 125
-								td 0.00007
 								td 0.00007
 								td 87
 								td 1 446 453
@@ -202,13 +245,10 @@ block content
 
 			.accordion.closed
 				.accordion__head
-					a.accordion__head-link(href="#") Лидеры роста и падения
+					a.accordion__head-link(href="#") Публичные размещения (IPO)
 						i.fa.fa-angle-down
 
 				.accordion__body
-					ul.accordion__nav
-						li.active: a(href="#") Лидеры роста
-						li: a(href="#") Лидеры падения
 					//-.table-parent
 					table.sorting-table.table.table-striped
 							thead

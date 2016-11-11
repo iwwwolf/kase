@@ -409,7 +409,11 @@ $(document).ready(function(){
 	});
 	if($('.sorting-table').length){	
 		$('.sorting-table').DataTable({
-			"scrollX": true
+			scrollX: true,
+			language: {
+			    search: '',
+			    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+			  }
 		});
 	}
 	/* require "trade-info/script.js"

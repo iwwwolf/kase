@@ -10,7 +10,7 @@
 		display: block;
 		color: $defaultColor;
 		position: relative;
-		padding: 15px 25px 15px 0;
+		padding: 15px 40px 15px 0;
 		font-size: 100%;
 		border-right: 1px solid #c9d4de;
 		overflow: hidden;
@@ -21,10 +21,11 @@
 			display: block;
 			font-size: $fz18;
 			line-height: 0;
+			color: $minorColor;
 			font-family: "FontAwesome";
 			position: absolute;
 			top: 50%;
-			right: 9px;
+			right: 18px;
 			content: '\f107';
 		}
 	}
@@ -69,10 +70,10 @@
 		}
 		.dropdown-link {
 			font-size: $fz36;
-			padding: 20px 70px 20px 0;
+			padding: 20px 90px 20px 0;
 			border-right: 2px solid #c9d4de;
 			&:after {
-				right: 18px;
+				right: 40px;
 				content: '\f107';
 			}
 		}

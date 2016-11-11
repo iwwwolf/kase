@@ -4,7 +4,59 @@ block content
 	.markets-top
 		.container
 			include ../markets-menu/module
-			include ../regulations/module
+			//-include ../regulations/module
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Регламент
+							div
+								.help-block Акции первого класса ликвидности:
+								div 
+									span 11:30 – 17:00
+									|торговая сессия
+						.regulations__download
+							form
+								h5 Средневзвешенные цены
+								.regulations__download-input.regulations__download-input--mobile
+									i.fa.fa-calendar
+									input(type="date")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+								.regulations__download-input
+									i.fa.fa-calendar
+									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Список облигаций
+								li: a(href="#") Просмотр торгов
+								li: a(href="#") Список брокеров
+								li: a(href="#") Маркет-мейкеры
+								li: a(href="#") Рыночная оценка
+								li: a(href="#") Правила торгов
+						.regulations__nearest-auction
+							h5 Ближайший аукцион
+							ul
+								li
+									div
+										span.big AGKKb1
+										span.small 10 лет
+									div 10 млрд KZT
+								li
+									div
+										span.big AGKKb1
+										span.small 10 лет
+									div 10 млрд KZT
 	.container
 		#centerColumn.center-column
 			include ../breadcrumbs/module
@@ -40,201 +92,163 @@ block content
 
 			.accordion.closed
 				.accordion__head
-					a.accordion__head-link(href="#") Наиболее ликвидные акции
+					a.accordion__head-link(href="#") Все инструменты
 						i.fa.fa-angle-down
-					.small-dropdown.flex.accordion__hide-in-closed Период:
-						.dropdown
-							a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
-
-							ul.dropdown-menu
-								li: a(href="#") 1 неделя
-								li: a(href="#") 1 месяц
-								li: a(href="#") 1 год
 				.accordion__body
-					.date Время последних данных: 19.08.2016 (17:35)
-					//-.table-parent
-					table.sorting-table.table.table-striped
-						thead
-							tr
-								th(class="sorting-false") Код
-								th(class="sorting-false") Компания
-								th Kl
-								th Число сделок
-								th Объем, млн KZT
-								th Объем, тыс USD
-								th Доля рынка,%
-								th(class="sorting-false") Последняя цена,KZT
-								th(class="sorting-false") Mаркет-мейкеры
-								th(class="sorting-false") Дата последней сделки
-						tbody
-							tr
-								td: a(href="#") KZ_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.005
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 120
-								td 0.00007
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-					.help-block Без учета специализированных торгов *
+					.sortin-table--with-search
+						table.sorting-table.table.table-striped
+							thead
+								tr
+									th Код
+									th Валюта
+									th Доход., % годовых
+									th Купон, %
+									th Дата погаш.
+									th Объем послед. сделки, млн KZT
+									th Объем послед. сделки, тыс USD
+									th Маркет-мейкер
+									th Дата послед. сделки
+							tbody
+								tr
+									td: a(href="#") CCBNb19
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb18
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb17
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb16
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb15
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb14
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
 
+					.help-block Без учета специализированных торгов *
+					.help-block Данные предоставляются с задержкой в 15 мин *
+			
 			.accordion.closed
 				.accordion__head
-					a.accordion__head-link(href="#") Лидеры роста и падения
+					a.accordion__head-link(href="#") Последние размещения
 						i.fa.fa-angle-down
-
 				.accordion__body
-					ul.accordion__nav
-						li.active: a(href="#") Лидеры роста
-						li: a(href="#") Лидеры падения
-					//-.table-parent
 					table.sorting-table.table.table-striped
 						thead
 							tr
 								th Код
 								th Компания
-								th Последняя цена,KZT
-								th Изменение, KZT
-								th Изменение, %
-								th 1 месяц
+								th Валюта
+								th Объём выпуска
+								th Объем размещ., %
+								th Доля размещ., %
+								th Купон, %
+								th Цена, %
+								th Дата погашения
 						tbody
 							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 1,004.00
-								td 1,004.00
-								td +10.10
-								td: img(src="img-content/img-4.jpg", alt="")
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
 							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 1,004.00
-								td 1,004.00
-								td +10.10
-								td: img(src="img-content/img-4.jpg", alt="")
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
 							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 1,004.00
-								td 1,004.00
-								td +10.10
-								td: img(src="img-content/img-4.jpg", alt="")
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
 							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 1,004.00
-								td 1,004.00
-								td +10.10
-								td: img(src="img-content/img-4.jpg", alt="")
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
 							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 1,004.00
-								td 1,004.00
-								td +10.10
-								td: img(src="img-content/img-4.jpg", alt="")
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
 							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 1,004.00
-								td 1,004.00
-								td +10.10
-								td: img(src="img-content/img-4.jpg", alt="")
-					.help-block Данные предоставляются с задержкой в 15 минут *
-					.help-block В расчет включаются акции первого класса ликвидности *
-
-			.accordion.closed
-				.accordion__head
-					a.accordion__head-link(href="#") Лидеры роста и падения
-						i.fa.fa-angle-down
-
-				.accordion__body
-					ul.accordion__nav
-						li.active: a(href="#") Лидеры роста
-						li: a(href="#") Лидеры падения
-					//-.table-parent
-					table.sorting-table.table.table-striped
-							thead
-								tr
-									th Код
-									th Компания
-									th Цена
-									th Объем, млн KZT
-									th Число сделок
-									th Спрос, % 
-									th Дата
-							tbody
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 11 000.00
-									td 800 016 129
-									td 485
-									td 325
-									td 21.07.2016
-								tr
-									td: a(href="#") RU_SBER
-									td: a(href="#") Название
-									td 11 000.00
-									td 800 016 129
-									td 485
-									td 325
-									td 21.07.2016
-					.help-block Данные предоставляются с задержкой в 15 минут *
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
+					.help-block Данные за последние 6 месяцев *
