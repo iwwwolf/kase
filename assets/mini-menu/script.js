@@ -59,7 +59,9 @@ if($('.mini-menu__menu').length){
 			success: function(data){
 				var parentId = self.parents('.quotes-info').attr('id');
 
-				self.closest('.col-md-4').html(data);
+				var obj = self.closest('.col-md-4');
+				obj.html(data);
+				restartSparklines(obj);
 				//$('#' + parentId).parent().html(data);
 				activeLi.removeClass('active');
 				self.addClass('active');

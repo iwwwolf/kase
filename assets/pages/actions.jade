@@ -278,3 +278,15 @@ block content
 									td 325
 									td 21.07.2016
 					.help-block Данные предоставляются с задержкой в 15 минут *
+
+block scripts
+	script(type="text/javascript").
+		window.onload = function(){
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		};

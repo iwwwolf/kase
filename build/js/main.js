@@ -339,7 +339,9 @@ $(document).ready(function(){
 				success: function(data){
 					var parentId = self.parents('.quotes-info').attr('id');
 	
-					self.closest('.col-md-4').html(data);
+					var obj = self.closest('.col-md-4');
+					obj.html(data);
+					restartSparklines(obj);
 					//$('#' + parentId).parent().html(data);
 					activeLi.removeClass('active');
 					self.addClass('active');
@@ -407,7 +409,7 @@ $(document).ready(function(){
 			target.slideDown();
 		}
 	});
-	if($('.sorting-table').length){	
+	/*if($('.sorting-table').length){	
 		$('.sorting-table').DataTable({
 			scrollX: true,
 			language: {
@@ -415,7 +417,7 @@ $(document).ready(function(){
 			    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
 			  }
 		});
-	}
+	}*/
 	/* require "trade-info/script.js"
 	 require "donut-chart/script.js"*/
 });

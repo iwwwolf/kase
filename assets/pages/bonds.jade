@@ -252,3 +252,15 @@ block content
 								td 0.00
 								td 23.10.2016
 					.help-block Данные за последние 6 месяцев *
+
+block scripts
+	script(type="text/javascript").
+		window.onload = function(){
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		};

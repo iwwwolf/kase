@@ -2421,6 +2421,7 @@ footer {
       margin-bottom: 13px; } }
 
 .regulations {
+  position: relative;
   width: 13%;
   top: 0;
   right: 0; }
@@ -2446,11 +2447,14 @@ footer {
               transform: rotate(-45deg); }
   .regulations .dropdown-link {
     display: block;
-    height: inherit;
     width: 100%;
+    height: 100%;
     color: #038726;
     font-size: 157.14286%;
-    position: relative; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0; }
     .regulations .dropdown-link .fa {
       display: block;
       width: 100%;
@@ -2698,7 +2702,8 @@ footer {
 table.dataTable thead td, table.dataTable thead th {
   border-bottom: none;
   padding: 8px 18px 8px 10px;
-  min-width: 90px; }
+  min-width: 90px;
+  vertical-align: middle; }
 
 table.dataTable tbody td {
   padding: 8px 10px; }
@@ -2725,7 +2730,8 @@ table.dataTable.no-footer {
 
 @media (min-width: 649px) and (max-width: 768px) {
   table.dataTable thead td, table.dataTable thead th {
-    padding: 16px 36px 16px 20px; }
+    padding: 16px 36px 16px 20px;
+    min-width: 180px; }
   table.dataTable tbody td {
     padding: 16px 20px; }
   .dataTables_filter {

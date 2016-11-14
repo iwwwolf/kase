@@ -605,5 +605,16 @@
     </footer>
     <script type="text/javascript" defer src="js/libs.js"> </script>
     <script type="text/javascript" defer src="js/main.js"></script>
+    <script type="text/javascript">
+      window.onload = function(){
+      	$('.sorting-table').DataTable({
+      		scrollX: true,
+      		language: {
+      		    search: '',
+      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+      		  }
+      	});
+      };
+    </script>
   </body>
 </html>

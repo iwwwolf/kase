@@ -1,4 +1,4 @@
-if($('.sorting-table').length){	
+/*if($('.sorting-table').length){	
 	$('.sorting-table').DataTable({
 		scrollX: true,
 		language: {
@@ -6,4 +6,4 @@ if($('.sorting-table').length){
 		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
 		  }
 	});
-}
+}*/

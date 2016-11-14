@@ -36,6 +36,7 @@ table.dataTable {
 			border-bottom: none;
 			padding: 8px 18px 8px 10px;
 			min-width: 90px;
+			vertical-align: middle;
 		}
 	}
 	tbody {
@@ -73,6 +74,7 @@ table.dataTable.no-footer {
 		thead {
 			td, th {
 				padding: 16px 36px 16px 20px;
+				min-width: 180px;
 			}
 		}
 		tbody {
