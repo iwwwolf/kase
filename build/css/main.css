@@ -2222,8 +2222,8 @@ footer {
   .trade-link__text {
     display: block; } }
 
-/* @import "trade-info/style.scss";
-@import "donut-chart/style.scss"; */
+/* @import "modules/trade-info/style.scss";
+@import "modules/donut-chart/style.scss"; */
 .trade-table {
   width: 100%;
   overflow: auto;

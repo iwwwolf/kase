@@ -5,17 +5,17 @@ block variables
 
 block content
 	.great-slider__parent.container.hidden-block
-		include ../great-slider/module
+		include ../modules/great-slider/module
 	.container
-		include ../navigation/module
+		include ../modules/navigation/module
 
 		.row.quotes-info__parent.hidden-block
 			.col-md-4.col-sm-6
-				include ../quotes-info/quote-actions
+				include ../modules/quotes-info/quote-actions
 			.col-md-4.col-sm-6
-				include ../quotes-info/quote-gcb
+				include ../modules/quotes-info/quote-gcb
 			.col-md-4.col-sm-6
-				include ../quotes-info/quote-currency
+				include ../modules/quotes-info/quote-currency
 
 		- var newsTitle = ["Рынки", "Компании", "Биржа"];
 		.home-news__parent.hidden-block
@@ -23,7 +23,7 @@ block content
 			.row
 				for title in newsTitle
 					.col-md-4.col-sm-6
-						include ../home-news/module
+						include ../modules/home-news/module
 block scripts
 	script(type="text/javascript").
 		document.addEventListener("DOMContentLoaded", function(event) { 

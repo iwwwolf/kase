@@ -24,13 +24,13 @@ var path = {
         html: 'assets/pages/*.jade',
         js: 'assets/import.js',
         jsLibs: 'assets/libs/js/*.js',
-        images: 'assets/libs/images/*.*',
+        images: 'assets/images/*.*',
         style: 'assets/import.scss',
         styleLibs: 'assets/libs/css/*.css'
     },
     watch: { // за чем наблюдать
         html: 'assets/**/*.jade',
-        images: 'assets/libs/images/*.*',
+        images: 'assets/images/*.*',
         //js: ['assets/**/*.js', 'assets/default.js'],
         jsLibs: 'assets/libs/js/*.js',
         style: 'assets/**/*.scss',
@@ -53,7 +53,7 @@ gulp.task('html:build', function () {
 /* блоки котировок для ajax */
 
 gulp.task('quotesBlock:build', function () {
-  return gulp.src('assets/quotes-info/*.jade')
+  return gulp.src('assets/modules/quotes-info/*.jade')
     .pipe(gulpJade({
       jade: jade,
       pretty: true
@@ -122,7 +122,7 @@ gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
-    watch(['assets/quotes-info/*.jade'], function(event, cb) {
+    watch(['assets/modules/quotes-info/*.jade'], function(event, cb) {
         gulp.start('quotesBlock:build');
     });
     watch([path.watch.style], function(event, cb) {

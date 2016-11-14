@@ -60,7 +60,7 @@ block content
 	.container
 		#centerColumn.center-column
 			include ../modules/breadcrumbs/module
-			h1 Корпоративные облигации
+			h1 Государственные ценные бумаги
 			.accordion
 				.accordion__head
 					a.accordion__head-link(href="#") Индикаторы
@@ -255,7 +255,7 @@ block content
 
 block scripts
 	script(type="text/javascript").
-		window.onload = function(){
+		document.addEventListener("DOMContentLoaded", function(event) { 
 			$('.sorting-table').DataTable({
 				scrollX: true,
 				language: {
@@ -263,4 +263,4 @@ block scripts
 				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
 				  }
 			});
-		};
+		});

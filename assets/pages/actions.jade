@@ -3,8 +3,8 @@ extends templates/base
 block content
 	.markets-top
 		.container
-			include ../markets-menu/module
-			//- include ../regulations/module
+			include ../modules/markets-menu/module
+			//- include ../modules/regulations/module
 			#regulations.regulations
 				div.dropdown
 					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
@@ -33,7 +33,7 @@ block content
 								- var radioName = "prices"
 								- var radioLabels = ["Средневзвешенные цены", "Риск-параметры акций"];
 								for radioLabel in radioLabels
-									include ../radiobutton/module
+									include ../modules/radiobutton/module
 								.regulations__download-input.regulations__download-input--mobile
 									i.fa.fa-calendar
 									input(type="date")
@@ -57,7 +57,7 @@ block content
 								li: a(href="#") Правила торгов
 	.container
 		#centerColumn.center-column
-			include ../breadcrumbs/module
+			include ../modules/breadcrumbs/module
 			h1 Акции
 			.accordion
 				.accordion__head

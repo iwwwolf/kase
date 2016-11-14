@@ -418,6 +418,6 @@ $(document).ready(function(){
 			  }
 		});
 	}*/
-	/* require "trade-info/script.js"
-	 require "donut-chart/script.js"*/
+	/* require "modules/trade-info/script.js"
+	 require "modules/donut-chart/script.js"*/
 });
