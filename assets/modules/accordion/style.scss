@@ -32,7 +32,6 @@
 	}
 	.help-block {
 		color: #a8b1ba;
-		text-align: right;
 		margin-bottom: 5px;
 		font-size: $fz12;
 	}
@@ -120,8 +119,10 @@
 		}
 		a {
 			color: $defaultColor;
-			&:hover {
-				color: #3cbd0d;
+		}
+		&:not(.active) {
+			a {
+				@extend .underline;
 			}
 		}
 		&.active {

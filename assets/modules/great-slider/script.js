@@ -13,6 +13,8 @@ if($('#greatSlider').length){
         greatSlider.on('init', function(event, slick){
             greatSlider.find('.great-slider__pagination').append('<li><span id="pauseBtn" class="great-slider__pause-link fa"></span></li>');
         }).slick({
+            easing: 'ease',
+            speed: 900,
             slidesToShow: 1,
             slidesToScroll: 1,
             vertical: true,

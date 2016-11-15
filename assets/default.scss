@@ -256,6 +256,12 @@ h5, .h5 {
 }
 .help-block {
   margin: 0;
+  a {
+    border-bottom: 1px dashed;
+    &:hover {
+      border: none;
+    }
+  }
 }
 
 .dropdown {
@@ -495,6 +501,7 @@ a.up {
   }
   .markets-top {
     border: none;
+    height: 0;
     .container {
       display: block;
     }
