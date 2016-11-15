@@ -18,9 +18,8 @@
 	}
 	li {
 		display: block;
-		margin: 0 0 16px;
+		margin: 0 0 12px;
 		a {
-			font-size: $fz12;
 			font-weight: 700;
 			//color: rgba(224, 224, 224, 0.5);
 			@extend .underline;

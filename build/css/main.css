@@ -722,9 +722,8 @@ a.up:after {
     padding: 0; }
   .menu li {
     display: block;
-    margin: 0 0 16px; }
+    margin: 0 0 12px; }
     .menu li a {
-      font-size: 85.71429%;
       font-weight: 700; }
   .menu .title {
     font-weight: 700;
