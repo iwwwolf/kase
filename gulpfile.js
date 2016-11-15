@@ -33,8 +33,8 @@ var path = {
         images: 'assets/images/*.*',
         //js: ['assets/**/*.js', 'assets/default.js'],
         jsLibs: 'assets/libs/js/*.js',
-        style: 'assets/**/*.scss',
-        styleLibs: 'assets/**/*.scss'
+        style: 'assets/modules/**/*.scss',
+        styleLibs: 'assets/libs/css/*.css'
     },
     clean: './assets'
 };
