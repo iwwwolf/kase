@@ -177,6 +177,7 @@ h5, .h5 {
 
 .markets-top {
   width: 100%;
+  height: 56px;
   border-top: 1px solid #c9d4de;
   border-bottom: 1px solid #c9d4de; }
   .markets-top .container {
@@ -186,7 +187,8 @@ h5, .h5 {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    position: relative; }
+    position: relative;
+    height: 100%; }
     .markets-top .container:before, .markets-top .container:after {
       display: none; }
 
@@ -353,7 +355,9 @@ a.up:after {
         width: 12px;
         height: 12px;
         border: 2px solid #0094de;
-        top: 10px; } }
+        top: 10px; }
+  .markets-top {
+    height: 104px; } }
 
 @media (min-width: 769px) {
   h2, .h2 {
@@ -2422,6 +2426,7 @@ footer {
 
 .regulations {
   width: 13%;
+  height: 100%;
   top: 0;
   right: 0; }
   .regulations .dropdown {
