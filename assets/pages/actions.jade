@@ -30,10 +30,15 @@ block content
 									|торговая сессия
 						.regulations__download
 							form
-								- var radioName = "prices"
-								- var radioLabels = ["Средневзвешенные цены", "Риск-параметры акций"];
-								for radioLabel in radioLabels
-									include ../modules/radiobutton/module
+								label.radiobutton
+									input(type="radio", name="prices", checked)
+									span.radiobutton__styled
+									span.radiobutton__label Средневзвешенные цены
+								label.radiobutton
+									input(type="radio", name="prices")
+									span.radiobutton__styled
+									span.radiobutton__label Риск-параметры акций
+
 								.regulations__download-input.regulations__download-input--mobile
 									i.fa.fa-calendar
 									input(type="date")
