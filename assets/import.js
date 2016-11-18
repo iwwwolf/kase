@@ -9,6 +9,7 @@ $(document).ready(function(){
 	//= require "modules/regulations/script.js"
 	//= require "modules/accordion/script.js"
 	//= require "modules/sorting-table/script.js"
+	//= require "modules/currency-tabs/script.js"
 	/* require "modules/trade-info/script.js"
 	 require "modules/donut-chart/script.js"*/
 });

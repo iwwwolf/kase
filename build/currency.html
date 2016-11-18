@@ -323,42 +323,22 @@
                 <div class="regulations__timetable">
                   <h5>Регламент</h5>
                   <div>
-                    <div class="help-block">Акции первого класса ликвидности:</div>
-                    <div> <span>11:30 – 17:00</span>торговая сессия</div>
-                    <div> <span>17:20 – 18:00</span>клиринговая сессия</div>
+                    <div> <span>10:15 – 11:00</span><a href="#">утренняя сессия</a></div>
+                    <div> <span>11:00 – 11:30</span>клиринговая сессия</div>
+                    <div> <span>11:30 – 15:30</span><a href="#">дневная сессия</a></div>
+                    <div> <span>15:30 – 16:00</span>клиринговая сессия</div>
+                    <div> <span>16:30 – 17:00</span>вечерняя сессия</div>
+                    <div><span>17:00 – 17:30</span>клиринговая сессия</div>
                   </div>
-                  <div>
-                    <div class="help-block">Акции второго и третьего классов ликвидности:</div>
-                    <div> <span>17:20 – 18:00</span>торговая сессия</div>
-                  </div>
-                </div>
-                <div class="regulations__download">
-                  <form>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices" checked><span class="radiobutton__styled"></span><span class="radiobutton__label">Средневзвешенные цены</span>
-                    </label>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices"><span class="radiobutton__styled"></span><span class="radiobutton__label">Риск-параметры акций</span>
-                    </label>
-                    <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
-                      <input type="date">
-                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
-                    </div>
-                    <div class="regulations__download-input"><i class="fa fa-calendar"></i>
-                      <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
-                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
-                    </div>
-                  </form>
                 </div>
                 <div class="regulations__links-list">
-                  <h5>Полезные ссылки</h5>
+                  <h5>Дополнительны Материалы</h5>
                   <ul class="blue-list">
-                    <li><a href="#">Список акций</a></li>
                     <li><a href="#">Просмотр торгов</a></li>
-                    <li><a href="#">Список брокеров</a></li>
-                    <li><a href="#">Маркет-мейкеры</a></li>
-                    <li><a href="#">Рыночная оценка</a></li>
-                    <li><a href="#">Правила торгов</a></li>
+                    <li><a href="#">Списки членов KASE</a></li>
+                    <li><a href="#">Клиринговые участники</a></li>
+                    <li><a href="#">Правила</a></li>
+                    <li><a href="#">Календарь праздников</a></li>
                   </ul>
                 </div>
               </div>
@@ -374,247 +354,168 @@
             <li><a href="#">Торги</a></li>
             <li><a href="#">Акции</a></li>
           </ul>
-          <h1>Акции</h1>
-          <div class="accordion">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Индикаторы<i class="fa fa-angle-down"></i></a></div>
-            <div class="accordion__body">
-              <ul class="accordion__nav">
-                <li class="active"><a href="#">Индекс KASE</a></li>
-                <li><a href="#">Объем торгов</a></li>
-                <li><a href="#">Капитализация</a></li>
-              </ul>
-              <div class="actions__chart">
-                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-                <script type="text/javascript">
-                  new TradingView.widget({
-                    "autosize": true,
-                    "symbol": "NASDAQ:AAPL",
-                    "interval": "D",
-                    "timezone": "Asia/Almaty",
-                    "theme": "White",
-                    "style": "3",
-                    "locale": "ru",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "hide_top_toolbar": true,
-                    "hideideas": true
-                  });
-                </script>
-              </div>
+          <h1>Иностранные валюты</h1>
+          <div id="currencyTabs" role="tablist" class="nav currency-tabs">
+            <div class="currency-tabs__item">
+              <div role="presentation" class="active"><a href="#USDKZT" role="tab" data-toggle="tab"><span class="currency-round"><span class="currency-round__round"><span class="big">337.48</span><span class="up currency-round__direction">2.42</span></span><span class="currency-round__code">USDKZT</span><span class="currency-round__date"><span>11:02</span><span>17.06.2016</span></span></span></a></div>
+            </div>
+            <div class="currency-tabs__item">
+              <div role="presentation"><a href="#EURKZT" role="tab" data-toggle="tab"><span class="currency-round"><span class="currency-round__round"><span class="big">380.21</span><span class="down currency-round__direction">1.001</span></span><span class="currency-round__code">EURKZT</span><span class="currency-round__date"><span>18:22</span><span>16.06.2016</span></span></span></a></div>
+            </div>
+            <div class="currency-tabs__item">
+              <div role="presentation"><a href="#CNYKZT" role="tab" data-toggle="tab"><span class="currency-round"><span class="currency-round__round"><span class="big">50.5617</span><span class="down currency-round__direction">0.2583</span></span><span class="currency-round__code">CNYKZT</span><span class="currency-round__date"><span>11:02</span><span>17.06.2016</span></span></span></a></div>
+            </div>
+            <div class="currency-tabs__item">
+              <div role="presentation"><a href="#RUBKZT" role="tab" data-toggle="tab"><span class="currency-round"><span class="currency-round__round"><span class="big">5.24</span><span class="up currency-round__direction">0.0199</span></span><span class="currency-round__code">RUBKZT</span><span class="currency-round__date"><span>18:22</span><span>16.06.2016</span></span></span></a></div>
+            </div>
+            <div class="currency-tabs__item">
+              <div role="presentation"><a href="#EURUSD" role="tab" data-toggle="tab"><span class="currency-round"><span class="currency-round__round"><span class="big">-</span></span><span class="currency-round__code">EURUSD</span></span></a></div>
             </div>
           </div>
-          <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Наиболее ликвидные акции<i class="fa fa-angle-down"></i></a>
-              <div class="small-dropdown flex accordion__hide-in-closed">Период:
-                <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">1 день</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">1 неделя</a></li>
-                    <li><a href="#">1 месяц</a></li>
-                    <li><a href="#">1 год</a></li>
+          <div class="tab-content">
+            <div id="USDKZT" role="tabpanel" class="tab-pane fade in active">
+              <div class="accordion">
+                <div class="accordion__head"><a href="#" class="accordion__head-link">Результаты торгов<i class="fa fa-angle-down"></i></a></div>
+                <div class="accordion__body">
+                  <ul class="accordion__nav">
+                    <li class="active"><a href="#">Спот</a></li>
+                    <li><a href="#">Своп</a></li>
+                  </ul>
+                  <table class="sorting-table--false table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Инструмент</th>
+                        <th>USDKZT_0_001</th>
+                        <th>USDKZT_0_002</th>
+                        <th>USDKZT_1_002</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td colspan="4">Доходность, % годовых</td>
+                      </tr>
+                      <tr class="sorting-table__subitem">
+                        <td>минимальная</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                      </tr>
+                      <tr class="sorting-table__subitem">
+                        <td>максимальная</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                      </tr>
+                      <tr class="sorting-table__subitem">
+                        <td>последней сделки</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                      </tr>
+                      <tr class="sorting-table__subitem">
+                        <td>средневзвешенная</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                        <td>+12.0005</td>
+                      </tr>
+                      <tr class="empty">
+                        <td colspan="4"></td>
+                      </tr>
+                      <tr>
+                        <td>Объем операций, тыс. единиц</td>
+                        <td>38 500</td>
+                        <td>127 900</td>
+                        <td>127 900</td>
+                      </tr>
+                      <tr>
+                        <td>Число сделок</td>
+                        <td>5</td>
+                        <td>27</td>
+                        <td>27</td>
+                      </tr>
+                      <tr>
+                        <td>Лучший спрос на закрытие</td>
+                        <td>13.0000</td>
+                        <td>13.0000</td>
+                        <td>13.0000</td>
+                      </tr>
+                      <tr>
+                        <td>Лучшее предложение на закрытие</td>
+                        <td>12.0000</td>
+                        <td>12.0000</td>
+                        <td>12.0000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="actions__chart">
+                    <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                    <script type="text/javascript">
+                      new TradingView.widget({
+                        "autosize": true,
+                        "symbol": "NASDAQ:AAPL",
+                        "interval": "D",
+                        "timezone": "Asia/Almaty",
+                        "theme": "White",
+                        "style": "3",
+                        "locale": "ru",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "hide_top_toolbar": true,
+                        "hideideas": true
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion closed">
+                <div class="accordion__head"><a href="#" class="accordion__head-link">Новости Рынка<i class="fa fa-angle-down"></i></a>
+                  <div class="get-date accordion__hide-in-closed">
+                    <div class="get-date__label">Дата:</div>
+                    <div class="get-date__input get-date__input--mobile"><i class="fa fa-calendar"></i>
+                      <input type="date">
+                      <div class="get-date__link"><a href="#"><i class="fa fa-long-arrow-right"></i></a></div>
+                    </div>
+                    <div class="get-date__input"><i class="fa fa-calendar"></i>
+                      <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
+                      <div class="get-date__link"><a href="#"><i class="fa fa-long-arrow-right"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <ul class="news-list">
+                    <li>
+                      <div class="news-list__date">15 июля, 13:00</div>
+                      <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 342,56 (+2,66), CNYKZT_TOD = 51,4370</a></div>
+                    </li>
+                    <li>
+                      <div class="news-list__date">15 июля, 13:00</div>
+                      <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                    </li>
+                    <li>
+                      <div class="news-list__date">15 июля, 13:00</div>
+                      <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                    </li>
+                    <li>
+                      <div class="news-list__date">15 июля, 13:00</div>
+                      <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                    </li>
+                    <li>
+                      <div class="news-list__date">15 июля, 13:00</div>
+                      <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                    </li>
+                    <li>
+                      <div class="news-list__date">15 июля, 13:00</div>
+                      <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                    </li>
+                    <li>
+                      <div class="news-list__date">15 июля, 13:00</div>
+                      <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="accordion__body">
-              <div class="date">Время последних данных: 19.08.2016 (17:35)</div>
-              <table class="sorting-table table table-striped">
-                <thead>
-                  <tr>
-                    <th>Код</th>
-                    <th>Компания</th>
-                    <th>Kl</th>
-                    <th>Число сделок</th>
-                    <th>Объем, млн KZT</th>
-                    <th>Доля рынка,%</th>
-                    <th>Последняя цена,KZT</th>
-                    <th>Mаркет-мейкеры</th>
-                    <th>Дата последней сделки</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#">KZ_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.005</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>120</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="help-block pull-right"><a href="#">Посмотреть все</a></div>
-              <div class="help-block">* без учета специализированных торгов</div>
-            </div>
-          </div>
-          <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Лидеры роста и падения<i class="fa fa-angle-down"></i></a></div>
-            <div class="accordion__body">
-              <ul class="accordion__nav">
-                <li class="active"><a href="#">Лидеры роста</a></li>
-                <li><a href="#">Лидеры падения</a></li>
-              </ul>
-              <table class="sorting-table table table-striped">
-                <thead>
-                  <tr>
-                    <th>Код</th>
-                    <th>Компания</th>
-                    <th>Последняя цена,KZT</th>
-                    <th>Изменение, KZT</th>
-                    <th>Изменение, %</th>
-                    <th>1 месяц</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="help-block">* данные предоставляются с задержкой в 15 минут</div>
-              <div class="help-block">* в расчет включаются акции первого класса ликвидности</div>
-            </div>
-          </div>
-          <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Публичные размещения (IPO)<i class="fa fa-angle-down"></i></a></div>
-            <div class="accordion__body">
-              <table class="sorting-table table table-striped">
-                <thead>
-                  <tr>
-                    <th>Код</th>
-                    <th>Компания</th>
-                    <th>Цена</th>
-                    <th>Объем, млн KZT</th>
-                    <th>Число сделок</th>
-                    <th>Спрос, % </th>
-                    <th>Дата</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>11 000.00</td>
-                    <td>800 016 129</td>
-                    <td>485</td>
-                    <td>325</td>
-                    <td>21.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>11 000.00</td>
-                    <td>800 016 129</td>
-                    <td>485</td>
-                    <td>325</td>
-                    <td>21.07.2016</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="help-block">* данные предоставляются с задержкой в 15 минут</div>
-            </div>
+            <div id="EURKZT" role="tabpanel" class="tab-pane fade">235</div>
           </div>
         </div>
       </div>
@@ -639,6 +540,14 @@
       document.addEventListener("DOMContentLoaded", function(event) { 
       	$('.sorting-table').DataTable({
       		scrollX: true,
+      		language: {
+      		    search: '',
+      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+      		  }
+      	});
+      	$('.sorting-table--false').DataTable({
+      		scrollX: true,
+      		bSort : false,
       		language: {
       		    search: '',
       		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"

@@ -41,11 +41,15 @@ var path = {
 
 
 /* собрать jade в html */
+
+
 gulp.task('html:build', function () {
-  return gulp.src(path.src.html)
+    var config = require(__dirname + '/assets/content.json');
+    return gulp.src(path.src.html)
     .pipe(gulpJade({
-      jade: jade,
-      pretty: true
+        jade: jade,
+        pretty: true,
+        locals: config
     }))
     .pipe(gulp.dest(path.build.html))
 });

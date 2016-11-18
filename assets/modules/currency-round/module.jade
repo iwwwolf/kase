@@ -1,0 +1,13 @@
+span.currency-round
+	if(currency.price == '-')
+		span.currency-round__round
+			span.big= currency.price
+		span.currency-round__code= currency.code
+	else 
+		span.currency-round__round
+			span.big= currency.price
+			span(class= currency.direction + ' currency-round__direction')= currency.directionCount
+		span.currency-round__code= currency.code
+		span.currency-round__date
+			span= currency.time
+			span= currency.date

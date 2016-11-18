@@ -73,7 +73,6 @@ block content
 						li.active: a(href="#") Индекс KASE
 						li: a(href="#") Объем торгов
 						li: a(href="#") Капитализация
-					//- img(src="img-content/img-3.jpg", alt="")
 					.actions__chart
 						//- TradingView Widget BEGIN
 						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
@@ -288,7 +287,7 @@ block content
 
 block scripts
 	script(type="text/javascript").
-		window.onload = function(){
+		document.addEventListener("DOMContentLoaded", function(event) { 
 			$('.sorting-table').DataTable({
 				scrollX: true,
 				language: {
@@ -296,4 +295,4 @@ block scripts
 				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
 				  }
 			});
-		};
+		});

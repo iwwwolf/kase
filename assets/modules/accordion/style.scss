@@ -2,7 +2,7 @@
 	margin-bottom: 35px;
 	&.closed {
 		.accordion__head {
-			.small-dropdown {
+			.small-dropdown, .get-date {
 				position: absolute;
 			}
 		}
@@ -35,6 +35,14 @@
 		margin-bottom: 5px;
 		font-size: $fz12;
 	}
+	.news-list {
+		li {
+			display: block;
+		}
+		.news-list__date {
+			margin-bottom: 4px;
+		}
+	}
 }
 .accordion__body {
 	overflow: hidden;
@@ -48,7 +56,7 @@
 	position: relative;
 	padding: 15px 52px 15px 0;
 	border-top: 1px solid #c9d4de;
-	.small-dropdown {
+	.small-dropdown, .get-date {
 		position: relative;	
 		margin-top: 8px;
 	}
@@ -142,14 +150,14 @@
 	.accordion {
 		&.closed {
 			.accordion__head {
-				.small-dropdown {
+				.small-dropdown, .get-date {
 					position: relative;
 				}
 			}
 		}
 	}
 	.accordion__head {
-		.small-dropdown {
+		.small-dropdown, .get-date {
 			position: relative;
 			float: right;
 			margin-top: 0;
@@ -171,7 +179,7 @@
 	.accordion__head {
 		padding: 30px 104px 30px 0;
 		border-top: 2px solid #c9d4de;
-		.small-dropdown {
+		.small-dropdown, .get-date {
 			margin-top: 16px;
 			float: none;
 		}

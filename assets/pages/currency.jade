@@ -1,0 +1,183 @@
+extends templates/base
+
+block content
+	.markets-top
+		.container
+			include ../modules/markets-menu/module
+			//-include ../modules/regulations/module
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Регламент
+							div
+								div 
+									span 10:15 – 11:00
+									a(href="#") утренняя сессия
+								div 
+									span 11:00 – 11:30
+									| клиринговая сессия
+								div 
+									span 11:30 – 15:30
+									a(href="#") дневная сессия
+								div 
+									span 15:30 – 16:00
+									| клиринговая сессия
+								div 
+									span 16:30 – 17:00
+									| вечерняя сессия
+								div
+									span 17:00 – 17:30
+									| клиринговая сессия
+						
+						.regulations__links-list
+							h5 Дополнительны Материалы
+							ul.blue-list
+								li: a(href="#") Просмотр торгов
+								li: a(href="#") Списки членов KASE
+								li: a(href="#") Клиринговые участники
+								li: a(href="#") Правила
+								li: a(href="#") Календарь праздников
+						
+	.container
+		#centerColumn.center-column
+			include ../modules/breadcrumbs/module
+			h1 Иностранные валюты
+			
+			#currencyTabs.nav.currency-tabs(role="tablist")
+
+				- each currency in currencies
+					if(currency.index == 0)
+						.currency-tabs__item
+							div.active(role="presentation")
+								a(href= '#' + currency.code, role="tab", data-toggle="tab")
+									include ../modules/currency-round/module
+					else
+						.currency-tabs__item
+							div(role="presentation")
+								a(href= '#' + currency.code, role="tab", data-toggle="tab")
+									include ../modules/currency-round/module
+
+			div.tab-content
+				#USDKZT.tab-pane.fade.in.active(role="tabpanel")
+					.accordion
+						.accordion__head
+							a.accordion__head-link(href="#") Результаты торгов
+								i.fa.fa-angle-down
+						.accordion__body
+							ul.accordion__nav
+								li.active: a(href="#") Спот
+								li: a(href="#") Своп
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Инструмент
+										th USDKZT_0_001
+										th USDKZT_0_002
+										th USDKZT_1_002
+								tbody
+									tr
+										td(colspan="4") Доходность, % годовых
+
+									tr.sorting-table__subitem
+										td минимальная
+										td +12.0005
+										td +12.0005
+										td +12.0005
+
+									tr.sorting-table__subitem
+										td максимальная
+										td +12.0005
+										td +12.0005
+										td +12.0005
+
+									tr.sorting-table__subitem
+										td последней сделки
+										td +12.0005
+										td +12.0005
+										td +12.0005
+
+									tr.sorting-table__subitem
+										td средневзвешенная
+										td +12.0005
+										td +12.0005
+										td +12.0005
+
+									tr.empty
+										td(colspan="4")
+									tr
+										td Объем операций, тыс. единиц
+										td 38 500
+										td 127 900
+										td 127 900
+									tr
+										td Число сделок
+										td 5
+										td 27
+										td 27
+									tr
+										td Лучший спрос на закрытие
+										td 13.0000
+										td 13.0000
+										td 13.0000
+									tr
+										td Лучшее предложение на закрытие
+										td 12.0000
+										td 12.0000
+										td 12.0000
+							
+							.actions__chart
+								//- TradingView Widget BEGIN
+								script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+								script(type="text/javascript").
+									new TradingView.widget({
+									  "autosize": true,
+									  "symbol": "NASDAQ:AAPL",
+									  "interval": "D",
+									  "timezone": "Asia/Almaty",
+									  "theme": "White",
+									  "style": "3",
+									  "locale": "ru",
+									  "toolbar_bg": "#f1f3f6",
+									  "enable_publishing": false,
+									  "hide_top_toolbar": true,
+									  "hideideas": true
+									});
+								//- TradingView Widget END
+
+					.accordion.closed
+						.accordion__head
+							a.accordion__head-link(href="#") Новости Рынка
+								i.fa.fa-angle-down
+
+							include ../modules/get-date/module
+						.accordion__body
+							include ../modules/news-list/module
+
+				#EURKZT.tab-pane.fade(role="tabpanel") 235
+
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

@@ -4,6 +4,16 @@
 .dataTables_filter {
 	display: none;
 }
+.sorting-table, .sorting-table--false {
+	thead {
+		tr {
+			background-color: #e6e9ed;
+		}
+	}
+	& + .actions__chart {
+		margin-top: 18px;
+	}
+}
 .dataTables_filter {
 	float: none;
 	width: 100%;
@@ -30,8 +40,11 @@
 		border-bottom: none;
 	}
 }
-table.dataTable {
+table.dataTable, .sorting-table--false {
 	thead {
+		tr {
+			background-color: #e6e9ed;
+		}
 		td, th {
 			border-bottom: none;
 			padding: 8px 18px 8px 10px;
@@ -50,6 +63,18 @@ table.dataTable {
 		    &:first-child {
 		    	text-align: left;
 		    }
+		}
+		.sorting-table__subitem {
+			td:first-child {
+				padding-left: 30px;
+			}
+		}
+		.empty {
+			td {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				background-color: #e6e9ed;
+			}
 		}
 	}
 }

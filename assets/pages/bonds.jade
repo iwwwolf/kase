@@ -256,7 +256,7 @@ block content
 
 block scripts
 	script(type="text/javascript").
-		window.onload = function(){
+		document.addEventListener("DOMContentLoaded", function(event) { 
 			$('.sorting-table').DataTable({
 				scrollX: true,
 				language: {
@@ -264,4 +264,4 @@ block scripts
 				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
 				  }
 			});
-		};
+		});

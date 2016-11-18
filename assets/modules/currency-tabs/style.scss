@@ -1,0 +1,75 @@
+.currency-tabs {
+	padding: 0;
+	margin: 0 0 -1px;
+	position: relative;
+	z-index: 1;
+	.currency-round {
+		padding-bottom: 30px;
+		border-bottom: 3px solid transparent;
+	}
+	.active {
+		.currency-round {
+			border-color: #3cbd0d;
+		}
+		.currency-round__round {
+			border-color: #3cbd0d;
+			box-shadow: 0 0 0 1px #3cbd0d inset;
+		}
+	}
+	a {
+		display: inline-block;
+	}
+}
+.currency-tabs__pagination {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	line-height: 0;
+	position: relative;
+	margin: 15px 0;
+	z-index: 3;
+	li {
+		display: block;	
+		margin-left: 4px;
+		&:first-child {
+			margin-left: 0;
+		}
+		button {
+			width: 8px;
+			height: 8px;
+			display: block;
+			border: 1px solid #3cbd0d;
+			background: transparent;
+			padding: 0;
+			margin: 0;
+			border-radius: 50%;
+			//line-height: 0;
+			//font-size: 0;
+			color: transparent;
+			transition: background 300ms;
+		}
+		&.slick-active {
+			button {
+				background: #3cbd0d;
+			}
+		}
+	}
+}
+.currency-tabs__item {
+	text-align: center;
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+	.currency-tabs__pagination {
+		margin: 30px 0;
+		li {
+			margin-left: 8px;
+			button {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+}

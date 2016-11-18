@@ -87,6 +87,10 @@ header {
 		display: block;
 	}
 }
+.header__date {
+	display: none;
+	font-size: $fz12;
+}
 .header__search-button {
 	width: 20px;
 	display: block;
@@ -338,7 +342,17 @@ header {
 	.header__logo-text {
 		display: block;
 	}
+	.header__date {
+		display: block;
+		margin-right: 14px;
+	}
 	.header__search-button {
 		width: 18px;
+	}
+}
+
+@media (min-width: 1200px){
+	.header__date {
+		margin-right: 80px;
 	}
 }
