@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     wait = require('gulp-wait'),
     include = require('gulp-include'),
     imagemin = require('gulp-imagemin'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    flatten = require('gulp-flatten');
 
 var path = {
     build: { // куда складывать
@@ -21,7 +22,7 @@ var path = {
         css: 'build/css/'
     },
     src: { // откуда брать
-        html: 'assets/pages/*.jade',
+        html: ['assets/pages/**/*.jade', 'assets/pages/*.jade'],
         js: 'assets/import.js',
         jsLibs: 'assets/libs/js/*.js',
         images: 'assets/images/*.*',
@@ -44,13 +45,16 @@ var path = {
 
 
 gulp.task('html:build', function () {
+
     var config = require(__dirname + '/assets/content.json');
+
     return gulp.src(path.src.html)
     .pipe(gulpJade({
         jade: jade,
         pretty: true,
         locals: config
     }))
+    .pipe(flatten())
     .pipe(gulp.dest(path.build.html))
 });
 

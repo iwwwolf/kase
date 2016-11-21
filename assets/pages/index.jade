@@ -1,4 +1,4 @@
-extends templates/base
+extends ../templates/base
 
 block variables
 	- bodyClass = "body__home"
@@ -10,11 +10,11 @@ block content
 		include ../modules/navigation/module
 
 		.row.quotes-info__parent.hidden-block
-			.col-md-4.col-sm-6
+			.col-lg-4.col-md-6.col-sm-6
 				include ../modules/quotes-info/quote-actions
-			.col-md-4.col-sm-6
+			.col-lg-4.col-md-6.col-sm-6
 				include ../modules/quotes-info/quote-gcb
-			.col-md-4.col-sm-6
+			.col-lg-4.col-md-6.col-sm-6
 				include ../modules/quotes-info/quote-currency
 
 		- var newsTitle = ["Рынки", "Компании", "Биржа"];

@@ -1,10 +1,10 @@
-extends templates/base
+extends ../../templates/base
 
 block content
 	.markets-top
 		.container
-			include ../modules/markets-menu/module
-			//-include ../modules/regulations/module
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
 			#regulations.regulations
 				div.dropdown
 					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
@@ -46,7 +46,7 @@ block content
 						
 	.container
 		#centerColumn.center-column
-			include ../modules/breadcrumbs/module
+			include ../../modules/breadcrumbs/module
 			h1 Иностранные валюты
 			
 			#currencyTabs.nav.currency-tabs(role="tablist")
@@ -56,12 +56,12 @@ block content
 						.currency-tabs__item
 							div.active(role="presentation")
 								a(href= '#' + currency.code, role="tab", data-toggle="tab")
-									include ../modules/currency-round/module
+									include ../../modules/currency-round/module
 					else
 						.currency-tabs__item
 							div(role="presentation")
 								a(href= '#' + currency.code, role="tab", data-toggle="tab")
-									include ../modules/currency-round/module
+									include ../../modules/currency-round/module
 
 			div.tab-content
 				#USDKZT.tab-pane.fade.in.active(role="tabpanel")
@@ -155,9 +155,9 @@ block content
 							a.accordion__head-link(href="#") Новости Рынка
 								i.fa.fa-angle-down
 
-							include ../modules/get-date/module
+							include ../../modules/get-date/module
 						.accordion__body
-							include ../modules/news-list/module
+							include ../../modules/news-list/module
 
 				#EURKZT.tab-pane.fade(role="tabpanel") 235
 
