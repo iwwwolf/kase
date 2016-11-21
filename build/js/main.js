@@ -258,7 +258,7 @@ $(document).ready(function(){
 		} else {
 			setTimeout(function(){
 				$('body').css({overflow: 'hidden', position: 'fixed'})
-				$('#menu .menu__container').css({overflow: 'auto', position: 'relative'});
+				$('#menu .menu__container').css({overflow: 'auto'});
 			}, 200);
 		}
 	});
@@ -278,7 +278,7 @@ $(document).ready(function(){
 				$('#menu .menu__container').css({overflow: 'hidden'});
 			}
 		} else {
-			$('body').css({overflow: 'auto'});
+			$('body').css({overflow: 'auto', position: 'relative'});
 			$('#menu .menu__container').css({overflow: 'hidden'});
 		}
 	});
