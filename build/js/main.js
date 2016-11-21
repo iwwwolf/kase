@@ -257,8 +257,8 @@ $(document).ready(function(){
 			}, 200);
 		} else {
 			setTimeout(function(){
-				$('body').css({overflow: 'hidden'})
-				$('#menu .menu__container').css({overflow: 'auto'});
+				$('body').css({overflow: 'hidden', position: 'fixed'})
+				$('#menu .menu__container').css({overflow: 'auto', position: 'relative'});
 			}, 200);
 		}
 	});
