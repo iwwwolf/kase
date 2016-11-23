@@ -141,7 +141,11 @@ img {
 [class*="col-"] {
   padding: 0 15px;
 }
-
+.body__landing {
+  .fixed-social {
+    display: none;
+  }
+}
 .scroll-block {
   position: relative;
   overflow: visible;
