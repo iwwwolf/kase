@@ -359,6 +359,14 @@ a.up:after {
 .kase-date {
   margin-bottom: 15px; }
 
+.landing-title {
+  color: #383838;
+  font-size: 221.42857%;
+  line-height: 1.32;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 25px 0; }
+
 @media (min-width: 649px) and (max-width: 768px) {
   .dropdown .dropdown-menu {
     font-size: 200%; }
@@ -434,6 +442,12 @@ a.up:after {
   .btn.big {
     border-radius: 22px;
     padding: 12px 35px; }
+  .btn.btn-landing {
+    display: block;
+    width: 208px;
+    border-radius: 18px;
+    padding: 8px 0;
+    margin: 0 auto; }
 
 .radiobutton {
   display: -webkit-box;
@@ -3148,3 +3162,13 @@ table.dataTable.no-footer {
 
 .landing-head {
   display: block; }
+
+.landing-login__parent {
+  background-color: #f7f8f8;
+  padding: 65px 0; }
+  .landing-login__parent .landing-login__btn {
+    background: #d5da0a;
+    color: #fff;
+    background: -webkit-linear-gradient(left, #d5da0a 0%, #3cbd0d 99%);
+    background: linear-gradient(to right, #d5da0a 0%, #3cbd0d 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5da0a', endColorstr='#3cbd0d',GradientType=1 ); }
