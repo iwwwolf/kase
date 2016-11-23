@@ -104,6 +104,12 @@ table.dataTable.no-footer {
 		display: block;
 	}
 }
+.table__indicator {
+	white-space: nowrap;
+	img {
+		margin: 0 6px;
+	}
+}
 
 @media (min-width: 649px) and (max-width: 768px){
 	table.dataTable {

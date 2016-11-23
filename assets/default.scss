@@ -50,7 +50,7 @@ $defaultColor: #45464f;
 $minorColor: #038726;
 $lightGreen: #3cbd0d;
 $linkColor: #1666bc;
-$redColor: #ff382c;
+$redColor: #e82d2d;
 
 $fz8: 57.14285714285714%;
 $fz10: 71.42857142857143%;
@@ -441,6 +441,10 @@ a.up {
 .actions__chart {
   height: 250px;
 }
+.actions__chart-text {
+  margin-top: 20px;
+  font-size: $fz12;
+}
 .arrow-back {
   display: block;
   width: 44px;
@@ -552,7 +556,8 @@ a.up {
 /* clearfix */
 .great-slider__pagination,
 .breadcrumbs,
-.accordion__nav {
+.accordion__nav,
+.regulations__archive-links {
   &:after {
     display: table;
     line-height: 0;

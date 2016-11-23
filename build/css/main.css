@@ -147,10 +147,10 @@ h5, .h5 {
   font-size: 114.28571%;
   margin: 0 0 15px; }
 
-.underline, .blue-list a, .accordion__nav li:not(.active) a, .menu li a, .menu .title a, footer a, .quotes-info__table td a, .home-news__footer a, .breadcrumbs a, .markets-menu .dropdown-menu > li > a {
+.underline, .blue-list a, .accordion__nav li:not(.active) a, .menu li a, .menu .title a, footer a, .quotes-info__table td a, .home-news__footer a, .breadcrumbs a, .markets-menu .dropdown-menu > li > a, .regulations__archive-links .link a {
   position: relative;
   text-decoration: none; }
-  .underline:after, .blue-list a:after, .accordion__nav li:not(.active) a:after, .menu li a:after, .menu .title a:after, footer a:after, .quotes-info__table td a:after, .home-news__footer a:after, .breadcrumbs a:after, .markets-menu .dropdown-menu > li > a:after {
+  .underline:after, .blue-list a:after, .accordion__nav li:not(.active) a:after, .menu li a:after, .menu .title a:after, footer a:after, .quotes-info__table td a:after, .home-news__footer a:after, .breadcrumbs a:after, .markets-menu .dropdown-menu > li > a:after, .regulations__archive-links .link a:after {
     width: 100%;
     border-bottom: 1px solid;
     opacity: 0;
@@ -163,7 +163,7 @@ h5, .h5 {
     -webkit-transition: all 200ms;
     transition: all 200ms;
     content: ""; }
-  .underline:hover:after, .blue-list a:hover:after, .accordion__nav li:not(.active) a:hover:after, .menu li a:hover:after, .menu .title a:hover:after, footer a:hover:after, .quotes-info__table td a:hover:after, .home-news__footer a:hover:after, .breadcrumbs a:hover:after, .markets-menu .dropdown-menu > li > a:hover:after {
+  .underline:hover:after, .blue-list a:hover:after, .accordion__nav li:not(.active) a:hover:after, .menu li a:hover:after, .menu .title a:hover:after, footer a:hover:after, .quotes-info__table td a:hover:after, .home-news__footer a:hover:after, .breadcrumbs a:hover:after, .markets-menu .dropdown-menu > li > a:hover:after, .regulations__archive-links .link a:hover:after {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translateY(0);
@@ -332,6 +332,10 @@ a.up:after {
 .actions__chart {
   height: 250px; }
 
+.actions__chart-text {
+  margin-top: 20px;
+  font-size: 85.71429%; }
+
 .arrow-back {
   display: block;
   width: 44px;
@@ -419,7 +423,8 @@ a.up:after {
 /* clearfix */
 .great-slider__pagination:after,
 .breadcrumbs:after,
-.accordion__nav:after {
+.accordion__nav:after,
+.regulations__archive-links:after {
   display: table;
   line-height: 0;
   clear: both;
@@ -573,6 +578,9 @@ a.up:after {
     .accordion__head-link:hover .fa:before {
       -webkit-transform: translateY(-3px) rotate(180deg);
               transform: translateY(-3px) rotate(180deg); }
+  .accordion__head-link .date {
+    font-size: 70%;
+    margin-left: 6px; }
   .accordion__head-link .fa {
     width: 32px;
     height: 32px;
@@ -2671,6 +2679,21 @@ footer {
 .regulations__nearest-auction .small {
   font-size: 91.66666666666667%; }
 
+.regulations__archive-links {
+  position: relative;
+  font-size: 85.71429%;
+  margin-top: 5px; }
+  .regulations__archive-links .link {
+    width: 50%;
+    float: left; }
+    .regulations__archive-links .link:last-child {
+      border-left: 1px solid #e4e9ee;
+      padding-left: 10px; }
+    .regulations__archive-links .link a {
+      color: #3cbd0d; }
+  .regulations__archive-links .fa {
+    margin-right: 6px; }
+
 @media (min-width: 649px) and (max-width: 768px) {
   .regulations h5, .regulations .h5 {
     font-size: 114.28571%; }
@@ -2831,6 +2854,11 @@ table.dataTable.no-footer {
 
 .sortin-table--with-search .dataTables_filter {
   display: block; }
+
+.table__indicator {
+  white-space: nowrap; }
+  .table__indicator img {
+    margin: 0 6px; }
 
 @media (min-width: 649px) and (max-width: 768px) {
   table.dataTable thead td, table.dataTable thead th {
@@ -3136,10 +3164,10 @@ table.dataTable.no-footer {
       border-bottom: 8px solid #3cbd0d;
       border-top: none; }
   .h1-block__indicator.down {
-    border-color: #ff382c;
-    color: #ff382c; }
+    border-color: #e82d2d;
+    color: #e82d2d; }
     .h1-block__indicator.down:before {
-      border-top: 8px solid #ff382c;
+      border-top: 8px solid #e82d2d;
       border-down: none; }
 
 .half-table__parent {
@@ -3159,6 +3187,54 @@ table.dataTable.no-footer {
     border-bottom: 1px solid #e7e9ed; }
     .half-table td:first-child {
       text-align: left; }
+
+.select-date {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 15px; }
+  .select-date input {
+    position: absolute;
+    left: -200%; }
+  .select-date .daterangepicker .calendar {
+    width: 100%;
+    float: none !important;
+    margin: 0;
+    border: none; }
+    .select-date .daterangepicker .calendar .calendar-table {
+      padding: 0 !important; }
+    .select-date .daterangepicker .calendar .prev, .select-date .daterangepicker .calendar .next {
+      color: #3cbd0d; }
+    .select-date .daterangepicker .calendar .available {
+      -webkit-transition: all 300ms;
+      transition: all 300ms; }
+      .select-date .daterangepicker .calendar .available:hover {
+        border-radius: 0;
+        background-color: #d8f2cf; }
+    .select-date .daterangepicker .calendar td {
+      font-family: Arial, sans-serif;
+      color: #607385;
+      min-width: 0;
+      padding: 5px 0; }
+      .select-date .daterangepicker .calendar td.active {
+        border-radius: 0;
+        background-color: #d8f2cf;
+        color: #3cbd0d; }
+      .select-date .daterangepicker .calendar td.weekend {
+        color: #e82d2d; }
+    .select-date .daterangepicker .calendar th {
+      color: #333;
+      font-weight: normal;
+      min-width: 0;
+      padding: 5px 0; }
+  .select-date thead tr:first-child th {
+    border-top: 1px solid #e9ecf1;
+    border-bottom: 1px solid #e9ecf1; }
+  .select-date thead select {
+    border: none; }
+    .select-date thead select.monthselect {
+      border-right: 1px solid #e9ecf1; }
+    .select-date thead select option[disabled="disabled"] {
+      color: rgba(51, 51, 51, 0.4); }
 
 .landing-head {
   display: block; }

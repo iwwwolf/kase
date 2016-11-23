@@ -347,6 +347,8 @@ $(document).ready(function(){
 			var parentId = self.parents('.quotes-info').attr('id');
 			var parent = self.parents('.quotes-info');
 			var activeLi = self.parent().find('.active');
+			parent.prev().show();
+	
 			$.ajax({
 				//url: 'http://kase.dev/build/server/quotes-info/' + title + '.html',
 				url: 'ajax/' + title + '/',
@@ -354,7 +356,8 @@ $(document).ready(function(){
 				success: function(data){
 					var parentId = self.parents('.quotes-info').attr('id');
 	
-					var obj = self.closest('.col-md-4');
+					var obj = self.closest('.col-lg-4');
+					parent.prev().hide();
 					obj.html(data);
 					restartSparklines(obj);
 					//$('#' + parentId).parent().html(data);
