@@ -45,7 +45,7 @@
 			&.active {
 				&>a, &>a:hover {
 					background: none;
-					color: #3cbd0d;
+					color: $lightGreen;
 				}
 			}
 		}
@@ -86,7 +86,7 @@
 				&.active {
 					&>a, &>a:hover {
 						background: none;
-						color: #3cbd0d;
+						color: $lightGreen;
 					}
 				}
 			}
@@ -136,7 +136,7 @@
 					padding: 0;
 					&:hover {
 						background: none;
-						color: #3cbd0d;
+						color: $lightGreen;
 					}
 				}
 			}

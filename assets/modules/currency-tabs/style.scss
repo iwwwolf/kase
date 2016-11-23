@@ -9,11 +9,11 @@
 	}
 	.active {
 		.currency-round {
-			border-color: #3cbd0d;
+			border-color: $lightGreen;
 		}
 		.currency-round__round {
-			border-color: #3cbd0d;
-			box-shadow: 0 0 0 1px #3cbd0d inset;
+			border-color: $lightGreen;
+			box-shadow: 0 0 0 1px $lightGreen inset;
 		}
 	}
 	a {
@@ -40,7 +40,7 @@
 			width: 8px;
 			height: 8px;
 			display: block;
-			border: 1px solid #3cbd0d;
+			border: 1px solid $lightGreen;
 			background: transparent;
 			padding: 0;
 			margin: 0;
@@ -52,7 +52,7 @@
 		}
 		&.slick-active {
 			button {
-				background: #3cbd0d;
+				background: $lightGreen;
 			}
 		}
 	}

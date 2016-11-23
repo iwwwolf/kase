@@ -48,7 +48,9 @@ $indexFont: 'MuseoSansCyrl', 'Arial', sans-serif;
 
 $defaultColor: #45464f;
 $minorColor: #038726;
+$lightGreen: #3cbd0d;
 $linkColor: #1666bc;
+$redColor: #ff382c;
 
 $fz8: 57.14285714285714%;
 $fz10: 71.42857142857143%;
@@ -81,12 +83,15 @@ body {
 }
 
 body {
+  width: 100%;
   font: normal 14px/1.357 $indexFont;
   color: $defaultColor;
   min-width: 320px;
   background: #fff;
   position: relative;
   overflow: auto;
+  top: 0;
+  left: 0;
 }
 
 *:focus, *:active {
@@ -431,6 +436,34 @@ a.up {
 
 .actions__chart {
   height: 250px;
+}
+.arrow-back {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border: 1px solid $lightGreen;
+  border-radius: 50%;
+  color: $lightGreen;
+  font-size: $fz36;
+  &:hover {
+    color: $lightGreen;
+  }
+  .fa {
+    display: block;
+    width: 100%;
+    height: 100%;
+    &:before {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.kase-date {
+  margin-bottom: 15px;
 }
 
 @media (min-width: 649px) and (max-width: 768px){

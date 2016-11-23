@@ -19,7 +19,7 @@ $('#menuBtn').on('click', function(e){
 		}, 200);
 	} else {
 		setTimeout(function(){
-			$('body').css({overflow: 'hidden'})
+			$('body').css({overflow: 'hidden', position: 'fixed'})
 			$('#menu .menu__container').css({overflow: 'auto'});
 		}, 200);
 	}
@@ -40,7 +40,7 @@ $('#menuClose').on('click', function(e){
 			$('#menu .menu__container').css({overflow: 'hidden'});
 		}
 	} else {
-		$('body').css({overflow: 'auto'});
+		$('body').css({overflow: 'auto', position: 'relative'});
 		$('#menu .menu__container').css({overflow: 'hidden'});
 	}
 });

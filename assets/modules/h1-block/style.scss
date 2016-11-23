@@ -1,0 +1,60 @@
+.h1-block {
+	padding-left: 60px;
+	position: relative;
+	min-height: 44px;
+	margin: 13px 0 20px;
+	h1 {
+		margin: 0 24px 0 0;
+	}
+	.arrow-back {
+		position: absolute;
+		left: 0;
+		top: -7px;
+	}
+	.flex {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+.h1-block__indicator {
+	display: inline-block;
+	font-size: $fz18;
+	font-weight: normal;
+	border: 1px solid $defaultColor;
+	border-radius: 15px;
+	padding: 2px 16px;
+	margin-right: 5px;
+	&:last-child {
+		margin-right: 0;
+	}
+	&.up, &.down {
+		padding-left: 38px;
+		position: relative;
+		&:before {
+			display: block;
+			border: 6px solid transparent;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			margin-top: -4px;
+			content: "";
+		}
+	}
+	&.up {
+		border-color: $lightGreen;
+		color: $lightGreen;
+		&:before {
+			border-bottom: 8px solid $lightGreen;
+			border-top: none;
+		}
+	}
+	&.down {
+		border-color: $redColor;
+		color: $redColor;
+		&:before {
+			border-top: 8px solid $redColor;
+			border-down: none;
+		}
+	}
+}

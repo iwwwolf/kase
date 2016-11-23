@@ -1,0 +1,278 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			.markets-menu
+				h3 Индикаторы
+				.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button") Акции
+
+					ul.dropdown-menu
+						li.active: a(href="#") Фондовый рынок
+						li: a(href="#") Денежный рынок
+						li: a(href="#") Совместные индексы
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Регламент
+							div
+								.help-block Акции первого класса ликвидности:
+								div 
+									span 11:30 – 17:00
+									|торговая сессия
+								div 
+									span 17:20 – 18:00
+									|клиринговая сессия
+							div
+								.help-block Акции второго и третьего классов ликвидности:
+								div 
+									span 17:20 – 18:00
+									|торговая сессия
+						.regulations__download
+							form
+								label.radiobutton
+									input(type="radio", name="prices", checked)
+									span.radiobutton__styled
+									span.radiobutton__label Средневзвешенные цены
+								label.radiobutton
+									input(type="radio", name="prices")
+									span.radiobutton__styled
+									span.radiobutton__label Риск-параметры акций
+
+								.regulations__download-input.regulations__download-input--mobile
+									i.fa.fa-calendar
+									input(type="date")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+								.regulations__download-input
+									i.fa.fa-calendar
+									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Список акций
+								li: a(href="#") Просмотр торгов
+								li: a(href="#") Список брокеров
+								li: a(href="#") Маркет-мейкеры
+								li: a(href="#") Рыночная оценка
+								li: a(href="#") Правила торгов
+	.container
+		#centerColumn.center-column
+			include ../../modules/breadcrumbs/module
+
+			.h1-block
+				a.arrow-back(href="#")
+					i.fa.fa-angle-left
+				.flex
+					h1 Индекс KASE
+					div
+						.h1-block__indicator 12,34% годовых
+						.h1-block__indicator.up 0.14
+
+			.kase-date Данные на: 7 декабря 2016 г. 
+
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Последние значения
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+						.help-block * объем сделок по акциям, входящим в представительский список Индекса KASE
+						.help-block * капитализация компаний, входящих в представительский список Индекса KASE
+					ul.accordion__nav
+						li.active: a(href="#") Архив
+						li: a(href="#") В течение дня
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+					
+					p.
+						Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.
+					p.
+						Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.
+					p.
+						Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.
+					p.
+						"Время жизни" индикатора: 1 рабочий день.
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Наиболее ликвидные акции
+						i.fa.fa-angle-down
+					.small-dropdown.flex.accordion__hide-in-closed Период:
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
+
+							ul.dropdown-menu
+								li: a(href="#") 1 неделя
+								li: a(href="#") 1 месяц
+								li: a(href="#") 1 год
+				.accordion__body
+					.date Время последних данных: 19.08.2016 (17:35)
+					//-.table-parent
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th Код
+								th Компания
+								th Kl
+								th Число сделок
+								th Объем, млн KZT
+								th Доля рынка,%
+								th Последняя цена,KZT
+								th Mаркет-мейкеры
+								th Дата последней сделки
+						tbody
+							tr
+								td: a(href="#") KZ_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.005
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 120
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+					.help-block.pull-right
+						a(href="#") Посмотреть все
+					.help-block * без учета специализированных торгов
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

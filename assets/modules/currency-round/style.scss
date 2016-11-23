@@ -9,8 +9,8 @@
 	}
 	&:hover {
 		.currency-round__round {
-			border-color: #3cbd0d;
-			box-shadow: 0 0 0 1px #3cbd0d inset;
+			border-color: $lightGreen;
+			box-shadow: 0 0 0 1px $lightGreen inset;
 		}
 	}
 }

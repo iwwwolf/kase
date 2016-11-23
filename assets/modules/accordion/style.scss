@@ -66,7 +66,7 @@
 	font-weight: 100;
 	color: $defaultColor;
 	&:hover {
-		color: #3cbd0d;
+		color: $lightGreen;
 		.fa {
 			&:before {
 				transform: translateY(-3px) rotate(180deg);
@@ -76,8 +76,8 @@
 	.fa {
 		width: 32px;
 		height: 32px;
-		color: #3cbd0d;
-		border: 1px solid #3cbd0d;
+		color: $lightGreen;
+		border: 1px solid $lightGreen;
 		border-radius: 50%;
 		font-size: $fz19;
 		position: absolute;
@@ -116,7 +116,7 @@
 			width: 8px;
 			height: 8px;
 			border-radius: 50%;
-			background-color: #3cbd0d;
+			background-color: $lightGreen;
 			opacity: 0;
 			visibility: hidden;
 			position: absolute;
@@ -135,7 +135,7 @@
 		}
 		&.active {
 			a {
-				color: #3cbd0d;
+				color: $lightGreen;
 				cursor: default;
 			}
 			&:before {
@@ -189,7 +189,7 @@
 		.fa {
 			width: 64px;
 			height: 64px;
-			border: 2px solid #3cbd0d;
+			border: 2px solid $lightGreen;
 			top: 24px;
 			right: 20px;
 		}

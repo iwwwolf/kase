@@ -100,7 +100,7 @@
 			a, a:hover {
 				cursor: default;
 				&:before {
-					box-shadow: 0 0 0 6px #3cbd0d inset;
+					box-shadow: 0 0 0 6px $lightGreen inset;
 				}
 			}
 		}
@@ -122,8 +122,8 @@
 			}
 			&:hover {
 				&:before {
-					box-shadow: 0 0 0 2px #3cbd0d inset;
-					border-color: #3cbd0d;
+					box-shadow: 0 0 0 2px $lightGreen inset;
+					border-color: $lightGreen;
 				}
 			}
 		}
