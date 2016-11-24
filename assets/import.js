@@ -10,6 +10,7 @@ $(document).ready(function(){
 	//= require "modules/accordion/script.js"
 	//= require "modules/sorting-table/script.js"
 	//= require "modules/currency-tabs/script.js"
+	//= require "modules/landings_modules/landing-two-btn/script.js"
 	/* require "modules/trade-info/script.js"
 	 require "modules/donut-chart/script.js"*/
 });

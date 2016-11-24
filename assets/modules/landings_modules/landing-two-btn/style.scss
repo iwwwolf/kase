@@ -1,0 +1,25 @@
+.landing-two-btn {
+
+	clear: both;
+
+	.landing-two-btn__item {
+		width: 50%;
+		float: left;
+
+		div {
+			max-width: 400px;
+			margin: 0 auto;
+
+			p {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 0 20px 0;
+			}
+		}
+	}
+}

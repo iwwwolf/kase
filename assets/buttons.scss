@@ -19,8 +19,13 @@
   &.btn-landing {
     display: block;
     width: 208px;
+    font-size: $fz14;
     border-radius: 18px;
     padding: 8px 0;
     margin: 0 auto;
+  }
+  &.btn-landing-transparent {
+    background-color: transparent;
+    border: 1px solid #fff;
   }
 }
