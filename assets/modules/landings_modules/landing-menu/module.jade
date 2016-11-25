@@ -1,0 +1,6 @@
+.landing-menu
+	.container
+		ul
+			each item, index in menuItems
+				- var classActive = (index == 0) ? 'active' : ''
+				li(class= classActive): a(href="#"): span= item
