@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KASE</title>
+    <link href="css/libs.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <style rel="stylesheet">
+      #wrap {
+      	-webkit-transform-origin: 50% 350px;
+      	transform-origin: 50% 350px;
+      	-webkit-transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      #wrap.scale-out {
+      	-webkit-transform: scale(0.85);
+      	transform: scale(0.85); 
+      }
+      
+    </style>
+    <div id="menu" style="display: none;" class="menu">
+      <div class="menu__container">
+        <div class="container"><a id="menuClose" href="#" class="menu__close">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z"></path>
+            </svg></a>
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel menu__panel">
+              <div id="headingOne" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Рынки и торги</a></div>
+              </div>
+              <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Рынки</div>
+                      <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Паи</a></li>
+                        <li><a href="#">Корпоративные облигации</a></li>
+                        <li><a href="#">Ценные бумаги МФО</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                        <li><a href="#">Иностранные валюты</a></li>
+                        <li><a href="#">Операции репо</a></li>
+                        <li><a href="#">Деривативы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Индикаторы</div>
+                      <ul>
+                        <li><a href="#">Фондовый рынок</a></li>
+                        <li><a href="#">Денежный рынок</a></li>
+                        <li><a href="#">Совместные индексы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торги</div>
+                      <ul>
+                        <li><a href="#">Список инструментов</a></li>
+                        <li><a href="#">Просмотр торгов</a></li>
+                        <li><a href="#">Регламент торгов и клиринга</a></li>
+                        <li><a href="#">Клиринг и расчеты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Оценка и параметры</div>
+                      <ul>
+                        <li><a href="#">Рыночная оценка</a></li>
+                        <li><a href="#">Риск-параметры акций</a></li>
+                        <li><a href="#">Средневзвешенные цены</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingTwo" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseTwo">Продукты и услуги</a></div>
+              </div>
+              <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Листинг</div>
+                      <ul>
+                        <li><a href="#">Список компаний</a></li>
+                        <li><a href="#">Что такое листинг</a></li>
+                        <li><a href="#">Листинг на KASE</a></li>
+                        <li><a href="#">IPO</a></li>
+                        <li><a href="#">Нелистинговый сектор</a></li>
+                        <li><a href="#">Дипломанты номинаций</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Членство</div>
+                      <ul>
+                        <li><a href="#">Список членов KASE</a></li>
+                        <li><a href="#">Рэнкинг активности</a></li>
+                        <li><a href="#">Дипломанты номинаций </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торговая система</div>
+                      <ul>
+                        <li><a href="#">Как подключиться к KASE</a></li>
+                        <li><a href="#">Загрузки</a></li>
+                        <li><a href="#">Инструкции</a></li>
+                        <li><a href="#">FIX протокол</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Информационные продукты</div>
+                      <ul>
+                        <li><a href="#">Биржевая информация и программное обеспечение</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingThree" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseThree">Правила</a></div>
+              </div>
+              <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Правила KASE</div>
+                      <ul>
+                        <li><a href="#">Листинг</a></li>
+                        <li><a href="#">Членство</a></li>
+                        <li><a href="#">Торги</a></li>
+                        <li><a href="#">Клиринг</a></li>
+                        <li><a href="#">Расчеты</a></li>
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Методики </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Корпоративное управление</div>
+                      <ul>
+                        <li><a href="#">Материалы и статьи Международной финансовой корпорации (IFC)</a></li>
+                        <li><a href="#">Материалы и статьи Организации экономического сотрудничества и развития (OECD) </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Законодательство</div>
+                      <ul>
+                        <li><a href="#">Рынок ценных бумаг</a></li>
+                        <li><a href="#">Акционерные общества</a></li>
+                        <li><a href="#">Инвестиционные фонды</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title"><a href="#">Дополнительные материалы</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFour" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFour" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFour">Пресс-центр</a></div>
+              </div>
+              <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Новости</div>
+                      <ul>
+                        <li><a href="#">Новости рынков</a></li>
+                        <li><a href="#">Новости компаний</a></li>
+                        <li><a href="#">Новости Биржи</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Информационная поддержка</a></li>
+                        <li class="title"><a href="#">Мероприятия</a></li>
+                        <li class="title"><a href="#">Доклады и презентации</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Пресс-релизы</a></li>
+                        <li class="title"><a href="#">СМИ о нас</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Корпоративный стиль</a></li>
+                        <li class="title"><a href="#">Контакты пресс-центра</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFive" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFive" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFive">О Бирже</a></div>
+              </div>
+              <div id="collapseFive" role="tabpanel" aria-labelledby="headingFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">О нас</div>
+                      <ul>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Миссия и ценности</a></li>
+                        <li><a href="#">Руководство</a></li>
+                        <li><a href="#">Комитеты и комиссии</a></li>
+                        <li><a href="#">Участие в профессиональных организациях</a></li>
+                        <li><a href="#">Корпоративные документы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Акционерам</div>
+                      <ul>
+                        <li><a href="#">Отчетность</a></li>
+                        <li><a href="#">Новости и уведомления</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Закупки</a></li>
+                        <li class="title"><a href="#">Реквизиты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Вакансии</a></li>
+                        <li class="title"><a href="#">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="wrap">
+      <div class="fixed-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-youtube"></i></a></div>
+      <div id="headerSearch" style="display: none;" class="header-search">
+        <div class="container">
+          <form action="">
+            <input type="text" placeholder="Что вы ищите?..." class="header-search__input">
+            <button type="submit" class="header-search__button"><img src="images/search-icon.svg" alt="">Найти</button>
+            <div class="head-search__close"><a id="searchClose" href="#"><img src="images/close-gray.svg" alt=""></a></div>
+          </form>
+        </div>
+      </div>
+      <header id="header">
+        <div class="header__container">
+          <div class="container">
+            <div class="header__content">
+              <div class="header__left-col"><a id="menuBtn" href="#" class="header__menu-button"><img src="images/menu-border.svg" alt=""><span class="header__menu-button-lines"><span></span><span></span><span></span></span></a>
+                <div class="header__logo"><a href="/"><span class="header__logo-img"><img src="images/logo.svg" alt="KASE"></span><span class="header__logo-text"><span>Қазақстан қор биржасы</span><span>Казахстанская фондовая биржа</span><span>Kazakhstan Stock Exchange</span></span></a></div>
+              </div>
+              <div class="header__right-col">
+                <div class="header__date">Пятница, 11 ноября 2016 г. 11:24</div><a href="#" id="searchBtn" class="header__search-button"><img src="images/search-icon.svg" alt="Search"></a>
+                <div class="header__language">
+                  <ul class="header__language-list clearfix">
+                    <li class="active"><a href="#">Рус </a></li>
+                    <li><a href="#">Қаз </a></li>
+                    <li><a href="#">Eng </a></li>
+                  </ul>
+                  <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рус</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Қаз</a></li>
+                      <li><a href="#">Eng</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__login">
+                  <div class="header__login--mobile"><a href="#"><img src="images/login-mob.svg" alt=""></a></div>
+                  <div class="header__login--desctop"><a href="#">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 253 106.3" enable-background="new 0 0 253 106.3" xml:space="preserve">
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="227.5092" y1="-5.151" x2="25.4908" y2="111.4843">
+                          <stop offset="0" style="stop-color:#9ED110"></stop>
+                          <stop offset="1" style="stop-color:#038726"></stop>
+                        </linearGradient>
+                        <path fill="none" stroke="url(#SVGID_1_)" stroke-width="3" stroke-miterlimit="10" d="M199.8,104.8H53.2c-28.4,0-51.7-23.2-51.7-51.7v0c0-28.4,23.2-51.7,51.7-51.7h146.7c28.4,0,51.7,23.2,51.7,51.7v0C251.5,81.6,228.3,104.8,199.8,104.8z"></path>
+                      </svg><span class="header__login-text">Войти<span class="arr">&rarr;</span></span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="markets-top">
+        <div class="container">
+          <div class="markets-menu">
+            <h3>Индикаторы</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Акции</a>
+              <ul class="dropdown-menu">
+                <li class="active"><a href="#">Фондовый рынок</a></li>
+                <li><a href="#">Денежный рынок</a></li>
+                <li><a href="#">Совместные индексы</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="regulations" class="regulations">
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"><span class="line1"></span><span class="line2"></span></i></a>
+              <div class="dropdown-menu">
+                <div id="datePicker" class="select-date">
+                  <input type="text">
+                </div>
+                <div class="regulations__download">
+                  <h5>Архив</h5>
+                  <form>
+                    <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
+                      <input type="date">
+                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
+                    </div>
+                    <div class="regulations__download-input"><i class="fa fa-calendar"></i>
+                      <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
+                    </div>
+                    <div class="regulations__archive-links">
+                      <div class="link"><a href="#"><i class="fa fa-eye"></i>Посмотреть</a></div>
+                      <div class="link"><a href="#"><i class="fa fa-download"></i>Скачать</a></div>
+                    </div>
+                  </form>
+                </div>
+                <div class="regulations__links-list">
+                  <h5>Полезные ссылки</h5>
+                  <ul class="blue-list">
+                    <li><a href="#">Просмотр торгов акциями Индекса KASE</a></li>
+                  </ul>
+                </div>
+                <div class="reference-info">
+                  <ul>
+                    <li><a href="#">Методика расчета Индекса KASE</a></li>
+                    <li><a href="#">Архив Индекса KASE_Shares</a></li>
+                    <li><a href="#">Рыночная оценка</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="centerColumn" class="center-column">
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Рынки</a></li>
+            <li><a href="#">Торги</a></li>
+            <li><a href="#">Акции</a></li>
+          </ul>
+          <div class="h1-block"><a href="#" class="arrow-back"><i class="fa fa-angle-left"></i></a>
+            <div class="flex">
+              <h1>Индекс KASE</h1>
+              <div>
+                <div class="h1-block__indicator">12,34% годовых</div>
+                <div class="h1-block__indicator up">0.14</div>
+              </div>
+            </div>
+          </div>
+          <div class="kase-date">Данные на: 7 декабря 2016 г. </div>
+          <div class="accordion">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Последние значения<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <div class="half-table__parent">
+                <div class="row">
+                  <div class="col-md-6">
+                    <table class="half-table">
+                      <tr>
+                        <td>Время последних данных </td>
+                        <td>09.08.16 (16:14)</td>
+                      </tr>
+                      <tr>
+                        <td>Последнее значение</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Открытие</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Макс.</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Мин.</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Изменение с начала месяца, %</td>
+                        <td><span class="green">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>Объем сделок, млн KZT</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Капитализация, млрд KZT</td>
+                        <td>987.4</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="col-md-6">
+                    <table class="half-table">
+                      <tr>
+                        <td>Статус рынка</td>
+                        <td><span class="green">открыт</span></td>
+                      </tr>
+                      <tr>
+                        <td>Изменение к предыдущему значению, %</td>
+                        <td><span class="green">1.06</span></td>
+                      </tr>
+                      <tr>
+                        <td>Предыдущее закрытие</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Макс. за 52 недели</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Мин. за 52 недели</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Изменение с начала года, %</td>
+                        <td><span class="green">4.06</span></td>
+                      </tr>
+                      <tr>
+                        <td>Объем сделок, тыс USD</td>
+                        <td>212.2</td>
+                      </tr>
+                      <tr>
+                        <td>Капитализация, млн USD</td>
+                        <td>275</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="help-block">* объем сделок по акциям, входящим в представительский список Индекса KASE</div>
+                <div class="help-block">* капитализация компаний, входящих в представительский список Индекса KASE</div>
+              </div>
+              <ul class="accordion__nav">
+                <li class="active"><a href="#">Архив</a></li>
+                <li><a href="#">В течение дня</a></li>
+              </ul>
+              <div class="actions__chart">
+                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                <script type="text/javascript">
+                  new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Asia/Almaty",
+                    "theme": "White",
+                    "style": "3",
+                    "locale": "ru",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": true,
+                    "hideideas": true
+                  });
+                </script>
+              </div>
+              <div class="actions__chart-text">
+                <p>Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.</p>
+                <p>Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.</p>
+                <p>Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.</p>
+                <p>"Время жизни" индикатора: 1 рабочий день.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Представительский список Индекса KASE<span class="date">на 16.09.16</span><i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <div class="date">Время последних данных: 19.08.2016 (17:35)</div>
+              <table class="sorting-table table table-striped">
+                <thead>
+                  <tr>
+                    <th>Эмитент</th>
+                    <th>Код</th>
+                    <th>Цена</th>
+                    <th>Тренд</th>
+                    <th>Доля</th>
+                    <th>Акции</th>
+                    <th>Fi</th>
+                    <th>Ri</th>
+                    <th>Изменение цены за последние 52 недели</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">Название</a></td>
+                    <td><a href="#">KZ_SBER</a></td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Название</a></td>
+                    <td><a href="#">KZ_SBER</a></td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Название</a></td>
+                    <td><a href="#">KZ_SBER</a></td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Название</a></td>
+                    <td><a href="#">KZ_SBER</a></td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="help-block">* коэффициент Fi - доля акций, находящихся в свободном обращении</div>
+              <div class="help-block">* коэффициент Ri - коэффициент, ограничивающий долю влияния ценовых параметров акций на значение индекса  до 15 %</div>
+              <div class="help-block">* тренд, % отражает изменение цены акции относительно цены закрытия предыдущего торгового дня</div>
+            </div>
+          </div>
+          <div class="accordion closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Последние новости<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <ul class="news-list">
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 342,56 (+2,66), CNYKZT_TOD = 51,4370</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <ul class="footer__nav">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Партнерские сайты</a></li>
+          <li><a href="#">Мобильная версия</a></li>
+          <li><a href="#">Карта сайта</a></li>
+        </ul>
+        <div class="footer__text">
+          <div>&copy; 1993–2016 АО "Казахстанская фондовая биржа"</div>
+          <div>Копирование материалов – только с письменного разрешения.</div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" defer src="js/libs.js"> </script>
+    <script type="text/javascript" defer src="js/main.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) { 
+      	
+          $('#datePicker input').daterangepicker({
+              "singleDatePicker": true,
+              "showDropdowns": true,
+              "locale": {
+                  "direction": "ltr",
+                  "format": "DD/MM/YYYY",
+                  /*"separator": " - ",
+                  "applyLabel": "Apply",
+                  "cancelLabel": "Cancel",*/
+                  "daysOfWeek": [
+                      "Вс",
+                      "Пн",
+                      "Вт",
+                      "Ср",
+                      "Чт",
+                      "Пт",
+                      "Сб"
+                  ],
+                  "monthNames": [
+                      "Январь",
+                      "Февраль",
+                      "Март",
+                      "Апрель",
+                      "Май",
+                      "Июнь",
+                      "Июль",
+                      "Август",
+                      "Сентябрь",
+                      "Октябрь",
+                      "Ноябрь",
+                      "Декабрь"
+                  ],
+                  "firstDay": 1
+              },
+              "minDate": "20/06/2015",
+              "maxDate": new Date(),
+              "parentEl": "#datePicker"
+          }, function(start, end, label) {
+          }).focus().focusout();
+      
+      
+      	$('.sorting-table').DataTable({
+      		scrollX: true,
+      		language: {
+      		    search: '',
+      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+      		  }
+      	});
+      
+      	$('.sorting-table--false').DataTable({
+      		scrollX: true,
+      		bSort : false,
+      		language: {
+      		    search: '',
+      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+      		  }
+      	});
+      });
+    </script>
+  </body>
+</html>

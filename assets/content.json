@@ -1,0 +1,80 @@
+{
+  	"currencies" : [
+	    {
+	    	"index": 0,
+			"code" : "USDKZT",
+			"price" : 337.48,
+			"direction" : "up",
+			"directionCount" : 2.42,
+			"time" : "11:02",
+			"date" : "17.06.2016"
+	    },
+	    {
+	    	"index": 1,
+			"code" : "EURKZT",
+			"price" : 380.21,
+			"direction" : "down",
+			"directionCount" : 1.001,
+			"time" : "18:22",
+			"date" : "16.06.2016"
+	    },
+	    {
+	    	"index": 2,
+			"code" : "CNYKZT",
+			"price" : 50.5617,
+			"direction" : "down",
+			"directionCount" : 0.2583,
+			"time" : "11:02",
+			"date" : "17.06.2016"
+	    },
+	    {
+	    	"index": 3,
+			"code" : "RUBKZT",
+			"price" : 5.24,
+			"direction" : "up",
+			"directionCount" : 0.0199,
+			"time" : "18:22",
+			"date" : "16.06.2016"
+	    },
+	    {
+	    	"index": 4,
+			"code" : "EURUSD",
+			"price" : "-",
+			"direction" : "",
+			"directionCount" : "",
+			"time" : "-",
+			"date" : "-"
+	    }
+  	],
+
+	"news": [
+		{
+			"date" : "15 июля, 13:00",
+			"title": "Утренняя сессия KASE: USDKZT_TOD = 342,56 (+2,66), CNYKZT_TOD = 51,4370"
+		},
+		{
+			"date" : "15 июля, 13:00",
+			"title": "Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых"
+		},
+		{
+			"date" : "15 июля, 13:00",
+			"title": "Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000"
+		},
+		{
+			"date" : "15 июля, 13:00",
+			"title": "Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых"
+		},
+		{
+			"date" : "15 июля, 13:00",
+			"title": "Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000"
+		},
+		{
+			"date" : "15 июля, 13:00",
+			"title": "Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых"
+		},
+		{
+			"date" : "15 июля, 13:00",
+			"title": "Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000"
+		}
+  	]
+}

@@ -1,0 +1,266 @@
+.quotes-info {
+	position: relative;
+	background: #fff;
+	margin: 0 -15px 9px;
+	border: 1px solid #d1d1d1;
+	height: auto;
+}
+.quotes-info__container {
+	position: relative;
+}
+.quotes-info__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	border-bottom: 1px solid #d1d1d1;
+	.title {
+		font-size: $fz15;
+		font-weight: 500;
+		a {
+			color: $minorColor;
+		}
+		i {
+			display: none;
+		}
+	}
+}
+.quotes-info__content {
+	padding: 0 18px;
+}
+.quotes-info__table {
+	line-height: 1.25;
+	width: 100%;
+	th {
+		font-size: $fz13;
+		font-weight: 500;
+		vertical-align: top;
+		padding: 10px 5px;
+		text-align: right;
+		&:first-child {
+			padding-left: 0;
+			text-align: left;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+		a {
+			display: inline-block;
+			width: 16px;
+			margin-left: 6px;
+		}
+	}
+	td {
+		font-family: Arial;
+		font-weight: normal;
+		font-size: $fz12;
+		padding: 10px 5px;
+		vertical-align: top;
+		text-align: right;
+		&:first-child {
+			padding-left: 0;
+			text-align: left;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+		img {
+			width: 26px;
+			max-width: none;
+			height: auto;
+		}
+		a {
+			white-space: nowrap;
+			color: $defaultColor;
+			@extend .underline;
+			&:hover {
+				color: $linkColor;
+			}
+		}
+	}
+	tfoot {
+		tr {
+			border-top: 1px solid #ebebec;
+		}
+	}
+	&--with-date {
+		td {
+			padding-bottom: 2px;
+		}
+	}
+}
+.quotes-info__arrow {
+	position: relative;
+	img {
+		display: block;
+		width: 16px;
+		height: 16px;
+	}
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: rotate(0deg);
+		transition: all 300ms;
+		-webkit-backface-visibility: hidden;
+		&:before {
+			transform: translateZ(0);
+			display: block;
+			width: 0;
+			height: 0;
+			border: 5px solid transparent;
+			border-left-width: 4px;
+			border-right-width: 4px;
+			border-top: none;
+			border-bottom-color: $lightGreen;
+			/* position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -3px 0 0 -4px; */
+			content: "";
+		}
+	}
+	&.reverse {
+		span {
+			//margin-top: -2px;
+			transform: rotate(180deg);
+		}
+	}
+}
+.quotes-info__parent {
+	margin-bottom: 20px;
+	&.row {
+		&:before, &:after {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px){
+	.quotes-info__parent {
+		margin-bottom: 30px;
+	}
+	.quotes-info {
+		margin: {
+			left: -30px;
+			right: -30px;
+			bottom: 18px;
+		};
+		.date {
+			font-size: $fz12;
+		}
+	}
+	.quotes-info__header {
+		padding: 20px 40px;
+		.title {
+			font-size: $fz30;
+		}
+	}
+	.quotes-info__table {
+		th {
+			font-size: $fz26;
+			padding: 20px 15px;
+		}
+		td {
+			font-size: $fz24;
+			padding: 20px 10px;
+			img {
+				width: 56px;
+			}
+		}
+	}
+}
+
+@media (min-width: 769px){
+	.quotes-info__parent {
+		margin-bottom: 16px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		.col-md-4 {
+			margin-bottom: 30px;
+		}
+	}
+	.quotes-info__content {
+		padding: 0;
+	}
+	.quotes-info {
+		height: 100%;
+		border-radius: 20px;
+		background: linear-gradient(155deg, rgba(242,246,250,1) 0%,rgba(230,232,232,1) 100%);
+		margin: 0;
+		border: none;
+		&:before {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url('../images/glints.png') 50% 50%;
+			background-size: cover;
+			content: "";
+		}
+	}
+	.quotes-info__container {
+		padding: 6px 30px 15px;
+	}
+	.quotes-info__header {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 17px;
+		border: none;
+		.title {
+			font-size: $fz18;
+			font-weight: 300;
+			a {
+				color: $defaultColor;
+				&:hover {
+					i {
+						transform: translateX(5px) !important;
+					}
+				}
+			}
+			i {
+				display: inline-block;
+				margin-left: 12px;
+				transform: translateX(0);
+				transition: transform 200ms;
+			}
+		}
+	}
+	.quotes-info__table {
+		font-weight: 300;
+		th {
+			font-weight: 500;
+			padding-top: 5px;
+			padding-bottom: 6px;
+		}
+		td {
+			img {
+				width: 36px;
+			}
+		}
+		thead {
+			tr {
+				border-top: 1px solid #d7dadf;
+				border-bottom: 1px solid #d7dadf;
+			}
+		}
+		tfoot {
+			tr {
+				border-color: #d7dadf;
+			}
+			td {
+				font-size: $fz14;
+			}
+		}
+	}
+}
+@media (min-width: 992px){
+}

@@ -1,0 +1,38 @@
+.breadcrumbs {
+	font-size: $fz12;
+	font-weight: 100;
+	padding: 14px 0 15px;
+	margin: 0;
+	li {
+		display: block;
+		float: left;
+		&:after {
+			margin: 0 2px;
+			content: '/';
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	a {
+		color: #a8b1ba;
+		@extend .underline;
+		&:hover {
+			color: $defaultColor;
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px){
+	.breadcrumbs {
+		font-size: $fz24;
+		padding: 28px 0 30px;
+		li {
+			&:after {
+				margin: 0 4px;
+			}
+		}
+	}
+}

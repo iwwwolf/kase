@@ -1,0 +1,148 @@
+.markets-menu {
+	width: 87%;
+	//padding-right: 40px;
+	font-size: $fz18;
+	h3 {
+		display: none;
+		text-transform: uppercase;
+	}
+	.dropdown-link {
+		display: block;
+		color: $defaultColor;
+		position: relative;
+		padding: 15px 40px 15px 0;
+		font-size: 100%;
+		border-right: 1px solid #c9d4de;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		&:after {
+			height: 0;
+			display: block;
+			font-size: $fz18;
+			line-height: 0;
+			color: $minorColor;
+			font-family: "FontAwesome";
+			position: absolute;
+			top: 50%;
+			right: 18px;
+			content: '\f107';
+		}
+	}
+	.dropdown-menu {
+		margin: 0;
+		left: 0;
+		top: 100%;
+		border: none;
+		background: #f3fbf2;
+		margin-top: 1px;
+		&>li {
+			&>a {
+				padding: 12px 15px;
+				font-size: $fz13;
+				@extend .underline;
+			}
+			&.active {
+				&>a, &>a:hover {
+					background: none;
+					color: $lightGreen;
+				}
+			}
+		}
+	}
+	.dropdown {
+		position: static;
+		&.open {
+			.dropdown-link {
+				&:after {
+					content: '\f106';
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px){
+	.markets-menu {
+		h3 {
+			display: none;
+			text-transform: uppercase;
+		}
+		.dropdown-link {
+			font-size: $fz36;
+			padding: 20px 90px 20px 0;
+			border-right: 2px solid #c9d4de;
+			&:after {
+				right: 40px;
+				content: '\f107';
+			}
+		}
+		.dropdown-menu {
+			margin-top: 2px;
+			&>li {
+				&>a {
+					padding: 24px 30px;
+				}
+				&.active {
+					&>a, &>a:hover {
+						background: none;
+						color: $lightGreen;
+					}
+				}
+			}
+		}
+		.dropdown {
+			position: static;
+			&.open {
+				.dropdown-link {
+					&:after {
+						content: '\f106';
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px){
+	.markets-menu {
+		width: 195px;
+		padding-right: 30px;
+		padding-top: 38px;
+		font-size: 100%;
+		position: absolute;
+		left: 15px;
+		top: 0;
+		h3 {
+			display: block;
+		}
+		.dropdown {
+			.dropdown-link {
+				display: none;
+			}
+			.dropdown-menu {
+				background: none;
+				padding: 0;
+				opacity: 1;
+				visibility: visible;
+				transform: none;
+				margin: 0;
+				position: static;
+				box-shadow: none;
+				float: none;
+				a {
+					display: inline;
+					white-space: normal;
+					padding: 0;
+					&:hover {
+						background: none;
+						color: $lightGreen;
+					}
+				}
+			}
+		}
+		li {
+			margin-bottom: 13px;
+		}
+	}
+}

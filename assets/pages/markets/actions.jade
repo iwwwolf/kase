@@ -1,0 +1,298 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			include ../../modules/markets-menu/module
+			//- include ../../modules/regulations/module
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Регламент
+							div
+								.help-block Акции первого класса ликвидности:
+								div 
+									span 11:30 – 17:00
+									|торговая сессия
+								div 
+									span 17:20 – 18:00
+									|клиринговая сессия
+							div
+								.help-block Акции второго и третьего классов ликвидности:
+								div 
+									span 17:20 – 18:00
+									|торговая сессия
+						.regulations__download
+							form
+								label.radiobutton
+									input(type="radio", name="prices", checked)
+									span.radiobutton__styled
+									span.radiobutton__label Средневзвешенные цены
+								label.radiobutton
+									input(type="radio", name="prices")
+									span.radiobutton__styled
+									span.radiobutton__label Риск-параметры акций
+
+								.regulations__download-input.regulations__download-input--mobile
+									i.fa.fa-calendar
+									input(type="date")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+								.regulations__download-input
+									i.fa.fa-calendar
+									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Список акций
+								li: a(href="#") Просмотр торгов
+								li: a(href="#") Список брокеров
+								li: a(href="#") Маркет-мейкеры
+								li: a(href="#") Рыночная оценка
+								li: a(href="#") Правила торгов
+	.container
+		#centerColumn.center-column
+			include ../../modules/breadcrumbs/module
+			h1 Акции
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Индикаторы
+						i.fa.fa-angle-down
+				.accordion__body
+					ul.accordion__nav
+						li.active: a(href="#") Индекс KASE
+						li: a(href="#") Объем торгов
+						li: a(href="#") Капитализация
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Наиболее ликвидные акции
+						i.fa.fa-angle-down
+					.small-dropdown.flex.accordion__hide-in-closed Период:
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
+
+							ul.dropdown-menu
+								li: a(href="#") 1 неделя
+								li: a(href="#") 1 месяц
+								li: a(href="#") 1 год
+				.accordion__body
+					.date Время последних данных: 19.08.2016 (17:35)
+					//-.table-parent
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th Код
+								th Компания
+								th Kl
+								th Число сделок
+								th Объем, млн KZT
+								th Доля рынка,%
+								th Последняя цена,KZT
+								th Mаркет-мейкеры
+								th Дата последней сделки
+						tbody
+							tr
+								td: a(href="#") KZ_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.005
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 120
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 4.8
+								td 125
+								td 0.00007
+								td 87
+								td 1 446 453
+								td M
+								td 20.07.2016
+					.help-block.pull-right
+						a(href="#") Посмотреть все
+					.help-block * без учета специализированных торгов
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Лидеры роста и падения
+						i.fa.fa-angle-down
+
+				.accordion__body
+					ul.accordion__nav
+						li.active: a(href="#") Лидеры роста
+						li: a(href="#") Лидеры падения
+					//-.table-parent
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th Код
+								th Компания
+								th Последняя цена,KZT
+								th Изменение, KZT
+								th Изменение, %
+								th 1 месяц
+						tbody
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+							tr
+								td: a(href="#") RU_SBER
+								td: a(href="#") Название
+								td 1,004.00
+								td 1,004.00
+								td +10.10
+								td: img(src="img-content/img-4.jpg", alt="")
+					.help-block * данные предоставляются с задержкой в 15 минут
+					.help-block * в расчет включаются акции первого класса ликвидности
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Публичные размещения (IPO)
+						i.fa.fa-angle-down
+
+				.accordion__body
+					//-.table-parent
+					table.sorting-table.table.table-striped
+							thead
+								tr
+									th Код
+									th Компания
+									th Цена
+									th Объем, млн KZT
+									th Число сделок
+									th Спрос, % 
+									th Дата
+							tbody
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 11 000.00
+									td 800 016 129
+									td 485
+									td 325
+									td 21.07.2016
+								tr
+									td: a(href="#") RU_SBER
+									td: a(href="#") Название
+									td 11 000.00
+									td 800 016 129
+									td 485
+									td 325
+									td 21.07.2016
+					.help-block * данные предоставляются с задержкой в 15 минут
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

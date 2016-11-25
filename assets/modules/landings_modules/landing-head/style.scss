@@ -1,0 +1,26 @@
+.landing-head {
+	padding: 112px 0 135px;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	&--green {
+		background: linear-gradient(32deg, #087e38 0%, #8ac53f 100%);
+	}
+	&--blue {
+		background: linear-gradient(32deg, #00aaff 0%, #005dbd 100%);
+	}
+	&--yellow {
+		background: linear-gradient(32deg, #fecc00 0%, #ff9000 100%);
+	}
+	&--red {
+		background: linear-gradient(32deg, #e84242 0%, #ef7f1a 100%);
+	}
+}
+.landing-head__body {
+	display: flex;
+	align-items: center;
+}
+.landing-head__text {
+	font-size: $fz16;
+	font-weight: 100;
+}

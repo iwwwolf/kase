@@ -1,0 +1,71 @@
+.select-date {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 15px;
+	input {
+		//visibility: hidden;
+		position: absolute;
+		left: -200%;
+
+	}
+	.daterangepicker {
+		.calendar {
+			width: 100%;
+			float: none !important;
+			margin: 0;
+			border: none;
+			.calendar-table {
+				padding: 0 !important;
+			}
+			.prev, .next {
+				color: $lightGreen;
+			}
+			.available {
+				transition: all 300ms;
+				&:hover {
+					border-radius: 0;
+					background-color: #d8f2cf;
+				}
+			}
+			td {
+				font-family: Arial, sans-serif;
+				color: #607385;
+				min-width: 0;
+				padding: 5px 0;
+				&.active {
+					border-radius: 0;
+					background-color: #d8f2cf;
+					color: $lightGreen;
+				}
+				&.weekend {
+					color: $redColor;
+				}
+			}
+			th {
+				color: #333;
+				font-weight: normal;
+				min-width: 0;
+				padding: 5px 0
+			}
+		}
+	}
+	thead {
+		tr {
+			&:first-child {
+				th {
+					border-top: 1px solid #e9ecf1;
+					border-bottom: 1px solid #e9ecf1;
+				}
+			}
+		}
+		select {
+			border: none;
+			&.monthselect {
+				border-right: 1px solid #e9ecf1;
+			}
+			option[disabled="disabled"] {
+				color: rgba(51, 51, 51, 0.4);
+			}
+		}
+	}
+}

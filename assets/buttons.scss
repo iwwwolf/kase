@@ -1,0 +1,31 @@
+.btn {
+  font-size: 100%;
+  border: none;
+  transition: all 300ms;
+  &:active, &:focus {
+    outline: none;
+  }
+  &.btn-default {
+    //background: $btnBg;
+    color: #fff;
+    &:hover {
+      //background: darken($btnBg, 5%);
+    }
+  }
+  &.big {
+    border-radius: 22px;
+    padding: 12px 35px;
+  }
+  &.btn-landing {
+    display: block;
+    width: 208px;
+    font-size: $fz14;
+    border-radius: 18px;
+    padding: 8px 0;
+    margin: 0 auto;
+  }
+  &.btn-landing-transparent {
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+}

@@ -1,0 +1,26 @@
+.half-table__parent {
+	margin-bottom: 15px;
+	.help-block {
+		text-align: right;
+	}
+}
+.half-table {
+	width: 100%;
+	text-align: right;
+	font-weight: 500;
+	margin-bottom: 20px;
+	tr {
+		&:first-child {
+			td {
+				border-top: 1px solid #e7e9ed;
+			}
+		}
+	}
+	td {
+		padding: 6px 0 5px;
+		border-bottom: 1px solid #e7e9ed;
+		&:first-child {
+			text-align: left;
+		}
+	}
+}

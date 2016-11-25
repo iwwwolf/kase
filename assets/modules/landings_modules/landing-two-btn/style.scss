@@ -1,0 +1,28 @@
+.landing-two-btn {
+	ul {
+		clear: both;
+		list-style-type: none;
+		margin: 0 auto;
+
+		li {
+			display: inline-block;
+			max-width: 400px;
+			margin: 0 65px;
+
+			p {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+			}
+
+			.btn {
+				margin: 20px auto 0 auto;
+			}
+		}
+	}
+}

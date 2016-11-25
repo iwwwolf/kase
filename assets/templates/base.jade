@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title KASE
+        link(href="css/libs.css", rel="stylesheet")
+        link(href="css/main.css", rel="stylesheet")
+    - var bodyClass;
+    block variables
+    body(class=bodyClass)
+        //- include ../modules/trade-info/module
+        include ../modules/menu/module
+        div#wrap
+            //- include ../modules/trade-link/module
+            include ../modules/fixed-social/module
+            include ../modules/header/module
+            block content
+        include ../modules/footer/module
+
+        //- файлы скриптов
+
+        script(type="text/javascript", defer, src="js/libs.js") 
+        script(type="text/javascript", defer, src="js/main.js")
+        block scripts

@@ -1,0 +1,41 @@
+extends ../templates/base
+
+block variables
+	- bodyClass = "body__home"
+
+block content
+	.great-slider__parent.container.hidden-block
+		include ../modules/great-slider/module
+	.container
+		include ../modules/navigation/module
+
+		.row.quotes-info__parent.hidden-block
+			.col-lg-4.col-md-6.col-sm-6
+				include ../modules/quotes-info/quote-actions
+			.col-lg-4.col-md-6.col-sm-6
+				include ../modules/quotes-info/quote-gcb
+			.col-lg-4.col-md-6.col-sm-6
+				include ../modules/quotes-info/quote-currency
+
+		- var newsTitle = ["Рынки", "Компании", "Биржа"];
+		.home-news__parent.hidden-block
+			h2 Новости
+			.row
+				for title in newsTitle
+					.col-md-4.col-sm-6
+						include ../modules/home-news/module
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+		    $('.quotes-info__arrow').on('click', function(e){
+		        e.preventDefault();
+		        if(!$(this).hasClass('reverse')){
+		            $(this).addClass('reverse');
+		            $(this).parent().children('.text').text('Лидеры падения');
+		        } else {
+		            $(this).removeClass('reverse');
+		            $(this).parent().children('.text').text('Лидеры роста');
+		        }
+		    });  
+		});  
+		

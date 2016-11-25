@@ -1,0 +1,267 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Регламент
+							div
+								.help-block Акции первого класса ликвидности:
+								div 
+									span 11:30 – 17:00
+									|торговая сессия
+						.regulations__download
+							form
+								h5 Средневзвешенные цены
+								.regulations__download-input.regulations__download-input--mobile
+									i.fa.fa-calendar
+									input(type="date")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+								.regulations__download-input
+									i.fa.fa-calendar
+									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Список облигаций
+								li: a(href="#") Просмотр торгов
+								li: a(href="#") Список брокеров
+								li: a(href="#") Маркет-мейкеры
+								li: a(href="#") Рыночная оценка
+								li: a(href="#") Правила торгов
+						.regulations__nearest-auction
+							h5 Ближайший аукцион
+							ul
+								li
+									div
+										span.big AGKKb1
+										span.small 10 лет
+									div 10 млрд KZT
+								li
+									div
+										span.big AGKKb1
+										span.small 10 лет
+									div 10 млрд KZT
+	.container
+		#centerColumn.center-column
+			include ../../modules/breadcrumbs/module
+			h1 Корпоративные облигации
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Индикаторы
+						i.fa.fa-angle-down
+				.accordion__body
+					ul.accordion__nav
+						li.active: a(href="#") Индекс KASE
+						li: a(href="#") Объем торгов
+						li: a(href="#") Капитализация
+					//- img(src="img-content/img-3.jpg", alt="")
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Все инструменты
+						i.fa.fa-angle-down
+				.accordion__body
+					.sortin-table--with-search
+						table.sorting-table.table.table-striped
+							thead
+								tr
+									th Код
+									th Валюта
+									th Доход., % годовых
+									th Купон, %
+									th Дата погаш.
+									th Объем послед. сделки, млн KZT
+									th Объем послед. сделки, тыс USD
+									th Маркет-мейкер
+									th Дата послед. сделки
+							tbody
+								tr
+									td: a(href="#") CCBNb19
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb18
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb17
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb16
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb15
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+								tr
+									td: a(href="#") CCBNb14
+									td $
+									td 16.77
+									td 16.77
+									td 25.05.2015
+									td 116.77
+									td 47.2
+									td M
+									td 23.05.2016
+					.help-block.pull-right
+						a(href="#") Посмотреть все
+					.help-block * без учета специализированных торгов
+					.help-block * данные предоставляются с задержкой в 15 мин
+			
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Первичный рынок
+						i.fa.fa-angle-down
+				.accordion__body
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th Код
+								th Компания
+								th Валюта
+								th Объём выпуска
+								th Объем размещ., %
+								th Доля размещ., %
+								th Купон, %
+								th Цена, %
+								th Дата погашения
+						tbody
+							tr
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
+							tr
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
+							tr
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
+							tr
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
+							tr
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
+							tr
+								td: a(href="#") CCBNb19
+								td: a(href="#") АО "Банк ЦентрКредит"
+								td $
+								td 0.1000
+								td 0.1000
+								td 0.00
+								td 0.00
+								td 0.00
+								td 23.10.2016
+					.help-block * данные за последние 6 месяцев
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

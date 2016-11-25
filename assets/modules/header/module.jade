@@ -1,0 +1,61 @@
+include ../header-search/module
+header#header
+	.header__container
+		.container
+			.header__content
+				.header__left-col
+					a#menuBtn.header__menu-button(href="#")
+						img(src="images/menu-border.svg", alt="")
+						//- svg(version="1.1", id="Layer_1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 53.7 53.7", enable-background="new 0 0 53.7 53.7", xml:space="preserve")
+						//- 	linearGradient(id="SVGID_1_", gradientUnits="userSpaceOnUse", x1="40.2525", y1="3.5913", x2="13.4146", y2="50.0758")
+						//- 		stop(offset="0", style="stop-color:#9ED110")
+						//- 		stop(offset="1", style="stop-color:#038726")
+						//- 	circle(fill="none", stroke="url(#SVGID_1_)", stroke-width="2", stroke-miterlimit="10", cx="26.8", cy="26.8", r="25.8")
+						span.header__menu-button-lines
+							span
+							span
+							span
+					.header__logo
+						a(href="/")
+							span.header__logo-img
+								img(src="images/logo.svg", alt="KASE")
+							span.header__logo-text
+								span Қазақстан қор биржасы
+								span Казахстанская фондовая биржа
+								span Kazakhstan Stock Exchange
+				.header__right-col
+					.header__date.
+						Пятница, 11 ноября 2016 г. 11:24
+					a(href="#", id="searchBtn", class="header__search-button")
+						img(src="images/search-icon.svg", alt="Search")
+					.header__language
+						ul.header__language-list.clearfix
+							li.active: a(href="#") Рус 
+							li: a(href="#") Қаз 
+							li: a(href="#") Eng 
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", role="button") Рус
+							ul(class="dropdown-menu")
+								li: a(href="#") Қаз
+								li: a(href="#") Eng
+					.header__login
+						.header__login--mobile
+							a(href="#")
+								img(src="images/login-mob.svg", alt="")
+
+								//- Когда юзер авторизован:
+								//-img(src="images/user-icon.svg", alt="")
+						.header__login--desctop
+							a(href="#")
+
+								svg(version="1.1", id="Layer_1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 253 106.3", enable-background="new 0 0 253 106.3", xml:space="preserve")
+									linearGradient(id="SVGID_1_", gradientUnits="userSpaceOnUse", x1="227.5092", y1="-5.151", x2="25.4908", y2="111.4843")
+										stop(offset="0", style="stop-color:#9ED110")
+										stop(offset="1", style="stop-color:#038726")
+									path(fill="none", stroke="url(#SVGID_1_)", stroke-width="3", stroke-miterlimit="10", d="M199.8,104.8H53.2c-28.4,0-51.7-23.2-51.7-51.7v0c0-28.4,23.2-51.7,51.7-51.7h146.7c28.4,0,51.7,23.2,51.7,51.7v0C251.5,81.6,228.3,104.8,199.8,104.8z")
+								//- img(src="images/login-border.svg", alt="Войти")
+								span.header__login-text Войти
+									span.arr &rarr;
+
+								//- Когда юзер авторизован:
+								//- img(src="images/user-icon.svg", alt="")

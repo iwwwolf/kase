@@ -1,0 +1,105 @@
+.navigation {
+	margin: 0 -15px 30px;
+	position: relative;
+	z-index: 1;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		display: block;
+		border-bottom: 1px solid rgba(3,135,38,.5);
+	}
+	a {
+		display: block;
+		background: $minorColor;
+		color: #fff;
+		text-align: center;
+		padding: 16px 10px;
+		&:active {
+			background: darken(#038736, 10%);
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+	.navigation {
+		margin: {
+			left: -30px;
+			right: -30px;
+		};
+		font-size: $fz28;
+		a {
+			padding: 31px 0px 32px;
+		}
+	}
+}
+
+@media (min-width: 769px) {
+	.navigation {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.navigation {
+		height: 56px;
+		margin: -56px 0 30px;
+		text-align: center;
+		font-size: $fz15;
+		ul {
+			display: inline-block;
+			white-space: nowrap;
+			margin: 0;
+			padding: 0 30px 0;
+			position: relative;
+			&:after {
+				width: 100%;
+				height: 1px;
+				background: linear-gradient(to right, rgba(255,255,255,0.1) 0%,rgba(255,255,255,1) 25%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 75%,rgba(255,255,255,0.1) 100%);
+				opacity: 0.3;
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+			}
+		}
+		li {
+			border: none;
+			display: inline-block;
+			margin-left: 25px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+		a {
+			padding: 15px 0 0;
+			background: none;
+			color: rgba(255,255,255,0.8);
+			position: relative;
+			&:after {
+				display: block;
+				width: 100%;
+				height: 3px;
+				opacity: 0;
+				visibility: visible;
+				background-color: #fff;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 500ms;
+				content: "";
+			}
+			&:hover, &:active {
+				background: none;
+				color: #fff;
+				&:after {
+					opacity: 1;
+					visibility: visible;
+				}
+
+			}
+		}
+	}
+}

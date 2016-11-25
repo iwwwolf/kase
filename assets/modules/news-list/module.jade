@@ -1,0 +1,6 @@
+ul.news-list
+	- each newsItem in news
+		li
+			.news-list__date= newsItem.date
+			.news-list__title
+				a(href="#")= newsItem.title

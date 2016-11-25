@@ -1,0 +1,74 @@
+.get-date {
+	display: flex;
+	align-items: center;
+}
+.get-date__label {
+	margin-right: 10px;
+}
+.get-date__input {
+	position: relative;
+	display: none;
+	background-color: #fff;
+	padding: 4px 40px 4px 30px;
+	border: 1px solid #c9d4de;
+	&.get-date__input--mobile {
+		display: block;
+	}
+	.fa-calendar {
+		color: #899097;
+		line-height: 0;
+		position: absolute;
+		top: 50%;
+		left: 10px;
+	}
+	input {
+		display: block;
+		width: 100%;
+		height: 20px;
+		background: none;
+		border-radius: 0;
+		border: none;
+	}
+}
+.get-date__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	border-left: 1px solid #c9d4de;
+	position: absolute;
+	right: 0;
+	top: 4px;
+	bottom: 4px;
+	a {
+		color: $minorColor;
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+	.get-date__input {
+		padding: 8px 80px 8px 60px;
+		border: 2px solid #c9d4de;
+		.fa-calendar {
+			left: 20px;
+		}
+		input {
+			height: 40px;
+		}
+	}
+	.get-date__link {
+		width: 80px;
+		border-left: 2px solid #c9d4de;
+		top: 8px;
+		bottom: 8px;
+	}
+}
+
+@media (min-width: 992px){
+	.get-date__input {
+		display: block;
+		&.get-date__input--mobile {
+			display: none;
+		}
+	}
+}
