@@ -16,4 +16,34 @@
     border-radius: 22px;
     padding: 12px 35px;
   }
+  &.btn-landing {
+    display: block;
+    width: 208px;
+    font-size: $fz14;
+    border-radius: 18px;
+    padding: 8px 0;
+    margin: 0 auto;
+  }
+  &.btn-landing-transparent {
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+}
+
+@media (min-width: 320px) {
+  .btn {
+    &.btn-landing {
+      width: 180px;
+      font-size: $fz13;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .btn {
+    &.btn-landing {
+      width: 208px;
+      font-size: $fz14;
+    }
+  }
 }
