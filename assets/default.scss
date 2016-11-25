@@ -495,12 +495,20 @@ a.up {
   margin: 0 auto 25px auto;
 }
 
+.landing-title_long {
+  max-width: 900px;
+}
+
 .landing-description {
   max-width: 650px;
   font-size: $fz15;
   line-height: 1.6;
   font-weight: 500;
-  margin: 0 auto;
+  margin: 0 auto 45px auto;
+}
+
+.landing-description_long {
+  max-width: 850px;
 }
 
 .landing-text {
@@ -516,7 +524,7 @@ a.up {
 .landing-list {
   text-align: left;
   max-width: 700px;
-  margin: 45px auto 0 auto;
+  margin: 0 auto 0 auto;
 
   li {
     color: $minorColor;

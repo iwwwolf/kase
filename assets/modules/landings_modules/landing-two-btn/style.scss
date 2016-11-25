@@ -1,14 +1,13 @@
 .landing-two-btn {
+	ul {
+		clear: both;
+		list-style-type: none;
+		margin: 0 auto;
 
-	clear: both;
-
-	.landing-two-btn__item {
-		width: 50%;
-		float: left;
-
-		div {
+		li {
+			display: inline-block;
 			max-width: 400px;
-			margin: 0 auto;
+			margin: 0 65px;
 
 			p {
 				display: -webkit-flex;
@@ -18,7 +17,11 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				margin: 0 0 20px 0;
+				margin: 0;
+			}
+
+			.btn {
+				margin: 20px auto 0 auto;
 			}
 		}
 	}

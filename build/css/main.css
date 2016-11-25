@@ -385,12 +385,18 @@ a.up:after {
   font-weight: 700;
   margin: 0 auto 25px auto; }
 
+.landing-title_long {
+  max-width: 900px; }
+
 .landing-description {
   max-width: 650px;
   font-size: 107.14286%;
   line-height: 1.6;
   font-weight: 500;
-  margin: 0 auto; }
+  margin: 0 auto 45px auto; }
+
+.landing-description_long {
+  max-width: 850px; }
 
 .landing-text {
   max-width: 675px;
@@ -402,7 +408,7 @@ a.up:after {
 .landing-list {
   text-align: left;
   max-width: 700px;
-  margin: 45px auto 0 auto; }
+  margin: 0 auto 0 auto; }
   .landing-list li {
     color: #038726;
     padding-left: 15px;
@@ -3222,25 +3228,27 @@ table.dataTable.no-footer {
     background: linear-gradient(to right, #d5da0a 0%, #3cbd0d 99%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5da0a', endColorstr='#3cbd0d',GradientType=1 ); }
 
-.landing-two-btn {
-  clear: both; }
-  .landing-two-btn .landing-two-btn__item {
-    width: 50%;
-    float: left; }
-    .landing-two-btn .landing-two-btn__item div {
-      max-width: 400px;
-      margin: 0 auto; }
-      .landing-two-btn .landing-two-btn__item div p {
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        margin: 0 0 20px 0; }
+.landing-two-btn ul {
+  clear: both;
+  list-style-type: none;
+  margin: 0 auto; }
+  .landing-two-btn ul li {
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 65px; }
+    .landing-two-btn ul li p {
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0; }
+    .landing-two-btn ul li .btn {
+      margin: 20px auto 0 auto; }
