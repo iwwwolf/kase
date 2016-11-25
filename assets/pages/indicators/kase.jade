@@ -20,32 +20,12 @@ block content
 							span.line2
 
 					.dropdown-menu
-						.regulations__timetable
-							h5 Регламент
-							div
-								.help-block Акции первого класса ликвидности:
-								div 
-									span 11:30 – 17:00
-									|торговая сессия
-								div 
-									span 17:20 – 18:00
-									|клиринговая сессия
-							div
-								.help-block Акции второго и третьего классов ликвидности:
-								div 
-									span 17:20 – 18:00
-									|торговая сессия
-						.regulations__download
-							form
-								label.radiobutton
-									input(type="radio", name="prices", checked)
-									span.radiobutton__styled
-									span.radiobutton__label Средневзвешенные цены
-								label.radiobutton
-									input(type="radio", name="prices")
-									span.radiobutton__styled
-									span.radiobutton__label Риск-параметры акций
 
+						include ../../modules/select-date/module
+
+						.regulations__download
+							h5 Архив
+							form
 								.regulations__download-input.regulations__download-input--mobile
 									i.fa.fa-calendar
 									input(type="date")
@@ -55,18 +35,22 @@ block content
 								.regulations__download-input
 									i.fa.fa-calendar
 									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
-									.regulation__download-link
+								.regulations__archive-links
+									.link
+										a(href="#")
+											i.fa.fa-eye
+											|Посмотреть
+									.link
 										a(href="#")
 											i.fa.fa-download
+											|Скачать
 						.regulations__links-list
 							h5 Полезные ссылки
 							ul.blue-list
-								li: a(href="#") Список акций
-								li: a(href="#") Просмотр торгов
-								li: a(href="#") Список брокеров
-								li: a(href="#") Маркет-мейкеры
-								li: a(href="#") Рыночная оценка
-								li: a(href="#") Правила торгов
+								li: a(href="#") Просмотр торгов акциями Индекса KASE
+
+						-var referenceInfo = ["Методика расчета Индекса KASE", "Архив Индекса KASE_Shares", "Рыночная оценка"]
+						include ../../modules/reference-info/module
 	.container
 		#centerColumn.center-column
 			include ../../modules/breadcrumbs/module
@@ -165,111 +149,162 @@ block content
 							});
 						//- TradingView Widget END
 					
-					p.
-						Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.
-					p.
-						Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.
-					p.
-						Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.
-					p.
-						"Время жизни" индикатора: 1 рабочий день.
+					.actions__chart-text
+						p.
+							Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.
+						p.
+							Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.
+						p.
+							Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.
+						p.
+							"Время жизни" индикатора: 1 рабочий день.
 			.accordion.closed
 				.accordion__head
-					a.accordion__head-link(href="#") Наиболее ликвидные акции
+					a.accordion__head-link(href="#") Представительский список Индекса KASE
+						span.date на 16.09.16
 						i.fa.fa-angle-down
-					.small-dropdown.flex.accordion__hide-in-closed Период:
-						.dropdown
-							a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
-
-							ul.dropdown-menu
-								li: a(href="#") 1 неделя
-								li: a(href="#") 1 месяц
-								li: a(href="#") 1 год
+					
 				.accordion__body
 					.date Время последних данных: 19.08.2016 (17:35)
 					//-.table-parent
 					table.sorting-table.table.table-striped
 						thead
 							tr
+								th Эмитент
 								th Код
-								th Компания
-								th Kl
-								th Число сделок
-								th Объем, млн KZT
-								th Доля рынка,%
-								th Последняя цена,KZT
-								th Mаркет-мейкеры
-								th Дата последней сделки
+								th Цена
+								th Тренд
+								th Доля
+								th Акции
+								th Fi
+								th Ri
+								th Изменение цены за последние 52 недели
 						tbody
 							tr
+								td: a(href="#") Название
 								td: a(href="#") KZ_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+								td 0,6735356
+								td 
+									.table__indicator
+										|1 076,24
+										img(src="img-content/line.png", alt="")
+										|1 076,24
 							tr
-								td: a(href="#") RU_SBER
 								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
+								td: a(href="#") KZ_SBER
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+								td 0,6735356
+								td 
+									.table__indicator
+										|1 076,24
+										img(src="img-content/line.png", alt="")
+										|1 076,24
 							tr
-								td: a(href="#") RU_SBER
 								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.005
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
+								td: a(href="#") KZ_SBER
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+								td 0,6735356
+								td 
+									.table__indicator
+										|1 076,24
+										img(src="img-content/line.png", alt="")
+										|1 076,24
 							tr
-								td: a(href="#") RU_SBER
 								td: a(href="#") Название
-								td 4.8
-								td 120
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-							tr
-								td: a(href="#") RU_SBER
-								td: a(href="#") Название
-								td 4.8
-								td 125
-								td 0.00007
-								td 87
-								td 1 446 453
-								td M
-								td 20.07.2016
-					.help-block.pull-right
-						a(href="#") Посмотреть все
-					.help-block * без учета специализированных торгов
+								td: a(href="#") KZ_SBER
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+								td 0,6735356
+								td 
+									.table__indicator
+										|1 076,24
+										img(src="img-content/line.png", alt="")
+										|1 076,24
+
+					.help-block * коэффициент Fi - доля акций, находящихся в свободном обращении
+					.help-block * коэффициент Ri - коэффициент, ограничивающий долю влияния ценовых параметров акций на значение индекса  до 15 %
+					.help-block * тренд, % отражает изменение цены акции относительно цены закрытия предыдущего торгового дня
+			
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Последние новости
+						i.fa.fa-angle-down
+							
+				.accordion__body
+					include ../../modules/news-list/module
 
 block scripts
 	script(type="text/javascript").
 		document.addEventListener("DOMContentLoaded", function(event) { 
+			
+		    $('#datePicker input').daterangepicker({
+		        "singleDatePicker": true,
+		        "showDropdowns": true,
+		        "locale": {
+		            "direction": "ltr",
+		            "format": "DD/MM/YYYY",
+		            /*"separator": " - ",
+		            "applyLabel": "Apply",
+		            "cancelLabel": "Cancel",*/
+		            "daysOfWeek": [
+		                "Вс",
+		                "Пн",
+		                "Вт",
+		                "Ср",
+		                "Чт",
+		                "Пт",
+		                "Сб"
+		            ],
+		            "monthNames": [
+		                "Январь",
+		                "Февраль",
+		                "Март",
+		                "Апрель",
+		                "Май",
+		                "Июнь",
+		                "Июль",
+		                "Август",
+		                "Сентябрь",
+		                "Октябрь",
+		                "Ноябрь",
+		                "Декабрь"
+		            ],
+		            "firstDay": 1
+		        },
+		        "minDate": "20/06/2015",
+		        "maxDate": new Date(),
+		        "parentEl": "#datePicker"
+		    }, function(start, end, label) {
+		    }).focus().focusout();
+
+
 			$('.sorting-table').DataTable({
 				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
 				language: {
 				    search: '',
 				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"

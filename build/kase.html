@@ -315,45 +315,36 @@
           <div id="regulations" class="regulations">
             <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"><span class="line1"></span><span class="line2"></span></i></a>
               <div class="dropdown-menu">
-                <div class="regulations__timetable">
-                  <h5>Регламент</h5>
-                  <div>
-                    <div class="help-block">Акции первого класса ликвидности:</div>
-                    <div> <span>11:30 – 17:00</span>торговая сессия</div>
-                    <div> <span>17:20 – 18:00</span>клиринговая сессия</div>
-                  </div>
-                  <div>
-                    <div class="help-block">Акции второго и третьего классов ликвидности:</div>
-                    <div> <span>17:20 – 18:00</span>торговая сессия</div>
-                  </div>
+                <div id="datePicker" class="select-date">
+                  <input type="text">
                 </div>
                 <div class="regulations__download">
+                  <h5>Архив</h5>
                   <form>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices" checked><span class="radiobutton__styled"></span><span class="radiobutton__label">Средневзвешенные цены</span>
-                    </label>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices"><span class="radiobutton__styled"></span><span class="radiobutton__label">Риск-параметры акций</span>
-                    </label>
                     <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
                       <input type="date">
                       <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
                     </div>
                     <div class="regulations__download-input"><i class="fa fa-calendar"></i>
                       <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
-                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
+                    </div>
+                    <div class="regulations__archive-links">
+                      <div class="link"><a href="#"><i class="fa fa-eye"></i>Посмотреть</a></div>
+                      <div class="link"><a href="#"><i class="fa fa-download"></i>Скачать</a></div>
                     </div>
                   </form>
                 </div>
                 <div class="regulations__links-list">
                   <h5>Полезные ссылки</h5>
                   <ul class="blue-list">
-                    <li><a href="#">Список акций</a></li>
-                    <li><a href="#">Просмотр торгов</a></li>
-                    <li><a href="#">Список брокеров</a></li>
-                    <li><a href="#">Маркет-мейкеры</a></li>
+                    <li><a href="#">Просмотр торгов акциями Индекса KASE</a></li>
+                  </ul>
+                </div>
+                <div class="reference-info">
+                  <ul>
+                    <li><a href="#">Методика расчета Индекса KASE</a></li>
+                    <li><a href="#">Архив Индекса KASE_Shares</a></li>
                     <li><a href="#">Рыночная оценка</a></li>
-                    <li><a href="#">Правила торгов</a></li>
                   </ul>
                 </div>
               </div>
@@ -482,111 +473,125 @@
                   });
                 </script>
               </div>
-              <p>Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.</p>
-              <p>Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.</p>
-              <p>Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.</p>
-              <p>"Время жизни" индикатора: 1 рабочий день.</p>
+              <div class="actions__chart-text">
+                <p>Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.</p>
+                <p>Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.</p>
+                <p>Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.</p>
+                <p>"Время жизни" индикатора: 1 рабочий день.</p>
+              </div>
             </div>
           </div>
           <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Наиболее ликвидные акции<i class="fa fa-angle-down"></i></a>
-              <div class="small-dropdown flex accordion__hide-in-closed">Период:
-                <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">1 день</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">1 неделя</a></li>
-                    <li><a href="#">1 месяц</a></li>
-                    <li><a href="#">1 год</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Представительский список Индекса KASE<span class="date">на 16.09.16</span><i class="fa fa-angle-down"></i></a></div>
             <div class="accordion__body">
               <div class="date">Время последних данных: 19.08.2016 (17:35)</div>
               <table class="sorting-table table table-striped">
                 <thead>
                   <tr>
+                    <th>Эмитент</th>
                     <th>Код</th>
-                    <th>Компания</th>
-                    <th>Kl</th>
-                    <th>Число сделок</th>
-                    <th>Объем, млн KZT</th>
-                    <th>Доля рынка,%</th>
-                    <th>Последняя цена,KZT</th>
-                    <th>Mаркет-мейкеры</th>
-                    <th>Дата последней сделки</th>
+                    <th>Цена</th>
+                    <th>Тренд</th>
+                    <th>Доля</th>
+                    <th>Акции</th>
+                    <th>Fi</th>
+                    <th>Ri</th>
+                    <th>Изменение цены за последние 52 недели</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td><a href="#">Название</a></td>
                     <td><a href="#">KZ_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
                     <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">KZ_SBER</a></td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
                     <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.005</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">KZ_SBER</a></td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
                     <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>120</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">KZ_SBER</a></td>
+                    <td>0.007</td>
+                    <td>0</td>
+                    <td>1.25</td>
+                    <td>876 876</td>
+                    <td>8.7</td>
+                    <td>0,6735356</td>
+                    <td> 
+                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
+                    </td>
                   </tr>
                 </tbody>
               </table>
-              <div class="help-block pull-right"><a href="#">Посмотреть все</a></div>
-              <div class="help-block">* без учета специализированных торгов</div>
+              <div class="help-block">* коэффициент Fi - доля акций, находящихся в свободном обращении</div>
+              <div class="help-block">* коэффициент Ri - коэффициент, ограничивающий долю влияния ценовых параметров акций на значение индекса  до 15 %</div>
+              <div class="help-block">* тренд, % отражает изменение цены акции относительно цены закрытия предыдущего торгового дня</div>
+            </div>
+          </div>
+          <div class="accordion closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Последние новости<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <ul class="news-list">
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 342,56 (+2,66), CNYKZT_TOD = 51,4370</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Дневная сессия KASE: USDKZT_TOD = 340,24, EURKZT_TOD = 375,00, RUBKZT_TOD = 5,3832, USDKZT_0_001 = +12,2980 % годовых, USDKZT_0_002 = +12,2786 % годовых</a></div>
+                </li>
+                <li>
+                  <div class="news-list__date">15 июля, 13:00</div>
+                  <div class="news-list__title"><a href="#">Утренняя сессия KASE: USDKZT_TOD = 339,32 (+0,60), CNYKZT_TOD – 50,6700/50,7000</a></div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -610,8 +615,59 @@
     <script type="text/javascript" defer src="js/main.js"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
+      	
+          $('#datePicker input').daterangepicker({
+              "singleDatePicker": true,
+              "showDropdowns": true,
+              "locale": {
+                  "direction": "ltr",
+                  "format": "DD/MM/YYYY",
+                  /*"separator": " - ",
+                  "applyLabel": "Apply",
+                  "cancelLabel": "Cancel",*/
+                  "daysOfWeek": [
+                      "Вс",
+                      "Пн",
+                      "Вт",
+                      "Ср",
+                      "Чт",
+                      "Пт",
+                      "Сб"
+                  ],
+                  "monthNames": [
+                      "Январь",
+                      "Февраль",
+                      "Март",
+                      "Апрель",
+                      "Май",
+                      "Июнь",
+                      "Июль",
+                      "Август",
+                      "Сентябрь",
+                      "Октябрь",
+                      "Ноябрь",
+                      "Декабрь"
+                  ],
+                  "firstDay": 1
+              },
+              "minDate": "20/06/2015",
+              "maxDate": new Date(),
+              "parentEl": "#datePicker"
+          }, function(start, end, label) {
+          }).focus().focusout();
+      
+      
       	$('.sorting-table').DataTable({
       		scrollX: true,
+      		language: {
+      		    search: '',
+      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+      		  }
+      	});
+      
+      	$('.sorting-table--false').DataTable({
+      		scrollX: true,
+      		bSort : false,
       		language: {
       		    search: '',
       		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"

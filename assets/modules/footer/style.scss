@@ -53,6 +53,22 @@ footer {
 		margin-bottom: 6px;
 	}
 }
+.body__landing {
+	footer {
+	  background: #28282d;
+	  &:before {
+	    display: none;
+	  }
+	}
+	.footer__nav {
+		li {
+			border-color: #d1d1d1;
+		}
+		a {
+			color: #d1d1d1;
+		}
+	}
+}
 
 @media (min-width: 649px) and (max-width: 768px){
 	footer {
