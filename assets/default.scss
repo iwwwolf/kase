@@ -549,6 +549,25 @@ a.up {
   }
 }
 
+@media (min-width: 320px) {
+  .landing-block {
+    padding: 60px 0;
+  }
+
+  .landing-title {
+    font-size: $fz20;
+  }
+
+  .landing-text,
+  .landing-description {
+    font-size: $fz14;
+  }
+
+  .landing-list {
+    padding: 15px;
+  }
+}
+
 @media (min-width: 649px) and (max-width: 768px){
   .dropdown {
     .dropdown-menu {
@@ -602,12 +621,27 @@ a.up {
   .markets-top {
     height: 104px;
   }
+  .landing-title {
+    font-size: $fz28;
+  }
+  .landing-list {
+    padding-left: 40px;
+  }
 }
 
 @media (min-width: 769px){
   h2, .h2 {
     font-size: $fz26;
     margin-bottom: 20px;
+  }
+  .landing-block {
+    padding: 90px 0;
+  }
+  .landing-title {
+    font-size: $fz31;
+  }
+  .landing-text {
+    font-size: $fz16;
   }
 }
 

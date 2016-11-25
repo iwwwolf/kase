@@ -29,3 +29,21 @@
     border: 1px solid #fff;
   }
 }
+
+@media (min-width: 320px) {
+  .btn {
+    &.btn-landing {
+      width: 180px;
+      font-size: $fz13;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .btn {
+    &.btn-landing {
+      width: 208px;
+      font-size: $fz14;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 	ul {
 		clear: both;
 		list-style-type: none;
+		padding: 0;
 		margin: 0 auto;
 
 		li {
@@ -23,6 +24,42 @@
 			.btn {
 				margin: 20px auto 0 auto;
 			}
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.landing-two-btn {
+		ul li {
+			margin: 0 0 40px 0;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 750px) {
+	.landing-two-btn {
+		ul li {
+			margin: 0 65px 40px 65px;
+		}
+	}
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+	.landing-two-btn {
+		ul li {
+			margin: 0 35px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.landing-two-btn {
+		ul li {
+			margin: 0 65px;
 		}
 	}
 }
