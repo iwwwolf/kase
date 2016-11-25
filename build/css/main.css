@@ -3306,44 +3306,6 @@ table.dataTable.no-footer {
       color: rgba(51, 51, 51, 0.4); }
 
 .landing-head {
-<<<<<<< HEAD
-  display: block; }
-
-.landing-login__parent {
-  text-align: center;
-  padding: 65px 0; }
-  .landing-login__parent .landing-login__btn {
-    color: #fff;
-    background: #d5da0a;
-    background: -webkit-linear-gradient(left, #d5da0a 0%, #3cbd0d 99%);
-    background: linear-gradient(to right, #d5da0a 0%, #3cbd0d 99%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5da0a', endColorstr='#3cbd0d',GradientType=1 ); }
-
-.landing-two-btn ul {
-  clear: both;
-  list-style-type: none;
-  margin: 0 auto; }
-  .landing-two-btn ul li {
-    display: inline-block;
-    max-width: 400px;
-    margin: 0 65px; }
-    .landing-two-btn ul li p {
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      margin: 0; }
-    .landing-two-btn ul li .btn {
-      margin: 20px auto 0 auto; }
-=======
   padding: 112px 0 135px;
   color: #fff;
   position: relative;
@@ -3463,4 +3425,38 @@ table.dataTable.no-footer {
           transform-style: preserve-3d;
   -webkit-transform: perspective(400px);
           transform: perspective(400px); }
->>>>>>> 0b8f6d152b1a58a36a5fccb1e1e7251c65147d95
+
+.landing-login__parent {
+  text-align: center;
+  padding: 65px 0; }
+  .landing-login__parent .landing-login__btn {
+    color: #fff;
+    background: #d5da0a;
+    background: -webkit-linear-gradient(left, #d5da0a 0%, #3cbd0d 99%);
+    background: linear-gradient(to right, #d5da0a 0%, #3cbd0d 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5da0a', endColorstr='#3cbd0d',GradientType=1 ); }
+
+.landing-two-btn ul {
+  clear: both;
+  list-style-type: none;
+  margin: 0 auto; }
+  .landing-two-btn ul li {
+    display: inline-block;
+    max-width: 400px;
+    margin: 0 65px; }
+    .landing-two-btn ul li p {
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin: 0; }
+    .landing-two-btn ul li .btn {
+      margin: 20px auto 0 auto; }
