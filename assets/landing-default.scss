@@ -8,10 +8,7 @@
   color: #383838;
   line-height: 1.75;
   text-align: center;
-  padding: 90px 0;
-  &--small-padding {
-    padding: 50px 0;
-  }
+  padding: 87px 0 100px;
   &--yellow-green {
     color: #fff;
     background: #fecc00;
@@ -28,6 +25,11 @@
     text-transform: uppercase;
   }
 }
+.landing-section__login-btn {
+  .btn {
+    width: 208px;
+  }
+}
 .landing-section__text {
   max-width: 750px;
   font-size: $fz16;
@@ -35,6 +37,9 @@
   margin: 0 auto;
   p {
     margin-bottom: 35px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 .landing-section__list {
