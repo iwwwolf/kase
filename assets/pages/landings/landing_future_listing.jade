@@ -7,15 +7,16 @@ block content
 	-var headStyle = "green" // green; red; blue; yellow;
 	-var rectStyle = "yellow-green" // yellow-green; yellow-red; blue-green; green-yellow;
 	-var rectTitle = "Будущим листинговым компаниям"
-	include ../../modules/landings_modules/landing-head/module
+	.relative
+		include ../../modules/landings_modules/landing-head/module
 
-	-
-		var menuItems = [
-			"О листинге",
-			"Листинг на KASE",
-			"Размещение на KASE",
-			"IPO",
-			"Информационная поддержка",
-			"Контакты"
-		]
-	include ../../modules/landings_modules/landing-menu/module
+		-
+			var menuItems = [
+				"О листинге",
+				"Листинг на KASE",
+				"Размещение на KASE",
+				"IPO",
+				"Информационная поддержка",
+				"Контакты"
+			]
+		include ../../modules/landings_modules/landing-menu/module
