@@ -651,7 +651,7 @@ $(document).ready(function(){
 		$('#ipoTabs .active').removeClass('active');
 		$(this).tab('show');
 		$(this).parent().addClass('active');
-		$('#ipoTabs').parent().find('.dropdown-link').text(thisText);
+		$('#ipoTabs').parent().find('.dropdown-link span').text(thisText);
 	});
 
 
