@@ -3759,9 +3759,6 @@ table.dataTable.no-footer {
       content: ""; }
   .list-color--green li:before {
     background-color: #198739; }
-  .list-color--transp {
-    list-style-type: none;
-    padding: 0; }
 
 .two-col-block__column {
   margin-bottom: 35px; }
@@ -3798,24 +3795,57 @@ table.dataTable.no-footer {
       left: 0; } }
 
 .contacts-block--column {
+  line-height: 1.5;
+  font-weight: 500;
   background-color: #fff;
   padding: 30px 20px;
   margin-bottom: 30px; }
   .contacts-block--column:last-of-type {
     margin-bottom: 0; }
-  .contacts-block--column div {
-    font-weight: 500; }
-    .contacts-block--column div:first-child {
-      line-height: 1.625;
-      margin-bottom: 25px; }
-    .contacts-block--column div:last-child {
-      line-height: 1.5;
-      text-align: left; }
+  .contacts-block--column div:first-child {
+    margin-bottom: 25px; }
+  .contacts-block--column div:last-child {
+    text-align: left; }
+  .contacts-block--column ul {
+    list-style-type: none;
+    font-weight: 300;
+    padding: 0;
+    margin-top: 10px; }
+    .contacts-block--column ul span {
+      margin-left: 4px; }
 
-.contacts-block ul {
-  list-style-type: none;
-  font-weight: 300;
-  padding: 0;
-  margin-top: 10px; }
-  .contacts-block ul span {
-    margin-left: 4px; }
+@media (min-width: 649px) and (max-width: 768px) {
+  .contacts-block--column {
+    padding: 50px 60px;
+    margin-bottom: 60px;
+    font-size: 228.57143%; }
+    .contacts-block--column div:first-child {
+      margin-bottom: 50px; }
+    .contacts-block--column ul {
+      font-size: 87.5%; } }
+
+@media (min-width: 769px) {
+  .contacts-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stertch;
+        -ms-flex-align: stertch;
+            align-items: stertch; }
+    .contacts-block--column {
+      max-width: 50%;
+      margin: 0; }
+      .contacts-block--column:first-of-type {
+        margin-right: 30px; } }
+
+@media (min-width: 992px) {
+  .contacts-block {
+    font-size: 114.28571%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .contacts-block--column {
+      width: 460px;
+      padding: 50px 60px; }
+      .contacts-block--column ul {
+        font-size: 87.5%; } }
