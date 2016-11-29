@@ -39,9 +39,9 @@ if($('.hidden-block').length){
 	});
 };
 
-$('.dropdown-menu').on('click', function(e){
+/*$('.dropdown-menu').on('click', function(e){
     e.stopPropagation();
-});
+});*/
 
 $('.table a').on('click', function(e){
     if($(this).hasClass('down')){

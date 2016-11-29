@@ -9,14 +9,27 @@ block content
 	-var rectTitle = "Будущим листинговым компаниям"
 	.relative
 		include ../../modules/landings_modules/landing-head/module
-
+		
 		-
 			var menuItems = [
-				"О листинге",
-				"Листинг на KASE",
-				"Размещение на KASE",
-				"IPO",
-				"Информационная поддержка",
-				"Контакты"
+				{
+					'title': 'О листинге'
+				},
+				{
+					'title': 'Листинг на KASE',
+					'active': true
+				},
+				{
+					'title': 'Размещение на KASE'
+				},
+				{
+					'title': 'IPO'
+				},
+				{
+					'title': 'Информационная поддержка'
+				},
+				{
+					'title': 'Контакты'
+				}
 			]
 		include ../../modules/landings_modules/landing-menu/module

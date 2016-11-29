@@ -1,0 +1,119 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "green" // green; red; blue; yellow;
+	-var rectStyle = "yellow-green" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Листинговым компаниям"
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+
+		-
+			var menuItems = [
+				{
+					'title': 'Раскрытие информации'
+				},
+				{
+					'title': 'Кабинет эмитента'
+				},
+				{
+					'title': 'Размещение на KASE'
+				},
+				{
+					'title': 'IPO',
+					'active': true
+				},
+				{
+					'title': 'Информационная поддержка'
+				},
+				{
+					'title': 'Институт маркет-мейкеров'
+				},
+				{
+					'title': 'Контакты'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section
+		.container
+			h2 Что такое IPO
+			.landing-section__text
+				p.
+					Классический IPO (англ. – Initial Public Offering) – первичное публичное размещение акций компании на фондовом рынке для продажи неограниченному кругу лиц. IPO – это естественный и важный этап развития практически любой компании, заинтересованной в диверсификации источников финансирования. Благодаря публичной продаже акций привлекаются дополнительные средства, а компания получает финансирование для дальнейшего роста.
+	
+	.landing-section.landing-section--gray-bg
+		.container
+			h2 Зачем компании проводят IPO
+			.landing-section__text
+				p.
+					Наиболее распространенной причиной заинтересованности компании в проведении IPO и в листинге акций на фондовой бирже является получение доступа к рынку капитала и привлечение финансовых средств для роста и развития.
+			
+			-
+				var ipoList = [
+					{
+						'title': 'Инициирование процесса IPO',
+						'labelColor': 'green',
+						'href': 'init',
+						'active': true,
+						'listContent': [
+							{
+								'title': 'Выбор и назначение финансового консультанта'
+							},
+							{
+								'title': 'Определение и назначение юридических и прочих консультантов при содействии финансового консультанта'
+							},
+							{
+								'title': 'Анализ сроков IPO',
+								'subList': [
+									'Предпочтения компании',
+									'Рыночные "окна"/ Анализ конъюнктуры рынка'
+								]
+							},
+							{
+								'title': 'Утверждение типа и размера размещения',
+								'subList': [
+									'Публичное размещение на KASE',
+									'Общий объем размещения, включая новые акции и повторное размещение уже существующих акций',
+									'Опцион дополнительного размещения'
+								]
+							},
+							{
+								'title': 'Создание организационного и оперативного комитетов для управления процессом IPO'
+							},
+						]
+					},
+					{
+						'title': 'Подготовка компании',
+						'labelColor': 'orange',
+						'href': 'preparation',
+						'listContent': [
+							{
+								'title': ''
+							},
+						]
+					},
+					{
+						'title': 'Комплексная экспертиза и документация',
+						'labelColor': 'blue',
+						'href': 'expertise',
+						'listContent': [
+							{
+								'title': ''
+							},
+						]
+					},
+					{
+						'title': 'Маркетинг, распределение и размещение',
+						'labelColor': 'yellow',
+						'href': 'marketing',
+						'listContent': [
+							{
+								'title': ''
+							},
+						]
+					},
+				]
+			include ../../modules/landings_modules/ipo-block/module

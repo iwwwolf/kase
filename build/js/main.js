@@ -82,11 +82,11 @@ $(document).ready(function(){
 
 	
 
-	$('.dropdown-menu').on('click', function(e){
+	/*$('.dropdown-menu').on('click', function(e){
 
 	    e.stopPropagation();
 
-	});
+	});*/
 
 	
 
@@ -643,6 +643,18 @@ $(document).ready(function(){
 	
 	
 	
+	$('#ipoTabs a').click(function (e) {
+		var thisText = $(this).text();
+	
+		e.preventDefault();
+	
+		$('#ipoTabs .active').removeClass('active');
+		$(this).tab('show');
+		$(this).parent().addClass('active');
+		$('#ipoTabs').parent().find('.dropdown-link').text(thisText);
+	});
+
+
 	/* require "modules/trade-info/script.js"
 	 require "modules/donut-chart/script.js"*/
 });

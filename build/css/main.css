@@ -3308,7 +3308,7 @@ table.dataTable.no-footer {
   color: #383838;
   line-height: 1.75;
   text-align: center;
-  padding: 87px 0 100px; }
+  padding: 60px 0 60px; }
   .landing-section--yellow-green {
     color: #fff;
     background: #fecc00;
@@ -3349,17 +3349,12 @@ table.dataTable.no-footer {
     .landing-section__list li:last-of-type {
       margin-bottom: 0; }
 
-@media (min-width: 320px) {
-  .landing-text,
-  .landing-description {
-    font-size: 100%; }
-  .landing-list {
-    padding: 15px; } }
-
 @media (min-width: 769px) {
-  .landing-section h2 {
-    max-width: 750px;
-    font-size: 221.42857%; } }
+  .landing-section {
+    padding: 87px 0 100px; }
+    .landing-section h2 {
+      max-width: 750px;
+      font-size: 221.42857%; } }
 
 .landing-head {
   padding: 0 0 65px;
@@ -3683,9 +3678,15 @@ table.dataTable.no-footer {
     width: 100%;
     bottom: 22px;
     left: 0; }
+    .landing-menu .container {
+      width: auto; }
     .landing-menu ul {
-      display: inline-block;
-      white-space: nowrap;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       margin: 0;
       padding: 0;
       position: relative; }

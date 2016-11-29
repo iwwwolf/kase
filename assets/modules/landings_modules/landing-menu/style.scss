@@ -51,9 +51,14 @@
 		width: 100%;
 		bottom: 22px;
 		left: 0;
+		.container {
+			width: auto;
+		}
 		ul {
-			display: inline-block;
-			white-space: nowrap;
+			//display: inline-block;
+			//white-space: nowrap;
+			display: flex;
+			justify-content: center;
 			margin: 0;
 			padding: 0;
 			position: relative;

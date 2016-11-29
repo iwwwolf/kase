@@ -1,0 +1,29 @@
+.ipo-block
+	.ipo-block__tabs-block
+		.dropdown
+			each item in ipoList
+				if (item.active == true)
+					button.dropdown-link(type="button", data-toggle="dropdown")= item.title
+
+			ul#ipoTabs.dropdown-menu.nav(role="tablist")
+				each item in ipoList
+					if (item.active == true)
+						li.active(role="presentation"): a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
+					else
+						li(role="presentation"): a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
+
+	//- Tab panes
+	.tab-content
+		each item in ipoList
+			.tab-pane.fade(id= item.href, class= (item.active == true ? " in active" : ""), role="tabpanel")
+				ol
+					each listItem in item.listContent
+						li= listItem.title
+							if (listItem.subList != undefined)
+								ul
+									each subListItem in listItem.subList
+										li= '- ' + subListItem
+			//- if (item.active == true)
+			//- 	.tab-pane.fade.in.active(id= item.href, role="tabpanel")
+			//- else
+			//- 	.tab-pane.fade(id= item.href, role="tabpanel") sdfsdfas
