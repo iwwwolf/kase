@@ -425,7 +425,6 @@ a.up:after {
     .landing-list li:last-of-type {
       margin-bottom: 0; }
 
-<<<<<<< HEAD
 @media (min-width: 320px) {
   .landing-block {
     padding: 60px 0; }
@@ -437,8 +436,6 @@ a.up:after {
   .landing-list {
     padding: 15px; } }
 
-=======
->>>>>>> 837c59ba7b9ee46c9edd3942e6f2d5900c18002f
 @media (min-width: 649px) and (max-width: 768px) {
   .dropdown .dropdown-menu {
     font-size: 200%; }
@@ -474,20 +471,15 @@ a.up:after {
         border: 2px solid #0094de;
         top: 10px; }
   .markets-top {
-<<<<<<< HEAD
     height: 104px; }
   .landing-title {
     font-size: 200%; }
   .landing-list {
     padding-left: 40px; } }
-=======
-    height: 104px; } }
->>>>>>> 837c59ba7b9ee46c9edd3942e6f2d5900c18002f
 
 @media (min-width: 769px) {
   h2, .h2 {
     font-size: 185.71429%;
-<<<<<<< HEAD
     margin-bottom: 20px; }
   .landing-block {
     padding: 90px 0; }
@@ -495,9 +487,6 @@ a.up:after {
     font-size: 221.42857%; }
   .landing-text {
     font-size: 114.28571%; } }
-=======
-    margin-bottom: 20px; } }
->>>>>>> 837c59ba7b9ee46c9edd3942e6f2d5900c18002f
 
 @media (min-width: 992px) {
   .scroll-block {
@@ -544,7 +533,6 @@ a.up:after {
     background-color: transparent;
     border: 1px solid #fff; }
 
-<<<<<<< HEAD
 @media (min-width: 320px) {
   .btn.btn-landing {
     width: 180px;
@@ -555,8 +543,6 @@ a.up:after {
     width: 208px;
     font-size: 100%; } }
 
-=======
->>>>>>> 837c59ba7b9ee46c9edd3942e6f2d5900c18002f
 .radiobutton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3484,10 +3470,7 @@ table.dataTable.no-footer {
 .landing-two-btn ul {
   clear: both;
   list-style-type: none;
-<<<<<<< HEAD
   padding: 0;
-=======
->>>>>>> 837c59ba7b9ee46c9edd3942e6f2d5900c18002f
   margin: 0 auto; }
   .landing-two-btn ul li {
     display: inline-block;
@@ -3509,7 +3492,6 @@ table.dataTable.no-footer {
       margin: 0; }
     .landing-two-btn ul li .btn {
       margin: 20px auto 0 auto; }
-<<<<<<< HEAD
 
 @media (min-width: 320px) {
   .landing-two-btn ul li {
@@ -3528,5 +3510,3 @@ table.dataTable.no-footer {
 @media (min-width: 1200px) {
   .landing-two-btn ul li {
     margin: 0 65px; } }
-=======
->>>>>>> 837c59ba7b9ee46c9edd3942e6f2d5900c18002f
