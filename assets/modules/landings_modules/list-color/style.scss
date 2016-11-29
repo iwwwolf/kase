@@ -1,0 +1,28 @@
+.list-color {
+	padding: 0;
+	margin: 0 0 25px;
+	text-align: left;
+	li {
+		display: block;
+		position: relative;
+		padding-left: 30px;
+		margin-bottom: 22px;
+		&:before {
+			display: block;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;	
+			top: 11px;
+			content: "";
+		}
+	}
+	&--green {
+		li {
+			&:before {
+				background-color: #198739;
+			}
+		}
+	}
+}

@@ -1,6 +1,7 @@
 .btn {
   font-size: 100%;
   border: none;
+  border-radius: 18px;
   transition: all 300ms;
   &:active, &:focus {
     outline: none;
@@ -16,34 +17,77 @@
     border-radius: 22px;
     padding: 12px 35px;
   }
-  &.btn-landing {
-    display: block;
-    width: 208px;
-    font-size: $fz14;
-    border-radius: 18px;
-    padding: 8px 0;
-    margin: 0 auto;
-  }
-  &.btn-landing-transparent {
-    background-color: transparent;
-    border: 1px solid #fff;
-  }
-}
-
-@media (min-width: 320px) {
-  .btn {
-    &.btn-landing {
-      width: 180px;
-      font-size: $fz13;
+  &.btn--gradient {
+    color: #fff;
+    position: relative;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    &:before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      transition: all 700ms;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &.btn--yellow-green {
+      background: #d5da0a;
+      background: linear-gradient(to right, #d5da0a 0%,#3cbd0d 100%);
+      &:before {
+        background: linear-gradient(to right, #3cbd0d 0%, #d5da0a 100%);
+      }     
+    }
+    span {
+      position: relative;
     }
   }
-}
-
-@media (min-width: 640px) {
-  .btn {
-    &.btn-landing {
-      width: 208px;
-      font-size: $fz14;
+  &.btn-transparent {
+    background-color: transparent;
+    border: 1px solid transparent;
+    position: relative;
+    padding: 6px 34px;
+    &:before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      visibility: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      transform: scale(0);
+      transition: all 300ms;
+    }
+    &:hover {
+      &:before {
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+    &--white {
+      border-color: #fff;
+      color: #fff;
+      &:before {
+        background: rgba(255, 255, 255, 0.9);
+      }
+      &:hover {
+        color: $defaultColor;
+      }
+    }
+    span {
+      position: relative;
     }
   }
 }

@@ -93,6 +93,10 @@ body {
   overflow: auto;
   top: 0;
   left: 0;
+  &.body__landing {
+    color: #333;
+    $defaultColor: #333;
+  }
 }
 
 *:focus, *:active {
@@ -136,16 +140,14 @@ img {
 		right: 15px;
 	}
 }
+.relative {
+  position: relative;
+}
 .row {
   margin: 0 -15px;
 }
 [class*="col-"] {
   padding: 0 15px;
-}
-.body__landing {
-  .fixed-social {
-    display: none;
-  }
 }
 .scroll-block {
   position: relative;
@@ -475,98 +477,7 @@ a.up {
   margin-bottom: 15px;
 }
 
-/*
-  Landing page defaults
-*/
-.landing-block {
-  color: #383838;
-  line-height: 1.75;
-  text-align: center;
-  padding: 90px 0;
-}
 
-.landing-grayblock {
-  background-color: #f7f8f8;
-}
-
-.landing-gradient {
-  color: #fff;
-  background: #fecc00;
-  background: linear-gradient(to right, #fecc00 0%, #8ac53f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fecc00', endColorstr='#8ac53f', GradientType=1);
-}
-
-.landing-title {
-  max-width: 700px;
-  font-size: $fz31;
-  line-height: 1.32;
-  font-weight: 700;
-  margin: 0 auto 25px auto;
-}
-
-.landing-title_long {
-  max-width: 900px;
-}
-
-.landing-description {
-  max-width: 650px;
-  font-size: $fz15;
-  line-height: 1.6;
-  font-weight: 500;
-  margin: 0 auto 45px auto;
-}
-
-.landing-description_long {
-  max-width: 850px;
-}
-
-.landing-text {
-  max-width: 675px;
-  font-size: $fz16;
-  margin: 35px auto;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-.landing-list {
-  text-align: left;
-  max-width: 700px;
-  margin: 0 auto 0 auto;
-
-  li {
-    color: $minorColor;
-    padding-left: 15px;
-    margin-bottom: 20px;
-
-    span {
-      color: #383838;
-    }
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-}
-
-@media (min-width: 320px) {
-  .landing-block {
-    padding: 60px 0;
-  }
-
-  .landing-title {
-    font-size: $fz20;
-  }
-
-  .landing-text,
-  .landing-description {
-    font-size: $fz14;
-  }
-
-  .landing-list {
-    padding: 15px;
-  }
-}
 
 @media (min-width: 649px) and (max-width: 768px){
   .dropdown {
@@ -621,27 +532,12 @@ a.up {
   .markets-top {
     height: 104px;
   }
-  .landing-title {
-    font-size: $fz28;
-  }
-  .landing-list {
-    padding-left: 40px;
-  }
 }
 
 @media (min-width: 769px){
   h2, .h2 {
     font-size: $fz26;
     margin-bottom: 20px;
-  }
-  .landing-block {
-    padding: 90px 0;
-  }
-  .landing-title {
-    font-size: $fz31;
-  }
-  .landing-text {
-    font-size: $fz16;
   }
 }
 

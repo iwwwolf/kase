@@ -1,0 +1,8 @@
+.landing-menu
+	.container
+		ul
+			each item in menuItems
+				if (item.active == true)
+					li.active: a(href="#"): span= item.title
+				else
+					li: a(href="#"): span= item.title

@@ -133,7 +133,7 @@ gulp.task('watch', function(){
     watch(['assets/modules/quotes-info/*.jade'], function(event, cb) {
         gulp.start('quotesBlock:build');
     });
-    watch(['assets/modules/**/*.scss', 'assets/default.scss'], function(event, cb) {
+    watch(['assets/modules/**/*.scss', 'assets/default.scss', 'assets/buttons.scss', 'assets/landing-default.scss'], function(event, cb) {
         gulp.start('style:build');
     });
     watch([path.watch.styleLibs], function(event, cb) {
