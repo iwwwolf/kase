@@ -1,0 +1,12 @@
+.contacts-block
+	each item in textArray
+		.contacts-block--column
+			div= item.text
+			div= item.department
+				ul
+					li тел:
+						span= item.phone
+					li факс:
+						span= item.fax
+					li e-mail:
+						span: a(href="#")= item.email

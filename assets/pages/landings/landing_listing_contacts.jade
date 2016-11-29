@@ -1,0 +1,61 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "green" // green; red; blue; yellow;
+	-var rectStyle = "yellow-green" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Листинговым компаниям"
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+
+		-
+			var menuItems = [
+				{
+					'title': 'Раскрытие информации'
+				},
+				{
+					'title': 'Кабинет эмитента'
+				},
+				{
+					'title': 'Размещение на KASE'
+				},
+				{
+					'title': 'IPO'
+				},
+				{
+					'title': 'Информационная поддержка'
+				},
+				{
+					'title': 'Институт маркет-мейкеров'
+				},
+				{
+					'title': 'Контакты',
+					'active': true
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Контакты
+			
+			-
+				var textArray = [
+					{
+						'text': 'По вопросам размещения ценных бумаг и связей с инвесторами, обращайтесь:',
+						'department' : 'Отдел по работе с эмитентами и инвесторами:',
+						'phone' : '+7 (727) 237 53 20',
+						'fax' : '+7 (727) 237 53 20',
+						'email' : 'world@kase.kz'
+					},
+					{
+						'text': 'По вопросам раскрытия информации листинговыми компаниями, обращайтесь:',
+						'department' : 'Отдел иностранных ценных бумаг:',
+						'phone' : '+7 (727) 237 53 26, +7 (727) 237 53 25 ',
+						'fax' : '+7 (727) 237 53 09',
+						'email' : 'monitoring@kase.kz'
+					}
+				]
+			include ../../modules/landings_modules/contacts-block/module
