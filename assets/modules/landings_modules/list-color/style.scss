@@ -26,3 +26,18 @@
 		}
 	}
 }
+
+@media (min-width: 649px) and (max-width: 768px) {
+	.list-color {
+		margin: 0 0 50px;
+		li {
+			padding-left: 50px;
+			margin-bottom: 44px;
+			&:before {
+				width: 16px;
+				height: 16px;
+				top: 22px;
+			}
+		}
+	}
+}

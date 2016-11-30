@@ -1,30 +1,36 @@
 .ipo-block
-	.ipo-block__tabs-block
-		.dropdown
-			each item in ipoList
-				if (item.active == true)
-					button.dropdown-link(type="button", data-toggle="dropdown")
-						span= item.title
-						svg(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 12.5 7", style="enable-background:new 0 0 15 16.5;", xml:space="preserve")
-							path(fill="#333" d="M12.021,0l0.707,0.707L6.364,7.071L5.657,6.364L12.021,0z")
-							path(fill="#333" d="M7.071,6.364L6.364,7.071L0,0.707L0.707,0L7.071,6.364z")
-
-			ul#ipoTabs.dropdown-menu.nav(role="tablist")
+	.ipo-block__left-col
+		.ipo-block__title От идеи к воплощению – основные этапы.
+		.ipo-block__tabs-block
+			.dropdown
 				each item in ipoList
 					if (item.active == true)
-						li.active(role="presentation"): a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
-					else
-						li(role="presentation"): a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
+						button.dropdown-link(type="button", data-toggle="dropdown")
+							span= item.title
+							svg(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 12.5 7", style="enable-background:new 0 0 15 16.5;", xml:space="preserve")
+								path(fill="#333" d="M12.021,0l0.707,0.707L6.364,7.071L5.657,6.364L12.021,0z")
+								path(fill="#333" d="M7.071,6.364L6.364,7.071L0,0.707L0.707,0L7.071,6.364z")
 
-	//- Tab panes
-	.tab-content
-		each item in ipoList
-			.ipo-block__tab-pane.tab-pane.fade(id= item.href, class= (item.active == true ? " in active" : ""), role="tabpanel")
-				div(class="ipo-block__label ipo-block__label--" + item.labelColor)= item.labelText
-				ol
-					each listItem in item.listContent
-						li= listItem.title
-							if (listItem.subList != undefined)
-								ul
-									each subListItem in listItem.subList
-										li= subListItem
+				ul#ipoTabs.dropdown-menu.nav(role="tablist")
+					each item in ipoList
+						if (item.active == true)
+							li.active(role="presentation"): a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
+						else
+							li(role="presentation"): a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
+
+			include ../vertical-tabs/module
+	
+	.ipo-block__right-col
+		//- Tab panes
+		.tab-content
+			each item in ipoList
+				.ipo-block__tab-pane.tab-pane.fade(id= item.href, class= (item.active == true ? " in active" : ""), role="tabpanel")
+					div(class="ipo-block__label ipo-block__label--mobile ipo-block__label--" + item.labelColor)= item.labelText
+					.ipo-block__tab-title= item.title
+					ol
+						each listItem in item.listContent
+							li= listItem.title
+								if (listItem.subList != undefined)
+									ul
+										each subListItem in listItem.subList
+											li= subListItem

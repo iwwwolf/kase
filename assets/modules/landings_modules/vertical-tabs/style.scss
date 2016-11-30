@@ -1,0 +1,32 @@
+.vertical-tabs {
+	line-height: 1.142857142857143;
+	.nav {
+		text-align: left;
+		li {
+			//display: flex;
+			padding: 15px 0;
+			&:first-child {
+				padding-top: 25px;
+			}
+			&:last-child {
+				padding-bottom: 0;
+			}
+			&.active {
+				a {
+					border-color: $minorColor;
+					cursor: default;
+					color: $minorColor;
+				}
+			}
+		}
+		a {
+			padding: 0 0 0 15px;
+			border-left: 3px solid transparent;
+			color: #737373;
+			&:hover, &:focus {
+				background: none;
+				color: $defaultColor;
+			}
+		}
+	}
+}

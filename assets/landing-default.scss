@@ -61,6 +61,33 @@
   }
 }
 
+@media (min-width: 649px) and (max-width: 768px) {
+  .landing-section {
+    padding: 100px 0;
+    h2 {
+      font-size: $fz20 * 2;
+      margin-bottom: 50px;
+    }
+  }
+  .landing-section__login-btn {
+    .btn {
+      width: 400px;
+      padding: 14px 24px;
+      font-size: 200%;
+      border-radius: 40px;
+    }
+  }
+  .landing-section__text {
+    font-size: $fz16 * 2;
+    p {
+      margin-bottom: 60px;
+      /* &:last-of-type {
+        margin-bottom: 0;
+      } */
+    }
+  }
+}
+
 @media (min-width: 769px){
   .landing-section {
     padding: 87px 0 100px;

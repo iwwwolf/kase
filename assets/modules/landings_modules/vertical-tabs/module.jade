@@ -1,0 +1,13 @@
+.vertical-tabs
+	ul.nav(role="tablist")
+		each item in ipoList
+			if (item.active == true)
+				li.active(role="presentation")
+					a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
+					.ipo-block__stage
+						div(class="ipo-block__label ipo-block__label--" + item.labelColor)= item.labelText
+			else
+				li(role="presentation")
+					a(href="#" + item.href, role="tab", data-toggle="tab")= item.title
+					.ipo-block__stage
+						div(class="ipo-block__label ipo-block__label--" + item.labelColor)= item.labelText
