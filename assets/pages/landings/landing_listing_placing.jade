@@ -1,0 +1,72 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "lightgreen-green" // lightgreen-green; darkgreen-green; lightgreen-darkgreen; red-orange; orange-red; lightblue-blue; blue-lightblue; yellow;
+	-var rectStyle = "green-yellow" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Листинговым компаниям"
+	-
+		var headText =[
+			'Статус листинговой компании – новый важный этап в жизни вашей компании.',
+			'Ознакомьтесь подробнее с доступными возможностями привлечения капитала и с требованиями по раскрытию информации.'
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+
+		-
+			var menuItems = [
+				{
+					'title': 'Раскрытие информации'
+				},
+				{
+					'title': 'Кабинет эмитента'
+				},
+				{
+					'title': 'Размещение на KASE',
+					'active': true
+				},
+				{
+					'title': 'IPO'
+				},
+				{
+					'title': 'Информационная поддержка'
+				},
+				{
+					'title': 'Институт маркет-мейкеров'
+				},
+				{
+					'title': 'Контакты'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section
+		.container
+			h2 Способы размещений
+			.landing-section__description
+				p.
+					При размещений ценных бумаг на Бирже компания может использовать:
+
+			-
+				var gradientTabs = [
+					{
+						'title': 'Метод специализированных торгов',
+						'href': 'mSpecial'
+					},
+					{
+						'title': 'Метод подписки',
+						'href': 'mSubscribe'
+					},
+					{
+						'title': 'Метод прямых сделок',
+						'href': 'mDeal'
+					}
+				]
+
+			include ../../modules/landings_modules/gradient-tabs/module				
+
+			.landing-section__text.landing-section__text--fz14
+				p.
+					Метод специализированных торгов используется только при наличии единственного продавца размещаемого финансового инструмента. Эмитент (инициатор торгов) определяет только цену размещения и способы удовлетворения заявок, но не вправе ограничивать участие инвесторов каких-либо категорий. Специализированные торги могут проводиться единожды– аукцион по размещению финансового инструмента;или повторно – торги по доразмещению.

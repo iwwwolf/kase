@@ -3309,11 +3309,48 @@ table.dataTable.no-footer {
   line-height: 1.75;
   text-align: center;
   padding: 60px 0 60px; }
+  .landing-section--darkgreen-green {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #087e38 18%, #8ac53f 100%);
+    background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%); }
+  .landing-section--lightgreen-green {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #8ac53f 18%, #3cbd0d 100%);
+    background: linear-gradient(52deg, #8ac53f 18%, #3cbd0d 100%); }
+  .landing-section--lightgreen-darkgreen {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #8ac53f 18%, #17ab21 100%);
+    background: linear-gradient(52deg, #8ac53f 18%, #17ab21 100%); }
+  .landing-section--lightblue-blue {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #00aaff 18%, #005dbd 100%);
+    background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%); }
+  .landing-section--blue-lightblue {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #005dbd 18%, #00aaff 100%);
+    background: linear-gradient(52deg, #005dbd 18%, #00aaff 100%); }
+  .landing-section--yellow {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #fecc00 18%, #ff9000 100%);
+    background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%); }
+  .landing-section--red-orange {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #e84242 18%, #ef7f1a 100%);
+    background: linear-gradient(52deg, #e84242 18%, #ef7f1a 100%); }
+  .landing-section--orange-red {
+    color: #fff;
+    background: -webkit-linear-gradient(38deg, #ef7f1a 18%, #e84242 100%);
+    background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%); }
   .landing-section--yellow-green {
     color: #fff;
     background: #fecc00;
     background: -webkit-linear-gradient(left, #fecc00 0%, #8ac53f 100%);
     background: linear-gradient(to right, #fecc00 0%, #8ac53f 100%); }
+  .landing-section--green-yellow {
+    color: #fff;
+    background: #fecc00;
+    background: -webkit-linear-gradient(left, #8ac53f 0%, #fecc00 100%);
+    background: linear-gradient(to right, #8ac53f 0%, #fecc00 100%); }
   .landing-section--gray-bg {
     background: #f7f8f8; }
   .landing-section h2 {
@@ -3326,11 +3363,17 @@ table.dataTable.no-footer {
 .landing-section__login-btn .btn {
   width: 208px; }
 
+.landing-section__description {
+  font-size: 107.14286%;
+  color: #737373; }
+
 .landing-section__text {
   max-width: 750px;
   font-size: 114.28571%;
   line-height: 1.75;
   margin: 0 auto; }
+  .landing-section__text--fz14 {
+    font-size: 100%; }
   .landing-section__text p {
     margin-bottom: 35px;
     /* &:last-of-type {
@@ -3371,7 +3414,7 @@ table.dataTable.no-footer {
 
 @media (min-width: 769px) {
   .landing-section {
-    padding: 87px 0 100px; }
+    padding: 80px 0 70px; }
     .landing-section h2 {
       max-width: 750px;
       font-size: 221.42857%; } }
@@ -3382,18 +3425,30 @@ table.dataTable.no-footer {
   box-shadow: 0 15px 31px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1; }
-  .landing-head--green {
+  .landing-head--darkgreen-green {
     background: -webkit-linear-gradient(38deg, #087e38 18%, #8ac53f 100%);
     background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%); }
-  .landing-head--blue {
+  .landing-head--lightgreen-green {
+    background: -webkit-linear-gradient(38deg, #8ac53f 18%, #3cbd0d 100%);
+    background: linear-gradient(52deg, #8ac53f 18%, #3cbd0d 100%); }
+  .landing-head--lightgreen-darkgreen {
+    background: -webkit-linear-gradient(38deg, #8ac53f 18%, #17ab21 100%);
+    background: linear-gradient(52deg, #8ac53f 18%, #17ab21 100%); }
+  .landing-head--lightblue-blue {
     background: -webkit-linear-gradient(38deg, #00aaff 18%, #005dbd 100%);
     background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%); }
+  .landing-head--blue-lightblue {
+    background: -webkit-linear-gradient(38deg, #005dbd 18%, #00aaff 100%);
+    background: linear-gradient(52deg, #005dbd 18%, #00aaff 100%); }
   .landing-head--yellow {
     background: -webkit-linear-gradient(38deg, #fecc00 18%, #ff9000 100%);
     background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%); }
-  .landing-head--red {
+  .landing-head--red-orange {
     background: -webkit-linear-gradient(38deg, #e84242 18%, #ef7f1a 100%);
     background: linear-gradient(52deg, #e84242 18%, #ef7f1a 100%); }
+  .landing-head--orange-red {
+    background: -webkit-linear-gradient(38deg, #ef7f1a 18%, #e84242 100%);
+    background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%); }
   .landing-head h1 {
     color: #fff;
     font-weight: 900;
@@ -4115,3 +4170,6 @@ table.dataTable.no-footer {
       .vertical-tabs .nav a:hover, .vertical-tabs .nav a:focus {
         background: none;
         color: #45464f; }
+
+.gradient-tabs {
+  text-align: center; }

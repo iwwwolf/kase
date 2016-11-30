@@ -1,0 +1,22 @@
+#gradientTabs.gradient-tabs
+	ul.nav(role="tablist")
+		each item, index in gradientTabs
+			if (index == 0)
+				li.active(role="presentation")
+					a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+			else
+				li(role="presentation")
+					a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+	.gratient-tabs__accordion
+		each item, index in gradientTabs
+			.gratient-tabs__accordion-pane
+				if (index == 0)
+					.gratient-tabs__accordion-link.active
+						a(href="#" + item.href): span= item.title
+
+					.gratient-tabs__accordion-body 123123
+				else
+					.gratient-tabs__accordion-link
+						a(href="#" + item.href): span= item.title
+
+					.gratient-tabs__accordion-body 123123

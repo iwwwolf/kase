@@ -24,5 +24,5 @@ div(class="landing-head landing-head--" + headStyle)
 			.head-rect__parent
 				include ../head-rect/module
 			.landing-head__text
-				p.
-					Узнайте больше о том, как разместить ценные бумаги на фондовой площадке Казахстана и какие возможности открываются перед компанией после прохождения листинга
+				for text in headText
+					p= text

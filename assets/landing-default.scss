@@ -9,10 +9,47 @@
   line-height: 1.75;
   text-align: center;
   padding: 60px 0 60px;
+  &--darkgreen-green {
+    color: #fff;
+    background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%);
+  }
+  &--lightgreen-green {
+    color: #fff;
+    background: linear-gradient(52deg, #8ac53f 18%, #3cbd0d 100%);
+  }
+  &--lightgreen-darkgreen {
+    color: #fff;
+    background: linear-gradient(52deg, #8ac53f 18%, #17ab21 100%);
+  }
+  &--lightblue-blue {
+    color: #fff;
+    background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%);
+  }
+  &--blue-lightblue {
+    color: #fff;
+    background: linear-gradient(52deg, #005dbd 18%, #00aaff 100%);
+  }
+  &--yellow {
+    color: #fff;
+    background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%);
+  }
+  &--red-orange {
+    color: #fff;
+    background: linear-gradient(52deg, #e84242 18%, #ef7f1a 100%);
+  }
+  &--orange-red {
+    color: #fff;
+    background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%);
+  }
   &--yellow-green {
     color: #fff;
     background: #fecc00;
     background: linear-gradient(to right, #fecc00 0%, #8ac53f 100%);
+  }
+  &--green-yellow {
+    color: #fff;
+    background: #fecc00;
+    background: linear-gradient(to right, #8ac53f 0%, #fecc00 100%);
   }
   &--gray-bg {
     background: #f7f8f8;
@@ -30,11 +67,18 @@
     width: 208px;
   }
 }
+.landing-section__description {
+  font-size: $fz15;
+  color: #737373;
+}
 .landing-section__text {
   max-width: 750px;
   font-size: $fz16;
   line-height: 1.75;
   margin: 0 auto;
+  &--fz14 {
+    font-size: $fz14;
+  }
   p {
     margin-bottom: 35px;
     /* &:last-of-type {
@@ -90,7 +134,7 @@
 
 @media (min-width: 769px){
   .landing-section {
-    padding: 87px 0 100px;
+    padding: 80px 0 70px;
     h2 {
       max-width: 750px;
       font-size: $fz31;
