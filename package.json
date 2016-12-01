@@ -27,5 +27,8 @@
     "gulp-wait": "0.0.2",
     "gulp-watch": "^4.3.9",
     "jade": "^1.11.0"
+  },
+  "dependencies": {
+    "gulp-flatten": "^0.3.1"
   }
 }

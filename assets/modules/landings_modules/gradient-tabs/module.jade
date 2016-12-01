@@ -12,11 +12,13 @@
 			.gratient-tabs__accordion-pane
 				if (index == 0)
 					.gratient-tabs__accordion-link.active
-						a(href="#" + item.href): span= item.title
-
-					.gratient-tabs__accordion-body 123123
+						a(data-target="#" + item.href, role="button", data-toggle="collapse"): span= item.title
+					.gratient-tabs__accordion-body.collapse(id= item.href)
+						.well
+							.landing-section__text.landing-section__text--fz14= item.content
 				else
 					.gratient-tabs__accordion-link
-						a(href="#" + item.href): span= item.title
-
-					.gratient-tabs__accordion-body 123123
+						a(data-target="#" + item.href, role="button", data-toggle="collapse"): span= item.title
+					.gratient-tabs__accordion-body.collapse(id= item.href)
+						.well
+							.landing-section__text.landing-section__text--fz14= item.content
