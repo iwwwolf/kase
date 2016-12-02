@@ -1,0 +1,14 @@
+.two-variants
+	.two-variants__title-block= twoBlocksTitle.title
+		div= twoBlocksTitle.titleBold
+	.two-variants__arrow-mobile
+	.two-variants__blocks
+		each block, index in twoBlocks
+			if (index == 0)
+				.two-variants__block= block.text
+					svg(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 132.5 44.5", enable-background="new 0 0 132.5 44.5", xml:space="preserve")
+						path(fill-rule="evenodd", clip-rule="evenodd", fill="#69A532", d="M5,10h2h123.5V0h2l0,12l0,0H7v26.5l5,0l-6,6l-6-6.021L5,38.5V10z")
+			else if (index == 1)
+				.two-variants__block= block.text
+					svg(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 132.5 44.5", enable-background="new 0 0 132.5 44.5", xml:space="preserve")
+						path(fill-rule="evenodd", clip-rule="evenodd", fill="#69A532", d="M127.5,38.5l5-0.021l-6,6.021l-6-6l5,0V12H0l0,0L0,0l2,0v10h123.5h2V38.5z")

@@ -1,24 +1,32 @@
-#gradientTabs.gradient-tabs
+.gradient-tabs
 	ul.nav(role="tablist")
 		each item, index in gradientTabs
 			if (index == 0)
 				li.active(role="presentation")
-					a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+					a.gradient-border-link.gradient-border-link--green(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
 			else
 				li(role="presentation")
-					a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
-	.gratient-tabs__accordion
+					a.gradient-border-link.gradient-border-link--green(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+	.tab-content
 		each item, index in gradientTabs
-			.gratient-tabs__accordion-pane
-				if (index == 0)
+			if (index == 0)
+				.gratient-tabs__accordion-body.tab-pane.fade.active.in(id= item.href, role="tabpanel")
+					.landing-section__text.landing-section__text--fz14= item.content
+			else
+				.gratient-tabs__accordion-body.tab-pane.fade(id= item.href, role="tabpanel")
+					.landing-section__text.landing-section__text--fz14= item.content
+
+	#gradientTabsAccordion.gratient-tabs__accordion
+		each item, index in gradientTabs
+			if (index == 0)
+				.gratient-tabs__accordion-pane.panel.active
 					.gratient-tabs__accordion-link.active
-						a(data-target="#" + item.href, role="button", data-toggle="collapse"): span= item.title
-					.gratient-tabs__accordion-body.collapse(id= item.href)
-						.well
-							.landing-section__text.landing-section__text--fz14= item.content
-				else
+						a.gradient-border-link.gradient-border-link--green(data-target="#" + item.hrefMob, role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span= item.title
+					.gratient-tabs__accordion-body.collapse(id= item.hrefMob, role="tabpanel")
+						.landing-section__text.landing-section__text--fz14= item.content
+			else
+				.gratient-tabs__accordion-pane.panel
 					.gratient-tabs__accordion-link
-						a(data-target="#" + item.href, role="button", data-toggle="collapse"): span= item.title
-					.gratient-tabs__accordion-body.collapse(id= item.href)
-						.well
-							.landing-section__text.landing-section__text--fz14= item.content
+						a.gradient-border-link.gradient-border-link--green(data-target="#" + item.hrefMob, role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span= item.title
+					.gratient-tabs__accordion-body.collapse(id= item.hrefMob, role="tabpanel")
+						.landing-section__text.landing-section__text--fz14= item.content

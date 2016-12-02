@@ -290,6 +290,7 @@ h5, .h5 {
     transition: all 300ms;
     &>li {
       &>a {
+        white-space: normal;
         transition: all 300ms;
         &:hover {
           background-color: $minorColor;

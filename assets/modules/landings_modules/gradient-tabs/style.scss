@@ -1,3 +1,45 @@
 .gradient-tabs {
 	text-align: center;
+	font-weight: 500;
+	.nav {
+		display: none;
+		li {
+			margin-left: 30px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.tab-content {
+		display: none;
+	}
+	.panel {
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		margin-bottom: 18px;
+	}
+	a {
+		color: #383838;
+	}
+}
+.gratient-tabs__accordion-body {
+	background-color: #e8edf0;
+	padding: 20px;
+	margin-top: 15px;
+}
+
+@media (min-width: 992px){
+	.gradient-tabs {
+		.nav {
+			display: flex;
+			justify-content: center;
+		}
+		.tab-content {
+			display: block;
+		}
+	}
+	.gratient-tabs__accordion-link {
+		display: none;
+	}
 }

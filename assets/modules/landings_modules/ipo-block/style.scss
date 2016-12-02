@@ -1,9 +1,29 @@
 .ipo-block {
+	background-color: #fff;
+	padding: 35px 20px 30px;
+	margin: 0 10px;
+	position: relative;
+	&:before {
+		display: block;
+		border: 15px solid transparent;
+		border-bottom: 20px solid #fff;
+		border-top: none;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		margin-left: -15px;
+		content: "";
+	}
 	.vertical-tabs {
 		display: none;
 		.nav {
 			li {
 				position: relative;
+				&.active {
+					.ipo-block__label {
+						animation: zoom 1000ms;
+					}
+				}
 			}
 			a {
 				display: block;
@@ -61,6 +81,7 @@
 		font-weight: 700;
 		background: none;
 		position: relative;
+		margin: 0 auto;
 		padding: 0 24px 0 0;
 		span {
 			display: block;
@@ -86,7 +107,7 @@
 	font-size: $fz21;
 	line-height: 1.19047619047619;
 	color: #383838;
-	margin-bottom: 15px;
+	margin-bottom: 7px;
 }
 .ipo-block__tab-pane {
 	text-align: left;
@@ -147,7 +168,31 @@
 	margin: 0 0 20px;
 }
 
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+
+}
+
 @media (min-width: 649px) and (max-width: 768px) {
+	.ipo-block {
+		padding: 65px 40px 60px;
+		margin: 0 20px;
+		&:before {
+			border: 30px solid transparent;
+			border-top: none;
+			border-bottom: 40px solid #fff;
+			top: -40px;
+			margin-left: -30px;
+		}
+	}
 	.ipo-block__tabs-block {
 		.dropdown {
 			margin-bottom: 50px;
@@ -167,7 +212,7 @@
 	}
 	.ipo-block__title {
 		font-size: $fz21 * 2;
-		margin-bottom: 30px;
+		margin-bottom: 14px;
 	}
 	.ipo-block__tab-pane {
 		font-size: 200%;
@@ -205,6 +250,12 @@
 		text-align: left;
 		display: flex;
 		align-items: stretch;
+		padding: 0;
+		margin: 0;
+		background: none;
+		&:before {
+			display: none;
+		}
 		.vertical-tabs {
 			display: block;
 			margin-left: -20px;

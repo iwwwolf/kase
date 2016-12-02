@@ -1,0 +1,34 @@
+.gradient-border-link {
+	display: block;
+	font-size: $fz16;
+	border-radius: 70px;
+	padding: 3px !important;
+	&--green {
+		background: linear-gradient(52deg, #038726 0%,#3cbd0d 47%,#9ed110 100%);
+	}
+	span {
+		display: block;
+		background-color: #fff;
+		border-radius: 70px;
+		padding: 5px 12px;
+		box-shadow: 0 0 0 2px #fff, 0 0 0 2px #fff inset;
+		transition: all 300ms;
+	}
+	&:hover {
+		span {
+			box-shadow: 0 0 0 0 #fff, 0 0 0 2px #fff inset;
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+	.gradient-border-link {
+		font-size: $fz16 * 2;
+		padding: 5px !important;
+		span {
+			padding: 10px 20px;
+			box-shadow: 0 0 0 4px #fff, 0 0 0 2px #fff inset;
+			transition: all 300ms;
+		}
+	}
+}
