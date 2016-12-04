@@ -1,0 +1,79 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "lightgreen-green" // lightgreen-green; darkgreen-green; lightgreen-darkgreen; red-orange; orange-red; lightblue-blue; blue-lightblue; yellow;
+	-var rectStyle = "green-yellow" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Листинговым компаниям"
+	-
+		var headText =[
+			'Статус листинговой компании – новый важный этап в жизни вашей компании.',
+			'Ознакомьтесь подробнее с доступными возможностями привлечения капитала и с требованиями по раскрытию информации.'
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+
+		-
+			var menuItems = [
+				{
+					'title': 'Раскрытие информации'
+				},
+				{
+					'title': 'Кабинет эмитента'
+				},
+				{
+					'title': 'Размещение на KASE'
+				},
+				{
+					'title': 'IPO'
+				},
+				{
+					'title': 'Информационная поддержка',
+					'active': true
+				},
+				{
+					'title': 'Институт маркет-мейкеров'
+				},
+				{
+					'title': 'Контакты'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Информационная поддержка
+			
+			-
+				var supportList = [
+					{
+						'title': 'Продвижение информации в интернете',
+						'icon': 'support-icon-1.svg',
+						'list': [
+							'Использование сайта KASE для продвижения информации о компании',
+							'Публикация маркетинговых материалов в новостях KASE',
+							'Размещение рекламного баннера компании на сайте KASE'
+						]
+					},
+					{
+						'title': 'Маркетинговые мероприятия',
+						'icon': 'support-icon-2.svg',
+						'list': [
+							'Предоставление площадки KASE',
+							'Проведение торжественного открытия торгов по ценным бумагам компании',
+							'Организация и проведение презентации компании',
+							'Проведение брифинга для СМИ с участием представителей KASE, компании и финансового консультанта'
+						]
+					},
+					{
+						'title': 'Roadshow',
+						'icon': 'support-icon-3.svg',
+						'list': [
+							'Участие представителей KASE в проводимых компанией и финансовым консультантом “roadshow”'
+						]
+					}
+				]
+
+			include ../../modules/landings_modules/support-block/module

@@ -70,7 +70,7 @@
 .landing-section__description {
   font-size: $fz15;
   color: #737373;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 .landing-section__text {
   max-width: 750px;
@@ -131,6 +131,9 @@
       } */
     }
   }
+  .landing-section__description {
+    margin-bottom: 55px;
+  }
 }
 
 @media (min-width: 769px){
@@ -139,6 +142,10 @@
     h2 {
       max-width: 750px;
       font-size: $fz31;
+      margin-bottom: 40px;
     }
+  }
+  .landing-section__description {
+    margin-bottom: 40px;
   }
 }

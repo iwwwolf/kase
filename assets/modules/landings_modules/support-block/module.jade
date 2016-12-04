@@ -1,0 +1,10 @@
+each item in supportList
+	.support-block
+		div
+			.support-block__icon
+				img(src="images/"+ item.icon, alt="")
+		.support-block__text
+			.support-block__title= item.title
+			ul.list-color.list-color--green
+				for listItem in item.list
+					li= listItem
