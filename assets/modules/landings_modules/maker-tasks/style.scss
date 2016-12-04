@@ -1,0 +1,77 @@
+.maker-tasks {}
+.maker-tasks__icon {
+	margin-bottom: 40px;
+	img {
+		margin: 0 auto;
+		display: block;
+		width: 252px;
+		height: 252px;
+	}
+}
+.maker-tasks__text {
+	text-align: left;
+	.list-color {
+		font-size: $fz16;
+		margin-bottom: 0;
+		li {
+			padding-left: 26px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				top: 12px;
+				width: 7px;
+				height: 7px;
+			}
+		}
+	}
+	.popover {
+		font-family: $indexFont;
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+	.maker-tasks__icon {
+		img {
+			width: 320px;
+			height: 320px;
+		}
+	}
+	.maker-tasks__text {
+		.list-color {
+			font-size: $fz16 * 2;
+			li {
+				padding-left: 52px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&:before {
+					top: 24px;
+					width: 14px;
+					height: 14px;
+				}
+			}
+		}
+		.popover {
+			font-size: $fz12;
+			font-weight: normal;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.maker-tasks {
+		display: flex;
+	}
+	.maker-tasks__text {
+		margin-left: 60px;
+	}
+	.maker-tasks__icon {
+		min-width: 252px;
+		img {
+			width: 100%;
+			height: auto;
+			margin: 0;
+		}
+	}
+}

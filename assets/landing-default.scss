@@ -43,12 +43,10 @@
   }
   &--yellow-green {
     color: #fff;
-    background: #fecc00;
     background: linear-gradient(to right, #fecc00 0%, #8ac53f 100%);
   }
   &--green-yellow {
     color: #fff;
-    background: #fecc00;
     background: linear-gradient(to right, #8ac53f 0%, #fecc00 100%);
   }
   &--gray-bg {
@@ -104,6 +102,62 @@
       margin-bottom: 0;
     }
   }
+}
+
+.gr-darkgreen-green {
+  color: #fff;
+  background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%);
+}
+.gr-darkgreen-lightgreen {
+  color: #fff;
+  background: linear-gradient(52deg, #087e38 0%, #8ac53f 90%);
+}
+.gr-lightgreen-green {
+  color: #fff;
+  background: linear-gradient(52deg, #8ac53f 18%, #3cbd0d 100%);
+}
+.gr-lightgreen-darkgreen {
+  color: #fff;
+  background: linear-gradient(52deg, #8ac53f 18%, #17ab21 100%);
+}
+.gr-lightblue-blue {
+  color: #fff;
+  background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%);
+}
+.gr-blue-lightblue {
+  color: #fff;
+  background: linear-gradient(52deg, #005dbd 18%, #00aaff 100%);
+}
+.gr-yellow {
+  color: #fff;
+  background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%);
+}
+.gr-red-orange {
+  color: #fff;
+  background: linear-gradient(52deg, #e84242 18%, #ef7f1a 100%);
+}
+.gr-orange-red {
+  color: #fff;
+  background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%);
+}
+.gr-yellow-green {
+  color: #fff;
+  background: linear-gradient(52deg, #fecc00 0%, #8ac53f 100%);
+}
+.gr-green-yellow {
+  color: #fff;
+  background: linear-gradient(52deg, #8ac53f 0%, #fecc00 100%);
+}
+
+.description-link {
+  display: inline;
+  line-height: 1;
+  border: none;
+  border-bottom: 1px dotted #b3b3b3;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  cursor: help;
 }
 
 @media (min-width: 649px) and (max-width: 768px) {

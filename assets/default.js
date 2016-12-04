@@ -54,6 +54,10 @@ $('.table a').on('click', function(e){
     }
 });
 
+//===== popovers
+
+$('[data-toggle="popover"]').popover();
+
 //====== клик по body
 $('body').on('click', function() {
 	if($('.mini-menu__menu').length){

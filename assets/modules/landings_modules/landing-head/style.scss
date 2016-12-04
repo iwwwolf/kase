@@ -4,30 +4,6 @@
 	box-shadow: 0 15px 31px rgba(0, 0, 0, 0.25);
 	position: relative;
 	z-index: 1;
-	&--darkgreen-green {
-		background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%);
-	}
-	&--lightgreen-green {
-		background: linear-gradient(52deg, #8ac53f 18%, #3cbd0d 100%);
-	}
-	&--lightgreen-darkgreen {
-		background: linear-gradient(52deg, #8ac53f 18%, #17ab21 100%);
-	}
-	&--lightblue-blue {
-		background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%);
-	}
-	&--blue-lightblue {
-		background: linear-gradient(52deg, #005dbd 18%, #00aaff 100%);
-	}
-	&--yellow {
-		background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%);
-	}
-	&--red-orange {
-		background: linear-gradient(52deg, #e84242 18%, #ef7f1a 100%);
-	}
-	&--orange-red {
-		background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%);
-	}
 	h1 {
 		color: #fff;
 		font-weight: 900;
