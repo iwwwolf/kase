@@ -60,29 +60,40 @@
     text-transform: uppercase;
   }
 }
+#gradientMask {
+  position: absolute;
+  left: -9999px;
+}
 .landing-section__login-btn {
   .btn {
     width: 208px;
   }
 }
 .landing-section__description {
-  font-size: $fz15;
+  font-size: $fz16;
   color: #737373;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .landing-section__text {
   max-width: 750px;
   font-size: $fz16;
   line-height: 1.75;
   margin: 0 auto;
-  &--fz14 {
+  /* &--fz14 {
     font-size: $fz14;
-  }
+  } */
   p {
     margin-bottom: 35px;
     /* &:last-of-type {
       margin-bottom: 0;
     } */
+  }
+  a {
+    color: #0094de;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 .landing-section__list {
@@ -186,7 +197,7 @@
     }
   }
   .landing-section__description {
-    margin-bottom: 55px;
+    margin-bottom: 32px;
   }
 }
 
@@ -196,10 +207,10 @@
     h2 {
       max-width: 750px;
       font-size: $fz31;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
   .landing-section__description {
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 }

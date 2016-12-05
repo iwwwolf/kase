@@ -12,6 +12,7 @@ $(document).ready(function(){
 	//= require "modules/currency-tabs/script.js"
 	//= require "modules/landings_modules/head-rect/script.js"
 	//= require "modules/landings_modules/ipo-block/script.js"
+	//= require "modules/landings_modules/list-slider/script.js"
 
 
 	/* require "modules/trade-info/script.js"

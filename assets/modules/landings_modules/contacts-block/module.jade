@@ -1,8 +1,8 @@
 .contacts-block
 	each item in textArray
-		.contacts-block--column
-			div= item.text
-			div= item.department
+		.contacts-block__column
+			.contacts-block__title= item.text
+			.contacts-block__sub-title= item.department
 				ul
 					li тел:
 						span= item.phone

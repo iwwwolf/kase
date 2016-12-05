@@ -1,5 +1,6 @@
 .contacts-block {
-	&--column {
+	font-size: $fz16;
+	&__column {
 		line-height: 1.5;
 		font-weight: 500;
 		background-color: #fff;
@@ -9,40 +10,62 @@
 			margin-bottom: 0;
 		}
 
-		div {
-			&:first-child {
-				margin-bottom: 25px;
-			}
-			&:last-child {
-				text-align: left;
-			}
+		.contacts-block__title {
+			margin-bottom: 25px;
+		}
+		.contacts-block__sub-title {
+			text-align: left;
 		}
 
-		ul {
-			list-style-type: none;
-			font-weight: 300;
-			padding: 0;
-			margin-top: 10px;
-			span {
-				margin-left: 4px;
-			}
+	}
+	&--one-col {
+		background-color: #fff;
+		padding: 20px 30px;
+		.contacts-block__title {
+			font-size: 131.25%;
+			line-height: 1.476190476190476;
+			font-weight: 500;
+			text-align: center;
+			margin-bottom: 22px;
+		}
+		.contacts-block__sub-title {
+			font-size: $fz16;
+			font-weight: 500;
 		}
 	}
+	ul {
+		list-style-type: none;
+		font-weight: normal;
+		padding: 0;
+		margin-top: 10px;
+		span {
+			margin-left: 4px;
+		}
+	}
+}
+.contacts-block__sub-col {
+	margin-bottom: 25px;
 }
 
 @media (min-width: 649px) and (max-width: 768px) {
 	.contacts-block {
-		&--column {	
+		font-size: $fz32;
+		&__column {	
 			padding: 50px 60px;
 			margin-bottom: 60px;
-			font-size: $fz32;
 			div:first-child {
 				margin-bottom: 50px;
 			}
-			ul {
-				font-size: 87.5%; // 28px
+		}
+		&--one-col {
+			padding: 40px 60px;
+			.contacts-block__title {
+				margin-bottom: 44px;
 			}
 		}
+	}
+	.contacts-block__sub-col {
+		margin-bottom: 50px;
 	}
 }
 
@@ -50,8 +73,15 @@
 	.contacts-block {
 		display: flex;
 		align-items: stertch;
+		&--one-col {
+			display: block;
+			padding: 40px 136px;
+			.contacts-block__title {
+				margin-bottom: 38px;
+			}
+		}
 
-		&--column {
+		&__column {
 			max-width: 50%;
 			margin: 0;
 
@@ -66,13 +96,25 @@
 	.contacts-block {
 		font-size: $fz16;
 		justify-content: center;
-		&--column {
+		text-align: left;
+		&__column {
 			width: 460px;
 			padding: 50px 60px;
-
-			ul {
-				font-size: 87.5%; // 28px
-			}
+		}
+	}
+	.contacts-block__sub-col-parent {
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+	}
+	.contacts-block__sub-col {
+		width: 50%;
+		&:nth-child(odd) {
+			border-right: 2px solid #e7e7e7;
+			padding-right: 65px;
+		}
+		&:nth-child(even) {
+			padding-left: 65px;
 		}
 	}
 }

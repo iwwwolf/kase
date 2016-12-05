@@ -1,13 +1,64 @@
 .gradient-tabs {
 	text-align: center;
-	font-weight: 500;
 	.nav {
 		display: none;
-		li {
-			margin-left: 30px;
-			&:first-child {
-				margin-left: 0;
+		font-weight: 500;
+	}
+	.gradient-tabs__tab {
+		margin-left: 30px;
+		display: block;
+		font-size: $fz16;
+		&:first-child {
+			margin-left: 0;
+		}
+		&.active {
+			&.gradient-tabs__tab--green {
+				a {
+					background: linear-gradient(52deg, #038726 0%,#3cbd0d 47%,#9ed110 100%);
+				}
 			}
+		}
+		&--green {
+			a:hover {
+				background: linear-gradient(52deg, #038726 0%,#3cbd0d 47%,#9ed110 100%);
+			}
+		}
+		a {
+			display: block;
+			border-radius: 70px;
+			padding: 1px;
+		}
+		span {
+			display: block;
+			background-color: #fff;
+			border-radius: 70px;
+			padding: 5px 12px;
+		}
+	}
+	.gratient-tabs__accordion-link {
+		display: block;
+		font-size: $fz16;
+		&:first-child {
+			margin-left: 0;
+		}
+		&--green {
+			a {
+				&:not(.collapsed) {
+					background: linear-gradient(52deg, #038726 0%,#3cbd0d 47%,#9ed110 100%);
+				}
+			}
+		}
+		a {
+			background: #d1d1d1;
+			display: block;
+			border-radius: 70px;
+			padding: 1px;
+		}
+		span {
+			display: block;
+			background-color: #fff;
+			border-radius: 70px;
+			padding: 5px 12px;
 		}
 	}
 	.tab-content {
@@ -40,7 +91,7 @@
 		}
 	}
 	.gratient-tabs__accordion-link {
-		display: none;
+		display: none !important;
 	}
 	.gratient-tabs__accordion-body {
 		background: none;

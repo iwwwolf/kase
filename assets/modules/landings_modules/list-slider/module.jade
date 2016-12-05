@@ -1,0 +1,12 @@
+.list-slider
+	each item, index in listSliderItems
+		.item
+			.list-slider__number
+				svg
+					text(fill="url(#nGradient)", y="100px")= index+1
+			if (typeof(item.title) !== 'undefined')
+				.list-slider__title= item.title
+
+			if (typeof(item.text) !== 'undefined')
+				.list-slider__text= item.text
+				

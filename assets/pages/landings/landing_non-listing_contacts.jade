@@ -1,0 +1,66 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-lightgreen-darkgreen" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "yellow-green" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Нелистинговые ценные бумаги"
+	-
+		var headText =[
+			'Допуск ценных бумаг к обращению в секторе "Нелистинговые ценные бумаги" предоставляет возможность совершать в торговой системе KASE сделки с ценными бумагами, которые по тем или иным причинам не включены в официальный список KASE'
+		]
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Листинговым компаниям'
+			},
+			{
+				'position': 'right',
+				'title': 'Будущим листинговым компаниям'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+
+		-
+			var menuItems = [
+				{
+					'title': 'Условия допуска'
+				},
+				{
+					'title': 'Контакты',
+					'active': true
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Контакты
+			
+			.contacts-block.contacts-block--one-col
+				.contacts-block__title.
+					По вопросам допуска ценных бумаг к обращению в секторе "Нелистинговые ценные бумаги" обращайтесь:
+
+				.contacts-block__sub-col-parent 
+					.contacts-block__sub-col
+						.contacts-block__sub-title Отдел локальных ценных бумаг : 
+						ul
+							li тел:
+								span +7 (727) 237 53 27
+							li факс:
+								span +7 (727) 237 53 09
+							li e-mail:
+								span: a(href="#") listing@kase.kz
+					.contacts-block__sub-col
+						.contacts-block__sub-title Отдел иностранных ценных бумаг: 
+						ul
+							li тел:
+								span +7 (727) 237 53 24
+							li факс:
+								span +7 (727) 237 53 09
+							li e-mail:
+								span: a(href="#") listing@kase.kz

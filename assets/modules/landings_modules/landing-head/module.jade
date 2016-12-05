@@ -1,23 +1,25 @@
 div(class="landing-head " + headStyle)
 	.landing-head__arrows-parent
 		.container
-			a.landing-head__arrow-link.landing-head__arrow-link--left(href="#")
-				span
-					svg(version="1.1", id="leftArr", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 50.501 35", enable-background="new 0 0 50.501 35", xml:space="preserve")
-						path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M50.501,16.336v2.329H2.331v-2.329H50.501z")
-						path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M19.395,33.25L17.631,35L0,17.501l1.763-1.75L19.395,33.25z")
-						path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M19.395,1.751L1.763,19.25L0,17.501L17.631,0L19.395,1.751z")
+			each link in headLinks
+				if (link.position == 'left')
+					a.landing-head__arrow-link.landing-head__arrow-link--left(href="#")
+						span
+							svg(version="1.1", id="leftArr", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 50.501 35", enable-background="new 0 0 50.501 35", xml:space="preserve")
+								path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M50.501,16.336v2.329H2.331v-2.329H50.501z")
+								path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M19.395,33.25L17.631,35L0,17.501l1.763-1.75L19.395,33.25z")
+								path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M19.395,1.751L1.763,19.25L0,17.501L17.631,0L19.395,1.751z")
 
-					span Нелистинговые ценные бумаги
+							span= link.title
+				else if (link.position == 'right')
+					a.landing-head__arrow-link.landing-head__arrow-link--right(href="#")
+						span
+							svg(version="1.1", id="rightArr", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 50.501 35", enable-background="new 0 0 50.501 35", xml:space="preserve")
+								path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M0,18.664v-2.329h48.17v2.329H0z")
+								path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M31.106,1.75L32.869,0l17.631,17.499l-1.763,1.75L31.106,1.75z")
+								path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M31.106,33.249L48.737,15.75l1.763,1.749L32.869,35L31.106,33.249z")
 
-			a.landing-head__arrow-link.landing-head__arrow-link--right(href="#")
-				span
-					svg(version="1.1", id="rightArr", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 50.501 35", enable-background="new 0 0 50.501 35", xml:space="preserve")
-						path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M0,18.664v-2.329h48.17v2.329H0z")
-						path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M31.106,1.75L32.869,0l17.631,17.499l-1.763,1.75L31.106,1.75z")
-						path(fill-rule="evenodd", clip-rule="evenodd", fill="#FFFFFF", d="M31.106,33.249L48.737,15.75l1.763,1.749L32.869,35L31.106,33.249z")
-
-					span Будущим листинговым компаниям
+							span= link.title
 
 	.container
 		.landing-head__body

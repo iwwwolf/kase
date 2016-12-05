@@ -4,72 +4,66 @@ block variables
 	- bodyClass = "body__landing"
 
 block content
-	-var headStyle = "gr-lightgreen-green" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
-	-var rectStyle = "green-yellow" // yellow-green; yellow-red; blue-green; green-yellow;
-	-var rectTitle = "Листинговым компаниям"
+	-var headStyle = "gr-lightgreen-darkgreen" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "yellow-green" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Нелистинговые ценные бумаги"
 	-
 		var headText =[
-			'Статус листинговой компании – новый важный этап в жизни вашей компании.',
-			'Ознакомьтесь подробнее с доступными возможностями привлечения капитала и с требованиями по раскрытию информации.'
+			'Допуск ценных бумаг к обращению в секторе "Нелистинговые ценные бумаги" предоставляет возможность совершать в торговой системе KASE сделки с ценными бумагами, которые по тем или иным причинам не включены в официальный список KASE'
 		]
-
 	-
 		var headLinks = [
 			{
 				'position': 'left',
-				'title': 'Нелистинговые ценные бумаги'
+				'title': 'Листинговым компаниям'
 			},
 			{
 				'position': 'right',
 				'title': 'Будущим листинговым компаниям'
 			}
 		]
-
 	.relative
 		include ../../modules/landings_modules/landing-head/module
 
 		-
 			var menuItems = [
 				{
-					'title': 'Раскрытие информации'
-				},
-				{
-					'title': 'Кабинет эмитента',
+					'title': 'Условия допуска',
 					'active': true
-				},
-				{
-					'title': 'Размещение на KASE'
-				},
-				{
-					'title': 'IPO'
-				},
-				{
-					'title': 'Информационная поддержка'
-				},
-				{
-					'title': 'Институт маркет-мейкеров'
 				},
 				{
 					'title': 'Контакты'
 				}
 			]
 		include ../../modules/landings_modules/landing-menu/module
-
-	section.landing-section.landing-section--gray-bg
-		.container
-			h2 Вход в личный кабинет
-			.landing-section__login-btn
-				a(href="#").btn.btn--gradient.btn--yellow-green: span Войти
-	
+	svg(id="gradientMask")
+		defs
+			pattern(id="nGradient", patternUnits="userSpaceOnUse", width="150", height="150")
+				image(xlink:href="images/number-gradient.png", width="150", height="150")
 	section.landing-section
 		.container
-			h2 Система электронного документооборота is2in
+			h2 Инициатор допуска
 			.landing-section__text
 				p.
-					Для предоставления информации, подлежащей раскрытию компаниями и членами KASE, разработана и внедрена специализированная система электронного документооборота is2in (issuers to investors).
-				p.
-					Система  is2in  позволяет компаниям и членам KASE передавать KASE документы, содержащие раскрываемую информацию в электронном виде. Предоставленные документы размещаются на интернет-сайте KASE на странице компании или члена KASE в автоматическом режиме, что обеспечивает реализацию принципов прозрачности и открытости фондового рынка.
+					В качестве инициатора допуска ценных бумаг вправе выступать только член #[a(href="#") Биржи "фондовой" категории], обладающий лицензией на осуществление брокерской и/или дилерской деятельности на рынке ценных бумаг с правом ведения счетов клиентов в качестве номинального держателя.
+	
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Критерии для допуска
 
+			-
+				var listSliderItems = [
+					{
+						'title': 'Ценные бумаги существуют как объекты гражданских прав'
+					},
+					{
+						'title': 'У ценных бумаг имеется национальный идентификационный номер (НИН) и/или международный идентификационный номер (ISIN)'
+					},
+					{
+						'title': 'Отсутствуют законодательные или иные возможные запреты и ограничения, препятствующие свободному обращению ценных бумаг на организованном рынке Казахстана'
+					}
+				]
+			include ../../modules/landings_modules/list-slider/module
 	section.landing-section.gr-yellow-green
 		.container
 			h2 Руководство
