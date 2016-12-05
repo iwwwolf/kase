@@ -32,8 +32,7 @@ block content
 					'title': 'О листинге'
 				},
 				{
-					'title': 'Листинг на KASE',
-					'active': true
+					'title': 'Листинг на KASE'
 				},
 				{
 					'title': 'Размещение на KASE'
@@ -45,7 +44,29 @@ block content
 					'title': 'Информационная поддержка'
 				},
 				{
-					'title': 'Контакты'
+					'title': 'Контакты',
+					'active': true
 				}
 			]
 		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Контакты
+			
+			-
+				var textArray = [
+					{
+						'text': 'По вопросам листинга обращайтесь в Департамент листинга:',
+						'phone' : '+7 (727) 237 53 20',
+						'fax' : '+7 (727) 237 53 20',
+						'email' : 'world@kase.kz'
+					},
+					{
+						'text': 'По вопросам информационной поддержки эмитентов, обращайтесь в Отдел по работе с эмитентами и инвесторами:',
+						'phone' : '+7 (727) 237 53 26, +7 (727) 237 53 25 ',
+						'fax' : '+7 (727) 237 53 09',
+						'email' : 'monitoring@kase.kz'
+					}
+				]
+			include ../../modules/landings_modules/contacts-block/module

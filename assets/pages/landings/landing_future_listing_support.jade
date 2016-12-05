@@ -1,0 +1,87 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-darkgreen-green" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "yellow-green" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Будущим листинговым компаниям"
+	-
+		var headText =[
+			'Узнайте больше о том, как разместить ценные бумаги на фондовой площадке Казахстана и какие возможности открываются перед компанией после прохождения листинга'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Нелистинговые ценные бумаги'
+			},
+			{
+				'position': 'right',
+				'title': 'Листинговым компаниям'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		
+		-
+			var menuItems = [
+				{
+					'title': 'О листинге'
+				},
+				{
+					'title': 'Листинг на KASE'
+				},
+				{
+					'title': 'Размещение на KASE'
+				},
+				{
+					'title': 'IPO'
+				},
+				{
+					'title': 'Информационная поддержка',
+					'active': true
+				},
+				{
+					'title': 'Контакты'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Информационная поддержка
+			
+			-
+				var supportList = [
+					{
+						'title': 'Продвижение информации в интернете',
+						'icon': 'support-icon-1.svg',
+						'list': [
+							'Использование сайта KASE для продвижения информации о компании',
+							'Публикация маркетинговых материалов в новостях KASE',
+							'Размещение рекламного баннера компании на сайте KASE'
+						]
+					},
+					{
+						'title': 'Маркетинговые мероприятия',
+						'icon': 'support-icon-2.svg',
+						'list': [
+							'Предоставление площадки KASE',
+							'Проведение торжественного открытия торгов по ценным бумагам компании',
+							'Организация и проведение презентации компании',
+							'Проведение брифинга для СМИ с участием представителей KASE, компании и финансового консультанта'
+						]
+					},
+					{
+						'title': 'Roadshow',
+						'icon': 'support-icon-3.svg',
+						'list': [
+							'Участие представителей KASE в проводимых компанией и финансовым консультантом “roadshow”'
+						]
+					}
+				]
+
+			include ../../modules/landings_modules/support-block/module
