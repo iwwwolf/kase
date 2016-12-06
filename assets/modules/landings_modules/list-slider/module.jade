@@ -1,13 +1,12 @@
-.list-slider.swiper-container
-	.swiper-wrapper
-		each item, index in listSliderItems
-			.list-slider__item
-				.list-slider__number
-					svg
-						text(fill="url(#nGradient)", y="100px")= index+1
-				if (typeof(item.title) !== 'undefined')
-					.list-slider__title= item.title
+#listSlider.list-slider
+	each item, index in listSliderItems
+		.list-slider__item
+			.list-slider__number
+				svg
+					text(fill="url(#nGradient)", y="100px")= index+1
+			if (typeof(item.title) !== 'undefined')
+				.list-slider__title= item.title
 
-				if (typeof(item.text) !== 'undefined')
-					.list-slider__text= item.text
+			if (typeof(item.text) !== 'undefined')
+				.list-slider__text= item.text
 				
