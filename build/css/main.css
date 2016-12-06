@@ -4223,16 +4223,18 @@ table.dataTable.no-footer {
   font-size: 114.28571%; }
   .contacts-block__column {
     line-height: 1.5;
-    font-weight: 500;
     background-color: #fff;
     padding: 30px 20px;
     margin-bottom: 30px; }
     .contacts-block__column:last-of-type {
       margin-bottom: 0; }
     .contacts-block__column .contacts-block__title {
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      font-size: 114.28571%;
+      font-weight: 700; }
     .contacts-block__column .contacts-block__sub-title {
-      text-align: left; }
+      text-align: left;
+      font-weight: 500; }
   .contacts-block--one-col {
     background-color: #fff;
     padding: 20px 30px; }
@@ -4395,9 +4397,22 @@ table.dataTable.no-footer {
     color: #383838; }
 
 .gratient-tabs__accordion-body {
-  background-color: #e8edf0;
   padding: 20px;
   margin-top: 15px; }
+  .gratient-tabs__accordion-body.active.in {
+    display: none; }
+  .gratient-tabs__accordion-body .landing-section {
+    position: relative; }
+  .gratient-tabs__accordion-body .landing-section__text {
+    padding-bottom: 60px; }
+  .gratient-tabs__accordion-body .double-down {
+    display: block;
+    width: 28px;
+    height: 26px;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    margin-left: -14px; }
 
 @media (min-width: 992px) {
   .gradient-tabs .nav {
@@ -4412,7 +4427,9 @@ table.dataTable.no-footer {
   .gratient-tabs__accordion-link {
     display: none !important; }
   .gratient-tabs__accordion-body {
-    background: none; } }
+    background: none; }
+    .gratient-tabs__accordion-body.active.in {
+      display: block; } }
 
 .gradient-border-link {
   display: block;

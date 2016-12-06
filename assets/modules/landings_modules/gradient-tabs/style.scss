@@ -75,9 +75,26 @@
 	}
 }
 .gratient-tabs__accordion-body {
-	background-color: #e8edf0;
 	padding: 20px;
 	margin-top: 15px;
+	&.active.in {
+		display: none;
+	}
+	.landing-section {
+		position: relative;
+	}
+	.landing-section__text {
+		padding-bottom: 60px;
+	}
+	.double-down {
+		display: block;
+		width: 28px;
+		height: 26px;
+		position: absolute;
+		top: -60px;
+		left: 50%;
+		margin-left: -14px;
+	}
 }
 
 @media (min-width: 992px){
@@ -95,5 +112,8 @@
 	}
 	.gratient-tabs__accordion-body {
 		background: none;
+		&.active.in {
+			display: block;
+		}
 	}
 }

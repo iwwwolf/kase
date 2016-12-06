@@ -2,7 +2,6 @@
 	font-size: $fz16;
 	&__column {
 		line-height: 1.5;
-		font-weight: 500;
 		background-color: #fff;
 		padding: 30px 20px;
 		margin-bottom: 30px;
@@ -12,9 +11,12 @@
 
 		.contacts-block__title {
 			margin-bottom: 25px;
+			font-size: $fz16;
+			font-weight: 700;
 		}
 		.contacts-block__sub-title {
 			text-align: left;
+			font-weight: 500;
 		}
 
 	}
