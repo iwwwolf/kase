@@ -3,6 +3,35 @@ extends ../../templates/base
 block content
 	.markets-top
 		.container
+			-
+				var marketsListTitle = "Рынки"
+				var marketsList = [
+					{
+						'title': 'Акции'
+					},
+					{
+						'title': 'Паи'
+					},
+					{
+						'title': 'Корпоративные облигации'
+					},
+					{
+						'title': 'Ценные бумаги МФО',
+						'active': true
+					},
+					{
+						'title': 'Государствнные ценные бумаги'
+					},
+					{
+						'title': 'Иностранные валюты'
+					},
+					{
+						'title': 'Операции РЕПО'
+					},
+					{
+						'title': 'Деривативы'
+					}
+				]
 			include ../../modules/markets-menu/module
 			//-include ../../modules/regulations/module
 			#regulations.regulations
@@ -45,6 +74,15 @@ block content
 								li: a(href="#") Правила торгов
 	.container
 		#centerColumn.center-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки',
+					'Торги',
+					'Ценные бумаги МФО'
+				]
+				
 			include ../../modules/breadcrumbs/module
 			h1 Ценные бумаги МФО
 

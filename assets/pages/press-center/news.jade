@@ -1,3 +1,59 @@
-extends ../templates/base
+extends ../../templates/base
 
 block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Пресс-центр"
+				var marketsList = [
+					{
+						'title': 'Информационная поддержка'
+					},
+					{
+						'title': 'Новости',
+						'active': true
+					},
+					{
+						'title': 'Пресс-релизы'
+					},
+					{
+						'title': 'Публикации'
+					},
+					{
+						'title': 'Докалады и презентации'
+					},
+					{
+						'title': 'Брошюру'
+					},
+					{
+						'title': 'Информационная поддержка'
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Пресс-центр',
+					'Новости'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			.container
+				h1 Новости
+
+				ul.accordion__nav
+					li.active: a(href="#") Все новости
+					li: a(href="#") Новости биржи
+					li: a(href="#") Новости компаний
+					li: a(href="#") Новости рынков
+				
+				- var withGetDate = true;
+				include ../../modules/search-block/module
+
+				include ../../modules/news-list/module
+
+				include ../../modules/pagination/module

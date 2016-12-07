@@ -1,5 +1,3 @@
 ul.breadcrumbs
-	li: a(href="#") Главная
-	li: a(href="#") Рынки
-	li: a(href="#") Торги
-	li: a(href="#") Акции
+	each item in breadcrumbs
+		li: a(href="#")= item

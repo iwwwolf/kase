@@ -1,14 +1,14 @@
 .markets-menu
-	h3 Рынки
+	h3= marketsListTitle
 	.dropdown
-		a.dropdown-link(href="#", data-toggle="dropdown", role="button") Акции
+		a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+			each item in marketsList
+				if (item.active == true)
+					= item.title
 
 		ul.dropdown-menu
-			li.active: a(href="#") Акции
-			li: a(href="#") Паи
-			li: a(href="#") Корпоративные облигации
-			li: a(href="#") Ценные бумаги МФО
-			li: a(href="#") Государствнные ценные бумаги
-			li: a(href="#") Иностранные валюты
-			li: a(href="#") Операции РЕПО
-			li: a(href="#") Деривативы
+			each item in marketsList
+				if (item.active == true)
+					li.active: a(href="#")= item.title
+				else
+					li: a(href="#")= item.title

@@ -1,0 +1,141 @@
+.pagination {
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+	margin-top: 15px;
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		display: block;
+		border-radius: 50%;
+	}
+}
+.pagination__first, .pagination__prev, .pagination__next, .pagination__last {
+	a {
+		width: 24px;
+		height: 24px;
+		border: 1px solid #a8b1ba;
+		line-height: 24px;
+		text-align: center;
+		&:hover {
+			border-color: #3cbd0d;
+			svg {
+				path {
+					fill: #3cbd0d;
+				}
+			}
+		}
+	}
+	svg {
+		display: inline-block;
+		height: 10px;
+		path {
+			transition: fill 300ms;
+		}
+	}
+}
+.pagination__first {
+	margin-right: 3px;
+	svg {
+		width: 11px;
+	}
+}
+.pagination__prev {
+	margin-right: 9px;
+	svg {
+		width: 6px;
+	}
+}
+.pagination__next {
+	margin-left: 9px;
+	svg {
+		width: 6px;
+	}
+}
+.pagination__last {
+	margin-left: 3px;
+	svg {
+		width: 11px;
+	}
+}
+
+.pagination__page {
+	background: transparent;
+	color: #a8b1ba;
+	a {
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		color: #a8b1ba;
+		&:hover {
+			color: $defaultColor;
+			background: rgba(60, 189, 13, 0.2);
+		}
+	}
+	&.active {
+		a {
+			background: $lightGreen;
+			color: #fff;
+		}
+	}
+}
+
+@media (min-width: 649px) and (max-width: 768px) {
+	.pagination {
+		font-size: 24px;
+		margin-top: 30px;
+	}
+	.pagination__first, .pagination__prev, .pagination__next, .pagination__last {
+		a {
+			width: 48px;
+			height: 48px;
+			border: 2px solid #a8b1ba;
+			line-height: 48px;
+		}
+		svg {
+			height: 20px;
+			path {
+				transition: fill 300ms;
+			}
+		}
+	}
+	.pagination__first {
+		margin-right: 6px;
+		svg {
+			width: 22px;
+		}
+	}
+	.pagination__prev {
+		margin-right: 18px;
+		svg {
+			width: 12px;
+		}
+	}
+	.pagination__next {
+		margin-left: 18px;
+		svg {
+			width: 12px;
+		}
+	}
+	.pagination__last {
+		margin-left: 6px;
+		svg {
+			width: 22px;
+		}
+	}
+
+	.pagination__page {
+		a {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+	}
+
+}

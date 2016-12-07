@@ -3,6 +3,35 @@ extends ../../templates/base
 block content
 	.markets-top
 		.container
+			-
+				var marketsListTitle = "Рынки"
+				var marketsList = [
+					{
+						'title': 'Акции'
+					},
+					{
+						'title': 'Паи'
+					},
+					{
+						'title': 'Корпоративные облигации'
+					},
+					{
+						'title': 'Ценные бумаги МФО'
+					},
+					{
+						'title': 'Государствнные ценные бумаги',
+						'active': true
+					},
+					{
+						'title': 'Иностранные валюты'
+					},
+					{
+						'title': 'Операции РЕПО'
+					},
+					{
+						'title': 'Деривативы'
+					}
+				]
 			include ../../modules/markets-menu/module
 			//-include ../../modules/regulations/module
 			#regulations.regulations
@@ -38,6 +67,15 @@ block content
 									div 10 млрд KZT
 	.container
 		#centerColumn.center-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки',
+					'Торги',
+					'Государствнные ценные бумаги'
+				]
+				
 			include ../../modules/breadcrumbs/module
 			h1 Государственные ценные бумаги
 			.accordion

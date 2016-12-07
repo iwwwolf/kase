@@ -1,0 +1,28 @@
+.search-block
+	if (withGetDate == true)
+		.flex
+			form.search-block__form
+				.search-block__input
+					input(type="text", placeholder="Поиск")
+				button.search-block__button(type="submit") Искать &rarr;
+
+			#getDate(style="position: relative;")
+				.get-date
+					.get-date__label Дата:
+					.get-date__input.get-date__input--mobile
+						i.fa.fa-calendar
+						input(type="text", name="daterange" value="01/01/2015 - 01/31/2015")
+						.get-date__link
+							a(href="#")
+								i.fa.fa-long-arrow-right
+					.get-date__input
+						i.fa.fa-calendar
+						input(type="text", name="daterange" value="01/01/2015 - 01/31/2015")
+						.get-date__link
+							a(href="#")
+								i.fa.fa-long-arrow-right
+	else
+		form.search-block__form
+			.search-block__input
+				input(type="text", placeholder="Поиск")
+			button.search-block__button(type="submit") Искать &rarr;

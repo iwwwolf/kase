@@ -117,6 +117,27 @@ body {
     color: #333;
     $defaultColor: #333;
   }
+  &.body__text-page {
+    h5 {
+      margin-bottom: 30px;
+    }
+    .right-content-column {
+      .container {
+        padding-left: 60px;
+      }
+      .h1-block {
+        margin-left: -60px;
+        .arrow-back {
+          color: $lightGreen;
+          text-decoration: none;
+        }
+      }
+      .landing-section__text {
+        max-width: none;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 *:focus, *:active {
@@ -221,7 +242,7 @@ img {
 }
 
 h1, .h1 {
-  font-size: $fz31;
+  font-size: 31px;
   text-transform: uppercase;
   font-weight: normal;
 }
@@ -361,13 +382,18 @@ h5, .h5 {
   }
 }
 
-.center-column {
+.center-column, .right-content-column {
   h1 {
     color: #3cbd0d;
     font-weight: 700;
     margin: 13px 0 22px;
   }
+  .container {
+    width: auto;
+    padding: 0;
+  }
 }
+
 
 .datepicker table tr td.active {
   &.active {
@@ -501,6 +527,22 @@ a.up {
 
 
 @media (min-width: 649px) and (max-width: 768px){
+  body {
+    &.body__text-page {
+      .right-content-column {
+        .container {
+          padding-left: 120px;
+        }
+        .h1-block {
+          margin-left: -120px;
+        }
+        .landing-section__text {
+          max-width: none;
+          margin-right: 100px;
+        }
+      }
+    }
+  }
   .dropdown {
     .dropdown-menu {
       font-size: 200%;
@@ -563,6 +605,15 @@ a.up {
 }
 
 @media (min-width: 992px){
+  body {
+    &.body__text-page {
+      .right-content-column {
+        .landing-section__text {
+          margin-right: 100px;
+        }
+      }
+    }
+  }
   .scroll-block {
     overflow: hidden;
     height: 100%;
@@ -574,8 +625,11 @@ a.up {
       display: block;
     }
   }
-  .center-column {
+  .center-column, .right-content-column {
     padding: 0 196px;
+  }
+  .right-content-column {
+    padding-right: 0;
   }
 }
 

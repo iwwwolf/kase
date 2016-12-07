@@ -26,6 +26,14 @@
 			}
 		}
 	}
+	&--round-marker {
+		li {
+			&:before {
+				background: none;
+				border: 1px solid $lightGreen;
+			}
+		}
+	}
 }
 
 @media (min-width: 649px) and (max-width: 768px) {

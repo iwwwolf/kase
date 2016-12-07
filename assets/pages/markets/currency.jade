@@ -3,6 +3,35 @@ extends ../../templates/base
 block content
 	.markets-top
 		.container
+			-
+				var marketsListTitle = "Рынки"
+				var marketsList = [
+					{
+						'title': 'Акции'
+					},
+					{
+						'title': 'Паи'
+					},
+					{
+						'title': 'Корпоративные облигации'
+					},
+					{
+						'title': 'Ценные бумаги МФО'
+					},
+					{
+						'title': 'Государствнные ценные бумаги'
+					},
+					{
+						'title': 'Иностранные валюты',
+						'active': true
+					},
+					{
+						'title': 'Операции РЕПО'
+					},
+					{
+						'title': 'Деривативы'
+					}
+				]
 			include ../../modules/markets-menu/module
 			//-include ../../modules/regulations/module
 			#regulations.regulations
@@ -46,6 +75,15 @@ block content
 						
 	.container
 		#centerColumn.center-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки',
+					'Торги',
+					'Иностранные валюты'
+				]
+				
 			include ../../modules/breadcrumbs/module
 			h1 Иностранные валюты
 			
