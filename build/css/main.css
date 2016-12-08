@@ -3665,9 +3665,9 @@ table.dataTable.no-footer {
   text-align: center;
   position: relative;
   padding: 60px 0 60px; }
-  .landing-section--darkgreen-green, .landing-section--lightgreen-green, .landing-section--lightgreen-darkgreen, .landing-section--lightblue-blue, .landing-section--blue-lightblue, .landing-section--yellow, .landing-section--red-orange, .landing-section--orange-red, .landing-section--yellow-green, .landing-section--green-yellow {
+  .landing-section--darkgreen-green, .landing-section--lightgreen-green, .landing-section--lightgreen-darkgreen, .landing-section--lightblue-blue, .landing-section--blue-lightblue, .landing-section--yellow, .landing-section--red-orange, .landing-section--orange-red, .landing-section--yellow-green, .landing-section--green-yellow, .landing-section[class*="gr-"] {
     color: #fff; }
-    .landing-section--darkgreen-green a, .landing-section--lightgreen-green a, .landing-section--lightgreen-darkgreen a, .landing-section--lightblue-blue a, .landing-section--blue-lightblue a, .landing-section--yellow a, .landing-section--red-orange a, .landing-section--orange-red a, .landing-section--yellow-green a, .landing-section--green-yellow a {
+    .landing-section--darkgreen-green a, .landing-section--lightgreen-green a, .landing-section--lightgreen-darkgreen a, .landing-section--lightblue-blue a, .landing-section--blue-lightblue a, .landing-section--yellow a, .landing-section--red-orange a, .landing-section--orange-red a, .landing-section--yellow-green a, .landing-section--green-yellow a, .landing-section[class*="gr-"] a {
       color: #fff; }
   .landing-section--darkgreen-green {
     background: -webkit-linear-gradient(38deg, #087e38 18%, #8ac53f 100%);

@@ -19,7 +19,8 @@
   &--red-orange,
   &--orange-red,
   &--yellow-green,
-  &--green-yellow {
+  &--green-yellow,
+  &[class*="gr-"] {
     color: #fff;
     a {
       color: #fff;
