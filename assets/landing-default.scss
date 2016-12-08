@@ -10,44 +10,50 @@
   text-align: center;
   position: relative;
   padding: 60px 0 60px;
-  &--darkgreen-green {
+  &--darkgreen-green,
+  &--lightgreen-green,
+  &--lightgreen-darkgreen,
+  &--lightblue-blue,
+  &--blue-lightblue,
+  &--yellow,
+  &--red-orange,
+  &--orange-red,
+  &--yellow-green,
+  &--green-yellow {
     color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+
+  &--darkgreen-green {
     background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%);
   }
   &--lightgreen-green {
-    color: #fff;
     background: linear-gradient(52deg, #8ac53f 18%, #3cbd0d 100%);
   }
   &--lightgreen-darkgreen {
-    color: #fff;
     background: linear-gradient(52deg, #8ac53f 18%, #17ab21 100%);
   }
   &--lightblue-blue {
-    color: #fff;
     background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%);
   }
   &--blue-lightblue {
-    color: #fff;
     background: linear-gradient(52deg, #005dbd 18%, #00aaff 100%);
   }
   &--yellow {
-    color: #fff;
     background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%);
   }
   &--red-orange {
-    color: #fff;
     background: linear-gradient(52deg, #e84242 18%, #ef7f1a 100%);
   }
   &--orange-red {
-    color: #fff;
     background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%);
   }
   &--yellow-green {
-    color: #fff;
     background: linear-gradient(to right, #fecc00 0%, #8ac53f 100%);
   }
   &--green-yellow {
-    color: #fff;
     background: linear-gradient(to right, #8ac53f 0%, #fecc00 100%);
   }
   &--gray-bg {
