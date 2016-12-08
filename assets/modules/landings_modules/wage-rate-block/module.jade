@@ -1,0 +1,7 @@
+.wage-rate-block
+	each item in wageArray
+		.wage-rate-block__column
+			.wage-rate-block__title= item.text
+			.wage-rate-block__value
+				for value in item.price
+					span= value

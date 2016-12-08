@@ -49,6 +49,10 @@
     color: #fff;
     background: linear-gradient(to right, #8ac53f 0%, #fecc00 100%);
   }
+  &--yellow-red {
+    color: #fff;
+    background: linear-gradient(to right, #fecc00 0%, #e84242 100%);
+  }
   &--gray-bg {
     background: #f7f8f8;
   }
@@ -158,6 +162,10 @@
 .gr-green-yellow {
   color: #fff;
   background: linear-gradient(52deg, #8ac53f 0%, #fecc00 100%);
+}
+.gr-yellow-red {
+  color: #fff;
+  background: linear-gradient(52deg, #fecc00 0%, #e84242 100%);
 }
 
 .description-link {

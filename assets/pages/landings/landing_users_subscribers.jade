@@ -1,0 +1,79 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-red-orange"//gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "yellow-red" //yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Подписчикам"
+	-
+		var headText =[
+			'Будьте в курсе биржевых трендов. Оформите подписку и получите доступ к просмотру торгов в режиме реального времени без 15-минутной задержки.'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Вендорам'
+			}
+			
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		
+		
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Регистрация
+			.landing-section__text
+				p.
+					Регистрация на доступ к просмотру торговой информации в режиме реального времени. Здесь Вы можете оформить подписку на доступ к просмотру торгов в режиме реального времени, без 15-минутной задержки.
+			.landing-section__login-btn
+				a(href="#").btn.btn--gradient.btn--yellow-red: span Зарегистрироваться
+
+	section.landing-section
+		.container
+			h2 Ставка сбора на просмотр торговой информации через интернет-сайт:
+			
+			-
+				var wageArray = [
+					{
+						'text': 'Для резидентов РК',
+						'price': ['5', 'МРП']
+					},
+					{
+						'text': 'Для нерезидентов РК',
+						'price': ['70', 'USD']
+					}
+				]
+			include ../../modules/landings_modules/wage-rate-block/module
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Договор-оферта
+			.landing-section__text
+				p.
+					Пожалуйста, ознакомьтесь с #[a(href="#") договором офертой], перед #[a(href="#") регистрацией] на доступ к просмотру торгов в режиме реального времени.
+
+	section.landing-section.gr-yellow-red
+		.container
+			h2 Свяжитесь с нами
+			.landing-section__text
+				div Для более подробной информации свяжитесь с нами:
+				div
+					i.fa.fa-phone 
+					|&nbsp; +7 (727) 237 53 20 
+				div
+					i.fa.fa-envelope&nbsp;&nbsp; 
+					a(href="#") info@kase.kz
+				
+				
+
+
+
+
+
+
+
+

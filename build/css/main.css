@@ -513,6 +513,13 @@ a.up:after {
       .btn.btn--gradient.btn--yellow-green:before {
         background: -webkit-linear-gradient(left, #3cbd0d 0%, #d5da0a 100%);
         background: linear-gradient(to right, #3cbd0d 0%, #d5da0a 100%); }
+    .btn.btn--gradient.btn--yellow-red {
+      background: #fecc00;
+      background: -webkit-linear-gradient(left, #fecc00 0%, #e84541 100%);
+      background: linear-gradient(to right, #fecc00 0%, #e84541 100%); }
+      .btn.btn--gradient.btn--yellow-red:before {
+        background: -webkit-linear-gradient(left, #e84541 0%, #fecc00 100%);
+        background: linear-gradient(to right, #e84541 0%, #fecc00 100%); }
     .btn.btn--gradient span {
       position: relative; }
   .btn.btn-transparent {
@@ -3697,6 +3704,10 @@ table.dataTable.no-footer {
     color: #fff;
     background: -webkit-linear-gradient(left, #8ac53f 0%, #fecc00 100%);
     background: linear-gradient(to right, #8ac53f 0%, #fecc00 100%); }
+  .landing-section--yellow-red {
+    color: #fff;
+    background: -webkit-linear-gradient(left, #fecc00 0%, #e84242 100%);
+    background: linear-gradient(to right, #fecc00 0%, #e84242 100%); }
   .landing-section--gray-bg {
     background: #f7f8f8; }
   .landing-section h2 {
@@ -3804,6 +3815,11 @@ table.dataTable.no-footer {
   color: #fff;
   background: -webkit-linear-gradient(38deg, #8ac53f 0%, #fecc00 100%);
   background: linear-gradient(52deg, #8ac53f 0%, #fecc00 100%); }
+
+.gr-yellow-red {
+  color: #fff;
+  background: -webkit-linear-gradient(38deg, #fecc00 0%, #e84242 100%);
+  background: linear-gradient(52deg, #fecc00 0%, #e84242 100%); }
 
 .description-link {
   display: inline;
@@ -4615,9 +4631,9 @@ table.dataTable.no-footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stertch;
-        -ms-flex-align: stertch;
-            align-items: stertch; }
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
     .contacts-block--one-col {
       display: block;
       padding: 40px 136px; }
@@ -5097,3 +5113,53 @@ table.dataTable.no-footer {
   font-family: Arial, sans-serif;
   font-size: 1000%;
   line-height: 1; }
+
+.wage-rate-block {
+  font-size: 114.28571%; }
+  .wage-rate-block__column {
+    margin-bottom: 30px; }
+    .wage-rate-block__column .wage-rate-block__title {
+      text-align: center;
+      background: #f7f8f8;
+      padding: 25px 15px; }
+    .wage-rate-block__column .wage-rate-block__value {
+      text-align: center;
+      color: #fff;
+      background: -webkit-linear-gradient(38deg, #ef7f1a 18%, #e84242 100%);
+      background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%);
+      padding: 25px 15px; }
+      .wage-rate-block__column .wage-rate-block__value span:first-child {
+        font-size: 26px;
+        padding-right: 8px; }
+      .wage-rate-block__column .wage-rate-block__value span {
+        font-size: 20px; }
+
+@media (min-width: 649px) and (max-width: 768px) {
+  .wage-rate-block {
+    font-size: 32px; }
+    .wage-rate-block__column {
+      margin-bottom: 30px; }
+      .wage-rate-block__column .wage-rate-block__title {
+        padding: 50px 30px; }
+      .wage-rate-block__column .wage-rate-block__value {
+        padding: 50px 30px; }
+        .wage-rate-block__column .wage-rate-block__value span:first-child {
+          font-size: 52px;
+          padding-right: 16px; }
+        .wage-rate-block__column .wage-rate-block__value span {
+          font-size: 40px; } }
+
+@media (min-width: 769px) {
+  .wage-rate-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .wage-rate-block__column {
+      min-width: 262px;
+      max-width: 262px;
+      margin-right: 30px; } }

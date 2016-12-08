@@ -48,6 +48,14 @@
         background: linear-gradient(to right, #3cbd0d 0%, #d5da0a 100%);
       }     
     }
+    &.btn--yellow-red {
+      background: #fecc00;
+      background: linear-gradient(to right, #fecc00 0%,#e84541  100%);
+      &:before {
+        background: linear-gradient(to right, #e84541 0%, #fecc00 100%);
+      }     
+    }
+   
     span {
       position: relative;
     }
