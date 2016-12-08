@@ -3663,45 +3663,40 @@ table.dataTable.no-footer {
   color: #383838;
   line-height: 1.75;
   text-align: center;
+  position: relative;
   padding: 60px 0 60px; }
+  .landing-section--darkgreen-green, .landing-section--lightgreen-green, .landing-section--lightgreen-darkgreen, .landing-section--lightblue-blue, .landing-section--blue-lightblue, .landing-section--yellow, .landing-section--red-orange, .landing-section--orange-red, .landing-section--yellow-green, .landing-section--green-yellow {
+    color: #fff; }
+    .landing-section--darkgreen-green a, .landing-section--lightgreen-green a, .landing-section--lightgreen-darkgreen a, .landing-section--lightblue-blue a, .landing-section--blue-lightblue a, .landing-section--yellow a, .landing-section--red-orange a, .landing-section--orange-red a, .landing-section--yellow-green a, .landing-section--green-yellow a {
+      color: #fff; }
   .landing-section--darkgreen-green {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #087e38 18%, #8ac53f 100%);
     background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%); }
   .landing-section--lightgreen-green {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #8ac53f 18%, #3cbd0d 100%);
     background: linear-gradient(52deg, #8ac53f 18%, #3cbd0d 100%); }
   .landing-section--lightgreen-darkgreen {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #8ac53f 18%, #17ab21 100%);
     background: linear-gradient(52deg, #8ac53f 18%, #17ab21 100%); }
   .landing-section--lightblue-blue {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #00aaff 18%, #005dbd 100%);
     background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%); }
   .landing-section--blue-lightblue {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #005dbd 18%, #00aaff 100%);
     background: linear-gradient(52deg, #005dbd 18%, #00aaff 100%); }
   .landing-section--yellow {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #fecc00 18%, #ff9000 100%);
     background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%); }
   .landing-section--red-orange {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #e84242 18%, #ef7f1a 100%);
     background: linear-gradient(52deg, #e84242 18%, #ef7f1a 100%); }
   .landing-section--orange-red {
-    color: #fff;
     background: -webkit-linear-gradient(38deg, #ef7f1a 18%, #e84242 100%);
     background: linear-gradient(52deg, #ef7f1a 18%, #e84242 100%); }
   .landing-section--yellow-green {
-    color: #fff;
     background: -webkit-linear-gradient(left, #fecc00 0%, #8ac53f 100%);
     background: linear-gradient(to right, #fecc00 0%, #8ac53f 100%); }
   .landing-section--green-yellow {
-    color: #fff;
     background: -webkit-linear-gradient(left, #8ac53f 0%, #fecc00 100%);
     background: linear-gradient(to right, #8ac53f 0%, #fecc00 100%); }
   .landing-section--yellow-red {
@@ -3716,6 +3711,16 @@ table.dataTable.no-footer {
     font-weight: 700;
     margin: 0 auto 25px;
     text-transform: uppercase; }
+  .landing-section--with-image [class*="gr-"] {
+    width: 100%;
+    height: 294px;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .landing-section--with-image .container {
+    position: relative;
+    z-index: 1;
+    color: #fff; }
 
 #gradientMask {
   position: absolute;
@@ -5109,10 +5114,68 @@ table.dataTable.no-footer {
   .download-links__link {
     display: block; } }
 
+.list-slider {
+  font-size: 16px;
+  text-align: left; }
+
 .list-slider__number {
   font-family: Arial, sans-serif;
-  font-size: 1000%;
-  line-height: 1; }
+  font-size: 140px;
+  line-height: 0.5; }
+  .list-slider__number svg {
+    height: 102px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.list-slider__item {
+  position: relative;
+  padding-top: 54px; }
+
+.list-slider__title {
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  z-index: 1; }
+
+.list-slider__text {
+  position: relative;
+  z-index: 1; }
+
+.slick-dots {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  padding-top: 20px; }
+  .slick-dots li {
+    display: inline-block;
+    margin-left: 8px;
+    margin-bottom: 8px; }
+    .slick-dots li:first-child {
+      margin-left: 0; }
+  .slick-dots button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 1px solid rgba(56, 56, 56, 0.3);
+    border-radius: 50%;
+    outline: none;
+    background: transparent;
+    -webkit-transition: all 300ms;
+    transition: all 300ms; }
+  .slick-dots .slick-active button {
+    border-color: #41b649;
+    background: #41b649; }
+
+@media (min-width: 540px) {
+  .list-slider__item {
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 .wage-rate-block {
   font-size: 114.28571%; }

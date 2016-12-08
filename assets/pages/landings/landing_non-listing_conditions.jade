@@ -64,46 +64,10 @@ block content
 					}
 				]
 			include ../../modules/landings_modules/list-slider/module
-	section.landing-section.gr-yellow-green
+	section.landing-section.landing-section--with-image
+		.gr-yellow-green
 		.container
-			h2 Руководство
+			h2 Процедура допуска
 
-			-
-				var textArray = [
-					{
-						'text': 'Руководство пользователя системы is2in',
-						'btnText' : 'Посмотреть список'
-					},
-					{
-						'text': 'Руководство по использованию ЭЦП для систем "is2in" и "eTransfer.kz"',
-						'btnText' : 'Посмотреть список'
-					}
-				]
-
-			include ../../modules/landings_modules/two-col-block/module
-
-	section.landing-section
-		.container
-			h2.
-				система электронного документооборота is2in
-			.landing-section__text
-				p.
-					Раскрытие информации инициаторами допуска осуществляется с использованием системы электронного документооборота is2in.
-			img(src="images/landing-listing__scheme.png")
-
-	section.landing-section.landing-section--gray-bg
-		.container
-			h2 Если компания или член kase не может предоставить KASE информацию
-
-			.landing-section__text
-				p.
-					Если компании или член KASE по каким-либо причинам не могут предоставить KASE информацию, подлежащую раскрытию в установленные сроки через систему is2in, компаниям или членам KASE следует:
-				-var markerColor = "green"
-				-
-					var listItems = [
-						'письменно уведомить KASE о невозможности передачи информации с указанием причин и принятых мер по их устранению',
-						'предоставить KASE данную информацию другими возможными способами (по электронной почте, на бумажных носителях)'
-					]
-
-				include ../../modules/landings_modules/list-color/module
-							
+			.landing-section__image
+				img(src="images/landing-listing__admittance.png", alt="")

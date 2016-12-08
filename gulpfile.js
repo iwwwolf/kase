@@ -43,6 +43,17 @@ var path = {
 
 /* собрать jade в html */
 
+function log(error) {
+    console.log([
+        '',
+        "----------ERROR MESSAGE START----------",
+        ("[" + error.name + " in " + error.plugin + "]"),
+        error.message,
+        "----------ERROR MESSAGE END----------",
+        ''
+    ].join('\n'));
+    this.end();
+}
 
 gulp.task('html:build', function () {
 
@@ -54,6 +65,7 @@ gulp.task('html:build', function () {
         pretty: true,
         locals: config
     }))
+    .on('error', log)
     .pipe(flatten())
     .pipe(gulp.dest(path.build.html))
 });
