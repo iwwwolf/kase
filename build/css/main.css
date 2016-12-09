@@ -3540,9 +3540,11 @@ table.dataTable.no-footer {
   background: transparent;
   color: #a8b1ba; }
   .pagination__page a {
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     line-height: 20px;
+    border-radius: 12px;
+    padding: 0 3px;
     color: #a8b1ba; }
     .pagination__page a:hover {
       color: #45464f;
@@ -3743,7 +3745,7 @@ table.dataTable.no-footer {
     font-size: $fz14;
   } */ }
   .landing-section__text p {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     /* &:last-of-type {
       margin-bottom: 0;
     } */ }
