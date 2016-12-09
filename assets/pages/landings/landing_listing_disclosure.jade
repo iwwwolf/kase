@@ -1,0 +1,115 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-lightgreen-green" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "green-yellow" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Листинговым компаниям"
+	-
+		var headText =[
+			'Статус листинговой компании – новый важный этап в жизни вашей компании.',
+			'Ознакомьтесь подробнее с доступными возможностями привлечения капитала и с требованиями по раскрытию информации.'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Нелистинговые ценные бумаги'
+			},
+			{
+				'position': 'right',
+				'title': 'Будущим листинговым компаниям'
+			}
+		]
+
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+
+		-
+			var menuItems = [
+				{
+					'title': 'Раскрытие информации',
+					'active': true
+				},
+				{
+					'title': 'Кабинет эмитента'
+				},
+				{
+					'title': 'Размещение на KASE'
+				},
+				{
+					'title': 'IPO'
+				},
+				{
+					'title': 'Информационная поддержка'
+				},
+				{
+					'title': 'Институт маркет-мейкеров'
+				},
+				{
+					'title': 'Контакты'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section
+		.container
+			h2 Информационная прозрачность
+			.landing-section__text
+				p.
+					Раскрытие информации на фондовом рынке необходимое условие не только для успешного размещения ценных бумаг, но и поддержания их ликвидности в процессе дальнейшего обращения на фондовом рынке. Повышение уровня информационной прозрачности облегчает привлечение дополнительных средств и повышает доверие акционеров и потенциальных инвесторов.
+
+	section.landing-section.gr-yellow-green
+		.container
+			h2 Перечень документов
+
+			-
+				var textArray = [
+					{
+						'text': 'Перечень документов, подлежащих предоставлению инициаторами допуска ценных бумаг',
+						'btnText' : 'Посмотреть список'
+					},
+					{
+						'text': 'Перечень документов, подлежащих предоставлению листинговыми компаниями',
+						'btnText' : 'Посмотреть список'
+					}
+				]
+
+			include ../../modules/landings_modules/two-col-block/module
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Дипломанты номинаций
+			.landing-section__text
+				p.
+					Ежегодно KASE проводит награждение листинговых компаний, демонстрирующих наилучшие примеры делового поведения на рынке ценных бумаг в части раскрытия информации о себе и своей деятельности.
+			
+			.landing-white-block
+				.landing-white-block__title Дипломанты 2015 года
+
+				-
+					var circleBlockList = [
+						{
+							'title': 'АО "Народный сберегательный банк Казахстана"',
+							'img': 'img-content/img-3.png'
+						},
+						{
+							'title': 'АО "АТФБанк"',
+							'img': 'img-content/img-4.png'
+						},
+						{
+							'title': 'АО "Кселл"',
+							'img': 'img-content/img-5.png'
+						},
+						{
+							'title': 'NOSTRUM OIL GAS PLC',
+							'img': 'img-content/img-6.png'
+						}
+					]
+
+					var readMore = true
+
+				include ../../modules/landings_modules/circle-block/module

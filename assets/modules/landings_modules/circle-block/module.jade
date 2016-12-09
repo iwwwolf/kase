@@ -1,0 +1,15 @@
+.circle-block__parent
+
+	each item in circleBlockList
+
+		.circle-block
+			.circle-block__border.gr-lightgreen-darkgreen
+				.circle-block__border-content
+					if (typeof(item.img) !== 'undefined')
+						img(src= item.img, alt="")
+
+			if (typeof(item.title) !== 'undefined')
+				.circle-block__title= item.title
+if (readMore == true)
+	.landing-white-block__redmore
+		a(href="#") Посмотреть все

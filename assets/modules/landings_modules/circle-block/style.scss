@@ -1,0 +1,38 @@
+.circle-block {
+	margin-bottom: 30px;
+}
+
+.circle-block__border {
+	display: block;
+	width: 126px;
+	height: 126px;
+	margin: 0 auto 15px;
+	border-radius: 50%;
+	padding: 2px;
+}
+.circle-block__border-content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.circle-block__title {
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+@media (min-width: 540px){
+	.circle-block__parent {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.circle-block {
+		width: 156px;
+		padding: 0 5px;
+	}
+}
