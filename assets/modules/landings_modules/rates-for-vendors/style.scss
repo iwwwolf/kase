@@ -1,0 +1,75 @@
+.rates-for-vendors{
+	font-size: 15px;
+	.rates-for-vendors__title{
+		background: #e8edf0;
+		padding: 9px;
+	}
+	.rates-for-vendors__row{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.rates-for-vendors__block{
+		max-width: 320px;
+		min-width: 320px;
+		padding: 10px 0 30px 0;
+	}
+	.rates-for-vendors__valueBlock{
+		max-width: 150px;
+		min-width: 150px;
+
+	}
+	.rates-for-vendors__subtitle{
+		color: #ef7f1a;
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.rates-for-vendors__price{
+		font-weight: 700;
+		span:first-child{
+			font-size: 26px;
+			padding-right: 8px;
+		}
+		span{
+			font-size: 20px;
+		}
+	}
+	.rates-for-vendors__remark{
+		font-size: 12px;
+		color: #828282;
+		line-height: 1.3;
+	}	
+}
+@media (min-width: 649px) and (max-width: 768px) {
+	.rates-for-vendors{
+		font-size: 30px;
+	}
+	.rates-for-vendors__subtitle{
+		color: #ef7f1a;
+		font-size: 40px;
+		font-weight: 700;
+	}
+	.rates-for-vendors__price{
+		font-weight: 700;
+		span:first-child{
+			font-size: 52px;
+			padding-right: 16px;
+		}
+		span{
+			font-size: 40px;
+		}
+	}
+	.rates-for-vendors__remark{
+		font-size: 24px;
+		color: #828282;
+	}
+}
+@media (min-width: 768px) {
+	.rates-for-vendors{
+		.rates-for-vendors__block{
+			padding: 10px 15px 30px 0;
+		}
+	
+	}
+	
+}

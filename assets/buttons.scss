@@ -55,6 +55,16 @@
         background: linear-gradient(to right, #e84541 0%, #fecc00 100%);
       }     
     }
+    &.btn--red-orange {
+      background: #e84242;
+      background: linear-gradient(to right, #e84242 18%, #ef7f1a 100%);
+      &:before {
+        background: linear-gradient(to right, #ef7f1a 0%, #e84242 100%);
+      }
+      &.btn--border {
+        border: 1px solid #fff;
+      }     
+    }
    
     span {
       position: relative;

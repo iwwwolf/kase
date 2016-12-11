@@ -1,0 +1,34 @@
+.users-vendors{
+	font-size: 16px;
+	text-align: left;
+	max-width: 750px;
+	margin: 0 auto;
+}
+.users-vendors__number {
+	font-family: Arial, sans-serif;
+	font-size: 140px;
+	line-height: 0.5;
+	opacity: 0.2;
+	svg {
+		height:  102px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.users-vendors__item {
+	position: relative;
+	padding-top: 10px;
+	padding-left: 38px;
+}
+.users-vendors__title {
+	font-size: 16px;
+	position: relative;
+	z-index: 1;
+	min-height: 110px;
+
+}
+.users-vendors__text {
+	position: relative;
+	z-index: 1;
+}

@@ -1,0 +1,19 @@
+.rates-for-vendors
+	each item in ratesArray
+		.rates-for-vendors__title= item.title
+		.rates-for-vendors__row
+			each itemBlock in item.block
+				.rates-for-vendors__block
+					.rates-for-vendors__subtitle= itemBlock.subtitle
+					.rates-for-vendors__row
+						each itemPrice in itemBlock.priceBlock
+							.rates-for-vendors__valueBlock
+								.rates-for-vendors__price
+									for value in itemPrice.price
+										span= value
+								if (typeof(itemPrice.remark) !== 'undefined')
+									.rates-for-vendors__remark= itemPrice.remark
+
+
+
+			

@@ -1,0 +1,12 @@
+.users-vendors
+	each item, index in informationProducts
+		div
+			.users-vendors__item
+				.users-vendors__number
+					svg
+						text(fill="url(#nGradient)", y="100px")= index+1
+				if (typeof(item.title) !== 'undefined')
+					.users-vendors__title= item.title
+
+				if (typeof(item.text) !== 'undefined')
+					.users-vendors__text= item.text

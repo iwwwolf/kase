@@ -6,68 +6,226 @@ block variables
 block content
 	-var headStyle = "gr-red-orange"//gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
 	-var rectStyle = "yellow-red" //yellow-green; yellow-red; blue-green; green-yellow;
-	-var rectTitle = "Подписчикам"
+	-var rectTitle = "Вендорам"
 	-
 		var headText =[
-			'Будьте в курсе биржевых трендов. Оформите подписку и получите доступ к просмотру торгов в режиме реального времени без 15-минутной задержки.'
+			'Для того, чтобы стать вендором Биржи необходимо подписать с Биржей Соглашение о распространении информации.'
 		]
 
 	-
-		var headLinks = [
+		var headLinks = [ 
 			{
-				'position': 'left',
-				'title': 'Вендорам'
+				'position': 'right',
+				'title': 'Подписчикам'
 			}
 			
 		]
 	.relative
 		include ../../modules/landings_modules/landing-head/module
-		
-		
-	section.landing-section.landing-section--gray-bg
-		.container
-			h2 Регистрация
-			.landing-section__text
-				p.
-					Регистрация на доступ к просмотру торговой информации в режиме реального времени. Здесь Вы можете оформить подписку на доступ к просмотру торгов в режиме реального времени, без 15-минутной задержки.
-			.landing-section__login-btn
-				a(href="#").btn.btn--gradient.btn--yellow-red: span Зарегистрироваться
-
+	svg(id="gradientMask")
+		defs
+			pattern(id="nGradient", patternUnits="userSpaceOnUse", width="150", height="150")
+				image(xlink:href="images/number-gradient-red-orange.png", width="150", height="150")
+	
 	section.landing-section
 		.container
-			h2 Ставка сбора на просмотр торговой информации через интернет-сайт:
-			
-			-
-				var wageArray = [
-					{
-						'text': 'Для резидентов РК',
-						'price': ['5', 'МРП']
-					},
-					{
-						'text': 'Для нерезидентов РК',
-						'price': ['70', 'USD']
-					}
-				]
-			include ../../modules/landings_modules/wage-rate-block/module
-	section.landing-section.landing-section--gray-bg
-		.container
-			h2 Договор-оферта
+			h2 Информационные продукты
 			.landing-section__text
 				p.
-					Пожалуйста, ознакомьтесь с #[a(href="#") договором офертой], перед #[a(href="#") регистрацией] на доступ к просмотру торгов в режиме реального времени.
+					Биржа предлагает вендорам информацию в виде следующих стандартизированных информационных продуктов:
+			-
+				var informationProducts = [
+					{
+						'title': 'Торговая информация в режиме реального времени - предоставляется Биржей непрерывным потоком в течение каждого торгового дня. Допустимая техническая задержка между моментами генерации такой информации и отправки ее отправителям составляет не более 3 минут.'
+					},
+					{
+						'title': 'Задержанная торговая информация - предоставляется Биржей непрерывным потоком в течение каждого торгового дня. Техническая задежка между моментами генерации информации и отправки ее потребителям составляет не менее 15 минут.'
+					},
+					{
+						'title': 'Информация об итогах торгов - поставляется Биржей через определенные промежутки времени, устанавливаемые технической спецификацией данного информационного продукта.'
+					},
+					{
+						'title': 'Архивная информация - предоставляется Биржей по запросу в виде файлов в формате, аналогичном формату файлов информации об итогах торгов, в виде реестра заявок и реестра сделок.'
+					}
+				]
+
+			include ../../modules/landings_modules/vendors/module
 
 	section.landing-section.gr-yellow-red
 		.container
 			h2 Свяжитесь с нами
-			.landing-section__text
-				div Для более подробной информации свяжитесь с нами:
+			div Для более подробной информации свяжитесь с нами:
+			div
+				i.fa.fa-phone 
+				|&nbsp; +7 (727) 237 53 20 
+			div
+				i.fa.fa-envelope &nbsp;&nbsp; 
+				a(href="#") info@kase.kz
+	section.landing-section
+		.container
+			h2 Тарифы для вендоров
+			-
+				var ratesArray = [
+					{
+				 		'title': 'Торговая информация в режиме реального времени (все рынки)',
+				 		'block': [
+				 			{
+				 				'subtitle': 'Иностранный вендор',
+				 				'priceBlock': [
+				 					{
+				 						'price': ['1500', 'USD'],
+				 						'remark': 'За право распространения'
+				 					},
+				 					{
+										'price': ['130', 'МРП'],
+										'remark': 'За каждого конечного пользователя'
+				 					}
+				 				]
+				 			},
+				 			{
+				 				'subtitle': 'Локальный вендор',
+				 				'priceBlock': [
+				 					{
+				 						'price': ['65', 'USD'],
+				 						'remark': 'без дополнительной уплаты комиссионных сборов'
+				 					},
+				 					{
+				 						'price': ['4', 'МРП'],
+				 						'remark': 'с дополнительной уплатой комиссионных сборов'
+				 					}
+				 				]
+				 			}
+						]
+					},
+					{
+				 		'title': 'Торговая информация в режиме реального времени (все рынки) через мобильные приложения',
+				 		'block': [
+				 			{
+				 				'subtitle': 'Ежемесячный сбор',
+				 				'priceBlock': [
+				 					{
+										'price': ['60', 'МРП'],
+				 					}
+				 				]
+				 			},
+				 			{
+				 				'subtitle': 'Сбор за каждого пользователя',
+				 				'priceBlock': [
+				 					{
+				 						'price': ['4', 'МРП'],
+				 					}
+				 				]
+				 			}
+						]
+					},
+					{
+				 		'title': 'Задержанная торговая информация (все рынки)',
+				 		'block': [
+				 			{
+				 				'subtitle': 'Иностранный вендор',
+				 				'priceBlock': [
+				 					{
+										'price': ['900', 'USD'],
+				 					}
+				 				]
+				 			},
+				 			{
+				 				'subtitle': 'Локальный вендор',
+				 				'priceBlock': [
+				 					{
+				 						'price': ['60', 'МРП'],
+				 					}
+				 				]
+				 			}
+						]
+					},
+					{
+				 		'title': 'Информация об итогах торгов (все рынки)',
+				 		'block': [
+				 			{
+				 				'subtitle': 'Иностранный вендор',
+				 				'priceBlock': [
+				 					{
+										'price': ['400', 'USD'],
+				 					}
+				 				]
+				 			},
+				 			{
+				 				'subtitle': 'Локальный вендор',
+				 				'priceBlock': [
+				 					{
+				 						'price': ['20', 'МРП'],
+				 					}
+				 				]
+				 			}
+						]
+					},
+					{
+				 		'title': 'Торговая информация в режиме реального времени (все рынки)',
+				 		'block': [
+				 			{
+				 				'subtitle': 'Иностранный вендор',
+				 				'priceBlock': [
+				 					{
+				 						'price': ['1500', 'USD'],
+				 						'remark': 'Для внутреннего использования'
+				 					},
+				 					{
+										'price': ['130', 'МРП'],
+										'remark': 'Для распространения'
+				 					}
+				 				]
+				 			},
+				 			{
+				 				'subtitle': 'Локальный вендор',
+				 				'priceBlock': [
+				 					{
+				 						'price': ['65', 'USD'],
+				 						'remark': 'Для внутреннего использования'
+				 					},
+				 					{
+				 						'price': ['4', 'МРП'],
+				 						'remark': 'Для распространения'
+				 					}
+				 				]
+				 			}
+						]
+					}
+				]
+			include ../../modules/landings_modules/rates-for-vendors/module
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Биржа поддерживает следующие способы поставки информации вендорам:
+			.stock-vendors
 				div
-					i.fa.fa-phone 
-					|&nbsp; +7 (727) 237 53 20 
-				div
-					i.fa.fa-envelope &nbsp;&nbsp; 
-					a(href="#") info@kase.kz
+					.stock-vendors__icon
+						img(src="images/vendor-icon.svg", alt="")
+				ul.list-color.list-color--orange
+					li.
+						FIX (Financial Information eXchange) протокол
+					li.
+						FTP (File Transfer Protocol)
+					li.
+						Веб-сервисы
+	section.landing-section.gr-red-orange
+		.container
+			h2 Список вендоров
+			.landing-section__login-btn
+				a(href="#").btn.btn--gradient.btn--red-orange.btn--border: span Зарегистрироваться
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Материалы
+			.vendors-materials
+				-
+					var linkList = [
+						'Правила распространения биржевой информации  (12 КБ)',
+						'Положение об условиях коммерческого предоставления биржевой информации',
+					]
 				
+				include ../../modules/landings_modules/download-links/module
+
+			
 				
 
 

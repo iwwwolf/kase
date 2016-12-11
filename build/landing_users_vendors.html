@@ -303,12 +303,12 @@
       <div class="relative">
         <div class="landing-head gr-red-orange">
           <div class="landing-head__arrows-parent">
-            <div class="container"><a href="#" class="landing-head__arrow-link landing-head__arrow-link--left"><span>
-                  <svg version="1.1" id="leftArr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.501 35" enable-background="new 0 0 50.501 35" xml:space="preserve">
-                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M50.501,16.336v2.329H2.331v-2.329H50.501z"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M19.395,33.25L17.631,35L0,17.501l1.763-1.75L19.395,33.25z"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M19.395,1.751L1.763,19.25L0,17.501L17.631,0L19.395,1.751z"></path>
-                  </svg><span>Вендорам</span></span></a>
+            <div class="container"><a href="#" class="landing-head__arrow-link landing-head__arrow-link--right"><span>
+                  <svg version="1.1" id="rightArr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.501 35" enable-background="new 0 0 50.501 35" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M0,18.664v-2.329h48.17v2.329H0z"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M31.106,1.75L32.869,0l17.631,17.499l-1.763,1.75L31.106,1.75z"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M31.106,33.249L48.737,15.75l1.763,1.749L32.869,35L31.106,33.249z"></path>
+                  </svg><span>Подписчикам</span></span></a>
             </div>
           </div>
           <div class="container">
@@ -317,62 +317,255 @@
                 <div id="headRect" data-offset="3" class="head-rect head-rect--yellow-red">
                   <div class="flex">
                     <div data-offset="15" class="parallax">
-                      <h1>Подписчикам</h1>
+                      <h1>Вендорам</h1>
                     </div>
                   </div>
                 </div>
-                <h1 class="mobile">Подписчикам</h1>
+                <h1 class="mobile">Вендорам</h1>
               </div>
               <div class="landing-head__text">
-                <p>Будьте в курсе биржевых трендов. Оформите подписку и получите доступ к просмотру торгов в режиме реального времени без 15-минутной задержки.</p>
+                <p>Для того, чтобы стать вендором Биржи необходимо подписать с Биржей Соглашение о распространении информации.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section class="landing-section landing-section--gray-bg">
-        <div class="container">
-          <h2>Регистрация</h2>
-          <div class="landing-section__text">
-            <p>Регистрация на доступ к просмотру торговой информации в режиме реального времени. Здесь Вы можете оформить подписку на доступ к просмотру торгов в режиме реального времени, без 15-минутной задержки.</p>
-          </div>
-          <div class="landing-section__login-btn"><a href="#" class="btn btn--gradient btn--yellow-red"><span>Зарегистрироваться</span></a></div>
-        </div>
-      </section>
+      <svg id="gradientMask">
+        <defs>
+          <pattern id="nGradient" patternUnits="userSpaceOnUse" width="150" height="150">
+            <image xlink:href="images/number-gradient-red-orange.png" width="150" height="150"></image>
+          </pattern>
+        </defs>
+      </svg>
       <section class="landing-section">
         <div class="container">
-          <h2>Ставка сбора на просмотр торговой информации через интернет-сайт:</h2>
-          <div class="wage-rate-block">
-            <div class="wage-rate-block__column">
-              <div class="wage-rate-block__title">Для резидентов РК</div>
-              <div class="wage-rate-block__value"><span>5</span><span>МРП</span>
-              </div>
-            </div>
-            <div class="wage-rate-block__column">
-              <div class="wage-rate-block__title">Для нерезидентов РК</div>
-              <div class="wage-rate-block__value"><span>70</span><span>USD</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="landing-section landing-section--gray-bg">
-        <div class="container">
-          <h2>Договор-оферта</h2>
+          <h2>Информационные продукты</h2>
           <div class="landing-section__text">
-            <p>Пожалуйста, ознакомьтесь с <a href="#">договором офертой</a>, перед <a href="#">регистрацией</a> на доступ к просмотру торгов в режиме реального времени.
-              
-            </p>
+            <p>Биржа предлагает вендорам информацию в виде следующих стандартизированных информационных продуктов:</p>
+          </div>
+          <div class="users-vendors">
+            <div>
+              <div class="users-vendors__item">
+                <div class="users-vendors__number">
+                  <svg>
+                    <text fill="url(#nGradient)" y="100px">1</text>
+                  </svg>
+                </div>
+                <div class="users-vendors__title">Торговая информация в режиме реального времени - предоставляется Биржей непрерывным потоком в течение каждого торгового дня. Допустимая техническая задержка между моментами генерации такой информации и отправки ее отправителям составляет не более 3 минут.</div>
+              </div>
+            </div>
+            <div>
+              <div class="users-vendors__item">
+                <div class="users-vendors__number">
+                  <svg>
+                    <text fill="url(#nGradient)" y="100px">2</text>
+                  </svg>
+                </div>
+                <div class="users-vendors__title">Задержанная торговая информация - предоставляется Биржей непрерывным потоком в течение каждого торгового дня. Техническая задежка между моментами генерации информации и отправки ее потребителям составляет не менее 15 минут.</div>
+              </div>
+            </div>
+            <div>
+              <div class="users-vendors__item">
+                <div class="users-vendors__number">
+                  <svg>
+                    <text fill="url(#nGradient)" y="100px">3</text>
+                  </svg>
+                </div>
+                <div class="users-vendors__title">Информация об итогах торгов - поставляется Биржей через определенные промежутки времени, устанавливаемые технической спецификацией данного информационного продукта.</div>
+              </div>
+            </div>
+            <div>
+              <div class="users-vendors__item">
+                <div class="users-vendors__number">
+                  <svg>
+                    <text fill="url(#nGradient)" y="100px">4</text>
+                  </svg>
+                </div>
+                <div class="users-vendors__title">Архивная информация - предоставляется Биржей по запросу в виде файлов в формате, аналогичном формату файлов информации об итогах торгов, в виде реестра заявок и реестра сделок.</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="landing-section gr-yellow-red">
         <div class="container">
           <h2>Свяжитесь с нами</h2>
-          <div class="landing-section__text">
-            <div>Для более подробной информации свяжитесь с нами:</div>
-            <div><i class="fa fa-phone"> </i>&nbsp; +7 (727) 237 53 20 </div>
-            <div><i class="fa fa-envelope">&nbsp;&nbsp; </i><a href="#">info@kase.kz</a></div>
+          <div>Для более подробной информации свяжитесь с нами:</div>
+          <div><i class="fa fa-phone"> </i>&nbsp; +7 (727) 237 53 20 </div>
+          <div><i class="fa fa-envelope">&nbsp;&nbsp; </i><a href="#">info@kase.kz</a></div>
+        </div>
+      </section>
+      <section class="landing-section">
+        <div class="container">
+          <h2>Тарифы для вендоров</h2>
+          <div class="rates-for-vendors">
+            <div class="rates-for-vendors__title">Торговая информация в режиме реального времени (все рынки)</div>
+            <div class="rates-for-vendors__row">
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Иностранный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>1500</span><span>USD</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">За право распространения</div>
+                  </div>
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>130</span><span>МРП</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">За каждого конечного пользователя</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Локальный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>65</span><span>USD</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">без дополнительной уплаты комиссионных сборов</div>
+                  </div>
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>4</span><span>МРП</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">с дополнительной уплатой комиссионных сборов</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rates-for-vendors__title">Торговая информация в режиме реального времени (все рынки) через мобильные приложения</div>
+            <div class="rates-for-vendors__row">
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Ежемесячный сбор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>60</span><span>МРП</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Сбор за каждого пользователя</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>4</span><span>МРП</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rates-for-vendors__title">Задержанная торговая информация (все рынки)</div>
+            <div class="rates-for-vendors__row">
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Иностранный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>900</span><span>USD</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Локальный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>60</span><span>МРП</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rates-for-vendors__title">Информация об итогах торгов (все рынки)</div>
+            <div class="rates-for-vendors__row">
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Иностранный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>400</span><span>USD</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Локальный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>20</span><span>МРП</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rates-for-vendors__title">Торговая информация в режиме реального времени (все рынки)</div>
+            <div class="rates-for-vendors__row">
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Иностранный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>1500</span><span>USD</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">Для внутреннего использования</div>
+                  </div>
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>130</span><span>МРП</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">Для распространения</div>
+                  </div>
+                </div>
+              </div>
+              <div class="rates-for-vendors__block">
+                <div class="rates-for-vendors__subtitle">Локальный вендор</div>
+                <div class="rates-for-vendors__row">
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>65</span><span>USD</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">Для внутреннего использования</div>
+                  </div>
+                  <div class="rates-for-vendors__valueBlock">
+                    <div class="rates-for-vendors__price"><span>4</span><span>МРП</span>
+                    </div>
+                    <div class="rates-for-vendors__remark">Для распространения</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section landing-section--gray-bg">
+        <div class="container">
+          <h2>Биржа поддерживает следующие способы поставки информации вендорам:</h2>
+          <div class="stock-vendors">
+            <div>
+              <div class="stock-vendors__icon"><img src="images/vendor-icon.svg" alt=""></div>
+            </div>
+            <ul class="list-color list-color--orange">
+              <li>FIX (Financial Information eXchange) протокол</li>
+              <li>FTP (File Transfer Protocol)</li>
+              <li>Веб-сервисы</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section gr-red-orange">
+        <div class="container">
+          <h2>Список вендоров</h2>
+          <div class="landing-section__login-btn"><a href="#" class="btn btn--gradient btn--red-orange btn--border"><span>Зарегистрироваться</span></a></div>
+        </div>
+      </section>
+      <section class="landing-section landing-section--gray-bg">
+        <div class="container">
+          <h2>Материалы</h2>
+          <div class="vendors-materials">
+            <div class="download-links">
+              <div class="download-links__link"><a href="#"><i>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 19" style="enable-background:new 0 0 15 19;" xml:space="preserve">
+                      <path fill="#ffffff" d="M15,6.7h-4.3V0H4.3v6.7H0l7.5,7.8L15,6.7z M0,16.8V19h15v-2.2H0z"></path>
+                    </svg></i><span>Правила распространения биржевой информации  (12 КБ)</span></a></div>
+              <div class="download-links__link"><a href="#"><i>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 19" style="enable-background:new 0 0 15 19;" xml:space="preserve">
+                      <path fill="#ffffff" d="M15,6.7h-4.3V0H4.3v6.7H0l7.5,7.8L15,6.7z M0,16.8V19h15v-2.2H0z"></path>
+                    </svg></i><span>Положение об условиях коммерческого предоставления биржевой информации</span></a></div>
+            </div>
           </div>
         </div>
       </section>

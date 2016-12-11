@@ -26,6 +26,13 @@
 			}
 		}
 	}
+	&--orange {
+		li {
+			&:before {
+				background-color: #ee7e1a;
+			}
+		}
+	}
 	&--round-marker {
 		li {
 			&:before {
