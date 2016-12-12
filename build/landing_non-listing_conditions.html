@@ -363,42 +363,60 @@
       <section class="landing-section landing-section--gray-bg">
         <div class="container">
           <h2>Критерии для допуска</h2>
-          <svg id="gradientMask">
-            <defs>
-              <pattern id="nGradient" patternUnits="userSpaceOnUse" width="150" height="150">
-                <image xlink:href="images/number-gradient.png" width="150" height="150"></image>
-              </pattern>
-            </defs>
-          </svg>
-          <div id="listSlider" class="list-slider">
-            <div>
-              <div class="list-slider__item">
-                <div class="list-slider__number">
-                  <svg>
-                    <text fill="url(#nGradient)" y="100px">1</text>
-                  </svg>
-                </div>
-                <div class="list-slider__title">Ценные бумаги существуют как объекты гражданских прав</div>
-              </div>
+          <div class="list-slider__parent">
+            <svg id="gradientMask">
+              <defs>
+                <pattern id="nGradient" patternUnits="userSpaceOnUse" width="150" height="150">
+                  <image xlink:href="images/number-gradient-green.png" width="150" height="150"></image>
+                </pattern>
+              </defs>
+            </svg>
+            <div class="list-slider__arrows">
+              <button id="listSliderPrev" class="list-slider__prev">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.501 35" enable-background="new 0 0 50.501 35" xml:space="preserve">
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#383838" d="M50.501,16.336v2.329H2.331v-2.329H50.501z"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#383838" d="M19.395,33.25L17.631,35L0,17.501l1.763-1.75L19.395,33.25z"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#383838" d="M19.395,1.751L1.763,19.25L0,17.501L17.631,0L19.395,1.751z"></path>
+                </svg>
+              </button>
+              <button id="listSliderNext" class="list-slider__next">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.501 35" enable-background="new 0 0 50.501 35" xml:space="preserve">
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#383838" d="M0,18.664v-2.329h48.17v2.329H0z"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#383838" d="M31.106,1.75L32.869,0l17.631,17.499l-1.763,1.75L31.106,1.75z"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#383838" d="M31.106,33.249L48.737,15.75l1.763,1.749L32.869,35L31.106,33.249z"></path>
+                </svg>
+              </button>
             </div>
-            <div>
-              <div class="list-slider__item">
-                <div class="list-slider__number">
-                  <svg>
-                    <text fill="url(#nGradient)" y="100px">2</text>
-                  </svg>
+            <div id="listSlider" class="list-slider list-slider--nav-green">
+              <div>
+                <div class="list-slider__item">
+                  <div class="list-slider__number">
+                    <svg>
+                      <text fill="url(#nGradient)" y="100px">1</text>
+                    </svg>
+                  </div>
+                  <div class="list-slider__title">Ценные бумаги существуют как объекты гражданских прав</div>
                 </div>
-                <div class="list-slider__title">У ценных бумаг имеется национальный идентификационный номер (НИН) и/или международный идентификационный номер (ISIN)</div>
               </div>
-            </div>
-            <div>
-              <div class="list-slider__item">
-                <div class="list-slider__number">
-                  <svg>
-                    <text fill="url(#nGradient)" y="100px">3</text>
-                  </svg>
+              <div>
+                <div class="list-slider__item">
+                  <div class="list-slider__number">
+                    <svg>
+                      <text fill="url(#nGradient)" y="100px">2</text>
+                    </svg>
+                  </div>
+                  <div class="list-slider__title">У ценных бумаг имеется национальный идентификационный номер (НИН) и/или международный идентификационный номер (ISIN)</div>
                 </div>
-                <div class="list-slider__title">Отсутствуют законодательные или иные возможные запреты и ограничения, препятствующие свободному обращению ценных бумаг на организованном рынке Казахстана</div>
+              </div>
+              <div>
+                <div class="list-slider__item">
+                  <div class="list-slider__number">
+                    <svg>
+                      <text fill="url(#nGradient)" y="100px">3</text>
+                    </svg>
+                  </div>
+                  <div class="list-slider__title">Отсутствуют законодательные или иные возможные запреты и ограничения, препятствующие свободному обращению ценных бумаг на организованном рынке Казахстана</div>
+                </div>
               </div>
             </div>
           </div>

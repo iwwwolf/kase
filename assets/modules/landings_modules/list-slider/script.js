@@ -11,7 +11,9 @@ if($('#listSlider').length){
 				dots: true,
 				//dotsClass: 'great-slider__pagination',
 				infinite: false,
-				arrows: false,
+				arrows: true,
+				prevArrow: $('#listSliderPrev'),
+				nextArrow: $('#listSliderNext'),
 				autoplay: false,
 				adaptiveHeight: true
 			});
@@ -23,7 +25,9 @@ if($('#listSlider').length){
 				dots: true,
 				//dotsClass: 'great-slider__pagination',
 				infinite: false,
-				arrows: false,
+				arrows: true,
+				prevArrow: $('#listSliderPrev'),
+				nextArrow: $('#listSliderNext'),
 				autoplay: false,
 				adaptiveHeight: true
 			});

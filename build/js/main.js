@@ -716,7 +716,9 @@ $(document).ready(function(){
 					dots: true,
 					//dotsClass: 'great-slider__pagination',
 					infinite: false,
-					arrows: false,
+					arrows: true,
+					prevArrow: $('#listSliderPrev'),
+					nextArrow: $('#listSliderNext'),
 					autoplay: false,
 					adaptiveHeight: true
 				});
@@ -728,7 +730,9 @@ $(document).ready(function(){
 					dots: true,
 					//dotsClass: 'great-slider__pagination',
 					infinite: false,
-					arrows: false,
+					arrows: true,
+					prevArrow: $('#listSliderPrev'),
+					nextArrow: $('#listSliderNext'),
 					autoplay: false,
 					adaptiveHeight: true
 				});
