@@ -65,6 +65,7 @@ block content
 		.container
 			h2 Тарифы для вендоров
 			-
+				var ratesColor = "orange"
 				var ratesArray = [
 					{
 				 		'title': 'Торговая информация в режиме реального времени (все рынки)',
@@ -211,19 +212,25 @@ block content
 		.container
 			h2 Список вендоров
 			.landing-section__login-btn
-				a(href="#").btn.btn--gradient.btn--red-orange.btn--border: span Зарегистрироваться
+				a(href="#").btn.btn-transparent.btn-transparent--white: span Зарегистрироваться
 
 	section.landing-section.landing-section--gray-bg
 		.container
 			h2 Материалы
-			.vendors-materials
-				-
-					var linkList = [
-						'Правила распространения биржевой информации  (12 КБ)',
-						'Положение об условиях коммерческого предоставления биржевой информации',
-					]
-				
-				include ../../modules/landings_modules/download-links/module
+			-
+				var vendorsDownload = [
+					{
+						'text': 'Правила распространения биржевой информации',
+						'size': '(20 KB)'
+					},
+					{
+						'text': 'Положение об условиях коммерческого предоставления биржевой информации'
+					}
+					
+					
+				]
+			
+			include ../../modules/landings_modules/vendors-materials/module
 
 			
 				
