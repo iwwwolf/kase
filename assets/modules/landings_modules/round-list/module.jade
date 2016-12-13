@@ -1,0 +1,13 @@
+.round-list__parent
+	.round-list
+		each item in roundList
+			.round-list__item
+				if (typeof(item.categories) !== 'undefined')
+					.round-list__title= item.title
+						.round-list__tooltip
+							ul.round-list__sublist
+								for itemCat in item.categories
+									li: a(href="#")= itemCat
+				else
+					.round-list__title
+						a(href="#")= item.title

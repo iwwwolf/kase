@@ -140,7 +140,18 @@ gulp.task('build', [
 /* следить за изменениями */
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
-        gulp.start('html:build');
+        //console.log(event.path);
+        //gulp.start('html:build');
+        var config = require(__dirname + '/assets/content.json');
+        return gulp.src(event.path)
+            .pipe(gulpJade({
+                jade: jade,
+                pretty: true,
+                locals: config
+            }))
+            .on('error', log)
+            .pipe(flatten())
+            .pipe(gulp.dest(path.build.html))
     });
     watch(['assets/modules/quotes-info/*.jade'], function(event, cb) {
         gulp.start('quotesBlock:build');

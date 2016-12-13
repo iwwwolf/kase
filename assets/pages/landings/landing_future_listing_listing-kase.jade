@@ -1,0 +1,165 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-darkgreen-green" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "yellow-green" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Будущим листинговым компаниям"
+	-
+		var headText =[
+			'Узнайте больше о том, как разместить ценные бумаги на фондовой площадке Казахстана и какие возможности открываются перед компанией после прохождения листинга'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Нелистинговые ценные бумаги'
+			},
+			{
+				'position': 'right',
+				'title': 'Листинговым компаниям'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		
+		-
+			var menuItems = [
+				{
+					'title': 'О листинге'
+				},
+				{
+					'title': 'Листинг на KASE',
+					'active': true
+				},
+				{
+					'title': 'Размещение на KASE'
+				},
+				{
+					'title': 'IPO'
+				},
+				{
+					'title': 'Информационная поддержка'
+				},
+				{
+					'title': 'Контакты'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section
+		.container
+			h2 Структура официального списка и листинговые требования
+			
+			-
+				var roundList = [
+					{
+						'title': 'Акции',
+						'categories': ['Первая категория', 'Вторая категория']
+					},
+					{
+						'title': 'Долговые ценные бумаги',
+						'categories': [
+							'ДЦБ субъектов квазигосударственного сектора', 
+							'Иные ДЦБ',
+							'Буферная категория'
+						]
+					},
+					{
+						'title': 'Коммерческие облигации'
+					},
+					{
+						'title': 'Ценные бумаги инвестиционных фондов'
+					},
+					{
+						'title': 'Исламские ценные бумаги'
+					},
+					{
+						'title': 'Производные ценные бумаги'
+					},
+					{
+						'title': 'Государственные ценные бумаги'
+					},
+					{
+						'title': 'Ценные бумаги международных финансовых организациях'
+					}
+				]
+
+			include ../../modules/landings_modules/round-list/module
+				
+
+
+	section.landing-section.gr-yellow-green
+		.container
+			h2 Раскрытие информации при листинге
+
+			.landing-section__text
+				p.
+					Для листинга ценных бумаг в соответствии со статьей 24 Листинговых правил необходимо подать заявление и приложить #[a(href="#") следующие документы]
+
+			a.btn.btn-transparent.btn-transparent--white(href="#"): span Подать заявление
+
+	section.landing-section
+		.container
+			h2 Процедура листинга
+
+			.gradient-tabs
+				ul.nav(role="tablist")
+					li.gradient-tabs__tab.gradient-tabs__tab--green.active(role="presentation")
+						a(href="#mSpecial", role="tab", data-toggle="tab"): span Метод специализированных торгов
+
+					li.gradient-tabs__tab.gradient-tabs__tab--green(role="presentation")
+						a(href="#mSubscribe", role="tab", data-toggle="tab"): span Метод подписки
+
+					li.gradient-tabs__tab.gradient-tabs__tab--green(role="presentation")
+						a(href="#mDeal", role="tab", data-toggle="tab"): span Метод прямых сделок
+
+
+			.tab-content
+				.gratient-tabs__accordion-body.tab-pane.fade.active.in(id="mSpecial", role="tabpanel")
+					img(src="images/listing-process.jpg", alt="")
+
+
+				.gratient-tabs__accordion-body.tab-pane.fade(id="mSubscribe", role="tabpanel")
+					img(src="", alt="Нет картинки")
+
+
+				.gratient-tabs__accordion-body.tab-pane.fade(id="mDeal", role="tabpanel")
+					img(src="", alt="Нет картинки")
+
+			.gradient-tabs
+				#gradientTabsAccordion.gratient-tabs__accordion
+					.gratient-tabs__accordion-pane.panel.active
+						.gratient-tabs__accordion-link.gratient-tabs__accordion-link--green.active
+
+							a.collapsed(data-target="#mSpecialMob", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Метод специализированных торгов
+
+						.gratient-tabs__accordion-body.collapse(id="mSpecialMob", role="tabpanel")
+							img(src="images/listing-process.jpg", alt="")
+
+
+					.gratient-tabs__accordion-pane.panel
+						.gratient-tabs__accordion-link.gratient-tabs__accordion-link--green
+							a.collapsed(data-target="#mSubscribeMob", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Метод подписки
+						.gratient-tabs__accordion-body.collapse(id="mSubscribeMob", role="tabpanel")
+							img(src="", alt="Нет картинки")
+
+
+
+					.gratient-tabs__accordion-pane.panel
+						.gratient-tabs__accordion-link.gratient-tabs__accordion-link--green
+							a.collapsed(data-target="#mDealMob", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Метод прямых сделок
+						.gratient-tabs__accordion-body.collapse(id="mDealMob", role="tabpanel")
+							img(src="", alt="Нет картинки")
+
+	section.landing-section.landing-section--with-slider
+		.gr-darkgreen-green
+		.container
+			h2 Основные этапы подготовки
+			.landing-section__description.
+				Узнайте как поэтапно пройти листинг и ничего не упустить
+
+			.fefdafddsafdghfghdss3434dsfdgdf dfhgfjg sdgsd
