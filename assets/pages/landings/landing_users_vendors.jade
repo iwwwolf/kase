@@ -243,17 +243,22 @@ block content
 	section.landing-section.landing-section--gray-bg
 		.container
 			h2 Биржа поддерживает следующие способы поставки информации вендорам:
-			.stock-vendors
-				div
-					.stock-vendors__icon
-						img(src="images/vendor-icon.svg", alt="")
-				ul.list-color.list-color--orange
-					li.
-						FIX (Financial Information eXchange) протокол
-					li.
-						FTP (File Transfer Protocol)
-					li.
-						Веб-сервисы
+			-
+				var pictureList = [
+					{
+						'icon': 'vendor-icon.svg',
+						'list': [
+							'FIX (Financial Information eXchange) протокол',
+							'FTP (File Transfer Protocol)',
+							'Веб-сервисы'
+						]
+					}
+				]
+				var listColor= "orange"
+				var pictureSize= "small"
+			include ../../modules/landings_modules/list-picture-block/module
+
+
 	section.landing-section.gr-red-orange
 		.container
 			h2 Список вендоров
