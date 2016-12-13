@@ -4,11 +4,15 @@
 .list-color--blue li:before{
 	background-color: #0094de;
 }
+.list-color--yellow li:before{
+	background-color: #fecc00;
+}
 
 .list-picture-block{
 	margin-bottom: 25px;
 	.list-color {
-		color: rgba(56, 56, 56, 0.7);
+		//color: rgba(56, 56, 56, 0.7);
+		color: #383838;
 		margin-bottom: 0;
 		font-size: $fz16;
 		li {
@@ -24,6 +28,7 @@
 			}
 		}
 	}
+	
 }
 
 .list-picture-block__icon{

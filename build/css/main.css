@@ -3793,6 +3793,13 @@ table.dataTable.no-footer {
     .landing-section__list li:last-of-type {
       margin-bottom: 0; }
 
+.additional-info-footer {
+  position: relative;
+  padding: 20px;
+  color: #b0b0b0;
+  max-width: 600px;
+  margin: 0 auto; }
+
 .gr-darkgreen-green {
   color: #fff;
   background: -webkit-linear-gradient(38deg, #087e38 18%, #8ac53f 100%);
@@ -5159,6 +5166,24 @@ table.dataTable.no-footer {
 
 .list-slider__parent {
   position: relative; }
+  .list-slider__parent--whiteBlock {
+    color: initial; }
+    .list-slider__parent--whiteBlock .list-slider__number svg {
+      top: 20px; }
+    .list-slider__parent--whiteBlock .list-slider__text {
+      font-size: 14px;
+      padding-top: 10px; }
+    .list-slider__parent--whiteBlock .list-slider__item {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 10px;
+      height: 365px;
+      background-color: #FFF; }
+    .list-slider__parent--whiteBlock .list-slider--nav-yellow .slick-dots .slick-active button {
+      border-color: rgba(56, 56, 56, 0.3);
+      background: #fff; }
+    .list-slider__parent--whiteBlock .slick-initialized .slick-slide {
+      padding: 0 15px; }
 
 .list-slider {
   font-size: 16px;
@@ -5260,11 +5285,16 @@ table.dataTable.no-footer {
 @media (min-width: 540px) {
   .list-slider__item {
     padding-left: 15px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+  .list-slider__parent--whiteBlock .list-slider__item {
+    padding-left: 25px;
+    padding-right: 25px; } }
 
 @media (min-width: 992px) {
   .list-slider__arrows {
-    display: block; } }
+    display: block; }
+  .list-slider__parent--whiteBlock .list-slider__arrows {
+    display: none; } }
 
 .wage-rate-block {
   font-size: 114.28571%; }
@@ -5675,10 +5705,13 @@ table.dataTable.no-footer {
 .list-color--blue li:before {
   background-color: #0094de; }
 
+.list-color--yellow li:before {
+  background-color: #fecc00; }
+
 .list-picture-block {
   margin-bottom: 25px; }
   .list-picture-block .list-color {
-    color: rgba(56, 56, 56, 0.7);
+    color: #383838;
     margin-bottom: 0;
     font-size: 114.28571%; }
     .list-picture-block .list-color li {
