@@ -65,35 +65,43 @@ block content
 		.container
 			h2 Тарифы для вендоров
 			-
+				var ratesColor = "orange"
 				var ratesArray = [
 					{
 				 		'title': 'Торговая информация в режиме реального времени (все рынки)',
 				 		'block': [
 				 			{
 				 				'subtitle': 'Иностранный вендор',
-				 				'priceBlock': [
-				 					{
-				 						'price': ['1500', 'USD'],
-				 						'remark': 'За право распространения'
-				 					},
-				 					{
-										'price': ['130', 'МРП'],
-										'remark': 'За каждого конечного пользователя'
-				 					}
-				 				]
-				 			},
-				 			{
+								'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+						 						'price': ['1500', 'USD'],
+						 						'remark': 'За право распространения'
+						 					},
+						 					{
+												'price': ['130', 'МРП'],
+												'remark': 'За каждого конечного пользователя'
+						 					}
+					 					]
+						 			}
+								]
+					 		},{
 				 				'subtitle': 'Локальный вендор',
-				 				'priceBlock': [
+				 				'blockGroup': [
 				 					{
-				 						'price': ['65', 'USD'],
-				 						'remark': 'без дополнительной уплаты комиссионных сборов'
-				 					},
-				 					{
-				 						'price': ['4', 'МРП'],
-				 						'remark': 'с дополнительной уплатой комиссионных сборов'
-				 					}
-				 				]
+						 				'priceBlock': [
+						 					{
+						 						'price': ['65', 'USD'],
+						 						'remark': 'без дополнительной уплаты комиссионных сборов'
+						 					},
+						 					{
+						 						'price': ['4', 'МРП'],
+						 						'remark': 'с дополнительной уплатой комиссионных сборов'
+						 					}
+						 				]
+					 				}
+					 			]
 				 			}
 						]
 					},
@@ -101,20 +109,29 @@ block content
 				 		'title': 'Торговая информация в режиме реального времени (все рынки) через мобильные приложения',
 				 		'block': [
 				 			{
+
 				 				'subtitle': 'Ежемесячный сбор',
-				 				'priceBlock': [
-				 					{
-										'price': ['60', 'МРП'],
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+												'price': ['60', 'МРП'],
+						 					}
+				 						]
+						 			}
+								]
 				 			},
 				 			{
 				 				'subtitle': 'Сбор за каждого пользователя',
-				 				'priceBlock': [
-				 					{
-				 						'price': ['4', 'МРП'],
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+						 						'price': ['4', 'МРП'],
+						 					}
+						 				]
+						 			}
+								]
 				 			}
 						]
 					},
@@ -123,19 +140,29 @@ block content
 				 		'block': [
 				 			{
 				 				'subtitle': 'Иностранный вендор',
-				 				'priceBlock': [
-				 					{
-										'price': ['900', 'USD'],
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+												'price': ['900', 'USD'],
+						 					}
+						 				]
+						 			}
+								]
+				 				
 				 			},
 				 			{
 				 				'subtitle': 'Локальный вендор',
-				 				'priceBlock': [
-				 					{
-				 						'price': ['60', 'МРП'],
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+						 						'price': ['60', 'МРП'],
+						 					}
+						 				]
+						 			}
+								]
+				 				
 				 			}
 						]
 					},
@@ -144,19 +171,29 @@ block content
 				 		'block': [
 				 			{
 				 				'subtitle': 'Иностранный вендор',
-				 				'priceBlock': [
-				 					{
-										'price': ['400', 'USD'],
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+												'price': ['400', 'USD'],
+						 					}
+						 				]
+						 			}
+								]
+				 				
 				 			},
 				 			{
 				 				'subtitle': 'Локальный вендор',
-				 				'priceBlock': [
-				 					{
-				 						'price': ['20', 'МРП'],
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+						 						'price': ['20', 'МРП'],
+						 					}
+						 				]
+						 			}
+								]
+				 				
 				 			}
 						]
 					},
@@ -165,29 +202,39 @@ block content
 				 		'block': [
 				 			{
 				 				'subtitle': 'Иностранный вендор',
-				 				'priceBlock': [
-				 					{
-				 						'price': ['1500', 'USD'],
-				 						'remark': 'Для внутреннего использования'
-				 					},
-				 					{
-										'price': ['130', 'МРП'],
-										'remark': 'Для распространения'
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+						 						'price': ['1500', 'USD'],
+						 						'remark': 'Для внутреннего использования'
+						 					},
+						 					{
+												'price': ['130', 'МРП'],
+												'remark': 'Для распространения'
+						 					}
+						 				]
+						 			}
+								]
+				 				
 				 			},
 				 			{
 				 				'subtitle': 'Локальный вендор',
-				 				'priceBlock': [
-				 					{
-				 						'price': ['65', 'USD'],
-				 						'remark': 'Для внутреннего использования'
-				 					},
-				 					{
-				 						'price': ['4', 'МРП'],
-				 						'remark': 'Для распространения'
-				 					}
-				 				]
+				 				'blockGroup': [
+						 			{
+						 				'priceBlock': [
+						 					{
+						 						'price': ['65', 'USD'],
+						 						'remark': 'Для внутреннего использования'
+						 					},
+						 					{
+						 						'price': ['4', 'МРП'],
+						 						'remark': 'Для распространения'
+						 					}
+						 				]
+						 			}
+								]
+				 				
 				 			}
 						]
 					}
@@ -196,34 +243,45 @@ block content
 	section.landing-section.landing-section--gray-bg
 		.container
 			h2 Биржа поддерживает следующие способы поставки информации вендорам:
-			.stock-vendors
-				div
-					.stock-vendors__icon
-						img(src="images/vendor-icon.svg", alt="")
-				ul.list-color.list-color--orange
-					li.
-						FIX (Financial Information eXchange) протокол
-					li.
-						FTP (File Transfer Protocol)
-					li.
-						Веб-сервисы
+			-
+				var pictureList = [
+					{
+						'icon': 'vendor-icon.svg',
+						'list': [
+							'FIX (Financial Information eXchange) протокол',
+							'FTP (File Transfer Protocol)',
+							'Веб-сервисы'
+						]
+					}
+				]
+				var listColor= "orange"
+				var pictureSize= "small"
+			include ../../modules/landings_modules/list-picture-block/module
+
+
 	section.landing-section.gr-red-orange
 		.container
 			h2 Список вендоров
 			.landing-section__login-btn
-				a(href="#").btn.btn--gradient.btn--red-orange.btn--border: span Зарегистрироваться
+				a(href="#").btn.btn-transparent.btn-transparent--white: span Зарегистрироваться
 
 	section.landing-section.landing-section--gray-bg
 		.container
 			h2 Материалы
-			.vendors-materials
-				-
-					var linkList = [
-						'Правила распространения биржевой информации  (12 КБ)',
-						'Положение об условиях коммерческого предоставления биржевой информации',
-					]
-				
-				include ../../modules/landings_modules/download-links/module
+			-
+				var vendorsDownload = [
+					{
+						'text': 'Правила распространения биржевой информации',
+						'size': '(20 KB)'
+					},
+					{
+						'text': 'Положение об условиях коммерческого предоставления биржевой информации'
+					}
+					
+					
+				]
+			
+			include ../../modules/landings_modules/vendors-materials/module
 
 			
 				

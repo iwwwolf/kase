@@ -1,0 +1,9 @@
+each item in pictureList
+	.list-picture-block
+		div
+			if (typeof(item.icon) !== 'undefined')
+				div(class="list-picture-block__icon list-picture-block--" + pictureSize)
+					img(src="images/"+ item.icon, alt="")
+		ul(class="list-color list-color--" + listColor)
+			for listItem in item.list
+				li= listItem

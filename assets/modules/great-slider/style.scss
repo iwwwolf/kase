@@ -137,6 +137,22 @@
 		}
 	}
 }
+.slider-additional-info-bar{
+	position: relative;
+	padding: 20px;
+	color: #b0b0b0;
+}
+.slider-additional-info-bar:after{
+	width: 100%;
+    height: 1px;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, #cccccc 25%, #cccccc 40%, #cccccc 60%, #cccccc 75%, rgba(255, 255, 255, 0.1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, #cccccc 25%, #cccccc 40%, #cccccc 60%, #cccccc 75%, rgba(255, 255, 255, 0.1) 100%);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ""; 
+}
 
 @media (max-width: 768px) {
 	.great-slider__parent {

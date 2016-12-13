@@ -1,18 +1,25 @@
 .rates-for-vendors
 	each item in ratesArray
-		.rates-for-vendors__title= item.title
-		.rates-for-vendors__row
-			each itemBlock in item.block
-				.rates-for-vendors__block
-					.rates-for-vendors__subtitle= itemBlock.subtitle
-					.rates-for-vendors__row
-						each itemPrice in itemBlock.priceBlock
-							.rates-for-vendors__valueBlock
-								.rates-for-vendors__price
-									for value in itemPrice.price
-										span= value
-								if (typeof(itemPrice.remark) !== 'undefined')
-									.rates-for-vendors__remark= itemPrice.remark
+		div(class="rates-for-vendors__parent rates-for-vendors__parent--" + ratesColor)
+			.rates-for-vendors__title= item.title
+			.rates-for-vendors__row
+				each itemBlock in item.block
+					.rates-for-vendors__block
+						if (typeof(itemBlock.subtitle) !== 'undefined')
+							.rates-for-vendors__subtitle= itemBlock.subtitle
+						.rates-for-vendors__blockGroup
+							each itemBlockgroup in itemBlock.blockGroup
+								.rates-for-vendors__subBlock
+									if (typeof(itemBlockgroup.groupTitle) !== 'undefined')
+										.rates-for-vendors__groupTitle=itemBlockgroup.groupTitle
+									.rates-for-vendors__subRow
+										each itemPrice in itemBlockgroup.priceBlock
+											.rates-for-vendors__valueBlock
+												.rates-for-vendors__price
+													for value in itemPrice.price
+														span= value
+												if (typeof(itemPrice.remark) !== 'undefined')
+													.rates-for-vendors__remark= itemPrice.remark
 
 
 

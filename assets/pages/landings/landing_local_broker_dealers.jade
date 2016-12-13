@@ -1,0 +1,433 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-lightblue-blue"//gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "blue-green" //yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Локальным брокерам-дилерам"
+	-
+		var headText =[
+			'Участвовать в торгах, проводимых биржей, имеют право только члены биржи соответствующих категорий, в том числе за счет и в интересах третьих лиц – своих клиентов.'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Иностранным брокерам-дилерам'
+			}
+			
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		
+		
+	section.landing-section
+		.container
+			h2 Участие в торгах
+			.landing-section__text
+				p.
+					Принимать участие в торгах на KASE могут только члены KASE соответствующих категорий. Членами KASE могут быть только юридические лица. KASE предлагает три категории членства. Организация может стать членом рынка ценных бумаг, рынка иностранных валют или рынка деривативов в зависимости от финансовых инструментов, в которых она заинтересована. Также, существует возможность участия в двух или трех категориях одновременно.
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Критерии для допуска
+
+			-
+				var listSliderItems = [
+					{
+						'title': 'Прием документов кандидата в члены Биржи',
+						'text': '(заявление, список необходимых документов)'
+					},
+					{
+						'title': 'Рассмотрение документов',
+						'text': '(в случае необходимости запрос дополнительных)'
+					},
+					{
+						'title': 'Подготовка заключения или мотивированного отказа'
+					},
+					{
+						'title': 'Рассмотрение вопроса на заседании Совета директоров'
+					},
+					{
+						'title': 'Подготовка заключения или мотивированного отказа'
+					}
+				]
+
+				var navColor = "blue"
+
+			include ../../modules/landings_modules/list-slider/module
+			.slider-additional-info-bar Более подробное описание процесса получения статуса члена KASE вы можете найти #[a(href="#") здесь]
+
+	section.landing-section.gr-green-blue
+		.container
+			h2 Требования к кандидатам в члены Биржи
+			.landing-section__login-btn
+				a(href="#").btn.btn-transparent.btn-transparent--white: span Посмотреть список
+
+	section.landing-section
+		.container
+			h2 Тарифы для членов Биржи
+			.gradient-tabs
+				ul.nav(role="tablist")
+					li.gradient-tabs__tab.gradient-tabs__tab--blue.active(role="presentation")
+						a(href="#membershipFee", role="tab", data-toggle="tab"): span Членские взносы
+
+					li.gradient-tabs__tab.gradient-tabs__tab--blue(role="presentation")
+						a(href="#stockFee", role="tab", data-toggle="tab"): span Биржевые сборы
+
+
+		.tab-content
+			.gratient-tabs__accordion-body.tab-pane.fade.active.in(id="membershipFee", role="tabpanel")
+				.container
+					-
+						var ratesColor = "blue"
+						var ratesArray = [
+							{
+						 		'title': 'При приеме в члены Биржи ',
+						 		'block': [
+						 			{
+						 				'subtitle': '"Фондовая" категория',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['1500', 'MРП'],
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': '"Валютная" категория',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['6000', 'MРП'],
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': 'Категория"Деривативы" ',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['0', 'MРП'],
+								 					}
+												]
+
+								 			}
+
+										]
+							 		}
+						 		]
+							 		
+							},{
+						 		'title': 'Ежемесячные членские взносы',
+						 		'block': [
+						 			{
+						 				'subtitle': '"Валютная" категория',
+										'blockGroup': [
+								 			{		
+								 				'groupTitle': 'Для не маркет-мейкера по какой-либо иностранной валюте:',
+								 				'priceBlock': [
+								 					{
+								 						'price': ['400', 'MРП'],
+								 						'remark': 'без дополнительной уплаты комиссионных сборов'
+								 					},
+								 					{
+														'price': ['300', 'МРП'],
+														'remark': 'с дополнительной уплатой комиссионных сборов'
+								 					}
+												]
+
+								 			},{		
+								 				'groupTitle': 'Для маркет-мейкера по доллару США:',
+								 				'priceBlock': [
+								 					{
+								 						'price': ['200', 'MРП'],
+								 						'remark': 'без дополнительной уплаты комиссионных сборов'
+								 					},
+								 					{
+														'price': ['300', 'МРП'],
+														'remark': 'с дополнительной уплатой комиссионных сборов'
+								 					}
+												]
+
+								 			},{		
+								 				'groupTitle': 'Для маркет-мейкера по другой валюте:',
+								 				'priceBlock': [
+								 					{
+								 						'price': ['300', 'MРП'],
+								 						'remark': 'без дополнительной уплаты комиссионных сборов'
+								 					},
+								 					{
+														'price': ['300', 'МРП'],
+														'remark': 'с дополнительной уплатой комиссионных сборов'
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+							 			'subtitle': '"Фондовая" категория',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['25', 'MРП'],
+								 						'remark': 'с применением минимальных и фиксированных   комиссионных сборов'
+								 					},
+								 					{
+														'price': ['50', 'МРП'],
+														'remark': 'без применения минимальных и фиксированных комиссионных сборов'
+								 					}
+												]
+
+								 			}
+								 		]
+
+							 		},{
+							 			'subtitle': 'Категория "Деривативы"',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['0', 'MРП']
+								 					}
+												]
+
+								 			}
+								 		]
+
+							 		}
+						 		]
+							 		
+							}
+						]
+					include ../../modules/landings_modules/rates-for-vendors/module
+
+
+			.gratient-tabs__accordion-body.tab-pane.fade(id="stockFee", role="tabpanel")
+				.container
+					.landing-section__text
+						p.
+							text
+		.gradient-tabs
+				#gradientTabsAccordion.gratient-tabs__accordion
+					.gratient-tabs__accordion-pane.panel.active
+						.container
+							.gratient-tabs__accordion-link.gratient-tabs__accordion-link--blue.active
+								a.collapsed(data-target="#mSpecialMob", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Членские взносы
+						.gratient-tabs__accordion-body.collapse(id="mSpecialMob", role="tabpanel")
+							.container
+								-
+									var ratesColor = "blue"
+									var ratesArray = [
+										{
+									 		'title': 'При приеме в члены Биржи ',
+									 		'block': [
+									 			{
+									 				'subtitle': '"Фондовая" категория',
+													'blockGroup': [
+											 			{		
+											 				'priceBlock': [
+											 					{
+											 						'price': ['1500', 'MРП'],
+											 					}
+															]
+
+											 			}
+
+													]
+										 		},{
+									 				'subtitle': '"Валютная" категория',
+													'blockGroup': [
+											 			{		
+											 				'priceBlock': [
+											 					{
+											 						'price': ['6000', 'MРП'],
+											 					}
+															]
+
+											 			}
+
+													]
+										 		},{
+									 				'subtitle': 'Категория"Деривативы" ',
+													'blockGroup': [
+											 			{		
+											 				'priceBlock': [
+											 					{
+											 						'price': ['0', 'MРП'],
+											 					}
+															]
+
+											 			}
+
+													]
+										 		}
+									 		]
+										 		
+										},{
+									 		'title': 'Ежемесячные членские взносы',
+									 		'block': [
+									 			{
+									 				'subtitle': '"Валютная" категория',
+													'blockGroup': [
+											 			{		
+											 				'groupTitle': 'Для не маркет-мейкера по какой-либо иностранной валюте:',
+											 				'priceBlock': [
+											 					{
+											 						'price': ['400', 'MРП'],
+											 						'remark': 'без дополнительной уплаты комиссионных сборов'
+											 					},
+											 					{
+																	'price': ['300', 'МРП'],
+																	'remark': 'с дополнительной уплатой комиссионных сборов'
+											 					}
+															]
+
+											 			},{		
+											 				'groupTitle': 'Для маркет-мейкера по доллару США:',
+											 				'priceBlock': [
+											 					{
+											 						'price': ['200', 'MРП'],
+											 						'remark': 'без дополнительной уплаты комиссионных сборов'
+											 					},
+											 					{
+																	'price': ['300', 'МРП'],
+																	'remark': 'с дополнительной уплатой комиссионных сборов'
+											 					}
+															]
+
+											 			},{		
+											 				'groupTitle': 'Для маркет-мейкера по другой валюте:',
+											 				'priceBlock': [
+											 					{
+											 						'price': ['300', 'MРП'],
+											 						'remark': 'без дополнительной уплаты комиссионных сборов'
+											 					},
+											 					{
+																	'price': ['300', 'МРП'],
+																	'remark': 'с дополнительной уплатой комиссионных сборов'
+											 					}
+															]
+
+											 			}
+
+													]
+										 		},{
+										 			'subtitle': '"Фондовая" категория',
+													'blockGroup': [
+											 			{		
+											 				'priceBlock': [
+											 					{
+											 						'price': ['25', 'MРП'],
+											 						'remark': 'с применением минимальных и фиксированных   комиссионных сборов'
+											 					},
+											 					{
+																	'price': ['50', 'МРП'],
+																	'remark': 'без применения минимальных и фиксированных комиссионных сборов'
+											 					}
+															]
+
+											 			}
+											 		]
+
+										 		},{
+										 			'subtitle': 'Категория "Деривативы"',
+													'blockGroup': [
+											 			{		
+											 				'priceBlock': [
+											 					{
+											 						'price': ['0', 'MРП']
+											 					}
+															]
+
+											 			}
+											 		]
+
+										 		}
+									 		]
+										 		
+										}
+									]
+								include ../../modules/landings_modules/rates-for-vendors/module
+
+					.gratient-tabs__accordion-pane.panel
+						.container
+							.gratient-tabs__accordion-link.gratient-tabs__accordion-link--blue
+								a.collapsed(data-target="#mSubscribeMob", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Биржевые сборы
+						.gratient-tabs__accordion-body.collapse(id="mSubscribeMob", role="tabpanel")
+							.container
+								.landing-section__text
+									p.
+										text
+
+
+	
+	section.landing-section.landing-section--blue-lightblue
+		.container
+			h2 Полезные ссылки
+			-
+				var usefulList = [
+					'Торговая система', 
+					'Регламент торгов',
+					'Список членов KASE ',
+					'Рэнкинг активности',
+					'Услуги прямого доступа'
+	
+				]
+			include ../../modules/landings_modules/useful-links/module
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Материалы
+			-
+				var vendorsDownload = [
+					{
+						'text': 'Положение о членстве ',
+						'size': '(12 KB)'
+					},{
+						'text': 'Требования к кандидатам в члены KASE'
+					},{
+						'text': 'Перечень документов, подлежащих предоставлению кандидатами в члены KASE'
+					},{
+						'text': 'Перечень документов, подлежащих предоставлению членами KASE'
+					},{
+						'text': 'Методика расчета показателей активности членов KASE'
+					},{
+						'text': 'Порядок осуществления мониторинга членов KASE'
+					},{
+						'text': 'Положение о членских взносах и биржевых сборах'
+					}
+					
+					
+				]
+			
+			include ../../modules/landings_modules/vendors-materials/module
+
+
+
+
+
+				
+				
+
+
+
+
+
+
+
+
