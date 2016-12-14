@@ -110,6 +110,22 @@ table.dataTable.no-footer {
 		margin: 0 6px;
 	}
 }
+.sorting-table__subtitle {
+	td {
+		background-color: #d1d1d1;
+		&:first-child {
+			position: relative;
+		}
+	}
+	span {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		height: 100%;
+		white-space: nowrap;
+		top: 0;
+	}
+}
 
 @media (min-width: 649px) and (max-width: 768px){
 	table.dataTable {

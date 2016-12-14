@@ -265,3 +265,24 @@
     margin-bottom: 16px;
   }
 }
+
+@media (min-width: 992px){
+  .landing-section__columns {
+    display: flex;
+    align-items: stretch;
+  }
+  .landing-section__column {
+    width: 50%;
+    max-width: 50%;
+    position: relative;
+    .listing-image {
+      display: block;
+      width: 822px;
+      height: 624px;
+      max-width: none;
+      position: absolute;
+      right: 75px;
+      top: -150px;
+    }
+  }
+} 

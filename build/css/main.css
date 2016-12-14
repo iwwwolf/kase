@@ -3001,6 +3001,23 @@ table.dataTable.no-footer {
   .table__indicator img {
     margin: 0 6px; }
 
+.sorting-table__subtitle td {
+  background-color: #d1d1d1; }
+  .sorting-table__subtitle td:first-child {
+    position: relative; }
+
+.sorting-table__subtitle span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  height: 100%;
+  white-space: nowrap;
+  top: 0; }
+
 @media (min-width: 649px) and (max-width: 768px) {
   table.dataTable thead td, table.dataTable thead th {
     padding: 16px 36px 16px 20px;
@@ -3913,6 +3930,27 @@ table.dataTable.no-footer {
       margin-bottom: 30px; }
   .landing-section__description {
     margin-bottom: 16px; } }
+
+@media (min-width: 992px) {
+  .landing-section__columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .landing-section__column {
+    width: 50%;
+    max-width: 50%;
+    position: relative; }
+    .landing-section__column .listing-image {
+      display: block;
+      width: 822px;
+      height: 624px;
+      max-width: none;
+      position: absolute;
+      right: 75px;
+      top: -150px; } }
 
 .landing-head {
   padding: 0 0 65px;
