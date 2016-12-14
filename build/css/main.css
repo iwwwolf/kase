@@ -2301,6 +2301,8 @@ footer {
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
               align-items: stretch; }
+      .home-news__parent .row:before, .home-news__parent .row:after {
+        display: none; }
       .home-news__parent .row .col-md-4 {
         margin-bottom: 20px; }
   .home-news {

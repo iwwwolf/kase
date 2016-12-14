@@ -144,6 +144,9 @@
 			display: flex;
 			flex-wrap: wrap;
 			align-items: stretch;
+			&:before, &:after {
+				display: none;
+			}
 			.col-md-4 {
 				margin-bottom: 20px;
 			}
