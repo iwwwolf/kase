@@ -3767,6 +3767,10 @@ table.dataTable.no-footer {
   color: #737373;
   margin-bottom: 16px; }
 
+.landing-section__text--color500 {
+  color: #383838;
+  font-weight: 500; }
+
 .landing-section__text {
   max-width: 750px;
   font-size: 114.28571%;
@@ -3775,6 +3779,11 @@ table.dataTable.no-footer {
   /* &--fz14 {
     font-size: $fz14;
   } */ }
+  .landing-section__text--color500 {
+    color: #383838;
+    font-weight: 500; }
+  .landing-section__text--color700 {
+    color: #383838; }
   .landing-section__text p {
     margin-bottom: 25px;
     /* &:last-of-type {
@@ -5673,7 +5682,7 @@ table.dataTable.no-footer {
   font-family: Arial, sans-serif;
   font-size: 140px;
   line-height: 0.5;
-  opacity: 0.2; }
+  opacity: 1; }
   .users-vendors__number svg {
     height: 102px;
     position: absolute;

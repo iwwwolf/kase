@@ -109,6 +109,10 @@
   color: #737373;
   margin-bottom: 16px;
 }
+.landing-section__text--color500{
+  color: #383838;
+  font-weight: 500;
+}
 .landing-section__text {
   max-width: 750px;
   font-size: $fz16;
@@ -117,12 +121,23 @@
   /* &--fz14 {
     font-size: $fz14;
   } */
+  &--color500{
+    color: #383838;
+    font-weight: 500;
+  }
+  &--color700{
+    color: #383838;
+  }
   p {
     margin-bottom: 25px;
     /* &:last-of-type {
       margin-bottom: 0;
     } */
   }
+  // p.landing-section__text--color500{
+  //    color: #383838;
+  //    font-weight: 500;
+  // }
   a {
     color: #0094de;
     text-decoration: underline;

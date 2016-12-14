@@ -1,10 +1,15 @@
+svg(id="gradientMask")
+		defs
+			pattern(id="nGradient2", patternUnits="userSpaceOnUse", width="150", height="150")
+				image(xlink:href="images/number-gradient-" + navColor +".png", width="150", height="150")
+
 .users-vendors
-	each item, index in informationProducts
+	each item, index in listInfo
 		div
 			.users-vendors__item
 				.users-vendors__number
 					svg
-						text(fill="url(#nGradient)", y="100px")= index+1
+						text(fill="url(#nGradient2)", y="100px")= index+1
 				if (typeof(item.title) !== 'undefined')
 					.users-vendors__title= item.title
 

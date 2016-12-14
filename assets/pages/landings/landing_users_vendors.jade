@@ -22,19 +22,17 @@ block content
 		]
 	.relative
 		include ../../modules/landings_modules/landing-head/module
-	svg(id="gradientMask")
-		defs
-			pattern(id="nGradient", patternUnits="userSpaceOnUse", width="150", height="150")
-				image(xlink:href="images/number-gradient-red-orange.png", width="150", height="150")
 	
+
 	section.landing-section
 		.container
 			h2 Информационные продукты
-			.landing-section__text
+			.landing-section__text.landing-section__text--color500
 				p.
 					Биржа предлагает вендорам информацию в виде следующих стандартизированных информационных продуктов:
 			-
-				var informationProducts = [
+				var navColor= "red-orange"
+				var listInfo = [
 					{
 						'title': 'Торговая информация в режиме реального времени - предоставляется Биржей непрерывным потоком в течение каждого торгового дня. Допустимая техническая задержка между моментами генерации такой информации и отправки ее отправителям составляет не более 3 минут.'
 					},
