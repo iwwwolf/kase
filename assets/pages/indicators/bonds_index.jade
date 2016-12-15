@@ -1,0 +1,490 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Индикаторы"
+				var marketsList = [
+					{
+						'title': 'Фондовый рынок',
+						'active': true
+					},
+					{
+						'title': 'Денежный рынок'
+					},
+					{
+						'title': 'Совместные индексы'
+					}
+				]
+			include ../../modules/markets-menu/module
+			
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+
+						.regulations__download
+							h5 Архив
+							form
+								.regulations__download-input.regulations__download-input--mobile
+									i.fa.fa-calendar
+									input(type="date")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+								.regulations__download-input
+									i.fa.fa-calendar
+									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
+								.regulations__archive-links
+									.link
+										a(href="#")
+											i.fa.fa-eye
+											|Посмотреть
+									.link
+										a(href="#")
+											i.fa.fa-download
+											|Скачать
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Просмотр торгов акциями Индекса KASE
+
+						-var referenceInfo = ["Методика расчета Индекса KASE", "Архив Индекса KASE_Shares", "Рыночная оценка"]
+						include ../../modules/reference-info/module
+	.container
+		#centerColumn.center-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки и торги',
+					'Индикаторы',
+					'Фондовый рынок',
+					'Индекс KASE'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			.h1-block
+				a.arrow-back(href="#")
+					i.fa.fa-angle-left
+				h1 Индексы корпоративных облигаций
+
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Индекс KASE_BY
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+						.help-block * объем сделок по акциям, входящим в представительский список Индекса KASE
+						.help-block * капитализация компаний, входящих в представительский список Индекса KASE
+					ul.accordion__nav
+						li.active: a(href="#") Архив
+						li: a(href="#") В течение дня
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+					
+					.actions__chart-text
+						p.
+							Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.
+						p.
+							Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.
+						p.
+							Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.
+						p.
+							"Время жизни" индикатора: 1 рабочий день.
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Индекс KASE_BP
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+						.help-block * объем сделок по акциям, входящим в представительский список Индекса KASE
+						.help-block * капитализация компаний, входящих в представительский список Индекса KASE
+					ul.accordion__nav
+						li.active: a(href="#") Архив
+						li: a(href="#") В течение дня
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+					
+					.actions__chart-text
+						p.
+							Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.
+						p.
+							Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.
+						p.
+							Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.
+						p.
+							"Время жизни" индикатора: 1 рабочий день.
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Индекс KASE_BC
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+						.help-block * объем сделок по акциям, входящим в представительский список Индекса KASE
+						.help-block * капитализация компаний, входящих в представительский список Индекса KASE
+					ul.accordion__nav
+						li.active: a(href="#") Архив
+						li: a(href="#") В течение дня
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+					
+					.actions__chart-text
+						p.
+							Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.
+						p.
+							Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.
+						p.
+							Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.
+						p.
+							"Время жизни" индикатора: 1 рабочий день.
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Состав
+						i.fa.fa-angle-down
+					
+				.accordion__body
+					.date Время последних данных: 19.08.2016 (17:35)
+					//-.table-parent
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th Эмитент
+								th Код
+								th Yi
+								th Pi
+								th I
+								th Ni
+								th Qi
+						tbody
+							tr
+								td: a(href="#") Название
+								td: a(href="#") KZ_SBER
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+							tr
+								td: a(href="#") Название
+								td: a(href="#") KZ_SBER
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+							tr
+								td: a(href="#") Название
+								td: a(href="#") KZ_SBER
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+							tr
+								td: a(href="#") Название
+								td: a(href="#") KZ_SBER
+								td 0.007
+								td 0
+								td 1.25
+								td 876 876
+								td 8.7
+
+					.help-block.
+						* Yi - средиевзвешенная доходность корпоративных облигаций i-го наименования по сделкам, заключенным в течение последнего истекшего торгового дня по корпоративным облигациям, в процентах годовых;
+					.help-block.
+						* Pi - котировочная цена одной корпоративной облигации i-го наименования по результатам последнего истекшего торгового дня по корпоративным облигациям в процентах от номинальной стоимости одной корпоративной облигации;
+					.help-block.
+						* I - размер накопленного вознаграждения по корпоративной облигации i-го наименования в процентах годовых;
+					.help-block.
+						* Ni - номинальная стоимость одной корпоративной облигации i -го наименования в тенге;
+					.help-block.
+						* Qi - количество размещенных корпоративных облигаций i-го наименования в штуках.
+			
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Последние новости
+						i.fa.fa-angle-down
+							
+				.accordion__body
+					include ../../modules/news-list/module
+
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			
+		    $('#datePicker input').daterangepicker({
+		        "singleDatePicker": true,
+		        "showDropdowns": true,
+		        "locale": {
+		            "direction": "ltr",
+		            "format": "DD/MM/YYYY",
+		            /*"separator": " - ",
+		            "applyLabel": "Apply",
+		            "cancelLabel": "Cancel",*/
+		            "daysOfWeek": [
+		                "Вс",
+		                "Пн",
+		                "Вт",
+		                "Ср",
+		                "Чт",
+		                "Пт",
+		                "Сб"
+		            ],
+		            "monthNames": [
+		                "Январь",
+		                "Февраль",
+		                "Март",
+		                "Апрель",
+		                "Май",
+		                "Июнь",
+		                "Июль",
+		                "Август",
+		                "Сентябрь",
+		                "Октябрь",
+		                "Ноябрь",
+		                "Декабрь"
+		            ],
+		            "firstDay": 1
+		        },
+		        "minDate": "20/06/2015",
+		        "maxDate": new Date(),
+		        "parentEl": "#datePicker"
+		    }, function(start, end, label) {
+		    }).focus().focusout();
+
+
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});
