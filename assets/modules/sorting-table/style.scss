@@ -126,6 +126,18 @@ table.dataTable.no-footer {
 		top: 0;
 	}
 }
+.table--actions {
+	tr {
+		td, th {
+			&:first-child {
+				width: 90px !important;
+			}
+			&:nth-child(2) {
+				text-align: left;
+			}
+		}
+	}
+}
 
 @media (min-width: 649px) and (max-width: 768px){
 	table.dataTable {

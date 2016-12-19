@@ -1,0 +1,144 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Торги"
+				var marketsList = [
+					{
+						'title': 'Список инструментов'
+					},
+					{
+						'title': 'Список компаний'
+					},
+					{
+						'title': 'Просмотр торгов',
+						'active': true
+					}
+					,
+					{
+						'title': 'Регламент торгов и клиринга'
+					}
+					,
+					{
+						'title': 'Клиринг и расчеты'
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Торги',
+					'Просмотр торгов'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			h1 Просмотр Торгов
+
+			label.checkbox
+				input(type="checkbox", name="checkboxName")
+				span.checkbox__styled
+				span.checkbox__label Test Test
+
+			.sortin-table--with-search
+				table.sorting-table--false.table.table-striped
+					thead
+						tr
+							th Название индикатора
+							th Дата
+							th Последнее значение
+							th Изменение
+							th Изменение, %
+							th Объём сделок, млн KZT
+							th Объём сделок, тыс USD
+							th Изменение цены за последние 52 недели
+					tbody
+						tr.sorting-table__subtitle
+							td &nbsp; 
+								span Рынок акций
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+						tr
+							td: a(href="#") Индекс KASE
+							td 02.08.2016
+							td 1071.70
+							td 0
+							td 1.25
+							td 876 876
+							td 8.7
+							td 
+								.table__indicator
+									|1 076,24
+									img(src="img-content/line.png", alt="")
+									|1 076,24
+
+						tr.sorting-table__subtitle
+							td &nbsp; 
+								span Рынок корпоративных облигаций
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+							td &nbsp;
+						tr
+							td: a(href="#") Индекс KASE
+							td 02.08.2015
+							td 1071.70
+							td 0
+							td 1.25
+							td 876 876
+							td 8.7
+							td 
+								.table__indicator
+									|1 076,24
+									img(src="img-content/line.png", alt="")
+									|1 076,24
+						tr
+							td: a(href="#") Индекс KASE
+							td 02.08.2016
+							td 1071.70
+							td 0
+							td 1.25
+							td 876 876
+							td 8.7
+							td 
+								.table__indicator
+									|1 076,24
+									img(src="img-content/line.png", alt="")
+									|1 076,24
+			br
+			br
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

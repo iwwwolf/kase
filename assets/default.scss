@@ -164,7 +164,7 @@ body {
 }
 
 a {
-  color: $linkColor;
+  color: #0094de;
   transition: all 300ms;
   &:hover, &:focus {
     text-decoration: none;
@@ -246,13 +246,13 @@ h1, .h1 {
   text-transform: uppercase;
   font-weight: normal;
 }
-h3, .h3 {
-  font-size: $fz21;
-  font-weight: normal;
-}
 h2, .h2 {
   font-size: $fz15;
   margin: 0 0 12px;
+}
+h3, .h3 {
+  font-size: $fz21;
+  font-weight: normal;
 }
 h5, .h5 {
   font-size: $fz16;
@@ -524,7 +524,43 @@ a.up {
   margin-bottom: 15px;
 }
 
+.all-link {
+  a {
+    border-bottom: 1px dotted;
+  }
+}
 
+.actions-tables {
+  padding-bottom: 35px;
+  .accordion {
+    margin-bottom: 0;
+    margin-top: 35px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.actions-tables__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  h3 {
+    margin: 0;
+    font-weight: 500;
+  }
+  .actions-tables__help-text {
+    padding: 0;
+    border: none;
+  }
+}
+.actions-tables__help-text {
+  font-weight: 500;
+  font-size: 12px;
+  border-top: 1px solid #c9d4de;
+  padding-top: 8px;
+}
 
 @media (min-width: 649px) and (max-width: 768px){
   body {
