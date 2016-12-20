@@ -1,0 +1,510 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-blue-purple" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow; gr-blue-purple
+	-var rectStyle = "orange-purple" // yellow-green; yellow-red; blue-green; green-yellow; orange-purple
+	-var rectTitle = "Частным инвесторам"
+	-
+		var headText =[
+			'Цели инвестирования в фондовую биржу могут быть различные на разных рынках и личных потребностях инвестора. Казахстанская фондовая биржа функционирует в виде электронной торговой системы, которая проводит торги ежедневно по рабочим дням в течении большей части дня образуя торговый день.'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Институциональным инвесторам'
+			},
+			{
+				'position': 'right',
+				'title': 'Иностранным инвесторам'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		
+		-
+			var menuItems = [
+				{
+					'title': 'Что такое Фондовый Рынок?'
+				},
+				{
+					'title': 'Зачем инвестировать?'
+				},
+				{
+					'title': 'С чего начать?'
+				},
+				{
+					'title': 'Правила торгов'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section
+		.container
+			.infrastructure-main-block
+				h2 Инфраструктура
+				.infrastructure-block
+					.infrastructure-block-header 
+						span Национальный банк Республики Казахстан
+					.infrastructure-block-list
+						.infrastructure-block__item#infrastructure-id-first
+							.infrastructure-block__title Единый реестр Ценных Бумаг
+						.infrastructure-block__line
+							hr(class="infrastructure-block__between")
+						.infrastructure-block__item#infrastructure-id-second
+							.infrastructure-block__title Центральный депозитарий
+						.infrastructure-block__line
+							hr(class="infrastructure-block__between")
+						.infrastructure-block__line_three
+							.infrastructure-block__item#infrastructure-id-third
+								.infrastructure-block__title Казахстанская Фондовая Биржа KASE
+							.infrastructure-block__line
+								hr(class="infrastructure-block__between")
+							.infrastructure-block__item#infrastructure-id-forth
+								.infrastructure-block__title Брокер
+							.infrastructure-block__item_small_block
+								.infrastructure-block__line_degree_1
+									hr(class="infrastructure-block__between")
+								.infrastructure-block__item_small#infrastructure-id-small
+									.infrastructure-block__title Банк Кастоидиан
+								.infrastructure-block__line_degree_2
+									hr(class="infrastructure-block__between")
+						.infrastructure-block__line
+							hr(class="infrastructure-block__between")
+						.infrastructure-block__item#infrastructure-id-fifth
+							.infrastructure-block__title Инвестор
+				.infrastructure-id-first
+					.landing-white-block
+						-
+							var pictureContentList = [
+								{
+									'list': [
+										{
+											'title': 'Фондовая Биржа',
+											'text': 'финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.'
+										}
+									]
+								}
+							];
+							var pictureSize="small"
+						include ../../modules/landings_modules/picture-content-block/module
+						br
+						-
+							var pictureList = [
+								{
+									'list': [
+										'Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;',
+										'Выявление равновесной биржевой цены;',
+										'Аккумулирование временно свободных денежных средств и способствование передаче права собственности;',
+										'Обеспечение гласности, открытости биржевых торгов;',
+										'Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;',
+										'Разработка этических стандартов, кодекса поведения участников биржевой торговли.'
+									]
+								}
+							]
+							var listColor="purple"
+							//var pictureSize="large"
+							var textAlign="left"
+						include ../../modules/landings_modules/list-picture-block/module
+
+						.landing-white-block__close
+							a(href="#" class="infrastructure-block__popup_close" id="infrastructure-block__popup_close")
+								i(class="fa fa-close")
+
+				.infrastructure-id-second
+					.landing-white-block
+						-
+							var pictureContentList = [
+								{
+									'list': [
+										{
+											'title': 'Фондовая Биржа',
+											'text': 'финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.'
+										}
+									]
+								}
+							];
+							var pictureSize="small"
+						include ../../modules/landings_modules/picture-content-block/module
+						br
+						-
+							var pictureList = [
+								{
+									'list': [
+										'Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;',
+										'Выявление равновесной биржевой цены;',
+										'Аккумулирование временно свободных денежных средств и способствование передаче права собственности;',
+										'Обеспечение гласности, открытости биржевых торгов;',
+										'Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;',
+										'Разработка этических стандартов, кодекса поведения участников биржевой торговли.'
+									]
+								}
+							]
+							var listColor="purple"
+							//var pictureSize="large"
+							var textAlign="left"
+						include ../../modules/landings_modules/list-picture-block/module
+
+						.landing-white-block__close
+							a(href="#" class="infrastructure-block__popup_close" id="infrastructure-block__popup_close")
+								i(class="fa fa-close")
+
+				.infrastructure-id-third
+					.landing-white-block
+						-
+							var pictureContentList = [
+								{
+									'list': [
+										{
+											'title': 'Фондовая Биржа',
+											'text': 'финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.'
+										}
+									]
+								}
+							];
+							var pictureSize="small"
+						include ../../modules/landings_modules/picture-content-block/module
+						br
+						-
+							var pictureList = [
+								{
+									'list': [
+										'Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;',
+										'Выявление равновесной биржевой цены;',
+										'Аккумулирование временно свободных денежных средств и способствование передаче права собственности;',
+										'Обеспечение гласности, открытости биржевых торгов;',
+										'Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;',
+										'Разработка этических стандартов, кодекса поведения участников биржевой торговли.'
+									]
+								}
+							]
+							var listColor="purple"
+							//var pictureSize="large"
+							var textAlign="left"
+						include ../../modules/landings_modules/list-picture-block/module
+
+						.landing-white-block__close
+							a(href="#" class="infrastructure-block__popup_close" id="infrastructure-block__popup_close")
+								i(class="fa fa-close")
+
+				.infrastructure-id-forth
+					.landing-white-block
+						-
+							var pictureContentList = [
+								{
+									'list': [
+										{
+											'title': 'Фондовая Биржа',
+											'text': 'финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.'
+										}
+									]
+								}
+							];
+							var pictureSize="small"
+						include ../../modules/landings_modules/picture-content-block/module
+						br
+						-
+							var pictureList = [
+								{
+									'list': [
+										'Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;',
+										'Выявление равновесной биржевой цены;',
+										'Аккумулирование временно свободных денежных средств и способствование передаче права собственности;',
+										'Обеспечение гласности, открытости биржевых торгов;',
+										'Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;',
+										'Разработка этических стандартов, кодекса поведения участников биржевой торговли.'
+									]
+								}
+							]
+							var listColor="purple"
+							//var pictureSize="large"
+							var textAlign="left"
+						include ../../modules/landings_modules/list-picture-block/module
+
+						.landing-white-block__close
+							a(href="#" class="infrastructure-block__popup_close" id="infrastructure-block__popup_close")
+								i(class="fa fa-close")
+
+				.infrastructure-id-fifth
+					.landing-white-block
+						-
+							var pictureContentList = [
+								{
+									'list': [
+										{
+											'title': 'Фондовая Биржа',
+											'text': 'финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.'
+										}
+									]
+								}
+							];
+							var pictureSize="small"
+						include ../../modules/landings_modules/picture-content-block/module
+						br
+						-
+							var pictureList = [
+								{
+									'list': [
+										'Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;',
+										'Выявление равновесной биржевой цены;',
+										'Аккумулирование временно свободных денежных средств и способствование передаче права собственности;',
+										'Обеспечение гласности, открытости биржевых торгов;',
+										'Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;',
+										'Разработка этических стандартов, кодекса поведения участников биржевой торговли.'
+									]
+								}
+							]
+							var listColor="purple"
+							//var pictureSize="large"
+							var textAlign="left"
+						include ../../modules/landings_modules/list-picture-block/module
+
+						.landing-white-block__close
+							a(href="#" class="infrastructure-block__popup_close" id="infrastructure-block__popup_close")
+								i(class="fa fa-close")
+
+				.infrastructure-id-small
+					.landing-white-block
+						-
+							var pictureContentList = [
+								{
+									'list': [
+										{
+											'title': 'Фондовая Биржа',
+											'text': 'финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.'
+										}
+									]
+								}
+							];
+							var pictureSize="small"
+						include ../../modules/landings_modules/picture-content-block/module
+						br
+						-
+							var pictureList = [
+								{
+									'list': [
+										'Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;',
+										'Выявление равновесной биржевой цены;',
+										'Аккумулирование временно свободных денежных средств и способствование передаче права собственности;',
+										'Обеспечение гласности, открытости биржевых торгов;',
+										'Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;',
+										'Разработка этических стандартов, кодекса поведения участников биржевой торговли.'
+									]
+								}
+							]
+							var listColor="purple"
+							//var pictureSize="large"
+							var textAlign="left"
+						include ../../modules/landings_modules/list-picture-block/module
+
+						.landing-white-block__close
+							a(href="#" class="infrastructure-block__popup_close" id="infrastructure-block__popup_close")
+								i(class="fa fa-close")
+								
+
+
+
+
+			
+
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Роль биржи
+			.landing-section__text.landing-section__text--color500
+				p.
+					Фондовая биржа - Рынок, на котором продаются и покупаются ценные бумаги, а цены на них определяются спросом и предложением
+			-
+				var pictureList = [
+					{
+						'list': [
+							'создание постоянно действующего рынка;',
+							'определение цен;',
+							'распространение информации о финансовых инструментах, их ценах и условиях обращения;',
+							'выработка правил регулирования купли-продажи ценных бумаг;',
+							'поддержание профессионализма торговых и финансовых посредников;',
+							'мобилизация и концентрация свободных денежных капиталов и накоплений посредством купли-продажи ценных бумаг;',
+							'обеспечение высокого уровня ликвидности вложений в ценные бумаги, гарантий использования сделок;',
+							'индикация состояния экономики, сегментов фондового рынка.'
+						]
+					}
+				]
+				var listColor="purple"
+				//var pictureSize="large"
+				var textAlign="left"
+			include ../../modules/landings_modules/list-picture-block/module
+
+
+	section.landing-section.landing-section--gray-bg.landing-section--with-image
+		.gr-blue-purple.sizeLarger
+		.container
+			h2 Финансовые Рынки
+			.landing-section__text Фондовый рынок Казахстанской Биржи включает в себя пять рынков различных финансовых инструментов:
+
+			.landing-white-block
+				.gradient-tabs
+					ul.nav(role="tablist")
+						li.gradient-tabs__tab.gradient-tabs__tab--purple.active(role="presentation")
+							a(href="#tab1", role="tab", data-toggle="tab"): span Иностранные Валюты
+
+						li.gradient-tabs__tab.gradient-tabs__tab--purple(role="presentation")
+							a(href="#tab2", role="tab", data-toggle="tab"): span Акции
+
+						li.gradient-tabs__tab.gradient-tabs__tab--purple(role="presentation")
+							a(href="#tab3", role="tab", data-toggle="tab"): span Облигации
+
+						li.gradient-tabs__tab.gradient-tabs__tab--purple(role="presentation")
+							a(href="#tab4", role="tab", data-toggle="tab"): span Операции РЕПО
+
+						li.gradient-tabs__tab.gradient-tabs__tab--purple(role="presentation")
+							a(href="#tab5", role="tab", data-toggle="tab"): span Деривативы
+
+
+					.tab-content
+						.gratient-tabs__accordion-body.tab-pane.fade.active.in(id="tab1", role="tabpanel")
+							.container
+								div(style="color:#383838;") 
+									h2 Рынок Иностранных Валют
+									.landing-section__text.landing-section__text--color500 На рынке проходят торги валютными парами USD/KZT, EUR/KZT, RUR/KZT, CNY/KZT. Рынок иностранной валюты выполняет ряд экономически важных функций: 
+									-
+										var pictureList = [
+											{
+												'list': [
+													'формирует текущий рыночный курс казахстанского тенге к иностранным валютам;',
+													'устанавливает официальный курс тенге по итогам биржевых торгов;   — обеспечивает рынок обязательной для экономики продажей иностранных валют;',
+													'поддерживает ликвидность валютного рынка стран;'
+												]
+											}
+										]
+										var listColor="purple"
+										//var pictureSize="large"
+										var textAlign="left"
+									include ../../modules/landings_modules/list-picture-block/module
+
+
+
+
+
+						.gratient-tabs__accordion-body.tab-pane.fade(id="tab2", role="tabpanel")
+							.container 
+								div(style="color:#000;") text2
+
+						.gratient-tabs__accordion-body.tab-pane.fade(id="tab3", role="tabpanel")
+							.container 
+								div(style="color:#000;") text3
+
+						.gratient-tabs__accordion-body.tab-pane.fade(id="tab4", role="tabpanel")
+							.container 
+								div(style="color:#000;") text4
+
+						.gratient-tabs__accordion-body.tab-pane.fade(id="tab5", role="tabpanel")
+							.container 
+								div(style="color:#000;") text5
+
+					.gradient-tabs
+							#gradientTabsAccordion.gratient-tabs__accordion
+								.gratient-tabs__accordion-pane.panel.active
+									.gratient-tabs__accordion-link.gratient-tabs__accordion-link--yellow.active
+										a.collapsed(data-target="#acc1", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Иностранные Валюты
+									.gratient-tabs__accordion-body.collapse(id="acc1", role="tabpanel")
+										.container
+											h2(style="color:#383838;") Рынок Иностранных Валют
+											.landing-section__text.landing-section__text--color500 На рынке проходят торги валютными парами USD/KZT, EUR/KZT, RUR/KZT, CNY/KZT. Рынок иностранной валюты выполняет ряд экономически важных функций: 
+
+											-
+												var pictureList = [
+													{
+														'list': [
+															'формирует текущий рыночный курс казахстанского тенге к иностранным валютам;',
+															'устанавливает официальный курс тенге по итогам биржевых торгов;   — обеспечивает рынок обязательной для экономики продажей иностранных валют;',
+															'поддерживает ликвидность валютного рынка стран;'
+														]
+													}
+												]
+												var listColor="yellow"
+												//var pictureSize="large"
+												var textAlign="left"
+											include ../../modules/landings_modules/list-picture-block/module
+
+								.gratient-tabs__accordion-pane.panel
+									.gratient-tabs__accordion-link.gratient-tabs__accordion-link--yellow
+										a.collapsed(data-target="#acc2", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Акции
+									.gratient-tabs__accordion-body.collapse(id="acc2", role="tabpanel")
+										div(style="color:#000;") text2
+
+								.gratient-tabs__accordion-pane.panel
+									.gratient-tabs__accordion-link.gratient-tabs__accordion-link--yellow
+										a.collapsed(data-target="#acc3", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Облигации
+									.gratient-tabs__accordion-body.collapse(id="acc3", role="tabpanel")
+										div(style="color:#000;") text3
+
+								.gratient-tabs__accordion-pane.panel
+									.gratient-tabs__accordion-link.gratient-tabs__accordion-link--yellow
+										a.collapsed(data-target="#acc4", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Операции РЕПО
+									.gratient-tabs__accordion-body.collapse(id="acc4", role="tabpanel")
+										div(style="color:#000;") text4
+
+								.gratient-tabs__accordion-pane.panel
+									.gratient-tabs__accordion-link.gratient-tabs__accordion-link--yellow
+										a.collapsed(data-target="#acc5", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Деривативы
+									.gratient-tabs__accordion-body.collapse(id="acc5", role="tabpanel")
+										div(style="color:#000;") text4
+
+
+
+				
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Почему компании выходят в IPO
+			-
+				var pictureContentList = [
+					{
+						'icon': 'broker-img.svg',
+						'list': [
+							{
+								'title': 'Привлечение средств на выгодных условиях',
+								'text': 'с помощью публичного размещения за счет массовости инвестиций, компании могут привлечь значительно больше средств, по сравнению с подбором нескольких отдельных инвесторов. '
+							}
+						]
+					},
+					{
+						'icon': 'broker-img.svg',
+						'list': [
+							{
+								'title': 'Увеличение рыночной стоимости компании',
+								'text': 'публичные компании оцениваются дороже, чем частные, из-за ликвидности акций компании или иными словами легкости купли продаже долей компании. Инвестор, купивший акции публичной компании может легко вернуть вложенные средства, продав акции за ту же приобретенную сумму.'
+							}
+						]
+					},
+					{
+						'icon': 'broker-img.svg',
+						'list': [
+							{
+								'title': 'Повышение узнаваемости',
+								'text': 'при IPO компании обретают такую высокую популярность, которую сложно получить стандартными методами маркетинга и “PR” без публичного размещения.'
+							}
+						]
+					},
+					{
+						'icon': 'broker-img.svg',
+						'list': [
+							{
+								'title': 'Получение инструмента оплаты',
+								'text': 'при поглощении одной компании другой во многих примерах поглощающая корпорация отплачивала часть суммы акциями. Так же во многих корпорациях работникам выплачиваются бонусы в виде акций или опционов на акции, что мотивирует ключевых сотрудников компании.'
+							}
+						]
+					}
+				]
+				var pictureSize="small"
+			include ../../modules/landings_modules/picture-content-block/module
+
+
+
+
+
+
+

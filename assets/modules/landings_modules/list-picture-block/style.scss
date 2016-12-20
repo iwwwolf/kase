@@ -7,6 +7,10 @@
 .list-color--yellow li:before{
 	background-color: #fecc00;
 }
+.list-color--purple li:before{
+	background-color: #a71af0;
+}
+
 
 .list-picture-block{
 	margin-bottom: 25px;
@@ -84,6 +88,10 @@
 		align-items: center;
 		text-align: center;
 		justify-content: center;
+	}
+	ul.list-color-left{
+		max-width: 750px;
+	
 	}
 	.list-picture-block--large{
 		width: 300px;

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KASE</title>
+    <link href="css/libs.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body class="body__landing">
+    <style rel="stylesheet">
+      #wrap {
+      	-webkit-transform-origin: 50% 350px;
+      	transform-origin: 50% 350px;
+      	-webkit-transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      #wrap.scale-out {
+      	-webkit-transform: scale(0.85);
+      	transform: scale(0.85); 
+      }
+      
+    </style>
+    <div id="menu" style="display: none;" class="menu">
+      <div class="menu__container">
+        <div class="container"><a id="menuClose" href="#" class="menu__close">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z"></path>
+            </svg></a>
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel menu__panel">
+              <div id="headingOne" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Рынки и торги</a></div>
+              </div>
+              <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Рынки</div>
+                      <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Паи</a></li>
+                        <li><a href="#">Корпоративные облигации</a></li>
+                        <li><a href="#">Ценные бумаги МФО</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                        <li><a href="#">Иностранные валюты</a></li>
+                        <li><a href="#">Операции репо</a></li>
+                        <li><a href="#">Деривативы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Индикаторы</div>
+                      <ul>
+                        <li><a href="#">Фондовый рынок</a></li>
+                        <li><a href="#">Денежный рынок</a></li>
+                        <li><a href="#">Совместные индексы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торги</div>
+                      <ul>
+                        <li><a href="#">Список инструментов</a></li>
+                        <li><a href="#">Просмотр торгов</a></li>
+                        <li><a href="#">Регламент торгов и клиринга</a></li>
+                        <li><a href="#">Клиринг и расчеты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Оценка и параметры</div>
+                      <ul>
+                        <li><a href="#">Рыночная оценка</a></li>
+                        <li><a href="#">Риск-параметры акций</a></li>
+                        <li><a href="#">Средневзвешенные цены</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingTwo" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseTwo">Продукты и услуги</a></div>
+              </div>
+              <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Листинг</div>
+                      <ul>
+                        <li><a href="#">Список компаний</a></li>
+                        <li><a href="#">Что такое листинг</a></li>
+                        <li><a href="#">Листинг на KASE</a></li>
+                        <li><a href="#">IPO</a></li>
+                        <li><a href="#">Нелистинговый сектор</a></li>
+                        <li><a href="#">Дипломанты номинаций</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Членство</div>
+                      <ul>
+                        <li><a href="#">Список членов KASE</a></li>
+                        <li><a href="#">Рэнкинг активности</a></li>
+                        <li><a href="#">Дипломанты номинаций </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торговая система</div>
+                      <ul>
+                        <li><a href="#">Как подключиться к KASE</a></li>
+                        <li><a href="#">Загрузки</a></li>
+                        <li><a href="#">Инструкции</a></li>
+                        <li><a href="#">FIX протокол</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Информационные продукты</div>
+                      <ul>
+                        <li><a href="#">Биржевая информация и программное обеспечение</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingThree" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseThree">Правила</a></div>
+              </div>
+              <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Правила KASE</div>
+                      <ul>
+                        <li><a href="#">Листинг</a></li>
+                        <li><a href="#">Членство</a></li>
+                        <li><a href="#">Торги</a></li>
+                        <li><a href="#">Клиринг</a></li>
+                        <li><a href="#">Расчеты</a></li>
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Методики </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Корпоративное управление</div>
+                      <ul>
+                        <li><a href="#">Материалы и статьи Международной финансовой корпорации (IFC)</a></li>
+                        <li><a href="#">Материалы и статьи Организации экономического сотрудничества и развития (OECD) </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Законодательство</div>
+                      <ul>
+                        <li><a href="#">Рынок ценных бумаг</a></li>
+                        <li><a href="#">Акционерные общества</a></li>
+                        <li><a href="#">Инвестиционные фонды</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title"><a href="#">Дополнительные материалы</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFour" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFour" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFour">Пресс-центр</a></div>
+              </div>
+              <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Новости</div>
+                      <ul>
+                        <li><a href="#">Новости рынков</a></li>
+                        <li><a href="#">Новости компаний</a></li>
+                        <li><a href="#">Новости Биржи</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Информационная поддержка</a></li>
+                        <li class="title"><a href="#">Мероприятия</a></li>
+                        <li class="title"><a href="#">Доклады и презентации</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Пресс-релизы</a></li>
+                        <li class="title"><a href="#">СМИ о нас</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Корпоративный стиль</a></li>
+                        <li class="title"><a href="#">Контакты пресс-центра</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFive" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFive" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFive">О Бирже</a></div>
+              </div>
+              <div id="collapseFive" role="tabpanel" aria-labelledby="headingFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">О нас</div>
+                      <ul>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Миссия и ценности</a></li>
+                        <li><a href="#">Руководство</a></li>
+                        <li><a href="#">Комитеты и комиссии</a></li>
+                        <li><a href="#">Участие в профессиональных организациях</a></li>
+                        <li><a href="#">Корпоративные документы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Акционерам</div>
+                      <ul>
+                        <li><a href="#">Отчетность</a></li>
+                        <li><a href="#">Новости и уведомления</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Закупки</a></li>
+                        <li class="title"><a href="#">Реквизиты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Вакансии</a></li>
+                        <li class="title"><a href="#">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="wrap">
+      <div class="fixed-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-youtube"></i></a></div>
+      <div id="headerSearch" style="display: none;" class="header-search">
+        <div class="container">
+          <form action="">
+            <input type="text" placeholder="Что вы ищите?..." class="header-search__input">
+            <button type="submit" class="header-search__button"><img src="images/search-icon.svg" alt="">Найти</button>
+            <div class="head-search__close"><a id="searchClose" href="#"><img src="images/close-gray.svg" alt=""></a></div>
+          </form>
+        </div>
+      </div>
+      <header id="header">
+        <div class="header__container">
+          <div class="container">
+            <div class="header__content">
+              <div class="header__left-col"><a id="menuBtn" href="#" class="header__menu-button"><img src="images/menu-border.svg" alt=""><span class="header__menu-button-lines"><span></span><span></span><span></span></span></a>
+                <div class="header__logo"><a href="/"><span class="header__logo-img"><img src="images/logo.svg" alt="KASE"></span><span class="header__logo-text"><span>Қазақстан қор биржасы</span><span>Казахстанская фондовая биржа</span><span>Kazakhstan Stock Exchange</span></span></a></div>
+              </div>
+              <div class="header__right-col">
+                <div class="header__date">Пятница, 11 ноября 2016 г. 11:24</div><a href="#" id="searchBtn" class="header__search-button"><img src="images/search-icon.svg" alt="Search"></a>
+                <div class="header__language">
+                  <ul class="header__language-list clearfix">
+                    <li class="active"><a href="#">Рус </a></li>
+                    <li><a href="#">Қаз </a></li>
+                    <li><a href="#">Eng </a></li>
+                  </ul>
+                  <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рус</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Қаз</a></li>
+                      <li><a href="#">Eng</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__login">
+                  <div class="header__login--mobile"><a href="#"><img src="images/login-mob.svg" alt=""></a></div>
+                  <div class="header__login--desctop"><a href="#">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 253 106.3" enable-background="new 0 0 253 106.3" xml:space="preserve">
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="227.5092" y1="-5.151" x2="25.4908" y2="111.4843">
+                          <stop offset="0" style="stop-color:#9ED110"></stop>
+                          <stop offset="1" style="stop-color:#038726"></stop>
+                        </linearGradient>
+                        <path fill="none" stroke="url(#SVGID_1_)" stroke-width="3" stroke-miterlimit="10" d="M199.8,104.8H53.2c-28.4,0-51.7-23.2-51.7-51.7v0c0-28.4,23.2-51.7,51.7-51.7h146.7c28.4,0,51.7,23.2,51.7,51.7v0C251.5,81.6,228.3,104.8,199.8,104.8z"></path>
+                      </svg><span class="header__login-text">Войти<span class="arr">&rarr;</span></span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="relative">
+        <div class="landing-head gr-blue-purple">
+          <div class="landing-head__arrows-parent">
+            <div class="container"><a href="#" class="landing-head__arrow-link landing-head__arrow-link--left"><span>
+                  <svg version="1.1" id="leftArr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.501 35" enable-background="new 0 0 50.501 35" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M50.501,16.336v2.329H2.331v-2.329H50.501z"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M19.395,33.25L17.631,35L0,17.501l1.763-1.75L19.395,33.25z"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M19.395,1.751L1.763,19.25L0,17.501L17.631,0L19.395,1.751z"></path>
+                  </svg><span>Институциональным инвесторам</span></span></a><a href="#" class="landing-head__arrow-link landing-head__arrow-link--right"><span>
+                  <svg version="1.1" id="rightArr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50.501 35" enable-background="new 0 0 50.501 35" xml:space="preserve">
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M0,18.664v-2.329h48.17v2.329H0z"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M31.106,1.75L32.869,0l17.631,17.499l-1.763,1.75L31.106,1.75z"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M31.106,33.249L48.737,15.75l1.763,1.749L32.869,35L31.106,33.249z"></path>
+                  </svg><span>Иностранным инвесторам</span></span></a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="landing-head__body">
+              <div class="head-rect__parent">
+                <div id="headRect" data-offset="3" class="head-rect head-rect--orange-purple">
+                  <div class="flex">
+                    <div data-offset="15" class="parallax">
+                      <h1>Частным инвесторам</h1>
+                    </div>
+                  </div>
+                </div>
+                <h1 class="mobile">Частным инвесторам</h1>
+              </div>
+              <div class="landing-head__text">
+                <p>Цели инвестирования в фондовую биржу могут быть различные на разных рынках и личных потребностях инвестора. Казахстанская фондовая биржа функционирует в виде электронной торговой системы, которая проводит торги ежедневно по рабочим дням в течении большей части дня образуя торговый день.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="landing-menu">
+          <div class="container">
+            <ul>
+              <li><a href="#"><span>Что такое Фондовый Рынок?</span></a></li>
+              <li><a href="#"><span>Зачем инвестировать?</span></a></li>
+              <li><a href="#"><span>С чего начать?</span></a></li>
+              <li><a href="#"><span>Правила торгов</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="landing-section">
+        <div class="container">
+          <div class="infrastructure-main-block">
+            <h2>Инфраструктура</h2>
+            <div class="infrastructure-block">
+              <div class="infrastructure-block-header"> <span>Национальный банк Республики Казахстан</span></div>
+              <div class="infrastructure-block-list">
+                <div id="infrastructure-id-first" class="infrastructure-block__item">
+                  <div class="infrastructure-block__title">Единый реестр Ценных Бумаг</div>
+                </div>
+                <div class="infrastructure-block__line">
+                  <hr class="infrastructure-block__between">
+                </div>
+                <div id="infrastructure-id-second" class="infrastructure-block__item">
+                  <div class="infrastructure-block__title">Центральный депозитарий</div>
+                </div>
+                <div class="infrastructure-block__line">
+                  <hr class="infrastructure-block__between">
+                </div>
+                <div class="infrastructure-block__line_three">
+                  <div id="infrastructure-id-third" class="infrastructure-block__item">
+                    <div class="infrastructure-block__title">Казахстанская Фондовая Биржа KASE</div>
+                  </div>
+                  <div class="infrastructure-block__line">
+                    <hr class="infrastructure-block__between">
+                  </div>
+                  <div id="infrastructure-id-forth" class="infrastructure-block__item">
+                    <div class="infrastructure-block__title">Брокер</div>
+                  </div>
+                  <div class="infrastructure-block__item_small_block">
+                    <div class="infrastructure-block__line_degree_1">
+                      <hr class="infrastructure-block__between">
+                    </div>
+                    <div id="infrastructure-id-small" class="infrastructure-block__item_small">
+                      <div class="infrastructure-block__title">Банк Кастоидиан</div>
+                    </div>
+                    <div class="infrastructure-block__line_degree_2">
+                      <hr class="infrastructure-block__between">
+                    </div>
+                  </div>
+                </div>
+                <div class="infrastructure-block__line">
+                  <hr class="infrastructure-block__between">
+                </div>
+                <div id="infrastructure-id-fifth" class="infrastructure-block__item">
+                  <div class="infrastructure-block__title">Инвестор</div>
+                </div>
+              </div>
+            </div>
+            <div class="infrastructure-id-first">
+              <div class="landing-white-block">
+                <div class="picture-content-block">
+                  <div>
+                  </div>
+                  <div class="picture-content-block__description"><span>Фондовая Биржа</span><span> - </span><span>финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.</span>
+                  </div>
+                </div><br>
+                <div class="list-picture-block">
+                  <div>
+                  </div>
+                  <ul class="list-color list-color--purple list-color-left">
+                    <li>Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;</li>
+                    <li>Выявление равновесной биржевой цены;</li>
+                    <li>Аккумулирование временно свободных денежных средств и способствование передаче права собственности;</li>
+                    <li>Обеспечение гласности, открытости биржевых торгов;</li>
+                    <li>Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;</li>
+                    <li>Разработка этических стандартов, кодекса поведения участников биржевой торговли.</li>
+                  </ul>
+                </div>
+                <div class="landing-white-block__close"><a href="#" id="infrastructure-block__popup_close" class="infrastructure-block__popup_close"><i class="fa fa-close"></i></a></div>
+              </div>
+            </div>
+            <div class="infrastructure-id-second">
+              <div class="landing-white-block">
+                <div class="picture-content-block">
+                  <div>
+                  </div>
+                  <div class="picture-content-block__description"><span>Фондовая Биржа</span><span> - </span><span>финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.</span>
+                  </div>
+                </div><br>
+                <div class="list-picture-block">
+                  <div>
+                  </div>
+                  <ul class="list-color list-color--purple list-color-left">
+                    <li>Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;</li>
+                    <li>Выявление равновесной биржевой цены;</li>
+                    <li>Аккумулирование временно свободных денежных средств и способствование передаче права собственности;</li>
+                    <li>Обеспечение гласности, открытости биржевых торгов;</li>
+                    <li>Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;</li>
+                    <li>Разработка этических стандартов, кодекса поведения участников биржевой торговли.</li>
+                  </ul>
+                </div>
+                <div class="landing-white-block__close"><a href="#" id="infrastructure-block__popup_close" class="infrastructure-block__popup_close"><i class="fa fa-close"></i></a></div>
+              </div>
+            </div>
+            <div class="infrastructure-id-third">
+              <div class="landing-white-block">
+                <div class="picture-content-block">
+                  <div>
+                  </div>
+                  <div class="picture-content-block__description"><span>Фондовая Биржа</span><span> - </span><span>финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.</span>
+                  </div>
+                </div><br>
+                <div class="list-picture-block">
+                  <div>
+                  </div>
+                  <ul class="list-color list-color--purple list-color-left">
+                    <li>Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;</li>
+                    <li>Выявление равновесной биржевой цены;</li>
+                    <li>Аккумулирование временно свободных денежных средств и способствование передаче права собственности;</li>
+                    <li>Обеспечение гласности, открытости биржевых торгов;</li>
+                    <li>Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;</li>
+                    <li>Разработка этических стандартов, кодекса поведения участников биржевой торговли.</li>
+                  </ul>
+                </div>
+                <div class="landing-white-block__close"><a href="#" id="infrastructure-block__popup_close" class="infrastructure-block__popup_close"><i class="fa fa-close"></i></a></div>
+              </div>
+            </div>
+            <div class="infrastructure-id-forth">
+              <div class="landing-white-block">
+                <div class="picture-content-block">
+                  <div>
+                  </div>
+                  <div class="picture-content-block__description"><span>Фондовая Биржа</span><span> - </span><span>финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.</span>
+                  </div>
+                </div><br>
+                <div class="list-picture-block">
+                  <div>
+                  </div>
+                  <ul class="list-color list-color--purple list-color-left">
+                    <li>Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;</li>
+                    <li>Выявление равновесной биржевой цены;</li>
+                    <li>Аккумулирование временно свободных денежных средств и способствование передаче права собственности;</li>
+                    <li>Обеспечение гласности, открытости биржевых торгов;</li>
+                    <li>Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;</li>
+                    <li>Разработка этических стандартов, кодекса поведения участников биржевой торговли.</li>
+                  </ul>
+                </div>
+                <div class="landing-white-block__close"><a href="#" id="infrastructure-block__popup_close" class="infrastructure-block__popup_close"><i class="fa fa-close"></i></a></div>
+              </div>
+            </div>
+            <div class="infrastructure-id-fifth">
+              <div class="landing-white-block">
+                <div class="picture-content-block">
+                  <div>
+                  </div>
+                  <div class="picture-content-block__description"><span>Фондовая Биржа</span><span> - </span><span>финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.</span>
+                  </div>
+                </div><br>
+                <div class="list-picture-block">
+                  <div>
+                  </div>
+                  <ul class="list-color list-color--purple list-color-left">
+                    <li>Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;</li>
+                    <li>Выявление равновесной биржевой цены;</li>
+                    <li>Аккумулирование временно свободных денежных средств и способствование передаче права собственности;</li>
+                    <li>Обеспечение гласности, открытости биржевых торгов;</li>
+                    <li>Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;</li>
+                    <li>Разработка этических стандартов, кодекса поведения участников биржевой торговли.</li>
+                  </ul>
+                </div>
+                <div class="landing-white-block__close"><a href="#" id="infrastructure-block__popup_close" class="infrastructure-block__popup_close"><i class="fa fa-close"></i></a></div>
+              </div>
+            </div>
+            <div class="infrastructure-id-small">
+              <div class="landing-white-block">
+                <div class="picture-content-block">
+                  <div>
+                  </div>
+                  <div class="picture-content-block__description"><span>Фондовая Биржа</span><span> - </span><span>финансовый институт, обеспечивающий регулярное функционирование организованного рынка ценных бумаг.</span>
+                  </div>
+                </div><br>
+                <div class="list-picture-block">
+                  <div>
+                  </div>
+                  <ul class="list-color list-color--purple list-color-left">
+                    <li>Предоставление централизованного места, где может происходить как продажа ценных бумаг их первым владельцам, так и вторичная их перепродажа;</li>
+                    <li>Выявление равновесной биржевой цены;</li>
+                    <li>Аккумулирование временно свободных денежных средств и способствование передаче права собственности;</li>
+                    <li>Обеспечение гласности, открытости биржевых торгов;</li>
+                    <li>Обеспечение гарантий исполнения сделок, заключенных в биржевом зале;</li>
+                    <li>Разработка этических стандартов, кодекса поведения участников биржевой торговли.</li>
+                  </ul>
+                </div>
+                <div class="landing-white-block__close"><a href="#" id="infrastructure-block__popup_close" class="infrastructure-block__popup_close"><i class="fa fa-close"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section landing-section--gray-bg">
+        <div class="container">
+          <h2>Роль биржи</h2>
+          <div class="landing-section__text landing-section__text--color500">
+            <p>Фондовая биржа - Рынок, на котором продаются и покупаются ценные бумаги, а цены на них определяются спросом и предложением</p>
+          </div>
+          <div class="list-picture-block">
+            <div>
+            </div>
+            <ul class="list-color list-color--purple list-color-left">
+              <li>создание постоянно действующего рынка;</li>
+              <li>определение цен;</li>
+              <li>распространение информации о финансовых инструментах, их ценах и условиях обращения;</li>
+              <li>выработка правил регулирования купли-продажи ценных бумаг;</li>
+              <li>поддержание профессионализма торговых и финансовых посредников;</li>
+              <li>мобилизация и концентрация свободных денежных капиталов и накоплений посредством купли-продажи ценных бумаг;</li>
+              <li>обеспечение высокого уровня ликвидности вложений в ценные бумаги, гарантий использования сделок;</li>
+              <li>индикация состояния экономики, сегментов фондового рынка.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section landing-section--gray-bg landing-section--with-image">
+        <div class="gr-blue-purple sizeLarger"></div>
+        <div class="container">
+          <h2>Финансовые Рынки</h2>
+          <div class="landing-section__text">Фондовый рынок Казахстанской Биржи включает в себя пять рынков различных финансовых инструментов:</div>
+          <div class="landing-white-block">
+            <div class="gradient-tabs">
+              <ul role="tablist" class="nav">
+                <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--purple active"><a href="#tab1" role="tab" data-toggle="tab"><span>Иностранные Валюты</span></a></li>
+                <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--purple"><a href="#tab2" role="tab" data-toggle="tab"><span>Акции</span></a></li>
+                <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--purple"><a href="#tab3" role="tab" data-toggle="tab"><span>Облигации</span></a></li>
+                <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--purple"><a href="#tab4" role="tab" data-toggle="tab"><span>Операции РЕПО</span></a></li>
+                <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--purple"><a href="#tab5" role="tab" data-toggle="tab"><span>Деривативы</span></a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="tab1" role="tabpanel" class="gratient-tabs__accordion-body tab-pane fade active in">
+                  <div class="container">
+                    <div style="color:#383838;"> 
+                      <h2>Рынок Иностранных Валют</h2>
+                      <div class="landing-section__text landing-section__text--color500">На рынке проходят торги валютными парами USD/KZT, EUR/KZT, RUR/KZT, CNY/KZT. Рынок иностранной валюты выполняет ряд экономически важных функций: </div>
+                      <div class="list-picture-block">
+                        <div>
+                        </div>
+                        <ul class="list-color list-color--purple list-color-left">
+                          <li>формирует текущий рыночный курс казахстанского тенге к иностранным валютам;</li>
+                          <li>устанавливает официальный курс тенге по итогам биржевых торгов;   — обеспечивает рынок обязательной для экономики продажей иностранных валют;</li>
+                          <li>поддерживает ликвидность валютного рынка стран;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tab2" role="tabpanel" class="gratient-tabs__accordion-body tab-pane fade">
+                  <div class="container"> 
+                    <div style="color:#000;">text2</div>
+                  </div>
+                </div>
+                <div id="tab3" role="tabpanel" class="gratient-tabs__accordion-body tab-pane fade">
+                  <div class="container"> 
+                    <div style="color:#000;">text3</div>
+                  </div>
+                </div>
+                <div id="tab4" role="tabpanel" class="gratient-tabs__accordion-body tab-pane fade">
+                  <div class="container"> 
+                    <div style="color:#000;">text4</div>
+                  </div>
+                </div>
+                <div id="tab5" role="tabpanel" class="gratient-tabs__accordion-body tab-pane fade">
+                  <div class="container"> 
+                    <div style="color:#000;">text5</div>
+                  </div>
+                </div>
+              </div>
+              <div class="gradient-tabs">
+                <div id="gradientTabsAccordion" class="gratient-tabs__accordion">
+                  <div class="gratient-tabs__accordion-pane panel active">
+                    <div class="gratient-tabs__accordion-link gratient-tabs__accordion-link--yellow active"><a data-target="#acc1" role="button" data-toggle="collapse" data-parent="#gradientTabsAccordion" class="collapsed"><span>Иностранные Валюты</span></a></div>
+                    <div id="acc1" role="tabpanel" class="gratient-tabs__accordion-body collapse">
+                      <div class="container">
+                        <h2 style="color:#383838;">Рынок Иностранных Валют</h2>
+                        <div class="landing-section__text landing-section__text--color500">На рынке проходят торги валютными парами USD/KZT, EUR/KZT, RUR/KZT, CNY/KZT. Рынок иностранной валюты выполняет ряд экономически важных функций: </div>
+                        <div class="list-picture-block">
+                          <div>
+                          </div>
+                          <ul class="list-color list-color--yellow list-color-left">
+                            <li>формирует текущий рыночный курс казахстанского тенге к иностранным валютам;</li>
+                            <li>устанавливает официальный курс тенге по итогам биржевых торгов;   — обеспечивает рынок обязательной для экономики продажей иностранных валют;</li>
+                            <li>поддерживает ликвидность валютного рынка стран;</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="gratient-tabs__accordion-pane panel">
+                    <div class="gratient-tabs__accordion-link gratient-tabs__accordion-link--yellow"><a data-target="#acc2" role="button" data-toggle="collapse" data-parent="#gradientTabsAccordion" class="collapsed"><span>Акции</span></a></div>
+                    <div id="acc2" role="tabpanel" class="gratient-tabs__accordion-body collapse">
+                      <div style="color:#000;">text2</div>
+                    </div>
+                  </div>
+                  <div class="gratient-tabs__accordion-pane panel">
+                    <div class="gratient-tabs__accordion-link gratient-tabs__accordion-link--yellow"><a data-target="#acc3" role="button" data-toggle="collapse" data-parent="#gradientTabsAccordion" class="collapsed"><span>Облигации</span></a></div>
+                    <div id="acc3" role="tabpanel" class="gratient-tabs__accordion-body collapse">
+                      <div style="color:#000;">text3</div>
+                    </div>
+                  </div>
+                  <div class="gratient-tabs__accordion-pane panel">
+                    <div class="gratient-tabs__accordion-link gratient-tabs__accordion-link--yellow"><a data-target="#acc4" role="button" data-toggle="collapse" data-parent="#gradientTabsAccordion" class="collapsed"><span>Операции РЕПО</span></a></div>
+                    <div id="acc4" role="tabpanel" class="gratient-tabs__accordion-body collapse">
+                      <div style="color:#000;">text4</div>
+                    </div>
+                  </div>
+                  <div class="gratient-tabs__accordion-pane panel">
+                    <div class="gratient-tabs__accordion-link gratient-tabs__accordion-link--yellow"><a data-target="#acc5" role="button" data-toggle="collapse" data-parent="#gradientTabsAccordion" class="collapsed"><span>Деривативы</span></a></div>
+                    <div id="acc5" role="tabpanel" class="gratient-tabs__accordion-body collapse">
+                      <div style="color:#000;">text4</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="landing-section landing-section--gray-bg">
+        <div class="container">
+          <h2>Почему компании выходят в IPO</h2>
+          <div class="picture-content-block">
+            <div>
+              <div class="picture-content-block__icon picture-content-block--small"><img src="images/broker-img.svg" alt=""></div>
+            </div>
+            <div class="picture-content-block__description"><span>Привлечение средств на выгодных условиях</span><span> - </span><span>с помощью публичного размещения за счет массовости инвестиций, компании могут привлечь значительно больше средств, по сравнению с подбором нескольких отдельных инвесторов. </span>
+            </div>
+          </div>
+          <div class="picture-content-block">
+            <div>
+              <div class="picture-content-block__icon picture-content-block--small"><img src="images/broker-img.svg" alt=""></div>
+            </div>
+            <div class="picture-content-block__description"><span>Увеличение рыночной стоимости компании</span><span> - </span><span>публичные компании оцениваются дороже, чем частные, из-за ликвидности акций компании или иными словами легкости купли продаже долей компании. Инвестор, купивший акции публичной компании может легко вернуть вложенные средства, продав акции за ту же приобретенную сумму.</span>
+            </div>
+          </div>
+          <div class="picture-content-block">
+            <div>
+              <div class="picture-content-block__icon picture-content-block--small"><img src="images/broker-img.svg" alt=""></div>
+            </div>
+            <div class="picture-content-block__description"><span>Повышение узнаваемости</span><span> - </span><span>при IPO компании обретают такую высокую популярность, которую сложно получить стандартными методами маркетинга и “PR” без публичного размещения.</span>
+            </div>
+          </div>
+          <div class="picture-content-block">
+            <div>
+              <div class="picture-content-block__icon picture-content-block--small"><img src="images/broker-img.svg" alt=""></div>
+            </div>
+            <div class="picture-content-block__description"><span>Получение инструмента оплаты</span><span> - </span><span>при поглощении одной компании другой во многих примерах поглощающая корпорация отплачивала часть суммы акциями. Так же во многих корпорациях работникам выплачиваются бонусы в виде акций или опционов на акции, что мотивирует ключевых сотрудников компании.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <ul class="footer__nav">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Партнерские сайты</a></li>
+          <li><a href="#">Мобильная версия</a></li>
+          <li><a href="#">Карта сайта</a></li>
+        </ul>
+        <div class="footer__text">
+          <div>&copy; 1993–2016 АО "Казахстанская фондовая биржа"</div>
+          <div>Копирование материалов – только с письменного разрешения.</div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" defer src="js/libs.js"> </script>
+    <script type="text/javascript" defer src="js/main.js"></script>
+  </body>
+</html>

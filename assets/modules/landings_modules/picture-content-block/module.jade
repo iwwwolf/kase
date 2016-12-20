@@ -1,0 +1,11 @@
+each item in pictureContentList
+	.picture-content-block
+		div
+			if (typeof(item.icon) !== 'undefined')
+				div(class="picture-content-block__icon picture-content-block--" + pictureSize)
+					img(src="images/"+ item.icon, alt="")
+		.picture-content-block__description
+			for listItem in item.list
+				span= listItem.title 
+				span=" - "
+				span= listItem.text

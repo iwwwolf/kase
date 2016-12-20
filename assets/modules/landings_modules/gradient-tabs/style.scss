@@ -22,6 +22,16 @@
 					background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%);
 				}
 			}
+			&.gradient-tabs__tab--yellow {
+				a {
+					background: linear-gradient(52deg, #fecc00 0%, #ef7f1a 100%);
+				}
+			}
+			&.gradient-tabs__tab--purple {
+				a {
+					background: linear-gradient(52deg,#0e56b7 0%, #a71af0 100%);
+				}
+			}
 		}
 		&--green {
 			a:hover {
@@ -31,6 +41,16 @@
 		&--blue {
 			a:hover {
 				background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%);
+			}
+		}
+		&--yellow {
+			a:hover {
+				background: linear-gradient(52deg, #fecc00 0%, #ef7f1a 100%);
+			}
+		}
+		&--purple {
+			a:hover {
+				background: linear-gradient(52deg,#0e56b7 0%, #a71af0 100%);
 			}
 		}
 		a {
@@ -62,6 +82,13 @@
 			a {
 				&:not(.collapsed) {
 					background: linear-gradient(52deg, #00aaff 18%, #005dbd 100%);
+				}
+			}
+		}
+		&--yellow {
+			a {
+				&:not(.collapsed) {
+					background: linear-gradient(52deg, #fecc00 0%, #ef7f1a 100%);
 				}
 			}
 		}
@@ -113,6 +140,37 @@
 		margin-left: -14px;
 	}
 }
+.landing-white-block .gradient-tabs .gradient-tabs__tab {
+		margin-left: 5px;
+
+}
+.landing-white-block  .gradient-tabs .nav {
+    font-weight: 300;
+}
+.landing-white-block .gratient-tabs__accordion-body {
+    padding: 0;
+}
+
+@media (min-width: 768px) and (max-width: 991){
+	.gradient-tabs .gratient-tabs__accordion-link a{
+		max-width: 600px !important;
+	}
+	.gradient-tabs .gratient-tabs__accordion-link{
+		max-width: 600px !important;
+	}
+	.gratient-tabs__accordion-pane.panel .container, .tab-content .container, .gratient-tabs__accordion-body.tab-pane.fade.active .container{
+		max-width: 750px;
+	 }
+	.landing-section--with-image .container, .landing-section--with-slider .container {
+		width: 98% !important;
+	}
+	.landing-section--with-image .gratient-tabs__accordion-body.active.in .container{
+		width: 100% !important;
+	}
+	.landing-section--with-image .gradient-tabs .panel .container{
+		width: 100% !important;
+	}
+}
 
 @media (min-width: 992px){
 	.gradient-tabs {
@@ -132,5 +190,11 @@
 		&.active.in {
 			display: block;
 		}
+	}
+	.landing-section--with-image .gratient-tabs__accordion-body.active.in .container{
+		width: 100% !important;
+	}
+	.landing-white-block .gratient-tabs__accordion-body {
+	    //padding: 20px;
 	}
 }

@@ -61,6 +61,10 @@
     color: #fff;
     background: linear-gradient(to right, #fecc00 0%, #e84242 100%);
   }
+  &--orange-purple {
+    color: #fff;
+    background: linear-gradient(52deg, #ff9000 18%, #a71af0 100%);
+  }
   &--gray-bg {
     background: #f7f8f8;
   }
@@ -94,6 +98,14 @@
       height: 415px;
     }
   }
+  &--with-no-image {
+    .container {
+      color: #383838 !important;
+    }
+  }
+}
+.sizeLarger {
+    height: 500px !important;
 }
 #gradientMask {
   position: absolute;
@@ -224,6 +236,10 @@
   color: #fff;
   background: linear-gradient(52deg,#9ed110 0%, #009aff 100%);
 }
+.gr-blue-purple {
+  color: #fff;
+  background: linear-gradient(52deg,#0e56b7 0%, #a71af0 100%);
+}
 .description-link {
   display: inline;
   line-height: 1;
@@ -234,7 +250,18 @@
   box-shadow: none;
   cursor: help;
 }
+.tab-content{
+  h2{
+      font-size: 21px !important;
+      font-weight: 500 !important;
+  }
+  .landing-section__text{
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding-bottom: 20px !important;
+  }
 
+}
 
 @media (min-width: 649px) and (max-width: 768px) {
   .landing-section {
@@ -264,8 +291,19 @@
   .landing-section__description {
     margin-bottom: 32px;
   }
-}
+  .tab-content{
+    h2{
+        font-size: 21px !important;
+        font-weight: 500 !important;
+    }
+    .landing-section__text{
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      padding-bottom: 20px !important;
+    }
 
+  }
+}
 
 @media (min-width: 769px){
   .landing-section {
