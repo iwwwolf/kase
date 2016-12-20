@@ -1,0 +1,196 @@
+<<<<<<< HEAD
+=======
+
+<div class="tools-form">
+  <form>
+    <div class="tools-form__section">
+      <div class="tools-form__head-title">Ценные бумаги официального списка</div>
+      <div class="tools-form__part">
+        <div class="tools-form__part-title"><span>Основная площадка</span></div>
+        <div>
+          <div class="tools-form__columns">
+            <div class="tools-form__col">
+              <div class="tools-form__column-title">Акции</div>
+              <ul>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="actionName" checked="checked"/><span class="checkbox__styled"></span><span class="checkbox__label">Первая категория</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="actionName" checked="checked"/><span class="checkbox__styled"></span><span class="checkbox__label">Вторая категория</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="tools-form__col">
+              <div class="tools-form__column-title">Долговые ценные бумаги</div>
+              <ul>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Долговые ценные бумаги субъектов квазигосударственного сектора</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Иные долговые ценные бумаги</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Буферная категория</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="tools-form__col">
+              <div class="tools-form__column-title">Государственные ценные бумаги</div>
+              <ul>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Национальный банк РК</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Министерство финансов РК</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Местные исполнительные органы</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tools-form__columns">
+            <div class="tools-form__col">
+              <ul>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="actionName"/><span class="checkbox__styled"></span><span class="checkbox__label">Ценные бумаги инвестиционных фондов</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="actionName"/><span class="checkbox__styled"></span><span class="checkbox__label">Акции сектора HiTec</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="tools-form__col">
+              <ul>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Исламские ценные бумаги</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Ценные бумани НФО</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="tools-form__col">
+              <ul>
+                <li>
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Производные ценные бумаги</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="hiddingTools" style="display: none;">
+        <div class="tools-form__part">
+          <div class="tools-form__part-title"><span>Альтернативная площадка</span></div>
+          <div>
+            <div class="tools-form__columns">
+              <div class="tools-form__col">
+                <div class="tools-form__column-title">Акции</div>
+                <ul>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="actionName"/><span class="checkbox__styled"></span><span class="checkbox__label">Первая категория</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="actionName"/><span class="checkbox__styled"></span><span class="checkbox__label">Вторая категория</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="tools-form__col">
+                <div class="tools-form__column-title">Долговые ценные бумаги</div>
+                <ul>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Долговые ценные бумаги субъектов квазигосударственного сектора</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Иные долговые ценные бумаги</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tools-form__head-title">Другие инструменты</div>
+        <div class="tools-form__part">
+          <div>
+            <div class="tools-form__columns">
+              <div class="tools-form__col">
+                <ul>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="actionName"/><span class="checkbox__styled"></span><span class="checkbox__label">Нелистинговые компании</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="actionName"/><span class="checkbox__styled"></span><span class="checkbox__label">Фьючерсы</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="tools-form__col">
+                <ul>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Иностранные валюты</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="tools-form__col">
+                <ul>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Операции автоматического репо</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tools-form__footer">
+        <label class="checkbox">
+          <input type="checkbox" name="checkboxName"/><span class="checkbox__styled"></span><span class="checkbox__label">Выбрать все</span>
+        </label>
+        <div class="all-link"><a id="allFilter" href="#">Раскрыть фильтр</a></div>
+      </div>
+    </div>
+  </form>
+</div>
+>>>>>>> 5389021ee1e0242ef9053c1384d91b30cc90534c

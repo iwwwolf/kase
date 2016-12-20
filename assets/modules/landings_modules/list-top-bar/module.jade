@@ -2,9 +2,9 @@ div(class="list-top-bar--" + stylingBlock)
 	.list-top-bar
 		each item in listBarTop
 			.list-top-bar__blockWrapper
-				.list-top-bar__block
+				div(class="list-top-bar__block list-top-bar__block--"+ navColor)
 					if (typeof(item.title) !== 'undefined')
 						.list-top-bar__title= item.title
 
 					if (typeof(item.text) !== 'undefined')
-						.ulist-top-bar__text= item.text
+						.list-top-bar__text= item.text

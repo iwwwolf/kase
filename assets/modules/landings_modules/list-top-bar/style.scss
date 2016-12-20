@@ -19,8 +19,29 @@
 	width: 100%;
 
 }
-.list-top-bar__block:before{
+// .list-top-bar__block:before{
+// 	&--
+// 	background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%);
+// 	width: 100%;
+// 	height: 5px;
+// 	position: absolute;
+// 	display: block;
+//  	top: 0;
+//  	left: 0;
+//  	content: "";
+// }
+.list-top-bar__block--yellow:before{
 	background: linear-gradient(52deg, #fecc00 18%, #ff9000 100%);
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	display: block;
+ 	top: 0;
+ 	left: 0;
+ 	content: "";
+}
+.list-top-bar__block--purple:before{
+	background: linear-gradient(52deg, #ff9000 18%, #a71af0 100%);
 	width: 100%;
 	height: 5px;
 	position: absolute;

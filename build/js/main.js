@@ -973,7 +973,6 @@ $(document).ready(function(){
 			$('.infrastructure-id-first').addClass('popupShow');
 			$('.infrastructure-id-first').show();
 		}
-			-console.log("hajhaj");
 			$('.infrastructure-id-first').on('click', function(e) {
 				$('.infrastructure-id-first').removeClass('popupShow');
 				$('.infrastructure-id-first').hide();
