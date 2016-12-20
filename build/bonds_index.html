@@ -315,9 +315,6 @@
           <div id="regulations" class="regulations">
             <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"><span class="line1"></span><span class="line2"></span></i></a>
               <div class="dropdown-menu">
-                <div id="datePicker" class="select-date">
-                  <input type="text">
-                </div>
                 <div class="regulations__download">
                   <h5>Архив</h5>
                   <form>
@@ -362,17 +359,10 @@
             <li><a href="#">Индекс KASE</a></li>
           </ul>
           <div class="h1-block"><a href="#" class="arrow-back"><i class="fa fa-angle-left"></i></a>
-            <div class="flex">
-              <h1>Индекс KASE</h1>
-              <div>
-                <div class="h1-block__indicator">12,34% годовых</div>
-                <div class="h1-block__indicator up">0.14</div>
-              </div>
-            </div>
+            <h1>Индексы корпоративных облигаций</h1>
           </div>
-          <div class="kase-date">Данные на: 7 декабря 2016 г. </div>
           <div class="accordion">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Последние значения<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Индекс KASE_BY<i class="fa fa-angle-down"></i></a></div>
             <div class="accordion__body">
               <div class="half-table__parent">
                 <div class="row">
@@ -478,12 +468,243 @@
                 <p>Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.</p>
                 <p>Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.</p>
                 <p>Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.</p>
-                <p>"Время жизни" индикатора: 1 рабочий день.</p>
+                <p>
+                  "Время жизни" индикатора: 1 рабочий день.
+                  
+                </p>
               </div>
             </div>
           </div>
           <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Представительский список Индекса KASE<span class="date">на 16.09.16</span><i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Индекс KASE_BP<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <div class="half-table__parent">
+                <div class="row">
+                  <div class="col-md-6">
+                    <table class="half-table">
+                      <tr>
+                        <td>Время последних данных </td>
+                        <td>09.08.16 (16:14)</td>
+                      </tr>
+                      <tr>
+                        <td>Последнее значение</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Открытие</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Макс.</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Мин.</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Изменение с начала месяца, %</td>
+                        <td><span class="green">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>Объем сделок, млн KZT</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Капитализация, млрд KZT</td>
+                        <td>987.4</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="col-md-6">
+                    <table class="half-table">
+                      <tr>
+                        <td>Статус рынка</td>
+                        <td><span class="green">открыт</span></td>
+                      </tr>
+                      <tr>
+                        <td>Изменение к предыдущему значению, %</td>
+                        <td><span class="green">1.06</span></td>
+                      </tr>
+                      <tr>
+                        <td>Предыдущее закрытие</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Макс. за 52 недели</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Мин. за 52 недели</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Изменение с начала года, %</td>
+                        <td><span class="green">4.06</span></td>
+                      </tr>
+                      <tr>
+                        <td>Объем сделок, тыс USD</td>
+                        <td>212.2</td>
+                      </tr>
+                      <tr>
+                        <td>Капитализация, млн USD</td>
+                        <td>275</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="help-block">* объем сделок по акциям, входящим в представительский список Индекса KASE</div>
+                <div class="help-block">* капитализация компаний, входящих в представительский список Индекса KASE</div>
+              </div>
+              <ul class="accordion__nav">
+                <li class="active"><a href="#">Архив</a></li>
+                <li><a href="#">В течение дня</a></li>
+              </ul>
+              <div class="actions__chart">
+                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                <script type="text/javascript">
+                  new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Asia/Almaty",
+                    "theme": "White",
+                    "style": "3",
+                    "locale": "ru",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": true,
+                    "hideideas": true
+                  });
+                </script>
+              </div>
+              <div class="actions__chart-text">
+                <p>Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.</p>
+                <p>Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.</p>
+                <p>Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.</p>
+                <p>
+                  "Время жизни" индикатора: 1 рабочий день.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Индекс KASE_BC<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <div class="half-table__parent">
+                <div class="row">
+                  <div class="col-md-6">
+                    <table class="half-table">
+                      <tr>
+                        <td>Время последних данных </td>
+                        <td>09.08.16 (16:14)</td>
+                      </tr>
+                      <tr>
+                        <td>Последнее значение</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Открытие</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Макс.</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Мин.</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Изменение с начала месяца, %</td>
+                        <td><span class="green">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>Объем сделок, млн KZT</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Капитализация, млрд KZT</td>
+                        <td>987.4</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="col-md-6">
+                    <table class="half-table">
+                      <tr>
+                        <td>Статус рынка</td>
+                        <td><span class="green">открыт</span></td>
+                      </tr>
+                      <tr>
+                        <td>Изменение к предыдущему значению, %</td>
+                        <td><span class="green">1.06</span></td>
+                      </tr>
+                      <tr>
+                        <td>Предыдущее закрытие</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Макс. за 52 недели</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Мин. за 52 недели</td>
+                        <td>987.4</td>
+                      </tr>
+                      <tr>
+                        <td>Изменение с начала года, %</td>
+                        <td><span class="green">4.06</span></td>
+                      </tr>
+                      <tr>
+                        <td>Объем сделок, тыс USD</td>
+                        <td>212.2</td>
+                      </tr>
+                      <tr>
+                        <td>Капитализация, млн USD</td>
+                        <td>275</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="help-block">* объем сделок по акциям, входящим в представительский список Индекса KASE</div>
+                <div class="help-block">* капитализация компаний, входящих в представительский список Индекса KASE</div>
+              </div>
+              <ul class="accordion__nav">
+                <li class="active"><a href="#">Архив</a></li>
+                <li><a href="#">В течение дня</a></li>
+              </ul>
+              <div class="actions__chart">
+                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                <script type="text/javascript">
+                  new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Asia/Almaty",
+                    "theme": "White",
+                    "style": "3",
+                    "locale": "ru",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": true,
+                    "hideideas": true
+                  });
+                </script>
+              </div>
+              <div class="actions__chart-text">
+                <p>Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.</p>
+                <p>Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.</p>
+                <p>Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.</p>
+                <p>
+                  "Время жизни" индикатора: 1 рабочий день.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Состав<i class="fa fa-angle-down"></i></a></div>
             <div class="accordion__body">
               <div class="date">Время последних данных: 19.08.2016 (17:35)</div>
               <table class="sorting-table table table-striped">
@@ -491,13 +712,11 @@
                   <tr>
                     <th>Эмитент</th>
                     <th>Код</th>
-                    <th>Цена</th>
-                    <th>Тренд</th>
-                    <th>Доля</th>
-                    <th>Акции</th>
-                    <th>Fi</th>
-                    <th>Ri</th>
-                    <th>Изменение цены за последние 52 недели</th>
+                    <th>Yi</th>
+                    <th>Pi</th>
+                    <th>I</th>
+                    <th>Ni</th>
+                    <th>Qi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -509,10 +728,6 @@
                     <td>1.25</td>
                     <td>876 876</td>
                     <td>8.7</td>
-                    <td>0,6735356</td>
-                    <td> 
-                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
-                    </td>
                   </tr>
                   <tr>
                     <td><a href="#">Название</a></td>
@@ -522,10 +737,6 @@
                     <td>1.25</td>
                     <td>876 876</td>
                     <td>8.7</td>
-                    <td>0,6735356</td>
-                    <td> 
-                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
-                    </td>
                   </tr>
                   <tr>
                     <td><a href="#">Название</a></td>
@@ -535,10 +746,6 @@
                     <td>1.25</td>
                     <td>876 876</td>
                     <td>8.7</td>
-                    <td>0,6735356</td>
-                    <td> 
-                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
-                    </td>
                   </tr>
                   <tr>
                     <td><a href="#">Название</a></td>
@@ -548,16 +755,17 @@
                     <td>1.25</td>
                     <td>876 876</td>
                     <td>8.7</td>
-                    <td>0,6735356</td>
-                    <td> 
-                      <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
-                    </td>
                   </tr>
                 </tbody>
               </table>
-              <div class="help-block">* коэффициент Fi - доля акций, находящихся в свободном обращении</div>
-              <div class="help-block">* коэффициент Ri - коэффициент, ограничивающий долю влияния ценовых параметров акций на значение индекса  до 15 %</div>
-              <div class="help-block">* тренд, % отражает изменение цены акции относительно цены закрытия предыдущего торгового дня</div>
+              <div class="help-block">* Yi - средиевзвешенная доходность корпоративных облигаций i-го наименования по сделкам, заключенным в течение последнего истекшего торгового дня по корпоративным облигациям, в процентах годовых;</div>
+              <div class="help-block">* Pi - котировочная цена одной корпоративной облигации i-го наименования по результатам последнего истекшего торгового дня по корпоративным облигациям в процентах от номинальной стоимости одной корпоративной облигации;</div>
+              <div class="help-block">* I - размер накопленного вознаграждения по корпоративной облигации i-го наименования в процентах годовых;</div>
+              <div class="help-block">* Ni - номинальная стоимость одной корпоративной облигации i -го наименования в тенге;</div>
+              <div class="help-block">
+                * Qi - количество размещенных корпоративных облигаций i-го наименования в штуках.
+                
+              </div>
             </div>
           </div>
           <div class="accordion closed">

@@ -1,0 +1,165 @@
+.tools-form
+	form
+		.tools-form__section
+			.tools-form__head-title Ценные бумаги официального списка
+			.tools-form__part
+				.tools-form__part-title: span Основная площадка
+				div
+					.tools-form__columns
+						.tools-form__col
+							.tools-form__column-title Акции
+							ul
+								li
+									label.checkbox
+										input(type="checkbox", name="actionName", checked)
+										span.checkbox__styled
+										span.checkbox__label Первая категория
+								li
+									label.checkbox
+										input(type="checkbox", name="actionName", checked)
+										span.checkbox__styled
+										span.checkbox__label Вторая категория
+						.tools-form__col
+							.tools-form__column-title Долговые ценные бумаги
+							ul
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Долговые ценные бумаги субъектов квазигосударственного сектора
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Иные долговые ценные бумаги
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Буферная категория
+						.tools-form__col
+							.tools-form__column-title Государственные ценные бумаги
+							ul
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Национальный банк РК
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Министерство финансов РК
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Местные исполнительные органы
+					
+					.tools-form__columns
+						.tools-form__col
+							ul
+								li
+									label.checkbox
+										input(type="checkbox", name="actionName")
+										span.checkbox__styled
+										span.checkbox__label Ценные бумаги инвестиционных фондов
+								li
+									label.checkbox
+										input(type="checkbox", name="actionName")
+										span.checkbox__styled
+										span.checkbox__label Акции сектора HiTec
+						.tools-form__col
+							ul
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Исламские ценные бумаги
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Ценные бумани НФО
+
+						.tools-form__col
+							ul
+								li
+									label.checkbox
+										input(type="checkbox", name="checkboxName")
+										span.checkbox__styled
+										span.checkbox__label Производные ценные бумаги
+
+
+			#hiddingTools(style="display: none;")
+				.tools-form__part
+					.tools-form__part-title: span Альтернативная площадка
+					div
+						.tools-form__columns
+							.tools-form__col
+								.tools-form__column-title Акции
+								ul
+									li
+										label.checkbox
+											input(type="checkbox", name="actionName")
+											span.checkbox__styled
+											span.checkbox__label Первая категория
+									li
+										label.checkbox
+											input(type="checkbox", name="actionName")
+											span.checkbox__styled
+											span.checkbox__label Вторая категория
+							.tools-form__col
+								.tools-form__column-title Долговые ценные бумаги
+								ul
+									li
+										label.checkbox
+											input(type="checkbox", name="checkboxName")
+											span.checkbox__styled
+											span.checkbox__label Долговые ценные бумаги субъектов квазигосударственного сектора
+									li
+										label.checkbox
+											input(type="checkbox", name="checkboxName")
+											span.checkbox__styled
+											span.checkbox__label Иные долговые ценные бумаги
+
+
+				.tools-form__head-title Другие инструменты
+				.tools-form__part
+					div
+						.tools-form__columns
+							.tools-form__col
+								ul
+									li
+										label.checkbox
+											input(type="checkbox", name="actionName")
+											span.checkbox__styled
+											span.checkbox__label Нелистинговые компании
+									li
+										label.checkbox
+											input(type="checkbox", name="actionName")
+											span.checkbox__styled
+											span.checkbox__label Фьючерсы
+							.tools-form__col
+								ul
+									li
+										label.checkbox
+											input(type="checkbox", name="checkboxName")
+											span.checkbox__styled
+											span.checkbox__label Иностранные валюты
+							.tools-form__col
+								ul
+									li
+										label.checkbox
+											input(type="checkbox", name="checkboxName")
+											span.checkbox__styled
+											span.checkbox__label Операции автоматического репо
+
+			.tools-form__footer
+				label.checkbox
+					input(type="checkbox", name="checkboxName")
+					span.checkbox__styled
+					span.checkbox__label Выбрать все
+
+				.all-link
+					a#allFilter(href="#") Раскрыть фильтр

@@ -1,0 +1,229 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Торги"
+				var marketsList = [
+					{
+						'title': 'Список инструментов',
+						'active': true
+					},
+					{
+						'title': 'Список компаний'
+					},
+					{
+						'title': 'Просмотр торгов'
+					}
+					,
+					{
+						'title': 'Регламент торгов и клиринга'
+					}
+					,
+					{
+						'title': 'Клиринг и расчеты'
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Торги',
+					'Список инструментов'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			h1 Список инструментов
+
+			include ../../modules/tools-form/module
+			
+			.actions-tables
+				.actions-tables__title-block
+					h3 Акции
+					.actions-tables__help-text Всего: инструментов – 21, эмитентов – 1
+				div
+					.accordion
+						.accordion__head
+							a.accordion__head-link(href="#") Первая категория
+								i.fa.fa-angle-down
+						.accordion__body
+							.sortin-table
+								table.sorting-table.table.table-striped.table--actions
+									thead
+										tr
+											th Код
+											th Эмитент
+											th НИН или ISIN
+											th Вид
+									tbody
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+
+					.accordion.closed
+						.accordion__head
+							a.accordion__head-link(href="#") Вторая категория
+								i.fa.fa-angle-down
+						.accordion__body
+							.sortin-table
+								table.sorting-table.table.table-striped.table--actions
+									thead
+										tr
+											th Код
+											th Эмитент
+											th НИН или ISIN
+											th Вид
+									tbody
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+										tr
+											td: a(href="#") CCBNb19
+											td: a(href="#") АО "Народный сберегательный банк Казахстана"
+											td.
+												KZ1C33870011
+												#[br]
+												KZ000A0LE0S4
+											td простая акция
+				.actions-tables__help-text Всего: инструментов – 21, эмитентов – 1
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

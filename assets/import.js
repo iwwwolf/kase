@@ -11,6 +11,8 @@ $(document).ready(function(){
 	//= require "modules/sorting-table/script.js"
 	//= require "modules/currency-tabs/script.js"
 	//= require "modules/search-block/script.js"
+	//= require "modules/tools-form/script.js"
+	
 	//= require "modules/landings_modules/head-rect/script.js"
 	//= require "modules/landings_modules/ipo-block/script.js"
 	//= require "modules/landings_modules/list-slider/script.js"

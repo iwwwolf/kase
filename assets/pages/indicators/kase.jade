@@ -3,15 +3,22 @@ extends ../../templates/base
 block content
 	.markets-top
 		.container
-			.markets-menu
-				h3 Индикаторы
-				.dropdown
-					a.dropdown-link(href="#", data-toggle="dropdown", role="button") Акции
-
-					ul.dropdown-menu
-						li.active: a(href="#") Фондовый рынок
-						li: a(href="#") Денежный рынок
-						li: a(href="#") Совместные индексы
+			-
+				var marketsListTitle = "Индикаторы"
+				var marketsList = [
+					{
+						'title': 'Фондовый рынок',
+						'active': true
+					},
+					{
+						'title': 'Денежный рынок'
+					},
+					{
+						'title': 'Совместные индексы'
+					}
+				]
+			include ../../modules/markets-menu/module
+			
 			#regulations.regulations
 				div.dropdown
 					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
