@@ -1,0 +1,105 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-blue-purple" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow; gr-blue-purple
+	-var rectStyle = "orange-purple" // yellow-green; yellow-red; blue-green; green-yellow; orange-purple
+	-var rectTitle = "Частным инвесторам"
+	-
+		var headText =[
+			'Цели инвестирования в фондовую биржу могут быть различные на разных рынках и личных потребностях инвестора. Казахстанская фондовая биржа функционирует в виде электронной торговой системы, которая проводит торги ежедневно по рабочим дням в течении большей части дня образуя торговый день.'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Институциональным инвесторам'
+			},
+			{
+				'position': 'right',
+				'title': 'Иностранным инвесторам'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		
+		-
+			var menuItems = [
+				{
+					'title': 'Что такое Фондовый Рынок?'
+				},
+				{
+					'title': 'Зачем инвестировать?'
+				},
+				{
+					'title': 'С чего начать?'
+				},
+				{
+					'title': 'Правила торгов'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section
+		.container
+			h2 Что необходимо сделать, чтобы начать инвестирование на фондовом
+			.investors_max_width
+				.investors_landing.landing-white-block
+					#whiteBlockSlider(class="white-block-slider content")
+						.white-block-slider
+							div(class="landing-section__text")
+								p.
+									Для начала следует определиться, на каком финансовом рынке вы хотите работать:
+							-
+								var pictureList = [
+									{
+										'list': [
+											'Валютном',
+											'Фондовом',
+											'Деривативов'
+										]
+									}
+								]
+								var listColor="purple"
+								//var pictureSize="large"
+								var textAlign="left"
+							include ../../modules/landings_modules/list-picture-block/module
+						.white-block-slider
+							div(class="landing-section__text")
+								p.
+									Выбрать
+							-
+								var pictureList = [
+									{
+										'list': [
+											'интересующий финансовый актив',
+											'срок инвестирования',
+											'сумма, которую Вы готовы выделить под инвестиции '
+										]
+									}
+								]
+								var listColor="purple"
+								//var pictureSize="large"
+								var textAlign="left"
+							include ../../modules/landings_modules/list-picture-block/module
+						.white-block-slider
+							div(class="landing-section__text")
+								p.
+									Выбрать брокера, через которого Вы получите доступ к биржевым торгам 
+							br
+							.landing-section__login-btn
+								a(href="#").btn.btn--gradient.btn--orange-purple: span Список брокеров  
+							br
+							div(class="landing-section__text_custom")
+								p.
+									Брокер – это Ваш помощник в процессе инвестирования. Обратиться к брокеру #[a(href="#") следуя инструкции ]
+							
+
+
+
+
+
+

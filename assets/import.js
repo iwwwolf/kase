@@ -17,6 +17,7 @@ $(document).ready(function(){
 	//= require "modules/landings_modules/ipo-block/script.js"
 	//= require "modules/landings_modules/list-slider/script.js"
 	//= require "modules/landings_modules/infrastructure-scheme/script.js"
+	//= require "modules/landings_modules/slider-white-block/script.js"
 
 	/* require "modules/trade-info/script.js"
 	 require "modules/donut-chart/script.js"*/

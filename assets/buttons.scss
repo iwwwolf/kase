@@ -65,6 +65,16 @@
         border: 1px solid #fff;
       }     
     }
+    &.btn--orange-purple {
+      background: #ff9000;
+      background: linear-gradient(to right, #ff9000 18%, #a71af0 100%);
+      &:before {
+        background: linear-gradient(to right, #a71af0 0%, #ff9000 100%);
+      }
+      &.btn--border {
+        border: 1px solid #fff;
+      }     
+    }
    
     span {
       position: relative;

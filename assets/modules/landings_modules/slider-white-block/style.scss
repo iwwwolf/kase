@@ -1,0 +1,103 @@
+.investors_max_width{
+	max-width: 750px;
+	margin: 0 auto;
+}
+.investors_landing{
+	max-width: 750px;
+	position: relative;
+}
+.investors_landing:before{
+	position: absolute;
+	height: 70px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: #f8fafa;
+	content:"";
+	display: block;
+}
+.investors_landing.landing-white-block{
+	position: relative;
+	padding: 30px 30px 10px 22px !important;
+	
+}
+.white-block-slider, .slick-slide{
+	position: relative;
+}
+.white-block-slider .slick-prev, .white-block-slider .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: none !important;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid #b8b8b8;
+    border-radius: 50%;
+}
+.white-block-slider .slick-next {
+    right: 0px;
+}
+.white-block-slider .slick-prev {
+    left: 0px;
+}
+.white-block-slider .slick-prev::before {
+    content: "←";
+}
+.white-block-slider .slick-prev:before,.white-block-slider  .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #b8b8b8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.white-block-slider .slick-next::before {
+    content: "→";
+}
+.white-block-slider .slick-prev:before,.white-block-slider .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #b8b8b8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.white-block-slider .slick-dots li a{
+	font-size: 16px;
+	padding-right: 15px;
+	color: #383838;
+	opacity: 0.2;
+}
+.white-block-slider .slick-dots .slick-active a{
+	opacity: 1;
+}
+.white-block-slider .landing-section__text{
+	font-size: 21px; 
+	font-weight: 500; 
+	max-width: 570px;
+}
+.white-block-slider .landing-section__text a{
+	line-height: 1.4;
+}
+.white-block-slider .landing-section__text_custom{
+	max-width: 350px;
+    margin: 0 auto;
+}
+@media (min-width: 750px) {
+	.white-block-slider .slick-prev, .white-block-slider .slick-next {
+		display: block !important;
+	}
+
+
+}
