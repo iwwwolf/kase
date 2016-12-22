@@ -1093,11 +1093,7 @@ $(document).ready(function(){
 	var windowSizeSlider = $( window ).width();
 	if(windowSizeSlider >= 768){
 	 	$("#listPictureSlider0").click(function() {
-	// 	//$(this).siblings().slideToggle("slow");
 			$(this).attr('data-event-clicked','true');
-		// 	if($(this).attr('data-event-clicked') != 'true'){
-		//             //$(this).animate({top:0,left:0},'slow');
-		//             $(this).attr('data-event-clicked','true');
 	        $('.list-picture-slider a').addClass('active');
 	        $('.slider-go-back-button').css("display","block");
 	        $('.investors_landing.slider_landing .slick-dots').css("display","none");
@@ -1126,7 +1122,6 @@ $(document).ready(function(){
 	
 		$("#listPictureSlider1").click(function() {
 		  
-		    //$(this).animate({top:0,left:0},'slow');
 		    $(this).attr('data-event-clicked','true');
 		    $('.list-picture-slider a').addClass('active');
 		    $('.slider-go-back-button').css("display","block");
@@ -1142,7 +1137,6 @@ $(document).ready(function(){
 	
 		 });
 		$("#listPictureSlider2").click(function() {
-		            //$(this).animate({top:0,left:0},'slow');
 		    $(this).attr('data-event-clicked','true');
 		    $('.list-picture-slider a').addClass('active');
 		    $('.slider-go-back-button').css("display","block");
