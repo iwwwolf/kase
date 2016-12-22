@@ -56,14 +56,15 @@ if($('.mini-menu__menu').length){
 
 		$.ajax({
 			//url: 'http://kase.dev/build/server/quotes-info/' + title + '.html',
+			type: 'POST',
 			url: 'ajax/' + title + '/',
 			dataType: 'html',
 			success: function(data){
 				var parentId = self.parents('.quotes-info').attr('id');
 
 				var obj = self.closest('.col-lg-4');
-				parent.prev().hide();
 				obj.html(data);
+				parent.prev().hide();
 				restartSparklines(obj);
 				//$('#' + parentId).parent().html(data);
 				activeLi.removeClass('active');
