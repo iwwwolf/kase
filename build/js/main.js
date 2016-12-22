@@ -1079,7 +1079,7 @@ $(document).ready(function(){
 	// });
 	$('#whiteBlockSlider').slick({
 	
-		
+	
 		slidesToShow: 1,
 	  	slidesToScroll: 1,
 	  	dots: true,
@@ -1090,89 +1090,114 @@ $(document).ready(function(){
 	    speed: 500,
 		autoplay: false
 	});
-	// if($('#listSlider').length){
-	// 	var listSlider = $('#listSlider');
-	// 	var listSliderCount = $('#listSlider .list-slider__item').length;
+	var windowSizeSlider = $( window ).width();
+	if(windowSizeSlider >= 768){
+	 	$("#listPictureSlider0").click(function() {
+	// 	//$(this).siblings().slideToggle("slow");
+			$(this).attr('data-event-clicked','true');
+		// 	if($(this).attr('data-event-clicked') != 'true'){
+		//             //$(this).animate({top:0,left:0},'slow');
+		//             $(this).attr('data-event-clicked','true');
+	        $('.list-picture-slider a').addClass('active');
+	        $('.slider-go-back-button').css("display","block");
+	        $('.investors_landing.slider_landing .slick-dots').css("display","none");
+	        $('.investors_landing.slider_landing .slick-arrow').css("display","none");
+	        $('.investors_landing.slider_landing .slick-next').css("display","none");
+	        $('.investors_landing.slider_landing .slick-prev').css("display","none");
+	        $('.slider-bottom-links-listing-case').css("display","block");
+	        $(' #listPictureSlider1').css("display","none");
+	        $(' #listPictureSlider2').css("display","none");
 	
-	// 	// if(winWidth >= 992){
-	// 	// 	if(listSliderCount < 4) {
-	// 	// 		listSlider.slick({
-	// 	// 			speed: 500,
-	// 	// 			slidesToShow: listSliderCount,
-	// 	// 			slidesToScroll: 1,
-	// 	// 			dots: true,
-	// 	// 			//dotsClass: 'great-slider__pagination',
-	// 	// 			infinite: false,
-	// 	// 			arrows: true,
-	// 	// 			prevArrow: $('#listSliderPrev'),
-	// 	// 			nextArrow: $('#listSliderNext'),
-	// 	// 			autoplay: false,
-	// 	// 			adaptiveHeight: true
-	// 	// 		});
-	// 	// 	} else {
-	// 	// 		listSlider.slick({
-	// 	// 			speed: 500,
-	// 	// 			slidesToShow: 4,
-	// 	// 			slidesToScroll: 4,
-	// 	// 			dots: true,
-	// 	// 			//dotsClass: 'great-slider__pagination',
-	// 	// 			infinite: false,
-	// 	// 			arrows: true,
-	// 	// 			prevArrow: $('#listSliderPrev'),
-	// 	// 			nextArrow: $('#listSliderNext'),
-	// 	// 			autoplay: false,
-	// 	// 			adaptiveHeight: true
-	// 	// 		});
-	// 	// 	}
-	// 	// } else {
-	// 		listSlider.slick({
-	// 			slidesToShow: 1,
-	// 			slidesToScroll: 1,
-	// 			speed: 500,
-	// 			dots: true,
-	// 			//dotsClass: 'great-slider__pagination',
-	// 			autoplay: false,
-	// 			infinite: false,
-	// 			arrows: false,
-	// 			adaptiveHeight: true,
-	// 			responsive: [
-	// 			    {
-	// 			      breakpoint: 991,
-	// 			      settings: {
-	// 			        slidesToShow: 3,
-	// 			        slidesToScroll: 3,
-	// 			        speed: 500,
-	//         			dots: true,
-	//         			//dotsClass: 'great-slider__pagination',
-	//         			autoplay: false
-	// 			      }
-	// 			    },
-	// 			    {
-	// 			      breakpoint: 768,
-	// 			      settings: {
-	// 			        slidesToShow: 1,
-	// 			        slidesToScroll: 1,
-	// 			        speed: 500,
-	//         			dots: true,
-	//         			//dotsClass: 'great-slider__pagination',
-	//         			autoplay: false
-	// 			      }
-	// 			    },
-	// 			    {
-	// 			      breakpoint: 540,
-	// 			      settings: {
-	// 			        slidesToShow: 1,
-	// 			        slidesToScroll: 1,
-	// 			        speed: 500,
-	//         			dots: true,
-	//         			//dotsClass: 'great-slider__pagination',
-	//         			autoplay: false
-	// 			      }
-	// 			    }
-	// 		    ]
-	// 		});
-	// 	//}
-	// }
+		});
+		 $("#SliderGoBackButton").click(function() {
+		 		 $(this).attr('data-event-clicked','false');
+	            $('.list-picture-slider a').removeClass('active');
+	            $('.slider-go-back-button').css("display","none");
+	            $('.investors_landing.slider_landing .slick-dots').css("display","block");
+	            $('.investors_landing.slider_landing .slick-arrow').css("display","block");
+	            $('.investors_landing.slider_landing .slick-next').css("display","block");
+	            $('.investors_landing.slider_landing .slick-prev').css("display","block");
+	            $('.investors_landing.slider_landing .slider-bottom-links-listing-case').css("display","none");
+	            $(' #listPictureSlider0').css("display","block");
+	            $(' #listPictureSlider1').css("display","block");
+	            $(' #listPictureSlider2').css("display","block");
+	     });
+	
+	
+		$("#listPictureSlider1").click(function() {
+		  
+		    //$(this).animate({top:0,left:0},'slow');
+		    $(this).attr('data-event-clicked','true');
+		    $('.list-picture-slider a').addClass('active');
+		    $('.slider-go-back-button').css("display","block");
+		    $('.investors_landing.slider_landing .slick-dots').css("display","none");
+		    $('.investors_landing.slider_landing .slick-arrow').css("display","none");
+		    $('.investors_landing.slider_landing .slick-next').css("display","none");
+		    $('.investors_landing.slider_landing .slick-prev').css("display","none");
+		    $('.slider-bottom-links-listing-case').css("display","block");
+		    $(' #listPictureSlider0').css("display","none");
+			$(' #listPictureSlider2').css("display","none");
+	
+		       
+	
+		 });
+		$("#listPictureSlider2").click(function() {
+		            //$(this).animate({top:0,left:0},'slow');
+		    $(this).attr('data-event-clicked','true');
+		    $('.list-picture-slider a').addClass('active');
+		    $('.slider-go-back-button').css("display","block");
+		    $('.investors_landing.slider_landing .slick-dots').css("display","none");
+		    $('.investors_landing.slider_landing .slick-arrow').css("display","none");
+		    $('.investors_landing.slider_landing .slick-next').css("display","none");
+		    $('.investors_landing.slider_landing .slick-prev').css("display","none");
+		    $('.slider-bottom-links-listing-case').css("display","block");
+		    $(' #listPictureSlider0').css("display","none");
+			$(' #listPictureSlider1').css("display","none");
+		           
+		        
+		 });
+	
+	}
+	else{
+		$('.investors_landing.slider_landing .slick-next').css("display","none");
+	    $('.investors_landing.slider_landing .slick-prev').css("display","none");
+		
+	
+		$(".list-picture-slider#listPictureSlider0").on("click",function(e){
+			if($(this).hasClass("active")){
+				 $('.list-picture-slider').removeClass('active');
+				 $('.list-picture-slider__link0').css("display","none");
+			}
+			else{
+				 $('.list-picture-slider').addClass('active');
+				 $('.list-picture-slider__link0').css("display","block");
+			}
+	
+		});
+		$(".list-picture-slider#listPictureSlider1").on("click",function(e){
+			if($(this).hasClass("active")){
+				 $('.list-picture-slider').removeClass('active');
+				 $('.list-picture-slider__link1').css("display","none");
+			}
+			else{
+				 $('.list-picture-slider').addClass('active');
+				 $('.list-picture-slider__link1').css("display","block");
+			}
+	
+		});
+		$(".list-picture-slider#listPictureSlider2").on("click",function(e){
+			if($(this).hasClass("active")){
+				 $('.list-picture-slider').removeClass('active');
+				 $('.list-picture-slider__link2').css("display","none");
+			}
+			else{
+				 $('.list-picture-slider').addClass('active');
+				 $('.list-picture-slider__link2').css("display","block");
+			}
+	
+		});
+	}
+	
 
 	/* require "modules/trade-info/script.js"
 	 require "modules/donut-chart/script.js"*/
