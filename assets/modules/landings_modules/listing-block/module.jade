@@ -1,0 +1,21 @@
+.listing-block
+	each item in listingArray
+		.listing-block__column
+			.listing-block__title= item.title
+			.listing-block__value
+				each value in item.block
+					if (typeof(value.percent) !== 'undefined')
+						div
+							span(class="listing-block__number listing-block__percent")=value.percent
+						div
+							span от суммы выпуска,
+					div(style="padding-top: 10px;")
+						if ((value.price.length) == 1)
+							span(class="listing-block__number")=value.price	
+						else
+							span от
+							span(class="listing-block__number")=value.price[0] 
+							span до
+							span(class="listing-block__number")=value.price[1]
+						span МРП
+			.listing-block__text=item.text

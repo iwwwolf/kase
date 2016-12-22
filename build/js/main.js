@@ -1512,19 +1512,7 @@ $(document).ready(function(){
 	 	$("#listPictureSlider0").click(function() {
 
 
-	// 	//$(this).siblings().slideToggle("slow");
-
-
 			$(this).attr('data-event-clicked','true');
-
-
-		// 	if($(this).attr('data-event-clicked') != 'true'){
-
-
-		//             //$(this).animate({top:0,left:0},'slow');
-
-
-		//             $(this).attr('data-event-clicked','true');
 
 
 	        $('.list-picture-slider a').addClass('active');
@@ -1611,9 +1599,6 @@ $(document).ready(function(){
 		  
 
 
-		    //$(this).animate({top:0,left:0},'slow');
-
-
 		    $(this).attr('data-event-clicked','true');
 
 
@@ -1657,9 +1642,6 @@ $(document).ready(function(){
 
 
 		$("#listPictureSlider2").click(function() {
-
-
-		            //$(this).animate({top:0,left:0},'slow');
 
 
 		    $(this).attr('data-event-clicked','true');

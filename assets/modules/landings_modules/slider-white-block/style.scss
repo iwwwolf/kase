@@ -1,6 +1,7 @@
 .investors_max_width{
 	max-width: 750px;
 	margin: 0 auto;
+	padding-bottom:0;
 }
 .investors_landing{
 	max-width: 750px;
@@ -48,6 +49,7 @@
 }
 .white-block-slider .slick-prev {
     left: 0px;
+    z-index: 1;
 }
 
 .white-block-slider .slick-prev:before, .white-block-slider .slick-next:before {

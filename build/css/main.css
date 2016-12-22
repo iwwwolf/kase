@@ -6806,7 +6806,8 @@ table.dataTable.no-footer {
 
 .investors_max_width {
   max-width: 750px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 0; }
 
 .investors_landing {
   max-width: 750px;
@@ -6852,7 +6853,8 @@ table.dataTable.no-footer {
   right: 0px; }
 
 .white-block-slider .slick-prev {
-  left: 0px; }
+  left: 0px;
+  z-index: 1; }
 
 .white-block-slider .slick-prev:before, .white-block-slider .slick-next:before {
   font-family: 'slick';
@@ -7150,6 +7152,67 @@ table.dataTable.no-footer {
   .slider-diagram-green-main {
     max-width: 600px;
     margin: 0 auto; } }
+
+.listing-block {
+  font-size: 114.28571%;
+  line-height: 1.1; }
+  .listing-block__column {
+    background: #f7f8f8;
+    margin-bottom: 30px; }
+    .listing-block__column .listing-block__title {
+      width: 100%;
+      text-align: center;
+      background: #f7f8f8;
+      padding: 25px 15px; }
+    .listing-block__column .listing-block__text {
+      width: 100%;
+      text-align: center;
+      background: #f7f8f8;
+      padding: 25px 15px;
+      font-size: 14px;
+      line-height: 1.5; }
+    .listing-block__column .listing-block__value {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      min-height: 110px;
+      display: block;
+      background: -webkit-linear-gradient(38deg, #087e38 18%, #8ac53f 100%);
+      background: linear-gradient(52deg, #087e38 18%, #8ac53f 100%);
+      padding: 5% 0; }
+      .listing-block__column .listing-block__value span {
+        font-size: 14px; }
+    .listing-block__column span.listing-block__number {
+      font-size: 26px !important;
+      font-weight: 700; }
+
+@media (min-width: 649px) and (max-width: 768px) {
+  .listing-block {
+    font-size: 32px; }
+    .listing-block__column {
+      margin-bottom: 30px; }
+      .listing-block__column .listing-block__title {
+        padding: 50px 30px; }
+      .listing-block__column .listing-block__value {
+        padding: 50px 30px; } }
+
+@media (min-width: 769px) {
+  .listing-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+    .listing-block__column {
+      min-width: 262px;
+      max-width: 262px;
+      margin-right: 30px; } }
 
 /* @import "modules/trade-info/style.scss";
 @import "modules/donut-chart/style.scss"; */
