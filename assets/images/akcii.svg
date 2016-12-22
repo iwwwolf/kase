@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Режим_изоляции"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="227px" height="144.815px"
+	 viewBox="0 0 227 144.815" enable-background="new 0 0 227 144.815" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<rect x="22.798" y="129.099" fill="#087E38" width="11.788" height="15.717"/>
+			<rect x="46.374" y="114.952" fill="#087E38" width="11.787" height="29.863"/>
+			<rect x="69.951" y="104.111" fill="#087E38" width="11.786" height="40.704"/>
+			<rect x="93.525" y="113.915" fill="#087E38" width="11.789" height="30.9"/>
+			<rect x="117.101" y="78.804" fill="#087E38" width="11.788" height="66.012"/>
+			<rect x="140.678" y="90.592" fill="#087E38" width="11.788" height="54.224"/>
+			<rect x="164.253" y="66.231" fill="#087E38" width="11.789" height="78.584"/>
+			<rect x="187.829" y="44.226" fill="#087E38" width="11.79" height="100.59"/>
+			<rect x="211.406" y="21.434" fill="#087E38" width="11.788" height="123.382"/>
+		</g>
+		<g>
+			<rect x="11.412" y="18.393" fill="#FDCC00" width="48.092" height="4.581"/>
+			<rect x="11.412" y="30.037" fill="#8AC53F" width="86.918" height="2.819"/>
+			<rect x="11.412" y="38.688" fill="#8AC53F" width="73.868" height="2.817"/>
+			<rect x="11.412" y="47.339" fill="#8AC53F" width="81.856" height="2.819"/>
+			<rect x="11.412" y="55.991" fill="#8AC53F" width="63.706" height="2.819"/>
+			<path fill="#FDCC00" d="M11.412,66.962v8.231h28.135v-8.231H11.412z M34.829,72.484H16.13v-2.815h18.699V72.484z"/>
+		</g>
+	</g>
+	<g>
+		<path fill="#8AC53F" d="M10.364,127.957c-0.415,0-0.822-0.204-1.065-0.579c-0.38-0.588-0.211-1.372,0.375-1.752l67.182-43.521
+			c0.395-0.256,0.902-0.27,1.309-0.043l20.083,11.248l24.709-38.709c0.19-0.3,0.498-0.506,0.849-0.567
+			c0.347-0.063,0.71,0.026,0.991,0.245l21.152,16.27l69.652-60.081c0.53-0.458,1.331-0.397,1.787,0.133
+			c0.458,0.529,0.398,1.329-0.132,1.787l-70.435,60.756c-0.454,0.393-1.123,0.41-1.599,0.044L124.348,57.13L99.74,95.681
+			c-0.36,0.567-1.103,0.754-1.687,0.425L77.592,84.648l-66.539,43.104C10.84,127.891,10.603,127.957,10.364,127.957L10.364,127.957z
+			"/>
+	</g>
+	<circle fill="#FDCC00" cx="12.14" cy="126.144" r="4.946"/>
+	<circle fill="#FDCC00" cx="76.787" cy="83.68" r="4.946"/>
+	<circle fill="#FDCC00" cx="98.547" cy="94.665" r="4.946"/>
+	<circle fill="#FDCC00" cx="124.321" cy="55.58" r="4.947"/>
+	<circle fill="#FDCC00" cx="146.925" cy="72.694" r="4.947"/>
+	<circle fill="#FDCC00" cx="216.429" cy="11.428" r="4.948"/>
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M263.136,166.058V-3.486c0-3.86-3.124-6.98-6.977-6.98H-10.164c-3.856,0-6.978,3.12-6.978,6.98v169.544
+				H263.136z"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+	</g>
+</g>
+</svg>
