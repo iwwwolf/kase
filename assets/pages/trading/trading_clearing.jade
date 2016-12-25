@@ -1,0 +1,66 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Торги"
+				var marketsList = [
+					{
+						'title': 'Список инструментов'
+					},
+					{
+						'title': 'Список компаний'
+					},
+					{
+						'title': 'Просмотр торгов'
+					}
+					,
+					{
+						'title': 'Регламент торгов и клиринга'
+					}
+					,
+					{
+						'title': 'Клиринг и расчеты',
+						'active': true
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Торги',
+					'Клиринг и расчеты'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			h1 Клиринг и расчеты
+
+			p
+			
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

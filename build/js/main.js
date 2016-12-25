@@ -2077,9 +2077,6 @@ $(document).ready(function(){
 	  	slidesToScroll: 1,
 
 
-	  	adaptiveHeight: true,
-
-
 	  	dots: true,
 
 
