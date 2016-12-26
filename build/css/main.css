@@ -509,6 +509,10 @@ a.up:after {
   clear: both;
   content: ""; }
 
+.dataTable--listing i {
+  font-size: 18px;
+  color: #169de0; }
+
 .markets__text {
   padding-left: 60px; }
 
