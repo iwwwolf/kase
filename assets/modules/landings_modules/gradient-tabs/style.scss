@@ -1,8 +1,12 @@
 .gradient-tabs {
-	text-align: center;
+	//text-align: center;
 	.nav {
 		display: none;
 		font-weight: 500;
+		text-align: center;
+		a {
+			color: #383838;
+		}
 	}
 	.gradient-tabs__tab {
 		margin-left: 30px;
@@ -114,9 +118,7 @@
 		box-shadow: none;
 		margin-bottom: 18px;
 	}
-	a {
-		color: #383838;
-	}
+	
 	&--not-margin {
 		.nav {
 			padding-bottom: 13px;
