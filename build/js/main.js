@@ -366,6 +366,185 @@ $(document).ready(function(){
 
 	
 
+	var graphs = [
+
+
+	  [
+
+
+	    {value: 30, label: 'спот-рынок', sum: '4 000 млн KZT'},
+
+
+	    {value: 15, label: 'своп-рынок', sum: '1 000 млн KZT'}
+
+
+	  ],
+
+
+	  [
+
+
+	    {value: 70, label: 'спот-рынок', sum: '4 000 млн KZT'},
+
+
+	    {value: 25, label: 'своп-рынок', sum: '1 000 млн KZT'}
+
+
+	  ],
+
+
+	  [
+
+
+	    {value: 30, label: 'спот-рынок', sum: '4 000 млн KZT'},
+
+
+	    {value: 15, label: 'своп-рынок', sum: '1 000 млн KZT'}
+
+
+	  ]
+
+
+	]
+
+
+	$('.donut-chart__graph').each(function(index, i, e ){
+
+
+	  var i = $(this);
+
+
+	  var e = graphs[index];
+
+
+	  var segment = i.segments;
+
+
+	  var donut = Morris.Donut({
+
+
+	    element: i,
+
+
+	    data: [
+
+
+	      e
+
+
+	    ],
+
+
+	    /*hoverFunction: function(x, i) {
+
+
+	        console.log(i);
+
+
+	        //return(content);
+
+
+	    },*/
+
+
+	    backgroundColor: 'transparent',
+
+
+	    labelColor: '#060',
+
+
+	    colors: [
+
+
+	      '#038726',
+
+
+	      '#9ed110',
+
+
+	      '#fecc00',
+
+
+	      '#0094de'
+
+
+	    ],
+
+
+	    /*hoverFunction: function (index, options, content) {
+
+
+	      var row = options.data[index];
+
+
+	      //assumes you have already calculated the total of your own dataset
+
+
+	      return (value/total *100)+'%';
+
+
+	      console.log('setData')
+
+
+	    },*/
+
+
+	    formatter: function (x, i) {
+
+
+	      var text = i.label + ' ' + i.value + '%' + i.sum;
+
+
+	      $(this.element).find('.donut-chart__tooltip').html(
+
+
+	        '<span class="donut-chart__value">' + i.value + '% </span>' +
+
+
+	       '<span class="donut-chart__label">' + i.label + '</span>' +
+
+
+	       '<span class="donut-chart__sum">' + i.sum + '</span>'
+
+
+	      );
+
+
+	      return x + "%";
+
+
+	    }
+
+
+	  });
+
+
+	  
+
+
+	  /*segment.each(function(s){
+
+
+	    $(s).on('mouseenter', function(){
+
+
+	      console.log("donut")
+
+
+	    })
+
+
+	  })*/
+
+
+	
+
+
+	})
+
+
+	
+
 	if($('#greatSlider').length){
 
 
@@ -2077,9 +2256,6 @@ $(document).ready(function(){
 	  	slidesToScroll: 1,
 
 
-	  	adaptiveHeight: true,
-
-
 	  	dots: true,
 
 
@@ -2931,6 +3107,11 @@ $(document).ready(function(){
 
 
 	});
+
+
+	
+
+	
 	//= require "modules/landings_modules/**/script.js"
 	
 

@@ -3,7 +3,6 @@ $('#whiteBlockSlider').slick({
 
 	slidesToShow: 1,
   	slidesToScroll: 1,
-  	adaptiveHeight: true,
   	dots: true,
   	customPaging: function(slider, index) {
       // this example would render "tabs" with titles
