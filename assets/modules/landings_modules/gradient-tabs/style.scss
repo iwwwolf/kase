@@ -117,6 +117,21 @@
 	a {
 		color: #383838;
 	}
+	&--not-margin {
+		.nav {
+			padding-bottom: 13px;
+			border-bottom: 1px solid #c9d4de;
+		}
+		.gradient-tabs__tab {
+			margin: 0;
+			span {
+				padding: {
+					left: 22px;
+					right: 22px;
+				}
+			}
+		}
+	}
 }
 .gratient-tabs__accordion-body {
 	padding: 20px;

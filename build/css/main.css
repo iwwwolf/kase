@@ -5176,6 +5176,14 @@ table.dataTable.no-footer {
     margin-bottom: 18px; }
   .gradient-tabs a {
     color: #383838; }
+  .gradient-tabs--not-margin .nav {
+    padding-bottom: 13px;
+    border-bottom: 1px solid #c9d4de; }
+  .gradient-tabs--not-margin .gradient-tabs__tab {
+    margin: 0; }
+    .gradient-tabs--not-margin .gradient-tabs__tab span {
+      padding-left: 22px;
+      padding-right: 22px; }
 
 .gratient-tabs__accordion-body {
   padding: 20px;
