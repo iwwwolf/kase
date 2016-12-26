@@ -129,6 +129,10 @@
 	&.regulations__download-input--mobile {
 		display: block;
 	}
+	&.regulations__download-input--market {
+		display: inline-block;
+		width: 75%;
+	}
 	.fa-calendar {
 		color: #899097;
 		line-height: 0;

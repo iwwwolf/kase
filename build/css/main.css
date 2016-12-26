@@ -509,6 +509,9 @@ a.up:after {
   clear: both;
   content: ""; }
 
+.markets__text {
+  padding-left: 60px; }
+
 .btn {
   font-size: 100%;
   border: none;
@@ -2884,6 +2887,9 @@ footer {
   margin-top: 10px; }
   .regulations__download-input.regulations__download-input--mobile {
     display: block; }
+  .regulations__download-input.regulations__download-input--market {
+    display: inline-block;
+    width: 75%; }
   .regulations__download-input .fa-calendar {
     color: #899097;
     line-height: 0;
