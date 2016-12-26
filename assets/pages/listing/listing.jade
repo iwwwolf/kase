@@ -1,0 +1,176 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Листинг"
+				var marketsList = [
+					{
+						'title': 'Список компаний',
+						'active': true
+					},
+					{
+						'title': 'Что такое листинг'
+					},
+					{
+						'title': 'Листинг на KASE'
+					},
+					{
+						'title': 'IPO'
+					},
+					{
+						'title': 'Нелистинговый сектор'
+					},
+					{
+						'title': 'Дипломанты номинаций'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//- include ../../modules/regulations/module
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Листинг',
+					'Список компаний'
+				]
+
+			include ../../modules/breadcrumbs/module
+			h1 Список компаний
+
+			ul.accordion__nav
+				li.active: a(href="#") Все
+				li: a(href="#") Листинг
+				li: a(href="#") Нелистинг
+				li: a(href="#") Дефолт
+
+
+			br
+			.sortin-table--with-search
+				table.sorting-table--false.table.table-striped.dataTable.dataTable--listing
+					thead
+						tr
+							th Код
+							th.dt-left Названия
+							th.dt-center Сайт
+							th.dt-left Рейтинг
+							th.dt-left Капитализация,#[br] млн. USD
+					tbody 
+						tr
+							td: a(href="#") ABBN
+							td.dt-left: a(href="#") АО "Банк Астаны"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left S&P: B/стабильный/B, kzBB; Fitch Ratings: http://www.fitchartings.com
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") ADLA
+							td.dt-left: a(href="#") АО "Айдала Мунай"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") AGKK
+							td.dt-left: a(href="#") АО "Аграрная кредитная корпорация"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") AKFI
+							td.dt-left: a(href="#") АО "AMF Group"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") AKNP
+							td.dt-left: a(href="#") АО "Актобе нефтепереработка"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left S&P: B/стабильный/B, kzBB; Fitch Ratings: http://www.fitchartings.com
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") AKRL
+							td.dt-left: a(href="#") АО "Ай Карааул"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") AKZM
+							td.dt-left: a(href="#") АО "Актюбинский завод металлоконструкций"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") ALBN
+							td.dt-left: a(href="#") АО Дочерний Банк "Альфа-Банк"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") ALES
+							td.dt-left: a(href="#") АО "Алматинские электрические станции"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left S&P: B/стабильный/B, kzBB; Fitch Ratings: http://www.fitchartings.com
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") ALMS
+							td.dt-left: a(href="#") АО "АК Алтыналмас"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") ALTM
+							td.dt-left: a(href="#") АО "Алматытемiр"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") ALTV
+							td.dt-left: a(href="#") ТОО "АЛМА-ТВ"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") AMAN
+							td.dt-left: a(href="#") АО "Аман Мунай Эксплорэйшн"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") ALGZ
+							td.dt-left: a(href="#") АО "СНПС - Актобемунайгаз"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+						tr
+							td: a(href="#") AMIN
+							td.dt-left: a(href="#") АО "Страховая компания "Amanat"
+							td.dt-center: <i class="fa fa-globe" aria-hidden="true"></i>
+							td.dt-left 
+							td.dt-left 1400,1
+
+			br
+			br
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});
