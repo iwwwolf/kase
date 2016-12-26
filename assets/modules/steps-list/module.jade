@@ -1,0 +1,24 @@
+//-
+	-
+		var stepsItems = [
+			{
+				'image': 'images/clearing-icon-1.svg',
+				'text': 'Получить статус члена Биржи по выбранной категории'
+			},
+			{
+				'image': 'images/clearing-icon-2.svg',
+				'text': 'Подключиться к системе электронного документооборота Entransfer'
+			},
+			{
+				'image': 'images/clearing-icon-3.svg',
+				'text': 'Подать заявление на присвоение статуса Клирингового участника'
+			}
+		]
+.steps-list
+	each item, index in stepsItems
+		.steps-list__item
+			span.steps-list__number= index+1
+			.steps-list__item-body
+				.steps-list__icon
+					img(src= item.image, alt="")
+				.steps-list__text= item.text

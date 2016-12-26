@@ -65,6 +65,7 @@ block content
 						'href' : 'rules'
 					}
 					]
+
 			.gradient-tabs.gradient-tabs--not-margin
 				ul.nav(role="tablist")
 					each item in gradientTabs
@@ -76,10 +77,107 @@ block content
 								a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
 
 				.tab-content
-					.tab-pane.fade.active.in(id="clearing", role="tabpanel")
-						p safsf
-			
+					.tab-pane.fade(id="about", role="tabpanel") Нет контента
 
+					.tab-pane.fade(id="tools", role="tabpanel") Нет контента
+
+					.tab-pane.fade.active.in(id="members", role="tabpanel")
+						h3 Чтобы стать клиринговым участником нужно			
+
+						-
+							var stepsItems = [
+								{
+									'image': 'images/clearing-icon-1.svg',
+									'text': 'Получить статус члена Биржи по выбранной категории'
+								},
+								{
+									'image': 'images/clearing-icon-2.svg',
+									'text': 'Подключиться к системе электронного документооборота Entransfer'
+								},
+								{
+									'image': 'images/clearing-icon-3.svg',
+									'text': 'Подать заявление на присвоение статуса Клирингового участника'
+								}
+							]
+
+						include ../../modules/steps-list/module
+
+						.accordion__body
+
+							h3 Клиринговые участники по категориям
+
+							ul.accordion__nav
+								li.active: a(href="#") Все
+								li: a(href="#") Валютные
+								li: a(href="#") Фондовая
+								li: a(href="#") Деривативы
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Наименование участника
+										th Лицензия, номер
+										th Лицензия, дата выдачи
+								tbody
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+						
+					.tab-pane.fade(id="clearing", role="tabpanel") Нет контента
+
+					.tab-pane.fade(id="rules", role="tabpanel")
+
+						h3 Правила по клиринговой деятельности на КASE
+
+						.reference-info.reference-info--page
+							ul
+								li: a(href="#") Регламент работы клиринговой системы
+								li: a(href="#").
+									Порядок включения финансовых инструментов в Список финансовыхинструментов фондового рынка, по сделкам с которыми Биржа осуществляет клиринговую деятельность
+								li
+									a(href="#") Правила осуществления клиринговой деятельности по сделкам с финансовыми инструментами
+									ul.reference-into--icon
+										li: a(href="#") Приложение 1
+										li: a(href="#") Приложение 2
+										li: a(href="#") Приложение 3
+										li: a(href="#") Приложение 4
+										li: a(href="#") Приложение 5
+										li: a(href="#") Приложение 6
+								li
+									a(href="#") Положение о клиринговых участниках
+									ul.reference-into--icon
+										li: a(href="#") Приложение 1
+										li: a(href="#") Приложение 2
+										li: a(href="#") Приложение 3
+								li: a(href="#") Положение о клиринговых участниках
 block scripts
 	script(type="text/javascript").
 		document.addEventListener("DOMContentLoaded", function(event) { 

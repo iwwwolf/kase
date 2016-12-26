@@ -149,7 +149,7 @@
 		&:hover {
 			opacity: 0.5;
 		}
-		&.slick-disabled {
+		&.slick-disabled, &.slick-hidden {
 			visibility: hidden;
 			opacity: 0;
 		}
