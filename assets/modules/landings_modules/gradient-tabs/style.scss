@@ -1,5 +1,11 @@
 .gradient-tabs {
-	//text-align: center;
+	text-align: center;
+	h3 {
+		margin-bottom: 20px;
+	}
+	.reference-info {
+		text-align: left;
+	}
 	.nav {
 		display: none;
 		font-weight: 500;
@@ -121,8 +127,13 @@
 	
 	&--not-margin {
 		.nav {
+			display: block;
 			padding-bottom: 13px;
 			border-bottom: 1px solid #c9d4de;
+			margin-bottom: 25px;
+		}
+		.tab-content {
+			display: block;
 		}
 		.gradient-tabs__tab {
 			margin: 0;
@@ -133,6 +144,9 @@
 				}
 			}
 		}
+	}
+	.accordion__body {
+		padding-bottom: 30px;
 	}
 }
 .gratient-tabs__accordion-body {
@@ -197,6 +211,9 @@
 		}
 		.tab-content {
 			display: block;
+		}
+		&--not-margin {
+			text-align: left;
 		}
 	}
 	.gratient-tabs__accordion-link {
