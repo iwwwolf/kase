@@ -22,6 +22,9 @@ div(class="list-slider__parent list-slider__parent--" + stylingBlock)
 					.list-slider__number
 						svg
 							text(fill="url(#nGradient)", y="100px")= index+1
+					if (typeof(item.image) !== 'undefined')
+						.list-slider__title= item.title
+
 					if (typeof(item.title) !== 'undefined')
 						.list-slider__title= item.title
 

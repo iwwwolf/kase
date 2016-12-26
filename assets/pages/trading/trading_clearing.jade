@@ -76,10 +76,56 @@ block content
 								a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
 
 				.tab-content
-					.tab-pane.fade.active.in(id="clearing", role="tabpanel")
-						p safsf
-			
+					.tab-pane.fade.active.in(id="members", role="tabpanel")
+						h3 Чтобы стать клиринговым участником нужно			
 
+						include ../../modules/steps-list/module
+
+						.accordion__body
+							h3 Клиринговые участники по категориям
+							ul.accordion__nav
+								li.active: a(href="#") Спот
+								li: a(href="#") Своп
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Наименование участника
+										th Лицензия, номер
+										th Лицензия, дата выдачи
+								tbody
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+									tr
+										td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+										td.text-center 1.2.23/194/33
+										td.text-center 07.11.16
+									tr
+										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+										td.text-center 1.2.23/194/33
+										td.text-center 09.11.16
+							
 block scripts
 	script(type="text/javascript").
 		document.addEventListener("DOMContentLoaded", function(event) { 
