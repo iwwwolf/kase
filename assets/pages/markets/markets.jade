@@ -1,0 +1,167 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Рынки"
+				var marketsList = [
+					{
+						'title': 'Фондовый рынок'
+					},
+					{
+						'title': 'Денежный рынок',
+						'active': true
+					},
+					{
+						'title': 'Совместные индексы'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//- include ../../modules/regulations/module
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки и торги',
+					'Индикаторы',
+					'Денежный рынок'
+				]
+
+			include ../../modules/breadcrumbs/module
+			h1 Денежный рынок 
+			br
+			.sortin-table--with-search
+				table.sorting-table--false.table.table-striped
+					thead
+						tr
+							th Название индикатора
+							th Дата
+							th Последнее значение
+							th Изменение, %
+							th Объём сделок, млн KZT
+							th Объём сделок, тыс USD
+							th Изменение цены за последние 52 недели
+					tbody
+						tr
+							td: a(href="#") MM Index
+							td 02.08.2016
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+
+						tr
+							td: a(href="#") TONIA
+							td 02.08.2015
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+						tr
+							td: a(href="#") TWINA
+							td 02.08.2016
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+						tr
+							td: a(href="#") SWAP-1D (USD)
+							td 02.08.2016
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+						tr
+							td: a(href="#") SWAP-2D (USD)
+							td 02.08.2016
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+						tr
+							td: a(href="#") KazPrime
+							td 02.08.2016
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+						tr
+							td: a(href="#") KIBOR
+							td 02.08.2016
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+						tr
+							td: a(href="#") TWINA
+							td 02.08.2016
+							td 12,78
+							td.red -2,00
+							td 383,3
+							td 383,3
+							td 
+								.table__indicator
+									|12,36
+									img(src="img-content/line.png", alt="")
+									|14,73
+			br
+			br
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});
