@@ -1,0 +1,41 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Правила"
+				var marketsList = [
+					{
+						'title': 'Правила Kase',
+						'active': true
+					},
+					{
+						'title': 'Законодательство'
+					},
+					{
+						'title': 'Корпоративное управление'
+					},
+					{
+						'title': 'Дополнительные материалы'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container
+		#centerColumn.center-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Правила',
+					'Правила Kase'
+				]
+				
+			include ../../modules/breadcrumbs/module
+			h1 Правила Kase
+			.gradient-tabs.gradient-tabs--not-margin
+				ul
+					li ajahjahaja
+					li hjahajhaj

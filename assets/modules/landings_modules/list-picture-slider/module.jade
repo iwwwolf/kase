@@ -1,0 +1,13 @@
+.list-picture-slider-main 
+	each item, index in listColumn
+		div(class="list-picture-slider" data-event-clicked="false" id="listPictureSlider"+index )
+			a(href="#whiteBlockSlider" )
+				if (typeof(item.icon) !== 'undefined')
+					div(class="list-picture-slider__icon list-picture-slider--" + pictureSize)
+							img(src="images/"+ item.icon, alt="")
+				div(class="list-picture-slider__title" )
+					span= item.title
+				div(class="list-picture-slider__link list-picture-slider__link" + index)
+					for listItem in item.linkBlock
+						.list-picture-slider__link_number
+							a(href="#")= listItem

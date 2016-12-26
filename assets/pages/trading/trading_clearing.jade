@@ -1,0 +1,102 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Торги"
+				var marketsList = [
+					{
+						'title': 'Список инструментов'
+					},
+					{
+						'title': 'Список компаний'
+					},
+					{
+						'title': 'Просмотр торгов'
+					}
+					,
+					{
+						'title': 'Регламент торгов и клиринга'
+					}
+					,
+					{
+						'title': 'Клиринг и расчеты',
+						'active': true
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Торги',
+					'Клиринг и расчеты'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			h1 Клиринг и расчеты
+			
+			-
+				var gradientTabs = [
+					{
+						'title' : 'О лицензии',
+						'href' : 'about'
+					},
+					{
+						'title' : 'Финансовые инструменты',
+						'href' : 'tools'
+					},
+					{
+						'title' : 'Клиринговые участники',
+						'href' : 'members',
+						'active': true
+					},
+					{
+						'title' : 'Клиринговые фонды',
+						'href' : 'clearing'
+					},
+					{
+						'title' : 'Правила',
+						'href' : 'rules'
+					}
+					]
+			.gradient-tabs.gradient-tabs--not-margin
+				ul.nav(role="tablist")
+					each item in gradientTabs
+						if (item.active == true)
+							li.gradient-tabs__tab.gradient-tabs__tab--green.active(role="presentation")
+								a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+						else
+							li.gradient-tabs__tab.gradient-tabs__tab--green(role="presentation")
+								a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+
+				.tab-content
+					.tab-pane.fade.active.in(id="clearing", role="tabpanel")
+						p safsf
+			
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

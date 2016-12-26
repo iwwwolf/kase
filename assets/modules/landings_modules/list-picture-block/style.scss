@@ -92,6 +92,7 @@
 		align-items: center;
 		text-align: center;
 		justify-content: center;
+		//max-width: 750px;
 	}
 	ul.list-color-left{
 		max-width: 750px;
@@ -121,6 +122,9 @@
 			max-width: 74%;
 			max-height: 100%;
 		}
+	}
+	.tab-content ul.list-color.list-color--purple.list-color-left{
+		padding-left: 20px;
 	}
 	.white-block-slider.slick-slide.slick-current.slick-active{
 		    // padding: 0 30px;

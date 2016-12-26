@@ -161,5 +161,186 @@ block content
 			h2 Основные этапы подготовки
 			.landing-section__description.
 				Узнайте как поэтапно пройти листинг и ничего не упустить
+			.investors_max_width.landing-section
+				.investors_landing.landing-white-block.slider_landing
+					#whiteBlockSlider(class="white-block-slider")
+						.white-block-slider
+
+							div(class="landing-section__text")
+								p.
+									Проверка на соответствие листинговым требованиям
+							.landing-section__description Выберите интересующую Вас категорию для проверки соответствия листинговым требованиям 	
+							-
+								var listColumn = [
+									{
+										'icon': 'reason_ipo_1.svg',
+										'title': 'Акции',
+										'linkBlock': [ 'Первая категория', 'Вторая категория']
+											
+									},{
+										'icon': 'reason_ipo_2.svg',
+										'title': 'Долговые ценные бумаги',
+										'linkBlock':  [ 'Первая категория', 'Вторая категория']
+									},{
+										'icon': 'reason_ipo_3.svg',
+										'title': 'Ценные бумаги инвестиционных фондов',
+										'linkBlock': [ 'Первая категория', 'Вторая категория']
+									}
+								]
+								var textAlign="left" 
+							include ../../modules/landings_modules/list-picture-slider/module
+
+
+						.white-block-slider
+
+
+							div(class="landing-section__text")
+								p.
+									Выбор финансового консультанта 
+
+							.landing-section__description Выберите #[span финансового консультанта]. Для нефинансовых организаций наличие финансового консультанта обязательно.
+
+							.landing-section__description Финансовый консультант может дополнительно оказывать услуги #[span андеррайтера] и #[span маркет-мейкера].
+						
+							.landing-section__description_title Список членов KASE, которые могут оказывать услуги финансового консультанта
+
+							.landing-section__login-btn
+								a(href="#").btn.btn--gradient.btn--darkgreen-green: span Посмотреть список 
+								
+							br
+							br
+
+							.landing-section__description(style="color: #b3b3b3;") Выберите #[span финансового консультанта]. Для нефинансовых организаций наличие финансового консультанта обязательно.
+
+
+						.white-block-slider
+
+							div(class="landing-section__text")
+								p.
+									Выбор аудитора 
+
+							.landing-section__description Для листинга ценных бумаг и в период их нахождения в официальном списке KASE компания обязана проходить ежегодный аудит в одной из аудиторских организаций, входящих в перечень признаваемых Биржей аудиторских организаций.
+							
+							br 
+
+							.landing-section__description_title Перечень аудиторских организаций, признаваемых KASE
+
+							.landing-section__login-btn
+								a(href="#").btn.btn--gradient.btn--darkgreen-green: span Посмотреть список 
+
+
+						.white-block-slider
+
+							div(class="landing-section__text")
+								p.
+									Государственная регистрация выпуска ценных бумаг
+
+							.landing-section__description Государственная регистрация выпуска негосударственных эмиссионных ценных бумаг осуществляется Национальным Банком Республики Казахстан на условиях и в порядке, установленных законом Республики Казахстан #[a(href="#") "О рынке ценных бумаг"] и #[a(href="#") нормативными правовыми актами уполномоченного органа.]
+
+						.white-block-slider
+
+							div(class="landing-section__text")
+								p.
+									Заключение договора с Единым регистратором 
+									
+							.landing-section__description Если компания выпускает ценные бумаги впервые, то ему необходимо заключить договор с #[a(href="#")АО "Единый регистратор ценных бумаг"], который осуществляет ведение системы реестров держателей ценных бумаг эмитента.
+
+							.landing-section__description Реестр держателей ценных бумаг представляет собой совокупность сведений о держателях ценных бумаг на определенную дату, позволяющих идентифицировать этих держателей, а также вид и количество принадлежащих им ценных бумаг.
+
+						.white-block-slider
+
+							div(class="landing-section__text")
+								p.
+									Из чего состоят расходы по выходу на организованный рынок
+
+							.slider-diagram-green-main
+								.round-list
+									.round-list__item
+										.round-list__title Акции
+									.slider-plus-sign +
+									.round-list__item
+										.round-list__title Услуги аудитора
+									.slider-plus-sign +
+									div
+										.round-list__item
+											.round-list__title Услуги финансового консультанта
+										.round-list__description А также при необходимости, представителя держателей облигаций, маркет-мейкера
+									.slider-plus-sign +
+									.round-list__item
+										.round-list__title Листинговые сборы KASE
+				
+						
+	
+							
+
+					.slider-bottom-links-listing-case
+						.slider-bottom-links-listing-case__sublink
+							a(href="#" ) Первая категория
+						.slider-bottom-links-listing-case__sublink
+							a(href="#" ) Вторая категория
+					div(class="slider-go-back-button" id="SliderGoBackButton") Назад
+
+	section.landing-section
+		.container
+			h2 Листинговые сборы
+		-
+			var listingArray = [
+				{
+					'title': 'Для резидентов РК',
+					'block': [
+						{
+							'price': [' 100 ']
+
+						}
+						
+					],
+					'text': 'Разовый сбор, который взимается за выдачу предварительного заключения, необходимого для регистрации выпуска ценных бумаг в уполномоченном органе'
+				},
+				{
+					'title': 'Сбор за рассмотрение',
+					'block': [
+						{
+							'percent':'0,025 %',
+							'price': [' 100 ', ' 1000 ']
+
+						}
+						
+					],
+					'text': 'Разовый сбор, который взимается за рассмотрение заявления о включении ценных бумаг в официальный список'
+				},
+				{
+					'title': 'Вступительный сбор',
+					'block': [
+						{
+							'percent':'0,025 %',
+							'price': [' 100 ', ' 3000 ']
+
+						}
+						
+					],
+					'text': 'Разовый сбор, который взимается при включении ценных бумаг в официальный список'
+				},
+				{
+					'title': 'Ежегодный сбор',
+					'block': [
+						{
+							'percent':'0,025 %',
+							'price': [' 100 ', ' 2000 ']
+
+						}
+						
+					],
+					'text': 'Сбор, который взимается за каждый год нахождения ценных бумаг в официальном списке'
+				}
+
+			]
+		include ../../modules/landings_modules/listing-block/module
+
+	section.landing-section.gr-yellow-green
+		.container
+			h2 Рассчитать листинговые сборы
+
+			a.btn.btn-transparent.btn-transparent--white(href="#"): span Калькулятор
+
 
 			
