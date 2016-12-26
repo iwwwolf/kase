@@ -3196,7 +3196,8 @@ table.dataTable.no-footer {
 
 .reference-info--page {
   font-size: 14px;
-  text-align: left; }
+  text-align: left;
+  margin-bottom: 30px; }
   .reference-info--page ul {
     padding-top: 15px; }
   .reference-info--page li {
@@ -5271,7 +5272,8 @@ table.dataTable.no-footer {
   .gradient-tabs--not-margin .nav {
     display: block;
     padding-bottom: 13px;
-    border-bottom: 1px solid #c9d4de; }
+    border-bottom: 1px solid #c9d4de;
+    margin-bottom: 25px; }
   .gradient-tabs--not-margin .tab-content {
     display: block; }
   .gradient-tabs--not-margin .gradient-tabs__tab {

@@ -65,6 +65,7 @@ block content
 						'href' : 'rules'
 					}
 					]
+
 			.gradient-tabs.gradient-tabs--not-margin
 				ul.nav(role="tablist")
 					each item in gradientTabs
@@ -76,6 +77,10 @@ block content
 								a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
 
 				.tab-content
+					.tab-pane.fade(id="about", role="tabpanel") Нет контента
+
+					.tab-pane.fade(id="tools", role="tabpanel") Нет контента
+
 					.tab-pane.fade.active.in(id="members", role="tabpanel")
 						h3 Чтобы стать клиринговым участником нужно			
 
@@ -145,7 +150,34 @@ block content
 										td: a(href="#") Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
 										td.text-center 1.2.23/194/33
 										td.text-center 09.11.16
-							
+						
+					.tab-pane.fade(id="clearing", role="tabpanel") Нет контента
+
+					.tab-pane.fade(id="rules", role="tabpanel")
+
+						h3 Правила по клиринговой деятельности на КASE
+
+						.reference-info.reference-info--page
+							ul
+								li: a(href="#") Регламент работы клиринговой системы
+								li: a(href="#").
+									Порядок включения финансовых инструментов в Список финансовыхинструментов фондового рынка, по сделкам с которыми Биржа осуществляет клиринговую деятельность
+								li
+									a(href="#") Правила осуществления клиринговой деятельности по сделкам с финансовыми инструментами
+									ul.reference-into--icon
+										li: a(href="#") Приложение 1
+										li: a(href="#") Приложение 2
+										li: a(href="#") Приложение 3
+										li: a(href="#") Приложение 4
+										li: a(href="#") Приложение 5
+										li: a(href="#") Приложение 6
+								li
+									a(href="#") Положение о клиринговых участниках
+									ul.reference-into--icon
+										li: a(href="#") Приложение 1
+										li: a(href="#") Приложение 2
+										li: a(href="#") Приложение 3
+								li: a(href="#") Положение о клиринговых участниках
 block scripts
 	script(type="text/javascript").
 		document.addEventListener("DOMContentLoaded", function(event) { 

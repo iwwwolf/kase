@@ -129,7 +129,7 @@ gulp.task('images:build', function () {
 /* собрать всё */
 gulp.task('build', [
     'html:build',
-    'quotesBlock:build',
+    //'quotesBlock:build',
     'js:build',
     'jsLibs:build',
     'style:build',
@@ -141,7 +141,7 @@ gulp.task('build', [
 /* собрать всё */
 gulp.task('devBuild', [
     'html:build',
-    'quotesBlock:build',
+    //'quotesBlock:build',
     'js:build',
     'jsLibs:build',
     'style:build',
