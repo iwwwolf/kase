@@ -1,4 +1,4 @@
-extends ../../templates/base
+extends ../templates/base
 
 block content
 	.markets-top
@@ -20,8 +20,8 @@ block content
 						'title': 'Дополнительные материалы'
 					}
 				]
-			include ../../modules/markets-menu/module
-			//-include ../../modules/regulations/module
+			include ../modules/markets-menu/module
+			//-include ../modules/regulations/module
 			
 	.container
 		#centerColumn.center-column
@@ -33,7 +33,7 @@ block content
 					'Правила Kase'
 				]
 				
-			include ../../modules/breadcrumbs/module
+			include ../modules/breadcrumbs/module
 			h1 Правила Kase
 			-
 				var gradientTabs = [
