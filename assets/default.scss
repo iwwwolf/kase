@@ -681,3 +681,8 @@ a.up {
     content: "";
   }
 }
+.markets {
+	&__text {
+		padding-left: 60px;
+	}
+}

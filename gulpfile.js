@@ -137,6 +137,17 @@ gulp.task('build', [
     'images:build'
 ]);
 
+
+/* собрать всё */
+gulp.task('devBuild', [
+    'html:build',
+    'quotesBlock:build',
+    'js:build',
+    'jsLibs:build',
+    'style:build',
+    'styleLibs:build'
+]);
+
 /* следить за изменениями */
 gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
@@ -173,4 +184,5 @@ gulp.task('watch', function(){
     });
 });
 
+gulp.task('dev', ['devBuild', 'watch']);
 gulp.task('default', ['build', 'watch']);

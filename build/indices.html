@@ -303,121 +303,73 @@
       <div class="markets-top">
         <div class="container">
           <div class="markets-menu">
-            <h3>Торги</h3>
-            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Клиринг и расчеты</a>
+            <h3>Индикаторы</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Совместные индексы</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Список инструментов</a></li>
-                <li><a href="#">Список компаний</a></li>
-                <li><a href="#">Просмотр торгов</a></li>
-                <li><a href="#">Регламент торгов и клиринга</a></li>
-                <li class="active"><a href="#">Клиринг и расчеты</a></li>
+                <li><a href="#">Фондовый рынок</a></li>
+                <li><a href="#">Денежный рынок</a></li>
+                <li class="active"><a href="#">Совместные индексы</a></li>
               </ul>
+            </div>
+          </div>
+          <div id="regulations" class="regulations">
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"><span class="line1"></span><span class="line2"></span></i></a>
+              <div class="dropdown-menu">
+                <div class="regulations__download">
+                  <h5>Архив</h5>
+                  <form>
+                    <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
+                      <input type="date">
+                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
+                    </div>
+                    <div class="regulations__download-input"><i class="fa fa-calendar"></i>
+                      <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
+                    </div>
+                    <div class="regulations__archive-links">
+                      <div class="link"><a href="#"><i class="fa fa-eye"></i>Посмотреть</a></div>
+                      <div class="link"><a href="#"><i class="fa fa-download"></i>Скачать</a></div>
+                    </div>
+                  </form>
+                </div>
+                <div class="regulations__links-list">
+                  <h5>Полезные ссылки</h5>
+                  <ul class="blue-list">
+                    <li><a href="#">График выпуска ГЦБ на 2016 год</a></li>
+                    <li><a href="#">Просмотр торгов</a></li>
+                    <li><a href="#">Список брокеров</a></li>
+                    <li><a href="#">Правила</a></li>
+                    <li><a href="#">Календарь праздников</a></li>
+                  </ul>
+                </div>
+                <h5>Дополнительные материалы</h5>
+                <div class="reference-info">
+                  <ul>
+                    <li><a href="#">Уровень инфляции в годовом выражении - 16,965 % (с 01.07.15 до 01.07.16);</a></li>
+                    <li><a href="#">Суверенные долгосрочные рейтинги Казахстана</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="container">
-        <div class="right-content-column">
+        <div id="centerColumn" class="center-column">
           <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Торги</a></li>
-            <li><a href="#">Клиринг и расчеты</a></li>
+            <li><a href="#">Рынки и торги</a></li>
+            <li><a href="#">Индикаторы</a></li>
+            <li><a href="#">Совместные индексы</a></li>
           </ul>
-          <h1>Клиринг и расчеты</h1>
-          <div class="gradient-tabs gradient-tabs--not-margin">
-            <ul role="tablist" class="nav">
-              <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--green"><a href="#about" role="tab" data-toggle="tab"><span>О лицензии</span></a></li>
-              <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--green"><a href="#tools" role="tab" data-toggle="tab"><span>Финансовые инструменты</span></a></li>
-              <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--green active"><a href="#members" role="tab" data-toggle="tab"><span>Клиринговые участники</span></a></li>
-              <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--green"><a href="#clearing" role="tab" data-toggle="tab"><span>Клиринговые фонды</span></a></li>
-              <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--green"><a href="#rules" role="tab" data-toggle="tab"><span>Правила</span></a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="members" role="tabpanel" class="tab-pane fade active in">
-                <h3>Чтобы стать клиринговым участником нужно			</h3>
-                <div class="steps-list">
-                  <div class="steps-list__item"><span class="steps-list__number">1</span>
-                    <div class="steps-list__item-body">
-                      <div class="steps-list__icon"><img src="images/clearing-icon-1.svg" alt=""></div>
-                      <div class="steps-list__text">Получить статус члена Биржи по выбранной категории</div>
-                    </div>
-                  </div>
-                  <div class="steps-list__item"><span class="steps-list__number">2</span>
-                    <div class="steps-list__item-body">
-                      <div class="steps-list__icon"><img src="images/clearing-icon-2.svg" alt=""></div>
-                      <div class="steps-list__text">Подключиться к системе электронного документооборота Entransfer</div>
-                    </div>
-                  </div>
-                  <div class="steps-list__item"><span class="steps-list__number">3</span>
-                    <div class="steps-list__item-body">
-                      <div class="steps-list__icon"><img src="images/clearing-icon-3.svg" alt=""></div>
-                      <div class="steps-list__text">Подать заявление на присвоение статуса Клирингового участника</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion__body">
-                  <h3>Клиринговые участники по категориям</h3>
-                  <ul class="accordion__nav">
-                    <li class="active"><a href="#">Все</a></li>
-                    <li><a href="#">Валютные</a></li>
-                    <li><a href="#">Фондовая</a></li>
-                    <li><a href="#">Деривативы</a></li>
-                  </ul>
-                  <table class="sorting-table--false table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Наименование участника</th>
-                        <th>Лицензия, номер</th>
-                        <th>Лицензия, дата выдачи</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">07.11.16</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">09.11.16</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">07.11.16</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">09.11.16</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">07.11.16</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">09.11.16</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">07.11.16</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Акционерное общество "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"</a></td>
-                        <td class="text-center">1.2.23/194/33</td>
-                        <td class="text-center">09.11.16</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h1>Совместные индексы</h1>
+          <p><a>Индекс S&P/OIC COMCEC 50 Shariah.</a></p>
+          <p>Индекс S&P/OIC COMCEC 50 Shariah был разработан при партнерстве Организации исламского сотрудничества и компании S&P Indices.</p>
+          <p>В корзину индекса вошли акции 50-ти крупнейших компаний, соответствующих законом Шариата и ценные бумаги которых торгуются на биржах государств - членов Организации исламского сотрудничества, таких как Бахрейн, Бангладеш, Кот-д'Ивуар, Египет, Индонезия, Иордания, Казахстан, Кувейт, Ливан, Малайзия, Марокко, Нигерия, Оман, Пакистан, Катар, Саудовская Аравия, Тунис, Турция и Объедененные Арабские Эмираты.</p>
+          <p>Республика Казахстан в данном индексе представлена простыми акциями АО "КазТрансОйл" (KZTO).</p>
+          <p>
+            В соответствии с методикой расчета удельные веса акций представительского списка индекса S&P/OIC COMCEC 50 Shariah пересматриваются раз в квартал
+            
+          </p>
         </div>
       </div>
     </div>
@@ -439,6 +391,48 @@
     <script type="text/javascript" defer src="js/main.js"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
+      	
+          $('#datePicker input').daterangepicker({
+              "singleDatePicker": true,
+              "showDropdowns": true,
+              "locale": {
+                  "direction": "ltr",
+                  "format": "DD/MM/YYYY",
+                  /*"separator": " - ",
+                  "applyLabel": "Apply",
+                  "cancelLabel": "Cancel",*/
+                  "daysOfWeek": [
+                      "Вс",
+                      "Пн",
+                      "Вт",
+                      "Ср",
+                      "Чт",
+                      "Пт",
+                      "Сб"
+                  ],
+                  "monthNames": [
+                      "Январь",
+                      "Февраль",
+                      "Март",
+                      "Апрель",
+                      "Май",
+                      "Июнь",
+                      "Июль",
+                      "Август",
+                      "Сентябрь",
+                      "Октябрь",
+                      "Ноябрь",
+                      "Декабрь"
+                  ],
+                  "firstDay": 1
+              },
+              "minDate": "20/06/2015",
+              "maxDate": new Date(),
+              "parentEl": "#datePicker"
+          }, function(start, end, label) {
+          }).focus().focusout();
+      
+      
       	$('.sorting-table').DataTable({
       		scrollX: true,
       		language: {

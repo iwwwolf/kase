@@ -79,13 +79,33 @@ block content
 					.tab-pane.fade.active.in(id="members", role="tabpanel")
 						h3 Чтобы стать клиринговым участником нужно			
 
+						-
+							var stepsItems = [
+								{
+									'image': 'images/clearing-icon-1.svg',
+									'text': 'Получить статус члена Биржи по выбранной категории'
+								},
+								{
+									'image': 'images/clearing-icon-2.svg',
+									'text': 'Подключиться к системе электронного документооборота Entransfer'
+								},
+								{
+									'image': 'images/clearing-icon-3.svg',
+									'text': 'Подать заявление на присвоение статуса Клирингового участника'
+								}
+							]
+
 						include ../../modules/steps-list/module
 
 						.accordion__body
+
 							h3 Клиринговые участники по категориям
+
 							ul.accordion__nav
-								li.active: a(href="#") Спот
-								li: a(href="#") Своп
+								li.active: a(href="#") Все
+								li: a(href="#") Валютные
+								li: a(href="#") Фондовая
+								li: a(href="#") Деривативы
 							table.sorting-table--false.table.table-striped
 								thead
 									tr
