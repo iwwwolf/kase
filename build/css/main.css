@@ -3194,7 +3194,7 @@ table.dataTable.no-footer {
 .reference-info--page {
   font-size: 14px;
   text-align: left; }
-  .reference-info--page ul {
+  .reference-info--page ul ul {
     padding-top: 15px; }
   .reference-info--page li {
     padding-bottom: 10px; }
