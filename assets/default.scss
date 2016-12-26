@@ -681,6 +681,14 @@ a.up {
     content: "";
   }
 }
+.dataTable {
+	&--listing {
+		i {
+			font-size: 18px;
+			color: #169de0;
+		}
+	}
+}
 .markets {
 	&__text {
 		padding-left: 60px;

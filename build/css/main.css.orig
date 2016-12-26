@@ -509,10 +509,6 @@ a.up:after {
   clear: both;
   content: ""; }
 
-.dataTable--listing i {
-  font-size: 18px;
-  color: #169de0; }
-
 .markets__text {
   padding-left: 60px; }
 
@@ -3085,9 +3081,6 @@ footer {
 .dataTables_wrapper.no-footer .dataTables_scrollBody {
   border-bottom: none; }
 
-.dataTables_scrollHeadInner {
-  width: 100% !important; }
-
 table.dataTable thead tr, .sorting-table--false thead tr {
   background-color: #e6e9ed; }
 
@@ -3203,9 +3196,14 @@ table.dataTable.no-footer {
 
 .reference-info--page {
   font-size: 14px;
+<<<<<<< HEAD
+  text-align: left; }
+  .reference-info--page ul ul {
+=======
   text-align: left;
   margin-bottom: 30px; }
-  .reference-info--page ul ul {
+  .reference-info--page ul {
+>>>>>>> d11602770764cec9492002637a542d21e4151166
     padding-top: 15px; }
   .reference-info--page li {
     padding-bottom: 10px; }
