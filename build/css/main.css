@@ -5377,7 +5377,8 @@ table.dataTable.no-footer {
     .gradient-tabs--not-margin .nav {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
-              justify-content: flex-start; }
+              justify-content: flex-start;
+      overflow-x: auto; }
   .gratient-tabs__accordion-link {
     display: none !important; }
   .gratient-tabs__accordion-body {
