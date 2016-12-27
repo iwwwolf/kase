@@ -214,6 +214,9 @@
 		}
 		&--not-margin {
 			text-align: left;
+			.nav {
+				justify-content: flex-start;
+			}
 		}
 	}
 	.gratient-tabs__accordion-link {

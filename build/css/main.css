@@ -5374,6 +5374,10 @@ table.dataTable.no-footer {
     display: block; }
   .gradient-tabs--not-margin {
     text-align: left; }
+    .gradient-tabs--not-margin .nav {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
   .gratient-tabs__accordion-link {
     display: none !important; }
   .gratient-tabs__accordion-body {
