@@ -1,0 +1,14 @@
+div.row.trade-row.clearfix.markets__text
+	each system in systems
+		div.trade-col.col-xs-6.reference-info
+			h3.trade-col__title= system.title
+			ul.trade-col__list
+			each item in system.lists
+				if item.helpText == ''
+					li.trade-col__item
+						a(href="#")= item.listTitle
+						span.txtHide= 'hide' 
+				else 
+					li.trade-col__item
+						a(href="#")= item.listTitle
+						span= item.helpText

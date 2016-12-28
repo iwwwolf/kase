@@ -1,0 +1,154 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Индикаторы"
+				var marketsList = [
+					{
+						'title': 'Как подключиться к KASE'
+					},
+					{
+						'title': 'Загрузки',
+						'active': true
+					},
+					{
+						'title': 'Инструкции'
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Торговая система',
+					'Загрузки'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			h1 Загрузки
+
+			br
+			br
+			-
+				var systems = [
+					{
+						title: 'Дистрибутивы',
+						lists: [
+							{
+								'listTitle': 'Терминалы для подписки на облигации',
+								'helpText': ''
+							},{
+								'listTitle': 'Терминал',
+								'helpText':'Версия 2.44, сборка 1, от 21.07.2016'
+							},{
+								'listTitle': 'Терминал Торговой системы "Подписка"',
+								'helpText':'Версия 1.10, сборка 1, от 31.10.2012'
+							}
+						]
+					},{
+						title: 'Next терминал',
+						lists: [
+							{
+								'listTitle': 'Дистрибутив',
+								'helpText':'Версия 1.10, сборка 1'
+							},{
+								'listTitle': 'Дистрибутив (без установки)',
+								'helpText':'Версия 1.10, сборка 1'
+							},{
+								'listTitle': 'Руководство пользователя',
+								'helpText':'Версия 1.10, сборка 1'
+							}
+						]
+					}
+				]
+			include ../../modules/trade-cols/module
+			-
+				var systems = [
+					{
+						title: 'Драйверы',
+						lists: [
+							{
+								'listTitle': 'Драйверы для инсталяции iKey1000',
+								'helpText':'Совместимы с Windows 7'
+							}
+						]
+					},{
+						title: 'Драйверы',
+						lists: [
+							{
+								'listTitle': 'Дистрибутив (без установки)',
+								'helpText':''
+							}
+						]
+					}
+				]
+			include ../../modules/trade-cols/module
+			
+			.row.markets__text
+				a Руководство и инструкции
+				br
+				span Телефон службы поддержки (+7 727) 327 60 23
+				br
+				br
+				br
+			.row.clearfix.markets__text.trade-adreses
+				.col-xs-12.trade-adreses__col
+					h2.center Для подключения к торговой системе используются следующие адреса и настройки
+					.row.trade-adreses__row
+						.col-xs-6
+							h4.green Валютный рынок
+							p.
+								#[b По выделенному каналу:]
+							p IP 192.168.111.202
+							p Port 9898 (защищенное ssl-соединение)
+							p.
+								#[b Резервный канал:]
+							p IP 192.168.111.145 
+							p Port 9880 (соединение без ssl)
+							p.
+								#[b По интернету:]
+							p IP 212.19.144.73 
+							p Port 9898 (защищенное ssl-соединение)
+							br
+							h4.green Валютный рынок (тестовая система)
+							p TargetCompID=KASE
+							p SocketUseSSL=N
+							p.
+								#[b По интернету:]
+							p IP next.kase.kz
+							p Port 9880
+						.col-xs-6
+							h4.green Фондовый рынок
+							p.
+								#[b По выделенному каналу:]
+							p IP 192.168.111.202
+							p Port 9878 (защищенное ssl-соединение)
+							p.
+								#[b По интернету:]
+							p IP 212.19.144.73
+							p Port 9878 (защищенное ssl-соединение)
+							br
+							h4.green Фондовый рынок
+							p TargetCompID=FIX5-Eq-Test
+							p SocketUserSSL=Y
+							p.
+								#[b По выделенному каналу:]
+							p IP 192.168.111.28
+							p Port 9884 (защищенное ssl-соединение)
+							p.
+								#[b По интернету:]
+							p IP 212.19.144.7
+							p Port 9884 (защищенное ssl-соединение)
+						.col-xs-12.center
+							br
+							br
+							p.
+								#[b Для обновления торгового терминала Next используются следующие настройки:]
+							p IP: next.kase.kz
+							p Port: 80
+							br

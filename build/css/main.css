@@ -516,6 +516,9 @@ a.up:after {
 .markets__text {
   padding-left: 60px; }
 
+.center {
+  text-align: center; }
+
 .btn {
   font-size: 100%;
   border: none;
@@ -2641,6 +2644,68 @@ footer {
 
 .trade-table__row-title {
   background-color: #e5f3e9; }
+
+.trade-row {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+  .trade-row + .trade-row {
+    margin-top: 30px; }
+  .trade-row .trade-col {
+    padding: 5px 50px 15px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08); }
+    .trade-row .trade-col:nth-child(odd) {
+      margin-right: 30px; }
+    .trade-row .trade-col__list {
+      list-style-type: none; }
+    .trade-row .trade-col__item {
+      padding-left: 22px;
+      font-size: 14px; }
+      .trade-row .trade-col__item:not(:last-child) {
+        margin-bottom: 10px; }
+      .trade-row .trade-col__item::after {
+        content: "5 МБ";
+        word-spacing: 20px;
+        width: 40px;
+        height: 40px;
+        padding-top: 4px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        font-size: 12px;
+        color: #0094de;
+        border-radius: 50%;
+        border: 1px solid #0094de;
+        text-align: center;
+        -webkit-transition: .75s;
+        transition: .75s; }
+      .trade-row .trade-col__item:hover a {
+        text-decoration: underline; }
+      .trade-row .trade-col__item:hover::after {
+        opacity: 1; }
+      .trade-row .trade-col__item .txtHide {
+        color: rgba(255, 255, 255, 0); }
+      .trade-row .trade-col__item span {
+        color: #a8b1ba; }
+      .trade-row .trade-col__item a {
+        display: block; }
+        .trade-row .trade-col__item a::before {
+          top: 25%; }
+
+.trade-adreses {
+  margin-bottom: 80px; }
+  .trade-adreses__col {
+    background-color: #f8f8f8; }
+  .trade-adreses__row .col-xs-6 {
+    padding-left: 6em; }
+  .trade-adreses h2 {
+    padding: 1.5em 2em .5em;
+    font-weight: 400; }
 
 .breadcrumbs {
   font-size: 85.71429%;
