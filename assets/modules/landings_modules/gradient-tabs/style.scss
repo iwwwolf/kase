@@ -214,6 +214,10 @@
 		}
 		&--not-margin {
 			text-align: left;
+			.nav {
+				justify-content: flex-start;
+				overflow-x: auto;
+			}
 		}
 	}
 	.gratient-tabs__accordion-link {

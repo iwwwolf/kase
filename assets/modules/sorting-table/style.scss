@@ -43,6 +43,9 @@
 		border-bottom: none;
 	}
 }
+.dataTables_scrollHeadInner {
+	width: 100% !important;
+}
 table.dataTable, .sorting-table--false {
 	thead {
 		tr {

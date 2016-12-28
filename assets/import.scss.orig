@@ -34,8 +34,11 @@
 @import "modules/text-footer/style.scss";
 @import "modules/tools-form/style.scss";
 @import "modules/steps-list/style.scss";
-@import "modules/fund-table/style.scss";
+<<<<<<< HEAD
 @import "modules/committees/style.scss";
+=======
+@import "modules/fund-table/style.scss";
+>>>>>>> f99f280d6a4eda85efb443d140635f88b37ea7de
 
 @import "landing-default.scss";
 @import "modules/landings_modules/landing-head/style.scss";
