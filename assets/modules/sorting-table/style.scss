@@ -17,6 +17,12 @@
 		text-align: center !important;
 	}
 }
+[class*="sortin-table"] {
+	.get-date {
+		background-color: #f4f6f8;
+		padding: 18px 17px 13px;
+	}
+}
 .dataTables_filter {
 	float: none;
 	width: 100%;
@@ -145,7 +151,7 @@ table.dataTable.no-footer {
 	}
 }
 
-@media (min-width: 649px) and (max-width: 768px){
+@media (min-width: 649px) and (max-width: 768px) {
 	table.dataTable {
 		thead {
 			td, th {
@@ -166,6 +172,13 @@ table.dataTable.no-footer {
 			padding: 0 20px;
 			height: 60px;
 			border: 2px solid #c9d4de;
+		}
+	}
+}
+@media (min-width: 768px) {
+	[class*="sortin-table"] {
+		.get-date__input {
+			max-width: 40%;
 		}
 	}
 }
