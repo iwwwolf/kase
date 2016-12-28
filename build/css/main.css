@@ -3059,6 +3059,10 @@ footer {
 .sorting-table .text-center, .sorting-table--false .text-center {
   text-align: center !important; }
 
+[class*="sortin-table"] .get-date {
+  background-color: #f4f6f8;
+  padding: 18px 17px 13px; }
+
 .dataTables_filter {
   float: none;
   width: 100%;
@@ -3178,6 +3182,10 @@ table.dataTable.no-footer {
       padding: 0 20px;
       height: 60px;
       border: 2px solid #c9d4de; } }
+
+@media (min-width: 768px) {
+  [class*="sortin-table"] .get-date__input {
+    max-width: 40%; } }
 
 .reference-info, .reference-info--page {
   font-size: 12px; }
