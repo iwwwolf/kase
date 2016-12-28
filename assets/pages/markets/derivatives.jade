@@ -1,0 +1,221 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Рынки"
+				var marketsList = [
+					{
+						'title': 'Акции'
+					},
+					{
+						'title': 'Паи'
+					},
+					{
+						'title': 'Корпоративные облигации'
+					},
+					{
+						'title': 'Ценные бумаги МФО'
+					},
+					{
+						'title': 'Государствнные ценные бумаги'
+					},
+					{
+						'title': 'Иностранные валюты'
+					},
+					{
+						'title': 'Операции РЕПО'
+					},
+					{
+						'title': 'Деривативы',
+						'active': true
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Регламент
+							div
+								div 
+									span 11:30 – 17:00
+									|торговая сессия
+
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Список акций
+								li: a(href="#") Просмотр торгов
+								li: a(href="#") Список брокеров
+								li: a(href="#") Рыночная оценка
+								li: a(href="#") Правила торгов
+
+						-
+							var referenceInfo = [
+								'Правила биржевой торговли производными финансовыми инструментами',
+								'Правила осуществления клирингорвой деятельности по сделкам с финансовыми инструментами',
+								'Спецификация фьючерса на курс доллара США к тенге',
+								'Спецификация фьючерса на Индекс KASE',
+								'Спецификация фьючерса на простые акции KAZ Minerals PLC'
+							]
+						include ../../modules/reference-info/module
+
+	.container
+		#centerColumn.center-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки',
+					'Торги',
+					'Деривативы'
+				]
+				
+			include ../../modules/breadcrumbs/module
+			h1 Деривативы
+
+			.accordion
+				.accordion__body
+					ul.accordion__nav
+						li.active: a(href="#") Фондовые
+						li: a(href="#") Валютные
+
+					.sortin-table--with-search
+						#getDate(style="position: relative;")
+							.get-date
+								.get-date__label Период:
+								.get-date__input.get-date__input--mobile
+									i.fa.fa-calendar
+									input(type="text", name="daterange" value="01/01/2015 - 01/31/2015")
+									.get-date__link
+										a(href="#")
+											i.fa.fa-long-arrow-right
+								.get-date__input
+									i.fa.fa-calendar
+									input(type="text", name="daterange" value="01/01/2015 - 01/31/2015")
+									.get-date__link
+										a(href="#")
+											i.fa.fa-long-arrow-right
+
+						table.sorting-table.table.table-striped
+							thead
+								tr
+									th Инструмент
+									th Цена, тенге #[br] мин.
+									th Цена, тенге #[br] макс.
+									th Цена, тенге #[br] последн.
+									th Объём, сделок KZT
+									th Число сделок
+									th Открытых позиций
+									th Лучшие на закрытие, спрос
+									th Лучшие на закрытие, предлож.
+							tbody
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+								tr
+									td: a(href="#") F_HSBK1609
+									td -
+									td -
+									td -
+									td 0,007
+									td 0,007
+									td 125
+									td -
+									td -
+
+					.help-block.pull-right: a(href="#") Посмотреть все
+					.help-block * В таблице приводятся данные за последний результативный торговый день
+					.help-block * Приведённые тренды отражают разность показателей относительно соответствующих значений предыдущего рабочего дня
+
+			br
+			br
+			br
+			
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

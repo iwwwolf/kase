@@ -1,0 +1,65 @@
+.committees-block{
+	max-width: 780px;
+	font-size: 14px;
+	margin-bottom: 20px;
+	line-height: 1.3;
+}
+.accordion_body .committees-block{
+	max-width: 780px;
+	font-size: 14px;
+}
+.committees-block__row{
+	border-bottom: 1px solid #c9d4de;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 15px 0;
+}
+.committees-block__row:last-child{
+	border-bottom: 0;
+}
+.committees-block__left{
+	width: 100%;
+	// vertical-align: middle;
+	// display: flex;
+ //  	align-items: center;
+ //  	justify-content: flex-start;
+ //  	flex-wrap: wrap;
+}
+.committees-block__right{
+	padding-top: 10px;
+	width: 100%;
+}
+.committees-block__name{
+	color: #333333;
+	font-weight: 500;
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
+
+}
+.committees-block__remark{
+	color: #a8b1ba;
+	width: 100%;
+	text-align: center;
+}
+.committees-block__jobtitle{
+	color: #333333;
+	font-weight: 100;
+	text-align: center;
+}
+@media (min-width: 700px) {
+	.committees-block__left{
+		max-width: 40%;
+		min-width: 40%;
+	}
+	.committees-block__right{
+		max-width: 60%;
+		min-width: 60%;
+		padding-top: 0;
+	}
+	.committees-block__name, .committees-block__remark, .committees-block__jobtitle{
+		text-align: left;
+	}
+
+}

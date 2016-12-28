@@ -1,0 +1,13 @@
+.committees-block
+	each item in committeesArray
+		.committees-block__row
+			.committees-block__left
+				for itemList in item
+					.committees-block__name
+						span= itemList.name
+					.committees-block__remark
+						if (typeof(itemList.remark) !== 'undefined')
+							span=itemList.remark
+			.committees-block__right
+				.committees-block__jobtitle
+					span= item.jobtitle

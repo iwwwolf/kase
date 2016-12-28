@@ -17,7 +17,6 @@
 @import "modules/fixed-social/style.scss";
 @import "modules/trade-link/style.scss";
 @import "modules/trade-table/style.scss";
-@import "modules/trade-cols/style.scss";
 @import "modules/breadcrumbs/style.scss";
 @import "modules/markets-menu/style.scss";
 @import "modules/regulations/style.scss";
@@ -35,8 +34,11 @@
 @import "modules/text-footer/style.scss";
 @import "modules/tools-form/style.scss";
 @import "modules/steps-list/style.scss";
-@import "modules/fund-table/style.scss";
+<<<<<<< HEAD
 @import "modules/committees/style.scss";
+=======
+@import "modules/fund-table/style.scss";
+>>>>>>> f99f280d6a4eda85efb443d140635f88b37ea7de
 
 @import "landing-default.scss";
 @import "modules/landings_modules/landing-head/style.scss";

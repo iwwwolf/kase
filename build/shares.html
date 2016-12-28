@@ -303,49 +303,51 @@
       <div class="markets-top">
         <div class="container">
           <div class="markets-menu">
-            <h3>Индикаторы</h3>
-            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Денежный рынок</a>
+            <h3>Рынки</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Паи</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Фондовый рынок</a></li>
-                <li class="active"><a href="#">Денежный рынок</a></li>
-                <li><a href="#">Совместные индексы</a></li>
+                <li><a href="#">Акции</a></li>
+                <li class="active"><a href="#">Паи</a></li>
+                <li><a href="#">Корпоративные облигации</a></li>
+                <li><a href="#">Ценные бумаги МФО</a></li>
+                <li><a href="#">Государствнные ценные бумаги</a></li>
+                <li><a href="#">Иностранные валюты</a></li>
+                <li><a href="#">Операции РЕПО</a></li>
+                <li><a href="#">Деривативы</a></li>
               </ul>
             </div>
           </div>
           <div id="regulations" class="regulations">
             <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"><span class="line1"></span><span class="line2"></span></i></a>
               <div class="dropdown-menu">
+                <div class="regulations__timetable">
+                  <h5>Регламент</h5>
+                  <div>
+                    <div> <span>11:30 – 17:00</span>торговая сессия</div>
+                  </div>
+                </div>
                 <div class="regulations__download">
-                  <h5>Архив</h5>
                   <form>
+                    <h5>Средневзвешенные цены</h5>
                     <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
                       <input type="date">
                       <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
                     </div>
                     <div class="regulations__download-input"><i class="fa fa-calendar"></i>
                       <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
-                    </div>
-                    <div class="regulations__archive-links">
-                      <div class="link"><a href="#"><i class="fa fa-eye"></i>Посмотреть</a></div>
-                      <div class="link"><a href="#"><i class="fa fa-download"></i>Скачать</a></div>
+                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
                     </div>
                   </form>
                 </div>
                 <div class="regulations__links-list">
                   <h5>Полезные ссылки</h5>
                   <ul class="blue-list">
-                    <li><a href="#">График выпуска ГЦБ на 2016 год</a></li>
+                    <li><a href="#">Список облигаций</a></li>
                     <li><a href="#">Просмотр торгов</a></li>
                     <li><a href="#">Список брокеров</a></li>
-                    <li><a href="#">Правила</a></li>
-                    <li><a href="#">Календарь праздников</a></li>
-                  </ul>
-                </div>
-                <h5>Дополнительные материалы</h5>
-                <div class="reference-info">
-                  <ul>
-                    <li><a href="#">Уровень инфляции в годовом выражении - 16,965 % (с 01.07.15 до 01.07.16);</a></li>
-                    <li><a href="#">Суверенные долгосрочные рейтинги Казахстана</a></li>
+                    <li><a href="#">Маркет-мейкеры</a></li>
+                    <li><a href="#">Рыночная оценка</a></li>
+                    <li><a href="#">Правила торгов</a></li>
                   </ul>
                 </div>
               </div>
@@ -357,136 +359,79 @@
         <div id="centerColumn" class="center-column">
           <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Рынки и торги</a></li>
-            <li><a href="#">Индикаторы</a></li>
-            <li><a href="#">Фондовый рынок</a></li>
-            <li><a href="#">Индекс KASE</a></li>
+            <li><a href="#">Рынки</a></li>
+            <li><a href="#">Торги</a></li>
+            <li><a href="#">Корпоративные облигации</a></li>
           </ul>
-          <div class="h1-block"><a href="#" class="arrow-back"><i class="fa fa-angle-left"></i></a>
-            <div class="flex">
-              <h1>MM Index</h1>
-              <div>
-                <div class="h1-block__indicator">12,34% годовых</div>
-                <div class="h1-block__indicator up">0.14</div>
-              </div>
-            </div>
-          </div>
-          <p class="markets__text">Money Market Index - композитный индикатор денежного рынка, который представляет собой средневзвешенное через объем сделок значение среднвзвешенных процентных ставок (доходности) по операциям валютного свопа USD/KZT и операциями автоматического репо с государственными ценными бумагами Республики Казахстан, открытыми на один рабочий день. Индикатор рассчитывается по всем сделкам открытия свопа и репо, заключенным в торговой системе KASE в течение дня.</p>
-          <p class="markets__text"><b>Единица измерения:</b> % годовых</p>
-          <p class="markets__text"><b>Время обновления индикатора:</b> ежедневно по рабочим дням после окончания торгов с 17:00 до 20:00</p>
-          <p class="markets__text"><b>Изменение индикатора:</b> рассчитывается при публикации индикатора относительно значения предыдущего торгового дня
-            
-          </p><br><br>
-          <div class="kase-date">Данные на: 7 декабря 2016 г. </div>
+          <h1>Паи</h1>
+          <h3>Все инструменты</h3>
           <div class="accordion">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Последние значения<i class="fa fa-angle-down"></i></a></div>
             <div class="accordion__body">
-              <div class="row">
-                <div class="col-md-5">Период:
-                  <div class="regulations__download-input regulations__download-input--market"><i class="fa fa-calendar"></i>
-                    <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
-                  </div>
-                </div>
-                <div class="col-md-5 col-md-offset-2">Период:
-                  <div class="regulations__download-input regulations__download-input--market"><i class="fa fa-calendar"></i>
-                    <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
-                  </div>
-                </div>
-              </div><br>
-              <ul class="accordion__nav">
-                <li class="active"><a href="#">MM Index</a></li>
-                <li><a href="#">Репо</a></li>
-                <li><a href="#">Своп</a></li>
-                <li><a href="#">Минимальное и максимальное значение MM Index за последние 52 недели</a></li>
-              </ul>
-              <div class="col-md-3">
-                <table class="half-table">
-                  <tr>
-                    <td>индекс,<br> % год.:</td>
-                    <td>12,34</td>
-                  </tr>
-                  <tr>
-                    <td>объем,<br> млрд KZT:</td>
-                    <td>300,4</td>
-                  </tr>
-                  <tr>
-                    <td>ставка,<br> % год.: </td>
-                    <td>12,11</td>
-                  </tr>
+              <div class="sortin-table--with-search">
+                <table class="sorting-table table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Код</th>
+                      <th>Управляющая компания</th>
+                      <th>Последняя цена, KZT</th>
+                      <th>Объём послед. сделки, KZT</th>
+                      <th>Маркет-мейкер</th>
+                      <th>Дата послед. сделки</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#">CCBNb19</a></td>
+                      <td>-</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb19</a></td>
+                      <td>-</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb19</a></td>
+                      <td>-</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb19</a></td>
+                      <td>-</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb19</a></td>
+                      <td>-</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                    <tr>
+                      <td><a href="#">CCBNb19</a></td>
+                      <td>-</td>
+                      <td>116.77</td>
+                      <td>47.2</td>
+                      <td>M</td>
+                      <td>23.05.2016</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
-              <div class="col-md-3">
-                <table class="half-table">
-                  <tr>
-                    <td>вес в<br> MM Index, %:</td>
-                    <td>66,2</td>
-                  </tr>
-                  <tr>
-                    <td>ставка,<br> % год.:</td>
-                    <td>12,80</td>
-                  </tr>
-                  <tr>
-                    <td>вес в<br> MM Index, %:</td>
-                    <td>33,8</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="col-md-3">
-                <table class="half-table">
-                  <tr>
-                    <td>индекс,<br> % год.:</td>
-                    <td>12,34</td>
-                  </tr>
-                  <tr>
-                    <td>объем,<br> млрд KZT:</td>
-                    <td>300,4</td>
-                  </tr>
-                  <tr>
-                    <td>ставка,<br> % год.: </td>
-                    <td>12,11</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="col-md-3">
-                <table class="half-table">
-                  <tr>
-                    <td>вес в<br> MM Index, %:</td>
-                    <td>66,2</td>
-                  </tr>
-                  <tr>
-                    <td>ставка,<br> % год.:</td>
-                    <td>12,80</td>
-                  </tr>
-                  <tr>
-                    <td>вес в<br> MM Index, %:</td>
-                    <td>33,8</td>
-                  </tr>
-                </table>
-              </div>
-              <div class="actions__chart">
-                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-                <script type="text/javascript">
-                  new TradingView.widget({
-                    "autosize": true,
-                    "symbol": "NASDAQ:AAPL",
-                    "interval": "D",
-                    "timezone": "Asia/Almaty",
-                    "theme": "White",
-                    "style": "3",
-                    "locale": "ru",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "hide_top_toolbar": true,
-                    "hideideas": true
-                  });
-                </script>
-              </div>
-              <div class="actions__chart-text">
-                <p>Индекс KASE представляет собой отношение рыночных цен акций, входящих в представительский список индекса на дату его составления, к ценам акций этого списка на определенную дату, которое взвешено по капитализации с учетом акций, находящихся в свободном обращении.</p>
-                <p>Значение Индекса KASE пересчитывается после каждой сделки, заключенной с акциями, которые входят в представительский список индекса.</p>
-                <p>Время обновления индикатора: ежедневно по рабочим дням после окончания торгов с 17:00 до 18:00.</p>
-                <p>"Время жизни" индикатора: 1 рабочий день.</p>
-              </div>
+              <div class="help-block pull-right"><a href="#">Посмотреть все</a></div>
             </div>
           </div>
         </div>
@@ -510,59 +455,8 @@
     <script type="text/javascript" defer src="js/main.js"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
-      	
-          $('#datePicker input').daterangepicker({
-              "singleDatePicker": true,
-              "showDropdowns": true,
-              "locale": {
-                  "direction": "ltr",
-                  "format": "DD/MM/YYYY",
-                  /*"separator": " - ",
-                  "applyLabel": "Apply",
-                  "cancelLabel": "Cancel",*/
-                  "daysOfWeek": [
-                      "Вс",
-                      "Пн",
-                      "Вт",
-                      "Ср",
-                      "Чт",
-                      "Пт",
-                      "Сб"
-                  ],
-                  "monthNames": [
-                      "Январь",
-                      "Февраль",
-                      "Март",
-                      "Апрель",
-                      "Май",
-                      "Июнь",
-                      "Июль",
-                      "Август",
-                      "Сентябрь",
-                      "Октябрь",
-                      "Ноябрь",
-                      "Декабрь"
-                  ],
-                  "firstDay": 1
-              },
-              "minDate": "20/06/2015",
-              "maxDate": new Date(),
-              "parentEl": "#datePicker"
-          }, function(start, end, label) {
-          }).focus().focusout();
-      
-      
       	$('.sorting-table').DataTable({
       		scrollX: true,
-      		language: {
-      		    search: '',
-      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
-      		  }
-      	});
-      
-      	$('.sorting-table--false').DataTable({
-      		scrollX: true,
-      		bSort : false,
       		language: {
       		    search: '',
       		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
