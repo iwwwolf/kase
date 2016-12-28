@@ -4150,9 +4150,9 @@ table.dataTable.no-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 15px 0; }
@@ -4161,37 +4161,28 @@ table.dataTable.no-footer {
   border-bottom: 0; }
 
 .committees-block__left {
-  max-width: 50%;
-  min-width: 50%;
-  vertical-align: middle;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  width: 100%; }
 
 .committees-block__right {
-  max-width: 50%;
-  min-width: 50%; }
+  padding-top: 10px;
+  width: 100%; }
 
 .committees-block__name {
   color: #333333;
   font-weight: 500;
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 100%;
+  text-align: center; }
 
 .committees-block__remark {
   color: #a8b1ba;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
 
 .committees-block__jobtitle {
   color: #333333;
-  font-weight: 100; }
+  font-weight: 100;
+  text-align: center; }
 
 @media (min-width: 700px) {
   .committees-block__left {
@@ -4199,7 +4190,10 @@ table.dataTable.no-footer {
     min-width: 40%; }
   .committees-block__right {
     max-width: 60%;
-    min-width: 60%; } }
+    min-width: 60%;
+    padding-top: 0; }
+  .committees-block__name, .committees-block__remark, .committees-block__jobtitle {
+    text-align: left; } }
 
 .body__landing .fixed-social {
   display: none; }
