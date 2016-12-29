@@ -41,104 +41,149 @@ block content
 
 			h1 Просмотр Торгов
 
-			label.checkbox
-				input(type="checkbox", name="checkboxName")
-				span.checkbox__styled
-				span.checkbox__label Test Test
+			//- label.checkbox
+			//- 	input(type="checkbox", name="checkboxName")
+			//- 	span.checkbox__styled
+			//- 	span.checkbox__label Test Test
+			.market-page
+				.market-block__dropdown
+					.market-block__dropdown_left
+						h5 Выберите рынок:
+						.market-dropdown-block.market-dropdown-block__large
+							.dropdown
+								a.dropdown-link(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+									| Иностарнные валюты и операции валютного свопа
+								ul.dropdown-menu
+									li
+										a(href='#') рынок 1
+									li
+										a(href='#') рынок 2
+									li
+										a(href='#') рынок 3
+					
+					.market-block__dropdown_right
+						h5 Частота обновления:
+						.market-dropdown-block.market-dropdown-block__small
+							.dropdown
+								a.dropdown-link(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+									| 1 минута
+								ul.dropdown-menu
+									li
+										a(href='#') рынок 1
+									li
+										a(href='#') рынок 2
+									li
+										a(href='#') рынок 3
+				
+				.market-block-checkbox
+					.market-block-checkbox__grey.col-md-3
+						h5 Выберите коды инструментов или операций:
+						.market-checkbox__input
+							input(type='text', name='market-checkbox', value='Поиск по коду')
+							.market-checkbox__input_link
+								a(href='#')
+									i.fa.fa-long-arrow-right
+						-
+							var checkboxList = [
+								'Выбрать все',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT_TOD',
+								'EURKZT_0_001',
+								'CNYKZT	_TOD',
+								'EURKZT_0_001'
 
-			.sortin-table--with-search
-				table.sorting-table--false.table.table-striped
-					thead
-						tr
-							th Название индикатора
-							th Дата
-							th Последнее значение
-							th Изменение
-							th Изменение, %
-							th Объём сделок, млн KZT
-							th Объём сделок, тыс USD
-							th Изменение цены за последние 52 недели
-					tbody
-						tr.sorting-table__subtitle
-							td &nbsp; 
-								span Рынок акций
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-						tr
-							td: a(href="#") Индекс KASE
-							td 02.08.2016
-							td 1071.70
-							td 0
-							td 1.25
-							td 876 876
-							td 8.7
-							td 
-								.table__indicator
-									|1 076,24
-									img(src="img-content/line.png", alt="")
-									|1 076,24
+							]
 
-						tr.sorting-table__subtitle
-							td &nbsp; 
-								span Рынок корпоративных облигаций
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-							td &nbsp;
-						tr
-							td: a(href="#") Индекс KASE
-							td 02.08.2015
-							td 1071.70
-							td 0
-							td 1.25
-							td 876 876
-							td 8.7
-							td 
-								.table__indicator
-									|1 076,24
-									img(src="img-content/line.png", alt="")
-									|1 076,24
-						tr
-							td: a(href="#") Индекс KASE
-							td 02.08.2016
-							td 1071.70
-							td 0
-							td 1.25
-							td 876 876
-							td 8.7
-							td 
-								.table__indicator
-									|1 076,24
-									img(src="img-content/line.png", alt="")
-									|1 076,24
-			br
-			br
+						include ../../modules/checkbox-list/module
+						
+					.market-block-checkbox__white.col-md-9
+						.market-block-checkbox__white_title
+							h5 Выберите нужные поля
+							.market-block-checkbox__white_titlecheckbox
+								label.checkbox
+									input(type="checkbox", name="checkboxName")
+									span.checkbox__styled
+									span.checkbox__label Выбрать все
 
-block scripts
-	script(type="text/javascript").
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			$('.sorting-table').DataTable({
-				scrollX: true,
-				language: {
-				    search: '',
-				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
-				  }
-			});
+								label.checkbox
+									input(type="checkbox", name="checkboxName")
+									span.checkbox__styled
+									span.checkbox__label Выбрать стандартные
+						.market-block-checkbox__white_content
+							-
+								var checkboxList = [
+									'Состояние торгов, торговой сессии (Status; Opn – открыты, Cls – закрыты, Frt – франкфурт, Pre – предторговая сессия)',
+									'Объем заявок в тенге по цене лучшей котировки на покупку (Volume of Bid)',
+									'Количество инструмента по цене лучшей котировки на покупку (Quantity of Bid)',
+									'Цена лучшей котировки на покупку',
+									'Разница между ценой лучшей котировки на продажу и ценой лучшей котировки на покупку (Spread)',
+									'Разница между ценой лучшей котировки на продажу и ценой лучшей котировки на покупку в %',
+									'Цена лучшей котировки на продажу',
+									'Количество инструмента по цене лучшей котировки на продажу (Quantity of Ask)',
+									'Объем заявок в тенге по цене лучшей котировки на продажу (Volume of Ask)',
+									'Цена открытия – цена первой сделки',
+									'Минимальная цена сделки',
+									'Максимальная цена сделки',
+									'Цена последней сделки (закрытия, если торги закрыты)',
+									'Объем последней сделки в единицах инструмента (Quantity of Last)',
+									'Объем последней сделки в тенге (Volume of Last)',
+									'Последняя цена предыдущих торгов (Previous Close)',
+									'Изменение последней цены к последней цене предыдущего дня (Net Change)',
+									'Изменение последней цены к последней цене предыдущего дня %',
+									'Изменение цены последней сделки к цене предыдущей сделки (Change)',
+									'предыдущей сделки (Change) Изменение цены последней сделки к цене предыдущей сделки в %',
+									'Изменение цены последней сделки к цене открытия (Last to Open)',
+									'Изменение цены последней сделки к цене открытия в %',
+									'Средневзвешенная цена (Average)',
+									'Средневзвешенная цена предыдущих торгов (Previous Average)',
+									'(Previous Average) Изменение средневзвешенной цены к средневзвешенной цене предыдущих торгов (Average Change)',
+									'Изменение средневзвешенной цены к средневзвешенной цене предыдущих торгов в %',
+									'Количество заключенных сделок',
+									'Объем заключенных сделок в единицах инструмента (Quantity)',
+									'Объем заключенных сделок в тенге (Volume)',
+									'Объем заключенных сделок, выраженный в долларах США',
+									'Количество участников, заключивших сделки (Dealers)',
+									'Время последнего обновления'
 
-			$('.sorting-table--false').DataTable({
-				scrollX: true,
-				bSort : false,
-				language: {
-				    search: '',
-				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
-				  }
-			});
-		});
+								]
+
+							include ../../modules/checkbox-list/module
+
+					.market-block__btn
+						a(href="#")
+							span Просмотр торгов
+
+				.market-block__red_text
+					p.
+						Данные предоставляются с задержкой в 15 минут. 
+					p.
+						Данные в режиме реального времени #[span предоставляются платно.]
+
+			.market-block__list.regulations__links-list
+				h5 Полезные ссылки
+				ul.blue-list
+					li: a(href="#") Для работы с данным разделом вам потребуется интернет-браузер с поддержкой JavaScript. Таковым является практически любой современный браузер, за исключением тех, в которых JavaScript отключен по умолчанию. В этом случае Вам нужно включить поддержку JavaScript в настройках Вашего браузера.
+					li: a(href="#") Для просмотра определенного рынка или набора выберите его наименование из предлагаемого перечня.
+					li: a(href="#") Далее выберите необходимые инструменты из списка, используя кнопки "добавить" и "удалить". Можно выделить сразу несколько инструментов, но просмотр возможен по списку, не превышающему 20 инструментов (за исключением набора по Индексу KASE). Можно осуществить поиск инструментов путем набора необходимых символов и нажатием кнопки "Найти". При этом в списке будут найдены инструменты, в кодах которых встречаются введенные пользователем наборы символов вне зависимости от их расположения в наименовании кода.
+					li: a(href="#") Для удобства выбора нужных полей просмотра можно использовать ссылки "Выбрать все", "Выбрать стандартные", "Убрать все". При выборе стандартных полей осуществляется выбор наиболее часто используемых пользователями полей.
+					li: a(href="#") Частота обновления страницы просмотра устанавливается пользователем индивидуально.
+					li: a(href="#") Цветами и стрелками показаны изменения цен финансовых инструментов, произошедшие с момента последнего изменения таких цен в течение торговой сессии. Зеленый цвет означает повышение цены, красный – понижение.
+
+
+
+				
