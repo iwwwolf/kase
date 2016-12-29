@@ -19,50 +19,8 @@ block content
 				]
 			include ../../modules/markets-menu/module
 
-			#regulations.regulations
-				div.dropdown
-					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
-						i.fa.fa-ellipsis-v
-							span.line1
-							span.line2
-
-					.dropdown-menu
-
-						.regulations__download
-							h5 Архив
-							form
-								.regulations__download-input.regulations__download-input--mobile
-									i.fa.fa-calendar
-									input(type="date")
-									.regulation__download-link
-										a(href="#")
-											i.fa.fa-download
-								.regulations__download-input
-									i.fa.fa-calendar
-									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
-								.regulations__archive-links
-									.link
-										a(href="#")
-											i.fa.fa-eye
-											|Посмотреть
-									.link
-										a(href="#")
-											i.fa.fa-download
-											|Скачать
-						.regulations__links-list
-							h5 Полезные ссылки
-							ul.blue-list
-								li: a(href="#") График выпуска ГЦБ на 2016 год
-								li: a(href="#") Просмотр торгов
-								li: a(href="#") Список брокеров
-								li: a(href="#") Правила
-								li: a(href="#") Календарь праздников
-
-						h5 Дополнительные материалы
-						-var referenceInfo = ["Уровень инфляции в годовом выражении - 16,965 % (с 01.07.15 до 01.07.16);", "Суверенные долгосрочные рейтинги Казахстана"]
-						include ../../modules/reference-info/module
 	.container
-		#centerColumn.center-column
+		.right-content-column
 
 			-
 				var breadcrumbs = [
@@ -90,7 +48,6 @@ block content
 block scripts
 	script(type="text/javascript").
 		document.addEventListener("DOMContentLoaded", function(event) { 
-			
 		    $('#datePicker input').daterangepicker({
 		        "singleDatePicker": true,
 		        "showDropdowns": true,

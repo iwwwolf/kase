@@ -977,3 +977,43 @@ a.up {
 		padding-left: 60px;
 	}
 }
+.center {
+	text-align: center;
+}
+.trade-row {
+	&.trade-row--contacts {
+		display: inherit;
+		a {
+			display: block;
+		}
+	}
+	&.trade-adreses {
+		margin-bottom: 80px;
+	}
+}
+.trade-adreses {
+	&__col {
+		background-color: #f8f8f8;
+	}
+	&__item {
+		padding-left: 6em;
+	}
+	h2 {
+		padding: 1.5em 2em .5em;
+		font-weight: 400;
+	}
+}
+
+@media (max-width: 992px) {
+	.trade-row {
+		& + .trade-row {
+			margin-top: 10px;
+		}
+		&.trade-row--contacts {
+			padding-left: 45px;
+		}
+	}
+	.markets__text.trade-row:not(.trade-row--contacts) {
+		padding-left: 0;
+	}
+}
