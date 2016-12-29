@@ -1,0 +1,10 @@
+.about-membership
+	each item in membershipArray
+		.about-membership-block
+			div(class="about-membership-block__icon about-membership-block--" + pictureSize)
+					img(src="images/"+ item.icon, alt="")
+			.about-membership-block__description
+				for listItem in item.list
+					.about-membership-block__title=listItem.title 
+					.about-membership-block__text= listItem.text
+
