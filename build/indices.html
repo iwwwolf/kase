@@ -391,7 +391,6 @@
     <script type="text/javascript" defer src="js/main.js"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
-      	
           $('#datePicker input').daterangepicker({
               "singleDatePicker": true,
               "showDropdowns": true,
@@ -448,6 +447,13 @@
       		    search: '',
       		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
       		  }
+      	});
+      
+      	var sideDropdown = $('#regulations .dropdown-menu'),
+      		centerColumn = $('#centerColumn');
+      	$(window).on('resize', function() {
+      		var sideHeight = sideDropdown.height();
+      		centerColumn.height(sideHeight + 100);
       	});
       });
     </script>
