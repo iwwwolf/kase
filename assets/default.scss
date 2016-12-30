@@ -472,6 +472,7 @@ h5, .h5 {
   max-width: 210px;
   border-radius: 70%;
   margin: 30px auto 0;
+  position: relative;
 
 
   a{
@@ -482,10 +483,25 @@ h5, .h5 {
     padding: 1px;
   }
 }
+.market-block__btn:before{
+  display: block;
+  background-color: #fff;
+  border-radius: 70%;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  left: 4px;
+  transform: scale(1);
+  transition: all 300ms;
+  content: "";
+}
 .market-block__btn:hover{
   a{
     background: linear-gradient(to right,#8ac53f 18%,  #087e38  100%);
-    padding: 2px;
+  }
+  span{
+    transform: scale(0.99);
   }
 }
 .market-block__btn{
@@ -494,6 +510,7 @@ h5, .h5 {
     background-color: #fff;
     border-radius: 70px;
     padding: 8px 40px;
+    transform: scale(1);
   }
 }
 .market-block__red_text{

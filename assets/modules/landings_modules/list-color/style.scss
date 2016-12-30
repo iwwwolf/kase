@@ -41,6 +41,11 @@
 			}
 		}
 	}
+	&--padding-bottom-small{
+		li{
+			margin-bottom: 0px;
+		}
+	}
 }
 
 @media (min-width: 649px) and (max-width: 768px) {

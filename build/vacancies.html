@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KASE</title>
+    <link href="css/libs.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <style rel="stylesheet">
+      #wrap {
+      	-webkit-transform-origin: 50% 350px;
+      	transform-origin: 50% 350px;
+      	-webkit-transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      #wrap.scale-out {
+      	-webkit-transform: scale(0.85);
+      	transform: scale(0.85); 
+      }
+      
+    </style>
+    <div id="menu" style="display: none;" class="menu">
+      <div class="menu__container">
+        <div class="container"><a id="menuClose" href="#" class="menu__close">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z"></path>
+            </svg></a>
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel menu__panel">
+              <div id="headingOne" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Рынки и торги</a></div>
+              </div>
+              <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Рынки</div>
+                      <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Паи</a></li>
+                        <li><a href="#">Корпоративные облигации</a></li>
+                        <li><a href="#">Ценные бумаги МФО</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                        <li><a href="#">Иностранные валюты</a></li>
+                        <li><a href="#">Операции репо</a></li>
+                        <li><a href="#">Деривативы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Индикаторы</div>
+                      <ul>
+                        <li><a href="#">Фондовый рынок</a></li>
+                        <li><a href="#">Денежный рынок</a></li>
+                        <li><a href="#">Совместные индексы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торги</div>
+                      <ul>
+                        <li><a href="#">Список инструментов</a></li>
+                        <li><a href="#">Просмотр торгов</a></li>
+                        <li><a href="#">Регламент торгов и клиринга</a></li>
+                        <li><a href="#">Клиринг и расчеты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Оценка и параметры</div>
+                      <ul>
+                        <li><a href="#">Рыночная оценка</a></li>
+                        <li><a href="#">Риск-параметры акций</a></li>
+                        <li><a href="#">Средневзвешенные цены</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingTwo" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseTwo">Продукты и услуги</a></div>
+              </div>
+              <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Листинг</div>
+                      <ul>
+                        <li><a href="#">Список компаний</a></li>
+                        <li><a href="#">Что такое листинг</a></li>
+                        <li><a href="#">Листинг на KASE</a></li>
+                        <li><a href="#">IPO</a></li>
+                        <li><a href="#">Нелистинговый сектор</a></li>
+                        <li><a href="#">Дипломанты номинаций</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Членство</div>
+                      <ul>
+                        <li><a href="#">Список членов KASE</a></li>
+                        <li><a href="#">Рэнкинг активности</a></li>
+                        <li><a href="#">Дипломанты номинаций </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торговая система</div>
+                      <ul>
+                        <li><a href="#">Как подключиться к KASE</a></li>
+                        <li><a href="#">Загрузки</a></li>
+                        <li><a href="#">Инструкции</a></li>
+                        <li><a href="#">FIX протокол</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Информационные продукты</div>
+                      <ul>
+                        <li><a href="#">Биржевая информация и программное обеспечение</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingThree" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseThree">Правила</a></div>
+              </div>
+              <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Правила KASE</div>
+                      <ul>
+                        <li><a href="#">Листинг</a></li>
+                        <li><a href="#">Членство</a></li>
+                        <li><a href="#">Торги</a></li>
+                        <li><a href="#">Клиринг</a></li>
+                        <li><a href="#">Расчеты</a></li>
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Методики </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Корпоративное управление</div>
+                      <ul>
+                        <li><a href="#">Материалы и статьи Международной финансовой корпорации (IFC)</a></li>
+                        <li><a href="#">Материалы и статьи Организации экономического сотрудничества и развития (OECD) </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Законодательство</div>
+                      <ul>
+                        <li><a href="#">Рынок ценных бумаг</a></li>
+                        <li><a href="#">Акционерные общества</a></li>
+                        <li><a href="#">Инвестиционные фонды</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title"><a href="#">Дополнительные материалы</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFour" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFour" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFour">Пресс-центр</a></div>
+              </div>
+              <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Новости</div>
+                      <ul>
+                        <li><a href="#">Новости рынков</a></li>
+                        <li><a href="#">Новости компаний</a></li>
+                        <li><a href="#">Новости Биржи</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Информационная поддержка</a></li>
+                        <li class="title"><a href="#">Мероприятия</a></li>
+                        <li class="title"><a href="#">Доклады и презентации</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Пресс-релизы</a></li>
+                        <li class="title"><a href="#">СМИ о нас</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Корпоративный стиль</a></li>
+                        <li class="title"><a href="#">Контакты пресс-центра</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFive" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFive" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFive">О Бирже</a></div>
+              </div>
+              <div id="collapseFive" role="tabpanel" aria-labelledby="headingFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">О нас</div>
+                      <ul>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Миссия и ценности</a></li>
+                        <li><a href="#">Руководство</a></li>
+                        <li><a href="#">Комитеты и комиссии</a></li>
+                        <li><a href="#">Участие в профессиональных организациях</a></li>
+                        <li><a href="#">Корпоративные документы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Акционерам</div>
+                      <ul>
+                        <li><a href="#">Отчетность</a></li>
+                        <li><a href="#">Новости и уведомления</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Закупки</a></li>
+                        <li class="title"><a href="#">Реквизиты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Вакансии</a></li>
+                        <li class="title"><a href="#">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="wrap">
+      <div class="fixed-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-youtube"></i></a></div>
+      <div id="headerSearch" style="display: none;" class="header-search">
+        <div class="container">
+          <form action="">
+            <input type="text" placeholder="Что вы ищите?..." class="header-search__input">
+            <button type="submit" class="header-search__button"><img src="images/search-icon.svg" alt="">Найти</button>
+            <div class="head-search__close"><a id="searchClose" href="#"><img src="images/close-gray.svg" alt=""></a></div>
+          </form>
+        </div>
+      </div>
+      <header id="header">
+        <div class="header__container">
+          <div class="container">
+            <div class="header__content">
+              <div class="header__left-col"><a id="menuBtn" href="#" class="header__menu-button"><img src="images/menu-border.svg" alt=""><span class="header__menu-button-lines"><span></span><span></span><span></span></span></a>
+                <div class="header__logo"><a href="/"><span class="header__logo-img"><img src="images/logo.svg" alt="KASE"></span><span class="header__logo-text"><span>Қазақстан қор биржасы</span><span>Казахстанская фондовая биржа</span><span>Kazakhstan Stock Exchange</span></span></a></div>
+              </div>
+              <div class="header__right-col">
+                <div class="header__date">Пятница, 11 ноября 2016 г. 11:24</div><a href="#" id="searchBtn" class="header__search-button"><img src="images/search-icon.svg" alt="Search"></a>
+                <div class="header__language">
+                  <ul class="header__language-list clearfix">
+                    <li class="active"><a href="#">Рус </a></li>
+                    <li><a href="#">Қаз </a></li>
+                    <li><a href="#">Eng </a></li>
+                  </ul>
+                  <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рус</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Қаз</a></li>
+                      <li><a href="#">Eng</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__login">
+                  <div class="header__login--mobile"><a href="#"><img src="images/login-mob.svg" alt=""></a></div>
+                  <div class="header__login--desctop"><a href="#">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 253 106.3" enable-background="new 0 0 253 106.3" xml:space="preserve">
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="227.5092" y1="-5.151" x2="25.4908" y2="111.4843">
+                          <stop offset="0" style="stop-color:#9ED110"></stop>
+                          <stop offset="1" style="stop-color:#038726"></stop>
+                        </linearGradient>
+                        <path fill="none" stroke="url(#SVGID_1_)" stroke-width="3" stroke-miterlimit="10" d="M199.8,104.8H53.2c-28.4,0-51.7-23.2-51.7-51.7v0c0-28.4,23.2-51.7,51.7-51.7h146.7c28.4,0,51.7,23.2,51.7,51.7v0C251.5,81.6,228.3,104.8,199.8,104.8z"></path>
+                      </svg><span class="header__login-text">Войти<span class="arr">&rarr;</span></span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="markets-top">
+        <div class="container">
+          <div class="markets-menu">
+            <h3>О Бирже</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Вакансии</a>
+              <ul class="dropdown-menu">
+                <li class="active"><a href="#">Вакансии</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="right-content-column">
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О Биржe</a></li>
+            <li><a href="#">Вакансии</a></li>
+          </ul>
+          <h1>Вакансии</h1>
+          <p>Мы предлагаем интересную работу в команде профессионалов, а также возможности для самореализации, профессионального развития, использования своих знаний и опыта. Ждем резюме от инициативных, талантливых, целеустремленных и уверенных в успехе людей, как начинающих свою карьеру на фондовом рынке, так и опытных профессионалов.</p>
+          <p>
+            Мы предоставляем равные возможности кандидатам на вакантные позиции. В процессе рассмотрения кандидатур, мы опираемся на принципы справедливости, демократичности, гендерного равенства, а также руководствуемся бизнес-требованиями организации.
+            
+          </p>
+          <div class="accordion closed accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Финансовый менеджер<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body"><br>
+              <h5>Основные обязанности:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>составление управленческой отчетности;</li>
+                <li>организация и составление финансового плана (бюджет, план капитальных вложений), мониторинг его исполнения;</li>
+                <li>автоматизация управленческого учета и отчетности.</li>
+              </ul>
+              <h5>Требования к кандидату:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>высшее финансово-экономическое образование;</li>
+                <li>знание бухгалтерского и управленческого учета и отчетности;</li>
+                <li>хорошие навыки работы в Excell, обработка массива данных;</li>
+                <li>знание программного продукта – 1 С Предприятие.</li>
+              </ul>
+              <h5>Условия работы:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>конкурентоспособная заработная плата;</li>
+                <li>пятидневная рабочая неделя;</li>
+                <li>нормированный рабочий график;</li>
+                <li>трудовой отпуск 28 календарных дней;</li>
+                <li>оформление в соответствии с ТК РК.</li>
+              </ul>
+              <p>Резюме просим отправлять по адресу <a href="#">hr@kase.kz</a> с указанием наименования вакантной должности. </p><br>
+            </div>
+          </div>
+          <div class="accordion closed accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Ведущий специалист Отдела развития интернет-проектов<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body"><br>
+              <h5>Основные обязанности:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>поддержка корпоративного сайта www.kase.kz;</li>
+                <li>разработка и сопровождение интернет-проектов Биржи;</li>
+                <li>поддержка системы документооборота Биржи.</li>
+              </ul>
+              <h5>Требования к кандидату:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>опыт работы на аналогичной позиции не менее двух лет;</li>
+                <li>высшее техническое образование;</li>
+                <li>отличное знание PHP, HTML, CSS, Java Script, SQL;</li>
+                <li>понимание принципов ООП;</li>
+                <li>приветствуются знания Ruby/RoR, Python, СУБД Oracle;</li>
+                <li>навыки работы с командной строкой Linux;</li>
+                <li>опыт работы в команде, ответственность, инициативность.</li>
+              </ul>
+              <h5>Личностные качества:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>стрессоустойчивость;</li>
+                <li>многозадачность;</li>
+                <li>навыки письменного изложения.</li>
+              </ul>
+              <h5>Условия работы:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>конкурентоспособная заработная плата;</li>
+                <li>пятидневная рабочая неделя;</li>
+                <li>нормированный рабочий график;</li>
+                <li>трудовой отпуск 28 календарных дней;</li>
+                <li>оформление в соответствии с ТК РК.</li>
+              </ul>
+              <p>Резюме просим отправлять по адресу <a href="#">hr@kase.kz</a> с указанием наименования вакантной должности. </p><br>
+            </div>
+          </div>
+          <div class="accordion closed accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Финансовый аналитик<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body"><br>
+              <h5>Основные обязанности:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>анализ информации по финансовому рынку, подготовка регулярных и эксклюзивных отчетов по рынку и комментариев к ним;</li>
+                <li>подготовка аналитических отчетов по результатам проведенных исследований (формирование заданий для подготовки аналитики, формирование отчетов, написание выводов и рекомендаций), в том числе на английском языке;</li>
+                <li>участие в разработке новых продуктов и услуг;</li>
+                <li>участие в стратегическом планировании;</li>
+                <li>прогноз экономических условий с целью дальнейшего использования при принятии инвестиционных решений;</li>
+                <li>макроэкономический анализ и анализ отраслей;</li>
+                <li>оценка рыночных рисков (процентный риск и риск ликвидности по портфелю ценных бумаг);</li>
+                <li>написание методик/порядков, определение подходов, мониторинг законодательных нововведений.</li>
+              </ul>
+              <h5>Требования к кандидату:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>опыт работы на финансовом рынке не менее трех лет;</li>
+                <li>высшее экономическое, финансовое, техническое или математическое образование (при наличии релевантного опыта работы);</li>
+                <li>знание в области фундаментального и технического анализа ценных бумаг;</li>
+                <li>уверенный пользователь ПК (MS Office): Excel, Word, Power Point, Bloomberg/Reuters;</li>
+                <li>английский язык не ниже upper intermediate;</li>
+                <li>знание казахского языка приветствуется.</li>
+              </ul>
+              <h5>Личностные качества:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>дисциплинированность;</li>
+                <li>исполнительность;</li>
+                <li>аналитический склад ума;</li>
+                <li>внимательность к деталям;</li>
+                <li>нацеленность на результат;</li>
+                <li>коммуникабельность;</li>
+                <li>умение работать как в команде, так и индивидуально.</li>
+              </ul>
+              <h5>Условия работы:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>конкурентоспособная заработная плата;</li>
+                <li>пятидневная рабочая неделя;</li>
+                <li>нормированный рабочий график;</li>
+                <li>трудовой отпуск 28 календарных дней;</li>
+                <li>оформление в соответствии с ТК РК.</li>
+              </ul>
+              <p>Резюме просим отправлять по адресу <a href="#">hr@kase.kz</a> с указанием наименования вакантной должности. </p><br>
+            </div>
+          </div>
+          <div class="accordion closed accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Аудитор, служба внутреннего аудита (СВА)<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body"><br>
+              <h5>Основные обязанности:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>оценка надежности и эффективности системы внутреннего контроля общества;</li>
+                <li>оценка надежности и эффективности IT-инфраструктуры общества;</li>
+                <li>оценка рациональности и эффективности использования ресурсов общества и средств сохранности его активов;</li>
+                <li>проверка соблюдения требований законодательства Республики Казахстан и внутренних нормативных документов общества;</li>
+                <li>оценка своевременности исполнения рекомендаций регулирующих и надзорных органов, внешнего аудитора и Службы внутреннего аудита по результатам проверок и аудитов общества;</li>
+                <li>подготовка проектов отчетов Службы внутреннего аудита по результатам аудиторских проверок и периодических отчетов по деятельности Службы;</li>
+                <li>участие в разработке проектов внутренних документов Биржи, касающихся деятельности Службы внутреннего аудита;</li>
+                <li>осуществление иных обязанностей, возложенных на Службу внутреннего аудита Советом директоров общества в рамках его полномочий.</li>
+              </ul>
+              <h5>Требования к кандидату:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>опыт работы не менее трёх лет;</li>
+                <li>высшее образование по специальностям: бухгалтерский учет, аудит, финансы, или информационные технологии. Будет плюсом наличие сертификатов о прохождении курсов или профессиональных сертификаций CIA, ACCA, CPA, CISA;</li>
+                <li>знание методологий, средств описания и оптимизации бизнес-процессов и умение применять их на практике;</li>
+                <li>знание принципов построения системы внутренних контролей, практический опыт по анализу таких контролей и предоставления рекомендаций по их улучшению;</li>
+                <li>владение навыками работы с деловым текстом для регламентированных документов и аналитических отчетов;</li>
+                <li>навыки работы с продуктами Microsoft Office;</li>
+                <li>владение английским языком.</li>
+              </ul>
+              <h5>Личностные качества:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>аналитический склад ума;</li>
+                <li>умение систематизировать информацию;</li>
+                <li>обладание критическим мышлением;</li>
+                <li>хорошими навыками письма;</li>
+                <li>ориентированностью на достижение результатов, в том числе в условиях, ограниченных временем и/или ресурсами;</li>
+                <li>трудолюбие;</li>
+                <li>коммуникабельность;</li>
+                <li>стремление к профессиональному развитию.</li>
+              </ul>
+              <h5>Условия работы:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>конкурентоспособная заработная плата;</li>
+                <li>пятидневная рабочая неделя;</li>
+                <li>нормированный рабочий график;</li>
+                <li>трудовой отпуск 28 календарных дней;</li>
+                <li>оформление в соответствии с ТК РК.</li>
+              </ul>
+              <p>Резюме просим отправлять по адресу <a href="#">hr@kase.kz</a> с указанием наименования вакантной должности. </p><br>
+            </div>
+          </div>
+          <div class="accordion closed accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Риск-менеджер Службы управления рисками (позиция временная на время декретного отпуска основного работника)<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body"><br>
+              <h5>Основные обязанности:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>участие в разработке перспективных и текущих планов в части управления рисками;</li>
+                <li>осуществление проверок отчётности по операционным рискам, предоставляемой структурными подразделениями и отдельными работниками;</li>
+                <li>выявление и оценка средств внутреннего контроля для защиты целостности, доступности и конфиденциальности данных;</li>
+                <li>формирование и предоставление сводной отчётности по финансовым и операционным рискам;</li>
+                <li>ведение и поддержание в актуальном состоянии списка лиц, обладающих доступом к инсайдерской информации;</li>
+                <li>организация и координация работы по уведомлению лиц, обладающих доступом к инсайдерской информации;</li>
+                <li>взаимодействие с внешними организациями и подразделениями по вопросам, касающимся инсайдерской информации;</li>
+                <li>разработка инструкций, программ, нормативных материалов касающихся деятельности Службы;</li>
+                <li>взаимодействие с внутренним аудитом для минимизации рисков Биржи;</li>
+                <li>контроль своевременности исполнения рекомендаций регулирующих и надзорных органов, внутреннего и внешнего аудита по результатам инспекций и аудита;</li>
+                <li>участие в управлении непрерывностью деятельности.</li>
+              </ul>
+              <h5>Требования к кандидату:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>опыт работы не менее трёх лет на аналогичной позиции;</li>
+                <li>высшее образование экономическое/математическое;</li>
+                <li>знание языков: английский - не ниже intermediate, казахский - приветствуется, русский - в совершенстве;</li>
+                <li>наличие сертификатов по стандартам ISO, COSO, FRM - приветствуется;</li>
+                <li>ответственность, исполнительность.</li>
+              </ul>
+              <h5>Условия работы:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>конкурентоспособная заработная плата;</li>
+                <li>пятидневная рабочая неделя;</li>
+                <li>нормированный рабочий график;</li>
+                <li>трудовой отпуск 28 календарных дней;</li>
+                <li>оформление в соответствии с ТК РК.</li>
+              </ul>
+              <p>Резюме просим отправлять по адресу <a href="#">hr@kase.kz</a> с указанием наименования вакантной должности. </p><br>
+            </div>
+          </div>
+          <div class="accordion closed accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Старший менеджер Клиринговой палаты (позиция временная на время декретного отпуска основного работника)<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body"><br>
+              <h5>Основные обязанности:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>осуществление клиринговой деятельности по сделкам с финансовыми инструментами;</li>
+                <li>проведение ежедневного расчета риск-параметров и их ежеквартальной переоценки;</li>
+                <li>проведение исследований международных рекомендаций и зарубежной практики, касающейся клиринговой деятельности на финансовых рынках;</li>
+                <li>участие в проектах по совершенствованию клиринга, системы риск-менеджмента и запуску новых финансовых продуктов и услуг.</li>
+              </ul>
+              <h5>Требования к кандидату:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>высшее и/или послевузовское образование по специальностям финансов, экономики, (прикладной) математики и/или смежных профессий (зарубежное образование приветствуется);</li>
+                <li>опыт работы не менее 3-х лет в финансовых организациях (опыт работы в качестве финансового аналитика приветствуется);</li>
+                <li>знание английского языка (уровень не ниже advanced);</li>
+                <li>аналитический склад ума, умение работать со статистикой, знание финансовых инструментов;</li>
+                <li>владение на профессиональном уровне Microsoft Office Word, Excel и PowerPoint;</li>
+                <li>дополнительное умение работы в XLStat или иных профессиональных программных приложениях статистике, а также по риск-менеджменту приветствуется.</li>
+              </ul>
+              <h5>Личностные качества:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>внимание к деталям, хорошие навыки устного и письменного общения, умение воспринимать информацию с листа и на слух, трудолюбие, коммуникабельность, стремление к профессиональному развитию, а также умение достигать результатов</li>
+              </ul>
+              <h5>Условия работы:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>конкурентоспособная заработная плата;</li>
+                <li>пятидневная рабочая неделя;</li>
+                <li>нормированный рабочий график;</li>
+                <li>трудовой отпуск 28 календарных дней;</li>
+                <li>оформление в соответствии с ТК РК.</li>
+              </ul>
+              <p>Резюме просим отправлять по адресу <a href="#">hr@kase.kz</a> с указанием наименования вакантной должности. </p><br>
+            </div>
+          </div>
+          <div class="accordion closed accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Специалист Отдела проектирования (тестировщик)<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body"><br>
+              <h5>Основные обязанности:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>разработка планов тестирования и тестовых сценариев;</li>
+                <li>тестирование информационных систем биржи;</li>
+                <li>выявление ошибок в процессе тестирования информационных систем биржи, формирование отчета по результатам тестирования, контроль результата исправления выявленных ошибок;</li>
+                <li>разработка, актуализация руководств пользователя и технических описаний, согласно задачам, предъявляемым к новым информационным системам и программным продуктам биржи.</li>
+              </ul>
+              <h5>Требования к кандидату:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>высшее образование (желательно в области информационных технологий, техническое, математическое);</li>
+                <li>опыт работы не менее 1 года в области тестирования или разработки программного обеспечения;</li>
+                <li>опыт разработки планов тестирования, тестовых сценариев, технической документации;</li>
+                <li>опыт проведения функционального, нагрузочного тестирования и тестирования в связи с изменениями;</li>
+                <li>умение грамотно и качественно составлять отчеты об ошибках;</li>
+                <li>знание основ программирования и процесса разработки программного обеспечения.</li>
+              </ul>
+              <h5>Личностные качества:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>грамотность устной и письменной речи, умение точно и ясно излагать свои мысли;</li>
+                <li>исполнительность;</li>
+                <li>усидчивость;</li>
+                <li>инициативность;</li>
+                <li>коммуникабельность.</li>
+              </ul>
+              <h5>Условия работы:</h5>
+              <ul class="list-color list-color--round-marker list-color--padding-bottom-small">
+                <li>конкурентоспособная заработная плата;</li>
+                <li>пятидневная рабочая неделя;</li>
+                <li>нормированный рабочий график;</li>
+                <li>трудовой отпуск 28 календарных дней;</li>
+                <li>оформление в соответствии с ТК РК.</li>
+              </ul>
+              <p>Резюме просим отправлять по адресу <a href="#">hr@kase.kz</a> с указанием наименования вакантной должности. </p><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <ul class="footer__nav">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Партнерские сайты</a></li>
+          <li><a href="#">Мобильная версия</a></li>
+          <li><a href="#">Карта сайта</a></li>
+        </ul>
+        <div class="footer__text">
+          <div>&copy; 1993–2016 АО "Казахстанская фондовая биржа"</div>
+          <div>Копирование материалов – только с письменного разрешения.</div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" defer src="js/libs.js"> </script>
+    <script type="text/javascript" defer src="js/main.js"></script>
+  </body>
+</html>
