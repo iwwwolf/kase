@@ -817,7 +817,9 @@ a.up:after {
   .trade-row.trade-row--contacts {
     padding-left: 45px; }
   .markets__text.trade-row:not(.trade-row--contacts) {
-    padding-left: 0; } }
+    padding-left: 0; }
+  .row.trade-row.markets__text {
+    padding-left: 0 !important; } }
 
 .btn {
   font-size: 100%;
@@ -2979,7 +2981,7 @@ footer {
       padding-right: 30px;
       font-size: 14px; }
       .trade-row .trade-col__item:not(:last-child) {
-        margin-bottom: 10px; }
+        margin-bottom: 15px; }
       .trade-row .trade-col__item::after {
         content: "5 МБ";
         word-spacing: 20px;
@@ -2988,7 +2990,8 @@ footer {
         padding-top: 4px;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 50%;
+        margin-top: -20px;
         opacity: 0;
         font-size: 12px;
         color: #0094de;
@@ -3007,8 +3010,6 @@ footer {
         color: #a8b1ba; }
       .trade-row .trade-col__item a {
         display: block; }
-        .trade-row .trade-col__item a::before {
-          top: 25%; }
 
 @media (max-width: 992px) {
   .trade-col__item::after {

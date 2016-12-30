@@ -1033,4 +1033,7 @@ a.up {
 	.markets__text.trade-row:not(.trade-row--contacts) {
 		padding-left: 0;
 	}
+  .row.trade-row.markets__text {
+      padding-left: 0 !important;
+  }
 }
