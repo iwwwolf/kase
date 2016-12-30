@@ -1,0 +1,330 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Индикаторы"
+				var marketsList = [
+					{
+						'title': 'Фондовый рынок',
+						'active': true
+					},
+					{
+						'title': 'Денежный рынок'
+					},
+					{
+						'title': 'Совместные индексы'
+					}
+				]
+			include ../../modules/markets-menu/module
+			
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+
+						include ../../modules/select-date/module
+
+						.regulations__download
+							h5 Архив
+							form
+								.regulations__download-input.regulations__download-input--mobile
+									i.fa.fa-calendar
+									input(type="date")
+									.regulation__download-link
+										a(href="#")
+											i.fa.fa-download
+								.regulations__download-input
+									i.fa.fa-calendar
+									input.datepicker(type="text", data-date-format="dd/mm/yyyy")
+								.regulations__archive-links
+									.link
+										a(href="#")
+											i.fa.fa-eye
+											|Посмотреть
+									.link
+										a(href="#")
+											i.fa.fa-download
+											|Скачать
+						.regulations__links-list
+							h5 Полезные ссылки
+							ul.blue-list
+								li: a(href="#") Просмотр торгов акциями Индекса KASE
+
+						-var referenceInfo = ["Методика расчета Индекса KASE", "Архив Индекса KASE_Shares", "Рыночная оценка"]
+						include ../../modules/reference-info/module
+	.container
+		#centerColumn.center-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки и торги',
+					'Индикаторы',
+					'Фондовый рынок',
+					'Индикаторы РЕПО'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			.h1-block
+				a.arrow-back(href="#")
+					i.fa.fa-angle-left
+				.flex
+					h1 Индикаторы РЕПО
+					
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") TONIA, % годовых
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+
+					ul.accordion__nav
+						li.active: a(href="#") Архив
+						li: a(href="#") В течение дня
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+					
+					.actions__chart-text
+						p.
+							Индикатор TONIA (Tenge OverNight Index Average) представляет собой средневзвешенную процентную ставку по сделкам открытия репо сроком на один рабочий день, заключенным на бирже в секторе автоматического репо с ГЦБ. С 01.09.01 до 31.12.09 индикатор рассчитывался один раз в день, начиная с 01.01.10 значение индикатора пересчитывается после заключения каждой сделки.
+
+						p.
+							Единица измерения: % годовых 
+						p.
+							Время обновления индикаторов: в режиме реального времени 
+						p.
+							Изменение индикаторов: рассчитывается в режиме реального времени относительно значения предыдущего торгового дня 				
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") TWINA, % годовых
+						i.fa.fa-angle-down
+					
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+
+					ul.accordion__nav
+						li.active: a(href="#") Архив
+						li: a(href="#") В течение дня
+					.actions__chart
+						//- TradingView Widget BEGIN
+						script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+						script(type="text/javascript").
+							new TradingView.widget({
+							  "autosize": true,
+							  "symbol": "NASDAQ:AAPL",
+							  "interval": "D",
+							  "timezone": "Asia/Almaty",
+							  "theme": "White",
+							  "style": "3",
+							  "locale": "ru",
+							  "toolbar_bg": "#f1f3f6",
+							  "enable_publishing": false,
+							  "hide_top_toolbar": true,
+							  "hideideas": true
+							});
+						//- TradingView Widget END
+					
+					.actions__chart-text
+
+						p.
+							Индикатор TWINA (Tenge Week Index Average) представляет собой средневзвешенную процентную ставку по сделкам открытия репо сроком на семь рабочих дней, заключенным на бирже в секторе автоматического репо с ГЦБ. Индикатор рассчитывается с 01.01.10. Значение индикатора пересчитывается после заключения каждой сделки.
+
+						p.
+							Единица измерения: % годовых 
+						p.
+							Время обновления индикаторов: в режиме реального времени 
+						p.
+							Изменение индикаторов: рассчитывается в режиме реального времени относительно значения предыдущего торгового дня 								
+			
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			
+		    $('#datePicker input').daterangepicker({
+		        "singleDatePicker": true,
+		        "showDropdowns": true,
+		        "locale": {
+		            "direction": "ltr",
+		            "format": "DD/MM/YYYY",
+		            /*"separator": " - ",
+		            "applyLabel": "Apply",
+		            "cancelLabel": "Cancel",*/
+		            "daysOfWeek": [
+		                "Вс",
+		                "Пн",
+		                "Вт",
+		                "Ср",
+		                "Чт",
+		                "Пт",
+		                "Сб"
+		            ],
+		            "monthNames": [
+		                "Январь",
+		                "Февраль",
+		                "Март",
+		                "Апрель",
+		                "Май",
+		                "Июнь",
+		                "Июль",
+		                "Август",
+		                "Сентябрь",
+		                "Октябрь",
+		                "Ноябрь",
+		                "Декабрь"
+		            ],
+		            "firstDay": 1
+		        },
+		        "minDate": "20/06/2015",
+		        "maxDate": new Date(),
+		        "parentEl": "#datePicker"
+		    }, function(start, end, label) {
+		    }).focus().focusout();
+
+
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});
