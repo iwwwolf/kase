@@ -1,10 +1,15 @@
 div.row.trade-row.clearfix
 	each system in systems
 		div.trade-col.col-xs-6.reference-info
-			h3.trade-col__title= system.title
+			if (typeof(system.title) !== 'undefined')
+				.trade-col__title= system.title
+
 			ul.trade-col__list
 				each item in system.lists
 					li.trade-col__item
 						a(href="#")= item.listTitle
 						if (typeof(item.helpText) !== 'undefined')
-							span= item.helpText
+							span(class="trade-col__item_text")= item.helpText
+						if (typeof(item.size) !== 'undefined')
+							span(class="trade-col__item_size")= item.size
+

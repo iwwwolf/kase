@@ -2960,7 +2960,8 @@ footer {
   background-color: #e5f3e9; }
 
 .trade-col__title {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  font-size: 18px; }
 
 .trade-row {
   margin-bottom: 15px;
@@ -2973,7 +2974,7 @@ footer {
   .trade-row + .trade-row {
     margin-top: 30px; }
   .trade-row .trade-col {
-    padding: 5px 30px 15px 50px;
+    padding: 30px 30px 15px 50px;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08); }
     .trade-row .trade-col:nth-child(odd) {
       margin-right: 30px; }
@@ -2985,8 +2986,7 @@ footer {
       font-size: 14px; }
       .trade-row .trade-col__item:not(:last-child) {
         margin-bottom: 15px; }
-      .trade-row .trade-col__item::after {
-        content: "5 МБ";
+      .trade-row .trade-col__item .trade-col__item_size {
         word-spacing: 20px;
         width: 40px;
         height: 40px;
@@ -3005,11 +3005,11 @@ footer {
         transition: all .75s; }
       .trade-row .trade-col__item:hover a {
         text-decoration: underline; }
-      .trade-row .trade-col__item:hover::after {
+      .trade-row .trade-col__item:hover .trade-col__item_size {
         opacity: 1; }
       .trade-row .trade-col__item .txtHide {
         color: rgba(255, 255, 255, 0); }
-      .trade-row .trade-col__item span {
+      .trade-row .trade-col__item .trade-col__item_text {
         color: #a8b1ba; }
       .trade-row .trade-col__item a {
         display: block; }
