@@ -2959,6 +2959,9 @@ footer {
 .trade-table__row-title {
   background-color: #e5f3e9; }
 
+.trade-col__title {
+  margin-bottom: 15px; }
+
 .trade-row {
   margin-bottom: 15px;
   display: -webkit-box;
@@ -2977,7 +2980,7 @@ footer {
     .trade-row .trade-col__list {
       list-style-type: none; }
     .trade-row .trade-col__item {
-      padding-left: 22px;
+      padding-left: 32px;
       padding-right: 30px;
       font-size: 14px; }
       .trade-row .trade-col__item:not(:last-child) {
@@ -2998,8 +3001,8 @@ footer {
         border-radius: 50%;
         border: 1px solid #0094de;
         text-align: center;
-        -webkit-transition: .75s;
-        transition: .75s; }
+        -webkit-transition: all .75s;
+        transition: all .75s; }
       .trade-row .trade-col__item:hover a {
         text-decoration: underline; }
       .trade-row .trade-col__item:hover::after {
@@ -3010,6 +3013,23 @@ footer {
         color: #a8b1ba; }
       .trade-row .trade-col__item a {
         display: block; }
+        .trade-row .trade-col__item a::before {
+          border-radius: 50%;
+          border: 1px solid #0094de;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          width: 26px;
+          height: 26px;
+          font-size: 80%;
+          top: 50%;
+          margin-top: -13px; }
 
 @media (max-width: 992px) {
   .trade-col__item::after {
