@@ -324,83 +324,345 @@
             <li><a href="#">Просмотр торгов</a></li>
           </ul>
           <h1>Просмотр Торгов</h1>
-          <label class="checkbox">
-            <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Test Test</span>
-          </label>
-          <div class="sortin-table--with-search">
-            <table class="sorting-table--false table table-striped">
-              <thead>
-                <tr>
-                  <th>Название индикатора</th>
-                  <th>Дата</th>
-                  <th>Последнее значение</th>
-                  <th>Изменение</th>
-                  <th>Изменение, %</th>
-                  <th>Объём сделок, млн KZT</th>
-                  <th>Объём сделок, тыс USD</th>
-                  <th>Изменение цены за последние 52 недели</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="sorting-table__subtitle">
-                  <td>&nbsp; <span>Рынок акций</span></td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td><a href="#">Индекс KASE</a></td>
-                  <td>02.08.2016</td>
-                  <td>1071.70</td>
-                  <td>0</td>
-                  <td>1.25</td>
-                  <td>876 876</td>
-                  <td>8.7</td>
-                  <td> 
-                    <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
-                  </td>
-                </tr>
-                <tr class="sorting-table__subtitle">
-                  <td>&nbsp; <span>Рынок корпоративных облигаций</span></td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <td><a href="#">Индекс KASE</a></td>
-                  <td>02.08.2015</td>
-                  <td>1071.70</td>
-                  <td>0</td>
-                  <td>1.25</td>
-                  <td>876 876</td>
-                  <td>8.7</td>
-                  <td> 
-                    <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><a href="#">Индекс KASE</a></td>
-                  <td>02.08.2016</td>
-                  <td>1071.70</td>
-                  <td>0</td>
-                  <td>1.25</td>
-                  <td>876 876</td>
-                  <td>8.7</td>
-                  <td> 
-                    <div class="table__indicator">1 076,24<img src="img-content/line.png" alt="">1 076,24</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div><br><br>
+          <div class="market-page">
+            <div class="market-block__dropdown">
+              <div class="market-block__dropdown_left">
+                <h5>Выберите рынок:</h5>
+                <div class="market-dropdown-block market-dropdown-block__large">
+                  <div class="dropdown"><a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="dropdown-link">Иностарнные валюты и операции валютного свопа</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">рынок 1</a></li>
+                      <li><a href="#">рынок 2</a></li>
+                      <li><a href="#">рынок 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="market-block__dropdown_right">
+                <h5>Частота обновления:</h5>
+                <div class="market-dropdown-block market-dropdown-block__small">
+                  <div class="dropdown"><a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="dropdown-link">1 минута</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">рынок 1</a></li>
+                      <li><a href="#">рынок 2</a></li>
+                      <li><a href="#">рынок 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="market-block-checkbox">
+              <div class="market-block-checkbox__grey col-md-3">
+                <h5>Выберите коды инструментов или операций:</h5>
+                <div class="market-checkbox__input">
+                  <input type="text" name="market-checkbox" value="Поиск по коду">
+                  <div class="market-checkbox__input_link"><a href="#"><i class="fa fa-long-arrow-right"></i></a></div>
+                </div>
+                <ul>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Выбрать все</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">CNYKZT	_TOD</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">EURKZT_0_001</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="market-block-checkbox__white col-md-9">
+                <div class="market-block-checkbox__white_title">
+                  <h5>Выберите нужные поля</h5>
+                  <div class="market-block-checkbox__white_titlecheckbox">
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Выбрать все</span>
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Выбрать стандартные</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="market-block-checkbox__white_content">
+                  <ul>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Состояние торгов, торговой сессии (Status; Opn – открыты, Cls – закрыты, Frt – франкфурт, Pre – предторговая сессия)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Объем заявок в тенге по цене лучшей котировки на покупку (Volume of Bid)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Количество инструмента по цене лучшей котировки на покупку (Quantity of Bid)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Цена лучшей котировки на покупку</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Разница между ценой лучшей котировки на продажу и ценой лучшей котировки на покупку (Spread)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Разница между ценой лучшей котировки на продажу и ценой лучшей котировки на покупку в %</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Цена лучшей котировки на продажу</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Количество инструмента по цене лучшей котировки на продажу (Quantity of Ask)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Объем заявок в тенге по цене лучшей котировки на продажу (Volume of Ask)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Цена открытия – цена первой сделки</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Минимальная цена сделки</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Максимальная цена сделки</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Цена последней сделки (закрытия, если торги закрыты)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Объем последней сделки в единицах инструмента (Quantity of Last)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Объем последней сделки в тенге (Volume of Last)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Последняя цена предыдущих торгов (Previous Close)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Изменение последней цены к последней цене предыдущего дня (Net Change)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Изменение последней цены к последней цене предыдущего дня %</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Изменение цены последней сделки к цене предыдущей сделки (Change)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">предыдущей сделки (Change) Изменение цены последней сделки к цене предыдущей сделки в %</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Изменение цены последней сделки к цене открытия (Last to Open)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Изменение цены последней сделки к цене открытия в %</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Средневзвешенная цена (Average)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Средневзвешенная цена предыдущих торгов (Previous Average)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">(Previous Average) Изменение средневзвешенной цены к средневзвешенной цене предыдущих торгов (Average Change)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Изменение средневзвешенной цены к средневзвешенной цене предыдущих торгов в %</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Количество заключенных сделок</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Объем заключенных сделок в единицах инструмента (Quantity)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Объем заключенных сделок в тенге (Volume)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Объем заключенных сделок, выраженный в долларах США</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Количество участников, заключивших сделки (Dealers)</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkboxName"><span class="checkbox__styled"></span><span class="checkbox__label">Время последнего обновления</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="market-block__btn"><a href="#"><span>Просмотр торгов</span></a></div>
+            </div>
+            <div class="market-block__red_text">
+              <p>Данные предоставляются с задержкой в 15 минут. </p>
+              <p>Данные в режиме реального времени <span>предоставляются платно.</span>
+                
+              </p>
+            </div>
+          </div>
+          <div class="market-block__list regulations__links-list">
+            <h5>Полезные ссылки</h5>
+            <ul class="blue-list">
+              <li><a href="#">Для работы с данным разделом вам потребуется интернет-браузер с поддержкой JavaScript. Таковым является практически любой современный браузер, за исключением тех, в которых JavaScript отключен по умолчанию. В этом случае Вам нужно включить поддержку JavaScript в настройках Вашего браузера.</a></li>
+              <li><a href="#">Для просмотра определенного рынка или набора выберите его наименование из предлагаемого перечня.</a></li>
+              <li><a href="#">Далее выберите необходимые инструменты из списка, используя кнопки "добавить" и "удалить". Можно выделить сразу несколько инструментов, но просмотр возможен по списку, не превышающему 20 инструментов (за исключением набора по Индексу KASE). Можно осуществить поиск инструментов путем набора необходимых символов и нажатием кнопки "Найти". При этом в списке будут найдены инструменты, в кодах которых встречаются введенные пользователем наборы символов вне зависимости от их расположения в наименовании кода.</a></li>
+              <li><a href="#">Для удобства выбора нужных полей просмотра можно использовать ссылки "Выбрать все", "Выбрать стандартные", "Убрать все". При выборе стандартных полей осуществляется выбор наиболее часто используемых пользователями полей.</a></li>
+              <li><a href="#">Частота обновления страницы просмотра устанавливается пользователем индивидуально.</a></li>
+              <li><a href="#">Цветами и стрелками показаны изменения цен финансовых инструментов, произошедшие с момента последнего изменения таких цен в течение торговой сессии. Зеленый цвет означает повышение цены, красный – понижение.</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -420,25 +682,5 @@
     </footer>
     <script type="text/javascript" defer src="js/libs.js"> </script>
     <script type="text/javascript" defer src="js/main.js"></script>
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function(event) { 
-      	$('.sorting-table').DataTable({
-      		scrollX: true,
-      		language: {
-      		    search: '',
-      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
-      		  }
-      	});
-      
-      	$('.sorting-table--false').DataTable({
-      		scrollX: true,
-      		bSort : false,
-      		language: {
-      		    search: '',
-      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
-      		  }
-      	});
-      });
-    </script>
   </body>
 </html>
