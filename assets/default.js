@@ -58,6 +58,8 @@ $('.table a').on('click', function(e){
 
 $('[data-toggle="popover"]').popover();
 
+
+
 //====== клик по body
 $('body').on('click', function() {
 	if($('.mini-menu__menu').length){

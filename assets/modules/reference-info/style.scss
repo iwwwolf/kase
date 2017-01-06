@@ -25,7 +25,20 @@
 		}
 	}
 }
-.reference-info--page{
+
+.reference-info--big {
+	font-size: 14px;
+	li {
+		padding-left: 24px;
+	}
+	a {
+		&:before {
+			font-size: 18px;
+			top: -3px;
+		}
+	}
+}
+.reference-info--page {
 	font-size: 14px;
 	text-align: left;
 	margin-bottom: 30px;

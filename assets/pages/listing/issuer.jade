@@ -1,0 +1,541 @@
+extends ../../templates/base
+block variables
+	- bodyClass = "body__listing"
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Листинг"
+				var marketsList = [
+					{
+						'title': 'Листинговые компании',
+						'active': true
+					},
+					{
+						'title': 'Что такое листинг'
+					},
+					{
+						'title': 'Листинг на KASE'
+					},
+					{
+						'title': 'IPO'
+					},
+					{
+						'title': 'Нелистинговый сектор'
+					},
+					{
+						'title': 'Дипломанты номинаций'
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Листинг',
+					'Листинговые компании'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			.container
+				.h1-block.h1-block--with-logo
+					a.arrow-back(href="#")
+						i.fa.fa-angle-left
+					.flex
+						.h1-block__logo
+							img(src="img-content/img-3.png", alt="")
+						h1 АО "Народный сберегательный банк Казахстана" (HSBK)
+
+				.info-table
+					.info-table__row
+						.info-table__cell.
+							Капитализация:
+						.info-table__cell.
+							суммарная рыночная стоимость акций компании – 539 661,20 млн тенге ($1 614,1 млн)
+
+					.info-table__row
+						.info-table__cell.
+							Контакты:
+						.info-table__cell.
+							Республика Казахстан, A26M3K5, г. Алматы, пр. Аль-Фараби, 40;
+							#[br]
+							Телефон:  (727) 259 07 77
+							#[br]
+							Факс: (727) 259 02 71
+
+					.info-table__row
+						.info-table__cell.
+							Интернет-сайт:
+						.info-table__cell
+							a(href="http://www.halykbank.kz/") http://www.halykbank.kz/
+
+					.info-table__row
+						.info-table__cell.
+							E-mail:
+						.info-table__cell
+							a(href="mailto:halykbank@halykbank.kz") halykbank@halykbank.kz
+
+					.info-table__row
+						.info-table__cell.
+							Основная деятельность:
+						.info-table__cell.
+							банковская
+
+					.info-table__row
+						.info-table__cell.
+							Первый руководитель:
+						.info-table__cell.
+							Председатель Правления Шаяхметова Умут Болатхановна
+
+					.info-table__row
+						.info-table__cell.
+							Печатные издания:
+						.info-table__cell.
+							Казахстанская правда, Егемен Казакстан, Панорама
+
+					.info-table__row
+						.info-table__cell.
+							Кредитные рейтинги:
+						.info-table__cell.
+							Moody's Investors Service: Ba2/негативный/NP (27.04.16)
+							#[br]
+							Standard & Poor's: BB/негативный/B, kzA (08.07.16)
+							#[br]
+							Fitch Ratings: http://www.fitchratings.com
+
+				-
+					var gradientTabs = [
+						{
+							'title' : 'Ценные бумаги',
+							'href' : 'securities',
+							'active': true
+						},
+						{
+							'title' : 'Акционеры',
+							'href' : 'shareholders'
+						},
+						{
+							'title' : 'Финансовые показатели',
+							'href' : 'results'
+						},
+						{
+							'title' : 'Документы',
+							'href' : 'docs'
+						},
+						{
+							'title' : 'Новости',
+							'href' : 'news'
+						}
+						]
+
+				.gradient-tabs.gradient-tabs--not-margin
+					ul#anchors.nav(style="border: none; padding: 0;")
+						each item in gradientTabs
+							if (item.active == true)
+								li.gradient-tabs__tab.gradient-tabs__tab--green.active
+									a(href="#" + item.href): span= item.title
+							else
+								li.gradient-tabs__tab.gradient-tabs__tab--green
+									a(href="#" + item.href): span= item.title
+
+				#securities.accordion.closed
+					.accordion__head
+						a.accordion__head-link(href="#") Ценные бумаги
+							i.fa.fa-angle-down
+					.accordion__body
+						.sortin-table
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th Торговый код
+										th НИН или ISIN
+										th Сектор
+										th Категория
+										th Торги
+										th Индекс
+								tbody
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td акции
+										td первая
+										td 25.05.2015
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td долговые ценные бумаги
+										td иные долговые ценные бумаги
+										td 25.05.2015
+										td -
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td акции
+										td первая
+										td 25.05.2015
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td долговые ценные бумаги
+										td иные долговые ценные бумаги
+										td 25.05.2015
+										td -
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td акции
+										td первая
+										td 25.05.2015
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td долговые ценные бумаги
+										td иные долговые ценные бумаги
+										td 25.05.2015
+										td -
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td акции
+										td первая
+										td 25.05.2015
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td долговые ценные бумаги
+										td иные долговые ценные бумаги
+										td 25.05.2015
+										td -
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td акции
+										td первая
+										td 25.05.2015
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td.
+											KZ1C33870011
+											#[br]
+											KZ000A0LE0S4
+										td долговые ценные бумаги
+										td иные долговые ценные бумаги
+										td 25.05.2015
+										td -
+
+				#shareholders.accordion.closed
+					.accordion__head
+						a.accordion__head-link(href="#") Акционеры
+							i.fa.fa-angle-down
+					.accordion__body
+						p.
+							по состоянию на 01.10.16 (#[a(href="#") к предыдущей выписке])
+
+						.sortin-table
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Наименование держателя
+										th Простых акций, кол-во
+										th Простых акций, доля
+										th.
+											Привилег. 
+											#[br]
+											акции
+										th Всего акций, кол-во
+										th Всего акций, доля
+								tbody
+									tr
+										td АО "ХОЛДИНГОВАЯ ГРУППА "АЛМЭКС"
+										td 0,002
+										td 0,001
+										td 11
+										td 8 086 451 77
+										td 63,73
+									tr
+										td АО "Единый накопительный пенсионный фонд"
+										td 0,002
+										td 0,001
+										td 11
+										td 8 086 451 77
+										td 63,73
+									tr.empty
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+									tr
+										td Количество объявленных простых акций, шт.
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td 25 000 000 000
+									tr
+										td Количество объявленных привилегированных акций, шт.
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td -
+									tr
+										td Количество размещенных простых акций, шт.
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td 12 688 857 059
+									tr
+										td Количество размещенных привилегированных акций, шт.
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td -
+									tr
+										td Количество выкупленных простых акций, шт.
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td 12 688 857 059
+									tr
+										td Количество размещенных привилегированных акций, шт.
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td &nbsp;
+										td -
+				
+				#results.accordion.closed
+					.accordion__head
+						a.accordion__head-link(href="#") Финансовые показатели
+							i.fa.fa-angle-down
+					.accordion__body
+						.sortin-table
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Показатель
+										th На 01.10.16
+										th На 01.07.16
+								tbody
+									tr
+										td Уставный капитал
+										td 5 672 155,00 тыс. тенге
+										td 5 672 155,00 тыс. тенге
+									tr
+										td АО "Единый накопительный пенсионный фонд"
+										td 351 441 280,00 тыс. тенге
+										td 351 441 280,00 тыс. тенге
+									tr
+										td Уставный капитал
+										td 5 672 155,00 тыс. тенге
+										td 5 672 155,00 тыс. тенге
+									tr
+										td АО "Единый накопительный пенсионный фонд"
+										td 351 441 280,00 тыс. тенге
+										td 351 441 280,00 тыс. тенге
+									tr
+										td Уставный капитал
+										td 5 672 155,00 тыс. тенге
+										td 5 672 155,00 тыс. тенге
+									tr
+										td АО "Единый накопительный пенсионный фонд"
+										td 351 441 280,00 тыс. тенге
+										td 351 441 280,00 тыс. тенге
+									tr
+										td Уставный капитал
+										td 5 672 155,00 тыс. тенге
+										td 5 672 155,00 тыс. тенге
+									tr
+										td АО "Единый накопительный пенсионный фонд"
+										td 351 441 280,00 тыс. тенге
+										td 351 441 280,00 тыс. тенге
+
+				#docs.accordion.closed
+					.accordion__head
+						a.accordion__head-link(href="#") Документы
+							i.fa.fa-angle-down
+					.accordion__body
+						.market-block__dropdown.accordion__docs
+							.market-block__dropdown_left
+								h5 Тип документа:
+								.market-dropdown-block
+									.dropdown
+										a.dropdown-link(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+											| Отчётность
+										ul.dropdown-menu
+											li
+												a(href='#') Отчётность
+											li
+												a(href='#') Отчётность
+											li
+												a(href='#') Отчётность
+							
+							.market-block__dropdown_right
+								h5 Год предоставления:
+								.market-dropdown-block
+									.dropdown
+										a.dropdown-link(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+											| 2016
+										ul.dropdown-menu
+											li
+												a(href='#') 2015
+											li
+												a(href='#') 2014
+											li
+												a(href='#') 2013
+
+						.sortin-table
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Название документа
+										th Дата документа
+								tbody
+									tr
+										td
+											.reference-info.reference-info--big
+												ul: li: a(href="#").
+													Заключение о возможности включения облигаций (HSBKb19) 1-го выпуска, выпущенных в пределах четвертой 
+													облигационной программы, в официальный список KASE по категории "Иные долговые ценные бумаги" 
+										td 30.12.14
+									tr
+										td
+											.reference-info.reference-info--big
+												ul: li: a(href="#").
+													Заключение о возможности включения облигаций (HSBKb19) 1-го выпуска, выпущенных в пределах четвертой 
+													облигационной программы, в официальный список KASE по категории "Иные долговые ценные бумаги" 
+										td 30.12.14
+									tr
+										td
+											.reference-info.reference-info--big
+												ul: li: a(href="#").
+													Заключение о возможности включения облигаций (HSBKb19) 1-го выпуска, выпущенных в пределах четвертой 
+													облигационной программы, в официальный список KASE по категории "Иные долговые ценные бумаги" 
+										td 30.12.14
+									tr
+										td
+											.reference-info.reference-info--big
+												ul: li: a(href="#").
+													Заключение о возможности включения облигаций (HSBKb19) 1-го выпуска, выпущенных в пределах четвертой 
+													облигационной программы, в официальный список KASE по категории "Иные долговые ценные бумаги" 
+										td 30.12.14
+									tr
+										td
+											.reference-info.reference-info--big
+												ul: li: a(href="#").
+													Заключение о возможности включения облигаций (HSBKb19) 1-го выпуска, выпущенных в пределах четвертой 
+													облигационной программы, в официальный список KASE по категории "Иные долговые ценные бумаги" 
+										td 30.12.14
+									tr
+										td
+											.reference-info.reference-info--big
+												ul: li: a(href="#").
+													Заключение о возможности включения облигаций (HSBKb19) 1-го выпуска, выпущенных в пределах четвертой 
+													облигационной программы, в официальный список KASE по категории "Иные долговые ценные бумаги" 
+										td 30.12.14
+									tr
+										td
+											.reference-info.reference-info--big
+												ul: li: a(href="#").
+													Заключение о возможности включения облигаций (HSBKb19) 1-го выпуска, выпущенных в пределах четвертой 
+													облигационной программы, в официальный список KASE по категории "Иные долговые ценные бумаги" 
+										td 30.12.14
+
+				#news.accordion.closed
+					.accordion__head
+						a.accordion__head-link(href="#") Новости
+							i.fa.fa-angle-down
+					.accordion__body
+						-
+							var news = [
+								{
+									'date' : '15 июля, 13:00',
+									'title' : 'АО "Altyn Bank" (ДБ АО "Народный Банк Казахстана") сообщило о заключении сделки, в совершении которой имеется заинтересованность'
+								},
+								{
+									'date' : '15 июля, 13:00',
+									'title' : 'АО "Altyn Bank" (ДБ АО "Народный Банк Казахстана") сообщило о заключении сделки, в совершении которой имеется заинтересованность'
+								},
+								{
+									'date' : '15 июля, 13:00',
+									'title' : 'АО "Altyn Bank" (ДБ АО "Народный Банк Казахстана") сообщило о заключении сделки, в совершении которой имеется заинтересованность'
+								},
+								{
+									'date' : '15 июля, 13:00',
+									'title' : 'АО "Altyn Bank" (ДБ АО "Народный Банк Казахстана") сообщило о заключении сделки, в совершении которой имеется заинтересованность'
+								},
+								{
+									'date' : '15 июля, 13:00',
+									'title' : 'АО "Altyn Bank" (ДБ АО "Народный Банк Казахстана") сообщило о заключении сделки, в совершении которой имеется заинтересованность'
+								},
+								{
+									'date' : '15 июля, 13:00',
+									'title' : 'АО "Altyn Bank" (ДБ АО "Народный Банк Казахстана") сообщило о заключении сделки, в совершении которой имеется заинтересованность'
+								}
+							]
+
+						include ../../modules/news-list/module
+
+						a.underline(href="#") Все новости эмитента
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});

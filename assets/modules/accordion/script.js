@@ -16,3 +16,22 @@ $('.accordion__head-link').on('click', function(e){
 		target.slideDown();
 	}
 });
+
+
+/* аккордион с якорями */
+
+$('#anchors a').on('click', function(e){
+	var parent = $(this).parent();
+	var target = $($(this).attr('href'));
+	var topPos = target.offset().top;
+	e.preventDefault();
+	if(!parent.hasClass('active')) {
+		parent.parent().find('.active').removeClass('active');
+		parent.addClass('active');
+	}
+	if(target.hasClass('closed')) {
+		target.removeClass('closed');
+		target.find('.accordion__body').slideDown();
+	}
+	$('html, body').animate({scrollTop : topPos});
+});
