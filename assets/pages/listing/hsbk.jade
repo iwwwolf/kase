@@ -1,5 +1,6 @@
-- var bodyClass = "body__listing"
 extends ../../templates/base
+block variables
+	- bodyClass = "body__listing"
 
 block content
 	.markets-top
@@ -52,69 +53,23 @@ block content
 							.h1-block__indicator.up 0.14
 					div(style="margin-top: 6px;") простые акции KZ1C33870011 (KZ000A0LE0S4)
 					div: a(href="#") АО "Народный сберегательный банк Казахстана"
+				
+				.button-block
+					a.button-block__button.button-block__button--transparent-blue(href="#")
+						i.fa.fa-heart-o
+						|Добавить в избранные
 
-				.info-table
-					.info-table__row
-						.info-table__cell.
-							Капитализация:
-						.info-table__cell.
-							суммарная рыночная стоимость акций компании – 539 661,20 млн тенге ($1 614,1 млн)
+					//- уже в избранном
+						a.button-block__button.button-block__button--transparent-blue.active(href="#")
+							i.fa.fa-heart-o
+							|Добавлено в избранные	
 
-					.info-table__row
-						.info-table__cell.
-							Контакты:
-						.info-table__cell.
-							Республика Казахстан, A26M3K5, г. Алматы, пр. Аль-Фараби, 40;
-							#[br]
-							Телефон:  (727) 259 07 77
-							#[br]
-							Факс: (727) 259 02 71
-
-					.info-table__row
-						.info-table__cell.
-							Интернет-сайт:
-						.info-table__cell
-							a(href="http://www.halykbank.kz/") http://www.halykbank.kz/
-
-					.info-table__row
-						.info-table__cell.
-							E-mail:
-						.info-table__cell
-							a(href="mailto:halykbank@halykbank.kz") halykbank@halykbank.kz
-
-					.info-table__row
-						.info-table__cell.
-							Основная деятельность:
-						.info-table__cell.
-							банковская
-
-					.info-table__row
-						.info-table__cell.
-							Первый руководитель:
-						.info-table__cell.
-							Председатель Правления Шаяхметова Умут Болатхановна
-
-					.info-table__row
-						.info-table__cell.
-							Печатные издания:
-						.info-table__cell.
-							Казахстанская правда, Егемен Казакстан, Панорама
-
-					.info-table__row
-						.info-table__cell.
-							Кредитные рейтинги:
-						.info-table__cell.
-							Moody's Investors Service: Ba2/негативный/NP (27.04.16)
-							#[br]
-							Standard & Poor's: BB/негативный/B, kzA (08.07.16)
-							#[br]
-							Fitch Ratings: http://www.fitchratings.com
 
 				-
 					var gradientTabs = [
 						{
 							'title' : 'Торги',
-							'href' : 'markets',
+							'href' : 'trade',
 							'active': true
 						},
 						{
@@ -137,11 +92,164 @@ block content
 								li.gradient-tabs__tab.gradient-tabs__tab--green
 									a(href="#" + item.href): span= item.title
 
-				#markets.accordion.closed
+				#trade.accordion.closed
 					.accordion__head
 						a.accordion__head-link(href="#") Торги
 							i.fa.fa-angle-down
 					.accordion__body
+						.sortin-table
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th Date/Period
+										th Bid
+										th Offer
+										th Last
+										th W-aver
+										th High
+										th Low
+										th Trade
+										th Shares
+										th m. KZT
+										th th. USD
+								tbody
+									tr
+										td 04.07.16 (15:00)
+										td 38.71
+										td 39.71
+										td 38.71
+										td 38.76
+										td 39.00
+										td 38.68
+										td 7
+										td 1 435
+										td 0.1
+										td 0.165
+									tr
+										td 01.07.16
+										td 38.71
+										td 39.71
+										td 38.71
+										td 38.76
+										td 39.00
+										td 38.68
+										td 7
+										td 1 435
+										td 0.1
+										td 0.165
+									tr
+										td Last 52 weeks
+										td 38.71
+										td 39.71
+										td 38.71
+										td 38.76
+										td 39.00
+										td 38.68
+										td 7
+										td 1 435
+										td 0.1
+										td 0.165
+
+						.actions__chart
+							//- TradingView Widget BEGIN
+							script(type="text/javascript", src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js")
+							script(type="text/javascript").
+								new TradingView.widget({
+								  "autosize": true,
+								  "symbol": "NASDAQ:AAPL",
+								  "interval": "D",
+								  "timezone": "Asia/Almaty",
+								  "theme": "White",
+								  "style": "3",
+								  "locale": "ru",
+								  "toolbar_bg": "#f1f3f6",
+								  "enable_publishing": false,
+								  "hide_top_toolbar": true,
+								  "hideideas": true
+								});
+							//- TradingView Widget END
+						
+						br
+
+						h5 Последние 10 сделок за последние 52 недели по HSBK
+
+						.sortin-table
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th Дата сделки
+										th Время сделки
+										th.
+											Объем,
+											#[br]
+											тыс. USD
+										th.
+											Объем,
+											#[br]
+											млн. KZT
+										th Объём бумаг
+										th.
+											Цена,
+											#[br]
+											значение
+										th.
+											Цена,
+											#[br]
+											тренд %
+								tbody
+									tr
+										td 04.07.16
+										td 15:12:23
+										td 0.0002
+										td 0.001
+										td 11
+										td 39.55
+										td: span.up 2.14
+									tr
+										td 04.07.16
+										td 15:12:23
+										td 0.0002
+										td 0.001
+										td 11
+										td 39.55
+										td: span.down 2.14
+									tr
+										td 04.07.16
+										td 15:12:23
+										td 0.0002
+										td 0.001
+										td 11
+										td 39.55
+										td: span.up 2.14
+									tr
+										td 04.07.16
+										td 15:12:23
+										td 0.0002
+										td 0.001
+										td 11
+										td 39.55
+										td: span.down 2.14
+									tr
+										td 04.07.16
+										td 15:12:23
+										td 0.0002
+										td 0.001
+										td 11
+										td 39.55
+										td: span.up 2.14
+									tr
+										td 04.07.16
+										td 15:12:23
+										td 0.0002
+										td 0.001
+										td 11
+										td 39.55
+										td: span.down 2.14
+
+						br
+
+						h5 Другие ценный бумаги АО “Народный Сберегательный банк Казахстана”
+
 						.sortin-table
 							table.sorting-table.table.table-striped
 								thead
@@ -254,137 +362,172 @@ block content
 										td 25.05.2015
 										td -
 
+
 				#characteristic.accordion.closed
 					.accordion__head
 						a.accordion__head-link(href="#") Характеристика ценной бумаги
 							i.fa.fa-angle-down
 					.accordion__body
-						p.
-							по состоянию на 01.10.16 (#[a(href="#") к предыдущей выписке])
+						.info-table
+							.info-table__row
+								.info-table__cell.
+									Эмитент:
+								.info-table__cell.
+									АО "Народный сберегательный банк Казахстана"
 
-						.sortin-table
-							table.sorting-table--false.table.table-striped
-								thead
-									tr
-										th Наименование держателя
-										th Простых акций, кол-во
-										th Простых акций, доля
-										th.
-											Привилег. 
-											#[br]
-											акции
-										th Всего акций, кол-во
-										th Всего акций, доля
-								tbody
-									tr
-										td АО "ХОЛДИНГОВАЯ ГРУППА "АЛМЭКС"
-										td 0,002
-										td 0,001
-										td 11
-										td 8 086 451 77
-										td 63,73
-									tr
-										td АО "Единый накопительный пенсионный фонд"
-										td 0,002
-										td 0,001
-										td 11
-										td 8 086 451 77
-										td 63,73
-									tr.empty
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-									tr
-										td Количество объявленных простых акций, шт.
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td 25 000 000 000
-									tr
-										td Количество объявленных привилегированных акций, шт.
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td -
-									tr
-										td Количество размещенных простых акций, шт.
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td 12 688 857 059
-									tr
-										td Количество размещенных привилегированных акций, шт.
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td -
-									tr
-										td Количество выкупленных простых акций, шт.
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td 12 688 857 059
-									tr
-										td Количество размещенных привилегированных акций, шт.
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td &nbsp;
-										td -
+							.info-table__row
+								.info-table__cell.
+									Тип акции:
+								.info-table__cell.
+									простая
+
+							.info-table__row
+								.info-table__cell.
+									CFI:
+								.info-table__cell.
+									ESVUFR
+
+							.info-table__row
+								.info-table__cell.
+									НИН:
+								.info-table__cell.
+									KZ1C33870011
+
+							.info-table__row
+								.info-table__cell.
+									ISIN
+								.info-table__cell.
+									KZ000A0LE0S4
+
+							.info-table__row
+								.info-table__cell.
+									BBGID
+								.info-table__cell.
+									BBG000DX10J0
+
+							.info-table__row
+								.info-table__cell.
+									Дата регистрации выпуска:
+								.info-table__cell.
+									03.06.2016
+
+							.info-table__row
+								.info-table__cell.
+									Регистратор
+								.info-table__cell.
+									АО "Единый регистратор ценных бумаг" (Алматы)
+
+							.info-table__row
+								.info-table__cell.
+									Общее количество объявленных акций
+								.info-table__cell.
+									25 000 000 000
+
+							.info-table__row
+								.info-table__cell.
+									Количество акций в обращении:
+								.info-table__cell.
+									10 995 541 982
+
+							.info-table__row
+								.info-table__cell.
+									Валюта выпуска:
+								.info-table__cell.
+									KZT
+
+							.info-table__row
+								.info-table__cell.
+									Номинальная стоимость:
+								.info-table__cell.
+									1,00
+
+							.info-table__row
+								.info-table__cell.
+									Периодичность выплаты дивиденда:
+								.info-table__cell.
+									годовой
+
+							.info-table__row
+								.info-table__cell.
+									Информация о проведенных сплитах:
+								.info-table__cell
+									a(href="#") 14 декабря 2012 общее количество объявленных акций увеличено путем сплита в пропорции 1:10
+
+							.info-table__row
+								.info-table__cell.
+									Включены в представительский список индекса KASE:
+								.info-table__cell.
+									01.10.07
+
+							br
+
+							.info-table__row
+								.info-table__cell.
+									Торговый код:
+								.info-table__cell.
+									HSBK
+
+							.info-table__row
+								.info-table__cell.
+									Список ценных бумаг:
+								.info-table__cell.
+									официальный, категория "первая"
+
+							.info-table__row
+								.info-table__cell.
+									Валюта котирования:
+								.info-table__cell.
+									KZT
+
+							.info-table__row
+								.info-table__cell.
+									Точность котирования:
+								.info-table__cell.
+									2 знака
+
+							.info-table__row
+								.info-table__cell.
+									Схема расчетов:
+								.info-table__cell.
+									T+2
+
+							.info-table__row
+								.info-table__cell.
+									Дата включения в торговые списки:
+								.info-table__cell.
+									16.09.98
+
+							.info-table__row
+								.info-table__cell.
+									Дата открытия торгов:
+								.info-table__cell.
+									16.09.98
+
+							.info-table__row
+								.info-table__cell.
+									Маркет-мейкеры:
+								.info-table__cell
+									a(href="#") АО "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
+
+							.info-table__row
+								.info-table__cell.
+									Включены в представительский список индекса KASE:
+								.info-table__cell.
+									01.10.07
+								
 				
 				#catalogs.accordion.closed
 					.accordion__head
 						a.accordion__head-link(href="#") Проспекты
 							i.fa.fa-angle-down
 					.accordion__body
-						.sortin-table
-							table.sorting-table--false.table.table-striped
-								thead
-									tr
-										th Показатель
-										th На 01.10.16
-										th На 01.07.16
-								tbody
-									tr
-										td Уставный капитал
-										td 5 672 155,00 тыс. тенге
-										td 5 672 155,00 тыс. тенге
-									tr
-										td АО "Единый накопительный пенсионный фонд"
-										td 351 441 280,00 тыс. тенге
-										td 351 441 280,00 тыс. тенге
-									tr
-										td Уставный капитал
-										td 5 672 155,00 тыс. тенге
-										td 5 672 155,00 тыс. тенге
-									tr
-										td АО "Единый накопительный пенсионный фонд"
-										td 351 441 280,00 тыс. тенге
-										td 351 441 280,00 тыс. тенге
-									tr
-										td Уставный капитал
-										td 5 672 155,00 тыс. тенге
-										td 5 672 155,00 тыс. тенге
-									tr
-										td АО "Единый накопительный пенсионный фонд"
-										td 351 441 280,00 тыс. тенге
-										td 351 441 280,00 тыс. тенге
-									tr
-										td Уставный капитал
-										td 5 672 155,00 тыс. тенге
-										td 5 672 155,00 тыс. тенге
-									tr
-										td АО "Единый накопительный пенсионный фонд"
-										td 351 441 280,00 тыс. тенге
-										td 351 441 280,00 тыс. тенге
+						.reference-info.reference-info--page
+							ul
+								li: a(href="#") Устав компании, зарегистированный 20 декабря 2002 года
+								li: a(href="#") Устав компании, зарегистированный 20 декабря 2002 года
+								li: a(href="#") Устав компании, зарегистированный 20 декабря 2002 года
+								li: a(href="#") Устав компании, зарегистированный 20 декабря 2002 года
+								li: a(href="#") Устав компании, зарегистированный 20 декабря 2002 года
 
 
 block scripts

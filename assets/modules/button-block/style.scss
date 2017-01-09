@@ -1,0 +1,68 @@
+.button-block {
+	background: #f4f6f8;
+	border-radius: 10px;
+	padding: 25px;
+	margin-bottom: 25px;
+}
+.button-block__button {
+	font-size: 14px;
+	line-height: 1.25;
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
+	padding: 10px 20px 10px;
+	&--green {
+		background-color: #7fbf3e;
+		color: #fff;
+		box-shadow: 5px 5px 14px rgba(73, 107, 124, 0.25);
+		&:hover, &:focus {
+			background: darken(#7fbf3e, 3%);
+			color: #fff;
+			box-shadow: 2px 2px 14px rgba(73, 107, 124, 0.25);
+		}
+	}
+	&--transparent-blue {
+		background: none;
+		color: #0094de;
+		border: 1px solid #0094de;
+		&:hover, &:focus {
+			border-color: #7fbf3e;
+			color: #7fbf3e;
+		}
+		&.active {
+			border-color: #7fbf3e;
+			color: #7fbf3e;
+		}
+	}
+	&.active {
+		.fa.fa-heart-o {
+			&:before {
+				content: "\f004";
+			}
+		}
+	}
+	i {
+		margin-right: 12px;
+	}
+}
+
+@media (min-width: 992px){
+	.button-block {
+		max-width: 300px;
+	}
+}
+@media (min-width: 1200px) {
+	.button-block {
+		width: 192px;
+		max-width: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border-radius: 0 0 20px 20px;
+	}
+	.button-block__button {
+		font-size: 12px;
+		padding-top: 3px;
+		padding-bottom: 2px;
+	}
+}

@@ -8,7 +8,7 @@
     <link href="css/libs.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="body__listing">
     <style rel="stylesheet">
       #wrap {
       	-webkit-transform-origin: 50% 350px;
@@ -337,76 +337,185 @@
               <div style="margin-top: 6px;">простые акции KZ1C33870011 (KZ000A0LE0S4)</div>
               <div><a href="#">АО "Народный сберегательный банк Казахстана"</a></div>
             </div>
-            <div class="info-table">
-              <div class="info-table__row">
-                <div class="info-table__cell">Капитализация:</div>
-                <div class="info-table__cell">
-                  суммарная рыночная стоимость акций компании – 539 661,20 млн тенге ($1 614,1 млн)
-                  
-                </div>
-              </div>
-              <div class="info-table__row">
-                <div class="info-table__cell">Контакты:</div>
-                <div class="info-table__cell">
-                  Республика Казахстан, A26M3K5, г. Алматы, пр. Аль-Фараби, 40;
-                  <br>
-                  Телефон:  (727) 259 07 77
-                  <br>
-                  Факс: (727) 259 02 71
-                  
-                </div>
-              </div>
-              <div class="info-table__row">
-                <div class="info-table__cell">Интернет-сайт:</div>
-                <div class="info-table__cell"><a href="http://www.halykbank.kz/">http://www.halykbank.kz/</a></div>
-              </div>
-              <div class="info-table__row">
-                <div class="info-table__cell">E-mail:</div>
-                <div class="info-table__cell"><a href="mailto:halykbank@halykbank.kz">halykbank@halykbank.kz</a></div>
-              </div>
-              <div class="info-table__row">
-                <div class="info-table__cell">Основная деятельность:</div>
-                <div class="info-table__cell">
-                  банковская
-                  
-                </div>
-              </div>
-              <div class="info-table__row">
-                <div class="info-table__cell">Первый руководитель:</div>
-                <div class="info-table__cell">
-                  Председатель Правления Шаяхметова Умут Болатхановна
-                  
-                </div>
-              </div>
-              <div class="info-table__row">
-                <div class="info-table__cell">Печатные издания:</div>
-                <div class="info-table__cell">
-                  Казахстанская правда, Егемен Казакстан, Панорама
-                  
-                </div>
-              </div>
-              <div class="info-table__row">
-                <div class="info-table__cell">Кредитные рейтинги:</div>
-                <div class="info-table__cell">
-                  Moody's Investors Service: Ba2/негативный/NP (27.04.16)
-                  <br>
-                  Standard & Poor's: BB/негативный/B, kzA (08.07.16)
-                  <br>
-                  Fitch Ratings: http://www.fitchratings.com
-                  
-                </div>
-              </div>
+            <div class="button-block"><a href="#" class="button-block__button button-block__button--transparent-blue"><i class="fa fa-heart-o"></i>Добавить в избранные</a>
             </div>
             <div class="gradient-tabs gradient-tabs--not-margin">
               <ul id="anchors" style="border: none; padding: 0;" class="nav">
-                <li class="gradient-tabs__tab gradient-tabs__tab--green active"><a href="#markets"><span>Торги</span></a></li>
+                <li class="gradient-tabs__tab gradient-tabs__tab--green active"><a href="#trade"><span>Торги</span></a></li>
                 <li class="gradient-tabs__tab gradient-tabs__tab--green"><a href="#characteristic"><span>Характеристика ценной бумаги</span></a></li>
                 <li class="gradient-tabs__tab gradient-tabs__tab--green"><a href="#catalogs"><span>Проспекты</span></a></li>
               </ul>
             </div>
-            <div id="markets" class="accordion closed">
+            <div id="trade" class="accordion closed">
               <div class="accordion__head"><a href="#" class="accordion__head-link">Торги<i class="fa fa-angle-down"></i></a></div>
               <div class="accordion__body">
+                <div class="sortin-table">
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Date/Period</th>
+                        <th>Bid</th>
+                        <th>Offer</th>
+                        <th>Last</th>
+                        <th>W-aver</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Trade</th>
+                        <th>Shares</th>
+                        <th>m. KZT</th>
+                        <th>th. USD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>04.07.16 (15:00)</td>
+                        <td>38.71</td>
+                        <td>39.71</td>
+                        <td>38.71</td>
+                        <td>38.76</td>
+                        <td>39.00</td>
+                        <td>38.68</td>
+                        <td>7</td>
+                        <td>1 435</td>
+                        <td>0.1</td>
+                        <td>0.165</td>
+                      </tr>
+                      <tr>
+                        <td>01.07.16</td>
+                        <td>38.71</td>
+                        <td>39.71</td>
+                        <td>38.71</td>
+                        <td>38.76</td>
+                        <td>39.00</td>
+                        <td>38.68</td>
+                        <td>7</td>
+                        <td>1 435</td>
+                        <td>0.1</td>
+                        <td>0.165</td>
+                      </tr>
+                      <tr>
+                        <td>Last 52 weeks</td>
+                        <td>38.71</td>
+                        <td>39.71</td>
+                        <td>38.71</td>
+                        <td>38.76</td>
+                        <td>39.00</td>
+                        <td>38.68</td>
+                        <td>7</td>
+                        <td>1 435</td>
+                        <td>0.1</td>
+                        <td>0.165</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="actions__chart">
+                  <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                  <script type="text/javascript">
+                    new TradingView.widget({
+                      "autosize": true,
+                      "symbol": "NASDAQ:AAPL",
+                      "interval": "D",
+                      "timezone": "Asia/Almaty",
+                      "theme": "White",
+                      "style": "3",
+                      "locale": "ru",
+                      "toolbar_bg": "#f1f3f6",
+                      "enable_publishing": false,
+                      "hide_top_toolbar": true,
+                      "hideideas": true
+                    });
+                  </script>
+                </div><br>
+                <h5>Последние 10 сделок за последние 52 недели по HSBK</h5>
+                <div class="sortin-table">
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Дата сделки</th>
+                        <th>Время сделки</th>
+                        <th>
+                          Объем,
+                          <br>
+                          тыс. USD
+                        </th>
+                        <th>
+                          Объем,
+                          <br>
+                          млн. KZT
+                        </th>
+                        <th>Объём бумаг</th>
+                        <th>
+                          Цена,
+                          <br>
+                          значение
+                        </th>
+                        <th>
+                          Цена,
+                          <br>
+                          тренд %
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>04.07.16</td>
+                        <td>15:12:23</td>
+                        <td>0.0002</td>
+                        <td>0.001</td>
+                        <td>11</td>
+                        <td>39.55</td>
+                        <td><span class="up">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>04.07.16</td>
+                        <td>15:12:23</td>
+                        <td>0.0002</td>
+                        <td>0.001</td>
+                        <td>11</td>
+                        <td>39.55</td>
+                        <td><span class="down">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>04.07.16</td>
+                        <td>15:12:23</td>
+                        <td>0.0002</td>
+                        <td>0.001</td>
+                        <td>11</td>
+                        <td>39.55</td>
+                        <td><span class="up">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>04.07.16</td>
+                        <td>15:12:23</td>
+                        <td>0.0002</td>
+                        <td>0.001</td>
+                        <td>11</td>
+                        <td>39.55</td>
+                        <td><span class="down">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>04.07.16</td>
+                        <td>15:12:23</td>
+                        <td>0.0002</td>
+                        <td>0.001</td>
+                        <td>11</td>
+                        <td>39.55</td>
+                        <td><span class="up">2.14</span></td>
+                      </tr>
+                      <tr>
+                        <td>04.07.16</td>
+                        <td>15:12:23</td>
+                        <td>0.0002</td>
+                        <td>0.001</td>
+                        <td>11</td>
+                        <td>39.55</td>
+                        <td><span class="down">2.14</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><br>
+                <h5>Другие ценный бумаги АО “Народный Сберегательный банк Казахстана”</h5>
                 <div class="sortin-table">
                   <table class="sorting-table table table-striped">
                     <thead>
@@ -548,158 +657,184 @@
             <div id="characteristic" class="accordion closed">
               <div class="accordion__head"><a href="#" class="accordion__head-link">Характеристика ценной бумаги<i class="fa fa-angle-down"></i></a></div>
               <div class="accordion__body">
-                <p>по состоянию на 01.10.16 (<a href="#">к предыдущей выписке</a>)
-                  
-                </p>
-                <div class="sortin-table">
-                  <table class="sorting-table--false table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Наименование держателя</th>
-                        <th>Простых акций, кол-во</th>
-                        <th>Простых акций, доля</th>
-                        <th>
-                          Привилег. 
-                          <br>
-                          акции
-                        </th>
-                        <th>Всего акций, кол-во</th>
-                        <th>Всего акций, доля</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>АО "ХОЛДИНГОВАЯ ГРУППА "АЛМЭКС"</td>
-                        <td>0,002</td>
-                        <td>0,001</td>
-                        <td>11</td>
-                        <td>8 086 451 77</td>
-                        <td>63,73</td>
-                      </tr>
-                      <tr>
-                        <td>АО "Единый накопительный пенсионный фонд"</td>
-                        <td>0,002</td>
-                        <td>0,001</td>
-                        <td>11</td>
-                        <td>8 086 451 77</td>
-                        <td>63,73</td>
-                      </tr>
-                      <tr class="empty">
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                      </tr>
-                      <tr>
-                        <td>Количество объявленных простых акций, шт.</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>25 000 000 000</td>
-                      </tr>
-                      <tr>
-                        <td>Количество объявленных привилегированных акций, шт.</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>Количество размещенных простых акций, шт.</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>12 688 857 059</td>
-                      </tr>
-                      <tr>
-                        <td>Количество размещенных привилегированных акций, шт.</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>-</td>
-                      </tr>
-                      <tr>
-                        <td>Количество выкупленных простых акций, шт.</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>12 688 857 059</td>
-                      </tr>
-                      <tr>
-                        <td>Количество размещенных привилегированных акций, шт.</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>-</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="info-table">
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Эмитент:</div>
+                    <div class="info-table__cell">
+                      АО "Народный сберегательный банк Казахстана"
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Тип акции:</div>
+                    <div class="info-table__cell">
+                      простая
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">CFI:</div>
+                    <div class="info-table__cell">
+                      ESVUFR
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">НИН:</div>
+                    <div class="info-table__cell">
+                      KZ1C33870011
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">ISIN</div>
+                    <div class="info-table__cell">
+                      KZ000A0LE0S4
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">BBGID</div>
+                    <div class="info-table__cell">
+                      BBG000DX10J0
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Дата регистрации выпуска:</div>
+                    <div class="info-table__cell">
+                      03.06.2016
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Регистратор</div>
+                    <div class="info-table__cell">
+                      АО "Единый регистратор ценных бумаг" (Алматы)
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Общее количество объявленных акций</div>
+                    <div class="info-table__cell">
+                      25 000 000 000
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Количество акций в обращении:</div>
+                    <div class="info-table__cell">
+                      10 995 541 982
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Валюта выпуска:</div>
+                    <div class="info-table__cell">
+                      KZT
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Номинальная стоимость:</div>
+                    <div class="info-table__cell">
+                      1,00
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Периодичность выплаты дивиденда:</div>
+                    <div class="info-table__cell">
+                      годовой
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Информация о проведенных сплитах:</div>
+                    <div class="info-table__cell"><a href="#">14 декабря 2012 общее количество объявленных акций увеличено путем сплита в пропорции 1:10</a></div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Включены в представительский список индекса KASE:</div>
+                    <div class="info-table__cell">
+                      01.10.07
+                      
+                    </div>
+                  </div><br>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Торговый код:</div>
+                    <div class="info-table__cell">
+                      HSBK
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Список ценных бумаг:</div>
+                    <div class="info-table__cell">
+                      официальный, категория "первая"
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Валюта котирования:</div>
+                    <div class="info-table__cell">
+                      KZT
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Точность котирования:</div>
+                    <div class="info-table__cell">
+                      2 знака
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Схема расчетов:</div>
+                    <div class="info-table__cell">
+                      T+2
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Дата включения в торговые списки:</div>
+                    <div class="info-table__cell">
+                      16.09.98
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Дата открытия торгов:</div>
+                    <div class="info-table__cell">
+                      16.09.98
+                      
+                    </div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Маркет-мейкеры:</div>
+                    <div class="info-table__cell"><a href="#">АО "Дочерняя организация Народного Банка Казахстана "Halyk Finance"</a></div>
+                  </div>
+                  <div class="info-table__row">
+                    <div class="info-table__cell">Включены в представительский список индекса KASE:</div>
+                    <div class="info-table__cell">
+                      01.10.07
+                      
+                      
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div id="catalogs" class="accordion closed">
               <div class="accordion__head"><a href="#" class="accordion__head-link">Проспекты<i class="fa fa-angle-down"></i></a></div>
               <div class="accordion__body">
-                <div class="sortin-table">
-                  <table class="sorting-table--false table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Показатель</th>
-                        <th>На 01.10.16</th>
-                        <th>На 01.07.16</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Уставный капитал</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                      </tr>
-                      <tr>
-                        <td>АО "Единый накопительный пенсионный фонд"</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                      </tr>
-                      <tr>
-                        <td>Уставный капитал</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                      </tr>
-                      <tr>
-                        <td>АО "Единый накопительный пенсионный фонд"</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                      </tr>
-                      <tr>
-                        <td>Уставный капитал</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                      </tr>
-                      <tr>
-                        <td>АО "Единый накопительный пенсионный фонд"</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                      </tr>
-                      <tr>
-                        <td>Уставный капитал</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                        <td>5 672 155,00 тыс. тенге</td>
-                      </tr>
-                      <tr>
-                        <td>АО "Единый накопительный пенсионный фонд"</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                        <td>351 441 280,00 тыс. тенге</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="reference-info reference-info--page">
+                  <ul>
+                    <li><a href="#">Устав компании, зарегистированный 20 декабря 2002 года</a></li>
+                    <li><a href="#">Устав компании, зарегистированный 20 декабря 2002 года</a></li>
+                    <li><a href="#">Устав компании, зарегистированный 20 декабря 2002 года</a></li>
+                    <li><a href="#">Устав компании, зарегистированный 20 декабря 2002 года</a></li>
+                    <li><a href="#">Устав компании, зарегистированный 20 декабря 2002 года</a></li>
+                  </ul>
                 </div>
               </div>
             </div>

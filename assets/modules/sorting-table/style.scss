@@ -18,9 +18,36 @@
 	}
 }
 [class*="sortin-table"] {
+	margin-bottom: 20px;
 	.get-date {
 		background-color: #f4f6f8;
 		padding: 18px 17px 13px;
+	}
+	.up {
+		color: #3cbd0d;
+		display: inline-block;
+		vertical-align: middle;
+		&:before {
+			display: inline-block;
+			border: 5px solid transparent;
+			border-bottom-color: #3cbd0d;
+			border-top: none;
+			margin-right: 7px;
+			content: "";
+		}
+	}
+	.down {
+		color: #ff1c1d;
+		display: inline-block;
+		vertical-align: middle;
+		&:before {
+			display: inline-block;
+			border: 5px solid transparent;
+			border-top-color: #ff1c1d;
+			border-bottom: none;
+			margin-right: 7px;
+			content: "";
+		}
 	}
 }
 .dataTables_filter {

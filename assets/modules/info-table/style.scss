@@ -27,4 +27,12 @@
 			font-weight: 100;
 		}
 	}
+	.accordion {
+		.info-table__cell {
+			&:first-child {
+				min-width: 300px;
+				max-width: 300px;
+			}
+		}
+	}
 }
