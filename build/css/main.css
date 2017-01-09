@@ -4097,7 +4097,7 @@ table.dataTable.no-footer {
     margin-left: 0; } }
 
 @media (min-width: 1200px) {
-  .h1-block {
+  .body__with-button-block .h1-block {
     margin-right: 200px; } }
 
 .half-table__parent {

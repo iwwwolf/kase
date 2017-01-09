@@ -1,31 +1,30 @@
 extends ../../templates/base
 block variables
-	- bodyClass = "body__listing"
+	- bodyClass = "body__with-button-block"
 
 block content
 	.markets-top
 		.container
 			-
-				var marketsListTitle = "Листинг"
+				var marketsListTitle = "Торги"
 				var marketsList = [
 					{
-						'title': 'Листинговые компании',
+						'title': 'Список инструментов'
+					},
+					{
+						'title': 'Список компаний',
 						'active': true
 					},
 					{
-						'title': 'Что такое листинг'
-					},
+						'title': 'Просмотр торгов'
+					}
+					,
 					{
-						'title': 'Листинг на KASE'
-					},
+						'title': 'Регламент торгов и клиринга'
+					}
+					,
 					{
-						'title': 'IPO'
-					},
-					{
-						'title': 'Нелистинговый сектор'
-					},
-					{
-						'title': 'Дипломанты номинаций'
+						'title': 'Клиринг и расчеты'
 					}
 				]
 			include ../../modules/markets-menu/module
@@ -36,8 +35,8 @@ block content
 				var breadcrumbs = [
 					'Главная',
 					'Продукты и услуги',
-					'Листинг',
-					'Листинговые компании'
+					'Список компаний',
+					'HSBK'
 				]
 
 			include ../../modules/breadcrumbs/module
