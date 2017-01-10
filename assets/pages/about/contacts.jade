@@ -1,0 +1,36 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "О Бирже"
+				var marketsList = [
+					{
+						'title': 'Вакансии'
+					},
+					{
+						'title': 'Контакты',
+						'active': true
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'О Биржe',
+					'Контакты'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			h1 Контакты
+			
+			h3 Основные
+
+			.contacts
+				.contacts__body
