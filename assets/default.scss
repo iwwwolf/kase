@@ -1083,6 +1083,55 @@ a.up {
 		font-weight: 400;
 	}
 }
+.row {
+	&--includes {
+		& + .row--includes {
+			margin-top: 2em;
+		}
+		button {
+			width: 100%;
+			padding: 20px 16px;
+			border-radius: 0;
+		}
+	}
+}
+.modal-dialog {
+	&--includes {
+		width: 75%;
+		.modal-body {
+			padding: 60px 120px;
+		}
+	}
+	.rates-for-vendors__title {
+		h5 {
+			margin-bottom: 0;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		+ .row {
+			padding-top: 1em;
+			> div {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+.close {
+	&--includes {
+		position: absolute;
+		right: -35px;
+		top: -40px;
+		color: #d7d7d7;
+		font-size: 46px;
+		font-weight: 100;
+		opacity: 1;
+	}
+}
+.title {
+	&--includes {
+		font-weight: 700;
+	}
+}
 
 @media (max-width: 992px) {
 	.trade-row {

@@ -881,6 +881,41 @@ a.up:after {
   padding: 1.5em 2em .5em;
   font-weight: 400; }
 
+.row--includes + .row--includes {
+  margin-top: 2em; }
+
+.row--includes button {
+  width: 100%;
+  padding: 20px 16px;
+  border-radius: 0; }
+
+.modal-dialog--includes {
+  width: 75%; }
+  .modal-dialog--includes .modal-body {
+    padding: 60px 120px; }
+
+.modal-dialog .rates-for-vendors__title h5 {
+  margin-bottom: 0;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.modal-dialog .rates-for-vendors__title + .row {
+  padding-top: 1em; }
+  .modal-dialog .rates-for-vendors__title + .row > div {
+    margin-bottom: 1em; }
+
+.close--includes {
+  position: absolute;
+  right: -35px;
+  top: -40px;
+  color: #d7d7d7;
+  font-size: 46px;
+  font-weight: 100;
+  opacity: 1; }
+
+.title--includes {
+  font-weight: 700; }
+
 @media (max-width: 992px) {
   .trade-row + .trade-row {
     margin-top: 10px; }

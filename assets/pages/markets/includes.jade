@@ -1,0 +1,317 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Торговая система"
+				var marketsList = [
+					{
+						'title': 'Как подключиться к KASE',
+						'active': true
+					},
+					{
+						'title': 'Загрузки'
+					},
+					{
+						'title': 'Инструкции'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//- include ../../modules/regulations/module
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Торговая система',
+					'Как подключиться к KASE'
+				]
+
+			include ../../modules/breadcrumbs/module
+			h1 Как подключиться к KASE
+			p.includes-text KASE предоставляет набор средств для подключения к своей IT-инфраструктуре
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Терминал торговой системы
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Терминал NEXT
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-6
+								table.half-table
+									tr
+										td Время последних данных 
+										td 09.08.16 (16:14)
+									tr
+										td Последнее значение
+										td 987.4
+									tr
+										td Открытие
+										td 987.4
+									tr
+										td Макс.
+										td 987.4
+									tr
+										td Мин.
+										td 987.4
+									tr
+										td Изменение с начала месяца, %
+										td: span.green 2.14
+									tr
+										td Объем сделок, млн KZT
+										td 987.4
+									tr
+										td Капитализация, млрд KZT
+										td 987.4
+							.col-md-6
+								table.half-table
+									tr
+										td Статус рынка
+										td: span.green открыт
+									tr
+										td Изменение к предыдущему значению, %
+										td: span.green 1.06
+									tr
+										td Предыдущее закрытие
+										td 987.4
+									tr
+										td Макс. за 52 недели
+										td 987.4
+									tr
+										td Мин. за 52 недели
+										td 987.4
+									tr
+										td Изменение с начала года, %
+										td: span.green 4.06
+									tr
+										td Объем сделок, тыс USD
+										td 212.2
+									tr
+										td Капитализация, млн USD
+										td 275
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") FIX-API для фондовой торговой системы и системы NEXT
+						i.fa.fa-angle-down
+				.accordion__body
+					.half-table__parent
+						.row
+							.col-md-12
+								p. 
+									#[b Системы KASE поддерживают соединение посредством международного протокола FIX версия 5.0. Использование FIX-APi доступно только для участников торгов, имеющих допуск к торгам соответствующей категории. ]
+								p.
+									#[b FIX &dash; Financial Information eXchnge &dash;] международный стандарт передачи биржевых данных в режиме реального времени. FIX является сессионным протоколом поверх TCP/IP, каждое сообщение которого состоит из набора пар тэг-значение, разделенных ascii-символами 0x01. Каждое сообщение состоит из заголовка, тела сообщения и окончания. В заголовка содержется информация об отправителе и адресате, тип сообщения и другая системная информация, в конце сообщения находится и контрольная сумма. #[br] Обмен сообщениями ведется асинхронно, все запросы имеют уникальный референс, по которому сопоставляется полученный ответ.
+								p.
+									В качестве реализации FIX-движка можно взять бесплатный QuickFix #[a(href="www.quickfixengine.org") www.quickfixengine.org], его Java-реализацию: #[a(href="#") quickfixj.org], либо его KASE-версию в проекте: #[a(href="https://github.com/kase-dev/fix-api") github.com/kase-dev/fix-api ] #[br]Также, в открытом доступе находится калькулятор доходности (для облигаций, котирующихся на KASe): #[a(href="https://github.com/kase-dev/bond-calculator") github.com/kase-dev/bond-calculator]
+						br
+						.row
+							.col-md-4
+								h4.green Валютный рынок
+								b Боевая система:
+								p TargetCompID: FIX5-Forex-Prod
+								b по выделенному каналу:
+								p IP: 192.168.111.202
+								p Port: 9898
+								b По интернету: 
+								p IP: 212.19.144.73
+								p Port: 9898
+								b Тестовая система: 
+								p TargetCompID: KASE
+								b по выделенному каналу:
+								p IP: 192.168.111.202
+								p Port: 9898
+								b По интернету:
+								p IP: 212.19.144.73
+								p Port: 9898
+							.col-md-4
+								h4.green Фондовый рынок
+								b Боевая система:
+								p TargetCompID: FIX5-Forex-Prod
+								b по выделенному каналу:
+								p IP: 192.168.111.202
+								p Port: 9898
+								b По интернету: 
+								p IP: 212.19.144.73
+								p Port: 9898
+								b Тестовая система: 
+								p TargetCompID: KASE
+								b по выделенному каналу:
+								p IP: 192.168.111.202
+								p Port: 9898
+								b По интернету:
+								p IP: 212.19.144.73
+								p Port: 9898
+						br
+						br
+						h2 Для подключения используются следующие адреса и настройки
+						.row.row--includes
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") Fix Сообщения, поддерживаемые KASE
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") SecurityList
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") MarketDataIncrementalRefresh
+						.row.row--includes
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") ExecutionReport
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionReport
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") NewOrderSingle
+						.row.row--includes
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") OrderCancelRequest
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionTransferInstruction
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") SecurityListRequest
+						.row.row--includes
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") MarketDataRequest
+							.col-xs-4
+								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionTransferInstruction
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});
+
+block modals
+	div.modal.modal--includes.fade#myModal(tabindex="-1", role="dialog", aria-labelledby="myModalLabel1")
+		div.modal-dialog.modal-dialog--includes(role="document")
+			div.modal-content
+				button.close.close--includes(type="button", data-dismiss="modal", aria-label="Close")
+					span(aria-hidden="true") &times;
+				div.modal-body
+					h3.title--includes Fix Сообщения, поддерживаемые KASE
+					div.rates-for-vendors__title #[h5 От биржи:]
+					.row
+						div.clearfix
+							.col-xs-3
+								b SecurityList ['y']#[br]
+								span Список торгуемых инструментов
+							.col-xs-3
+								b MarketDataIncRefresh ['X']#[br]
+								span Изменение  по рыночным данным
+							.col-xs-3
+								b SecurityList ['f']#[br]
+								span Состояние торгов по инструменту
+							.col-xs-3
+								b SecurityList ['8']#[br]
+								span Отчет по заявке / сделке
+					div.rates-for-vendors__title #[h5 Биржи:]
+					.row
+						div.clearfix
+							.col-xs-3
+								b NewOrderSingle ['D']#[br]
+								span Подача заявки
+							.col-xs-3
+								b OrderCancelRequest ['F']#[br]
+								span Отмена заявки
+							.col-xs-3
+								b PositionTransfer Instruction ['DL']#[br]
+								span Управление клиентсткими позициями
+							.col-xs-3
+								b SecurityListRequest ['x']#[br]
+								span Запрос списка инструментов
+						div.clearfix
+							.col-xs-3
+								b MarketDataRequest ['V']#[br]
+								span Запрос рыночных данных по инструменту
+							.col-xs-3
+								b OrderStatusRequest ['H']#[br]
+								span Запрос заявок и сделок
+							.col-xs-3
+								b PositionRequest ['AL']#[br]
+								span Запрос позиций
+							.col-xs-3
+								b TradeCaptureReport Request ['AD']#[br]
+								span Архив сделок
+						div.clearfix
+							.col-xs-3
+								b UserRequest ['BE']#[br]
+								span Смена пароля
+					h3.title--includes Пример взаимодействия FIX-клиента с биржей`
+					p. 
+						Клиента запрашивает подписку на отслеживание рыночной информации по списку инструментов: MarketData Request.#[br] При изменении той или иной торговой информации (последней цены, стакана котировок или другой статистики по торгам), сервер отправляет клиенту сообщение MarketDataIncRefresh с измененными данными. При первом обращении сервер отправляет все рыночные данные по запрашиваемым инструментам.
+					p. 
+						Подача заявки осуществляется отправка NewOrderSingle, в ответ на нее приходит ExecutionReport с описанием заявки, и в случае пересечения с другими контраггентами, описание сделки.
+
