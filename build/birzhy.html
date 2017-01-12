@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KASE</title>
+    <link href="css/libs.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <style rel="stylesheet">
+      #wrap {
+      	-webkit-transform-origin: 50% 350px;
+      	transform-origin: 50% 350px;
+      	-webkit-transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      #wrap.scale-out {
+      	-webkit-transform: scale(0.85);
+      	transform: scale(0.85); 
+      }
+      
+    </style>
+    <div id="menu" style="display: none;" class="menu">
+      <div class="menu__container">
+        <div class="container"><a id="menuClose" href="#" class="menu__close">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z"></path>
+            </svg></a>
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel menu__panel">
+              <div id="headingOne" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Рынки и торги</a></div>
+              </div>
+              <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Рынки</div>
+                      <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Паи</a></li>
+                        <li><a href="#">Корпоративные облигации</a></li>
+                        <li><a href="#">Ценные бумаги МФО</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                        <li><a href="#">Иностранные валюты</a></li>
+                        <li><a href="#">Операции репо</a></li>
+                        <li><a href="#">Деривативы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Индикаторы</div>
+                      <ul>
+                        <li><a href="#">Фондовый рынок</a></li>
+                        <li><a href="#">Денежный рынок</a></li>
+                        <li><a href="#">Совместные индексы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торги</div>
+                      <ul>
+                        <li><a href="#">Список инструментов</a></li>
+                        <li><a href="#">Просмотр торгов</a></li>
+                        <li><a href="#">Регламент торгов и клиринга</a></li>
+                        <li><a href="#">Клиринг и расчеты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Оценка и параметры</div>
+                      <ul>
+                        <li><a href="#">Рыночная оценка</a></li>
+                        <li><a href="#">Риск-параметры акций</a></li>
+                        <li><a href="#">Средневзвешенные цены</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingTwo" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseTwo">Продукты и услуги</a></div>
+              </div>
+              <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Листинг</div>
+                      <ul>
+                        <li><a href="#">Список компаний</a></li>
+                        <li><a href="#">Что такое листинг</a></li>
+                        <li><a href="#">Листинг на KASE</a></li>
+                        <li><a href="#">IPO</a></li>
+                        <li><a href="#">Нелистинговый сектор</a></li>
+                        <li><a href="#">Дипломанты номинаций</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Членство</div>
+                      <ul>
+                        <li><a href="#">Список членов KASE</a></li>
+                        <li><a href="#">Рэнкинг активности</a></li>
+                        <li><a href="#">Дипломанты номинаций </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торговая система</div>
+                      <ul>
+                        <li><a href="#">Как подключиться к KASE</a></li>
+                        <li><a href="#">Загрузки</a></li>
+                        <li><a href="#">Инструкции</a></li>
+                        <li><a href="#">FIX протокол</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Информационные продукты</div>
+                      <ul>
+                        <li><a href="#">Биржевая информация и программное обеспечение</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingThree" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseThree">Правила</a></div>
+              </div>
+              <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Правила KASE</div>
+                      <ul>
+                        <li><a href="#">Листинг</a></li>
+                        <li><a href="#">Членство</a></li>
+                        <li><a href="#">Торги</a></li>
+                        <li><a href="#">Клиринг</a></li>
+                        <li><a href="#">Расчеты</a></li>
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Методики </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Корпоративное управление</div>
+                      <ul>
+                        <li><a href="#">Материалы и статьи Международной финансовой корпорации (IFC)</a></li>
+                        <li><a href="#">Материалы и статьи Организации экономического сотрудничества и развития (OECD) </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Законодательство</div>
+                      <ul>
+                        <li><a href="#">Рынок ценных бумаг</a></li>
+                        <li><a href="#">Акционерные общества</a></li>
+                        <li><a href="#">Инвестиционные фонды</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title"><a href="#">Дополнительные материалы</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFour" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFour" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFour">Пресс-центр</a></div>
+              </div>
+              <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Новости</div>
+                      <ul>
+                        <li><a href="#">Новости рынков</a></li>
+                        <li><a href="#">Новости компаний</a></li>
+                        <li><a href="#">Новости Биржи</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Информационная поддержка</a></li>
+                        <li class="title"><a href="#">Мероприятия</a></li>
+                        <li class="title"><a href="#">Доклады и презентации</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Пресс-релизы</a></li>
+                        <li class="title"><a href="#">СМИ о нас</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Корпоративный стиль</a></li>
+                        <li class="title"><a href="#">Контакты пресс-центра</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFive" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFive" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFive">О Бирже</a></div>
+              </div>
+              <div id="collapseFive" role="tabpanel" aria-labelledby="headingFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">О нас</div>
+                      <ul>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Миссия и ценности</a></li>
+                        <li><a href="#">Руководство</a></li>
+                        <li><a href="#">Комитеты и комиссии</a></li>
+                        <li><a href="#">Участие в профессиональных организациях</a></li>
+                        <li><a href="#">Корпоративные документы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Акционерам</div>
+                      <ul>
+                        <li><a href="#">Отчетность</a></li>
+                        <li><a href="#">Новости и уведомления</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Закупки</a></li>
+                        <li class="title"><a href="#">Реквизиты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Вакансии</a></li>
+                        <li class="title"><a href="#">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="wrap">
+      <div class="fixed-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-youtube"></i></a></div>
+      <div id="headerSearch" style="display: none;" class="header-search">
+        <div class="container">
+          <form action="">
+            <input type="text" placeholder="Что вы ищите?..." class="header-search__input">
+            <button type="submit" class="header-search__button"><img src="images/search-icon.svg" alt="">Найти</button>
+            <div class="head-search__close"><a id="searchClose" href="#"><img src="images/close-gray.svg" alt=""></a></div>
+          </form>
+        </div>
+      </div>
+      <header id="header">
+        <div class="header__container">
+          <div class="container">
+            <div class="header__content">
+              <div class="header__left-col"><a id="menuBtn" href="#" class="header__menu-button"><img src="images/menu-border.svg" alt=""><span class="header__menu-button-lines"><span></span><span></span><span></span></span></a>
+                <div class="header__logo"><a href="/"><span class="header__logo-img"><img src="images/logo.svg" alt="KASE"></span><span class="header__logo-text"><span>Қазақстан қор биржасы</span><span>Казахстанская фондовая биржа</span><span>Kazakhstan Stock Exchange</span></span></a></div>
+              </div>
+              <div class="header__right-col">
+                <div class="header__date">Пятница, 11 ноября 2016 г. 11:24</div><a href="#" id="searchBtn" class="header__search-button"><img src="images/search-icon.svg" alt="Search"></a>
+                <div class="header__language">
+                  <ul class="header__language-list clearfix">
+                    <li class="active"><a href="#">Рус </a></li>
+                    <li><a href="#">Қаз </a></li>
+                    <li><a href="#">Eng </a></li>
+                  </ul>
+                  <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рус</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Қаз</a></li>
+                      <li><a href="#">Eng</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__login">
+                  <div class="header__login--mobile"><a href="#"><img src="images/login-mob.svg" alt=""></a></div>
+                  <div class="header__login--desctop"><a href="#">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 253 106.3" enable-background="new 0 0 253 106.3" xml:space="preserve">
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="227.5092" y1="-5.151" x2="25.4908" y2="111.4843">
+                          <stop offset="0" style="stop-color:#9ED110"></stop>
+                          <stop offset="1" style="stop-color:#038726"></stop>
+                        </linearGradient>
+                        <path fill="none" stroke="url(#SVGID_1_)" stroke-width="3" stroke-miterlimit="10" d="M199.8,104.8H53.2c-28.4,0-51.7-23.2-51.7-51.7v0c0-28.4,23.2-51.7,51.7-51.7h146.7c28.4,0,51.7,23.2,51.7,51.7v0C251.5,81.6,228.3,104.8,199.8,104.8z"></path>
+                      </svg><span class="header__login-text">Войти<span class="arr">&rarr;</span></span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="markets-top">
+        <div class="container">
+          <div class="markets-menu">
+            <h3>О Бирже</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Акционерам</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">О нас</a></li>
+                <li class="active"><a href="#">Акционерам</a></li>
+                <li><a href="#">Реквизиты</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="right-content-column">
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О Бирже</a></li>
+            <li><a href="#">Отчетность</a></li>
+          </ul>
+          <h1>Правила Kase</h1>
+          <div class="gradient-tabs gradient-tabs--not-margin">
+            <ul role="tablist" class="nav">
+              <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--green active"><a href="#report" role="tab" data-toggle="tab"><span>Отчетность</span></a></li>
+              <li role="presentation" class="gradient-tabs__tab gradient-tabs__tab--green"><a href="#notice" role="tab" data-toggle="tab"><span>Новости и уведомления</span></a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="report" role="tabpanel" class="tab-pane fade active in">
+                <div class="reference-info reference-info--page">
+                  <ul>
+                    <li><a href="#">Финансовая</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">||| кв. 2016</a></li>
+                        <li><a href="#">|| кв. 2016</a></li>
+                        <li><a href="#">| кв. 2016</a></li>
+                        <li><a href="#">2015</a> (аудированная консолидированная)</li>
+                        <li><a href="#">|V кв. 2015</a></li>
+                        <li><a href="#">||| кв. 2015</a></li>
+                        <li><a href="#">|| кв. 2015</a></li>
+                        <li><a href="#">| кв. 2015</a></li>
+                        <li><a href="#">2014</a> (аудированная консолидированная)</li>
+                        <li><a href="#">|V кв. 2014</a></li>
+                        <li><a href="#">||| кв. 2014</a></li>
+                        <li><a href="#">|| кв. 2014</a></li>
+                        <li><a href="#">| кв. 2014</a></li>
+                        <li><a href="#">2013</a> (аудированная консолидированная)</li>
+                        <li><a href="#">|V кв. 2013</a></li>
+                        <li><a href="#">||| кв. 2013</a></li>
+                        <li><a href="#">|| кв. 2013</a></li>
+                        <li><a href="#">| кв. 2013</a></li>
+                        <li><a href="#">2012</a> (аудированная консолидированная)</li>
+                        <li><a href="#">||| кв. 2012</a></li>
+                        <li><a href="#">2011</a> (аудированная консолидированная)</li>
+                        <li><a href="#">2010</a> (аудированная консолидированная)</li>
+                        <li><a href="#">2009</a> (аудированная консолидированная)</li>
+                        <li><a href="#">2008</a> (аудированная консолидированная)</li>
+                        <li><a href="#">2007, 2006, 2005</a> (аудированная консолидированная)</li>
+                        <li><a href="#">2006</a> (аудированная консолидированная)</li>
+                      </ul>
+                      <li><a href="#">Годовые и квартальные отчеты</a></li>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">2015</a> - 2,2 МБ</li>
+                        <li><a href="#">2014</a> - 681 КБ</li>
+                        <li><a href="#">2014</a> - 354 КБ (ГОСА)</li>
+                        <li><a href="#">2013</a> - 273 КБ (ГОСА)</li>
+                        <li><a href="#">2012</a> - 14 МБ
+                          br
+                          <a href="#">Фактический материал за 2012 год</a>
+                        </li>
+                        <li><a href="#">2011</a> - 2,5 МБ
+                          br
+                          <a href="#">Фактический материал за 2011 год</a>
+                        </li>
+                        <li><a href="#">2010</a> - 1,8 МБ
+                          br
+                          <a href="#">Фактический материал за 2010 год</a>
+                        </li>
+                        <li><a href="#">2009</a> - 2,2 МБ</li>
+                        <li><a href="#">2008</a> - 22,7 МБ</li>
+                        <li><a href="#">2007</a> - 4,5 МБ</li>
+                        <li><a href="#">2006</a> - 1,8 МБ</li>
+                        <li><a href="#">2005</a> - 1,4 МБ</li>
+                        <li><a href="#">2004</a> - 1,7 МБ</li>
+                        <li><a href="#">2003</a> - 1,4 МБ
+                          
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="notice" role="tabpanel" class="tab-pane fade">
+                <div>
+                  <ul class="news-list">
+                    <li> 
+                      <div class="news-list__date">20.12.16</div>
+                      <div><a href="#">KASE привлечена к административной ответственности за нарушение норм пожарной безопасности</a></div>
+                    </li>
+                    <li> 
+                      <div class="news-list__date">16.09.16</div>
+                      <div><a href="#">Национальный Банк  принял к сведению информацию о неразмещении акций KASE за период с 26 февраля по 25 августа 2016 года</a></div>
+                    </li>
+                    <li> 
+                      <div class="news-list__date">01.09.16</div>
+                      <div><a href="#">KASE сообщает о заключении сделок, в совершении которых имеется заинтересованность</a></div>
+                    </li>
+                    <li> 
+                      <div class="news-list__date">29.08.16</div>
+                      <div><a href="#">Опубликован аудиторский отчет по консолидированной финансовой отчетности KASE за 2015 год</a></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="stocks" role="tabpanel" class="tab-pane fade">
+                <div class="reference-info reference-info--page">
+                  <ul>
+                    <li><a href="#">Регламент торгов и работы Системы подтверждения</a></li>
+                    <li><a href="#">Списки акций первого, второго и третьего классов ликвидности на декабрь 2016–январь 2017 года</a></li>
+                    <li><a href="#">Положение о методах проведения торгов</a></li>
+                    <li><a href="#">Положение о маркет-мейкерах</a></li>
+                    <li><a href="#">Правила деятельности маркет-мейкеров</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Приложение 1</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Правила предоставления прямого доступа к организованному рынку ценных бумаг</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Приложение 1</a></li>
+                        <li><a href="#">Приложение 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Требования к системам DMA членов АО "Казахстанская фондовая биржа" и их использованию</a></li>
+                  </ul>
+                </div>
+                <div class="accordion closed">
+                  <div class="accordion__head"><a href="#" class="accordion__head-link">Торговая система<i class="fa fa-angle-down"></i></a></div>
+                  <div class="accordion__body">
+                    <div class="reference-info reference-info--page">
+                      <ul>
+                        <li><a href="#">Правила сертификации пользователей торговой системы и предоставления им доступа к торговой системе</a>
+                          <ul class="reference-into--icon">
+                            <li><a href="#">Приложение 1</a></li>
+                            <li><a href="#">Приложение 3</a></li>
+                            <li><a href="#">Приложение 8</a></li>
+                            <li><a href="#">Приложение 9</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Правила работы с торговой системой в режиме удаленного доступа</a>
+                          <ul class="reference-into--icon">
+                            <li><a href="#">Приложение</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Инструкция о требованиях к программно-техническим средствам, необходимым для осуществления деятельности на рынке ценных бумаг</a></li>
+                        <li><a href="#">Инструкция о порядке кодировки членов АО "Казахстанская фондовая биржа", финансовых инструментов и эмитентов ценных бумаг</a></li>
+                        <li><a href="#">Инструкция о порядке кодировки счетов членов АО "Казахстанская фондовая биржа" в торговой системе</a></li>
+                        <li><a href="#">Правила использования программно-криптографических средств защиты информации при работе с торговой системой в режиме удаленного доступа</a>
+                          <ul class="reference-into--icon">
+                            <li><a href="#">Приложение 1</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Правила разрешения вопросов при технических сбоях в работе Торговой системы биржи</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion closed">
+                  <div class="accordion__head"><a href="#" class="accordion__head-link">Ценные бумаги<i class="fa fa-angle-down"></i></a></div>
+                  <div class="accordion__body">
+                    <div class="reference-info reference-info--page">
+                      <ul>
+                        <li><a href="#">Правила биржевой торговли ценными бумагами</a></li>
+                        <li><a href="#">Правила размещения государственных казначейских обязательств Республики Казахстан</a></li>
+                        <li><a href="#">Государственные пакеты акций. Порядок допуска к продаже на торгах и расчетов по итогам торгов</a></li>
+                        <li><a href="#">Порядок совершения сделок на фондовом рынке по схеме T+2</a></li>
+                        <li><a href="#">Правила проведения подписки на ценные бумаги</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion closed">
+                  <div class="accordion__head"><a href="#" class="accordion__head-link">Операции репо<i class="fa fa-angle-down"></i></a></div>
+                  <div class="accordion__body">
+                    <div class="reference-info reference-info--page">
+                      <ul>
+                        <li><a href="#">Правила осуществления операций репо</a></li>
+                        <li><a href="#">Спецификация рынка автоматического репо</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion closed">
+                  <div class="accordion__head"><a href="#" class="accordion__head-link">Иностранные валюты<i class="fa fa-angle-down"></i></a></div>
+                  <div class="accordion__body">
+                    <div class="reference-info reference-info--page">
+                      <ul>
+                        <li><a href="#">Спецификация операций валютного свопа</a></li>
+                        <li><a href="#">Правила биржевой торговли иностранными валютами</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion closed">
+                  <div class="accordion__head"><a href="#" class="accordion__head-link">Деривативы<i class="fa fa-angle-down"></i></a></div>
+                  <div class="accordion__body">
+                    <div class="reference-info reference-info--page">
+                      <ul>
+                        <li><a href="#">Правила биржевой торговли производными финансовыми инструментами</a></li>
+                        <li><a href="#">Требования к обязательным котировкам и размеры дисконтов комиссионных сборов маркет-мейкеров по фьючерсам</a></li>
+                        <li><a href="#">Спецификация фьючерса на курс доллара США к тенге</a></li>
+                        <li><a href="#">Спецификация фьючерса на Индекс KASE</a></li>
+                        <li><a href="#">Спецификация фьючерса на простые акции KAZ Minerals PLC</a></li>
+                        <li><a href="#">Спецификация фьючерса на простые акции АО "Народный сберегательный банк Казахстана"</a></li>
+                        <li><a href="#">Спецификация фьючерса на простые акции АО "Разведка Добыча "КазМунайГаз"</a></li>
+                        <li><a href="#">Спецификация фьючерса на простые акции АО "КазТрансОйл"</a></li>
+                        <li><a href="#">Спецификация фьючерса на простые акции АО "Кселл"</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="clearing" role="tabpanel" class="tab-pane fade">
+                <div class="reference-info reference-info--page">
+                  <ul>
+                    <li><a href="#">Регламент работы клиринговой системы</a></li>
+                    <li><a href="#">Порядок включения финансовых инструментов в Список финансовых инструментов фондового рынка, по сделкам с которыми Биржа осуществляет клиринговую деятельность</a></li>
+                    <li><a href="#">Правила осуществления клиринговой деятельности по сделкам с финансовыми инструментами</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Приложение 1</a></li>
+                        <li><a href="#">Приложение 2</a></li>
+                        <li><a href="#">Приложение 3</a></li>
+                        <li><a href="#">Приложение 4</a></li>
+                        <li><a href="#">Приложение 5</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Положение о клиринговых участниках</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Приложение 1</a></li>
+                        <li><a href="#">Приложение 2</a></li>
+                        <li><a href="#">Приложение 3</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Положение о клиринговых сборах</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div id="calculations" role="tabpanel" class="tab-pane fade">
+                <div class="reference-info reference-info--page">
+                  <ul>
+                    <li><a href="#">Правила работы Расчетной палаты</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Приложение 1</a></li>
+                        <li><a href="#">Приложение 2</a></li>
+                        <li><a href="#">Приложение 3</a></li>
+                        <li><a href="#">Приложение 4</a></li>
+                        <li><a href="#">Приложение 5</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Положение об ответственности за нарушение сроков расчетов</a></li>
+                    <li><a href="#">Порядок блокировки государственных ценных бумаг в пользу биржи для обеспечения обязательств членов биржи</a></li>
+                    <li><a href="#">Правила реализации ценных бумаг, заблокированных в пользу Биржи ее членами для обеспечения своих обязательств перед ней</a></li>
+                    <li><a href="#">Договор о взаимоотношениях в части блокировки ценных бумаг </a>(Типовой договор)</li>
+                  </ul>
+                </div>
+                <div class="accordion closed">
+                  <div class="accordion__head"><a href="#" class="accordion__head-link">Ценные бумаги<i class="fa fa-angle-down"></i></a></div>
+                  <div class="accordion__body">
+                    <div class="reference-info reference-info--page">
+                      <ul>
+                        <li><a href="#">Регламент проведения расчетов по сделкам с ценными бумагами по схеме T+0 с полным обеспечением (гросс-расчеты)</a></li>
+                        <li><a href="#">Общие условия расчетов по итогам торгов ценными бумагами</a>
+                          <ul class="reference-into--icon">
+                            <li><a href="#">Приложение 1</a></li>
+                            <li><a href="#">Приложение 2</a></li>
+                            <li><a href="#">Приложение 3</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion closed">
+                  <div class="accordion__head"><a href="#" class="accordion__head-link">Иностранные валюты<i class="fa fa-angle-down"></i></a></div>
+                  <div class="accordion__body">
+                    <div class="reference-info reference-info--page">
+                      <ul>
+                        <li><a href="#">Общие условия расчетов по итогам торгов ценными бумагами</a>
+                          <ul class="reference-into--icon">
+                            <li><a href="#">Приложение 2</a></li>
+                            <li><a href="#">Приложение 2a</a></li>
+                            <li><a href="#">Приложение 3</a></li>
+                            <li><a href="#">Приложение 4</a></li>
+                            <li><a href="#">Приложение 5</a></li>
+                            <li><a href="#">Приложение 6</a></li>
+                            <li><a href="#">Приложение 7</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Список корреспондентских счетов Биржи</a></li>
+                        <li><a href="#">Положение об ответственности за нарушение сроков расчетов по итогам торгов иностранными валютами</a></li>
+                        <li><a href="#">Положение о Комитете по рынку иностранных валют</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="information" role="tabpanel" class="tab-pane fade">
+                <div class="reference-info reference-info--page">
+                  <ul>
+                    <li><a href="#">Информационная политика</a></li>
+                    <li><a href="#">Правила распространения биржевой информации</a></li>
+                    <li><a href="#">Положение об условиях коммерческого предоставления биржевой информации</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div id="methods" role="tabpanel" class="tab-pane fade">
+                <div class="reference-info reference-info--page">
+                  <ul>
+                    <li><a href="#">Методика оценки ценных бумаг</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Правила осуществления учета и оценки пенсионных активов</a>, утвержденные постановлением Правления Национального Банка Республики Казахстан от 26 февраля 2014 года № 24</li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Положение о Комитете по индексам и оценке ценных бумаг</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Расчет рыночных цен акций, включенных в список финансовых инструментов фондового рынка, по сделкам с которыми KASE осуществляет клиринговую деятельность</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Методика расчета средневзвешенной ставки доходности долговых ценных бумаг</a></li>
+                    <li><a href="#">Методика определения показателей ликвидности ценных бумаг</a></li>
+                    <li><a href="#">Методика расчета показателей активности членов АО "Казахстанская фондовая биржа"</a></li>
+                    <li><a href="#">Методика расчета доходности облигаций и сумм сделок с облигациями</a></li>
+                    <li><a href="#">Методика расчета индикаторов фондового рынка</a></li>
+                    <li><a href="#">Методика расчета индикаторов рынка операций репо</a></li>
+                    <li><a href="#">Меморандум о формировании индикатора межбанковского рынка депозитов</a>
+                      <ul class="reference-into--icon">
+                        <li><a href="#">Форма заявления</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Методика формирования индикатора межбанковского рынка депозитов</a></li>
+                    <li><a href="#">Методика расчета индикаторов рынка иностранных валют</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <ul class="footer__nav">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Партнерские сайты</a></li>
+          <li><a href="#">Мобильная версия</a></li>
+          <li><a href="#">Карта сайта</a></li>
+        </ul>
+        <div class="footer__text">
+          <div>&copy; 1993–2016 АО "Казахстанская фондовая биржа"</div>
+          <div>Копирование материалов – только с письменного разрешения.</div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" defer src="js/libs.js"> </script>
+    <script type="text/javascript" defer src="js/main.js"></script>
+  </body>
+</html>
