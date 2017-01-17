@@ -167,16 +167,17 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 150%;
-  font-weight: normal; }
+  font-weight: normal;
+  margin-bottom: 20px; }
 
 h5, .h5 {
   font-size: 114.28571%;
   margin: 0 0 15px; }
 
-.underline, .blue-list a, .accordion__nav li:not(.active) a, .menu li a, .menu .title a, footer a, .quotes-info__table td a, .home-news__footer a, .breadcrumbs a, .markets-menu .dropdown-menu > li > a, .regulations__archive-links .link a, .info-table a {
+.underline, .blue-list a, .accordion__nav li:not(.active) a, .menu li a, .menu .title a, footer a, .quotes-info__table td a, .home-news__footer a, .breadcrumbs a, .markets-menu .dropdown-menu > li > a, .regulations__archive-links .link a, .info-table a, .contacts__list-item a {
   position: relative;
   text-decoration: none; }
-  .underline:after, .blue-list a:after, .accordion__nav li:not(.active) a:after, .menu li a:after, .menu .title a:after, footer a:after, .quotes-info__table td a:after, .home-news__footer a:after, .breadcrumbs a:after, .markets-menu .dropdown-menu > li > a:after, .regulations__archive-links .link a:after, .info-table a:after {
+  .underline:after, .blue-list a:after, .accordion__nav li:not(.active) a:after, .menu li a:after, .menu .title a:after, footer a:after, .quotes-info__table td a:after, .home-news__footer a:after, .breadcrumbs a:after, .markets-menu .dropdown-menu > li > a:after, .regulations__archive-links .link a:after, .info-table a:after, .contacts__list-item a:after {
     width: 100%;
     border-bottom: 1px solid;
     opacity: 0;
@@ -189,7 +190,7 @@ h5, .h5 {
     -webkit-transition: all 200ms;
     transition: all 200ms;
     content: ""; }
-  .underline:hover:after, .blue-list a:hover:after, .accordion__nav li:not(.active) a:hover:after, .menu li a:hover:after, .menu .title a:hover:after, footer a:hover:after, .quotes-info__table td a:hover:after, .home-news__footer a:hover:after, .breadcrumbs a:hover:after, .markets-menu .dropdown-menu > li > a:hover:after, .regulations__archive-links .link a:hover:after, .info-table a:hover:after {
+  .underline:hover:after, .blue-list a:hover:after, .accordion__nav li:not(.active) a:hover:after, .menu li a:hover:after, .menu .title a:hover:after, footer a:hover:after, .quotes-info__table td a:hover:after, .home-news__footer a:hover:after, .breadcrumbs a:hover:after, .markets-menu .dropdown-menu > li > a:hover:after, .regulations__archive-links .link a:hover:after, .info-table a:hover:after, .contacts__list-item a:hover:after {
     opacity: 1;
     visibility: visible;
     -webkit-transform: translateY(0);
@@ -4937,6 +4938,72 @@ table.dataTable.no-footer {
     font-size: 12px;
     padding-top: 3px;
     padding-bottom: 2px; } }
+
+.contacts .light {
+  font-weight: 100; }
+
+.contacts__body {
+  background-color: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 20px 30px;
+  margin-bottom: 30px; }
+
+.contacts__list-item {
+  display: block;
+  padding: 0;
+  margin: 0 0 15px; }
+  .contacts__list-item li {
+    display: block;
+    margin-bottom: 3px; }
+
+.contacts__title {
+  font-size: 20px;
+  font-weight: 100;
+  color: #3cbd0d;
+  margin-bottom: 15px; }
+
+.contacts__text {
+  font-weight: 500;
+  margin-bottom: 12px; }
+
+.contacts__help-text {
+  color: #a8b1ba;
+  margin-bottom: 6px; }
+
+@media (min-width: 540px) {
+  .contacts__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .contacts__list .contacts__list-item {
+      min-width: 50%;
+      max-width: 50%; } }
+
+@media (min-width: 992px) {
+  .contacts--two-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .contacts--two-col .contacts__body {
+      min-width: 48.41101694915254%;
+      max-width: 48.41101694915254%; }
+  .contacts--center .contacts__body {
+    padding: 30px 95px;
+    text-align: center; }
+  .contacts--center .contacts__list {
+    text-align: left; }
+  .contacts__body {
+    padding: 30px 50px; }
+  .contacts__list .contacts__list-item {
+    min-width: 25%;
+    max-width: 25%; } }
 
 .body__landing .fixed-social {
   display: none; }
