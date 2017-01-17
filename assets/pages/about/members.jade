@@ -1,0 +1,1137 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Членство"
+				var marketsList = [
+					{
+						'title': 'Список членов KASE',
+						'active': true
+					},
+					{
+						'title': 'Рейтинг активности'
+					},
+					{
+						'title': 'Дипломаты номинаций'
+					},
+					{
+						'title': 'Как стать членом KASE'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Членство',
+					'Список членов KASE'
+				]
+				
+			include ../../modules/breadcrumbs/module
+			h1 Список членов KASE
+			-
+				var gradientTabs = [
+					{
+						'title' : 'Все',
+						'href' : 'report',
+						'active': true
+					},
+					{
+						'title' : 'Банки',
+						'href' : 'banks'
+					},
+					{
+						'title' : 'Брокеры',
+						'href' : 'brokers'
+					},
+					{
+						'title' : 'Маркет-мейкеры',
+						'href' : 'makers'
+					},
+					{
+						'title' : 'Клиринговые участники',
+						'href' : 'members'
+					},
+					{
+						'title' : 'Услуги прямого доступа',
+						'href' : 'services'
+					}
+					]
+			.gradient-tabs.gradient-tabs--not-margin
+				ul.nav(role="tablist")
+					each item in gradientTabs
+						if (item.active == true)
+							li.gradient-tabs__tab.gradient-tabs__tab--green.active(role="presentation")
+								a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+						else
+							li.gradient-tabs__tab.gradient-tabs__tab--green(role="presentation")
+								a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+
+				.tab-content
+					.tab-pane.fade.active.in(id="report", role="tabpanel")
+						div
+							ul.accordion__nav
+								li.active: a(href="#") Индекс KASE
+								li: a(href="#") Объем торгов
+								li: a(href="#") Капитализация
+							.sortin-table--with-search
+								table.sorting-table.table.table-striped
+									thead
+										tr
+											th Наименование
+											th Интернет-сайт
+											th валютный
+											th.center Рынки #[br] фондовый
+											th деривативы
+									tbody
+										tr
+											td: a(href="#") AO "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстан")
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+										tr
+											td: a(href="#") AO "AsiaCredit Bank (АзияКредит Банк)"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+
+					.tab-pane.fade(id="banks", role="tabpanel")
+						div
+							ul.accordion__nav
+								li.active: a(href="#") Все
+								li: a(href="#") Валютная
+								li: a(href="#") Фондовая
+								li: a(href="#") Деривативы
+								li.pull-right Всего членов-56
+
+							.sortin-table--with-search
+								table.sorting-table.table.table-striped
+									thead
+										tr
+											th Наименование
+											th Интернет-сайт
+											th валютный
+											th.center Рынки #[br] фондовый
+											th деривативы
+									tbody
+										tr
+											td: a(href="#") AO "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстан")
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+										tr
+											td: a(href="#") AO "AsiaCredit Bank (АзияКредит Банк)"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "BCC Invest" - дочерняя организация АО "Банк Центр Кредит"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "CAIFC INVESTMENT GROUP"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Capital Bank Kazakhstan"
+											td: a(href="#") www.yoursite.kz
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Delta Bank"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "FALCONRY CAPITAL"
+											td: a(href="#") www.yoursite.kz 
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center 
+												span
+										tr
+											td: a(href="#") AO "Kaspi Bank"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Private Asset Management"
+											td: a(href="#") www.yoursite.kz 
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Qazaq Banki"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "SkyBridge Invest"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span
+										tr
+											td: a(href="#") AO "Tengri Bank"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+
+					.tab-pane.fade(id="brokers", role="tabpanel")
+						div
+							ul.accordion__nav
+								li.active: a(href="#") Все
+								li: a(href="#") Валютная
+								li: a(href="#") Фондовая
+								li: a(href="#") Деривативы
+								li.pull-right Всего членов-56
+
+							.sortin-table--with-search
+								table.sorting-table.table.table-striped
+									thead
+										tr
+											th Наименование
+											th Интернет-сайт
+											th валютный
+											th.center Рынки #[br] фондовый
+											th деривативы
+									tbody
+										tr
+											td: a(href="#") AO "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстан")
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+										tr
+											td: a(href="#") AO "AsiaCredit Bank (АзияКредит Банк)"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "BCC Invest" - дочерняя организация АО "Банк Центр Кредит"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "CAIFC INVESTMENT GROUP"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Capital Bank Kazakhstan"
+											td: a(href="#") www.yoursite.kz
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Delta Bank"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "FALCONRY CAPITAL"
+											td: a(href="#") www.yoursite.kz 
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center 
+												span
+										tr
+											td: a(href="#") AO "Kaspi Bank"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Private Asset Management"
+											td: a(href="#") www.yoursite.kz 
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Qazaq Banki"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "SkyBridge Invest"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span
+										tr
+											td: a(href="#") AO "Tengri Bank"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+										tr
+											td: a(href="#") AO "ZIM Capital"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+										tr
+											td: a(href="#") AO "АСЫЛ-ИНВЕСТ"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "АТФБанк"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Capital Bank Kazakhstan"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+										tr
+											td: a(href="#") AO "Delta Bank"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Алиби Секьюритиз"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+										tr
+											td: a(href="#") AO "Дочерняя организация акционерного общества БТА БАНК" "БТА Секьюритис"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+											td.center
+												span
+										tr
+											td: a(href="#") AO "Дочерняя организация Народного Банка Казахстана Halyk Finance"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span
+										tr
+											td: a(href="#") AO "Дочерняя организация АО Нурбанк" "MONEY EXPERTS"
+											td: a(href="#") www.yoursite.kz 
+											td.center 
+												span
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+											td.center
+												span.checkmark
+													span.checkmark_steam
+													span.checkmark_kick
+
+					.tab-pane.fade(id="makers", role="tabpanel")
+						div
+							ul.accordion__nav
+								li.active: a(href="#") Все
+								li: a(href="#") Акции
+								li: a(href="#") Облигации
+								li: a(href="#") Иностранные валюты
+
+							.sortin-table--with-search
+								table.sorting-table.table.table-striped
+									thead
+										tr
+											th Наименование члена KASE
+											th Кол-во инструментов
+									tbody
+										tr
+											td: a(href="#") AO "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") AO "Цесна Капитал"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "BCC Invest" - дочерняя организация АО "Банк ЦентрКредит"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") AO "Казкоммерц Секьюритиз" (дочерняя организация АО "Казкоммерцбанк")
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") AO "АСЫЛ-ИНВЕСТ"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "Инвестиционный Финансовый Дом "Resmi"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr.sorting-tr.sorting-tr_gray
+											td
+												a(href="#") AO "Сентрас Секьюритиз"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+													wbr
+													a(href="#") ALESb3
+													wbr
+													a(href="#") ALESb4
+													wbr
+													a(href="#") ALESb5
+													wbr
+													a(href="#") ALESb6
+													wbr
+													a(href="#") ALESb8
+													wbr
+													a(href="#") ALESb9
+													wbr
+													a(href="#") CCBN
+													wbr
+													a(href="#") KASTb3
+													wbr
+													a(href="#") KEGC
+													wbr
+													a(href="#") KKGBb6
+													wbr
+													a(href="#") KKGBb7
+													wbr
+													a(href="#") KKGBb8
+													wbr
+													a(href="#") KKGBbe21
+													wbr
+													a(href="#") KKGBbe22
+													wbr
+													a(href="#") KKGBbe22
+													wbr
+													a(href="#") KKGBbe24
+													wbr
+													a(href="#") KTGAb1
+													wbr
+													a(href="#") MREKb8
+													wbr
+													a(href="#") SKKZb22
+													wbr
+													a(href="#") SKKZb23
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "Фридом Финанс"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") AO "Евразийский Капитал"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "Алиби Секьюритиз"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") Дочерний Банк АО "Сбербанк России"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "Private Asset Management"
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") AO "CAIFC INVESTMENT GROUP"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "Народный сберегательный банк Казахстан"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") AO Дочерний Банк "Банк Китая в Казахстане"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+										tr
+											td: a(href="#") AO "Управляющая компания "ОРДА Капитал"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 43
+										tr
+											td: a(href="#") AO "Торгово-промышленный Банк Китая в г.Алматы"
+												div.sorting-tr__child
+													a(href="#") ABBNb1
+													wbr
+													a(href="#") ALBNb3
+													wbr
+													a(href="#") ALESb10
+													wbr
+													a(href="#") ALESb11
+													wbr
+													a(href="#") ALESb12
+											td.text-right: a(href="#") 6
+								span Всего членов-56
+
+					.tab-pane.fade(id="members", role="tabpanel")
+						div
+							ul.accordion__nav
+								li.active: a(href="#") Все
+								li: a(href="#") Валютная
+								li: a(href="#") Фондовая
+								li: a(href="#") Деривативы
+								li.pull-right Всего членов-56
+
+							.sortin-table--with-search
+								table.sorting-table.table.table-striped
+									thead
+										tr
+											th Наименование участника
+											th номер
+											th дата выдачи
+									tbody
+										tr
+											td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+											td 1.2.23/194/33
+											td 07.11.16
+										tr
+											td: a(href="#") Акционерное общество "AsiaCredit Bank (АзияКредит Банк)"
+											td 1.2.75/83
+											td 20.02.15
+										tr
+											td: a(href="#") Акционерное общество "BCC Invest" - дочерняя организация АО "Банк ЦентрКредит"
+											td 0403200488
+											td 01.07.14
+										tr
+											td: a(href="#") Акционерное общество "CAIFC INVESTMENT GROUP"
+											td 4.1.1.110/49
+											td 03.07.14
+										tr
+											td: a(href="#") Акционерное общество "Capital Bank Kazakhstan"
+											td 1.1.9
+											td 18.09.14
+										tr
+											td: a(href="#") Акционерное общество "Delta Bank"
+											td 213
+											td 24.10.07
+										tr
+											td: a(href="#") Акционерное общество "FALCONRY CAPITAL"
+											td 3.2.226/115
+											td 04.07.16
+										tr
+											td: a(href="#") Акционерное общество "ForteBank"
+											td 1.2.29/197/36
+											td 27.02.15
+										tr
+											td: a(href="#") Акционерное общество "Private Asset Management"
+											td 4.2.92/217
+											td 18.06.14
+										tr
+											td: a(href="#") Акционерное общество "Qazaq Banki"
+											td 1.2.204/37
+											td 25.12.14
+										tr
+											td: a(href="#") Акционерное общество "SkyBridge Invest"
+											td 4.2.192/113
+											td 20.07.16
+										tr
+											td: a(href="#") Акционерное общество "Tengri Bank"
+											td 1.1.159
+											td 18.03.16
+										tr
+											td: a(href="#") Акционерное общество "VISOR Capital" (ВИЗОР Капитал)
+											td 3.2.231/9
+											td 13.12.16
+										tr
+											td: a(href="#") Акционерное общество "ZIM Capital"
+											td 3.1.1.224
+											td 17.07.15
+										tr
+											td: a(href="#") Акционерное общество "АСЫЛ ИНВЕСТ"
+											td 0403200645
+											td 01.07.14
+										tr
+											td: a(href="#") Акционерное общество "АТФБанк"
+											td 239
+											td 28.12.07
+										tr
+											td: a(href="#") Акционерное общество "Алиби Секьюритиз"
+											td 0403200660
+											td 03.07.14
+										tr
+											td: a(href="#") Акционерное общество "Банк "Bank RBK"
+											td 1.2.33/223
+											td 05.06.15
+										tr
+											td: a(href="#") Акционерное общество "Банк Kassa Nova"
+											td 1.1.260
+											td 10.06.11
+										tr
+											td: a(href="#") Акционерное общество "Банк Астаны"
+											td 1.1.32
+											td 20.04.15
+										tr
+											td: a(href="#") Акционерное общество "Банк Развития Казахстана"
+											td 253
+											td 30.10.03
+										tr
+											td: a(href="#") Акционерное общество "Банк ЦентрКредит"
+											td 1.2.25/195/34
+											td 28.01.15
+										tr
+											td: a(href="#") Акционерное общество "Банк ЭкспоКредит"
+											td 1.2.43/227
+											td 27.07.16
+										tr
+											td: a(href="#") Акционерное общество "ДОЧЕРНИЙ БАНК "КАЗАХСТАН-ЗИРААТ ИНТЕРНЕШНЛ БАНК"
+											td 163
+											td 29.12.07
+										tr
+											td: a(href="#") Акционерное общество "Дочерняя организация АО "Нурбанк" "MONEY EXPERTS"
+											td 0403200727
+											td 01.07.14
+										tr
+											td: a(href="#") Акционерное общество "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
+											td 3.2.229/7
+											td 04.11.16
+										tr
+											td: a(href="#") Акционерное общество "Евразийский Капитал"
+											td 4.2.206/103
+											td 25.06.04
+										tr
+											td: a(href="#") Акционерное общество "Евразийский банк"
+											td 237
+											td 28.12.07
+										tr
+											td: a(href="#") Акционерное общество "Инвестиционный Дом "Астана-Инвест"
+											td 3.2.228/6
+											td 26.09.16
+										tr
+											td: a(href="#") Акционерное общество "Инвестиционный Финансовый Дом "RESMI"
+											td 0403200520
+											td 01.07.14
+										tr
+											td: a(href="#") Акционерное общество "Исламский Банк "Al Hilal"
+											td 1.1.261
+											td 10.06.15
+										tr
+											td: a(href="#") Акционерное общество "Казинвестбанк"
+											td 221
+											td 21.03.08
+										tr
+											td: a(href="#") Акционерное общество "Казкоммерц Секьюритиз" (дочерняя организация АО "Казоммерцбанк")
+											td 0403200439
+											td 24.06.14
+										tr
+											td: a(href="#") Акционерное общество "Казкоммерцбанк"
+											td 1.2.16/222/32
+											td 02.12.14
+										tr
+											td: a(href="#") Акционерное общество "Казпочта"
+											td 0401200704
+											td 03.02.04
+										tr
+											td: a(href="#") Акционерное общество "Народный сберегательный банк Казахстана"
+											td 1.2.47/230/38
+											td 08.11.16
+										tr
+											td: a(href="#") Акционерное общество "Нурбанк"
+											td 1.2.15/193
+											td 28.10.14
+										tr
+											td: a(href="#") Акционерное общество "Сентрас Секьюритиз"
+											td 0403200223
+											td 13.06.14
+										tr
+											td: a(href="#") Акционерное общество "Ситибанк Казахстан"
+											td 1.2.247/81/30
+											td 16.10.09
+										tr
+											td: a(href="#") Акционерное общество "Торгово-промышленный Банк Китая в городе Алматы"
+											td 1.1.37
+											td 23.02.16
+										tr
+											td: a(href="#") Акционерное общество "Управляющая компания "ОРДА Капитал"
+											td 2103200321
+											td 13.06.14
+										tr
+											td: a(href="#") Акционерное общество "Фридом Финанс"
+											td 4.2.111/218
+											td 03.07.14
+										tr
+											td: a(href="#") Акционерное общество "Цесна Капитал"
+											td 1.2.35/225/37
+											td 30.11.15
+										tr
+											td: a(href="#") Акционерное общество "Эксимбанк Казахстан"
+											td 1.2.232
+											td 12.12.14
+										tr
+											td: a(href="#") Акционерное общество Дочерний Банк "Альфа-Банк"
+											td 236
+											td 21.12.07
+										tr
+											td: a(href="#") Акционерное общество Дочерний Банк "Банк Китая в Казахстане"
+											td 1.1.181
+											td 21.05.13
+										tr
+											td: a(href="#") Государственное учреждение "Национальный Банк Республики Казахстан"
+											td -
+											td -
+										tr
+											td: a(href="#") Дочерний Банк Акционерное Общество "Сбербанк России"
+											td 1.2.199/93/31
+											td 23.12.14
+										tr
+											td: a(href="#") Дочерний Банк Акционерное Общество "Хоум Кредит энд Финанс Банк"
+											td 1.2.36/40
+											td 11.01.16
+										tr
+											td: a(href="#") Дочерний Банк Акционерное Общество "Банк ВТБ (Казахстан)"
+											td 1.2.14/39
+											td 23.12.14
+										tr
+											td: a(href="#") Евразийский банк развития
+											td -
+											td -
+					
+					.tab-pane.fade(id="services", role="tabpanel")
+						.reference-info.reference-info--page
+							ul
+								li #[a(href="#") Казахстанская фондовая биржа]
+									ul.reference-into--icon
+										li.
+											#[a(href="#") Трансляция торгов] - веб-сервис.
+										li.
+											#[a(href="#") Индикаторы биржевого рынка] - бесплатный веб-сервис.
+										li.
+											#[a(href="#") Новости] - бесплатный раздел сайта
+										li.
+											#[a(href="#") Система уведомлений] - бесплатная рассылка.
+								li #[a(href="#") Ирбис:]
+									ul.reference-into--icon
+										li.
+											#[a(href="#") IRIS Finance] - настольное приложение.
+										li.
+											#[a(href="#") Новости финансового рынка] - раздел сайта.
+										li.
+											#[a(href="#") Архив торгов] - веб-сервис.
+										li.
+											#[a(href="#") Итоги торгов] - рассылка
+										li.
+											#[a(href="#") Архивные новости, курсы валют и сделки по рынкам] - наборы файлов.
+								li #[a(href="#") eTrade:]
+									ul.reference-into--icon
+										li.
+											#[a(href="#") Офис брокера] - комплексное решение по автоматизации процессов, связанных с совершением и учетом операций с финансовыми инструментами, составляющими портфель инвестиций компании в соответствии с действующим законодательством.
+										li.
+											#[a(href="#") STrade] - торговый терминал, позволяющий членам Биржи и их клиентам просматривать информацию о ходе торгов в режиме реального времени и совершать операции купли-продажи финансовых инструментов на KASE посредством сети Интернет.
+										li.
+											#[a(href="#") MTrade] - мобильный торговый терминал, позволяющий членам Биржи и их клиентам просматривать информацию о ходе торгов в режиме реального времени и совершать операции купли-продажи финансовых инструментов на KASE посредством сети Интернет.
+										li.
+											#[a(href="#") Модули обмена с ТС Биржи] - Модули обмена позволяют внешним программам участников торгов получить текущую информацию о параметрах финансовых инструментов (котировках, сделках, заявках), а также осуществлять подачу заявок в торговую систему АО "Казахстанская фондовая биржа".
+										li Услуга по выдаче и поддержке ЭЦП – оказании услуг по получению заявителями электронной цифровой подписи.
+										li.
+											#[a(href="#") eTransfer.kz] - система передачи информации от одного участника системы (отправителя) другому участнику (получателю) с использованием механизмов аутентификации, шифрования трафика и электронной цифровой подписи, позволяющих однозначно и достоверное определить, что информация была отправлена конкретным отправителем и дошла до нужного получателя без каких-либо искажений.
+										li.
+											#[a(href="#") JSC.kz] - предоставление возможности акционерным обществам осуществлять публикацию информации о своей деятельности в соответствии с законом Республики Казахстан "Об акционерных обществах".
+										li Размещение баннеров на интернет-сайте KASE – изготовление и размещение баннеров и ссылок на интернет-сайте KASE.
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table > tbody > tr > td a').on('click', function(event) {
+				event.preventDefault();
+				var _self = $(this);
+				_self.closest('tr').toggleClass('sorting-tr sorting-tr_gray');
+			});
+		});
