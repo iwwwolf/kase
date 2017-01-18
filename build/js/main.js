@@ -194,7 +194,7 @@ $(document).ready(function(){
 	
 	}
 	
-	$('.accordion__head-link').on('click', function(e){
+	$(document).on('click', '.accordion__head-link', function( e ){
 	
 		var parent = $(this).parents('.accordion');
 	
@@ -1620,6 +1620,57 @@ $(document).ready(function(){
 	});
 	
 		
+	//======== табы руководства
+	
+	
+	
+	if($('#leadership').length) {
+	
+		$('#leadership .title a').on('click', function(e){
+	
+			var target = $($(this).attr('href'));
+	
+			var parent = $(this).parents('.leadership__nav-item');
+	
+			e.preventDefault();
+	
+	
+	
+			if(mobile || winWidth <= 991) {
+	
+				if(!parent.hasClass('active')){
+	
+					$('#leadership .leadership__nav-item.active').removeClass('active');
+	
+					$('#leadership .leadership__tab-pane.active').removeClass('active').slideUp();
+	
+					parent.addClass('active');
+	
+					target.addClass('active').slideDown();
+	
+				} else {
+	
+					parent.removeClass('active');
+	
+					target.slideUp().removeClass('active');
+	
+				}
+	
+			}
+	
+	
+	
+			//parent
+	
+		});
+	
+	}
+	
+	
+	
+	//===== конец
+	
+		
 	if(!mobile){
 	
 		$('#menu .menu__container').css({overflow: 'hidden'});
@@ -1953,7 +2004,13 @@ $(document).ready(function(){
 	
 		language: "ru",
 	
-	    autoclose: true
+	    autoclose: true,
+	
+	    todayHighlight: true,
+	
+	    endDate: "current",
+	
+	    datesDisabled: KASE_HOLIDAYS
 	
 	});
 	
@@ -1966,7 +2023,7 @@ $(document).ready(function(){
 	
 	    "locale": {
 	
-	        "format": "DD/MM/YYYY",
+	        "format": "DD.MM.YYYY",
 	
 	        "separator": " - ",
 	
@@ -2056,6 +2113,48 @@ $(document).ready(function(){
 	            "direction": "ltr",
 	
 	            "format": "DD/MM/YYYY",
+	
+	            "minDate": "17.11.1993",
+	
+	            isInvalidDate : function (date) {
+	
+	                var thisMonth = date._d.getMonth()+1;
+	
+	
+	
+	                if (thisMonth<10){
+	
+	                    thisMonth = "0"+thisMonth;
+	
+	                }
+	
+	
+	
+	                var thisDate = date._d.getDate();
+	
+	
+	
+	                if (thisDate<10){
+	
+	                    thisDate = "0"+thisDate;
+	
+	                }
+	
+	
+	
+	                var thisYear = date._d.getYear()+1900;
+	
+	                var thisCompare = thisDate +"."+ thisMonth +"."+ thisYear;
+	
+	
+	
+	                if($.inArray(thisCompare,KASE_HOLIDAYS)!=-1){
+	
+	                    return date._pf = {userInvalidated: true};
+	
+	                }
+	
+	            }, 
 	
 	            /*"separator": " - ",
 	

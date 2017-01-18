@@ -1,0 +1,146 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "О нас"
+				var marketsList = [
+					{
+						'title': 'История'
+					},
+					{
+						'title': 'Миссия и ценности'
+					},
+					{
+						'title': 'Руководство',
+						'active': true
+					},
+					{
+						'title': 'Комитеты и комиссии'
+					},
+					{
+						'title': 'Участие в профессиональных организациях'
+					},
+					{
+						'title': 'Корпоративные документы'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'О Биржe',
+					'О нас',
+					'Руководство'
+				]
+				
+			include ../../modules/breadcrumbs/module
+
+			h1 Руководство
+
+			#leadership.leadership
+				.leadership__nav-item
+					.title
+						a(href="#tab-1") Алдамберген Алина Утемискызы
+					.help-text Председатель Правления KASE
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Правления KASE")
+						i.fa.fa-star
+				
+				#tab-1.leadership__tab-pane.active
+					.leadership__head-block
+						.leadership__photo
+							img(src="img-content/img-7.jpg", width="152", height="152", alt="")
+						.leadership__head-text
+							.leadership__name Алдамберген Алина Утемискызы
+							.leadership__position Председатель Правления KASE
+					p.
+						С 09 февраля 2016 года является Председателем Правления KASE.
+					p.
+						Ранее Алдамберген А.У. занимала должности заместителя Председателя Правления АО "Национальный управляющий холдинг "Байтерек", генерального директора ТОО "Самрук-Казына Финанс", заместителя Председателя Агентства Республики Казахстан по регулированию и надзору финансового рынка и финансовых организаций, заместителя Председателя Агентства Республики Казахстан по регулированию деятельности регионального финансового центра города Алматы (АРД РФЦА), а также руководящие посты в АО "ДАБ "ABN AMRO Банк Казахстан" и других банках второго уровня. В разные годы Алдамберген А.У. входила в состав Совета директоров KASE, в том числе являлась ее независимым директором.
+					p.
+						Алдамберген А.У. в 1995 году окончила с отличием Казахскую Государственную Академию Управления, в 1997 году – Школу Делового Администрирования им. Уильяма Е. Саймона Университета Рочестера (MBA).
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-2") Цалюк Андрей Юрьевич
+					.help-text Заместителя Председателя Правления
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Правления KASE")
+						i.fa.fa-star
+
+				#tab-2.leadership__tab-pane 3256
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-3") Хорошевская Наталья Юрьевна
+					.help-text Заместителя Председателя Правления
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Правления KASE")
+						i.fa.fa-star
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-4") Сабитов Идель Марсильевич
+					.help-text Заместителя Председателя Правления
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Правления KASE")
+						i.fa.fa-star
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-5") Турмагамбетов Кайрат Жумабекович
+					.help-text Управляющий директор по развитию бизнеса и член Правления KASE
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Правления KASE")
+						i.fa.fa-star
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-6") Бабаев Ариф Шавердиевич
+					.help-text Член Совета директоров, независимый директор АО "Казахстанская фондовая биржа"
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Совета директоров")
+						i.fa.fa-users
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-7") Джолдасбеков Азамат Мырзаданович
+					.help-text Член Совета директоров АО "Казахстанская фондовая биржа"
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Совета директоров")
+						i.fa.fa-users
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-8") Абдразаков Ельдар Советович
+					.help-text Возглавляет холдинговую компанию "Сентрас Капитал"
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Совета директоров")
+						i.fa.fa-users
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-9") Курманов Жанат Бостанович
+					.help-text Председатель Совета директоров KASE
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Совета директоров")
+						i.fa.fa-users
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-10") Кышпанаков Виктор Алексеевич
+					.help-text Заместитель Председателя Правления АО "BCC Invest".
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Совета директоров")
+						i.fa.fa-users
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-11") Ташметов Мирлан Жапарбекович
+					.help-text Независимый член Совета Директоров и Председатель Экспертного комитета KASE
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Совета директоров")
+						i.fa.fa-users
+
+				.leadership__nav-item
+					.title
+						a(href="#tab-12") Салимов Ертай Исмаилович
+					.help-text Председатель Правления АО "Народный сберегательный банк Казахстана".
+					span.leadership__info-icon(tabindex="0", role="button", data-toggle="popover",data-placement="top", data-trigger="hover", data-content="Член Совета директоров")
+						i.fa.fa-users

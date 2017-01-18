@@ -4,7 +4,7 @@ if($('.accordion').length){
 		$(el).find('.accordion__body').slideUp();
 	});
 }
-$('.accordion__head-link').on('click', function(e){
+$(document).on('click', '.accordion__head-link', function( e ){
 	var parent = $(this).parents('.accordion');
 	var target = parent.find('.accordion__body');
 	e.preventDefault();

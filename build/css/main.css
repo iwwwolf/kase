@@ -91,7 +91,7 @@ body {
   background-color: #f8fafb; }
 
 a {
-  color: #0094de;
+  color: #1666bc;
   -webkit-transition: all 300ms;
   transition: all 300ms; }
   a:hover, a:focus {
@@ -4967,6 +4967,77 @@ table.dataTable.no-footer {
   .contacts__list .contacts__list-item {
     min-width: 25%;
     max-width: 25%; } }
+
+.leadership__nav-item {
+  min-height: 106px;
+  background-color: #fff;
+  margin-bottom: 18px;
+  padding: 23px 40px 15px 30px;
+  border: 1px solid #f8f8f8;
+  position: relative;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+  .leadership__nav-item.active {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08); }
+    .leadership__nav-item.active .title a {
+      color: #3cbd0d; }
+  .leadership__nav-item .title {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 2px; }
+    .leadership__nav-item .title a {
+      color: #45464f; }
+  .leadership__nav-item .help-text {
+    color: #a8b1ba; }
+
+.leadership__info-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+  .leadership__info-icon i {
+    color: #3cbd0d; }
+
+.leadership__tab-pane {
+  display: none;
+  padding: 15px 35px 25px; }
+
+.leadership__head-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 25px; }
+
+.leadership__photo {
+  max-width: 152px;
+  min-width: 152px;
+  margin-bottom: 10px; }
+  .leadership__photo img {
+    display: block;
+    border-radius: 50%; }
+
+.leadership__name {
+  font-size: 30px;
+  color: #3cbd0d;
+  line-height: 1.2;
+  margin-bottom: 6px; }
+
+.leadership__position {
+  color: #a8b1ba; }
+
+@media (min-width: 540px) {
+  .leadership__head-block {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 35px; }
+  .leadership__photo {
+    margin-bottom: 0;
+    margin-right: 20px; } }
 
 .body__landing .fixed-social {
   display: none; }
