@@ -2,7 +2,7 @@ $('input[name="daterange"]').daterangepicker({
 	//"parentEl": '#getDate',
     "autoApply": true,
     "locale": {
-        "format": "DD/MM/YYYY",
+        "format": "DD.MM.YYYY",
         "separator": " - ",
         "fromLabel": "От",
         "toLabel": "До",

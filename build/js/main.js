@@ -109,6 +109,7 @@ $(document).ready(function(){
 				target.slideDown();
 			}
 		});
+<<<<<<< HEAD
 		
 		
 		/* аккордион с якорями */
@@ -171,6 +172,31 @@ $(document).ready(function(){
 				    }
 			    ]
 			});
+=======
+	
+	}
+	
+	$(document).on('click', '.accordion__head-link', function( e ){
+	
+		var parent = $(this).parents('.accordion');
+	
+		var target = parent.find('.accordion__body');
+	
+		e.preventDefault();
+	
+		if(!parent.hasClass('closed')){
+	
+			parent.addClass('closed');
+	
+			target.slideUp();
+	
+		} else {
+	
+			parent.removeClass('closed');
+	
+			target.slideDown();
+	
+>>>>>>> a863a9a2b51a061da12e5753523ab4755c2b9f12
 		}
 				if($('#greatSlider').length){
 		    var greatSlider = $('#greatSlider .great-slider__wrapper');
@@ -624,6 +650,7 @@ $(document).ready(function(){
 					 $('.list-picture-slider__link0').css("display","block");
 				}
 		
+<<<<<<< HEAD
 			});
 			$(".list-picture-slider#listPictureSlider1").on("click",function(e){
 				if($(this).hasClass("active")){
@@ -647,6 +674,73 @@ $(document).ready(function(){
 				}
 		
 			});
+=======
+	//======== табы руководства
+	
+	
+	
+	if($('#leadership').length) {
+	
+		$('#leadership .title a').on('click', function(e){
+	
+			var target = $($(this).attr('href'));
+	
+			var parent = $(this).parents('.leadership__nav-item');
+	
+			e.preventDefault();
+	
+	
+	
+			if(mobile || winWidth <= 991) {
+	
+				if(!parent.hasClass('active')){
+	
+					$('#leadership .leadership__nav-item.active').removeClass('active');
+	
+					$('#leadership .leadership__tab-pane.active').removeClass('active').slideUp();
+	
+					parent.addClass('active');
+	
+					target.addClass('active').slideDown();
+	
+				} else {
+	
+					parent.removeClass('active');
+	
+					target.slideUp().removeClass('active');
+	
+				}
+	
+			}
+	
+	
+	
+			//parent
+	
+		});
+	
+	}
+	
+	
+	
+	//===== конец
+	
+		
+	if(!mobile){
+	
+		$('#menu .menu__container').css({overflow: 'hidden'});
+	
+	}
+	
+	$('#menuBtn').on('click', function(e){
+	
+		e.preventDefault();
+	
+		if($('#greatSlider').length){
+	
+			greatSlider.slick('slickPause');
+	
+>>>>>>> a863a9a2b51a061da12e5753523ab4755c2b9f12
 		}
 		
 				if($('#listSlider').length){
@@ -835,6 +929,7 @@ $(document).ready(function(){
 				var target = $(this).parent().find('.mini-menu__menu');
 				e.preventDefault();
 		
+<<<<<<< HEAD
 				if($(this).hasClass('active')){
 					miniMenuClose();
 				}else {
@@ -857,6 +952,232 @@ $(document).ready(function(){
 				var parent = self.parents('.quotes-info');
 				var activeLi = self.parent().find('.active');
 				parent.prev().show();
+=======
+	$('.datepicker').datepicker({
+	
+		language: "ru",
+	
+	    autoclose: true,
+	
+	    todayHighlight: true,
+	
+	    endDate: "current",
+	
+	    datesDisabled: KASE_HOLIDAYS
+	
+	});
+	
+		
+	$('input[name="daterange"]').daterangepicker({
+	
+		//"parentEl": '#getDate',
+	
+	    "autoApply": true,
+	
+	    "locale": {
+	
+	        "format": "DD.MM.YYYY",
+	
+	        "separator": " - ",
+	
+	        "fromLabel": "От",
+	
+	        "toLabel": "До",
+	
+	        "customRangeLabel": "Custom",
+	
+	        "weekLabel": "Нед.",
+	
+	        "daysOfWeek": [
+	
+	            "Вс",
+	
+	            "Пн",
+	
+	            "Вт",
+	
+	            "Ср",
+	
+	            "Чт",
+	
+	            "Пт",
+	
+	            "Сб"
+	
+	        ],
+	
+	        "monthNames": [
+	
+	            "Январь",
+	
+	            "Февраль",
+	
+	            "Март",
+	
+	            "Апрель",
+	
+	            "Май",
+	
+	            "Июнь",
+	
+	            "Июль",
+	
+	            "Август",
+	
+	            "Сентябрь",
+	
+	            "Октябрь",
+	
+	            "Ноябрь",
+	
+	            "Декабрь"
+	
+	        ],
+	
+	        "firstDay": 1
+	
+	    },
+	
+	    "linkedCalendars": false,
+	
+	    "startDate": "01/12/2016",
+	
+	    "endDate": "07/12/2016",
+	
+	    "opens": "left"
+	
+	}, function(start, end, label) {
+	
+	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+	
+	});
+	
+		
+	if($('#datePicker').length){
+	
+	    $('#datePicker input').daterangepicker({
+	
+	        "singleDatePicker": true,
+	
+	        "showDropdowns": true,
+	
+	        "locale": {
+	
+	            "direction": "ltr",
+	
+	            "format": "DD/MM/YYYY",
+	
+	            "minDate": "17.11.1993",
+	
+	            isInvalidDate : function (date) {
+	
+	                var thisMonth = date._d.getMonth()+1;
+	
+	
+	
+	                if (thisMonth<10){
+	
+	                    thisMonth = "0"+thisMonth;
+	
+	                }
+	
+	
+	
+	                var thisDate = date._d.getDate();
+	
+	
+	
+	                if (thisDate<10){
+	
+	                    thisDate = "0"+thisDate;
+	
+	                }
+	
+	
+	
+	                var thisYear = date._d.getYear()+1900;
+	
+	                var thisCompare = thisDate +"."+ thisMonth +"."+ thisYear;
+	
+	
+	
+	                if($.inArray(thisCompare,KASE_HOLIDAYS)!=-1){
+	
+	                    return date._pf = {userInvalidated: true};
+	
+	                }
+	
+	            }, 
+	
+	            /*"separator": " - ",
+	
+	            "applyLabel": "Apply",
+	
+	            "cancelLabel": "Cancel",*/
+	
+	            "daysOfWeek": [
+	
+	                "Вс",
+	
+	                "Пн",
+	
+	                "Вт",
+	
+	                "Ср",
+	
+	                "Чт",
+	
+	                "Пт",
+	
+	                "Сб"
+	
+	            ],
+	
+	            "monthNames": [
+	
+	                "Январь",
+	
+	                "Февраль",
+	
+	                "Март",
+	
+	                "Апрель",
+	
+	                "Май",
+	
+	                "Июнь",
+	
+	                "Июль",
+	
+	                "Август",
+	
+	                "Сентябрь",
+	
+	                "Октябрь",
+	
+	                "Ноябрь",
+	
+	                "Декабрь"
+	
+	            ],
+	
+	            "firstDay": 1
+	
+	        },
+	
+	        "minDate": "20/06/2016",
+	
+	        "maxDate": new Date(),
+	
+	        "parentEl": "#datePicker"
+	
+	    }, function(start, end, label) {
+	
+	    }).focus();
+	
+	}
+	
+>>>>>>> a863a9a2b51a061da12e5753523ab4755c2b9f12
 		
 				$.ajax({
 					//url: 'http://kase.dev/build/server/quotes-info/' + title + '.html',
