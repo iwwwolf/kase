@@ -1,0 +1,334 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Членство"
+				var marketsList = [
+					{
+						'title': 'Список членов KASE'
+					},
+					{
+						'title': 'Маркет-мейкеры',
+						'active': true
+					},
+					{
+						'title': 'Клиринговые участники'
+					},
+					{
+						'title': 'Услуги прямого доступа'
+					},
+					{
+						'title': 'Рейтинг активности'
+					},
+					{
+						'title': 'Дипломаты номинаций'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Членство',
+					'Маркет-мейкеры'
+				]
+				
+			include ../../modules/breadcrumbs/module
+			h1 Маркет-мейкеры
+			div
+				ul.accordion__nav
+					li.active: a(href="#") Все
+					li: a(href="#") Акции
+					li: a(href="#") Облигации
+					li: a(href="#") Иностранные валюты
+				.tab-content
+					.sortin-table--with-search
+						table.sorting-table.table.table-striped
+							thead
+								tr
+									th Наименование члена KASE
+									th Кол-во инструментов
+							tbody
+								tr
+									td: a(href="#") AO "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") AO "Цесна Капитал"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "BCC Invest" - дочерняя организация АО "Банк ЦентрКредит"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") AO "Казкоммерц Секьюритиз" (дочерняя организация АО "Казкоммерцбанк")
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") AO "АСЫЛ-ИНВЕСТ"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "Инвестиционный Финансовый Дом "Resmi"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr.sorting-tr.sorting-tr_gray
+									td
+										a(href="#") AO "Сентрас Секьюритиз"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+											wbr
+											a(href="#") ALESb3
+											wbr
+											a(href="#") ALESb4
+											wbr
+											a(href="#") ALESb5
+											wbr
+											a(href="#") ALESb6
+											wbr
+											a(href="#") ALESb8
+											wbr
+											a(href="#") ALESb9
+											wbr
+											a(href="#") CCBN
+											wbr
+											a(href="#") KASTb3
+											wbr
+											a(href="#") KEGC
+											wbr
+											a(href="#") KKGBb6
+											wbr
+											a(href="#") KKGBb7
+											wbr
+											a(href="#") KKGBb8
+											wbr
+											a(href="#") KKGBbe21
+											wbr
+											a(href="#") KKGBbe22
+											wbr
+											a(href="#") KKGBbe22
+											wbr
+											a(href="#") KKGBbe24
+											wbr
+											a(href="#") KTGAb1
+											wbr
+											a(href="#") MREKb8
+											wbr
+											a(href="#") SKKZb22
+											wbr
+											a(href="#") SKKZb23
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "Фридом Финанс"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") AO "Евразийский Капитал"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "Алиби Секьюритиз"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") Дочерний Банк АО "Сбербанк России"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "Private Asset Management"
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") AO "CAIFC INVESTMENT GROUP"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "Народный сберегательный банк Казахстан"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") AO Дочерний Банк "Банк Китая в Казахстане"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+								tr
+									td: a(href="#") AO "Управляющая компания "ОРДА Капитал"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 43
+								tr
+									td: a(href="#") AO "Торгово-промышленный Банк Китая в г.Алматы"
+										div.sorting-tr__child
+											a(href="#") ABBNb1
+											wbr
+											a(href="#") ALBNb3
+											wbr
+											a(href="#") ALESb10
+											wbr
+											a(href="#") ALESb11
+											wbr
+											a(href="#") ALESb12
+									td.text-right: a(href="#") 6
+						span Всего членов-56
+	
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table > tbody > tr > td a').on('click', function(event) {
+				event.preventDefault();
+				var _self = $(this);
+				_self.closest('tr').toggleClass('sorting-tr sorting-tr_gray');
+			});
+		});
