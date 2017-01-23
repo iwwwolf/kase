@@ -1,3 +1,9 @@
+.leadership {
+	.popover {
+		max-width: none;
+		min-width: 230px;
+	}
+}
 .leadership__nav-item {
 	min-height: 106px;
 	background-color: #fff;
@@ -77,5 +83,18 @@
 	.leadership__photo {
 		margin-bottom: 0;
 		margin-right: 20px;
+	}
+}
+@media(min-width: 991px) {
+	.leadership {
+		position: relative;
+		padding-left: 48.51694915254237%;
+	}
+	.leadership__tab-pane {
+		width: 48.51694915254237%;
+		padding: 0 30px 20px 0;
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 }

@@ -753,7 +753,7 @@ $(document).ready(function(){
 				var parent = $(this).parents('.leadership__nav-item');
 				e.preventDefault();
 		
-				if(mobile || winWidth <= 991) {
+				if((mobile && winWidth <= 991) || winWidth <= 991) {
 					if(!parent.hasClass('active')){
 						$('#leadership .leadership__nav-item.active').removeClass('active');
 						$('#leadership .leadership__tab-pane.active').removeClass('active').slideUp();
@@ -763,11 +763,32 @@ $(document).ready(function(){
 						parent.removeClass('active');
 						target.slideUp().removeClass('active');
 					}
+				} else {
+					$('#leadership .leadership__nav-item').each(function(index, obj){
+						if(!parent.hasClass('active')){
+							$('#leadership .leadership__nav-item.active').removeClass('active');
+							$('#leadership .leadership__tab-pane.active').removeClass('active').fadeOut(function(){
+								target.addClass('active').fadeIn();
+							});
+							parent.addClass('active');
+						} else {
+							return false;
+						}
+					});
 				}
 		
 				//parent
 			});
-		}
+			if(winWidth >= 992) {
+				$('#leadership .leadership__nav-item').each(function(index, obj){
+					if(index == 0) {
+						console.log($(this))
+						$($(this).find('.title a').attr('href')).fadeIn().addClass('');
+						$(this).addClass('active');
+					}
+				});
+			}
+		};
 		
 		//===== конец
 				if(!mobile){
@@ -937,8 +958,8 @@ $(document).ready(function(){
 			language: "ru",
 		    autoclose: true,
 		    todayHighlight: true,
-		    endDate: "current",
-		    datesDisabled: KASE_HOLIDAYS
+		    endDate: "current"
+		    //datesDisabled: KASE_HOLIDAYS
 		});
 				$('input[name="daterange"]').daterangepicker({
 			//"parentEl": '#getDate',

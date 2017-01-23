@@ -702,6 +702,17 @@ a.up:after {
 .right-content-column {
   position: relative; }
 
+.popover {
+  font-family: "MuseoSansCyrl", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  background-color: #fff;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.14); }
+  .popover.top > .arrow {
+    border-top-color: rgba(0, 0, 0, 0.06); }
+
 @media (min-width: 649px) {
   .market-block__dropdown.accordion__docs {
     -ms-flex-wrap: nowrap;
@@ -5012,6 +5023,10 @@ table.dataTable.no-footer {
     min-width: 25%;
     max-width: 25%; } }
 
+.leadership .popover {
+  max-width: none;
+  min-width: 230px; }
+
 .leadership__nav-item {
   min-height: 106px;
   background-color: #fff;
@@ -5082,6 +5097,17 @@ table.dataTable.no-footer {
   .leadership__photo {
     margin-bottom: 0;
     margin-right: 20px; } }
+
+@media (min-width: 991px) {
+  .leadership {
+    position: relative;
+    padding-left: 48.51694915254237%; }
+  .leadership__tab-pane {
+    width: 48.51694915254237%;
+    padding: 0 30px 20px 0;
+    position: absolute;
+    left: 0;
+    top: 0; } }
 
 .body__landing .fixed-social {
   display: none; }
