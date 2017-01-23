@@ -41,7 +41,9 @@ block content
 				]
 				
 			include ../../modules/breadcrumbs/module
+
 			h1 Список членов KASE
+			span.members-span Основной вид деятельности:
 			-
 				var gradientTabs = [
 					{
@@ -72,6 +74,7 @@ block content
 					.tab-pane.fade.active.in(id="report", role="tabpanel")
 						div
 							ul.accordion__nav
+								li.members-list Категория членства:
 								li.active: a(href="#") Индекс KASE
 								li: a(href="#") Объем торгов
 								li: a(href="#") Капитализация
@@ -81,21 +84,17 @@ block content
 										tr
 											th Наименование
 											th Интернет-сайт
-											th валютный
+											th.center валютный
 											th.center Рынки #[br] фондовый
-											th деривативы
+											th.center деривативы
 									tbody
 										tr
 											td: a(href="#") AO "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстан")
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 										tr
@@ -103,18 +102,15 @@ block content
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 
 					.tab-pane.fade(id="banks", role="tabpanel")
 						div
 							ul.accordion__nav
+								li.members-list Категория членства:
 								li.active: a(href="#") Все
 								li: a(href="#") Валютная
 								li: a(href="#") Фондовая
@@ -127,21 +123,17 @@ block content
 										tr
 											th Наименование
 											th Интернет-сайт
-											th валютный
+											th.center валютный
 											th.center Рынки #[br] фондовый
-											th деривативы
+											th.center деривативы
 									tbody
 										tr
 											td: a(href="#") AO "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстан")
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 										tr
@@ -149,29 +141,19 @@ block content
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "BCC Invest" - дочерняя организация АО "Банк Центр Кредит"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "CAIFC INVESTMENT GROUP"
 											td: a(href="#") www.yoursite.kz 
@@ -179,25 +161,17 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Capital Bank Kazakhstan"
 											td: a(href="#") www.yoursite.kz
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Delta Bank"
 											td: a(href="#") www.yoursite.kz 
@@ -205,23 +179,15 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "FALCONRY CAPITAL"
 											td: a(href="#") www.yoursite.kz 
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center 
 												span
 										tr
@@ -231,47 +197,31 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Private Asset Management"
 											td: a(href="#") www.yoursite.kz 
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center 
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Qazaq Banki"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "SkyBridge Invest"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
@@ -283,14 +233,13 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 
 					.tab-pane.fade(id="brokers", role="tabpanel")
 						div
 							ul.accordion__nav
+								li.members-list Категория членства:
 								li.active: a(href="#") Все
 								li: a(href="#") Валютная
 								li: a(href="#") Фондовая
@@ -303,21 +252,17 @@ block content
 										tr
 											th Наименование
 											th Интернет-сайт
-											th валютный
+											th.center валютный
 											th.center Рынки #[br] фондовый
-											th деривативы
+											th.center деривативы
 									tbody
 										tr
 											td: a(href="#") AO "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстан")
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 										tr
@@ -325,29 +270,19 @@ block content
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "BCC Invest" - дочерняя организация АО "Банк Центр Кредит"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "CAIFC INVESTMENT GROUP"
 											td: a(href="#") www.yoursite.kz 
@@ -355,25 +290,17 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Capital Bank Kazakhstan"
 											td: a(href="#") www.yoursite.kz
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Delta Bank"
 											td: a(href="#") www.yoursite.kz 
@@ -381,23 +308,15 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "FALCONRY CAPITAL"
 											td: a(href="#") www.yoursite.kz 
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center 
 												span
 										tr
@@ -407,47 +326,31 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Private Asset Management"
 											td: a(href="#") www.yoursite.kz 
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center 
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Qazaq Banki"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "SkyBridge Invest"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
@@ -459,8 +362,6 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 										tr
@@ -470,8 +371,6 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 										tr
@@ -479,14 +378,10 @@ block content
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "АТФБанк"
 											td: a(href="#") www.yoursite.kz 
@@ -496,19 +391,13 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Capital Bank Kazakhstan"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 										tr
@@ -520,30 +409,20 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Алиби Секьюритиз"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 										tr
 											td: a(href="#") AO "Дочерняя организация акционерного общества БТА БАНК" "БТА Секьюритис"
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 											td.center
@@ -553,12 +432,8 @@ block content
 											td: a(href="#") www.yoursite.kz 
 											td.center 
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span
 										tr
@@ -568,12 +443,8 @@ block content
 												span
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 											td.center
 												span.checkmark
-													span.checkmark_steam
-													span.checkmark_kick
 					
 					.tab-pane.fade(id="services", role="tabpanel")
 						.reference-info.reference-info--page

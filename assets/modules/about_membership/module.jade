@@ -2,9 +2,11 @@
 	each item in membershipArray
 		.about-membership-block
 			div(class="about-membership-block__icon about-membership-block--" + pictureSize)
-					img(src="images/"+ item.icon, alt="")
-			.about-membership-block__description
+					img.about-membership-block__img(src="images/"+ item.icon, alt="")
+			.about-membership-block__description.clearfix
 				for listItem in item.list
 					.about-membership-block__title=listItem.title 
+					if (listItem.link)
+						a(href="#", class="blue pull-left")= listItem.link + " - "
 					.about-membership-block__text= listItem.text
 

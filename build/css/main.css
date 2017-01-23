@@ -575,6 +575,9 @@ h5, .h5 {
 .sorting-table > tbody > tr.sorting-tr .sorting-tr__child {
   display: block; }
 
+.sorting-table > tbody td {
+  position: relative; }
+
 a.down:after {
   border: 4px solid transparent;
   border-top: 5px solid #45464f;
@@ -934,25 +937,28 @@ a.up:after {
   font-weight: 700; }
 
 .checkmark {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); }
-  .checkmark_steam, .checkmark_kick {
-    position: absolute;
-    display: block;
-    background-color: #359e3f; }
-  .checkmark_steam {
-    left: 11px;
-    top: 4px;
-    height: 12px;
-    width: 2px; }
-  .checkmark_kick {
-    left: 5px;
-    top: 16px;
-    height: 2px;
-    width: 8px; }
+  display: block;
+  width: 0;
+  height: 0;
+  margin: -5px auto 5px;
+  border: 8px solid transparent;
+  border-bottom: 15px solid #359e3f; }
+
+.accordion__nav .members-list,
+.members-span {
+  color: #a8b1ba; }
+
+.members-span {
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 10px; }
+
+.accordion__nav .members-list {
+  margin-right: 20px;
+  padding-left: 0; }
+
+.blue {
+  color: #0094de; }
 
 @media (max-width: 992px) {
   .trade-row + .trade-row {
@@ -4816,12 +4822,15 @@ table.dataTable.no-footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #d0dae3;
+  border-radius: 50%; }
   .about-membership-block__icon img {
     display: block;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%; }
+    width: 55px;
+    height: auto; }
 
 @media (min-width: 768px) {
   .about-membership-block {
@@ -4848,10 +4857,8 @@ table.dataTable.no-footer {
     margin: 0 20px 0 0; }
     .about-membership-block__icon img {
       display: block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%; }
+      width: 55px;
+      height: auto; }
   .about-membership-block__title {
     text-align: left; }
   .about-membership-block__text {
