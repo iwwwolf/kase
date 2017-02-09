@@ -3230,7 +3230,8 @@ footer {
 
 .markets-menu {
   width: 87%;
-  font-size: 128.57143%; }
+  font-size: 128.57143%;
+  z-index: 5; }
   .markets-menu h3 {
     display: none;
     text-transform: uppercase;
