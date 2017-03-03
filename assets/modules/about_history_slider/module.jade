@@ -1,0 +1,17 @@
+.container.history.steps.slider
+	p.steps-title Основные этапы развития KASE
+	.sliders
+		.slider-nav
+			each slide in historySlider
+				.slide
+					.slide-year-button
+						p= slide.year
+		.slider-main
+			each slide in historySlider
+				.slide
+					.row
+						.col-md-6.preview
+							img(src="images/"+ slide.preview)
+						.col-md-6.description
+							for yearTexts in slide.description
+								p= yearTexts

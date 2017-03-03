@@ -1,0 +1,11 @@
+table.missions__main-table
+	each item in missionsItems
+		tr
+			td.preview
+				img(src="images/"+ item.preview)
+			td.description
+				p.title= item.title
+				p.full-text= item.description
+					if(item.link!='')
+						br
+						a(href="#")= item.link

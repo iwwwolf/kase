@@ -109,26 +109,44 @@ block content
 			.gradient-tabs
 				ul.nav(role="tablist")
 					li.gradient-tabs__tab.gradient-tabs__tab--green.active(role="presentation")
-						a(href="#mSpecial", role="tab", data-toggle="tab"): span Метод специализированных торгов
+						a(href="#mSpecial", role="tab", data-toggle="tab"): span Общая процедура листинга
 
 					li.gradient-tabs__tab.gradient-tabs__tab--green(role="presentation")
-						a(href="#mSubscribe", role="tab", data-toggle="tab"): span Метод подписки
+						a(href="#mSubscribe", role="tab", data-toggle="tab"): span Упрощенная процедура листинга
 
 					li.gradient-tabs__tab.gradient-tabs__tab--green(role="presentation")
-						a(href="#mDeal", role="tab", data-toggle="tab"): span Метод прямых сделок
+						a(href="#mDeal", role="tab", data-toggle="tab"): span Двойной листинг
 
 
-			.tab-content
+			.tab-content.listing
 				.gratient-tabs__accordion-body.tab-pane.fade.active.in(id="mSpecial", role="tabpanel")
 					img(src="images/listing-process.jpg", alt="")
 
 
 				.gratient-tabs__accordion-body.tab-pane.fade(id="mSubscribe", role="tabpanel")
-					img(src="", alt="Нет картинки")
-
+					p Упрощенная процедура листинга применяется только для ценных бумаг, выпущенных на территории иностранного государства, эмитент которых не признается резидентом Республики Казахстан в соответствии с пунктом 3 статьи 22-1 закона Республики Казахстан "О рынке ценных бумаг".
+					p Для применения упрощенной процедуры листинга необходимо, чтобы эмитент и его ценные бумаги соответствовали листинговым требованиям категории официального списка, по которой планируется включение ценных бумаг.
+					h4 А так же следующим требованиям:
+					.container.requirements-more
+						.col-xs-12.col-sm-6.col-lg-3
+							p ценные бумаги включены в официальный список London Stock Exchange Group (London Stock Exchange and Borsa Italiana SpA), либо иностранной фондовой биржи, являющейся полным членом Всемирной федерации бирж (World Federation of Exchanges);
+						.col-xs-12.col-sm-6.col-lg-3
+							p раскрытие информации об эмитенте и его ценных бумагах осуществляется на официальном сайте соответствующей иностранной фондовой биржи;
+						.col-xs-12.col-sm-6.col-lg-3
+							p аудит финансовой отчетности эмитента проводится аудиторской организацией, признаваемой иностранной фондовой биржей, в официальный список которой включены ценные бумаги;
+						.col-xs-12.col-sm-6.col-lg-3
+							p в учредительных и эмиссионных документах эмитента отсутствуют нормы, ущемляющие или ограничивающие права собственников ценных бумаг на их отчуждение (передачу).
 
 				.gratient-tabs__accordion-body.tab-pane.fade(id="mDeal", role="tabpanel")
-					img(src="", alt="Нет картинки")
+					p Двойной листинг – это последовательное прохождение процедуры листинга на более чем одной фондовой бирже с целью повышения ликвидности ценных бумаг эмитента.
+					p Прежде чем, принимать решение о прохождении двойного листинга эмитенту необходимо изучить статью 22-1 закона Республики Казахстан "О рынке ценных бумаг" от 02 июля 2003 года.
+					h3 Плюсы и минусы двойного листинга
+
+					.container.listing-more
+						.col-xs-12.col-sm-6.col-lg-3.col-lg-offset-3
+							p действующие налоговые льготы, рост ликвидности
+						.col-xs-12.col-sm-6.col-lg-3
+							p раскрытие информации на двух биржах
 
 			.gradient-tabs
 				#gradientTabsAccordion.gratient-tabs__accordion
@@ -169,7 +187,7 @@ block content
 							div(class="landing-section__text")
 								p Проверка на соответствие листинговым требованиям
 
-							.landing-section__description Выберите интересующую Вас категорию для проверки соответствия листинговым требованиям 	
+							.landing-section__description Выберите интересующую Вас категорию для проверки соответствия листинговым требованиям
 							-
 								var listColumn = [
 									{
@@ -335,6 +353,3 @@ block content
 			h2 Рассчитать листинговые сборы
 
 			a.btn.btn-transparent.btn-transparent--white(href="#"): span Калькулятор
-
-
-			

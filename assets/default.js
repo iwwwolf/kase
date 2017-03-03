@@ -88,3 +88,73 @@ function getInternetExplorerVersion()
     }
     return rv;
 }
+
+//Слайдер в истории
+/*
+if($('.container.history.steps.slider').length>0){
+	var historySlider = $('.container.history.steps.slider');
+	var previous = historySlider.find('.arrow.left');
+	var next = historySlider.find('.arrow.right');
+	var year = historySlider.find('.years .year');
+	var yearDescription = '';
+	var yearPreview = '';
+	var descriptionBlock = historySlider.find('.description');
+	var previewBlock = historySlider.find('.preview');
+	if(historySlider.find('.year.current').length!=1){
+		year.removeClass('current');
+		historySlider.find('.year:nth-child(1)').addClass('current');
+	}
+	var currentId = historySlider.find('.year.current').attr('id');
+	var left = 22.5;
+	var slidesCount = year.length;
+	function sliderStart(){
+		if((currentId>0)&&(currentId<=year.length)){
+			year.removeClass('current');
+			historySlider.find('.years .year:nth-child('+currentId+')').addClass('current');
+			year.css('margin-left',left*(2-currentId)+'%');
+			descriptionBlock.html('').fadeOut(0);
+			previewBlock.html('').fadeOut(0);
+			yearDescription = historySlider.find('.years .year:nth-child('+currentId+') .year_data-description').html();
+			descriptionBlock.html(yearDescription).fadeIn(500);
+			yearPreview = historySlider.find('.years .year:nth-child('+currentId+') .year_data-preview').html();
+			previewBlock.html(yearPreview).fadeIn(500);
+		} else if(currentId==0){currentId = 1;
+		} else if (currentId>year.length){currentId = year.length;}
+	}
+	sliderStart();
+	year.each(function(){
+		var localId = $(this).attr('id');
+		$(this).css('left',left*localId+'%');
+	});
+	year.click(function(){
+		currentId = $(this).attr('id');
+		sliderStart();
+	});
+	next.click(function(){currentId++;sliderStart();});
+	previous.click(function(){currentId--;sliderStart();});
+}
+*/
+
+ $('.slider-main').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: true,
+	fade: false,
+	infinite: false,
+	asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	asNavFor: '.slider-main',
+	dots: false,
+	centerMode: true,
+	focusOnSelect: true,
+	infinite: false,
+	responsive: [{
+		breakpoint: 768,
+		settings:{
+			slidesToShow: 1,
+		}
+	}]
+});
