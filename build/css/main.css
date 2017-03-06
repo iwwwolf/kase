@@ -1183,11 +1183,78 @@ a.up:after {
         .container.missions #centerColumn.center-column table.missions__main-table tr td.preview {
           padding: 20px 0; } }
 
-.landing-section .container .tab-content.listing .gratient-tabs__accordion-body > p {
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body > p,
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body > p {
   margin: 10px 200px; }
 
-.landing-section .container .tab-content.listing .gratient-tabs__accordion-body > h4 {
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body > h4,
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body > h4 {
   margin-top: 30px; }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body.collapse > p,
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body.collapse > p {
+  margin: 10px 10px; }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div,
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div,
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div,
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div {
+  background-repeat: no-repeat;
+  background-position: 30px 20px;
+  background-size: auto 70px;
+  margin-top: 31px;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px); }
+  .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div p,
+  .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div p,
+  .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div p,
+  .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div p {
+    padding: 31px 21px;
+    display: block;
+    width: 98%;
+    box-shadow: 0 5px 21px 1px rgba(53, 58, 60, 0.1);
+    height: 350px;
+    font-size: 16px;
+    text-align: left; }
+
+@media only screen and (max-width: 649px) {
+  .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div,
+  .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div,
+  .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div,
+  .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+    .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div p,
+    .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div p,
+    .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div p,
+    .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div p {
+      height: auto; } }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(1),
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(1) {
+  background-image: url(../images/block_1.png); }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(2),
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(2) {
+  background-image: url(../images/block_2.png); }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(3),
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(3) {
+  background-image: url(../images/block_3.png); }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(4),
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(4) {
+  background-image: url(../images/block_4.png); }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div:nth-child(1),
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div:nth-child(1) {
+  background-image: url(../images/block_plus.png); }
+
+.landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div:nth-child(2),
+.landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div:nth-child(2) {
+  background-image: url(../images/block_minus.png);
+  background-position: 30px 78px;
+  background-size: auto; }
 
 .btn {
   font-size: 100%;
