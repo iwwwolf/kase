@@ -1183,6 +1183,47 @@ a.up:after {
         .container.missions #centerColumn.center-column table.missions__main-table tr td.preview {
           padding: 20px 0; } }
 
+section.landing-section.inst-title p {
+  margin: 0 22%; }
+
+section.landing-section.inst-list-bar p.more:before {
+  content: ' ';
+  display: block;
+  max-width: 600px;
+  height: 1px;
+  background-color: #e8edf0;
+  margin: 0 auto 30px; }
+
+section.landing-section.inst-dma p {
+  text-align: left;
+  font-size: 16px; }
+
+section.landing-section.inst-operations li {
+  text-align: left;
+  font-size: 16px;
+  margin-top: 10px; }
+
+section.landing-section.inst-operations p.more {
+  margin: 0 22%;
+  color: #b0b0b0;
+  font-size: 14px; }
+  section.landing-section.inst-operations p.more:before {
+    content: ' ';
+    display: block;
+    max-width: 600px;
+    height: 1px;
+    background-color: #e8edf0;
+    margin: 0 auto 30px; }
+
+@media only screen and (min-width: 992px) {
+  section.landing-section.inst-links .useful-links .useful-links__link {
+    width: 15%; } }
+
+section.landing-section.inst-support {
+  max-width: 750px;
+  box-shadow: 0 18px 33px 2px rgba(53, 58, 60, 0.1);
+  margin: 30px auto; }
+
 .landing-section .container .tab-content.listing .gratient-tabs__accordion-body > p,
 .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body > p {
   margin: 10px 200px; }
