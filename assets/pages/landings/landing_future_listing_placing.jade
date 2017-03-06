@@ -69,7 +69,7 @@ block content
 						a(href="#mDeal", role="tab", data-toggle="tab"): span Метод прямых сделок
 
 
-		.tab-content
+		.tab-content.placing
 			.gratient-tabs__accordion-body.tab-pane.fade.active.in(id="mSpecial", role="tabpanel")
 				.container
 					.landing-section__text
@@ -119,16 +119,31 @@ block content
 						include ../../modules/landings_modules/two-variants/module
 
 			.gratient-tabs__accordion-body.tab-pane.fade(id="mSubscribe", role="tabpanel")
-				.container
+				.container.placing-content
 					.landing-section__text
 						p.
-							Метод подписки используется при размещении ценных бумаг и проводится на KASE только при наличии единственного продавца и только при размещении ценных бумаг, которые включены в официальный список Биржи или по которым получено согласие Биржи на их включение в ее официальный список. Подписка в отличие от аукциона основана на построении книги заявок с указанием имен/наименований покупателей. По времени проведения подписка, как правило, занимает несколько дней. Продавец (инициатор торгов) сам определяет условия размещения: параметры, цена размещения, категория инвесторов, которые могут участвовать в подписке.
+							Метод подписки используется при размещении ценных бумаг и проводится на KASE только при наличии единственного продавца и только при размещении ценных бумаг, которые включены в официальный список Биржи или по которым получено согласие Биржи на их включение в ее официальный список.
 
+					.placing-adventages
+						svg.double-down(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 27.6 24.8", style="enable-background:new 0 0 27.6 24.8;", xml:space="preserve")
+							path(fill="#5bac3c", fill-rule:evenodd, clip-rule:evenodd, d="M1.1,10l13.8,13.8l-1.1,1.1L0,11.1L1.1,10z")
+							path(fill="#5bac3c", fill-rule:evenodd, clip-rule:evenodd, d="M26.5,10l1.1,1.1L13.8,24.8l-1.1-1.1L26.5,10z")
+							path(fill="#5bac3c", fill-rule:evenodd, clip-rule:evenodd, d="M1.1,0l13.8,13.8l-1.1,1.1L0,1.1L1.1,0z")
+							path(fill="#5bac3c", fill-rule:evenodd, clip-rule:evenodd, d="M26.5,0l1.1,1.1L13.8,14.8l-1.1-1.1L26.5,0z")
+						table
+							tr
+								td
+									p Подписка в отличие от аукциона основана на построении книги заявок с указанием имен/наименований покупателей
+								td
+									p По времени проведения подписка, как правило, занимает несколько дней.
+								td
+									p Продавец (инициатор торгов) сам определяет условия размещения: параметры, цена размещения, категория инвесторов, которые могут участвовать в подписке.
 			.gratient-tabs__accordion-body.tab-pane.fade(id="mDeal", role="tabpanel")
 				.container
 					.landing-section__text
 						p.
 							Метод прямых сделок предполагает, что каждая отдельная сделка заключается в результате проведения переговоров между двумя участниками торгов и достижения ими согласия о заключении между ними данной сделки. Подача участником торгов индикативной котировки не накладывает на него обязательства заключить сделку на основе данной индикативной котировки. При размещении ценных бумаг методом прямых сделок (договорных сделок) отсутствуют налоговые льготы по приросту ценных бумаг, реализованных посредством прямой сделки.
+
 				section.landing-section.landing-section--gray-bg
 					svg.double-down(version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", x="0px", y="0px", viewBox="0 0 27.6 24.8", style="enable-background:new 0 0 27.6 24.8;", xml:space="preserve")
 						path(fill="#5bac3c", fill-rule:evenodd, clip-rule:evenodd, d="M1.1,10l13.8,13.8l-1.1,1.1L0,11.1L1.1,10z")
@@ -153,7 +168,7 @@ block content
 						include ../../modules/landings_modules/two-variants/module
 
 
-		.gradient-tabs
+		.gradient-tabs.placing
 			#gradientTabsAccordion.gratient-tabs__accordion
 				.gratient-tabs__accordion-pane.panel.active
 					.container
@@ -205,10 +220,20 @@ block content
 						.gratient-tabs__accordion-link.gratient-tabs__accordion-link--green
 							a.collapsed(data-target="#mSubscribeMob", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Метод подписки
 					.gratient-tabs__accordion-body.collapse(id="mSubscribeMob", role="tabpanel")
-						.container
+						.container.placing-content
 							.landing-section__text
 								p.
-									Метод подписки используется при размещении ценных бумаг и проводится на KASE только при наличии единственного продавца и только при размещении ценных бумаг, которые включены в официальный список Биржи или по которым получено согласие Биржи на их включение в ее официальный список. Подписка в отличие от аукциона основана на построении книги заявок с указанием имен/наименований покупателей. По времени проведения подписка, как правило, занимает несколько дней. Продавец (инициатор торгов) сам определяет условия размещения: параметры, цена размещения, категория инвесторов, которые могут участвовать в подписке.
+									Метод подписки используется при размещении ценных бумаг и проводится на KASE только при наличии единственного продавца и только при размещении ценных бумаг, которые включены в официальный список Биржи или по которым получено согласие Биржи на их включение в ее официальный список.
+
+							.placing-adventages
+								table
+									tr
+										td
+											p Подписка в отличие от аукциона основана на построении книги заявок с указанием имен/наименований покупателей
+										td
+											p По времени проведения подписка, как правило, занимает несколько дней.
+										td
+											p Продавец (инициатор торгов) сам определяет условия размещения: параметры, цена размещения, категория инвесторов, которые могут участвовать в подписке.
 
 
 				.gratient-tabs__accordion-pane.panel

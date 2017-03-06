@@ -1511,3 +1511,55 @@ $middleScreen: 992px;
 	}
 }
 //Размещение на KASE
+.landing-section {
+	.tab-content.placing,
+	.gradient-tabs.placing {
+		.container.placing-content {
+			p {
+				color: #383838;
+			}
+		}
+		.placing-adventages {
+			position: relative;
+			box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.17);
+			background-color: #f7f7f8;
+			table {
+				margin-top: 50px;
+				@include respond-to(small) {
+					margin-top: 0;
+				}
+				tr {
+					td {
+						@include respond-to(large){
+							width: 33%;
+							display: table-cell;
+						}
+						padding-top: 40px;
+						padding-bottom: 40px;
+						padding-right: 20px;
+						display:block;
+						width:100%;
+						padding-left: 130px;
+						background-repeat: no-repeat;
+						background-position: 30px center;
+						&:nth-child(1) {
+							background-image: url(../images/placing-book.png);
+						}
+						&:nth-child(2) {
+							background-image: url(../images/placing-cal.png);
+						}
+						&:nth-child(3) {
+							background-image: url(../images/placing-note.png);
+						}
+						p {
+							font-weight: bold;
+							font-size: 14px;
+							text-align: left;
+							line-height: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
