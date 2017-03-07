@@ -1435,6 +1435,7 @@ $middleScreen: 992px;
 }
 //Институциональным инвесторам
 section.landing-section.inst-title {
+	padding: 60px 0 70px;
 	p {
 		margin: 0 22%;
 	}
@@ -1450,14 +1451,26 @@ section.landing-section.inst-list-bar {
 			margin: 0 auto 30px;
 		}
 	}
+	.list-top-bar__block.list-top-bar__block--purple {
+		box-shadow: 0 15px 29px 2px rgba(53, 58, 60, 0.05);
+		.list-top-bar__title {
+			line-height: 28px;
+		}
+	}
 }
 section.landing-section.inst-dma {
+	padding: 40px 0 70px;
 	p {
 		text-align: left;
 		font-size: 16px;
+		margin-bottom: 20px;
+		&:nth-child(5) {
+			margin-top: 40px;
+		}
 	}
 }
 section.landing-section.inst-operations {
+	padding: 20px 0 70px;
 	ul {
 		max-width: 750px;
 		li {
@@ -1514,11 +1527,12 @@ section.landing-section.inst-support {
 		.tab-content.listing,
 		.gradient-tabs.listing {
 			.gratient-tabs__accordion-body {
+				margin-top: 0;
 				>p {
 					margin: 10px 200px;
 				}
 				>h4 {
-					margin-top: 30px;
+					margin-top: 40px;
 				}
 				&.collapse {
 					>p {
@@ -1531,7 +1545,6 @@ section.landing-section.inst-support {
 						background-repeat: no-repeat;
 						background-position: 30px 20px;
 						background-size: auto 70px;
-						margin-top: 31px;
 						transform: translateX(-30px);
 						p {
 							padding: 31px 21px;
@@ -1539,6 +1552,9 @@ section.landing-section.inst-support {
 							width: 98%;
 							box-shadow: 0 5px 21px 1px rgba(53, 58, 60, 0.1);
 							height: 350px;
+							@media (max-width: 1200px) {
+								height: 215px;
+							}
 							font-size: 16px;
 							text-align: left;
 						}
@@ -1570,6 +1586,9 @@ section.landing-section.inst-support {
 				}
 				.container.listing-more {
 					>div {
+						p {
+							height: 150px;
+						}
 						&:nth-child(1) {
 							background-image: url(../images/block_plus.png);
 						}
@@ -1577,6 +1596,13 @@ section.landing-section.inst-support {
 							background-image: url(../images/block_minus.png);
 							background-position: 30px 78px;
 							background-size: auto;
+						}
+					}
+					@include respond-to(small) {
+						>div {
+							p {
+								height: auto;
+							}
 						}
 					}
 				}
