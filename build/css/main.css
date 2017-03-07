@@ -1198,10 +1198,24 @@ section.landing-section.inst-dma p {
   text-align: left;
   font-size: 16px; }
 
-section.landing-section.inst-operations li {
-  text-align: left;
-  font-size: 16px;
-  margin-top: 10px; }
+section.landing-section.inst-operations ul {
+  max-width: 750px; }
+  section.landing-section.inst-operations ul li {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 20px;
+    list-style-type: none;
+    position: relative; }
+    section.landing-section.inst-operations ul li:before {
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+      left: -25px;
+      top: 11px;
+      content: "";
+      background-color: #1752ba; }
 
 section.landing-section.inst-operations p.more {
   margin: 0 22%;

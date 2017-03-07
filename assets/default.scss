@@ -1458,10 +1458,26 @@ section.landing-section.inst-dma {
 	}
 }
 section.landing-section.inst-operations {
-	li {
-		text-align: left;
-		font-size: 16px;
-		margin-top: 10px;
+	ul {
+		max-width: 750px;
+		li {
+			text-align: left;
+			font-size: 16px;
+			margin-top: 20px;
+			list-style-type: none;
+			position: relative;
+			&:before {
+				display: block;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				position: absolute;
+				left: -25px;
+				top: 11px;
+				content: "";
+				background-color: #1752ba;
+			}
+		}
 	}
 	p.more {
 		margin: 0 22%;
@@ -1486,10 +1502,10 @@ section.landing-section.inst-links {
 		}
 	}
 }
-section.landing-section.inst-support{
+section.landing-section.inst-support {
 	max-width: 750px;
 	box-shadow: 0 18px 33px 2px rgba(53, 58, 60, 0.1);
-	margin:30px auto;
+	margin: 30px auto;
 }
 //ДОРАБАТЫВАЮ ГОТОВЫЕ СТРАНИЦЫ...
 //Листинг на KASE
