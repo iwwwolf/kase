@@ -1,0 +1,9 @@
+.essentials-block
+	each item in essentialsArray
+		.essentials-block__row
+			.essentials-block__left
+				.essentials-block__title
+					span!= item.title
+			.essentials-block__right
+				.essentials-block__description
+					span!= item.description

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KASE</title>
+    <link href="css/libs.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <style rel="stylesheet">
+      #wrap {
+      	-webkit-transform-origin: 50% 350px;
+      	transform-origin: 50% 350px;
+      	-webkit-transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      	transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      #wrap.scale-out {
+      	-webkit-transform: scale(0.85);
+      	transform: scale(0.85); 
+      }
+      
+    </style>
+    <div id="menu" style="display: none;" class="menu">
+      <div class="menu__container">
+        <div class="container"><a id="menuClose" href="#" class="menu__close">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z"></path>
+            </svg></a>
+          <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel menu__panel">
+              <div id="headingOne" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Рынки и торги</a></div>
+              </div>
+              <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Рынки</div>
+                      <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Паи</a></li>
+                        <li><a href="#">Корпоративные облигации</a></li>
+                        <li><a href="#">Ценные бумаги МФО</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                        <li><a href="#">Иностранные валюты</a></li>
+                        <li><a href="#">Операции репо</a></li>
+                        <li><a href="#">Деривативы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Индикаторы</div>
+                      <ul>
+                        <li><a href="#">Фондовый рынок</a></li>
+                        <li><a href="#">Денежный рынок</a></li>
+                        <li><a href="#">Совместные индексы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торги</div>
+                      <ul>
+                        <li><a href="#">Список инструментов</a></li>
+                        <li><a href="#">Просмотр торгов</a></li>
+                        <li><a href="#">Регламент торгов и клиринга</a></li>
+                        <li><a href="#">Клиринг и расчеты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Оценка и параметры</div>
+                      <ul>
+                        <li><a href="#">Рыночная оценка</a></li>
+                        <li><a href="#">Риск-параметры акций</a></li>
+                        <li><a href="#">Средневзвешенные цены</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingTwo" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseTwo">Продукты и услуги</a></div>
+              </div>
+              <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Листинг</div>
+                      <ul>
+                        <li><a href="#">Список компаний</a></li>
+                        <li><a href="#">Что такое листинг</a></li>
+                        <li><a href="#">Листинг на KASE</a></li>
+                        <li><a href="#">IPO</a></li>
+                        <li><a href="#">Нелистинговый сектор</a></li>
+                        <li><a href="#">Дипломанты номинаций</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Членство</div>
+                      <ul>
+                        <li><a href="#">Список членов KASE</a></li>
+                        <li><a href="#">Рэнкинг активности</a></li>
+                        <li><a href="#">Дипломанты номинаций </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Торговая система</div>
+                      <ul>
+                        <li><a href="#">Как подключиться к KASE</a></li>
+                        <li><a href="#">Загрузки</a></li>
+                        <li><a href="#">Инструкции</a></li>
+                        <li><a href="#">FIX протокол</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Информационные продукты</div>
+                      <ul>
+                        <li><a href="#">Биржевая информация и программное обеспечение</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingThree" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseThree">Правила</a></div>
+              </div>
+              <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Правила KASE</div>
+                      <ul>
+                        <li><a href="#">Листинг</a></li>
+                        <li><a href="#">Членство</a></li>
+                        <li><a href="#">Торги</a></li>
+                        <li><a href="#">Клиринг</a></li>
+                        <li><a href="#">Расчеты</a></li>
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Методики </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Корпоративное управление</div>
+                      <ul>
+                        <li><a href="#">Материалы и статьи Международной финансовой корпорации (IFC)</a></li>
+                        <li><a href="#">Материалы и статьи Организации экономического сотрудничества и развития (OECD) </a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Законодательство</div>
+                      <ul>
+                        <li><a href="#">Рынок ценных бумаг</a></li>
+                        <li><a href="#">Акционерные общества</a></li>
+                        <li><a href="#">Инвестиционные фонды</a></li>
+                        <li><a href="#">Государственные ценные бумаги</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title"><a href="#">Дополнительные материалы</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFour" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFour" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFour">Пресс-центр</a></div>
+              </div>
+              <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">Новости</div>
+                      <ul>
+                        <li><a href="#">Новости рынков</a></li>
+                        <li><a href="#">Новости компаний</a></li>
+                        <li><a href="#">Новости Биржи</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Информационная поддержка</a></li>
+                        <li class="title"><a href="#">Мероприятия</a></li>
+                        <li class="title"><a href="#">Доклады и презентации</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Пресс-релизы</a></li>
+                        <li class="title"><a href="#">СМИ о нас</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Корпоративный стиль</a></li>
+                        <li class="title"><a href="#">Контакты пресс-центра</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel menu__panel">
+              <div id="headingFive" role="tab" class="panel-heading">
+                <div class="panel-title"><a href="#collapseFive" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseFive">О Бирже</a></div>
+              </div>
+              <div id="collapseFive" role="tabpanel" aria-labelledby="headingFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="menu__cols">
+                    <div class="menu__col">
+                      <div class="title first">О нас</div>
+                      <ul>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Миссия и ценности</a></li>
+                        <li><a href="#">Руководство</a></li>
+                        <li><a href="#">Комитеты и комиссии</a></li>
+                        <li><a href="#">Участие в профессиональных организациях</a></li>
+                        <li><a href="#">Корпоративные документы</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <div class="title first">Акционерам</div>
+                      <ul>
+                        <li><a href="#">Отчетность</a></li>
+                        <li><a href="#">Новости и уведомления</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Закупки</a></li>
+                        <li class="title"><a href="#">Реквизиты</a></li>
+                      </ul>
+                    </div>
+                    <div class="menu__col">
+                      <ul>
+                        <li class="title"><a href="#">Вакансии</a></li>
+                        <li class="title"><a href="#">Контакты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="wrap">
+      <div class="fixed-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-youtube"></i></a></div>
+      <div id="headerSearch" style="display: none;" class="header-search">
+        <div class="container">
+          <form action="">
+            <input type="text" placeholder="Что вы ищите?..." class="header-search__input">
+            <button type="submit" class="header-search__button"><img src="images/search-icon.svg" alt="">Найти</button>
+            <div class="head-search__close"><a id="searchClose" href="#"><img src="images/close-gray.svg" alt=""></a></div>
+          </form>
+        </div>
+      </div>
+      <header id="header">
+        <div class="header__container">
+          <div class="container">
+            <div class="header__content">
+              <div class="header__left-col"><a id="menuBtn" href="#" class="header__menu-button"><img src="images/menu-border.svg" alt=""><span class="header__menu-button-lines"><span></span><span></span><span></span></span></a>
+                <div class="header__logo"><a href="/"><span class="header__logo-img"><img src="images/logo.svg" alt="KASE"></span><span class="header__logo-text"><span>Қазақстан қор биржасы</span><span>Казахстанская фондовая биржа</span><span>Kazakhstan Stock Exchange</span></span></a></div>
+              </div>
+              <div class="header__right-col">
+                <div class="header__date">Пятница, 11 ноября 2016 г. 11:24</div><a href="#" id="searchBtn" class="header__search-button"><img src="images/search-icon.svg" alt="Search"></a>
+                <div class="header__language">
+                  <ul class="header__language-list clearfix">
+                    <li class="active"><a href="#">Рус </a></li>
+                    <li><a href="#">Қаз </a></li>
+                    <li><a href="#">Eng </a></li>
+                  </ul>
+                  <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рус</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Қаз</a></li>
+                      <li><a href="#">Eng</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="header__login">
+                  <div class="header__login--mobile"><a href="#"><img src="images/login-mob.svg" alt=""></a></div>
+                  <div class="header__login--desctop"><a href="#">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 253 106.3" enable-background="new 0 0 253 106.3" xml:space="preserve">
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="227.5092" y1="-5.151" x2="25.4908" y2="111.4843">
+                          <stop offset="0" style="stop-color:#9ED110"></stop>
+                          <stop offset="1" style="stop-color:#038726"></stop>
+                        </linearGradient>
+                        <path fill="none" stroke="url(#SVGID_1_)" stroke-width="3" stroke-miterlimit="10" d="M199.8,104.8H53.2c-28.4,0-51.7-23.2-51.7-51.7v0c0-28.4,23.2-51.7,51.7-51.7h146.7c28.4,0,51.7,23.2,51.7,51.7v0C251.5,81.6,228.3,104.8,199.8,104.8z"></path>
+                      </svg><span class="header__login-text">Войти<span class="arr">&rarr;</span></span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="markets-top">
+        <div class="container">
+          <div class="markets-menu">
+            <h3>О бирже</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Реквизиты</a>
+              <ul class="dropdown-menu">
+                <li class="active"><a href="#">Реквизиты</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="right-content-column">
+          <ul class="breadcrumbs">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О Биржe</a></li>
+            <li><a href="#">Реквизиты</a></li>
+          </ul>
+          <h1>Реквизиты</h1>
+          <div class="accordion accordion--custom-green">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Общие сведения<i class="fa fa-angle-down"></i></a></div>
+            <div class="accordion__body">
+              <div class="essentials-block">
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span>Полное наименование</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span>Акционерное общество "Казахстанская фондовая биржа"</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Сокращенное наименование</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> АО "Казахстанская фондовая биржа"</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Аббревиатура</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> KASE</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Вид юридического лица</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Коммерческая организация</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Организационно-правовая форма</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Акционерное общество</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Ранее известные наименования</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> <p><b>С 30 декабря 1993 года до 03 марта 1994 года</b> – акционерное общество "Казахская Межбанковская Валютная Биржа"</p><p><b>С 03 марта 1994 года до 12 июля 1995 года</b> – акционерное общество "Казахстанская Межбанковская Валютная Биржа"</p><p><b>С 12 июля 1995 года до 12 апреля 1996 года</b> – акционерное общество "Казахстанская межбанковская валютно-фондовая биржа"</p><p><b>С 12 апреля 1996 года до 06 марта 1997 года</b> – акционерное общество "Казахстанская фондовая биржа"</p><p><b>С 06 марта 1997 года до 07 января 2004 года</b> – закрытое акционерное общество "Казахстанская фондовая биржа"</p><p><b>С 07 января 2004 года и по настоящее время</b> – акционерное общество "Казахстанская фондовая биржа"</p></span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Оплаченный уставный капитал по состоянию на 01 декабря 2016 года</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 2 366 256 тыс. тенге</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Собственный капитал по состоянию на 01 декабря 2016 года</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 6 887 524,07  тыс. тенге</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Количество выпущенных акций</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 5 000 000</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Количество размещенных акций по состоянию на 01 декабря 2016 года</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 942 013</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Виды выпущенных акций</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Простые акции; <br> "Золотая акция" владельцем, которой является Национальный Банк Республики Казахстан (дает право на наложение вето на решение органов общества)</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Торгуемые финансовые инструменты</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Негосударственные эмиссионные ценные бумаги <br>Государственные ценные бумаги<br>Инструменты рынка репо<br>Иностранные валюты<br>Производные финансовые инструменты</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Количество членов биржи по категориям по состоянию на 01 декабря 2016 года <br></span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Категория "фондовая" (с правом участия в торгах ценными бумагами, допущенными к обращению (торговле) на Бирже) – <b>47</b><br>Категория "валютная" (с правом участия в биржевых торгах иностранными валютами) – <b>35</b><br>Категория "деривативы" (с правом участия в биржевых торгах производными финансовыми инструментами) – <b>17</b></span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Общее количество членов биржи по состоянию на 01 декабря 2016 года</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 57</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Основной метод проведения торгов</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Метод открытых торгов</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Краткая характеристика расчетов (более полную информацию см. в разделе сайта "<a href="#">Правила KASE</a>")<br></span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Негосударственные эмиссионные ценные бумаги: на условиях Т+0 через АО "Центральный депозитарий ценных бумаг" (Алматы).<br><b>Акции</b> первого класса ликвидности, по которым осуществляется клиринговая деятельность: на условиях Т+2 через АО "Центральный депозитарий ценных бумаг" (Алматы).<br>Государственные ценные бумаги: на условиях Т+0 через АО "Центральный депозитарий ценных бумаг" (Алматы).<br>Иностранные валюты, по которым осуществляется клиринговая деятельность: на условиях TOD, TOM, SPOT в тенге – через корреспондентские счета биржи в Национальном Банке Республики Казахстан; в иностранных валютах – в иностранных банках-корреспондентах.<br>Производные финансовые инструменты, по которым осуществляется клиринговая деятельность через АО "Казахстанская фондовая биржа"</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Дочерние организации</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> ТОО "Информационное агентство финансовых рынков “ИРБИС” — сбор, обработка и предоставление информации, касающейся финансовых рынков, в том числе биржевой информации, разработка и поставка информационных продуктов, оказание профильных услуг; <br>ТОО “eTrade.kz” — разработка, поддержка и модификация программного обеспечения для KASE; предоставление KASE и другим лицам иных услуг в сфере информационных технологий.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion accordion--custom-green closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Контактные денные<i class="fa fa-angle-down"></i></a></div>
+            <div style="display:none;" class="accordion__body">
+              <div class="essentials-block">
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Адрес </span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Республика Казахстан, 050040, г. Алматы, ул. Байзакова, 280, Северная башня<br> Многофункционального комплекса "Almaty Towers", 8-й этаж</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Зарегистрированный адрес</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Республика Казахстан, 050040, г. Алматы, ул. Байзакова, 280, Северная башня<br> Многофункционального комплекса "Almaty Towers", 8-й этаж</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Почтовый адрес</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Республика Казахстан, 050000, Алматы, а/я 140</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Эл. почта</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> <a href="mailto:kase@kase.kz">kase@kase.kz</a>, <a href="mailto:info@kase.kz">info@kase.kz</a></span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Телефоны</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> (+7 727) 237 53 00, 237 53 11</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Факс</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> (+7 727) 296 64 02</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Официальный сайт</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> <a href="#">www.kase.kz</a></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion accordion--custom-green closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Банковские реквизиты<i class="fa fa-angle-down"></i></a></div>
+            <div style="display:none;" class="accordion__body">
+              <div class="essentials-block">
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> SWIFT BIC </span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> KICE KZ KX</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Код ОКПО</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 30088469</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> РНН</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 600200049149, <a href="#">Свидетельство о постановке на учет по НДС</a> серия 60001 №0078118 от 01 августа 2012 года</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion accordion--custom-green closed">
+            <div class="accordion__head"><a href="#" class="accordion__head-link">Государственная регистрация и лицензии<i class="fa fa-angle-down"></i></a></div>
+            <div style="display:none;" class="accordion__body">
+              <div class="essentials-block">
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Дата и номер первичной государственной регистрации</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 30 декабря 1993 года, </span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Дата и номер последней государственной перерегистрации</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> 07 января 2004 года, № 1952-1910-01-АО</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Орган последней государственной перерегистрации</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> Управление юстиции Бостандыкского района Департамента юстиции г. Алматы</span></div>
+                  </div>
+                </div>
+                <div class="essentials-block__row">
+                  <div class="essentials-block__left">
+                    <div class="essentials-block__title"><span> Действующие лицензии</span></div>
+                  </div>
+                  <div class="essentials-block__right">
+                    <div class="essentials-block__description"><span> <p>Лицензия на осуществление деятельности на рынке ценных бумаг от 19 июля 2012 года № 4.2.3/1, выданная Комитетом по контролю и надзору финансового рынка и финансовых организаций Национального банка Республики Казахстан. Лицензия дает право на осуществление следующих видов деятельности на рынке ценных бумаг:</p><ul><li>деятельность по организации торговли с ценными бумагам и иными финансовыми инструментами;</li><li>клиринговая деятельность по сделкам с финансовыми инструментами на рынке ценных бумаг.</li></ul><p>Лицензия на проведение банковских операций в национальной и иностранной валюте от 29 июня 2012 года № 5.3.3, выданная Комитетом по контролю и надзору финансового рынка и финансовых организаций Национального банка Республики Казахстан. Лицензия дает право на проведение следующих банковских операций:</p><ul><li>открытие и ведение корреспондентских счетов банков и организаций, осуществляющих отдельные виды банковских операций;</li><li>переводные операции: выполнение поручений физических и юридических лиц по платежам и переводам денег;открытие и ведение банковских счетов юридических лиц.</li></ul></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <ul class="footer__nav">
+          <li><a href="#">Часто задаваемые вопросы</a></li>
+          <li><a href="#">Партнерские сайты</a></li>
+          <li><a href="#">Мобильная версия</a></li>
+          <li><a href="#">Карта сайта</a></li>
+        </ul>
+        <div class="footer__text">
+          <div>&copy; 1993–2016 АО "Казахстанская фондовая биржа"</div>
+          <div>Копирование материалов – только с письменного разрешения.</div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" defer src="js/libs.js"> </script>
+    <script type="text/javascript" defer src="js/main.js"></script>
+  </body>
+</html>

@@ -1521,6 +1521,15 @@ section.landing-section.inst-support {
 	margin: 30px auto;
 }
 //ДОРАБАТЫВАЮ ГОТОВЫЕ СТРАНИЦЫ...
+//-Добавляю некоторые стили к страницам
+.container {
+	.right-content-column {
+		>.accordion:last-child {
+			margin-bottom: 100px;
+			border-bottom: 1px solid #c9d4de;
+		}
+	}
+}
 //Листинг на KASE
 .landing-section {
 	.container {
