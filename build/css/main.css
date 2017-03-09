@@ -1380,6 +1380,21 @@ section.landing-section.inst-support {
         text-align: left;
         line-height: 24px; }
 
+.container.freeback .right-content-column p:nth-child(3) {
+  line-height: 40px; }
+
+.container.freeback .right-content-column > *:last-child {
+  margin-bottom: 200px; }
+
+.container.freeback .right-content-column p span {
+  color: #a8b1ba; }
+
+.container.freeback .right-content-column .container {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  .container.freeback .right-content-column .container > div {
+    padding-left: 0; }
+
 .btn {
   font-size: 100%;
   border: none;

@@ -1672,3 +1672,24 @@ section.landing-section.inst-support {
 		}
 	}
 }
+//Обратная связь
+.container.freeback {
+	.right-content-column {
+		p:nth-child(3) {
+			line-height: 40px;
+		}
+		>*:last-child{
+			margin-bottom:200px;
+		}
+		p span{
+			color: #a8b1ba;
+		}
+		.container{
+			margin-top: 40px;
+			margin-bottom: 40px;
+			>div{
+				padding-left: 0;
+			}
+		}
+	}
+}
