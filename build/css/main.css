@@ -1255,6 +1255,9 @@ section.landing-section.inst-support {
   margin-bottom: 100px;
   border-bottom: 1px solid #c9d4de; }
 
+.great-slider .slick-dotted {
+  margin-bottom: inherit; }
+
 .landing-section .container .tab-content.listing .gratient-tabs__accordion-body,
 .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body {
   margin-top: 0; }
@@ -1332,6 +1335,20 @@ section.landing-section.inst-support {
     .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div p,
     .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div p {
       height: auto; } }
+
+.landing-section .tab-content.placing .container.nalog,
+.landing-section .gradient-tabs.placing .container.nalog {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../images/warning_image.png");
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  .landing-section .tab-content.placing .container.nalog p,
+  .landing-section .gradient-tabs.placing .container.nalog p {
+    margin: 15px 7%; }
+    .landing-section .tab-content.placing .container.nalog p:first-child,
+    .landing-section .gradient-tabs.placing .container.nalog p:first-child {
+      margin-top: 0; }
 
 .landing-section .tab-content.placing .container.placing-content p,
 .landing-section .gradient-tabs.placing .container.placing-content p {

@@ -1530,6 +1530,11 @@ section.landing-section.inst-support {
 		}
 	}
 }
+.great-slider{
+	.slick-dotted{
+		margin-bottom: inherit;
+	}
+}
 //Листинг на KASE
 .landing-section {
 	.container {
@@ -1623,6 +1628,20 @@ section.landing-section.inst-support {
 .landing-section {
 	.tab-content.placing,
 	.gradient-tabs.placing {
+		.container.nalog{
+			background-position:center center;
+			background-repeat: no-repeat;
+			background-image:url('../images/warning_image.png');
+			padding-top:50px;
+			padding-bottom:50px;
+			p{
+				margin: 15px 7%;
+				&:first-child{
+					margin-top: 0;
+				}
+			}
+			
+		}
 		.container.placing-content {
 			p {
 				color: #383838;

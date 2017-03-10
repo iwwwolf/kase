@@ -1,0 +1,223 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Членство"
+				var marketsList = [
+					{
+						'title': 'Список членов KASE'
+					},
+					{
+						'title': 'Маркет-мейкеры'
+					},
+					{
+						'title': 'Клиринговые участники'
+					},
+					{
+						'title': 'Услуги прямого доступа'
+					},
+					{
+						'title': 'Рейтинг активности',
+						'active': true
+					},
+					{
+						'title': 'Дипломаты номинаций'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Членство',
+					'Рейтинг активности'
+				]
+				
+			include ../../modules/breadcrumbs/module
+			h1 Рэнкинг активности
+
+			div Сектор рынка:
+				.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
+					ul.dropdown-menu
+						li: a(href="#") 1 неделя
+						li: a(href="#") 1 месяц
+						li: a(href="#") 1 год
+
+				.sortin-table--with-search
+					table.sorting-table.table.table-striped
+						thead
+							tr
+								th Наименование участника
+								th номер
+								th дата выдачи
+						tbody
+							tr
+								td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
+								td 1.2.23/194/33
+								td 07.11.16
+							tr
+								td: a(href="#") Акционерное общество "AsiaCredit Bank (АзияКредит Банк)"
+								td 1.2.75/83
+								td 20.02.15
+							tr
+								td: a(href="#") Акционерное общество "BCC Invest" - дочерняя организация АО "Банк ЦентрКредит"
+								td 0403200488
+								td 01.07.14
+							tr
+								td: a(href="#") Акционерное общество "CAIFC INVESTMENT GROUP"
+								td 4.1.1.110/49
+								td 03.07.14
+							tr
+								td: a(href="#") Акционерное общество "Capital Bank Kazakhstan"
+								td 1.1.9
+								td 18.09.14
+							tr
+								td: a(href="#") Акционерное общество "Delta Bank"
+								td 213
+								td 24.10.07
+							tr
+								td: a(href="#") Акционерное общество "FALCONRY CAPITAL"
+								td 3.2.226/115
+								td 04.07.16
+							tr
+								td: a(href="#") Акционерное общество "ForteBank"
+								td 1.2.29/197/36
+								td 27.02.15
+							tr
+								td: a(href="#") Акционерное общество "Private Asset Management"
+								td 4.2.92/217
+								td 18.06.14
+							tr
+								td: a(href="#") Акционерное общество "Qazaq Banki"
+								td 1.2.204/37
+								td 25.12.14
+							tr
+								td: a(href="#") Акционерное общество "SkyBridge Invest"
+								td 4.2.192/113
+								td 20.07.16
+							tr
+								td: a(href="#") Акционерное общество "Tengri Bank"
+								td 1.1.159
+								td 18.03.16
+							tr
+								td: a(href="#") Акционерное общество "VISOR Capital" (ВИЗОР Капитал)
+								td 3.2.231/9
+								td 13.12.16
+							tr
+								td: a(href="#") Акционерное общество "ZIM Capital"
+								td 3.1.1.224
+								td 17.07.15
+							tr
+								td: a(href="#") Акционерное общество "АСЫЛ ИНВЕСТ"
+								td 0403200645
+								td 01.07.14
+							tr
+								td: a(href="#") Акционерное общество "АТФБанк"
+								td 239
+								td 28.12.07
+							tr
+								td: a(href="#") Акционерное общество "Алиби Секьюритиз"
+								td 0403200660
+								td 03.07.14
+							tr
+								td: a(href="#") Акционерное общество "Банк "Bank RBK"
+								td 1.2.33/223
+								td 05.06.15
+							tr
+								td: a(href="#") Акционерное общество "Банк Kassa Nova"
+								td 1.1.260
+								td 10.06.11
+							tr
+								td: a(href="#") Акционерное общество "Банк Астаны"
+								td 1.1.32
+								td 20.04.15
+							tr
+								td: a(href="#") Акционерное общество "Банк Развития Казахстана"
+								td 253
+								td 30.10.03
+							tr
+								td: a(href="#") Акционерное общество "Банк ЦентрКредит"
+								td 1.2.25/195/34
+								td 28.01.15
+							tr
+								td: a(href="#") Акционерное общество "Банк ЭкспоКредит"
+								td 1.2.43/227
+								td 27.07.16
+							tr
+								td: a(href="#") Акционерное общество "ДОЧЕРНИЙ БАНК "КАЗАХСТАН-ЗИРААТ ИНТЕРНЕШНЛ БАНК"
+								td 163
+								td 29.12.07
+							tr
+								td: a(href="#") Акционерное общество "Дочерняя организация АО "Нурбанк" "MONEY EXPERTS"
+								td 0403200727
+								td 01.07.14
+							tr
+								td: a(href="#") Акционерное общество "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
+								td 3.2.229/7
+								td 04.11.16
+							tr
+								td: a(href="#") Акционерное общество "Евразийский Капитал"
+								td 4.2.206/103
+								td 25.06.04
+							tr
+								td: a(href="#") Акционерное общество "Евразийский банк"
+								td 237
+								td 28.12.07
+							tr
+								td: a(href="#") Акционерное общество "Инвестиционный Дом "Астана-Инвест"
+								td 3.2.228/6
+								td 26.09.16
+							tr
+								td: a(href="#") Акционерное общество "Инвестиционный Финансовый Дом "RESMI"
+								td 0403200520
+								td 01.07.14
+							tr
+								td: a(href="#") Акционерное общество "Исламский Банк "Al Hilal"
+								td 1.1.261
+								td 10.06.15
+							tr
+								td: a(href="#") Акционерное общество "Казинвестбанк"
+								td 221
+								td 21.03.08
+							tr
+								td: a(href="#") Акционерное общество "Казкоммерц Секьюритиз" (дочерняя организация АО "Казоммерцбанк")
+								td 0403200439
+								td 24.06.14
+							tr
+								td: a(href="#") Акционерное общество "Казкоммерцбанк"
+								td 1.2.16/222/32
+								td 02.12.14
+							tr
+								td: a(href="#") Акционерное общество "Казпочта"
+								td 0401200704
+								td 03.02.04
+							tr
+								td: a(href="#") Акционерное общество "Народный сберегательный банк Казахстана"
+								td 1.2.47/230/38
+								td 08.11.16
+							tr
+								td: a(href="#") Акционерное общество "Нурбанк"
+								td 1.2.15/193
+								td 28.10.14
+								tr
+								td: a(href="#") Акционерное общество "Сентрас Секьюритиз"
+								td 0403200223
+								td 13.06.14
+			
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table > tbody > tr > td a').on('click', function(event) {
+				event.preventDefault();
+				var _self = $(this);
+				_self.closest('tr').toggleClass('sorting-tr sorting-tr_gray');
+			});
+		});

@@ -303,318 +303,238 @@
       <div class="markets-top">
         <div class="container">
           <div class="markets-menu">
-            <h3>Рынки</h3>
-            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Акции</a>
+            <h3>Членство</h3>
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рейтинг активности</a>
               <ul class="dropdown-menu">
-                <li class="active"><a href="#">Акции</a></li>
-                <li><a href="#">Паи</a></li>
-                <li><a href="#">Корпоративные облигации</a></li>
-                <li><a href="#">Ценные бумаги МФО</a></li>
-                <li><a href="#">Государствнные ценные бумаги</a></li>
-                <li><a href="#">Иностранные валюты</a></li>
-                <li><a href="#">Операции РЕПО</a></li>
-                <li><a href="#">Деривативы</a></li>
+                <li><a href="#">Список членов KASE</a></li>
+                <li><a href="#">Маркет-мейкеры</a></li>
+                <li><a href="#">Клиринговые участники</a></li>
+                <li><a href="#">Услуги прямого доступа</a></li>
+                <li class="active"><a href="#">Рейтинг активности</a></li>
+                <li><a href="#">Дипломаты номинаций</a></li>
               </ul>
-            </div>
-          </div>
-          <div id="regulations" class="regulations">
-            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link"><i class="fa fa-ellipsis-v"><span class="line1"></span><span class="line2"></span></i></a>
-              <div class="dropdown-menu">
-                <div class="regulations__timetable">
-                  <h5>Регламент</h5>
-                  <div>
-                    <div class="help-block">Акции первого класса ликвидности:</div>
-                    <div> <span>11:30 – 17:00</span>торговая сессия</div>
-                    <div> <span>17:20 – 18:00</span>клиринговая сессия</div>
-                  </div>
-                  <div>
-                    <div class="help-block">Акции второго и третьего классов ликвидности:</div>
-                    <div> <span>17:20 – 18:00</span>торговая сессия</div>
-                  </div>
-                </div>
-                <div class="regulations__download">
-                  <form>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices" checked><span class="radiobutton__styled"></span><span class="radiobutton__label">Средневзвешенные цены</span>
-                    </label>
-                    <label class="radiobutton">
-                      <input type="radio" name="prices"><span class="radiobutton__styled"></span><span class="radiobutton__label">Риск-параметры акций</span>
-                    </label>
-                    <div class="regulations__download-input regulations__download-input--mobile"><i class="fa fa-calendar"></i>
-                      <input type="date">
-                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
-                    </div>
-                    <div class="regulations__download-input"><i class="fa fa-calendar"></i>
-                      <input type="text" data-date-format="dd/mm/yyyy" class="datepicker">
-                      <div class="regulation__download-link"><a href="#"><i class="fa fa-download"></i></a></div>
-                    </div>
-                  </form>
-                </div>
-                <div class="regulations__links-list">
-                  <h5>Полезные ссылки</h5>
-                  <ul class="blue-list">
-                    <li><a href="#">Список акций</a></li>
-                    <li><a href="#">Просмотр торгов</a></li>
-                    <li><a href="#">Список брокеров</a></li>
-                    <li><a href="#">Маркет-мейкеры</a></li>
-                    <li><a href="#">Рыночная оценка</a></li>
-                    <li><a href="#">Правила торгов</a></li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="container">
-        <div id="centerColumn" class="center-column">
+        <div class="right-content-column">
           <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Рынки</a></li>
-            <li><a href="#">Торги</a></li>
-            <li><a href="#">Акции</a></li>
+            <li><a href="#">Продукты и услуги</a></li>
+            <li><a href="#">Членство</a></li>
+            <li><a href="#">Рейтинг активности</a></li>
           </ul>
-          <h1>Акции</h1>
-          <div class="accordion">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Индикаторы<i class="fa fa-angle-down"></i></a></div>
-            <div class="accordion__body">
-              <ul class="accordion__nav">
-                <li class="active"><a href="#">Индекс KASE</a></li>
-                <li><a href="#">Объем торгов</a></li>
-                <li><a href="#">Капитализация</a></li>
+          <h1>Рэнкинг активности</h1>
+          <div>Сектор рынка:
+            <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">1 день</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">1 неделя</a></li>
+                <li><a href="#">1 месяц</a></li>
+                <li><a href="#">1 год</a></li>
               </ul>
-              <div class="actions__chart">
-                <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-                <script type="text/javascript">
-                  new TradingView.widget({
-                    "autosize": true,
-                    "symbol": "NASDAQ:AAPL",
-                    "interval": "D",
-                    "timezone": "Asia/Almaty",
-                    "theme": "White",
-                    "style": "3",
-                    "locale": "ru",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "hide_top_toolbar": true,
-                    "hideideas": true
-                  });
-                  
-                </script>
-              </div>
             </div>
-          </div>
-          <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Наиболее ликвидные акции<i class="fa fa-angle-down"></i></a>
-              <div class="small-dropdown flex accordion__hide-in-closed">Период:
-                <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">1 день</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">1 неделя</a></li>
-                    <li><a href="#">1 месяц</a></li>
-                    <li><a href="#">1 год</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion__body">
-              <div class="date">Время последних данных: 19.08.2016 (17:35)</div>
+            <div class="sortin-table--with-search">
               <table class="sorting-table table table-striped">
                 <thead>
                   <tr>
-                    <th>Код</th>
-                    <th>Компания</th>
-                    <th>Kl</th>
-                    <th>Число сделок</th>
-                    <th>Объем, млн KZT</th>
-                    <th>Доля рынка,%</th>
-                    <th>Последняя цена,KZT</th>
-                    <th>Mаркет-мейкеры</th>
-                    <th>Дата последней сделки</th>
+                    <th>Наименование участника</th>
+                    <th>номер</th>
+                    <th>дата выдачи</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href="#">KZ_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")</a></td>
+                    <td>1.2.23/194/33</td>
+                    <td>07.11.16</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">Акционерное общество "AsiaCredit Bank (АзияКредит Банк)"</a></td>
+                    <td>1.2.75/83</td>
+                    <td>20.02.15</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.005</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">Акционерное общество "BCC Invest" - дочерняя организация АО "Банк ЦентрКредит"</a></td>
+                    <td>0403200488</td>
+                    <td>01.07.14</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>120</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">Акционерное общество "CAIFC INVESTMENT GROUP"</a></td>
+                    <td>4.1.1.110/49</td>
+                    <td>03.07.14</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">Акционерное общество "Capital Bank Kazakhstan"</a></td>
+                    <td>1.1.9</td>
+                    <td>18.09.14</td>
                   </tr>
                   <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>4.8</td>
-                    <td>125</td>
-                    <td>0.00007</td>
-                    <td>87</td>
-                    <td>1 446 453</td>
-                    <td>M</td>
-                    <td>20.07.2016</td>
+                    <td><a href="#">Акционерное общество "Delta Bank"</a></td>
+                    <td>213</td>
+                    <td>24.10.07</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "FALCONRY CAPITAL"</a></td>
+                    <td>3.2.226/115</td>
+                    <td>04.07.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "ForteBank"</a></td>
+                    <td>1.2.29/197/36</td>
+                    <td>27.02.15</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Private Asset Management"</a></td>
+                    <td>4.2.92/217</td>
+                    <td>18.06.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Qazaq Banki"</a></td>
+                    <td>1.2.204/37</td>
+                    <td>25.12.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "SkyBridge Invest"</a></td>
+                    <td>4.2.192/113</td>
+                    <td>20.07.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Tengri Bank"</a></td>
+                    <td>1.1.159</td>
+                    <td>18.03.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "VISOR Capital" (ВИЗОР Капитал)</a></td>
+                    <td>3.2.231/9</td>
+                    <td>13.12.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "ZIM Capital"</a></td>
+                    <td>3.1.1.224</td>
+                    <td>17.07.15</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "АСЫЛ ИНВЕСТ"</a></td>
+                    <td>0403200645</td>
+                    <td>01.07.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "АТФБанк"</a></td>
+                    <td>239</td>
+                    <td>28.12.07</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Алиби Секьюритиз"</a></td>
+                    <td>0403200660</td>
+                    <td>03.07.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Банк "Bank RBK"</a></td>
+                    <td>1.2.33/223</td>
+                    <td>05.06.15</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Банк Kassa Nova"</a></td>
+                    <td>1.1.260</td>
+                    <td>10.06.11</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Банк Астаны"</a></td>
+                    <td>1.1.32</td>
+                    <td>20.04.15</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Банк Развития Казахстана"</a></td>
+                    <td>253</td>
+                    <td>30.10.03</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Банк ЦентрКредит"</a></td>
+                    <td>1.2.25/195/34</td>
+                    <td>28.01.15</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Банк ЭкспоКредит"</a></td>
+                    <td>1.2.43/227</td>
+                    <td>27.07.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "ДОЧЕРНИЙ БАНК "КАЗАХСТАН-ЗИРААТ ИНТЕРНЕШНЛ БАНК"</a></td>
+                    <td>163</td>
+                    <td>29.12.07</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Дочерняя организация АО "Нурбанк" "MONEY EXPERTS"</a></td>
+                    <td>0403200727</td>
+                    <td>01.07.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Дочерняя организация Народного Банка Казахстана "Halyk Finance"</a></td>
+                    <td>3.2.229/7</td>
+                    <td>04.11.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Евразийский Капитал"</a></td>
+                    <td>4.2.206/103</td>
+                    <td>25.06.04</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Евразийский банк"</a></td>
+                    <td>237</td>
+                    <td>28.12.07</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Инвестиционный Дом "Астана-Инвест"</a></td>
+                    <td>3.2.228/6</td>
+                    <td>26.09.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Инвестиционный Финансовый Дом "RESMI"</a></td>
+                    <td>0403200520</td>
+                    <td>01.07.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Исламский Банк "Al Hilal"</a></td>
+                    <td>1.1.261</td>
+                    <td>10.06.15</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Казинвестбанк"</a></td>
+                    <td>221</td>
+                    <td>21.03.08</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Казкоммерц Секьюритиз" (дочерняя организация АО "Казоммерцбанк")</a></td>
+                    <td>0403200439</td>
+                    <td>24.06.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Казкоммерцбанк"</a></td>
+                    <td>1.2.16/222/32</td>
+                    <td>02.12.14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Казпочта"</a></td>
+                    <td>0401200704</td>
+                    <td>03.02.04</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Народный сберегательный банк Казахстана"</a></td>
+                    <td>1.2.47/230/38</td>
+                    <td>08.11.16</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Акционерное общество "Нурбанк"</a></td>
+                    <td>1.2.15/193</td>
+                    <td>28.10.14</td>
+                    <tr></tr>
+                    <td><a href="#">Акционерное общество "Сентрас Секьюритиз"</a></td>
+                    <td>0403200223</td>
+                    <td>13.06.14</td>
                   </tr>
                 </tbody>
               </table>
-              <div class="help-block pull-right"><a href="#">Посмотреть все</a></div>
-              <div class="help-block">* без учета специализированных торгов</div>
-            </div>
-          </div>
-          <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Лидеры роста и падения<i class="fa fa-angle-down"></i></a></div>
-            <div class="accordion__body">
-              <ul class="accordion__nav">
-                <li class="active"><a href="#">Лидеры роста</a></li>
-                <li><a href="#">Лидеры падения</a></li>
-              </ul>
-              <table class="sorting-table table table-striped">
-                <thead>
-                  <tr>
-                    <th>Код</th>
-                    <th>Компания</th>
-                    <th>Последняя цена,KZT</th>
-                    <th>Изменение, KZT</th>
-                    <th>Изменение, %</th>
-                    <th>1 месяц</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>1,004.00</td>
-                    <td>1,004.00</td>
-                    <td>+10.10</td>
-                    <td><img src="img-content/img-4.jpg" alt=""></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="help-block">* данные предоставляются с задержкой в 15 минут</div>
-              <div class="help-block">* в расчет включаются акции первого класса ликвидности</div>
-            </div>
-          </div>
-          <div class="accordion closed">
-            <div class="accordion__head"><a href="#" class="accordion__head-link">Публичные размещения (IPO)<i class="fa fa-angle-down"></i></a></div>
-            <div class="accordion__body">
-              <table class="sorting-table table table-striped">
-                <thead>
-                  <tr>
-                    <th>Код</th>
-                    <th>Компания</th>
-                    <th>Цена</th>
-                    <th>Объем, млн KZT</th>
-                    <th>Число сделок</th>
-                    <th>Спрос, % </th>
-                    <th>Дата</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>11 000.00</td>
-                    <td>800 016 129</td>
-                    <td>485</td>
-                    <td>325</td>
-                    <td>21.07.2016</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#">RU_SBER</a></td>
-                    <td><a href="#">Название</a></td>
-                    <td>11 000.00</td>
-                    <td>800 016 129</td>
-                    <td>485</td>
-                    <td>325</td>
-                    <td>21.07.2016</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="help-block">* данные предоставляются с задержкой в 15 минут</div>
             </div>
           </div>
         </div>
@@ -638,12 +558,10 @@
     <script type="text/javascript" defer src="js/main.js"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
-      	$('.sorting-table').DataTable({
-      		scrollX: true,
-      		language: {
-      		    search: '',
-      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
-      		  }
+      	$('.sorting-table > tbody > tr > td a').on('click', function(event) {
+      		event.preventDefault();
+      		var _self = $(this);
+      		_self.closest('tr').toggleClass('sorting-tr sorting-tr_gray');
       	});
       });
     </script>
