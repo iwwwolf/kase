@@ -1535,6 +1535,16 @@ section.landing-section.inst-support {
 		margin-bottom: inherit;
 	}
 }
+.white-block-slider{
+	.slick-dots{
+		position:static;
+		margin-bottom: 10px;
+		li{
+			width: auto;
+			height: auto;
+		}
+	}
+}
 //Листинг на KASE
 .landing-section {
 	.container {

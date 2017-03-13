@@ -1258,6 +1258,13 @@ section.landing-section.inst-support {
 .great-slider .slick-dotted {
   margin-bottom: inherit; }
 
+.white-block-slider .slick-dots {
+  position: static;
+  margin-bottom: 10px; }
+  .white-block-slider .slick-dots li {
+    width: auto;
+    height: auto; }
+
 .landing-section .container .tab-content.listing .gratient-tabs__accordion-body,
 .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body {
   margin-top: 0; }
