@@ -1383,46 +1383,46 @@ section.landing-section.inst-support {
 
 .landing-section .tab-content.placing .placing-adventages,
 .landing-section .gradient-tabs.placing .placing-adventages {
-  position: relative;
-  box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.17);
-  background-color: #f7f7f8; }
-  .landing-section .tab-content.placing .placing-adventages table,
-  .landing-section .gradient-tabs.placing .placing-adventages table {
-    margin-top: 50px; }
-    @media only screen and (max-width: 649px) {
-      .landing-section .tab-content.placing .placing-adventages table,
-      .landing-section .gradient-tabs.placing .placing-adventages table {
-        margin-top: 0; } }
-    .landing-section .tab-content.placing .placing-adventages table tr td,
-    .landing-section .gradient-tabs.placing .placing-adventages table tr td {
-      padding-top: 40px;
-      padding-bottom: 40px;
-      padding-right: 20px;
-      display: block;
-      width: 100%;
-      padding-left: 130px;
-      background-repeat: no-repeat;
-      background-position: 30px center; }
-      @media only screen and (min-width: 992px) {
-        .landing-section .tab-content.placing .placing-adventages table tr td,
-        .landing-section .gradient-tabs.placing .placing-adventages table tr td {
-          width: 33%;
-          display: table-cell; } }
-      .landing-section .tab-content.placing .placing-adventages table tr td:nth-child(1),
-      .landing-section .gradient-tabs.placing .placing-adventages table tr td:nth-child(1) {
-        background-image: url(../images/placing-book.png); }
-      .landing-section .tab-content.placing .placing-adventages table tr td:nth-child(2),
-      .landing-section .gradient-tabs.placing .placing-adventages table tr td:nth-child(2) {
-        background-image: url(../images/placing-cal.png); }
-      .landing-section .tab-content.placing .placing-adventages table tr td:nth-child(3),
-      .landing-section .gradient-tabs.placing .placing-adventages table tr td:nth-child(3) {
-        background-image: url(../images/placing-note.png); }
-      .landing-section .tab-content.placing .placing-adventages table tr td p,
-      .landing-section .gradient-tabs.placing .placing-adventages table tr td p {
-        font-weight: bold;
-        font-size: 14px;
-        text-align: left;
-        line-height: 24px; }
+  position: relative; }
+  .landing-section .tab-content.placing .placing-adventages p,
+  .landing-section .gradient-tabs.placing .placing-adventages p {
+    color: #383838; }
+  @media only screen and (max-width: 649px) {
+    .landing-section .tab-content.placing .placing-adventages table,
+    .landing-section .gradient-tabs.placing .placing-adventages table {
+      margin-top: 0; } }
+  .landing-section .tab-content.placing .placing-adventages table tr td,
+  .landing-section .gradient-tabs.placing .placing-adventages table tr td {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 20px;
+    display: block;
+    width: 100%;
+    padding-left: 130px;
+    background-repeat: no-repeat;
+    background-position: 30px center; }
+    @media only screen and (min-width: 992px) {
+      .landing-section .tab-content.placing .placing-adventages table tr td,
+      .landing-section .gradient-tabs.placing .placing-adventages table tr td {
+        width: 33%;
+        display: table-cell;
+        padding-top: 0;
+        padding-bottom: 0; } }
+    .landing-section .tab-content.placing .placing-adventages table tr td:nth-child(1),
+    .landing-section .gradient-tabs.placing .placing-adventages table tr td:nth-child(1) {
+      background-image: url(../images/placing-book.png); }
+    .landing-section .tab-content.placing .placing-adventages table tr td:nth-child(2),
+    .landing-section .gradient-tabs.placing .placing-adventages table tr td:nth-child(2) {
+      background-image: url(../images/placing-cal.png); }
+    .landing-section .tab-content.placing .placing-adventages table tr td:nth-child(3),
+    .landing-section .gradient-tabs.placing .placing-adventages table tr td:nth-child(3) {
+      background-image: url(../images/placing-note.png); }
+    .landing-section .tab-content.placing .placing-adventages table tr td p,
+    .landing-section .gradient-tabs.placing .placing-adventages table tr td p {
+      font-weight: bold;
+      font-size: 14px;
+      text-align: left;
+      line-height: 24px; }
 
 .container.freeback .right-content-column p:nth-child(3) {
   line-height: 40px; }

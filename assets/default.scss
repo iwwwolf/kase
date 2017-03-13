@@ -1678,11 +1678,11 @@ section.landing-section.inst-support {
 			}
 		}
 		.placing-adventages {
+			p {
+				color: #383838;
+			}
 			position: relative;
-			box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.17);
-			background-color: #f7f7f8;
 			table {
-				margin-top: 50px;
 				@include respond-to(small) {
 					margin-top: 0;
 				}
@@ -1691,6 +1691,8 @@ section.landing-section.inst-support {
 						@include respond-to(large) {
 							width: 33%;
 							display: table-cell;
+							padding-top: 0;
+							padding-bottom: 0;
 						}
 						padding-top: 40px;
 						padding-bottom: 40px;
