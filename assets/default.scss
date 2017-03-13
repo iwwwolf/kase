@@ -1530,8 +1530,8 @@ section.landing-section.inst-support {
 		}
 	}
 }
-.great-slider{
-	.slick-dotted{
+.great-slider {
+	.slick-dotted {
 		margin-bottom: inherit;
 	}
 }
@@ -1543,7 +1543,8 @@ section.landing-section.inst-support {
 			.gratient-tabs__accordion-body {
 				margin-top: 0;
 				>p {
-					margin: 10px 200px;
+					margin: 10px 10%;
+					font-size: 16px;
 				}
 				>h4 {
 					margin-top: 40px;
@@ -1569,8 +1570,9 @@ section.landing-section.inst-support {
 							@media (max-width: 1200px) {
 								height: 215px;
 							}
-							font-size: 16px;
+							font-size: 14px;
 							text-align: left;
+							color: #737373;
 						}
 					}
 					@include respond-to(small) {
@@ -1578,6 +1580,35 @@ section.landing-section.inst-support {
 							transform: translateX(0);
 							p {
 								height: auto;
+							}
+						}
+					}
+				}
+				.container.requirements-differences {
+					h4 {
+						line-height: 60px;
+					}
+					>div:nth-child(2) {
+						ul {
+							display: inline-block;
+							li {
+								position: relative;
+								text-align: left;
+								list-style-type: none;
+								margin-top: 15px;
+								&:first-child{
+									margin-top: 0;
+								}
+								&:before {
+									content: ' ';
+									display: block;
+									position: absolute;
+									width: 5px;
+									height: 5px;
+									left: -20px;
+									top: 8px;
+									background-color: #66b13d;
+								}
 							}
 						}
 					}
@@ -1628,19 +1659,18 @@ section.landing-section.inst-support {
 .landing-section {
 	.tab-content.placing,
 	.gradient-tabs.placing {
-		.container.nalog{
-			background-position:center center;
+		.container.nalog {
+			background-position: center center;
 			background-repeat: no-repeat;
-			background-image:url('../images/warning_image.png');
-			padding-top:50px;
-			padding-bottom:50px;
-			p{
+			background-image: url('../images/warning_image.png');
+			padding-top: 50px;
+			padding-bottom: 50px;
+			p {
 				margin: 15px 7%;
-				&:first-child{
+				&:first-child {
 					margin-top: 0;
 				}
 			}
-			
 		}
 		.container.placing-content {
 			p {
@@ -1697,16 +1727,16 @@ section.landing-section.inst-support {
 		p:nth-child(3) {
 			line-height: 40px;
 		}
-		>*:last-child{
-			margin-bottom:200px;
+		>*:last-child {
+			margin-bottom: 200px;
 		}
-		p span{
+		p span {
 			color: #a8b1ba;
 		}
-		.container{
+		.container {
 			margin-top: 40px;
 			margin-bottom: 40px;
-			>div{
+			>div {
 				padding-left: 0;
 			}
 		}

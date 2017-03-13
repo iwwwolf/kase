@@ -1263,7 +1263,8 @@ section.landing-section.inst-support {
   margin-top: 0; }
   .landing-section .container .tab-content.listing .gratient-tabs__accordion-body > p,
   .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body > p {
-    margin: 10px 200px; }
+    margin: 10px 10%;
+    font-size: 16px; }
   .landing-section .container .tab-content.listing .gratient-tabs__accordion-body > h4,
   .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body > h4 {
     margin-top: 40px; }
@@ -1288,8 +1289,9 @@ section.landing-section.inst-support {
       width: 98%;
       box-shadow: 0 5px 21px 1px rgba(53, 58, 60, 0.1);
       height: 350px;
-      font-size: 16px;
-      text-align: left; }
+      font-size: 14px;
+      text-align: left;
+      color: #737373; }
       @media (max-width: 1200px) {
         .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div p,
         .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.listing-more > div p,
@@ -1308,6 +1310,31 @@ section.landing-section.inst-support {
       .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div p,
       .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.listing-more > div p {
         height: auto; } }
+  .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-differences h4,
+  .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-differences h4 {
+    line-height: 60px; }
+  .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul,
+  .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul {
+    display: inline-block; }
+    .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul li,
+    .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul li {
+      position: relative;
+      text-align: left;
+      list-style-type: none;
+      margin-top: 15px; }
+      .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul li:first-child,
+      .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul li:first-child {
+        margin-top: 0; }
+      .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul li:before,
+      .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-differences > div:nth-child(2) ul li:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        left: -20px;
+        top: 8px;
+        background-color: #66b13d; }
   .landing-section .container .tab-content.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(1),
   .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body .container.requirements-more > div:nth-child(1) {
     background-image: url(../images/block_1.png); }
