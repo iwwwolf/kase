@@ -29,7 +29,7 @@ block content
 			include ../../modules/markets-menu/module
 			//-include ../../modules/regulations/module
 			
-	.container
+	.container.rating
 		.right-content-column
 
 			-
@@ -43,174 +43,291 @@ block content
 			include ../../modules/breadcrumbs/module
 			h1 Рэнкинг активности
 
-			div Сектор рынка:
+			.small-dropdown.flex.accordion__hide-in-closed.sector Сектор рынка:
 				.dropdown
-					a.dropdown-link(href="#", data-toggle="dropdown", role="button") 1 день
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button") Долевые ценные бумаги
 					ul.dropdown-menu
-						li: a(href="#") 1 неделя
-						li: a(href="#") 1 месяц
-						li: a(href="#") 1 год
+						li: a(href="#") Долевые ценные бумаги
+						li: a(href="#") Долговые ценные бумаги
+						li: a(href="#") Репо
+						li: a(href="#") Государственные ценные бумаги
+						li: a(href="#") Иностранные валюты
+						li: a(href="#") Операции валютного свопа
+						
+			.small-dropdown.flex.accordion__hide-in-closed.period
+				.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button") За весь год
+					ul.dropdown-menu
+						li: a(href="#") За весь год
+						li: a(href="#") Январь
+						li: a(href="#") Февраль
+						
+			.small-dropdown.flex.accordion__hide-in-closed.year
+				.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button") 2017
+					ul.dropdown-menu
+						li: a(href="#") 2016
+						li: a(href="#") 2015
+						li: a(href="#") 2014
+						li: a(href="#") 2013
+						li: a(href="#") 2012
+						li: a(href="#") 2011
+						li: a(href="#") 2010
+						li: a(href="#") 2009
 
-				.sortin-table--with-search
-					table.sorting-table.table.table-striped
-						thead
-							tr
-								th Наименование участника
-								th номер
-								th дата выдачи
-						tbody
-							tr
-								td: a(href="#") Акционерное общество "Altyn Bank" (Дочерний банк АО "Народный Банк Казахстана")
-								td 1.2.23/194/33
-								td 07.11.16
-							tr
-								td: a(href="#") Акционерное общество "AsiaCredit Bank (АзияКредит Банк)"
-								td 1.2.75/83
-								td 20.02.15
-							tr
-								td: a(href="#") Акционерное общество "BCC Invest" - дочерняя организация АО "Банк ЦентрКредит"
-								td 0403200488
-								td 01.07.14
-							tr
-								td: a(href="#") Акционерное общество "CAIFC INVESTMENT GROUP"
-								td 4.1.1.110/49
-								td 03.07.14
-							tr
-								td: a(href="#") Акционерное общество "Capital Bank Kazakhstan"
-								td 1.1.9
-								td 18.09.14
-							tr
-								td: a(href="#") Акционерное общество "Delta Bank"
-								td 213
-								td 24.10.07
-							tr
-								td: a(href="#") Акционерное общество "FALCONRY CAPITAL"
-								td 3.2.226/115
-								td 04.07.16
-							tr
-								td: a(href="#") Акционерное общество "ForteBank"
-								td 1.2.29/197/36
-								td 27.02.15
-							tr
-								td: a(href="#") Акционерное общество "Private Asset Management"
-								td 4.2.92/217
-								td 18.06.14
-							tr
-								td: a(href="#") Акционерное общество "Qazaq Banki"
-								td 1.2.204/37
-								td 25.12.14
-							tr
-								td: a(href="#") Акционерное общество "SkyBridge Invest"
-								td 4.2.192/113
-								td 20.07.16
-							tr
-								td: a(href="#") Акционерное общество "Tengri Bank"
-								td 1.1.159
-								td 18.03.16
-							tr
-								td: a(href="#") Акционерное общество "VISOR Capital" (ВИЗОР Капитал)
-								td 3.2.231/9
-								td 13.12.16
-							tr
-								td: a(href="#") Акционерное общество "ZIM Capital"
-								td 3.1.1.224
-								td 17.07.15
-							tr
-								td: a(href="#") Акционерное общество "АСЫЛ ИНВЕСТ"
-								td 0403200645
-								td 01.07.14
-							tr
-								td: a(href="#") Акционерное общество "АТФБанк"
-								td 239
-								td 28.12.07
-							tr
-								td: a(href="#") Акционерное общество "Алиби Секьюритиз"
-								td 0403200660
-								td 03.07.14
-							tr
-								td: a(href="#") Акционерное общество "Банк "Bank RBK"
-								td 1.2.33/223
-								td 05.06.15
-							tr
-								td: a(href="#") Акционерное общество "Банк Kassa Nova"
-								td 1.1.260
-								td 10.06.11
-							tr
-								td: a(href="#") Акционерное общество "Банк Астаны"
-								td 1.1.32
-								td 20.04.15
-							tr
-								td: a(href="#") Акционерное общество "Банк Развития Казахстана"
-								td 253
-								td 30.10.03
-							tr
-								td: a(href="#") Акционерное общество "Банк ЦентрКредит"
-								td 1.2.25/195/34
-								td 28.01.15
-							tr
-								td: a(href="#") Акционерное общество "Банк ЭкспоКредит"
-								td 1.2.43/227
-								td 27.07.16
-							tr
-								td: a(href="#") Акционерное общество "ДОЧЕРНИЙ БАНК "КАЗАХСТАН-ЗИРААТ ИНТЕРНЕШНЛ БАНК"
-								td 163
-								td 29.12.07
-							tr
-								td: a(href="#") Акционерное общество "Дочерняя организация АО "Нурбанк" "MONEY EXPERTS"
-								td 0403200727
-								td 01.07.14
-							tr
-								td: a(href="#") Акционерное общество "Дочерняя организация Народного Банка Казахстана "Halyk Finance"
-								td 3.2.229/7
-								td 04.11.16
-							tr
-								td: a(href="#") Акционерное общество "Евразийский Капитал"
-								td 4.2.206/103
-								td 25.06.04
-							tr
-								td: a(href="#") Акционерное общество "Евразийский банк"
-								td 237
-								td 28.12.07
-							tr
-								td: a(href="#") Акционерное общество "Инвестиционный Дом "Астана-Инвест"
-								td 3.2.228/6
-								td 26.09.16
-							tr
-								td: a(href="#") Акционерное общество "Инвестиционный Финансовый Дом "RESMI"
-								td 0403200520
-								td 01.07.14
-							tr
-								td: a(href="#") Акционерное общество "Исламский Банк "Al Hilal"
-								td 1.1.261
-								td 10.06.15
-							tr
-								td: a(href="#") Акционерное общество "Казинвестбанк"
-								td 221
-								td 21.03.08
-							tr
-								td: a(href="#") Акционерное общество "Казкоммерц Секьюритиз" (дочерняя организация АО "Казоммерцбанк")
-								td 0403200439
-								td 24.06.14
-							tr
-								td: a(href="#") Акционерное общество "Казкоммерцбанк"
-								td 1.2.16/222/32
-								td 02.12.14
-							tr
-								td: a(href="#") Акционерное общество "Казпочта"
-								td 0401200704
-								td 03.02.04
-							tr
-								td: a(href="#") Акционерное общество "Народный сберегательный банк Казахстана"
-								td 1.2.47/230/38
-								td 08.11.16
-							tr
-								td: a(href="#") Акционерное общество "Нурбанк"
-								td 1.2.15/193
-								td 28.10.14
-								tr
-								td: a(href="#") Акционерное общество "Сентрас Секьюритиз"
-								td 0403200223
-								td 13.06.14
+
+			.sortin-table--with-search
+				table.sorting-table.table.table-striped
+					thead
+						tr
+							th №
+							th Наименование члена KASE
+							th Ka
+							th V
+							th N
+							th D
+							th A
+					tbody
+						tr
+							td 1
+							td
+								a(href='#') АО "Фридом Финанс"
+							td 3,80
+							td 1,00
+							td 1,00
+							td 1,00
+							td 1,00
+						tr
+							td 2
+							td
+								a(href='#') АО "АСЫЛ-ИНВЕСТ"
+							td 1,35
+							td 0,12
+							td 0,06
+							td 1,00
+							td 0,19
+						tr
+							td 3
+							td
+								a(href='#') АО "Казпочта"
+							td 1,31
+							td 0,05
+							td 0,07
+							td 0,95
+							td 0,25
+						tr
+							td 4
+							td
+								a(href='#') АО "Дочерняя организация Народного Банка Казахстана "Halyk Finance" 
+							td 1,16
+							td 0,11
+							td 0,04
+							td 0,95
+							td 0,08
+						tr
+							td 5
+							td
+								a(href='#') АО "BCC Invest" - дочерняя организация АО "Банк ЦентрКредит"
+							td 1,16
+							td 0,12
+							td 0,04
+							td 0,95
+							td 0,07
+						tr
+							td 6
+							td
+								a(href='#') АО "Сентрас Секьюритиз"
+							td 1,13
+							td 0,09
+							td 0,03
+							td 0,98
+							td 0,06
+						tr
+							td 7
+							td
+								a(href='#') АО "Казкоммерц Секьюритиз" (дочерняя организация АО "Казкоммерцбанк")
+							td 1,09
+							td 0,10
+							td 0,02
+							td 0,98
+							td 0,02
+						tr
+							td 8
+							td
+								a(href='#') АО "CAIFC INVESTMENT GROUP"
+							td 1,00
+							td 0,03
+							td 0,01
+							td 0,88
+							td 0,09
+						tr
+							td 9
+							td
+								a(href='#') АО "Цесна Капитал"
+							td 0,83
+							td 0,01
+							td 0,01
+							td 0,80
+							td 0,02
+						tr
+							td 10
+							td
+								a(href='#') АО "Инвестиционный Финансовый Дом "RESMI"
+							td 0,57
+							td 0,01
+							td 0,00
+							td 0,55
+							td 0,01
+						tr
+							td 11
+							td
+								a(href='#') АО "FALCONRY CAPITAL"
+							td 0,49
+							td 0,01
+							td 0,01
+							td 0,48
+							td 0,00
+						tr
+							td 12
+							td
+								a(href='#') АО "Евразийский Капитал"
+							td 0,49
+							td 0,01
+							td 0,00
+							td 0,48
+							td 0,00
+						tr
+							td 13
+							td
+								a(href='#') АО "Инвестиционный Дом "Астана-Инвест"
+							td 0,44
+							td 0,01
+							td 0,00
+							td 0,43
+							td 0,01
+						tr
+							td 14
+							td
+								a(href='#') АО "Управляющая компания "ОРДА Капитал"
+							td 0,42
+							td 0,01
+							td 0,00
+							td 0,40
+							td 0,01
+						tr
+							td 15
+							td
+								a(href='#') АО "Дочерняя организация акционерного общества "БТА Банк" "БТА Секьюритис"
+							td 0,41
+							td 0,02
+							td 0,01
+							td 0,38
+							td 0,01
+						tr
+							td 16
+							td
+								a(href='#') АО "Private Asset Management"  
+							td 0,18
+							td 0,00
+							td 0,00
+							td 0,18
+							td 0,00
+						tr
+							td 17
+							td
+								a(href='#') АО "Дочерняя организация АО "Нурбанк" "MONEY EXPERTS"
+							td 0,13
+							td 0,00
+							td 0,00
+							td 0,13
+							td 0,00
+						tr
+							td 18
+							td
+								a(href='#') АО "ZIM Capital"
+							td 0,13
+							td 0,00
+							td 0,00
+							td 0,13
+							td 0,00
+						tr
+							td 19
+							td
+								a(href='#') АО "Tengri Capital MB"
+							td 0,05
+							td 0,00
+							td 0,00
+							td 0,05
+							td 0,00
+
+			span.note(style='float: left; margin: 5px 0px 20px 0px;')
+				| Рэнкинг активности членов KASE составлен согласно внутреннему документу KASE 
+				a(href='/files/normative_base/members_activity.pdf', target='_blank')
+					| "Методика расчета показателей активности членов АО "Казахстанская фондовая биржа"
+					
+			.sortin-table--with-search
+				table.sorting-table.table.table-striped
+					thead
+						tr
+							th(colspan="2") Новости с архивными значениями показателей активности членов KASE:
+					tbody
+						tr
+							td(align='center') 08.01.09
+							td
+								a.news(href='/news/show/1063888', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за декабрь и 2008 год
+						tr
+							td(align='center') 02.12.08
+							td
+								a.news(href='/news/show/1061672', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за ноябрь и 11 месяцев 2008 года
+						tr
+							td(align='center') 04.11.08
+							td
+								a.news(href='/news/show/1059570', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за октябрь и 10 месяцев 2008 года
+						tr
+							td(align='center') 02.10.08
+							td
+								a.news(href='/news/show/1057237', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за сентябрь и 9 месяцев 2008 года
+						tr
+							td(align='center') 03.09.08
+							td
+								a.news(href='/news/show/1055425', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за август и 8 месяцев 2008 года
+						tr
+							td(align='center') 04.08.08
+							td
+								a.news(href='/news/show/1053399', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за июль и 7 месяцев 2008 года
+						tr
+							td(align='center') 01.07.08
+							td
+								a.news(href='/news/show/1051033', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за июнь и за первые 6 месяцев 2008 года
+						tr
+							td(align='center') 03.06.08
+							td
+								a.news(href='/news/show/1049102', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за май и за первые 5 месяцев 2008 года
+						tr
+							td(align='center') 04.05.08
+							td
+								a.news(href='/news/show/1046893', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за апрель и за первые 4 месяца 2008 года (по новой методике)
+						tr
+							td(align='center') 01.04.08
+							td
+								a.news(href='/news/show/1044461', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за март и за первые 3 месяца 2008 года (по новой методике)
+						tr
+							td(align='center') 28.03.08
+							td
+								a.news(href='/news/show/1044323', rel='news')
+									| KASE определила ведущих операторов биржевого рынка купли-продажи акций за февраль и за первые 2 месяца 2008 года (по новой методике)
+
+
 			
 block scripts
 	script(type="text/javascript").

@@ -1446,6 +1446,16 @@ section.landing-section.inst-support {
   .container.freeback .right-content-column .container > div {
     padding-left: 0; }
 
+.container.rating .right-content-column > .small-dropdown.flex.accordion__hide-in-closed.sector {
+  float: left; }
+
+.container.rating .right-content-column > .small-dropdown.flex.accordion__hide-in-closed.period,
+.container.rating .right-content-column > .small-dropdown.flex.accordion__hide-in-closed.year {
+  float: right; }
+
+.container.rating .right-content-column > .sortin-table--with-search {
+  padding-top: 30px; }
+
 .btn {
   font-size: 100%;
   border: none;
