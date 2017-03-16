@@ -1471,6 +1471,105 @@ section.landing-section.inst-support {
   padding-bottom: 7px;
   margin-bottom: 7; }
 
+.container.diplomats .right-content-column > p:last-child {
+  line-height: 70px;
+  margin-bottom: 30px;
+  font-weight: bold; }
+
+.container.diplomats.slider .sliders {
+  font-weight: bold; }
+  .container.diplomats.slider .sliders .slider-nav:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #c9d4de;
+    height: 2px;
+    top: 36px;
+    z-index: 1; }
+  .container.diplomats.slider .sliders .slider-nav .slick-list {
+    height: 50px;
+    text-align: center;
+    z-index: 2; }
+    .container.diplomats.slider .sliders .slider-nav .slick-list:before {
+      content: ' ';
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 50px;
+      left: 0;
+      z-index: 3;
+      background: white;
+      background: -webkit-gradient(left top, right top, color-stop(0%, white), color-stop(100%, rgba(239, 1, 124, 0)));
+      background: -webkit-linear-gradient(left, white 0%, rgba(239, 1, 124, 0) 100%);
+      background: linear-gradient(to right, white 0%, rgba(239, 1, 124, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ef017c', GradientType=1 ); }
+    .container.diplomats.slider .sliders .slider-nav .slick-list:after {
+      content: ' ';
+      position: absolute;
+      display: block;
+      width: 40px;
+      height: 50px;
+      right: 0;
+      z-index: 3;
+      top: 0;
+      background: rgba(255, 255, 255, 0);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, white));
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 ); }
+  .container.diplomats.slider .sliders .slider-nav .slide {
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    width: 100px; }
+    .container.diplomats.slider .sliders .slider-nav .slide:after {
+      content: ' ';
+      position: absolute;
+      display: block;
+      border: 1px solid #c9d4de;
+      background-color: #fff;
+      width: 18px;
+      height: 18px;
+      border-radius: 90%;
+      left: calc(50% - 9px); }
+    .container.diplomats.slider .sliders .slider-nav .slide.slick-current {
+      color: #3cbd0d; }
+      .container.diplomats.slider .sliders .slider-nav .slide.slick-current:after {
+        border-color: #3cbd0d;
+        background-color: #3cbd0d; }
+    .container.diplomats.slider .sliders .slider-nav .slide:hover:after {
+      border-color: #3cbd0d; }
+  .container.diplomats.slider .sliders .slider-main .slide .row {
+    width: 95%;
+    margin: 0 auto;
+    rder-bottom: 1px solid #c9d4de; }
+    .container.diplomats.slider .sliders .slider-main .slide .row .year {
+      text-align: center;
+      width: 100px;
+      height: 100px;
+      margin: 20px auto 0;
+      border-radius: 90%;
+      border: 1px solid #3cbd0d; }
+      .container.diplomats.slider .sliders .slider-main .slide .row .year p {
+        line-height: 100px;
+        font-weight: bold;
+        font-size: 24px; }
+  .container.diplomats.slider .sliders .slider-main .slide .description {
+    padding: 20px 50px;
+    min-height: 200px;
+    border-bottom: 1px solid #c9d4de; }
+    .container.diplomats.slider .sliders .slider-main .slide .description p {
+      line-height: 28px; }
+    @media only screen and (min-width: 992px) {
+      .container.diplomats.slider .sliders .slider-main .slide .description:nth-child(2n-1) {
+        border-bottom: 1px solid #c9d4de;
+        border-left: 1px solid #c9d4de;
+        margin-left: -1px; }
+      .container.diplomats.slider .sliders .slider-main .slide .description:nth-child(2n) {
+        border-right: 1px solid #c9d4de;
+        border-bottom: 1px solid #c9d4de; } }
+
 .btn {
   font-size: 100%;
   border: none;
