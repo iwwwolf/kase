@@ -1251,10 +1251,6 @@ section.landing-section.inst-support {
   box-shadow: 0 18px 33px 2px rgba(53, 58, 60, 0.1);
   margin: 30px auto; }
 
-.container .accordion:last-child {
-  margin-bottom: 100px;
-  border-bottom: 1px solid #c9d4de; }
-
 .great-slider .slick-dotted {
   margin-bottom: inherit; }
 
@@ -1462,6 +1458,9 @@ section.landing-section.inst-support {
   display: block;
   margin: 30px 0;
   float: none; }
+
+.container.rating .right-content-column .accordion ul.news-list {
+  margin-top: 20px; }
 
 .container.reglament #regulations.regulations p.title {
   color: #41c122; }

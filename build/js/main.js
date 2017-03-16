@@ -230,8 +230,6 @@ $(document).ready(function(){
 
 	});
 
-	
-
 	//Слайдер в дипломатах и номинациях
 
 	 $('.container.diplomats.slider .slider-main').slick({
@@ -254,12 +252,6 @@ $(document).ready(function(){
 
 	});
 
-	
-
-	
-
-	
-
 	$('.container.diplomats.slider .slider-nav').slick({
 
 		asNavFor: '.slider-main',
@@ -277,6 +269,10 @@ $(document).ready(function(){
 		initialSlide: 5,
 
 	});
+
+	//Слайдер календарей в регламенте
+
+	
 	
 	/* раскрывающиеся блоки страницы */
 	
