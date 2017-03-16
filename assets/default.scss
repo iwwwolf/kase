@@ -1753,10 +1753,14 @@ section.landing-section.inst-support {
 	}
 }
 //Рейтинг активности
+
 .container.rating {
 	.right-content-column {
 		>.small-dropdown.flex.accordion__hide-in-closed.sector {
 			float: left;
+			>.dropdown{
+				min-width:300px;
+			}
 		}
 		>.small-dropdown.flex.accordion__hide-in-closed.period,
 		>.small-dropdown.flex.accordion__hide-in-closed.year {

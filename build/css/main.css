@@ -1448,6 +1448,8 @@ section.landing-section.inst-support {
 
 .container.rating .right-content-column > .small-dropdown.flex.accordion__hide-in-closed.sector {
   float: left; }
+  .container.rating .right-content-column > .small-dropdown.flex.accordion__hide-in-closed.sector > .dropdown {
+    min-width: 300px; }
 
 .container.rating .right-content-column > .small-dropdown.flex.accordion__hide-in-closed.period,
 .container.rating .right-content-column > .small-dropdown.flex.accordion__hide-in-closed.year {
