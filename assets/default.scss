@@ -4,49 +4,42 @@
 	font-weight: 100;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'MuseoSansCyrl';
 	src: url('../fonts/MuseoSansCyrl-300.ttf'), url('../fonts/MuseoSansCyrl-300.woff'), url('../fonts/MuseoSansCyrl-300.otf'), url('../fonts/MuseoSansCyrl-300.eot');
 	font-weight: 300;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'MuseoSansCyrl';
 	src: url('../fonts/MuseoSansCyrl-300.ttf'), url('../fonts/MuseoSansCyrl-300.woff'), url('../fonts/MuseoSansCyrl-300.otf'), url('../fonts/MuseoSansCyrl-300.eot');
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'MuseoSansCyrl';
 	src: url('../fonts/MuseoSansCyrl-500.ttf'), url('../fonts/MuseoSansCyrl-500.woff'), url('../fonts/MuseoSansCyrl-500.otf'), url('../fonts/MuseoSansCyrl-500.eot');
 	font-weight: 500;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'MuseoSansCyrl';
 	src: url('../fonts/MuseoSansCyrl-500.ttf'), url('../fonts/MuseoSansCyrl-500.woff'), url('../fonts/MuseoSansCyrl-500.otf'), url('../fonts/MuseoSansCyrl-500.eot');
 	font-weight: bold;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'MuseoSansCyrl';
 	src: url('../fonts/MuseoSansCyrl-700.ttf'), url('../fonts/MuseoSansCyrl-700.woff'), url('../fonts/MuseoSansCyrl-700.otf'), url('../fonts/MuseoSansCyrl-700.eot');
 	font-weight: 700;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: 'MuseoSansCyrl';
 	src: url('../fonts/MuseoSansCyrl-900.ttf'), url('../fonts/MuseoSansCyrl-900.woff'), url('../fonts/MuseoSansCyrl-900.otf'), url('../fonts/MuseoSansCyrl-900.eot');
 	font-weight: 900;
 	font-style: normal;
 }
-
 $indexFont: 'MuseoSansCyrl',
 'Arial',
 sans-serif;
@@ -86,7 +79,6 @@ html,
 body {
 	height: 100%;
 }
-
 body {
 	width: 100%;
 	font: normal 14px/1.357 $indexFont;
@@ -123,12 +115,10 @@ body {
 		}
 	}
 }
-
 *:focus,
 *:active {
 	outline: none !important;
 }
-
 
 /* стиль для прижатия футера */
 
@@ -146,12 +136,10 @@ body {
 		transform: scale(0.85);
 	  } */
 }
-
 .body__home,
 .body__home #wrap {
 	background-color: #f8fafb;
 }
-
 a {
 	color: #1666bc;
 	transition: all 300ms;
@@ -160,30 +148,24 @@ a {
 		text-decoration: none;
 	}
 }
-
 img {
 	max-width: 100%;
 }
-
 .container {
 	padding: {
 		left: 15px;
 		right: 15px;
 	}
 }
-
 .relative {
 	position: relative;
 }
-
 .row {
 	margin: 0 -15px;
 }
-
 [class*="col-"] {
 	padding: 0 15px;
 }
-
 .scroll-block {
 	position: relative;
 	overflow: visible;
@@ -220,51 +202,42 @@ img {
 		}
 	}
 }
-
 .red {
 	color: #ff382c;
 }
-
 .green {
 	color: #359e3f;
 }
-
 .date {
 	font-size: $fz12;
 	color: #b0b0b0;
 	font-weight: 500;
 }
-
 .relative {
 	position: relative;
 }
-
 h1,
 .h1 {
 	font-size: 31px;
 	text-transform: uppercase;
 	font-weight: normal;
 }
-
 h2,
 .h2 {
 	font-size: $fz15;
 	margin: 0 0 12px;
 }
-
 h3,
 .h3 {
 	font-size: $fz21;
 	font-weight: normal;
 	margin-bottom: 20px;
 }
-
 h5,
 .h5 {
 	font-size: $fz16;
 	margin: 0 0 15px;
 }
-
 .underline {
 	position: relative;
 	text-decoration: none;
@@ -289,7 +262,6 @@ h5,
 		}
 	}
 }
-
 .hidden-block {
 	transform: translateY(70px);
 	opacity: 0;
@@ -299,7 +271,6 @@ h5,
 		transform: translateY(0);
 	}
 }
-
 .markets-top {
 	width: 100%;
 	height: 56px;
@@ -316,7 +287,6 @@ h5,
 		}
 	}
 }
-
 .help-block {
 	margin: 0;
 	a {
@@ -326,7 +296,6 @@ h5,
 		}
 	}
 }
-
 .dropdown {
 	.dropdown-menu {
 		display: block !important;
@@ -357,7 +326,6 @@ h5,
 		}
 	}
 }
-
 .market-dropdown-block {
 	.dropdown a {
 		color: #333;
@@ -373,7 +341,6 @@ h5,
 		border: 1px solid #c9d4de;
 	}
 }
-
 .market-page {
 	h5 {
 		font-size: 14px;
@@ -381,7 +348,6 @@ h5,
 	}
 	//padding: 0 10px;
 }
-
 .market-block__dropdown {
 	padding: 0 15px;
 	&.accordion__docs {
@@ -399,12 +365,10 @@ h5,
 		}
 	}
 }
-
 .market-block__dropdown_left,
 .market-block__dropdown_right {
 	margin-bottom: 25px;
 }
-
 .market-dropdown-block .dropdown-link:after {
 	height: 0;
 	display: block;
@@ -417,19 +381,15 @@ h5,
 	right: 15px;
 	content: '\f107';
 }
-
 .market-dropdown-block .dropdown.open .dropdown-link:after {
 	content: '\f106';
 }
-
 .market-dropdown-block__large {
 	max-width: 360px;
 }
-
 .market-dropdown-block__small {
 	max-width: 165px;
 }
-
 .market-checkbox__input {
 	width: 100%;
 	position: relative;
@@ -441,7 +401,6 @@ h5,
 	flex-basis: 100%;
 	margin-bottom: 10px;
 }
-
 .market-block-checkbox__grey {
 	padding: 20px 15px 15px 15px;
 	background-color: #f4f6f8;
@@ -449,7 +408,6 @@ h5,
 		line-height: 1.4;
 	}
 }
-
 .market-checkbox__input input {
 	display: block;
 	width: 100%;
@@ -461,7 +419,6 @@ h5,
 	font-size: 12px;
 	font-weight: 100;
 }
-
 .market-checkbox__input_link {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -475,11 +432,9 @@ h5,
 	top: 4px;
 	bottom: 4px;
 }
-
 .market-checkbox__input_link a {
 	color: #038726;
 }
-
 .market-block-checkbox {
 	//border-bottom: 1px solid #c9d4de;
 	border-top: 1px solid #c9d4de;
@@ -497,7 +452,6 @@ h5,
 		}
 	}
 }
-
 .market-block__btn {
 	max-width: 210px;
 	border-radius: 70%;
@@ -511,7 +465,6 @@ h5,
 		padding: 1px;
 	}
 }
-
 .market-block__btn:before {
 	display: block;
 	background-color: #fff;
@@ -525,7 +478,6 @@ h5,
 	transition: all 300ms;
 	content: "";
 }
-
 .market-block__btn:hover {
 	a {
 		background: linear-gradient(to right, #8ac53f 18%, #087e38 100%);
@@ -534,7 +486,6 @@ h5,
 		transform: scale(0.99);
 	}
 }
-
 .market-block__btn {
 	span {
 		display: block;
@@ -544,7 +495,6 @@ h5,
 		transform: scale(1);
 	}
 }
-
 .market-block__red_text {
 	max-width: 420px;
 	margin: 0 auto 40px;
@@ -557,17 +507,14 @@ h5,
 		text-decoration: underline;
 	}
 }
-
 .market-block-checkbox__white {
 	padding-top: 10px;
 	padding-left: 30px;
 }
-
 .market-block-checkbox__white_title {
 	padding: 10px 0;
 	border-bottom: 1px solid #c9d4de;
 }
-
 .market-block-checkbox__white_titlecheckbox {
 	display: flex;
 	align-items: baseline;
@@ -578,15 +525,12 @@ h5,
 		font-weight: 300;
 	}
 }
-
 .market-block__list {
 	border-top: 1px solid #c9d4de;
 }
-
 .market-block-checkbox__white_content {
 	padding: 15px 0;
 }
-
 .market-block__list {
 	padding: 0 10px;
 	h5 {
@@ -596,11 +540,9 @@ h5,
 		margin-top: 30px;
 	}
 }
-
 .market-block__list.regulations__links-list {
 	border-bottom: 0;
 }
-
 .market-block__list .blue-list {
 	a {
 		color: #a8b1ba;
@@ -617,7 +559,6 @@ h5,
 		padding-bottom: 10px;
 	}
 }
-
 .blue-list {
 	padding: 0;
 	margin: 0;
@@ -650,7 +591,6 @@ h5,
 		}
 	}
 }
-
 .center-column,
 .right-content-column {
 	h1 {
@@ -663,7 +603,6 @@ h5,
 		padding: 0;
 	}
 }
-
 .datepicker table tr td.active {
 	&.active {
 		background: linear-gradient(45deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
@@ -686,12 +625,10 @@ h5,
 		border-radius: 0;
 	}
 }
-
 .table-parent {
 	width: 100%;
 	overflow: auto;
 }
-
 .table {
 	min-width: 100%;
 	& > tbody {
@@ -723,7 +660,6 @@ h5,
 		}
 	}
 }
-
 .table-striped,
 .sorting-table {
 	font-size: $fz12;
@@ -739,7 +675,6 @@ h5,
 		background-color: #f7f9fa;
 	}
 }
-
 .sorting-table {
 	> tbody {
 		> tr {
@@ -773,7 +708,6 @@ h5,
 		}
 	}
 }
-
 a.down {
 	&:after {
 		border: 4px solid transparent;
@@ -787,7 +721,6 @@ a.down {
 		content: "";
 	}
 }
-
 a.up {
 	&:after {
 		border: 4px solid transparent;
@@ -801,17 +734,14 @@ a.up {
 		content: "";
 	}
 }
-
 .actions__chart {
 	height: 250px;
 	margin-bottom: 25px;
 }
-
 .actions__chart-text {
 	margin-top: 20px;
 	font-size: $fz12;
 }
-
 .arrow-back {
 	display: block;
 	width: 44px;
@@ -836,17 +766,14 @@ a.up {
 		}
 	}
 }
-
 .kase-date {
 	margin-bottom: 15px;
 }
-
 .all-link {
 	a {
 		border-bottom: 1px dotted;
 	}
 }
-
 .actions-tables {
 	padding-bottom: 35px;
 	.accordion {
@@ -857,7 +784,6 @@ a.up {
 		}
 	}
 }
-
 .actions-tables__title-block {
 	display: flex;
 	justify-content: space-between;
@@ -873,14 +799,12 @@ a.up {
 		border: none;
 	}
 }
-
 .actions-tables__help-text {
 	font-weight: 500;
 	font-size: 12px;
 	border-top: 1px solid #c9d4de;
 	padding-top: 8px;
 }
-
 .grey-block-committees {
 	background-color: #f4f6f8;
 	max-width: 850px;
@@ -890,7 +814,6 @@ a.up {
 	}
 	margin-bottom: 30px;
 }
-
 .grey-block-committees__text {
 	max-width: 630px;
 	font-size: 20px;
@@ -899,7 +822,6 @@ a.up {
 	text-align: center;
 	padding-bottom: 40px;
 }
-
 .grey-block-committees__footer {
 	font-size: 14px;
 	color: #a8b1ba;
@@ -908,11 +830,9 @@ a.up {
 	text-align: center;
 	padding-bottom: 20px;
 }
-
 .right-content-column {
 	position: relative;
 }
-
 .popover {
 	font-family: $indexFont;
 	font-size: 12px;
@@ -925,7 +845,6 @@ a.up {
 		border-top-color: rgba(0, 0, 0, 0.06);
 	}
 }
-
 @media (min-width: 649px) {
 	.market-block__dropdown {
 		&.accordion__docs {
@@ -949,7 +868,6 @@ a.up {
 		}
 	}
 }
-
 @media (min-width: 649px) and (max-width: 768px) {
 	body {
 		&.body__text-page {
@@ -1020,7 +938,6 @@ a.up {
 		height: 104px;
 	  } */
 }
-
 @media (min-width: 769px) {
 	h2,
 	.h2 {
@@ -1092,7 +1009,6 @@ a.up {
 		}
 	}
 }
-
 @media (min-width: 992px) {
 	body {
 		&.body__text-page {
@@ -1123,7 +1039,6 @@ a.up {
 	}
 }
 
-
 /* clearfix */
 
 .great-slider__pagination,
@@ -1137,7 +1052,6 @@ a.up {
 		content: "";
 	}
 }
-
 .dataTable {
 	&--listing {
 		i {
@@ -1146,17 +1060,14 @@ a.up {
 		}
 	}
 }
-
 .markets {
 	&__text {
 		padding-left: 60px;
 	}
 }
-
 .center {
 	text-align: center;
 }
-
 .trade-row {
 	&.trade-row--contacts {
 		display: inherit;
@@ -1168,7 +1079,6 @@ a.up {
 		margin-bottom: 80px;
 	}
 }
-
 .trade-adreses {
 	&__col {
 		background-color: #f8f8f8;
@@ -1181,7 +1091,6 @@ a.up {
 		font-weight: 400;
 	}
 }
-
 .row {
 	&--includes {
 		& + .row--includes {
@@ -1194,7 +1103,6 @@ a.up {
 		}
 	}
 }
-
 .modal-dialog {
 	&--includes {
 		width: 75%;
@@ -1216,7 +1124,6 @@ a.up {
 		}
 	}
 }
-
 .close {
 	&--includes {
 		position: absolute;
@@ -1228,13 +1135,11 @@ a.up {
 		opacity: 1;
 	}
 }
-
 .title {
 	&--includes {
 		font-weight: 700;
 	}
 }
-
 .checkmark {
 	display: block;
 	width: 0;
@@ -1243,27 +1148,22 @@ a.up {
 	border: 8px solid transparent;
 	border-bottom: 15px solid #359e3f;
 }
-
 .accordion__nav .members-list,
 .members-span {
 	color: #a8b1ba;
 }
-
 .members-span {
 	display: block;
 	margin-top: -10px;
 	margin-bottom: 10px;
 }
-
 .accordion__nav .members-list {
 	margin-right: 20px;
 	padding-left: 0;
 }
-
 .blue {
 	color: #0094de;
 }
-
 @media (max-width: 992px) {
 	.trade-row {
 		& + .trade-row {
@@ -1280,7 +1180,6 @@ a.up {
 		padding-left: 0 !important;
 	}
 }
-
 //MY STYLES
 $smallScreen: 649px;
 $middleScreen: 992px;
@@ -1301,7 +1200,6 @@ $middleScreen: 992px;
 		}
 	}
 }
-
 //ИСТОРИЯ
 .container.history {
 	.regulations {
@@ -1331,7 +1229,6 @@ $middleScreen: 992px;
 		}
 	}
 }
-
 .container.history.steps.slider {
 	.steps-title {
 		color: $lightGreen;
@@ -1473,7 +1370,6 @@ $middleScreen: 992px;
 		}
 	}
 }
-
 //МИССИЯ И ЦЕННОСТИ
 .container.missions {
 	#centerColumn.center-column {
@@ -1537,7 +1433,6 @@ $middleScreen: 992px;
 		}
 	}
 }
-
 //Институциональным инвесторам
 section.landing-section.inst-title {
 	padding: 60px 0 70px;
@@ -1545,7 +1440,6 @@ section.landing-section.inst-title {
 		margin: 0 22%;
 	}
 }
-
 section.landing-section.inst-list-bar {
 	p.more {
 		&:before {
@@ -1564,7 +1458,6 @@ section.landing-section.inst-list-bar {
 		}
 	}
 }
-
 section.landing-section.inst-dma {
 	padding: 40px 0 70px;
 	p {
@@ -1576,7 +1469,6 @@ section.landing-section.inst-dma {
 		}
 	}
 }
-
 section.landing-section.inst-operations {
 	padding: 20px 0 70px;
 	ul {
@@ -1614,7 +1506,6 @@ section.landing-section.inst-operations {
 		}
 	}
 }
-
 section.landing-section.inst-links {
 	.useful-links {
 		.useful-links__link {
@@ -1624,30 +1515,24 @@ section.landing-section.inst-links {
 		}
 	}
 }
-
 section.landing-section.inst-support {
 	max-width: 750px;
 	box-shadow: 0 18px 33px 2px rgba(53, 58, 60, 0.1);
 	margin: 30px auto;
 }
-
 //ДОРАБАТЫВАЮ ГОТОВЫЕ СТРАНИЦЫ...
 //-Добавляю некоторые стили к страницам
 .container {
-	.right-content-column {
-		>.accordion:last-child {
-			margin-bottom: 100px;
-			border-bottom: 1px solid #c9d4de;
-		}
+	.accordion:last-child {
+		margin-bottom: 100px;
+		border-bottom: 1px solid #c9d4de;
 	}
 }
-
 .great-slider {
 	.slick-dotted {
 		margin-bottom: inherit;
 	}
 }
-
 .white-block-slider {
 	.slick-dots {
 		position: static;
@@ -1658,7 +1543,6 @@ section.landing-section.inst-support {
 		}
 	}
 }
-
 //Листинг на KASE
 .landing-section {
 	.container {
@@ -1779,7 +1663,6 @@ section.landing-section.inst-support {
 		}
 	}
 }
-
 //Размещение на KASE
 .landing-section {
 	.tab-content.placing,
@@ -1848,7 +1731,6 @@ section.landing-section.inst-support {
 		}
 	}
 }
-
 //Обратная связь
 .container.freeback {
 	.right-content-column {
@@ -1870,7 +1752,6 @@ section.landing-section.inst-support {
 		}
 	}
 }
-
 //Рейтинг активности
 .container.rating {
 	.right-content-column {
@@ -1883,6 +1764,19 @@ section.landing-section.inst-support {
 		}
 		>.sortin-table--with-search {
 			padding-top: 30px;
+		}
+	}
+}
+//Регламент торгов и клиринга
+.container.reglament {
+	#regulations.regulations {
+		p.title {
+			color: #41c122;
+		}
+		.dropdown-menu .regulations__timetable>div>div>p {
+			border-bottom: 1px solid #e4e9ee;
+			padding-bottom: 7px;
+			margin-bottom: 7;
 		}
 	}
 }

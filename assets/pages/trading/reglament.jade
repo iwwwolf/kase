@@ -1,0 +1,236 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container.reglament
+			-
+				var marketsListTitle = "Торги"
+				var marketsList = [
+					{
+						'title': 'Список инструментов'
+					},
+					{
+						'title': 'Список компании'
+					},
+					{
+						'title': 'Просмотр торгов'
+					},
+					{
+						'title': 'Регламент торгов и клиринга',
+						'active': true
+					},
+					{
+						'title': 'Клиринг и расчеты'
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+			#regulations.regulations
+				div.dropdown
+					a.dropdown-link(href="#", data-toggle="dropdown", role="button")
+						i.fa.fa-ellipsis-v
+							span.line1
+							span.line2
+
+					.dropdown-menu
+						.regulations__timetable
+							h5 Праздничные дни
+							div.national
+								p.title Национальные праздники
+								p #[b 16 декабря(празднуется 16-17 декабря)] #[br] Методика расчета Индекса KASE
+							div.state
+								p.title Государственные праздники
+								div
+									p #[b 01-02 января] #[br] Новый год
+									p #[b 08 марта] #[br] Международный женский день
+									p #[b 21-23 марта] #[br] Наурыз мейрамы
+									p #[b 01 мая] #[br] Праздник единства народа Казахстана
+									p #[b 07 мая] #[br] День защитника отечества
+									p #[b 09 мая] #[br] День Победы
+									p #[b 06 июля] #[br] День Столицы
+									p #[b 30 августа] #[br] День Конституции Республики Казахстан
+									p #[b 01 декабря] #[br] День Первого Президента Республики Казахстан
+									span По казахстанскому законодательству праздничные дни в Республике Казахстан является нерабочими днями.При совпадении выходного и праздничного дней выходным днем является следующий после праздничного рабочий день.
+							div.weekends
+								p.title Выходными днями объявлены:
+								div
+									p #[b 07 января] #[br] Православное рождество
+									p #[b 24 сентября (в 2015 году)] #[br] Первый день мусульманского Курбан-айта
+	.container.reglament
+		#centerColumn.center-column
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Рынки и торги',
+					'Торги',
+					'Регламент торгов и клиринга'
+				]
+
+			include ../../modules/breadcrumbs/module
+			h1 Регламент торгов и клиринга
+			
+			.accordion.accordion--custom-green
+				.accordion__head
+					a.accordion__head-link(href="#") Торги иностранными валютами
+						i.fa.fa-angle-down
+				.accordion__body
+					-
+						var reglamentArray = [
+							{
+								'title':' 10:15 – 11:00 ',
+								'description':' утренняя сессия: USDKZT_TOD, USDKZT_TOM, EURKZT_TOD, EURUSD_TOD, CNYKZT_TOD'
+							},
+							{
+								'title':' 11:00 – 11:30',
+								'description':' утренняя клиринговая сессия'
+							},
+							{
+								'title':' 11:30 – 15:30',
+								'description':' дневная сессия: USDKZT_TOD, USDKZT_TOM, USDKZT_SPT,<br> EURKZT_TOD, EURKZT_TOM, EURKZT_SPT,<br> EURUSD_TOD, EURUSD_TOM, EURUSD_SPT,<br> RUBKZT_TOD, RUBKZT_TOM, CNYKZT_TOM'
+							},
+							{
+								'title':' 15:30 – 16:00',
+								'description':' дневная клиринговая сессия'
+							},
+							{
+								'title':' 11:30 – 17:00',
+								'description':' вечерняя сессия'
+							},
+							{
+								'title':' 17:00 – 17:30',
+								'description':' вечерняя клиринговая сессия'
+							}
+						]
+					
+					include ../../modules/reglament/module
+					
+					
+			.accordion.accordion--custom-green.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Открытие операций валютного свопа
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					-
+						var reglamentArray = [
+							{
+								'title':' 11:30 – 15:30',
+								'description':' USDKZT_0_001, USDKZT_0_002, USDKZT_1_002, EURKZT_0_001, EURKZT_0_002, EURKZT_1_002'
+							},
+							{
+								'title':' 15:30 - 16:00',
+								'description':' клиринговая сессия'
+							}
+						]
+					
+					include ../../modules/reglament/module
+					
+					
+			.accordion.accordion--custom-green.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Торги фьючерсами
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					-
+						var reglamentArray = [
+							{
+								'title':' 10:00 – 15:30',
+								'description':' фьючерс на курс доллара США к тенге, фьючерс на Индекс KASE, фьючерс на простые акции EURASIAN NATURAL RESOURCES CORPORATION PLC, фьючерс на простые акции KAZAKHMYS PLС, фьючерс на простые акции АО "КазТрансОйл", фьючерс на простые акции АО "Кселл", фьючерс на простые акции АО "Народный сберегательный банк Казахстана", фьючерс на простые акции АО "Разведка Добыча "КазМунайГаз"'
+							},
+							{
+								'title':' 15:30 – 16:00',
+								'description':' клиринговая сессия'
+							}
+						]
+					
+					include ../../modules/reglament/module
+					
+					
+			.accordion.accordion--custom-green.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Торги негосударственными эмиссионными ценными бумагами
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					-
+						var reglamentArray = [
+							{
+								'title':' 11:30 – 17:00',
+								'description':' акции первого класса ликвидности и корпоративные облигации'
+							},
+							{
+								'title':' 15:00 – 17:00',
+								'description':' акции второго и третьего классов ликвидности'
+							},
+							{
+								'title':' 18:00 – 19:00',
+								'description':' клиринговая сессия (акции со схемой расчетов Т+2)'
+							}
+						]
+					
+					include ../../modules/reglament/module
+					
+					
+			.accordion.accordion--custom-green.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Торги государственными ценными бумагами Республики Казахстан
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					-
+						var reglamentArray = [
+							{
+								'title':' 11:30 – 17:00',
+								'description':' ценные бумаги Правительства Республики Казахстан, ценные бумаги Национального Банка Республики Казахстан, ценные бумаги местных исполнительных органов'
+							}
+						]
+					
+					include ../../modules/reglament/module
+					
+					
+					
+			.accordion.accordion--custom-green.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Торги ценными бумагами международных финансовых организаций и иностранными государственными ценными бумагами
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					-
+						var reglamentArray = [
+							{
+								'title':' 11:30 – 17:00',
+								'description':' 	ценные бумаги международных финансовых организаций, иностранные государственные ценные бумаги'
+							}
+						]
+					
+					include ../../modules/reglament/module
+					
+					
+			.accordion.accordion--custom-green.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Торги на рынке репо
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					-
+						var reglamentArray = [
+							{
+								'title':' по времени торгов предметами репо в секторе купли-продажи',
+								'description':' инструменты операций репо, осуществляемых "прямым" способом; инструменты рынка "автоматического" репо'
+							}
+						]
+					
+					include ../../modules/reglament/module
+					
+					
+					
+			.accordion.accordion--custom-green.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Торги векселями
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					-
+						var reglamentArray = [
+							{
+								'title':' 11:30 – 17:00',
+								'description':' векселя'
+							}
+						]
+					
+					include ../../modules/reglament/module

@@ -1,0 +1,9 @@
+.reglament-block
+	each item in reglamentArray
+		.reglament-block__row
+			.reglament-block__left
+				.reglament-block__title
+					span!= item.title
+			.reglament-block__right
+				.reglament-block__description
+					span!= item.description
