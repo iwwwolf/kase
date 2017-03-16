@@ -1458,6 +1458,11 @@ section.landing-section.inst-support {
 .container.rating .right-content-column > .sortin-table--with-search {
   padding-top: 30px; }
 
+.container.rating .right-content-column span.note {
+  display: block;
+  margin: 30px 0;
+  float: none; }
+
 .container.reglament #regulations.regulations p.title {
   color: #41c122; }
 
