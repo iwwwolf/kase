@@ -2,6 +2,9 @@
 
 if($('#leadership').length) {
 	$('#leadership .title a').on('click', function(e){
+		$('html, body').animate({
+				scrollTop: $('.breadcrumbs').offset().top
+		}, 500);
 		var target = $($(this).attr('href'));
 		var parent = $(this).parents('.leadership__nav-item');
 		e.preventDefault();

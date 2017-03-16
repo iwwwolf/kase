@@ -5587,9 +5587,9 @@ table.dataTable.no-footer {
 @media (min-width: 991px) {
   .leadership {
     position: relative;
-    padding-left: 48.51694915254237%; }
+    padding-left: 55%; }
   .leadership__tab-pane {
-    width: 48.51694915254237%;
+    width: 58%;
     padding: 0 30px 20px 0;
     position: absolute;
     left: 0;
