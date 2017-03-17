@@ -90,7 +90,7 @@ function getInternetExplorerVersion()
 }
 
 //Слайдер в истории
- $('.slider-main').slick({
+ $('.container.history.steps.slider .slider-main').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	arrows: true,
@@ -98,7 +98,7 @@ function getInternetExplorerVersion()
 	infinite: false,
 	asNavFor: '.slider-nav'
 });
-$('.slider-nav').slick({
+$('.container.history.steps.slider .slider-nav').slick({
 	slidesToShow: 3,
 	slidesToScroll: 1,
 	asNavFor: '.slider-main',
@@ -112,4 +112,24 @@ $('.slider-nav').slick({
 			slidesToShow: 1,
 		}
 	}]
+});
+//Слайдер в дипломатах и номинациях
+ $('.container.diplomats.slider .slider-main').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: false,
+	infinite: false,
+	initialSlide: 5,
+	adaptiveHeight: true,
+	asNavFor: '.slider-nav'
+});
+$('.container.diplomats.slider .slider-nav').slick({
+	asNavFor: '.slider-main',
+	dots: false,
+	centerMode: true,
+	variableWidth: true,
+	focusOnSelect: true,
+	infinite: false,
+	initialSlide: 5,
 });

@@ -1,0 +1,108 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Пресс центр"
+				var marketsList = [
+					{
+						'title': 'Мероприятия',
+						'active': true
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container.events
+		.right-content-column
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Пресс-центр',
+					'Мероприятия'
+				]
+				
+			include ../../modules/breadcrumbs/module
+			h1 Мероприятия
+			
+			
+			.great-slider-events__parent.container.hidden-block
+				include ../../modules/great-slider-events/module
+				
+			.container.events-menu
+				.col-xs-12.col-sm-6
+					h3 Все мероприятия
+				.col-xs-12.col-sm-6
+					.mini-menu
+						a.mini-menu__link(href='#')
+							img(src='images/menu-border.svg', alt='')
+							span.mini-menu__lines
+							
+								
+					.mini-menu
+						a.mini-menu__link(href='#')
+							img(src='images/menu-border.svg', alt='')
+							span.mini-menu__lines
+								span
+								span
+								span
+						
+					.small-dropdown.flex.accordion__hide-in-closed.period Период:
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", role="button") Дата
+							ul.dropdown-menu
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								
+					.small-dropdown.flex.accordion__hide-in-closed.period Год:
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", role="button") Год
+							ul.dropdown-menu
+								li: a(href="#") 2015
+								li: a(href="#") 2015
+								li: a(href="#") 2015
+								li: a(href="#") 2015
+								li: a(href="#") 2015
+								li: a(href="#") 2015
+								
+								
+			.container.events-list
+				.col-xs-12.col-sm-6.col-md-4
+					img(src="images/events-photo1.png")
+					p.title 17 Августа
+					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+
+				.col-xs-12.col-sm-6.col-md-4
+					img(src="images/events-photo2.png")
+					p.title 17 Августа
+					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+
+				.col-xs-12.col-sm-6.col-md-4
+					img(src="images/events-photo2.png")
+					p.title 17 Августа
+					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+
+				.col-xs-12.col-sm-6.col-md-4
+					img(src="images/events-photo2.png")
+					p.title 17 Августа
+					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+				
+				.col-xs-12.col-sm-6.col-md-4
+					img(src="images/events-photo2.png")
+					p.title 17 Августа
+					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+
+				.col-xs-12.col-sm-6.col-md-4
+					img(src="images/events-photo2.png")
+					p.title 17 Августа
+					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+
+				.col-xs-12.col-sm-6.col-md-4
+					img(src="images/events-photo2.png")
+					p.title 17 Августа
+					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке

@@ -1,0 +1,104 @@
+extends ../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Правила"
+				var marketsList = [
+					{
+						'title': ' Правила'
+					},
+					{
+						'title': ' Законодательство'
+					},
+					{
+						'title': ' Правила'
+					},
+					{
+						'title': ' Документы РФЦА'
+					},
+					{
+						'title': ' Корпоративное управление',
+						'active': true
+					},
+					{
+						'title': ' Разное'
+					}
+				]
+			include ../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Правила',
+					'Корпоративное управление'
+				]
+				
+			include ../modules/breadcrumbs/module
+			h1 Корпоративное управление
+			
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Материалы Международной финансовой корпорации (IFC)
+						i.fa.fa-angle-down
+				.accordion__body
+					.sortin-table
+						table.sorting-table--false.table.table-striped
+							tbody
+								tr
+									td
+										.reference-info.reference-info--big
+											p Статья Международной финансовой корпорации (IFC)
+											ul
+												li: a(href="#").
+													Вестник корпоративного управления 
+												span(style="font-size: 12px;color: #a8b1ba;margin-left: 26px;") Выпуск № 12, лето 2010, Казахстан
+								tr
+									td
+										.reference-info.reference-info--big
+											p Оценочные карты, разработанные IFC:
+											ul
+												li: a(href="#").
+													Для листинговых компаний
+												li: a(href="#").
+													Для компаний в секторе "Нелистинговые ценные бумаги"
+
+
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Материалы и статьи Организации экономического сотрудничества и развития (ОЭСР, англ. OECD)
+						i.fa.fa-angle-down
+				.accordion__body
+					.sortin-table
+						table.sorting-table--false.table.table-striped
+							tbody
+								tr
+									td
+										.reference-info.reference-info--big
+											ul
+												li: a(href="#") Принципы корпоративного управления ОЭСР
+												li: a(href="#") Руководящие принципы ОЭСР по корпоративному управлению на государственных предприятиях
+												li: a(href="#") Using the OECD Principles of Corporate Governance: A Boardroom Perspective
+												li: a(href="#") The Role of Institutional Investors in Promoting Good Corporate Governance
+
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Материалы от Совета эмитентов:
+						i.fa.fa-angle-down
+				.accordion__body
+					.sortin-table
+						table.sorting-table--false.table.table-striped
+							tbody
+								tr
+									td
+										.reference-info.reference-info--big
+											ul
+												li: p #[a(href="#") Кодекс корпоративного управления], актуализированный согласно решению Совета эмитентов от 03 июля 2007 года
+												li: p #[a(href="#") Комментарии] к Кодексу корпоративного управления, актуализированного согласно решению Совета эмитентов от 03 июля 2007 года

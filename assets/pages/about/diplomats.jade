@@ -1,0 +1,154 @@
+extends ../../templates/base
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Членство"
+				var marketsList = [
+					{
+						'title': 'Список членов KASE'
+					},
+					{
+						'title': 'Рэнкинг активности'
+					},
+					{
+						'title': 'Дипломаты и номинации',
+						'active': true
+					}
+				]
+			include ../../modules/markets-menu/module
+			//-include ../../modules/regulations/module
+			
+	.container.diplomats
+		.right-content-column
+
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Членство',
+					'Дипломаты и номинации'
+				]
+				
+			include ../../modules/breadcrumbs/module
+			h1 Дипломаты и номинации
+
+			p Ежегодное награждение листинговых компаний, демонстрирующих наилучшие примеры делового поведения на рынке ценных бумаг в части раскрытия информации о себе и своей деятельности, проводится KASE с 2005 года (по результатам завершившегося финансового года) в соответствии с внутренним документом KASE #[a(href="#") "Правила ежегодного поощрения листинговых компаний"]
+			br
+			-
+				var diplomatsSlider = [
+					{
+						'year':'2015',
+						'description': [
+							' Листинговые компании <br> финансового сектора экономики <br> <a href="#">АО "Народный сберегательный банк Казахстана"</a> <br> <a href="#">АО "АТФБанк" </a>',
+							' Листинговые компании <br> финансового сектора экономики <br> <a href="#">АО "KCell"</a> <br> <a href="#">NOSTRUM OIL GAS PLC </a>',
+							' Листинговые компании <br> финансового сектора экономики <br> <a href="#">АО "Народный сберегательный банк Казахстана"</a> <br> <a href="#">АО "АТФБанк" </a>'
+						]
+					},
+					{
+						'year':'2014',
+						'description': [
+							' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quia reiciendis obcaecati ducimus expedita? Totam consequuntur cum ad facere eum eaque, beatae est quas accusantium nemo. Cupiditate unde enim, consequatur.',
+							' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam minima vitae maxime veritatis sequi eum excepturi sed praesentium a, eligendi possimus ipsa quam nam similique ducimus magni, sunt suscipit voluptatibus.',
+							' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptate doloribus nobis mollitia omnis, repellat, dolorem, consequatur iusto ad dolores sint praesentium illum, tempore esse voluptas. Perferendis ipsam, amet dignissimos!',
+							' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptate doloribus nobis mollitia omnis, repellat, dolorem, consequatur iusto ad dolores sint praesentium illum, tempore esse voluptas. Perferendis ipsam, amet dignissimos! Если текста многоооооо оооооо оооо многоооооо оооооо оооо многоооооо оооооо оооо многоооооо оооооо оооо многоооооо оооооо оооо',
+							' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat modi ullam facere nam adipisci, vero, tempora odit? Temporibus earum obcaecati ex, rem quaerat laudantium, adipisci vel minima sint placeat, neque architecto eveniet non dolores voluptatem. Repellat tempora nemo quod nobis obcaecati mollitia omnis ratione, perferendis aliquam eius tenetur est odio beatae, animi autem. Repellendus, aut perspiciatis accusantium sed. Eius optio cumque facilis dolores atque vel dicta doloremque perferendis autem aspernatur.',
+							' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus magni minus repellat, aliquam pariatur omnis atque animi quaerat fuga cumque? Aliquam cum autem nostrum maxime quas vel voluptatibus error officiis!'
+						]
+					},
+					{
+						'year':'2013',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2012',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2011',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2010',
+						'description': [
+							' Листинговые компании <br> финансового сектора экономики <br> <a href="#">АО "Народный сберегательный банк Казахстана"</a> <br> <a href="#">АО "АТФБанк" </a>',
+							' Листинговые компании <br> финансового сектора экономики <br> <a href="#">АО "KCell"</a> <br> <a href="#">NOSTRUM OIL GAS PLC </a>',
+							' Листинговые компании <br> финансового сектора экономики <br> <a href="#">АО "Народный сберегательный банк Казахстана"</a> <br> <a href="#">АО "АТФБанк" </a>'
+						]
+					},
+					{
+						'year':'2009',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2008',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2007',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2006',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2005',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2004',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+					{
+						'year':'2003',
+						'description': [
+							' Другой текст...',
+							' Другой текст...',
+							' Другой текст...'
+						]
+					},
+				]
+				
+	
+			include ../../modules/diplomats-slider/module
+			
+			

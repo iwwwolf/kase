@@ -1,0 +1,16 @@
+.container.diplomats.slider
+	.sliders
+		.slider-nav
+			each slide in diplomatsSlider
+				.slide
+					.slide-year-button
+						p!= slide.year
+		.slider-main
+			each slide in diplomatsSlider
+				.slide
+					.row
+						.year
+							p!= slide.year
+						for slideDescription in slide.description
+							.col-md-6.description
+								p!= slideDescription
