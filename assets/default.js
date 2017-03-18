@@ -133,3 +133,19 @@ $('.container.diplomats.slider .slider-nav').slick({
 	infinite: false,
 	initialSlide: 5,
 });
+
+ymaps.ready(function(){
+	var myMap=new ymaps.Map('map',{
+			center:[43.238419, 76.915798],
+			zoom:15.5,
+			behaviors:['default','scrollZoom'],controls:[]
+		},{
+			searchControlProvider:'yandex#search'
+		}),
+		myPlacemark=new ymaps.Placemark([43.237459, 76.915773],{
+			balloonContent:'<p><b>Казахстанская фондовая биржа</b></p><p>ул. Байзакова, 280, Северная башня Многофункционального комплекса  "Almaty Towers", 8-й этаж</p><p>Заезд только с улицы Сатпаева при движении в западном направлении.</p>'
+		},{
+//			balloonPanelMaxMapArea: 0
+		});
+	myMap.geoObjects.add(myPlacemark);
+});
