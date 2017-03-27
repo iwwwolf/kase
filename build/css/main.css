@@ -1653,7 +1653,11 @@ section.landing-section.investors-support {
 
 .private-investors.attention {
   margin: 0 auto;
-  max-width: 750px; }
+  max-width: 960px; }
+  .private-investors.attention p:nth-child(3) {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px; }
 
 @media only screen and (min-width: 992px) {
   .private-investors .container.title p {

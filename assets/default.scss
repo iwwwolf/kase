@@ -2055,7 +2055,12 @@ section.landing-section.investors-support {
 .private-investors{
 	&.attention{
 		margin: 0 auto;
-		max-width:750px;
+		max-width:960px;
+		p:nth-child(3){
+			display:block;
+			margin:0 auto;
+			max-width:600px;
+		}
 	}
 	.container.title{
 		p{
