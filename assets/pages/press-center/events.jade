@@ -33,15 +33,15 @@ block content
 			.container.events-menu
 				.col-xs-12.col-sm-6
 					h3 Все мероприятия
-				.col-xs-12.col-sm-6
-					.mini-menu
-						a.mini-menu__link(href='#')
+				.col-xs-12.col-sm-6.nav.nav-tabs
+					.mini-menu.active
+						a.mini-menu__link(href='#events-cal', data-toggle="tab")
 							img(src='images/menu-border.svg', alt='')
 							span.mini-menu__lines
 							
 								
 					.mini-menu
-						a.mini-menu__link(href='#')
+						a.mini-menu__link(href='#events-list', data-toggle="tab")
 							img(src='images/menu-border.svg', alt='')
 							span.mini-menu__lines
 								span
@@ -70,39 +70,41 @@ block content
 								li: a(href="#") 2015
 								li: a(href="#") 2015
 								
-								
-			.container.events-list
-				.col-xs-12.col-sm-6.col-md-4
-					img(src="images/events-photo1.png")
-					p.title 17 Августа
-					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+			.tab-content
+				.container.events-list.tab-pane.fade.in.active#events-list
+					.col-xs-12.col-sm-6.col-md-4
+						img(src="images/events-photo1.png")
+						p.title 17 Августа
+						p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
 
-				.col-xs-12.col-sm-6.col-md-4
-					img(src="images/events-photo2.png")
-					p.title 17 Августа
-					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+					.col-xs-12.col-sm-6.col-md-4
+						img(src="images/events-photo2.png")
+						p.title 17 Августа
+						p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
 
-				.col-xs-12.col-sm-6.col-md-4
-					img(src="images/events-photo2.png")
-					p.title 17 Августа
-					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+					.col-xs-12.col-sm-6.col-md-4
+						img(src="images/events-photo2.png")
+						p.title 17 Августа
+						p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
 
-				.col-xs-12.col-sm-6.col-md-4
-					img(src="images/events-photo2.png")
-					p.title 17 Августа
-					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
-				
-				.col-xs-12.col-sm-6.col-md-4
-					img(src="images/events-photo2.png")
-					p.title 17 Августа
-					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+					.col-xs-12.col-sm-6.col-md-4
+						img(src="images/events-photo2.png")
+						p.title 17 Августа
+						p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
 
-				.col-xs-12.col-sm-6.col-md-4
-					img(src="images/events-photo2.png")
-					p.title 17 Августа
-					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+					.col-xs-12.col-sm-6.col-md-4
+						img(src="images/events-photo2.png")
+						p.title 17 Августа
+						p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
 
-				.col-xs-12.col-sm-6.col-md-4
-					img(src="images/events-photo2.png")
-					p.title 17 Августа
-					p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+					.col-xs-12.col-sm-6.col-md-4
+						img(src="images/events-photo2.png")
+						p.title 17 Августа
+						p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+
+					.col-xs-12.col-sm-6.col-md-4
+						img(src="images/events-photo2.png")
+						p.title 17 Августа
+						p.description Торжественная церемония открытия торгов простыми акциями АО “Актюбинский завод металлоконструкций” а вторичом рынке
+				.container.events-list.tab-pane.fade#events-cal
+					

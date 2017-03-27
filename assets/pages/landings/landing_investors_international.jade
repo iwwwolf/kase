@@ -1,0 +1,156 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-blue-purple" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow; gr-blue-purple
+	-var rectStyle = "orange-purple" // yellow-green; yellow-red; blue-green; green-yellow; orange-purple
+	-var rectTitle = "Иностранным инвесторам"
+	-
+		var headText =[
+			'Узнайте подробнее как получить доступ на казахстанский фондовый рынок, какие сервисы и условия предлагает KASE иностранным инвесторам.'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Частным инвесторам'
+			},
+			{
+				'position': 'right',
+				'title': 'Институциональным инвесторам'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+
+	section.landing-section
+		.container
+			.infrastructure-main-block
+				h2 Инфраструктура фондового рынка
+				.infrastructure-block
+					.infrastructure-block-header 
+						span Национальный банк Республики Казахстан
+					.infrastructure-block-list
+						a(href="#").infrastructure-block__item
+							.infrastructure-block__title Единый реестр Ценных Бумаг
+						.infrastructure-block__line
+							hr(class="infrastructure-block__between")
+						a(href="#").infrastructure-block__item
+							.infrastructure-block__title Центральный депозитарий
+						.infrastructure-block__line
+							hr(class="infrastructure-block__between")
+						.infrastructure-block__line_three
+							a(href="#").infrastructure-block__item
+								.infrastructure-block__title Казахстанская Фондовая Биржа KASE
+							.infrastructure-block__line
+								hr(class="infrastructure-block__between")
+							a(href="#").infrastructure-block__item
+								.infrastructure-block__title Брокер
+							a(href="#").infrastructure-block__item_small_block
+								.infrastructure-block__line_degree_1
+									hr(class="infrastructure-block__between")
+								.infrastructure-block__item_small
+									.infrastructure-block__title Банк Кастоидиан
+								.infrastructure-block__line_degree_2
+									hr(class="infrastructure-block__between")
+						.infrastructure-block__line
+							hr(class="infrastructure-block__between")
+						a(href="#").infrastructure-block__item
+							.infrastructure-block__title Инвестор
+
+
+	section.landing-section.investors-rm
+		.container
+			h2 Удаленное членство на KASE с системой remote membership (RM)
+			p
+				b Система Remote Membership (RM) на KASE предлагает удаленное членство для иностранных компаний, которые не имеют возможности или не желают присутствовать на казахстанском фондовом и производном рынках, но хотят иметь к ним доступ.
+
+			.accordion
+				.accordion__head
+					a.accordion__head-link(href="#") Кто может получить статус удаленного члена KASE?
+						i.fa.fa-angle-down
+				.accordion__body
+					ul
+						li члены фондовых бирж, входящих в состав Всемирной федерации бирж (The World Federation of Exchanges)
+						li иностранные юридические лица, имеющие соответствующие лицензии уполномоченного органа страны резидентства на осуществление брокерской/дилерской деятельности. Допуск иностранных юридических лиц к торгам на KASE возможен только при наличии международных соглашений о сотрудничестве и обмене информацией между уполномоченными органами в области надзора за брокерской/дилерской деятельностью, предусматривающих взаимное признание лицензий на осуществление брокерской/дилерской деятельности.
+
+			.accordion.closed
+				.accordion__head
+					a.accordion__head-link(href="#") Преимущества удаленного членства на KASE:
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					ul
+						li доступ к более чем 100 ценным бумагам инвестиционно-привлекательных казахстанских компаний
+						li расчеты на рынке акций в режиме T+2
+						li финансовые стимулы для брокеров-дилеров и маркет-мейкеров 
+						li растущий потенциал развивающегося рынка капитала
+						li прозрачность, ясность и целостность норм и требований
+
+			.accordion.closed.process
+				.accordion__head
+					a.accordion__head-link(href="#") Процесс получения статуса удаленного члена KASE?
+						i.fa.fa-angle-down
+				.accordion__body(style="display:none;")
+					ol
+						li Соответствие требованиям KASE
+						li Регистрация в качестве налогоплательщика в Республике Казахстан
+						li Заключение договора текущего счета и договора депозитарного обслуживания с Центральным депозитарием
+						li Получение членства на KASE
+						li Оплата вступительного членского взноса
+						li Получение статуса клирингового участника
+						li Допуск к торгам
+
+			p.more Правила работы с торговой системой в режиме удаленного доступа #[a(href="#")здесь]
+
+
+	section.landing-section.investors-dma
+		.container
+			h2 Прямой доступ к рынку с системой Direct Market Access (DMA)
+			.col-xs-12.col-sm-6.col-md-4
+				img(src="images/investors-derect-market-access-preview.png")
+			.col-xs-12.col-sm-6.col-md-8
+				p Система Direct Market Access (DMA) – комплекс программно-технических средств члена KASE, который взаимодействует с торговой системой KASE и предназначен для заключения сделок на основе клиентских заказов DMA-клиентов.
+				p Система DMA ориентирована на институциональных инвесторов и трейдров, реализующих алгоритмические и высокочастотные стратегии на фондовом рынке. DMA-клиенты брокера могут отправлять заявки 
+				p DMA-клиенты брокера могут отправлять заявки напрямую в торговую систему KASE и получать рыночную информацию на максимально быстро, пользуясь наиболее совершенными технологическими решениями.
+				p Клиентские заказы формируются DMA-клиентами самостоятельно (без прямого участия сотрудников членов KASE) с использованием систем DMA и передаются членам KASE через системы DMA в электронном виде. К заказам DMA-клиентов применяются ускоренные процедуры регистрации, проверки, верификации, учета и исполнения клиентских заказов.
+				p
+					a(href="#") Правила предоставления DMA
+					br
+					a(href="#") Требования к системам DMA
+					br
+					a(href="#") Члены KASE, оказывающие услуги DMA 
+					br
+
+	section.landing-section.investors-operations
+		.container
+			h2 Операции на фондовом рынке: налоговый аспект
+			.list-picture-block
+				ul
+					li Доходы, полученные при осуществлении операций с ценными бумагами, включенными в #[a(href="#")официальный список KASE] и на #[a(href="#")торговой площадке KASE], полностью освобождены от налогообложения!
+					li В случаях, если негосударственные ценные бумаги не включены в официальный список KASE, все доходы по таким ценным бумагам подлежат налогообложению в установленном порядке.
+					li В случаях, если #[a(href="#")негосударственные ценные бумаги] включены в #[a(href="#")официальный список KASE], но сделки с такими ценными бумагами были осуществлены не на #[a(href="#")торговой площадке KASE], доход от прироста стоимости по таким ценным бумагам подлежит налогообложению в установленном порядке. Но процентные доходы по таким ценным бумагам освобождены от налогообложения.
+					li Операции с #[a(href="#")государственными ценными бумагами] полностью освобождены от налогообложения.
+
+			p.more Более подробные разъяснения Вы можете получить, обратившись с запросом в государственные органы. Также Вы можете ознакомиться с соответствующими статьями Налогового кодекса Республики Казахстан #[a(href="#")здесь]
+
+	section.landing-section.gr-blue-purple.investors-links
+		.container
+			h2 Полезные ссылки
+			-
+				var usefulList = [
+					'Список инструментов KASE',
+					'Правила осуществения операции репо',
+					'Спецификация рынка автоматического репо',
+					'Как стать членом биржи ',
+					'Как получить статус клирингового участника '
+				]
+			include ../../modules/landings_modules/useful-links/module
+			
+	section.landing-section.investors-support
+		h2 Возникли вопросы? #[br] обращайтесь
+
+		p Отдел по работе с эмитентами и инвесторами
+		p #[b тел:] +7 (727) 237-53-00 #[br] #[a(href="#") ] #[b e-mail:] customers@kase.kz

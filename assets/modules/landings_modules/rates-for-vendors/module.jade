@@ -17,9 +17,9 @@
 											.rates-for-vendors__valueBlock
 												.rates-for-vendors__price
 													for value in itemPrice.price
-														span= value
+														span!= value
 												if (typeof(itemPrice.remark) !== 'undefined')
-													.rates-for-vendors__remark= itemPrice.remark
+													.rates-for-vendors__remark!= itemPrice.remark
 
 
 

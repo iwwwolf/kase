@@ -1183,12 +1183,12 @@ a.up:after {
         .container.missions #centerColumn.center-column table.missions__main-table tr td.preview {
           padding: 20px 0; } }
 
-section.landing-section.inst-title {
+section.landing-section.investors-title {
   padding: 60px 0 70px; }
-  section.landing-section.inst-title p {
+  section.landing-section.investors-title p {
     margin: 0 22%; }
 
-section.landing-section.inst-list-bar p.more:before {
+section.landing-section.investors-list-bar p.more:before {
   content: ' ';
   display: block;
   max-width: 600px;
@@ -1196,31 +1196,31 @@ section.landing-section.inst-list-bar p.more:before {
   background-color: #e8edf0;
   margin: 0 auto 30px; }
 
-section.landing-section.inst-list-bar .list-top-bar__block.list-top-bar__block--purple {
+section.landing-section.investors-list-bar .list-top-bar__block.list-top-bar__block--purple {
   box-shadow: 0 15px 29px 2px rgba(53, 58, 60, 0.05); }
-  section.landing-section.inst-list-bar .list-top-bar__block.list-top-bar__block--purple .list-top-bar__title {
+  section.landing-section.investors-list-bar .list-top-bar__block.list-top-bar__block--purple .list-top-bar__title {
     line-height: 28px; }
 
-section.landing-section.inst-dma {
+section.landing-section.investors-dma {
   padding: 40px 0 70px; }
-  section.landing-section.inst-dma p {
+  section.landing-section.investors-dma p {
     text-align: left;
     font-size: 16px;
     margin-bottom: 20px; }
-    section.landing-section.inst-dma p:nth-child(5) {
+    section.landing-section.investors-dma p:nth-child(5) {
       margin-top: 40px; }
 
-section.landing-section.inst-operations {
+section.landing-section.investors-operations {
   padding: 20px 0 70px; }
-  section.landing-section.inst-operations ul {
+  section.landing-section.investors-operations ul {
     max-width: 750px; }
-    section.landing-section.inst-operations ul li {
+    section.landing-section.investors-operations ul li {
       text-align: left;
       font-size: 16px;
       margin-top: 20px;
       list-style-type: none;
       position: relative; }
-      section.landing-section.inst-operations ul li:before {
+      section.landing-section.investors-operations ul li:before {
         display: block;
         width: 8px;
         height: 8px;
@@ -1230,11 +1230,11 @@ section.landing-section.inst-operations {
         top: 11px;
         content: "";
         background-color: #1752ba; }
-  section.landing-section.inst-operations p.more {
+  section.landing-section.investors-operations p.more {
     margin: 0 22%;
     color: #b0b0b0;
     font-size: 14px; }
-    section.landing-section.inst-operations p.more:before {
+    section.landing-section.investors-operations p.more:before {
       content: ' ';
       display: block;
       max-width: 600px;
@@ -1243,10 +1243,10 @@ section.landing-section.inst-operations {
       margin: 0 auto 30px; }
 
 @media only screen and (min-width: 992px) {
-  section.landing-section.inst-links .useful-links .useful-links__link {
+  section.landing-section.investors-links .useful-links .useful-links__link {
     width: 15%; } }
 
-section.landing-section.inst-support {
+section.landing-section.investors-support {
   max-width: 750px;
   box-shadow: 0 18px 33px 2px rgba(53, 58, 60, 0.1);
   margin: 30px auto; }
@@ -1260,6 +1260,44 @@ section.landing-section.inst-support {
   .white-block-slider .slick-dots li {
     width: auto;
     height: auto; }
+
+.rates-for-vendors {
+  border-bottom: 1px solid rgba(130, 130, 130, 0.2); }
+
+.container.broker-second-tab-large .rates-for-vendors__row .rates-for-vendors__block {
+  margin: 20px 0;
+  padding: 0 20px; }
+  .container.broker-second-tab-large .rates-for-vendors__row .rates-for-vendors__block:not(:last-child) {
+    border-right: 1px solid rgba(130, 130, 130, 0.2); }
+  .container.broker-second-tab-large .rates-for-vendors__row .rates-for-vendors__block:nth-child(3) {
+    border: none; }
+
+.container.broker-second-tab-large .rates-for-vendors__subtitle {
+  max-width: 320px; }
+
+.container.broker-second-tab-large .rates-for-vendors__valueBlock {
+  width: 100%;
+  max-width: 320px;
+  min-width: auto; }
+
+.container.broker-second-tab-large .price-addition {
+  font-size: 12px;
+  color: #828282;
+  line-height: 1.3;
+  font-weight: normal; }
+
+.container.broker-second-tab-mobile * {
+  border: none; }
+
+.container.broker-second-tab-mobile .rates-for-vendors__valueBlock {
+  min-width: auto;
+  max-width: 100%; }
+
+.container.broker-second-tab-mobile .price-addition {
+  font-size: 12px;
+  color: #828282;
+  line-height: 1.3;
+  font-weight: normal; }
 
 .landing-section .container .tab-content.listing .gratient-tabs__accordion-body,
 .landing-section .container .gradient-tabs.listing .gratient-tabs__accordion-body {
@@ -1612,6 +1650,117 @@ section.landing-section.inst-support {
   .container.events .container.events-list > div p.description {
     font-size: 14px;
     font-weight: normal; }
+
+.private-investors.attention {
+  margin: 0 auto;
+  max-width: 750px; }
+
+@media only screen and (min-width: 992px) {
+  .private-investors .container.title p {
+    margin: 0 20%; } }
+
+.private-investors.tabs {
+  max-width: 750px;
+  margin: 0 auto 70px;
+  box-shadow: 0px 25px 15px 2px rgba(0, 0, 0, 0.16);
+  padding: 20px; }
+  .private-investors.tabs .gradient-tabs ul.nav {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px; }
+    .private-investors.tabs .gradient-tabs ul.nav li span {
+      color: #9c9c9c; }
+    .private-investors.tabs .gradient-tabs ul.nav li.active a {
+      background: -webkit-linear-gradient(bottom left, #ff9000 0%, #a71af0 90%);
+      background: linear-gradient(to top right, #ff9000 0%, #a71af0 90%); }
+    .private-investors.tabs .gradient-tabs ul.nav li.active span {
+      color: #383838; }
+  .private-investors.tabs .landing-section__text h2, .private-investors.tabs .landing-section__text p {
+    text-align: center; }
+  .private-investors.tabs .landing-section__text ul {
+    text-align: left; }
+    .private-investors.tabs .landing-section__text ul li {
+      text-align: left;
+      font-size: 16px;
+      margin-top: 20px;
+      list-style-type: none;
+      position: relative; }
+      .private-investors.tabs .landing-section__text ul li:before {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        left: -25px;
+        top: 11px;
+        content: "";
+        background-color: #9e0194; }
+
+@media only screen and (min-width: 992px) {
+  .investors-rm h2, .investors-rm p {
+    margin: 0 20%; }
+  .investors-rm .accordion {
+    margin: 0 auto;
+    max-width: 750px; } }
+
+.investors-rm p {
+  margin-bottom: 30px; }
+
+.investors-rm .accordion {
+  margin-bottom: 0; }
+  .investors-rm .accordion.closed a.accordion__head-link {
+    color: #383838; }
+  .investors-rm .accordion a.accordion__head-link {
+    color: #a71af0;
+    text-align: left;
+    display: block;
+    font-weight: 400;
+    width: 100%; }
+    .investors-rm .accordion a.accordion__head-link:hover {
+      color: #a71af0; }
+    .investors-rm .accordion a.accordion__head-link .fa {
+      color: #a71af0;
+      border-color: #a71af0; }
+  .investors-rm .accordion .accordion__body {
+    padding-bottom: 30px; }
+    .investors-rm .accordion .accordion__body ol li {
+      text-align: left; }
+    .investors-rm .accordion .accordion__body ul {
+      text-align: left; }
+      .investors-rm .accordion .accordion__body ul li {
+        text-align: left;
+        font-size: 16px;
+        margin-top: 20px;
+        list-style-type: none;
+        position: relative; }
+        .investors-rm .accordion .accordion__body ul li:before {
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: absolute;
+          left: -25px;
+          top: 11px;
+          content: "";
+          background-color: #9e0194; }
+
+.investors-rm p.more {
+  margin-top: 30px;
+  color: #b0b0b0;
+  font-size: 14px; }
+  .investors-rm p.more:before {
+    content: ' ';
+    display: block;
+    max-width: 600px;
+    height: 1px;
+    background-color: #e8edf0;
+    margin: 0 auto 16px; }
+
+.container.info-prod .about-membership-block__icon img {
+  width: 35px; }
+
+.container.info-prod .about-membership-block__title {
+  font-weight: 300;
+  color: #45464f; }
 
 .btn {
   font-size: 100%;

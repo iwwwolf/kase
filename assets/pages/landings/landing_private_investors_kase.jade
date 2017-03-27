@@ -1,0 +1,144 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-blue-purple" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow;
+	-var rectStyle = "orange-purple" // yellow-green; yellow-red; blue-green; green-yellow;
+	-var rectTitle = "Частным инвесторам"
+	-
+		var headText =[
+			'Основная цель управления личным благосостоянием каждого человека - сберечь и приумножить',
+			'Фондовый рынок располагает инструментами для успешного управления личными финансами. Узнайте подробнее, как эффективно использовать возможности фондового рынка для достижения'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Институциональным инвесторам'
+			},
+			{
+				'position': 'right',
+				'title': 'Иностранным инвесторам'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		-
+			var menuItems = [
+				{
+					'title': 'Рынки KASE',
+					'active': true
+				},
+				{
+					'title': 'С чего начать?'
+				},
+				{
+					'title': 'Торговый терминал'
+				},
+				{
+					'title': 'Операции на фондовом рынке'
+				},
+				{
+					'title': 'Контакты'
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+
+	section.landing-section.private-investors
+		.container.title
+			h2 Казахстанская фондовая биржа (KASE)
+			p
+				b Это универсальная торговая площадка для совершения операции с инструментами фондового рынка, рынка иностранных валют и рынка деривативов
+
+	.tabs.private-investors
+		.gradient-tabs
+			ul.nav(role="tablist")
+				li.gradient-tabs__tab.gradient-tabs__tab--purple.active(role="presentation")
+					a(href="#on-fond", role="tab", data-toggle="tab"): span На фондовом рынке
+
+				li.gradient-tabs__tab.gradient-tabs__tab--purple(role="presentation")
+					a(href="#on-international", role="tab", data-toggle="tab"): span На иностранном рынке
+
+				li.gradient-tabs__tab.gradient-tabs__tab--purple(role="presentation")
+					a(href="#on-direvativ", role="tab", data-toggle="tab"): span На рынке деривативов
+
+		.tab-content
+			.gratient-tabs__accordion-body.tab-pane.fade.active.in(id="on-fond", role="tabpanel")
+				.landing-section__text
+					h2 Рынок иностранных валют
+					p
+						b Itaque ratione consectetur ab numquam aperiam? Quas aspernatur nulla dolorem, vero, placeat suscipit alias nam ea aliquam nesciunt architecto perspiciatis totam numquam!
+					ul
+						li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur sunt, unde iste aut ex repellendus, nostrum assumenda laborum illum reiciendis tempore. Pariatur consequatur, perspiciatis inventore aspernatur dignissimos. Consequatur, eveniet. Iusto.
+						li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo sequi exercitationem aperiam nesciunt dicta quae voluptas, totam vero, minima a adipisci voluptatem neque modi reiciendis praesentium ipsa nihil quos ipsum.
+
+			.gratient-tabs__accordion-body.tab-pane.fade(id="on-international", role="tabpanel")
+				.landing-section__text
+					p.
+						text
+
+			.gratient-tabs__accordion-body.tab-pane.fade(id="on-direvativ", role="tabpanel")
+				.landing-section__text
+					p.
+						text 2
+
+
+		.gradient-tabs
+				#gradientTabsAccordion.gratient-tabs__accordion
+					.gratient-tabs__accordion-pane.panel.active
+						.container
+							.gratient-tabs__accordion-link.gratient-tabs__accordion-link--purple.active
+								a.collapsed(data-target="#m-on-fond", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span На фондовом рынке
+						.gratient-tabs__accordion-body.collapse(id="m-on-fond", role="tabpanel")
+							.container
+								.landing-section__text
+									h2 Рынок иностранных валют
+									p
+										b Itaque ratione consectetur ab numquam aperiam? Quas aspernatur nulla dolorem, vero, placeat suscipit alias nam ea aliquam nesciunt architecto perspiciatis totam numquam!
+									ul
+										li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur sunt, unde iste aut ex repellendus, nostrum assumenda laborum illum reiciendis tempore. Pariatur consequatur, perspiciatis inventore aspernatur dignissimos. Consequatur, eveniet. Iusto.
+										li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo sequi exercitationem aperiam nesciunt dicta quae voluptas, totam vero, minima a adipisci voluptatem neque modi reiciendis praesentium ipsa nihil quos ipsum.
+
+					.gratient-tabs__accordion-pane.panel
+						.container
+							.gratient-tabs__accordion-link.gratient-tabs__accordion-link--purple
+								a.collapsed(data-target="#m-on-international", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span На иностранном рынке
+						.gratient-tabs__accordion-body.collapse(id="m-on-international", role="tabpanel")
+							.container
+								.landing-section__text
+									p.
+										text на адаптивке
+
+					.gratient-tabs__accordion-pane.panel
+						.container
+							.gratient-tabs__accordion-link.gratient-tabs__accordion-link--purple
+								a.collapsed(data-target="#m-on-derivativ", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span На рынке деривативов
+						.gratient-tabs__accordion-body.collapse(id="m-on-derivativ", role="tabpanel")
+							.container
+								.landing-section__text
+									p
+										text на адаптивке 2
+										
+	section.landing-section.gr-blue-purple.inst-links
+		.container
+			h2 Полезные ссылки
+			-
+				var usefulList = [
+					'Список инструментов KASE',
+					'Правила осуществения операции репо',
+					'Спецификация рынка автоматического репо',
+					'Как стать членом биржи ',
+					'Как получить статус клирингового участника '
+				]
+			include ../../modules/landings_modules/useful-links/module
+			
+			
+	section.landing-section.private-investors.attention
+		h2 Важно знать
+		p
+			b Distinctio voluptatibus rerum, illo iusto quidem consectetur doloribus nihil commodi similique inventore quod sequi atque, magnam minus, nobis minima! Accusamus, similique vero!
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, harum, alias. Soluta earum vel fuga tempora veritatis ratione consequatur, aspernatur minima maxime incidunt molestias accusantium! Deserunt et placeat blanditiis doloribus.

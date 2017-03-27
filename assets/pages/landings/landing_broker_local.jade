@@ -218,10 +218,152 @@ block content
 
 
 			.gratient-tabs__accordion-body.tab-pane.fade(id="stockFee", role="tabpanel")
-				.container
-					.landing-section__text
-						p.
-							text
+				.container.broker-second-tab-large
+					-
+						var ratesColor = "blue"
+						var ratesArray = [
+							{
+						 		'title': ' Комиссионные сборы Биржи по сделкам купли-продажи ценных бумаг',
+						 		'block': [
+						 			{
+						 				'subtitle': ' Сделка купли-продажи государственного пакета акции',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['0,10', '%'],
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': ' Сделка купли-продажи размещаемых государственных ценных бумаг',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['0,01', '% <span class="price-addition">С покупателя</span>'],
+														'remark': ' Если инициатором подписки выступает Национальный Банк РК или Министерство финансов РК'
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': ' Проведение подписки на облигации',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['0,025', '%'],
+														'remark': 'От суммарной номинальной стоимости облигации, но не менее 250 МРП и не более 5 000 МРП'
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': ' Проведение подписки на акциях',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['0,1', '%'],
+														'remark': ' От суммарного объема сделок (в KZT), но не менее 250 МРП и не более 5 000 МРП'
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': ' Если по результатам подписки не было заключено ни одной сделки',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['50', 'МРП']
+								 					}
+												]
+
+								 			}
+
+										]
+							 		}
+						 		]
+							 		
+							},{
+						 		'title': ' Технические сборы',
+						 		'block': [
+						 			{
+						 				'subtitle': ' Технический сбор за предоставление портов на телекоммуникационном оборудовании Биржи',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['15', 'МРП']
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': ' Технический сбор за предоставление доступа информационной системы организации к торговой системе через шлюз ',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['15', 'МРП']
+								 					}
+												]
+
+								 			}
+
+										]
+							 		}
+						 		]
+							 		
+							},{
+						 		'title': ' Сборы за продление операционного дня',
+						 		'block': [
+						 			{
+						 				'subtitle': ' сбор за продление операционного дня не более чем на 30 минут',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['50', 'МРП']
+								 					}
+												]
+
+								 			}
+
+										]
+							 		},{
+						 				'subtitle': ' сбор за продление операционного дня более чем на 30 минут',
+										'blockGroup': [
+								 			{		
+								 				'priceBlock': [
+								 					{
+								 						'price': ['100', 'МРП']
+								 					}
+												]
+
+								 			}
+
+										]
+							 		}
+						 		]
+							 		
+							}
+						]
+					include ../../modules/landings_modules/rates-for-vendors/module
+
 		.gradient-tabs
 				#gradientTabsAccordion.gratient-tabs__accordion
 					.gratient-tabs__accordion-pane.panel.active
@@ -369,12 +511,174 @@ block content
 							.gratient-tabs__accordion-link.gratient-tabs__accordion-link--blue
 								a.collapsed(data-target="#mSubscribeMob", role="button", data-toggle="collapse", data-parent="#gradientTabsAccordion"): span Биржевые сборы
 						.gratient-tabs__accordion-body.collapse(id="mSubscribeMob", role="tabpanel")
-							.container
-								.landing-section__text
-									p.
-										text
+							.container.broker-second-tab-mobile
+								-
+									var ratesColor = "blue"
+									var ratesArray = [
+										{
+											'title': ' Комиссионные сборы Биржи по сделкам купли-продажи ценных бумаг',
+											'block': [
+												{
+													'subtitle': ' Сделка купли-продажи государственного пакета акции',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['0,10', '%'],
+																}
+															]
 
+														}
 
+													]
+												},{
+													'subtitle': ' Сделка купли-продажи размещаемых государственных ценных бумаг',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['0,01', '% <br><span class="price-addition">С покупателя</span>'],
+																	'remark': ' Если инициатором подписки выступает Национальный Банк РК или Министерство финансов РК'
+																}
+															]
+
+														}
+
+													]
+												},{
+													'subtitle': ' Проведение подписки на облигации',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['0,025', '%'],
+																	'remark': 'От суммарной номинальной стоимости облигации, но не менее 250 МРП и не более 5 000 МРП'
+																}
+															]
+
+														}
+
+													]
+												},{
+													'subtitle': ' Проведение подписки на акциях',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['0,1', '%'],
+																	'remark': ' От суммарного объема сделок (в KZT), но не менее 250 МРП и не более 5 000 МРП'
+																}
+															]
+
+														}
+
+													]
+												},{
+													'subtitle': ' Если по результатам подписки не было заключено ни одной сделки',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['50', 'МРП']
+																}
+															]
+
+														}
+
+													]
+												}
+											]
+
+										},{
+											'title': ' Технические сборы',
+											'block': [
+												{
+													'subtitle': ' Технический сбор за предоставление портов на телекоммуникационном оборудовании Биржи',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['15', 'МРП']
+																}
+															]
+
+														}
+
+													]
+												},{
+													'subtitle': ' Технический сбор за предоставление доступа информационной системы организации к торговой системе через шлюз ',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['15', 'МРП']
+																}
+															]
+
+														}
+
+													]
+												}
+											]
+
+										},{
+											'title': ' Сборы за продление операционного дня',
+											'block': [
+												{
+													'subtitle': ' сбор за продление операционного дня не более чем на 30 минут',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['50', 'МРП']
+																}
+															]
+
+														}
+
+													]
+												},{
+													'subtitle': ' сбор за продление операционного дня более чем на 30 минут',
+													'blockGroup': [
+														{		
+															'priceBlock': [
+																{
+																	'price': ['100', 'МРП']
+																}
+															]
+
+														}
+
+													]
+												}
+											]
+
+										}
+									]
+								include ../../modules/landings_modules/rates-for-vendors/module
+			p(align="center"): a(href="#") Посмотреть всё
+
+	section.landing-section.landing-section--gray-bg
+		.container
+			h2 Удаленное членство
+			-
+				var pictureList = [
+					{
+						'icon': 'broker-img.svg',
+						'list': [
+							'доступ к более чем 100 ценным бумагам эмитентов Казахстана',
+							'возможность извлечь пользу из потенциала развивающегося рынка',
+							'финансовые стимулы для брокеров, маркет-мейкеров и трейдеров',
+							'относительно быстрый и легкий процесс получения членства',
+							'прозрачность, ясность и целостность норм и требований',
+							'возможность предоставления документов на английском языке',
+							'членство может быть оформлено только компаниями'
+						]
+					}
+				]
+				var listColor="blue"
+				var pictureSize="large"
+			include ../../modules/landings_modules/list-picture-block/module
 	
 	section.landing-section.landing-section--blue-lightblue
 		.container
@@ -416,9 +720,6 @@ block content
 				]
 			
 			include ../../modules/landings_modules/vendors-materials/module
-
-
-
 
 
 				
