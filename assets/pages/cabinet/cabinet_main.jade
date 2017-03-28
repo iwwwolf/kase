@@ -2,32 +2,63 @@ extends ../../templates/base
 
 block content
 	.container
-		h1 Добро пожалоовать, Кто То
-		p Ваш персональный аккаунт дает вам много возможностей, которыми вы можете воспользоваться прямо сейчас.
-		p Аккаунт активен до 20 марта 2017 года(#[a(href="#")подробнее])
-	
-	.container.cabinet-main
-		.col-xs-12.col-sm-6
-			p Персональные данные
-			.cabinet-right-arrow
-			.cabinet-block-icon
-		.col-xs-12.col-sm-6
-			p Персональные данные
-			.cabinet-right-arrow
-			.cabinet-block-icon
-		.col-xs-12.col-sm-6
-			p Персональные данные
-			.cabinet-right-arrow
-			.cabinet-block-icon
-		.col-xs-12.col-sm-6
-			p Персональные данные
-			.cabinet-right-arrow
-			.cabinet-block-icon
-		.col-xs-12.col-sm-6
-			p Персональные данные
-			.cabinet-right-arrow
-			.cabinet-block-icon
-		.col-xs-12.col-sm-6
-			p Персональные данные
-			.cabinet-right-arrow
-			.cabinet-block-icon
+		.cabinet-main.header
+			h2 Добро пожаловать, Кто То
+			p Ваш персональный аккаунт дает вам много возможностей, которыми вы можете воспользоваться прямо сейчас.
+			p Аккаунт активен #[b до 20 марта 2017 года](#[a(href="#")подробнее])
+
+	.container
+		.cabinet-main.panel
+			.container
+
+				.col-xs-12.col-sm-6
+					.panel__block
+						a(href="#")
+							p Персональные данные
+							.panel__block-right-arrow
+							.panel__block-icon
+								img(src="images/cabinet-personal-data-icon.png", alt="Персональные данные")
+
+
+				.col-xs-12.col-sm-6
+					.panel__block
+						a(href="#")
+							p Рассылка
+							.panel__block-right-arrow
+							.panel__block-icon
+								img(src="images/cabinet-newsletter-icon.png", alt="Рассылка")
+
+				.col-xs-12.col-sm-6
+					.panel__block
+						a(href="#")
+							p Мой список инструментов
+							.panel__block-right-arrow
+							.panel__block-icon
+								img(src="images/cabinet-tools-icon.png", alt="Мой список инструментов")
+
+
+				.col-xs-12.col-sm-6
+					.panel__block
+						a(href="#")
+							p Продукты и услуги
+							.panel__block-right-arrow
+							.panel__block-icon
+								img(src="images/cabinet-products-icon.png", alt="Продукты и услуги")
+
+
+				.col-xs-12.col-sm-6
+					.panel__block
+						a(href="#")
+							p Калькулятор доходности
+							.panel__block-right-arrow
+							.panel__block-icon
+								img(src="images/cabinet-calc-icon.png", alt="Калькулятор доходности")
+
+
+				.col-xs-12.col-sm-6
+					.panel__block
+						a(href="#")
+							p Календарь корпоративных эмитентов
+							.panel__block-right-arrow
+							.panel__block-icon
+								img(src="images/cabinet-cal-icon.png", alt="Календарь корпоративных эмитентов")
