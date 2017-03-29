@@ -9,7 +9,8 @@ block content
 	-var rectTitle = "Частным инвесторам"
 	-
 		var headText =[
-			'Цели инвестирования в фондовую биржу могут быть различные на разных рынках и личных потребностях инвестора. Казахстанская фондовая биржа функционирует в виде электронной торговой системы, которая проводит торги ежедневно по рабочим дням в течении большей части дня образуя торговый день.'
+			' Основная цель управления личным благосостоянием каждого человека – сберечь и приумножить.',
+			' Фондовый рынок располагает инструментами для успешного управления личными финансами. Узнайте подробнее, как эффективно использовать возможности фондового рынка для достижения финансового благополучия.'
 		]
 
 	-
@@ -29,38 +30,52 @@ block content
 		-
 			var menuItems = [
 				{
-					'title': 'Что такое Фондовый Рынок?'
-				},
-				{
-					'title': 'Зачем инвестировать?'
+					'title': 'Рынки KASE'
 				},
 				{
 					'title': 'С чего начать?',
 					'active': true
 				},
 				{
-					'title': 'Правила торгов'
+					'title': 'Торговый терминал'
+				},
+				{
+					'title': 'Операции на фондовом рынке'
+				},
+				{
+					'title': 'Контакты'
 				}
 			]
 		include ../../modules/landings_modules/landing-menu/module
 
-	section.landing-section
+	section.landing-section.start.description
 		.container
-			h2 Что необходимо сделать, чтобы начать инвестирование на фондовом
+			h2 Перед тем как начинать
+			p
+				b Перед тем как приступить к активным действиям, пожалуйста, определите себя три существованных фактора:
+			ul
+				li  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, et!
+				li  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, consectetur.
+				li  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, eius.
+
+	section.landing-section.start.tabs
+		.container
+			h2 Четыре простых шага, чтобы стать инвестором
 			.investors_max_width
 				.investors_landing.landing-white-block
 					#whiteBlockSlider(class="white-block-slider")
 						.white-block-slider
 							div(class="landing-section__text")
 								p.
-									Для начала следует определиться, на каком финансовом рынке вы хотите работать:
+									Выбор брокера
 							-
 								var pictureList = [
 									{
 										'list': [
-											'Валютном',
-											'Фондовом',
-											'Деривативов'
+											' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia porro maiores, non maxime! Hic illo dolorem excepturi. Voluptates, porro, voluptatem!',
+											' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum accusamus minima, accusantium alias ea veniam veritatis provident perspiciatis error est.',
+											' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate aliquam et excepturi id cum, sunt quae quam, hic mollitia! Nihil.',
+											' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laudantium tenetur, neque inventore excepturi, ipsam magni delectus accusamus corporis ex!'
 										]
 									}
 								]
@@ -70,34 +85,16 @@ block content
 							include ../../modules/landings_modules/list-picture-block/module
 						.white-block-slider
 							div(class="landing-section__text")
-								p.
-									Выбрать
-							-
-								var pictureList = [
-									{
-										'list': [
-											'интересующий финансовый актив',
-											'срок инвестирования',
-											'сумма, которую Вы готовы выделить под инвестиции '
-										]
-									}
-								]
-								var listColor="purple"
-								//var pictureSize="large"
-								var textAlign="left"
-							include ../../modules/landings_modules/list-picture-block/module
+								p Заголовок
+							p Что то еще
 						.white-block-slider
 							div(class="landing-section__text")
-								p.
-									Выбрать брокера, через которого Вы получите доступ к биржевым торгам 
-							br
-							.landing-section__login-btn
-								a(href="#").btn.btn--gradient.btn--orange-purple: span Список брокеров  
-							br
-							div(class="landing-section__text_custom")
-								p.
-									Брокер – это Ваш помощник в процессе инвестирования. Обратиться к брокеру #[a(href="#") следуя инструкции ]
-							
+								p Заголовок
+							p Что то еще
+						.white-block-slider
+							div(class="landing-section__text")
+								p Заголовок
+							p И еще что то
 
 
 

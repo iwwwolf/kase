@@ -1226,6 +1226,36 @@ section.landing-section.investors.operations.risk .tabs {
     color: black !important;
     width: 100% !important; }
 
+section.landing-section.start.tabs ul.list-color {
+  padding: 0 40px; }
+
+@media only screen and (min-width: 992px) {
+  section.landing-section.start.description p {
+    margin: 0 15%;
+    font-size: 16px; } }
+
+section.landing-section.start.description ul {
+  text-align: left;
+  display: block;
+  margin: 0 auto;
+  max-width: 500px; }
+  section.landing-section.start.description ul li {
+    text-align: left;
+    font-size: 16px;
+    margin-top: 10px;
+    list-style-type: none;
+    position: relative; }
+    section.landing-section.start.description ul li:before {
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+      left: -25px;
+      top: 11px;
+      content: "";
+      background-color: #9e0194; }
+
 section.landing-section.investors.contacts .contacts {
   margin: 0 auto;
   max-width: 500px;

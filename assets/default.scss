@@ -1500,6 +1500,48 @@ section.landing-section.investors.operations{
 		}
 	}
 }
+
+
+//Частным инвесторам - с чего начать
+section.landing-section.start{
+	&.tabs{
+		ul.list-color{
+			padding:0 40px;
+		}
+	}
+	&.description{
+		p{
+			@include respond-to(large){
+				margin: 0 15%;
+				font-size:16px;
+			}
+		}
+		ul{
+			text-align:left;
+			display:block;
+			margin: 0 auto;
+			max-width:500px;
+			li {
+				text-align: left;
+				font-size: 16px;
+				margin-top: 10px;
+				list-style-type: none;
+				position: relative;
+				&:before {
+					display: block;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					position: absolute;
+					left: -25px;
+					top: 11px;
+					content: "";
+					background-color: #9e0194;
+				}
+			}
+		}
+	}
+}
 //Частным инвесторам - контакты
 section.landing-section.investors.contacts{
 	.contacts{
