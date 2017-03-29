@@ -1433,6 +1433,86 @@ $middleScreen: 992px;
 		}
 	}
 }
+//Частным инвесторам - операции на фондовом рынке
+section.landing-section.investors.operations{
+	&.risk{
+		.gr-blue-purple{
+			height:550px;
+		}
+		p{
+			@include respond-to(large){
+				margin: 20px 23%;
+			}
+		}
+		.tabs{
+			>.gradient-tabs{
+				.gratient-tabs__accordion-pane.panel{
+					margin-top: 15px;
+				}
+				span.addition{
+					font-size:12px;
+					color: black;
+					opacity: 0.5;
+				}
+				>ul.nav{
+					margin-top: 15px;
+					li{
+						opacity: 0.5;
+						&.active{
+							opacity: 1;
+						}
+					}
+				}
+			}
+			background-color: #fff;
+			color:black;
+			padding:50px;
+			padding-bottom:10px;
+			-webkit-box-shadow: 0px 25px 15px 2px rgba(0,0,0,0.16);
+			-moz-box-shadow: 0px 25px 15px 2px rgba(0,0,0,0.16);
+			box-shadow: 0px 25px 15px 2px rgba(0,0,0,0.16);
+			padding:20px;
+			@include respond-to(large){
+				width: 75%;
+				margin: 0 auto;
+			}
+			.gratient-tabs__accordion-pane.panel{
+				>.container{
+					width:100%;
+				}
+			}
+			h3{
+				font-weight:bold;
+			}
+			p{
+				margin: 20px 0 10px;
+				text-align:left;
+				font-weight: normal;
+			}
+			.gratient-tabs__accordion-body.collapse,
+			.gratient-tabs__accordion-body.collapsing{
+				>.container{
+					color:black !important;
+					width:100% !important;
+					
+				}
+			}
+		}
+	}
+}
+//Частным инвесторам - контакты
+section.landing-section.investors.contacts{
+	.contacts{
+		margin:0 auto;
+		max-width:500px;
+		padding:20px;
+		h3{
+			text-align:center;
+		}
+		background-color: #fff;
+		text-align:left;
+	}
+}
 //Институциональным инвесторам
 section.landing-section.investors-title {
 	padding: 60px 0 70px;
@@ -1471,6 +1551,7 @@ section.landing-section.investors-dma {
 }
 section.landing-section.investors-operations {
 	padding: 20px 0 70px;
+	margin-top: 50px;
 	ul {
 		max-width: 750px;
 		li {
@@ -2204,6 +2285,34 @@ section.landing-section.investors-support {
 		}
 	}
 }
+//Частным инвесторам - Терминал
+section.investors{
+	&.description{
+		text-align:left;
+		h2{
+			text-align:center;
+			@include respond-to(large){
+				margin: 15px 20%;
+			}
+		}
+		p{
+			@include respond-to(large){
+				margin: 20px 15%;
+			}
+		}
+	}
+	&.investors-links.terminal{
+		.useful-links .useful-links__link{
+			width: 90%;
+			@include respond-to(large){
+				width:26%;
+			}
+		}
+	}
+	.container>img{
+		margin-top: 30px;
+	}
+}
 //Биржевая информация
 .container.info-prod{
 	.about-membership-block__icon img{
@@ -2289,4 +2398,4 @@ section.landing-section.investors-support {
 		}
 	}
 }
-//Рассылка
+

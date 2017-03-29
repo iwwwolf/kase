@@ -1183,6 +1183,58 @@ a.up:after {
         .container.missions #centerColumn.center-column table.missions__main-table tr td.preview {
           padding: 20px 0; } }
 
+section.landing-section.investors.operations.risk .gr-blue-purple {
+  height: 550px; }
+
+@media only screen and (min-width: 992px) {
+  section.landing-section.investors.operations.risk p {
+    margin: 20px 23%; } }
+
+section.landing-section.investors.operations.risk .tabs {
+  background-color: #fff;
+  color: black;
+  padding: 50px;
+  padding-bottom: 10px;
+  box-shadow: 0px 25px 15px 2px rgba(0, 0, 0, 0.16);
+  padding: 20px; }
+  section.landing-section.investors.operations.risk .tabs > .gradient-tabs .gratient-tabs__accordion-pane.panel {
+    margin-top: 15px; }
+  section.landing-section.investors.operations.risk .tabs > .gradient-tabs span.addition {
+    font-size: 12px;
+    color: black;
+    opacity: 0.5; }
+  section.landing-section.investors.operations.risk .tabs > .gradient-tabs > ul.nav {
+    margin-top: 15px; }
+    section.landing-section.investors.operations.risk .tabs > .gradient-tabs > ul.nav li {
+      opacity: 0.5; }
+      section.landing-section.investors.operations.risk .tabs > .gradient-tabs > ul.nav li.active {
+        opacity: 1; }
+  @media only screen and (min-width: 992px) {
+    section.landing-section.investors.operations.risk .tabs {
+      width: 75%;
+      margin: 0 auto; } }
+  section.landing-section.investors.operations.risk .tabs .gratient-tabs__accordion-pane.panel > .container {
+    width: 100%; }
+  section.landing-section.investors.operations.risk .tabs h3 {
+    font-weight: bold; }
+  section.landing-section.investors.operations.risk .tabs p {
+    margin: 20px 0 10px;
+    text-align: left;
+    font-weight: normal; }
+  section.landing-section.investors.operations.risk .tabs .gratient-tabs__accordion-body.collapse > .container,
+  section.landing-section.investors.operations.risk .tabs .gratient-tabs__accordion-body.collapsing > .container {
+    color: black !important;
+    width: 100% !important; }
+
+section.landing-section.investors.contacts .contacts {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: left; }
+  section.landing-section.investors.contacts .contacts h3 {
+    text-align: center; }
+
 section.landing-section.investors-title {
   padding: 60px 0 70px; }
   section.landing-section.investors-title p {
@@ -1211,7 +1263,8 @@ section.landing-section.investors-dma {
       margin-top: 40px; }
 
 section.landing-section.investors-operations {
-  padding: 20px 0 70px; }
+  padding: 20px 0 70px;
+  margin-top: 50px; }
   section.landing-section.investors-operations ul {
     max-width: 750px; }
     section.landing-section.investors-operations ul li {
@@ -1758,6 +1811,26 @@ section.landing-section.investors-support {
     height: 1px;
     background-color: #e8edf0;
     margin: 0 auto 16px; }
+
+section.investors.description {
+  text-align: left; }
+  section.investors.description h2 {
+    text-align: center; }
+    @media only screen and (min-width: 992px) {
+      section.investors.description h2 {
+        margin: 15px 20%; } }
+  @media only screen and (min-width: 992px) {
+    section.investors.description p {
+      margin: 20px 15%; } }
+
+section.investors.investors-links.terminal .useful-links .useful-links__link {
+  width: 90%; }
+  @media only screen and (min-width: 992px) {
+    section.investors.investors-links.terminal .useful-links .useful-links__link {
+      width: 26%; } }
+
+section.investors .container > img {
+  margin-top: 30px; }
 
 .container.info-prod .about-membership-block__icon img {
   width: 35px; }

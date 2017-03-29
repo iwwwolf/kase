@@ -1,0 +1,55 @@
+extends ../../templates/base
+
+block variables
+	- bodyClass = "body__landing"
+
+block content
+	-var headStyle = "gr-blue-purple" // gr-lightgreen-green; gr-darkgreen-green; gr-lightgreen-darkgreen; gr-red-orange; gr-orange-red; gr-lightblue-blue; gr-blue-lightblue; gr-yellow; gr-blue-purple
+	-var rectStyle = "orange-purple" // yellow-green; yellow-red; blue-green; green-yellow; orange-purple
+	-var rectTitle = "Частным инвесторам"
+	-
+		var headText =[
+			' Основная цель управления личным благосостоянием каждого человека – сберечь и приумножить.',
+			' Фондовый рынок располагает инструментами для успешного управления личными финансами. Узнайте подробнее, как эффективно использовать возможности фондового рынка для достижения финансового благополучия.'
+		]
+
+	-
+		var headLinks = [
+			{
+				'position': 'left',
+				'title': 'Институциональным инвесторам'
+			},
+			{
+				'position': 'right',
+				'title': 'Иностранным инвесторам'
+			}
+		]
+	.relative
+		include ../../modules/landings_modules/landing-head/module
+		-
+			var menuItems = [
+				{
+					'title': 'Рынки KASE'
+				},
+				{
+					'title': 'С чего начать?'
+				},
+				{
+					'title': 'Торговый терминал'
+				},
+				{
+					'title': 'Операции на фондовом рынке'
+				},
+				{
+					'title': 'Контакты',
+					'active': true
+				}
+			]
+		include ../../modules/landings_modules/landing-menu/module
+
+	section.landing-section.landing-section--gray-bg.investors.contacts
+		h2 Контакты
+		.contacts
+			h3 Отдел по работе с эмитентами и инвесторами
+			p тел: +7(727) 237-53-00
+			p e-mail: #[a(href="#") customers@kase.kz]

@@ -11,7 +11,7 @@ svg(id="gradientMask")
 					svg
 						text(fill="url(#nGradient2)", y="100px")= index+1
 				if (typeof(item.title) !== 'undefined')
-					.users-vendors__title= item.title
+					.users-vendors__title!= item.title
 
 				if (typeof(item.text) !== 'undefined')
-					.users-vendors__text= item.text
+					.users-vendors__text!= item.text
