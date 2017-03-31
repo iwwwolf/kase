@@ -537,7 +537,7 @@
               </div>
             </div>
           </div>
-          <div class="accordion closed">
+          <div style="border-bottom: 1px solid #c9d4de;" class="accordion closed">
             <div class="accordion__head"><a href="#" class="accordion__head-link">Торги векселями<i class="fa fa-angle-down"></i></a></div>
             <div style="display:none;" class="accordion__body">
               <div class="reglament-block">
@@ -553,12 +553,801 @@
             </div>
           </div>
           <div class="trade-calendar">
-            <p>Торговый календарь</p>
-            <div class="year-slider">
-              <p>2016</p>
-              <p>2017</p>
+            <h3>Торговый календарь</h3>
+            <div class="trade-calendar__nav">
+              <div class="nav_year">
+                <p>2016</p>
+              </div>
+              <div class="nav_year">
+                <p>2017</p>
+              </div>
             </div>
-            <div class="year-calendar"></div>
+            <div class="trade-calendar__slider">
+              <div class="slide1">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Январь</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td>  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Январь</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Январь</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Январь</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Январь</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Январь</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="slide2">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Февраль</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Февраль</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Февраль</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Февраль</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Февраль</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                  <div class="calendar">
+                    <table>
+                      <thead>
+                        <tr><span class="mounth-name"> Февраль</span></tr>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day">  </td>
+                          <td>  </td>
+                          <td> </td>
+                          <td> 1</td>
+                          <td class="off-day"> 2</td>
+                          <td class="off-day"> 3</td>
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td class="trading-day"> 5</td>
+                          <td> 6</td>
+                          <td> 7</td>
+                          <td> 8</td>
+                          <td class="off-day"> 9</td>
+                          <td class="off-day"> 10</td>
+                        </tr>
+                        <tr>
+                          <td> 11</td>
+                          <td> 12</td>
+                          <td class="trading-day"> 13</td>
+                          <td> 14</td>
+                          <td> 15</td>
+                          <td class="off-day"> 16</td>
+                          <td class="off-day"> 17</td>
+                        </tr>
+                        <tr>
+                          <td class="trading-day"> 18</td>
+                          <td class="trading-day"> 19</td>
+                          <td> 20</td>
+                          <td> 21</td>
+                          <td> 22</td>
+                          <td class="off-day"> 23</td>
+                          <td class="off-day"> 24</td>
+                        </tr>
+                        <tr>
+                          <td> 25</td>
+                          <td> 26</td>
+                          <td> 27</td>
+                          <td> 28</td>
+                          <td> 29</td>
+                          <td class="off-day"> 30</td>
+                          <td class="off-day"> 31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

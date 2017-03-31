@@ -220,7 +220,7 @@ block content
 					
 					
 					
-			.accordion.closed
+			.accordion.closed(style="border-bottom: 1px solid #c9d4de;")
 				.accordion__head
 					a.accordion__head-link(href="#") Торги векселями
 						i.fa.fa-angle-down
@@ -236,9 +236,277 @@ block content
 					include ../../modules/reglament/module
 					
 			.trade-calendar
-				p Торговый календарь
-				.year-slider
-					p 2016
-					p 2017
-				.year-calendar
-					
+				h3 Торговый календарь
+				.trade-calendar__nav
+					.nav_year
+						p 2016
+					.nav_year
+						p 2017
+				.trade-calendar__slider
+					.slide1
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Январь',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  '},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Январь',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Январь',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Январь',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Январь',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Январь',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+					.slide2
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Февраль',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Февраль',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Февраль',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Февраль',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Февраль',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+						-
+							var reglamentCalArray = [
+								{
+									'mounth_name':' Февраль',
+									'weeks': [
+										{
+											days: [{'day': ' '},{'day': '  ', 'trading': true},{'day': '  '},{'day': ' '},{'day': ' 1'},{'day': ' 2', 'off_day' :true},{'day': ' 3', 'off_day' :true}]
+										},{
+											days: [{'day': ' '},{'day': ' 5', 'trading': true},{'day': ' 6'},{'day': ' 7'},{'day': ' 8'},{'day': ' 9', 'off_day' :true},{'day': ' 10', 'off_day' :true}]
+										},{
+											days: [{'day': ' 11'},{'day': ' 12'},{'day': ' 13', 'trading': true},{'day': ' 14'},{'day': ' 15'},{'day': ' 16', 'off_day' :true},{'day': ' 17', 'off_day' :true}]
+										},{
+											days: [{'day': ' 18', 'trading': true},{'day': ' 19', 'trading': true},{'day': ' 20'},{'day': ' 21'},{'day': ' 22'},{'day': ' 23', 'off_day' :true},{'day': ' 24', 'off_day' :true}]
+										},{
+											days: [{'day': ' 25'},{'day': ' 26'},{'day': ' 27'},{'day': ' 28'},{'day': ' 29'},{'day': ' 30', 'off_day' :true},{'day': ' 31', 'off_day' :true}]
+										}
+									]
+								}
+							]
+
+						include ../../modules/reglament_trading_calendar/module
+
+

@@ -1965,6 +1965,91 @@ section.landing-section.investors-support {
 			margin-bottom: 7;
 		}
 	}
+	.trade-calendar{
+		>h3{
+			font-weight: 100;
+			font-size: 20px;
+		}
+		margin-bottom:50px;
+		.trade-calendar__nav{
+			border-top:1px solid #c9d4de;
+			border-bottom:1px solid #c9d4de;
+			.slick-arrow{
+				z-index:9999;
+				&:before{
+					content:none;
+				}
+				width:17px;
+				height:13px;
+				background-repeat:no-repeat;
+				background-position:center center;
+				&.slick-prev{
+					background-image:url(../images/slider-arrow-left.png);
+					left:15px;
+				}
+				&.slick-next{
+					background-image:url(../images/slider-arrow-right.png);
+					right:15px;
+				}
+			}
+			.nav_year{
+				p{
+					text-align:center;
+					font-size: 14px;
+					color: #333333;
+					font-weight:bold;
+					margin: 5px 0;
+				}
+			}
+		}
+		.trade-calendar__slider{
+			>div{
+				.calendar{
+					margin-top:20px;
+					span.mounth-name{
+						border-bottom:1px solid #eaeaea;
+						display:block;
+						width:100%;
+						padding: 5px 0;
+						font-size: 14px;
+						font-weight: 100;
+					}
+					width:100%;
+					table{
+						width:inherit;
+						thead{
+							border-bottom:1px solid #eaeaea;
+							th{
+								font-size: 12px;
+								color: #333333;
+								height: 25px;
+								text-align:center;
+							}
+						}
+						tbody{
+							padding:0 5px;
+							tr{
+								td{
+									height:30px;
+									width:30px;
+									color: #6c777b;
+									text-align:center;
+									&.off-day{
+										color: #ff113b;
+									}
+									&.trading-day{
+										color: #3aba0f;
+										background-color: #d8f0d6;
+										border-radius:90%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 //ДИПЛОМАТЫ И НОМИНАЦИИ
 .container.diplomats{
@@ -2440,4 +2525,3 @@ section.investors{
 		}
 	}
 }
-

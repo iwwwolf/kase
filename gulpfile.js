@@ -23,8 +23,8 @@ var path = {
     },
     src: { // откуда брать
         html: ['assets/pages/**/*.jade', 'assets/pages/*.jade'],
-        js: 'assets/import.js',
         jsLibs: 'assets/libs/js/*.js',
+        js: 'assets/import.js',
         images: 'assets/images/*.*',
         style: 'assets/import.scss',
         styleLibs: 'assets/libs/css/*.css'

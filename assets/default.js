@@ -133,19 +133,52 @@ $('.container.diplomats.slider .slider-nav').slick({
 	infinite: false,
 	initialSlide: 5,
 });
+//Торговый календарь
+if($('.trade-calendar').length){
+	$('.trade-calendar .trade-calendar__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		swipe: false,
+		fade: false,
+		infinite: true,
+		adaptiveHeight: true,
+		asNavFor: '.trade-calendar__nav'
+	});
+	$('.trade-calendar .trade-calendar__nav').slick({
+		slidesToShow: 1,
+		asNavFor: '.trade-calendar__slider',
+		arrows: true,
+		dots: false,
+		centerMode: true,
+		infinite: true,
+	});
+}
 
-ymaps.ready(function(){
-	var myMap=new ymaps.Map('map',{
-			center:[43.238419, 76.915798],
-			zoom:15.5,
-			behaviors:['default','scrollZoom'],controls:[]
-		},{
-			searchControlProvider:'yandex#search'
-		}),
-		myPlacemark=new ymaps.Placemark([43.237459, 76.915773],{
-			balloonContent:'<p><b>Казахстанская фондовая биржа</b></p><p>ул. Байзакова, 280, Северная башня Многофункционального комплекса  "Almaty Towers", 8-й этаж</p><p>Заезд только с улицы Сатпаева при движении в западном направлении.</p>'
-		},{
-//			balloonPanelMaxMapArea: 0
-		});
-	myMap.geoObjects.add(myPlacemark);
+
+//КАРТЫ
+if($('#map').length>0){
+	 ymaps.ready(function(){
+		var myMap=new ymaps.Map('map',{
+				center:[43.238419, 76.915798],
+				zoom:15.5,
+				behaviors:['default','scrollZoom'],controls:[]
+			},{
+				searchControlProvider:'yandex#search'
+			}),
+			myPlacemark=new ymaps.Placemark([43.237459, 76.915773],{
+				balloonContent:'<p><b>Казахстанская фондовая биржа</b></p><p>ул. Байзакова, 280, Северная башня Многофункционального комплекса  "Almaty Towers", 8-й этаж</p><p>Заезд только с улицы Сатпаева при движении в западном направлении.</p>'
+			},{
+	//			balloonPanelMaxMapArea: 0
+			});
+		myMap.geoObjects.add(myPlacemark);
+	});
+}
+
+//Торговая информация
+$(document).ready(function(){
+	if($('#trade-information-charts').length){
+		
+	}
 });
+	

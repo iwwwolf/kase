@@ -1,0 +1,26 @@
+.col-xs-12.col-sm-6.col-md-4
+	each item in reglamentCalArray
+		.calendar
+			table
+				thead
+					tr
+						span.mounth-name= item.mounth_name
+					tr
+						th Пн
+						th Вт
+						th Ср
+						th Чт
+						th Пт
+						th Сб
+						th Вс
+				tbody
+					for weeks in item.weeks
+						tr
+							for days in weeks.days
+								if (days.trading == true)
+									td.trading-day= days.day
+								else if (days.off_day == true)
+									td.off-day= days.day
+								else
+									td= days.day
+
