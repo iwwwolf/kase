@@ -2219,6 +2219,9 @@ section.landing-section.investors-support {
 //Все мероприятия
 //списком
 .container.events {
+	.nav-tabs {
+		border-bottom:none;
+	}
 	.container.events-menu {
 		>.col-xs-12.col-sm-6 {
 			padding: 0;
@@ -2242,7 +2245,7 @@ section.landing-section.investors-support {
 			}
 		}
 	}
-	.container.events-list{
+	.container.events-list#events-list{
 		>div{
 			margin-top: 20px;
 			height:330px;
@@ -2256,6 +2259,166 @@ section.landing-section.investors-support {
 				font-size:14px;
 				font-weight:normal;
 			}
+		}
+	}
+}
+//календарь
+.container.events{
+	.container.events-list#events-cal{
+		margin-bottom:250px;
+		.events-list__show{
+			height:450px;
+			padding:0;
+			background-color: rgba(232, 237, 240, 0.94);
+			h3{
+				text-align:center;
+				font-size: 25px;
+			}
+			div.event{
+				&:last-child{
+					border-bottom:none;
+				}
+				border-bottom:2px solid #cacdce;
+				padding-bottom:15px;
+				margin-top:15px;
+				div.event__title{
+					padding:0 30px;
+					div.event__title-preview{
+						width:40%;
+						display:inline-block;
+					}
+					div.event__title-text{
+						display:inline-block;
+						width: 57%;
+						padding-left:15px;
+						p{
+							font-size: 16px;
+						}
+					}
+				}
+				div.event__description{
+					padding:0 30px;
+					margin-top:15px;
+					p{
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+		.events-list__calendar{
+			*{
+				border:none;
+			}
+			.ic__container{
+				.ic__header{
+					color:#fff;
+					font-weight:normal;
+					height:71px;
+					background-color: rgba(60, 189, 13, 0.94);
+					border-bottom:2px solid rgba(255,255,255,0.3);
+					select{
+						width: 115%;
+						background-color: rgba(0,0,0,0);
+						height:inherit;
+						font-weight:normal;
+						padding-left:3%;
+						option{
+							color: #45464f;
+						}
+					}
+					.ic__month,
+					.ic__year{
+						overflow:hidden;
+						height:inherit;
+						position:static;
+						background-image:url(../images/events-calendar-dropdown-icon.png);
+						background-repeat:no-repeat;
+					}
+					.ic__month{
+						background-position: 130px center;
+						border-right:2px solid rgba(255,255,255,0.3);
+						width:80%;
+						@include respond-to(small){
+							width:70%;
+						}
+						float:left;
+						select{
+							font-size: 24px;
+							font-weight: 100;
+						}
+					}
+					.ic__year{
+						background-position: 50px center;
+						width:18%;
+						@include respond-to(small){
+							width:28%;
+						}
+						float:right;
+						select{
+							font-size:14px;
+						}
+					}
+				}
+				.ic__week-head{
+					background-color: rgba(60, 189, 13, 0.94);
+					tr{
+						td{
+							color:#fff;
+						}
+					}
+				}
+				.ic__days{
+					tr{
+						&:nth-child(2){
+							td{
+								&:nth-child(5){
+									&:after{
+										content:'●';
+									}
+								}
+								&:nth-child(6){
+									&:after{
+										content:'●●●';
+									}
+								}
+							}
+						}
+						td{
+							
+							&:after{
+								content:' ';
+								display:block;
+								width:100%;
+								height: 5px;
+								position:absolute;
+								bottom: 17px;
+								font-size: 20px;
+								text-align: right;
+								color: #3cbd0d;
+							}
+							&:hover{
+								background-color: #d8f2cf;
+								color: #757575;
+							}
+							&.ic__day_state_selected{
+								background-color: #d8f2cf;
+							}
+							position:relative;
+							font-size: 24px;
+							font-weight: 300;
+							border:1px solid #cacdce;
+							padding: 19px 0;
+							&.ic__day-empty{
+								background:#fff !important;
+							}
+						}
+					}
+				}
+			}
+			height:450px;
+			padding:0;
+			position:relative;
 		}
 	}
 }

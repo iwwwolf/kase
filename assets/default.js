@@ -174,7 +174,23 @@ if($('#map').length>0){
 		myMap.geoObjects.add(myPlacemark);
 	});
 }
-
+//Мероприятия календарь
+$(document).ready(function(){
+	if($('.events-list__calendar-cal#calendar').length){
+		$(".events-list__calendar-cal#calendar").ionCalendar({
+			lang: "ru",
+			sundayFirst: false,
+			years: "5",
+			hideArrows: true,
+			format: "DD.MM.YYYY",
+			onClick: function(date){
+					alert('Это событие можно изменить в default.js, данные поля: '+date);
+			}
+		});
+		//Круглишочки))
+		
+	}
+});
 //Торговая информация
 $(document).ready(function(){
 	if($('#trade-information-charts').length){

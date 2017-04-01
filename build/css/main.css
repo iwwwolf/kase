@@ -1765,6 +1765,9 @@ section.landing-section.investors-support {
   width: 100%;
   height: 300px; }
 
+.container.events .nav-tabs {
+  border-bottom: none; }
+
 .container.events .container.events-menu > .col-xs-12.col-sm-6 {
   padding: 0;
   margin-top: 20px;
@@ -1781,17 +1784,128 @@ section.landing-section.investors-support {
   .container.events .container.events-menu > .col-xs-12.col-sm-6 h3 {
     margin: 0; }
 
-.container.events .container.events-list > div {
+.container.events .container.events-list#events-list > div {
   margin-top: 20px;
   height: 330px; }
-  .container.events .container.events-list > div p.title {
+  .container.events .container.events-list#events-list > div p.title {
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
     margin-top: 10px; }
-  .container.events .container.events-list > div p.description {
+  .container.events .container.events-list#events-list > div p.description {
     font-size: 14px;
     font-weight: normal; }
+
+.container.events .container.events-list#events-cal {
+  margin-bottom: 250px; }
+  .container.events .container.events-list#events-cal .events-list__show {
+    height: 450px;
+    padding: 0;
+    background-color: rgba(232, 237, 240, 0.94); }
+    .container.events .container.events-list#events-cal .events-list__show h3 {
+      text-align: center;
+      font-size: 25px; }
+    .container.events .container.events-list#events-cal .events-list__show div.event {
+      border-bottom: 2px solid #cacdce;
+      padding-bottom: 15px;
+      margin-top: 15px; }
+      .container.events .container.events-list#events-cal .events-list__show div.event:last-child {
+        border-bottom: none; }
+      .container.events .container.events-list#events-cal .events-list__show div.event div.event__title {
+        padding: 0 30px; }
+        .container.events .container.events-list#events-cal .events-list__show div.event div.event__title div.event__title-preview {
+          width: 40%;
+          display: inline-block; }
+        .container.events .container.events-list#events-cal .events-list__show div.event div.event__title div.event__title-text {
+          display: inline-block;
+          width: 57%;
+          padding-left: 15px; }
+          .container.events .container.events-list#events-cal .events-list__show div.event div.event__title div.event__title-text p {
+            font-size: 16px; }
+      .container.events .container.events-list#events-cal .events-list__show div.event div.event__description {
+        padding: 0 30px;
+        margin-top: 15px; }
+        .container.events .container.events-list#events-cal .events-list__show div.event div.event__description p {
+          font-size: 14px;
+          line-height: 20px; }
+  .container.events .container.events-list#events-cal .events-list__calendar {
+    height: 450px;
+    padding: 0;
+    position: relative; }
+    .container.events .container.events-list#events-cal .events-list__calendar * {
+      border: none; }
+    .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header {
+      color: #fff;
+      font-weight: normal;
+      height: 71px;
+      background-color: rgba(60, 189, 13, 0.94);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3); }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header select {
+        width: 115%;
+        background-color: transparent;
+        height: inherit;
+        font-weight: normal;
+        padding-left: 3%; }
+        .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header select option {
+          color: #45464f; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__month,
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__year {
+        overflow: hidden;
+        height: inherit;
+        position: static;
+        background-image: url(../images/events-calendar-dropdown-icon.png);
+        background-repeat: no-repeat; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__month {
+        background-position: 130px center;
+        border-right: 2px solid rgba(255, 255, 255, 0.3);
+        width: 80%;
+        float: left; }
+        @media only screen and (max-width: 649px) {
+          .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__month {
+            width: 70%; } }
+        .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__month select {
+          font-size: 24px;
+          font-weight: 100; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__year {
+        background-position: 50px center;
+        width: 18%;
+        float: right; }
+        @media only screen and (max-width: 649px) {
+          .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__year {
+            width: 28%; } }
+        .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__header .ic__year select {
+          font-size: 14px; }
+    .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__week-head {
+      background-color: rgba(60, 189, 13, 0.94); }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__week-head tr td {
+        color: #fff; }
+    .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr:nth-child(2) td:nth-child(5):after {
+      content: '●'; }
+    .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr:nth-child(2) td:nth-child(6):after {
+      content: '●●●'; }
+    .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td {
+      position: relative;
+      font-size: 24px;
+      font-weight: 300;
+      border: 1px solid #cacdce;
+      padding: 19px 0; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td:after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: 17px;
+        font-size: 20px;
+        text-align: right;
+        color: #3cbd0d; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td:hover {
+        background-color: #d8f2cf;
+        color: #757575; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td.ic__day_state_selected {
+        background-color: #d8f2cf; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td.ic__day-empty {
+        background: #fff !important; }
 
 .private-investors.attention {
   margin: 0 auto;
