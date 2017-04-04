@@ -1,0 +1,107 @@
+extends ../../templates/base
+
+block content
+	div.cabinet-header-main
+		.container
+			.cabinet-header
+				.cabinet-header__avatar
+					.avatar-img
+						img(src="images/example-cabinet-avatar.jpg")
+					.avatar-text
+						p Кто То
+				.cabinet-header__navigation.gradient-tabs.gradient-tabs--not-margin
+					ul.nav
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Профиль
+						li.gradient-tabs__tab.gradient-tabs__tab--green.active
+							a(href="#")
+								span Рассылка
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Платные услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Мой список инструментов
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Продукты и услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Калькулятор доходности
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Календарь корпоративных собитий эмитентов
+	.container.cabinet-newsletter
+		.col-xs-12.col-sm-8.col-sm-offset-2
+			form(action="#")
+				.col-xs-12
+					p Рассылка
+					label(for="address")
+						span Адрес получения рассылки
+						br
+						input(type="text" id="address" name="address")
+				.col-xs-12
+					p Новости
+				.col-xs-12.col-md-6
+					-
+						var checkboxList = [
+							'Новости и группы',
+							'Новости для акционеров',
+							'Новости листинга',
+							'Индексы',
+							'IT-новости',
+							'Итоги торгов'
+						]
+
+					include ../../modules/checkbox-list/module
+				.col-xs-12.col-md-6
+					-
+						var checkboxList = [
+							'Фондовый рынок',
+							'Срочный рынок',
+							'Валютный рынок',
+							'Денежный рынок',
+							'Рынок Инноваций и Инвестиций',
+							'Анонсы Мероприятий'
+						]
+
+					include ../../modules/checkbox-list/module
+				
+				.col-xs-12
+					p Архив итогов
+				.col-xs-12.col-md-6
+					-
+						var checkboxList = [
+							'Архив итогов торгов иностранной валютой',
+							'Архив итогов торгов стандартными контрактами',
+							'Архив итогов торгов акциями, паями, РДР (основные режимы)'
+						]
+
+					include ../../modules/checkbox-list/module
+				.col-xs-12.col-md-6
+					-
+						var checkboxList = [
+							'Архив итогов торгов облигациями (основные режимы)',
+							'Архив итогов торгов акциями, паями, РДР, облигациями (РЕПО, РПС, внесистемные сделки)'
+						]
+
+					include ../../modules/checkbox-list/module
+				
+				.col-xs-12
+					p Реестры сделок
+				.col-xs-12
+					-
+						var checkboxList = [
+							'Реестры сделок с акциями, паями, РДР (основные режимы)',
+							'Реестры сделок с облигациями (Основные режимы)',
+							'Реестры сделок с акциями, паями, РДР, облигациями (РЕПО, РПС, внесистемные сделки)',
+							'Реестры сделок с иностранной валютой',
+							'Реестры сделок со стандартными контрактами'
+						]
+
+					include ../../modules/checkbox-list/module
+				
+				.col-xs-12
+					div.form-submit
+						input(type="submit" value="Подписаться")

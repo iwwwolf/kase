@@ -1,0 +1,140 @@
+extends ../../templates/base
+
+block content
+	div.cabinet-header-main
+		.container
+			.cabinet-header
+				.cabinet-header__avatar
+					.avatar-img
+						img(src="images/example-cabinet-avatar.jpg")
+					.avatar-text
+						p Кто То
+				.cabinet-header__navigation.gradient-tabs.gradient-tabs--not-margin
+					ul.nav
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Профиль
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Рассылка
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Платные услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Мой список инструментов
+						li.gradient-tabs__tab.gradient-tabs__tab--green.active
+							a(href="#")
+								span Продукты и услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Калькулятор доходности
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Календарь корпоративных собитий эмитентов
+
+	.container.cabinet-products
+		.col-xs-12.col-md-8.col-md-offset-2.cabinet-products__description
+			h3 Продукты и услуги
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illum architecto ex eos, hic soluta? Nisi tempore ea molestiae quidem expedita? Quibusdam distinctio quaerat repellat animi asperiores suscipit, recusandae modi!
+			span.cabinet-horizont-line
+		.col-xs-12.col-md-8.col-md-offset-2.cabinet-products__content
+			-
+				var  membershipArray = [
+					{
+						'icon': 'kase_logo_new.png',
+						'list': [
+							{
+								'title': 'Казахстанская фордовая биржа',
+								'link': 'Трансляция торгов',
+								'text': 'веб-сервис.'
+							},
+							{
+								'title': '',
+								'link': 'Индикаторы биржевого рынк',
+								'text': 'бесплатный веб-сервис.'
+							},
+							{
+								'title': '',
+								'link': 'Новости',
+								'text': 'бесплатный раздел сайта'
+							},
+							{
+								'title': '',
+								'link': 'Система уведомлений',
+								'text': 'бесплатная рассылка'
+							}
+						]
+					},
+					{
+						'icon': 'irbis_logo_new.png',
+						'list': [
+							{
+								'title': 'Ирбис',
+								'link': 'IRIS Finance',
+								'text': 'Настольное приложение.'
+							},
+							{
+								'title': '',
+								'link': 'Новости финансового рынка',
+								'text': 'раздел сайта.'
+							},
+							{
+								'title': '',
+								'link': 'Архив торгов',
+								'text': 'веб-сервис.'
+							},
+							{
+								'title': '',
+								'link': 'Итоги торгов',
+								'text': 'рассылка'
+							},
+							{
+								'title': '',
+								'link': 'Архивные новости, курсы валют и сделки по рынкам',
+								'text': 'наборы файлов.'
+							}
+						]
+					},
+					{
+						'icon': 'etrade.png',
+						'list': [
+							{
+								'title': 'eTrade',
+								'link': 'Офис брокера',
+								'text': 'комплексное решение по автоматизации процессов, связанных с совершением и учетом операций с финансовыми инструментами, составляющими портфель инвестиций компании в соответствии с действующим законодательством.'
+							},
+							{
+								'title': '',
+								'link': 'STrade',
+								'text': 'торговый терминал, позволяющий членам Биржи и их клиентам просматривать информацию о ходе торгов в режиме реального времени и совершать операции купли-продажи финансовых инструментов на KASE посредством сети Интернет.'
+							},
+							{
+								'title': '',
+								'link': 'MTrade',
+								'text': 'мобильный торговый терминал, позволяющий членам Биржи и их клиентам просматривать информацию о ходе торгов в режиме реального времени и совершать операции купли-продажи финансовых инструментов на KASE посредством сети Интернет.'
+							},
+							{
+								'title': '',
+								'link': 'Модули обмена с ТС Биржи',
+								'text': 'Модули обмена позволяют внешним программам участников торгов получить текущую информацию о параметрах финансовых инструментов (котировках, сделках, заявках), а также осуществлять подачу заявок в торговую систему АО "Казахстанская фондовая биржа".'
+							},
+							{
+								'title': '',
+								'text': 'Услуга по выдаче и поддержке ЭЦП – оказании услуг по получению заявителями электронной цифровой подписи.'
+							},
+							{
+								'title': '',
+								'link': 'eTransfer.kz',
+								'text': 'система передачи информации от одного участника системы (отправителя) другому участнику (получателю) с использованием механизмов аутентификации, шифрования трафика и электронной цифровой подписи, позволяющих однозначно и достоверное определить, что информация была отправлена конкретным отправителем и дошла до нужного получателя без каких-либо искажений.'
+							},
+							{
+								'title': '',
+								'link': 'JSC.kz',
+								'text': 'предоставление возможности акционерным обществам осуществлять публикацию информации о своей деятельности в соответствии с законом Республики Казахстан "Об акционерных обществах".'
+							}
+						]
+					}
+				]
+				var pictureSize="small"
+			include ../../modules/about_membership/module

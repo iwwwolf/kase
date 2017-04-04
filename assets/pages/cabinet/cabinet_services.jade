@@ -1,0 +1,126 @@
+extends ../../templates/base
+
+block content
+	div.cabinet-header-main
+		.container
+			.cabinet-header
+				.cabinet-header__avatar
+					.avatar-img
+						img(src="images/example-cabinet-avatar.jpg")
+					.avatar-text
+						p Кто То
+				.cabinet-header__navigation.gradient-tabs.gradient-tabs--not-margin
+					ul.nav
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Профиль
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Рассылка
+						li.gradient-tabs__tab.gradient-tabs__tab--green.active
+							a(href="#")
+								span Платные услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Мой список инструментов
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Продукты и услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Калькулятор доходности
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Календарь корпоративных собитий эмитентов
+	.container.cabinet-services
+		.col-xs-12.col-md-8.col-md-offset-2.cabinet-services__description
+			h3 Платные услуги
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illum architecto ex eos, hic soluta? Nisi tempore ea molestiae quidem expedita? Quibusdam distinctio quaerat repellat animi asperiores suscipit, recusandae modi!
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illum architecto ex eos, hic soluta? Nisi tempore ea molestiae quidem expedita? Quibusdam distinctio quaerat repellat animi asperiores suscipit, recusandae modi!
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illum architecto ex eos, hic soluta? Nisi tempore ea molestiae quidem expedita? Quibusdam distinctio quaerat repellat animi asperiores suscipit, recusandae modi!
+			span.cabinet-horizont-line
+			span Adipisicing elit. Ex perferendis dolor explicabo ducimus adipisci nemo, quibusdam alias ad soluta facere? Magnam voluptate, provident laboriosam nisi, ipsum vitae nam illo voluptas.
+
+		.col-xs-12.cabinet-services__content
+			.col-xs-12.col-sm-8.col-sm-offset-2.tabs
+				ul.nav(role="tablist")
+					li.active
+						a.resident-link(href='#resident', data-toggle="tab") Резидент республики Казахстан
+
+					li
+						a.resident-link(href='#noresident', data-toggle="tab") Нерезидент республики Казахстан
+
+			.tab-content
+				.col-xs-12.col-md-8.col-md-offset-2.cabinet-services.tab-pane.fade.in.active#resident
+					form(action="#")
+						.col-xs-12
+							.col-xs-12.col-sm-6.col-md-4
+								label.checkbox
+									.centered-input
+										input(type='checkbox', name='checkboxName')
+										span.checkbox__styled
+										span.checkbox__label
+									p Иностранных валют и операций
+									.cabinet-services__resident-bottom-text
+										span 5 МРП в месяц
+
+							.col-xs-12.col-sm-6.col-md-4
+								label.checkbox
+									.centered-input
+										input(type='checkbox', name='checkboxName')
+										span.checkbox__styled
+										span.checkbox__label
+									p Иностранных валют и операций
+									.cabinet-services__resident-bottom-text
+										span 5 МРП в месяц
+
+							.col-xs-12.col-sm-6.col-md-4
+								label.checkbox
+									.centered-input
+										input(type='checkbox', name='checkboxName')
+										span.checkbox__styled
+										span.checkbox__label
+									p Иностранных валют и операций
+									.cabinet-services__resident-bottom-text
+										span 5 МРП в месяц
+
+							.col-xs-12.col-sm-6.col-md-4
+								label.checkbox
+									.centered-input
+										input(type='checkbox', name='checkboxName')
+										span.checkbox__styled
+										span.checkbox__label
+									p Иностранных валют и операций
+									.cabinet-services__resident-bottom-text
+										span 5 МРП в месяц
+
+							.col-xs-12.col-sm-6.col-md-4
+								label.checkbox
+									.centered-input
+										input(type='checkbox', name='checkboxName')
+										span.checkbox__styled
+										span.checkbox__label
+									p Иностранных валют и операций
+									.cabinet-services__resident-bottom-text
+										span 5 МРП в месяц
+
+							.col-xs-12.col-sm-6.col-md-4
+								label.checkbox
+									.centered-input
+										input(type='checkbox', name='checkboxName')
+										span.checkbox__styled
+										span.checkbox__label
+									p Иностранных валют и операций
+									.cabinet-services__resident-bottom-text
+										span 5 МРП в месяц
+
+
+
+						.col-xs-12
+							p Стоимость подписки: 7 МРП в месяц
+							div.form-submit
+								input(type="submit" value="Оплатить")
+
+				.col-xs-12.col-md-8.col-md-offset-2.cabinet-services.tab-pane.fade#noresident
+					.col-xs-12
+						p Другой контент

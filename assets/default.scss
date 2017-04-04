@@ -2247,6 +2247,9 @@ section.landing-section.investors-support {
 	}
 	.container.events-list#events-list{
 		>div{
+			*{
+				color:#000;
+			}
 			margin-top: 20px;
 			height:330px;
 			p.title{
@@ -2277,6 +2280,9 @@ section.landing-section.investors-support {
 			div.event{
 				&:last-child{
 					border-bottom:none;
+				}
+				*{
+					color:#000;
 				}
 				border-bottom:2px solid #cacdce;
 				padding-bottom:15px;
@@ -2614,6 +2620,54 @@ section.investors{
 	}
 }
 //ЛИЧНЫЙ КАБИНЕТ
+//шапка кабинета
+
+.cabinet-header-main{
+	-webkit-box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);
+	background-color: #f8faf9;
+	.cabinet-header{
+		.cabinet-header__avatar{
+			margin:15px 0;
+			>div{
+				display:inline-block;
+			}
+			.avatar-img{
+				width: 50px;
+				height: 50px;
+				img{
+					width: inherit;
+					height:inherit;
+					border-radius:90%;
+				}
+			}
+			.avatar-text{
+				padding-left:15px;
+				font-weight:bold;
+			}
+		}
+		.cabinet-header__navigation{
+			ul.nav{
+				margin-bottom:0;
+				border-bottom:none;
+				li{
+					&.active{
+						span{
+							color: #3cbd0d;
+						}
+					}
+					span{
+						@include respond-to(large){
+							font-size:11px;
+						}
+						background-color: #f8faf9;
+					}
+				}
+			}
+		}
+	}
+}
 //Профиль
 .container{
 	.cabinet-main.header{
@@ -2685,6 +2739,235 @@ section.investors{
 					}
 				}
 			}
+		}
+	}
+}
+//Рассылка
+.container.cabinet-newsletter{
+	margin-top: 30px;
+	border-top:1px solid rgba(0,0,0,0);
+	margin-bottom:30px;
+	>div{
+		padding:30px 50px;
+		background-color: #f8faf9;
+	}
+	form{
+		>div{
+			p{
+				font-weight:normal;
+				font-size:14px;
+				text-transform: uppercase;
+			}
+			ul{
+				padding-left:0;
+				margin-bottom:30px;
+				li{
+					list-style-type:none;
+					margin-top: 10px;
+				}
+			}
+		}
+		&>div:first-child{
+			border-bottom:2px solid rgba(0,0,0,0.17);
+			padding-bottom:15px;
+			p{
+				font-size: 26px;
+				text-transform: none;
+			}
+			label{
+				width:50%;
+				margin-top: 15px;
+				span{
+					font-size:11px;
+					font-weight: normal;
+				}
+				input{
+					@include respond-to(large){
+						padding:5px;
+						width:100%;
+						border:1px solid rgba(0,0,0,0.2);
+					}
+				}
+			}
+		}
+		&>div:nth-child(9){
+			padding-bottom:15px;
+			border-bottom:2px solid rgba(0,0,0,0.17);
+		}
+		&>div:last-child{
+			div.form-submit{
+				background: linear-gradient(52deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
+				padding: 2px 0;
+				margin: 0 auto;
+				width: 250px;
+				border-radius: 70px;
+				margin-bottom: 50px;
+				input{
+					display:block;
+					margin:0 auto;
+					background-color: #fff;
+					border:none;
+					color: #3cbd0d;
+					color: #3cbd0d;
+					padding: 10px 80px;
+					border-radius: 70px;
+					transition: all 0.3s;
+					&:hover{
+						background-color: rgba(0,0,0,0);
+						color:#fff;
+					}
+				}
+			}
+		}
+		>div:nth-child(2),
+		>div:last-child{
+			margin-top: 15px;
+		}
+	}
+}
+span.cabinet-horizont-line{
+	display:block;
+	width:100px;
+	border-top:2px solid rgba(0,0,0,0.2);
+	margin-bottom:13px;
+}
+//Платные услуги
+.container.cabinet-services{
+	margin-top: 30px;
+	.cabinet-services__description{
+		span{
+			font-size:12px;
+		}
+	}
+	div.cabinet-services__content{
+		background-color: #e4e9ed;
+		padding-top:50px 0;
+		margin-bottom:50px;
+		margin-top: 50px;
+		.tabs{
+			ul{
+				li{
+					@include respond-to(large){
+						width:48%;
+						display:inline-block
+					}
+					position:relative;
+					a{
+						background-color: #e4e9ed;;
+					}
+					&.active{
+						a{
+							color:#3bbc0c;
+							&:before{
+								content:' ';
+								width: 6px;
+								height: 6px;
+								border-radius:90%;
+								background-color: #3bbc0c;
+								position: absolute;
+								left: -5px;
+								top: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+		form{
+			>div{
+				text-align:center;
+				>p{
+					margin-top: 30px;
+				}
+				div.form-submit{
+					background: linear-gradient(52deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
+					padding: 2px 0;
+					margin: 0 auto;
+					width: 250px;
+					border-radius: 70px;
+					margin-bottom: 50px;
+					input{
+						display:block;
+						margin:0 auto;
+						background-color: #fff;
+						border:none;
+						color: #3cbd0d;
+						color: #3cbd0d;
+						padding: 10px 92px;
+						border-radius: 70px;
+						transition: all 0.3s;
+						&:hover{
+							background-color: rgba(0,0,0,0);
+							color:#fff;
+						}
+					}
+				}
+				>div{
+					margin-top:30px;
+					label{
+						background-color:#fff;
+						text-align:center;
+						display:block;
+						margin:0 auto;
+						height: 200px;
+						position:relative;
+						width:200px;
+						padding:15px;
+						>p{
+							margin-top: 10px;
+							font-weight:bold;
+						}
+						.cabinet-services__resident-bottom-text{
+							position: absolute;
+							width: 100%;
+							height: 75px;
+							left: 0;
+							span{
+								position: absolute;
+								width: 100%;
+								left: 0;
+								bottom: 0;
+							}
+						}
+						.centered-input{
+							margin: 0 auto;
+							width: 40px;
+							.checkbox__styled{
+								min-width: 40px;
+								min-height: 40px;
+								max-width: 40px;
+								max-height: 40px;
+								border-radius: 90%;
+								border: 1px solid rgba(0,0,0,0.2);
+							}
+							input:checked + .checkbox__styled{
+								border:1px solid #3bbc0c;
+								background-color: #3bbc0c;
+								font-size: 22px;
+								&:after{
+									content:' ';
+									width: 100%;
+									height: 200px;
+									position: absolute;
+									top: 0;
+									left: 0;
+									border:2px solid #3bbc0c;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+//Продукты и услуги
+.container.cabinet-products{
+	margin: 50px auto;
+	background-color: #f8faf9;
+	.cabinet-products__content{
+		.about-membership-block__description{
+			max-width:400px;
 		}
 	}
 }
