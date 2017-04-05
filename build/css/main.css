@@ -1002,6 +1002,36 @@ a.up:after {
   .row.trade-row.markets__text {
     padding-left: 0 !important; } }
 
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.col-xs-1-5 {
+  width: 20%;
+  float: left; }
+
+@media (min-width: 768px) {
+  .col-sm-1-5 {
+    width: 20%;
+    float: left; } }
+
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    width: 20%;
+    float: left; } }
+
+@media (min-width: 1200px) {
+  .col-lg-offset-1-5 {
+    margin-left: 20%; }
+  .col-lg-1-5 {
+    width: 20%;
+    float: left; } }
+
 @media only screen and (min-width: 992px) {
   .container.history .regulations {
     width: 264px;
@@ -2045,6 +2075,77 @@ section.investors .container > img {
 .container.info-prod .about-membership-block__title {
   font-weight: 300;
   color: #45464f; }
+
+.trade-information .container .trade-information__tabs.tabs {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; }
+  .trade-information .container .trade-information__tabs.tabs ul.nav {
+    margin: 0 auto; }
+    @media only screen and (min-width: 992px) {
+      .trade-information .container .trade-information__tabs.tabs ul.nav {
+        width: 50%; } }
+    .trade-information .container .trade-information__tabs.tabs ul.nav li {
+      width: 49%;
+      display: inline-block;
+      text-align: center;
+      border-bottom: 2px solid transparent; }
+      .trade-information .container .trade-information__tabs.tabs ul.nav li a {
+        color: #000; }
+      .trade-information .container .trade-information__tabs.tabs ul.nav li:hover a {
+        background-color: #fff; }
+      .trade-information .container .trade-information__tabs.tabs ul.nav li.active {
+        font-weight: bold;
+        border-bottom: 2px solid #33952b; }
+        .trade-information .container .trade-information__tabs.tabs ul.nav li.active a {
+          background-color: #fff; }
+
+.trade-information .container .tab-content .period__charts > div {
+  height: 360px; }
+  .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description {
+    position: absolute;
+    width: calc(100% - 20px);
+    text-align: center;
+    top: 50px; }
+    .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description p {
+      font-weight: normal;
+      font-size: 36px; }
+      .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description p span {
+        font-weight: normal;
+        font-size: 12px; }
+      .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description p:nth-child(2) {
+        line-height: 10px; }
+  .trade-information .container .tab-content .period__charts > div > .trade-information__donut {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 90%;
+    overflow: visible !important; }
+    .trade-information .container .tab-content .period__charts > div > .trade-information__donut a {
+      display: none !important; }
+    .trade-information .container .tab-content .period__charts > div > .trade-information__donut svg {
+      left: 0 !important; }
+  .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends {
+    width: 200px;
+    margin: 15px auto; }
+    .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends p {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold; }
+    .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends ul {
+      padding-left: 40px; }
+      .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends ul li {
+        list-style-type: none;
+        position: relative; }
+        .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends ul li span {
+          position: absolute;
+          display: block;
+          border-radius: 90%;
+          width: 10px;
+          height: 10px;
+          border: 2px solid;
+          left: -20px;
+          top: 3px; }
 
 .cabinet-header-main {
   box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);

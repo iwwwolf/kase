@@ -301,10 +301,170 @@
           </div>
         </div>
       </header>
-      <div class="container">
-        <div style="width:300px;height:300px;" class="chart">
-          <div style="width:304px;height:304px;" class="mychart">
-            <canvas id="myChart" width="300" height="300"></canvas>
+      <div class="trade-information">
+        <div class="container">
+          <div class="col-xs-12">
+            <h2>Торговая информация</h2>
+            <div class="trade-information__tabs tabs">
+              <ul role="tablist" class="nav">
+                <li class="active"><a href="#period" data-toggle="tab" class="resident-link">Объем торгов за период</a></li>
+                <li><a href="#day" data-toggle="tab" class="resident-link">Результаты торгов за день</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 tab-content">
+            <div id="period" class="tab-pane active"><a href="#">Получить файл</a>
+              <div class="period__charts">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>78,4%</p>
+                    <p><span>3 275 417,03 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-val" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>Иностранные валюты</p>
+                    <ul>
+                      <li><span style="border-color:#33952b"></span> Спот-рынок</li>
+                      <li><span style="border-color:#b3d407"></span> Своп-рынок</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>0,0%</p>
+                    <p><span>400, 00 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-gcb" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>Казахстанские ГЦБ</p>
+                    <ul>
+                      <li><span style="border-color:#33952b"></span> Первичный-рынок</li>
+                      <li><span style="border-color:#b3d407"></span> Вторичный-рынок</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>0,7%</p>
+                    <p><span>88 888,88 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-act" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>Акции</p>
+                    <ul>
+                      <!--li #[span(style="border-color:#33952b")] Спот-рынок-->
+                      <!--li #[span(style="border-color:#b3d407")] Своп-рынок-->
+                      
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>88,8%</p>
+                    <p><span>88 888,88 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-corp" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>Корпоративные долговые ЦБ</p>
+                    <ul>
+                      <li><span style="border-color:#33952b"></span> "Прямое репо по ГЦБ"</li>
+                      <li><span style="border-color:#b3d407"></span> И т.д</li>
+                      <li><span style="border-color:#4ba0eb"></span> И т.д</li>
+                      <li><span style="border-color:#eed01d"></span> И т.д</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>88,8%</p>
+                    <p><span>88 888,88 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-repo" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>Операции РЕПО</p>
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5 col-lg-offset-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>88,8%</p>
+                    <p><span>88 888,88 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-cb" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>ЦБ инвестиционных фондов</p>
+                    <ul>
+                      <li><span style="border-color:#33952b"></span> Что то</li>
+                      <li><span style="border-color:#b3d407"></span> Что то</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>88,8%</p>
+                    <p><span>88 888,88 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-mfo" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>Облигации МФО</p>
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
+                  <div class="trade-information__donut-description">
+                    <p>88,8%</p>
+                    <p><span>88 888,88 <br> млн KZT</span></p>
+                  </div>
+                  <div id="donut-fut" class="trade-information__donut"></div>
+                  <div class="trade-information__donut-legends">
+                    <p>Фьючерсы</p>
+                    <ul></ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 period__results">
+                <p>Всего объем торгов</p>
+                <p class="period__results-percent">100%<span>4 000 000,00 <br> млн KZT</span></p>
+              </div>
+              <div class="col-xs-12 period__sector-table">
+                <div class="sector-table__title">
+                  <p>2015 год</p>
+                  <div class="sector-table__file"><a href="#">Получить файл</a></div>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>1-12.2015</th>
+                      <th>1-12.2014</th>
+                      <th>Тренд</th>
+                    </tr>
+                    <tr>
+                      <th>Сектор биржевого рынка</th>
+                      <th>Объем</th>
+                      <th>%</th>
+                      <th>Объем</th>
+                      <th>%</th>
+                      <th>Объем</th>
+                      <th>%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Иностранных валют</td>
+                      <td>33 770,2</td>
+                      <td>72,3</td>
+                      <td>18 374,8</td>
+                      <td>57,4</td>
+                      <td>13,395,4</td>
+                      <td>83,8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="day" class="tab-pane">
+              <p>За день</p>
+            </div>
           </div>
         </div>
       </div>

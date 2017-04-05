@@ -1,7 +1,148 @@
 extends ../templates/base
 
 block content
-	.container
-		.chart(style="width:300px;height:300px;")
-			.mychart(style="width:304px;height:304px;")
-				canvas#myChart(width="300",height="300")
+	.trade-information
+		.container
+			.col-xs-12
+				h2 Торговая информация
+				.trade-information__tabs.tabs
+					ul.nav(role="tablist")
+						li.active
+							a.resident-link(href='#period', data-toggle="tab") Объем торгов за период
+						li
+							a.resident-link(href='#day', data-toggle="tab") Результаты торгов за день
+			
+			.col-xs-12.tab-content
+				.tab-pane#period.active
+					a(href="#") Получить файл
+					.period__charts
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
+							.trade-information__donut-description
+								p 78,4%
+								p: span 3 275 417,03 #[br] млн KZT
+							.trade-information__donut#donut-val
+							.trade-information__donut-legends
+								p Иностранные валюты
+								ul
+									li #[span(style="border-color:#33952b")] Спот-рынок
+									li #[span(style="border-color:#b3d407")] Своп-рынок
+
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
+							.trade-information__donut-description
+								p 0,0%
+								p: span 400, 00 #[br] млн KZT
+							.trade-information__donut#donut-gcb
+							.trade-information__donut-legends
+								p Казахстанские ГЦБ
+								ul
+									li #[span(style="border-color:#33952b")] Первичный-рынок
+									li #[span(style="border-color:#b3d407")] Вторичный-рынок
+
+
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
+							.trade-information__donut-description
+								p 0,7%
+								p: span 88 888,88 #[br] млн KZT
+							.trade-information__donut#donut-act
+							.trade-information__donut-legends
+								p Акции
+								ul
+									//li #[span(style="border-color:#33952b")] Спот-рынок
+									//li #[span(style="border-color:#b3d407")] Своп-рынок
+
+
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
+							.trade-information__donut-description
+								p 88,8%
+								p: span 88 888,88 #[br] млн KZT
+							.trade-information__donut#donut-corp
+							.trade-information__donut-legends
+								p Корпоративные долговые ЦБ
+								ul
+									li #[span(style="border-color:#33952b")] "Прямое репо по ГЦБ"
+									li #[span(style="border-color:#b3d407")] И т.д
+									li #[span(style="border-color:#4ba0eb")] И т.д
+									li #[span(style="border-color:#eed01d")] И т.д
+
+
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
+							.trade-information__donut-description
+								p 88,8%
+								p: span 88 888,88 #[br] млн KZT
+							.trade-information__donut#donut-repo
+							.trade-information__donut-legends
+								p Операции РЕПО
+								ul
+
+
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5.col-lg-offset-1-5
+							.trade-information__donut-description
+								p 88,8%
+								p: span 88 888,88 #[br] млн KZT
+							.trade-information__donut#donut-cb
+							.trade-information__donut-legends
+								p ЦБ инвестиционных фондов
+								ul
+									li #[span(style="border-color:#33952b")] Что то
+									li #[span(style="border-color:#b3d407")] Что то
+
+
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
+							.trade-information__donut-description
+								p 88,8%
+								p: span 88 888,88 #[br] млн KZT
+							.trade-information__donut#donut-mfo
+							.trade-information__donut-legends
+								p Облигации МФО
+								ul
+
+
+						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
+							.trade-information__donut-description
+								p 88,8%
+								p: span 88 888,88 #[br] млн KZT
+							.trade-information__donut#donut-fut
+							.trade-information__donut-legends
+								p Фьючерсы
+								ul
+					
+					.col-xs-12.period__results
+						p Всего объем торгов
+						p.period__results-percent 100%
+							span 4 000 000,00 #[br] млн KZT
+							
+					.col-xs-12.period__sector-table
+						.sector-table__title
+							p 2015 год
+							.sector-table__file
+								a(href="#") Получить файл
+						table
+							thead
+								tr
+									th 1-12.2015
+									th 1-12.2014
+									th Тренд
+								tr
+									th Сектор биржевого рынка
+									th Объем
+									th %
+									th Объем
+									th %
+									th Объем
+									th %
+							tbody
+								tr
+									td Иностранных валют
+									td 33 770,2
+									td 72,3
+									td 18 374,8
+									td 57,4
+									td 13,395,4
+									td 83,8
+						
+								
+
+
+
+				.tab-pane#day
+					p За день

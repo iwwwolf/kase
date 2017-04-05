@@ -1200,6 +1200,45 @@ $middleScreen: 992px;
 		}
 	}
 }
+//ДОБОВЛЯЮ В BOOTSTRAP СЕТУ ИЗ ПЯТИ КОЛОНОК
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+ 
+.col-xs-1-5 {
+  width: 20%;
+  float: left;
+}
+ 
+@media (min-width: 768px) {
+  .col-sm-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+ 
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
+ 
+@media (min-width: 1200px) {
+	.col-lg-offset-1-5{
+		margin-left:20%;
+	}
+  .col-lg-1-5 {
+    width: 20%;
+    float: left;
+  }
+}
 //ИСТОРИЯ
 .container.history {
 	.regulations {
@@ -2619,6 +2658,108 @@ section.investors{
 		color: #45464f;
 	}
 }
+//ТОРГОВАЯ ИНФОРМАЦИЯ
+
+.trade-information{
+	.container{
+		.trade-information__tabs.tabs{
+			border-bottom:2px solid rgba(0,0,0,0.1);
+			margin-bottom:30px;
+			ul.nav{
+				@include respond-to(large){
+					width:50%;
+				}
+				margin: 0 auto;
+				li{
+					width:49%;
+					display:inline-block;
+					text-align:center;
+					border-bottom:2px solid rgba(0,0,0,0);
+					a{
+						color:#000;
+					}
+					&:hover{
+						a{
+							background-color: #fff;
+						}
+					}
+					&.active{
+						font-weight:bold;
+						border-bottom:2px solid #33952b;
+						a{
+							background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+		.tab-content{
+			.period__charts{
+				>div{
+					height:360px;
+					>.trade-information__donut-description{
+						position:absolute;
+						width: calc(100% - 20px);
+						text-align: center;
+						top: 50px;
+						p{
+							font-weight: normal;
+							font-size: 36px;
+							span{
+								font-weight:normal;
+								font-size:12px;
+							}
+							&:nth-child(2){
+								line-height: 10px;
+							}
+						}
+					}
+					>.trade-information__donut{
+						margin:0 auto;
+						width:200px;
+						height:200px;
+						border:1px solid rgba(0,0,0,0.2);
+						border-radius:90%;
+						overflow:visible !important;
+						a{
+							display:none !important;
+						}
+						svg{
+							left:0 !important;
+						}
+					}
+					.trade-information__donut-legends{
+						width:200px;
+						margin:15px auto;
+						p{
+							text-transform: uppercase;
+							text-align:center;
+							font-weight:bold;
+						}
+						ul{
+							padding-left: 40px;
+							li{
+								list-style-type:none;
+								position:relative;
+								span{
+									position:absolute;
+									display:block;
+									border-radius:90%;
+									width: 10px;
+									height: 10px;
+									border: 2px solid;
+									left: -20px;
+   								top: 3px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 //ЛИЧНЫЙ КАБИНЕТ
 //шапка кабинета
 
