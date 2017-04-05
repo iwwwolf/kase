@@ -303,7 +303,11 @@
       </header>
       <div class="trade-information">
         <div class="container">
-          <div class="col-xs-12">
+          <div class="col-xs-12"><a id="menuClose" href="#" class="menu__close">
+              <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#47464e" d="M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z"></path>
+              </svg></a>
             <h2>Торговая информация</h2>
             <div class="trade-information__tabs tabs">
               <ul role="tablist" class="nav">
@@ -313,7 +317,21 @@
             </div>
           </div>
           <div class="col-xs-12 tab-content">
-            <div id="period" class="tab-pane active"><a href="#">Получить файл</a>
+            <div id="period" class="tab-pane active">
+              <div class="col-xs-12 period__document"><a href="#">Получить файл</a>
+                <div class="small-dropdown flex accordion__hide-in-closed period">Период:
+                  <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">За август</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">За август</a></li>
+                      <li><a href="#">За что то другое</a></li>
+                      <li><a href="#">За что то другое</a></li>
+                      <li><a href="#">За что то другое</a></li>
+                      <li><a href="#">За что то другое</a></li>
+                      <li><a href="#">За что то другое</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               <div class="period__charts">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-1-5">
                   <div class="trade-information__donut-description">
@@ -422,48 +440,608 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xs-12 period__results">
+              <div class="col-xs-12 col-md-8 col-md-offset-2 period__results">
                 <p>Всего объем торгов</p>
-                <p class="period__results-percent">100%<span>4 000 000,00 <br> млн KZT</span></p>
+                <p class="period__results-percent">100%</p>
+                <p><span>4 000 000,00 <br> млн KZT</span></p>
               </div>
               <div class="col-xs-12 period__sector-table">
                 <div class="sector-table__title">
                   <p>2015 год</p>
                   <div class="sector-table__file"><a href="#">Получить файл</a></div>
+                </div><span>млрд KZT</span>
+                <div class="main-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th colspan="3">1-12.2015</th>
+                        <th colspan="2">1-12.2014</th>
+                        <th colspan="2">Тренд</th>
+                      </tr>
+                      <tr>
+                        <th>Сектор биржевого рынка</th>
+                        <th>Объем</th>
+                        <th>%</th>
+                        <th>Объем</th>
+                        <th>%</th>
+                        <th>Объем</th>
+                        <th>%</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bggreen">
+                        <td>Иностранных валют</td>
+                        <td>33 770,2</td>
+                        <td>72,3</td>
+                        <td>18 374,8</td>
+                        <td>57,4</td>
+                        <td>13,395,4</td>
+                        <td>83,8</td>
+                      </tr>
+                      <tr class="bggreen">
+                        <td>Иностранных валют</td>
+                        <td>33 770,2</td>
+                        <td>72,3</td>
+                        <td>18 374,8</td>
+                        <td>57,4</td>
+                        <td>13,395,4</td>
+                        <td>83,8</td>
+                      </tr>
+                      <tr>
+                        <td>Иностранных валют</td>
+                        <td>33 770,2</td>
+                        <td>72,3</td>
+                        <td>18 374,8</td>
+                        <td>57,4</td>
+                        <td>13,395,4</td>
+                        <td>83,8</td>
+                      </tr>
+                      <tr>
+                        <td>Иностранных валют</td>
+                        <td>33 770,2</td>
+                        <td>72,3</td>
+                        <td>18 374,8</td>
+                        <td>57,4</td>
+                        <td>13,395,4</td>
+                        <td>83,8</td>
+                      </tr>
+                      <tr class="bggreen">
+                        <td>Иностранных валют</td>
+                        <td>33 770,2</td>
+                        <td>72,3</td>
+                        <td>18 374,8</td>
+                        <td>57,4</td>
+                        <td>13,395,4</td>
+                        <td>83,8</td>
+                      </tr>
+                      <tr class="results">
+                        <td>ВСЕГО объем торгов</td>
+                        <td>33 770,2</td>
+                        <td>72,3</td>
+                        <td>18 374,8</td>
+                        <td>57,4</td>
+                        <td>13,395,4</td>
+                        <td>83,8</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>1-12.2015</th>
-                      <th>1-12.2014</th>
-                      <th>Тренд</th>
-                    </tr>
-                    <tr>
-                      <th>Сектор биржевого рынка</th>
-                      <th>Объем</th>
-                      <th>%</th>
-                      <th>Объем</th>
-                      <th>%</th>
-                      <th>Объем</th>
-                      <th>%</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Иностранных валют</td>
-                      <td>33 770,2</td>
-                      <td>72,3</td>
-                      <td>18 374,8</td>
-                      <td>57,4</td>
-                      <td>13,395,4</td>
-                      <td>83,8</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <p><b>Примечания к таблицам</b>: ГЦБ - государственные эмиссионные ценные бумаги и прочий прочий текст</p>
               </div>
             </div>
             <div id="day" class="tab-pane">
-              <p>За день</p>
+              <p><span>Результаты торгов за 88.88.88</span></p>
+              <div class="accordion closed">
+                <div class="accordion__head"><a href="#" class="accordion__head-link">Рынок акций и паев<i class="fa fa-angle-down"></i></a>
+                  <div class="small-dropdown flex accordion__hide-in-closed">Результаты торгов за 88.88.88
+                    <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Акции и паи</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Код</th>
+                        <th>Лучшая котировка на покупку</th>
+                        <th>Лучшая котировка на продажу</th>
+                        <th>Цена первой сделки</th>
+                        <th>Макс. цена сделки</th>
+                        <th>Мин. цена сделки</th>
+                        <th>Цена посл. сделки</th>
+                        <th>Изменение цены за день, %</th>
+                        <th>Средневзвеш. цена</th>
+                        <th>Количество сделок</th>
+                        <th>Объем сделок, млн KZT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>AKZM</td>
+                        <td>16 067,39</td>
+                        <td>16 149,90</td>
+                        <td>16 150,00</td>
+                        <td>16 150,00</td>
+                        <td>16 000,00</td>
+                        <td>16 067,40</td>
+                        <td>0,74</td>
+                        <td>16 077,82</td>
+                        <td>18</td>
+                        <td>7,5</td>
+                      </tr>
+                      <tr>
+                        <td>AKZM</td>
+                        <td>16 067,39</td>
+                        <td>16 149,90</td>
+                        <td>16 150,00</td>
+                        <td>16 150,00</td>
+                        <td>16 000,00</td>
+                        <td>16 067,40</td>
+                        <td>0,74</td>
+                        <td>16 077,82</td>
+                        <td>18</td>
+                        <td>7,5</td>
+                      </tr>
+                      <tr class="title">
+                        <td>Итого:</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>237</td>
+                        <td>159,2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="accordion closed">
+                <div class="accordion__head"><a href="#" class="accordion__head-link">Рынок корп. облигаций и МФО<i class="fa fa-angle-down"></i></a>
+                  <div class="small-dropdown flex accordion__hide-in-closed">Результаты торгов за 88.88.88
+                    <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Корпоративные облигации и ценные бумаги МФО</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Код</th>
+                        <th>Лучшая котировка на покупку</th>
+                        <th>Лучшая котировка на продажу</th>
+                        <th>Цена первой сделки</th>
+                        <th>Макс. цена сделки</th>
+                        <th>Мин. цена сделки</th>
+                        <th>Цена посл. сделки</th>
+                        <th>Изменение цены за день, %</th>
+                        <th>Средневзвеш. цена</th>
+                        <th>Дни до погашения</th>
+                        <th>Количество сделок</th>
+                        <th>Объем сделок, млн KZT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>KKGBe17</td>
+                        <td>97,5000</td>
+                        <td>100,4250</td>
+                        <td>100,0000</td>
+                        <td>100,0000</td>
+                        <td>100,0000</td>
+                        <td>100,0000</td>
+                        <td>1,9825</td>
+                        <td>100,0000</td>
+                        <td>157</td>
+                        <td>1</td>
+                        <td>1,8</td>
+                      </tr>
+                      <tr>
+                        <td>KKGBe17</td>
+                        <td>97,5000</td>
+                        <td>100,4250</td>
+                        <td>100,0000</td>
+                        <td>100,0000</td>
+                        <td>100,0000</td>
+                        <td>100,0000</td>
+                        <td>1,9825</td>
+                        <td>100,0000</td>
+                        <td>157</td>
+                        <td>1</td>
+                        <td>1,8</td>
+                      </tr>
+                      <tr class="title">
+                        <td>Итого:</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>3</td>
+                        <td>4,2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="accordion closed">
+                <div class="accordion__head"><a href="#" class="accordion__head-link">Рынок операций РЕПО<i class="fa fa-angle-down"></i></a>
+                  <div class="small-dropdown flex accordion__hide-in-closed">Результаты торгов за 88.88.88
+                    <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рынок операций репо</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Вид операции</th>
+                        <th>Срок</th>
+                        <th>Цена открытия</th>
+                        <th>Мин.цена</th>
+                        <th>Макс.цена</th>
+                        <th>Цена посл.сделки</th>
+                        <th>Средневзвеш.цена</th>
+                        <th>Изменение средневзвеш.цены, %</th>
+                        <th>Средневзвеш. эффективная доходность</th>
+                        <th>Изменение средневзвеш. доходности, %</th>
+                        <th>Количество сделок</th>
+                        <th>"Объем сделок, млн KZT"</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Открытие</td>
+                        <td>1</td>
+                        <td>14,00</td>
+                        <td>12,00</td>
+                        <td>15,00</td>
+                        <td>12,25</td>
+                        <td>12,18</td>
+                        <td>0,74</td>
+                        <td>12,95</td>
+                        <td>0,84</td>
+                        <td>156</td>
+                        <td>210 445,0</td>
+                      </tr>
+                      <tr>
+                        <td>Открытие</td>
+                        <td>1</td>
+                        <td>14,00</td>
+                        <td>12,00</td>
+                        <td>15,00</td>
+                        <td>12,25</td>
+                        <td>12,18</td>
+                        <td>0,74</td>
+                        <td>12,95</td>
+                        <td>0,84</td>
+                        <td>156</td>
+                        <td>210 445,0</td>
+                      </tr>
+                      <tr class="title">
+                        <td>Итого</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>223 </td>
+                        <td>231 528,3</td>
+                      </tr>
+                      <tr>
+                        <td>Закрытие</td>
+                        <td>1</td>
+                        <td>14,00</td>
+                        <td>12,00</td>
+                        <td>15,00</td>
+                        <td>12,25</td>
+                        <td>12,18</td>
+                        <td>0,74</td>
+                        <td>12,95</td>
+                        <td>0,84</td>
+                        <td>156</td>
+                        <td>210 445,0</td>
+                      </tr>
+                      <tr>
+                        <td>Закрытие</td>
+                        <td>1</td>
+                        <td>14,00</td>
+                        <td>12,00</td>
+                        <td>15,00</td>
+                        <td>12,25</td>
+                        <td>12,18</td>
+                        <td>0,74</td>
+                        <td>12,95</td>
+                        <td>0,84</td>
+                        <td>156</td>
+                        <td>210 445,0</td>
+                      </tr>
+                      <tr class="title">
+                        <td>Итого</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>242</td>
+                        <td>199 775,5</td>
+                      </tr>
+                      <tr class="title">
+                        <td>Брутто-оборот</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>242</td>
+                        <td>199 775,5</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="accordion closed">
+                <div class="accordion__head"><a href="#" class="accordion__head-link">Иностранные валюты<i class="fa fa-angle-down"></i></a>
+                  <div class="small-dropdown flex accordion__hide-in-closed">Результаты торгов за 88.88.88
+                    <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Рынок операций репо</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th rowspan="2">Инструмент</th>
+                        <th colspan="4">Курс</th>
+                        <th rowspan="2">Объем инструментов</th>
+                        <th rowspan="2">Число сделок</th>
+                        <th colspan="2">Лучшее на закрытие</th>
+                      </tr>
+                      <tr>
+                        <th>Мин.</th>
+                        <th>Макс.</th>
+                        <th>Последн.</th>
+                        <th>Средневзвеш.</th>
+                        <th>Спрос</th>
+                        <th>Предлож.</th>
+                      </tr>
+                      <tr>
+                        <th colspan="9">Утренняя сессия</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                      <tr class="title">
+                        <td>Дневная</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                      <tr class="title">
+                        <td>Утренняя + дневная сессии</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th rowspan="2">Код</th>
+                        <th colspan="4">Доходность, % годовых</th>
+                        <th rowspan="2">Объем инструментов</th>
+                        <th rowspan="2">Число сделок</th>
+                        <th colspan="2">Лучшее на закрытие</th>
+                      </tr>
+                      <tr>
+                        <th>Мин.</th>
+                        <th>Макс.</th>
+                        <th>Последн.</th>
+                        <th>Средневзвеш.</th>
+                        <th>Спрос</th>
+                        <th>Предлож.</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="accordion closed">
+                <div class="accordion__head"><a href="#" class="accordion__head-link">Деривативы<i class="fa fa-angle-down"></i></a>
+                  <div class="small-dropdown flex accordion__hide-in-closed">Результаты торгов за 88.88.88
+                    <div class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-link">Деривативы</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                        <li><a href="#">Другая выборка</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__body">
+                  <table class="sorting-table table table-striped">
+                    <thead>
+                      <tr>
+                        <th rowspan="2">Инструмент</th>
+                        <th colspan="3">Цена KZT</th>
+                        <th rowspan="2">Объем сделок, KZT</th>
+                        <th rowspan="2">Число сделок</th>
+                        <th rowspan="2">Открытых позиций</th>
+                        <th colspan="2">Лучшие на закрытие</th>
+                      </tr>
+                      <tr>
+                        <th>Мин.</th>
+                        <th>Макс.</th>
+                        <th>Последн.</th>
+                        <th>Спрос</th>
+                        <th>Предлож.</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                      <tr>
+                        <td><a href="#">CNYKZT_TOD</a></td>
+                        <td>50,5300</td>
+                        <td>50,5500</td>
+                        <td>50,5300</td>
+                        <td>50,5467</td>
+                        <td>600</td>
+                        <td>6</td>
+                        <td>50,5400</td>
+                        <td>50,5500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -485,5 +1063,19 @@
     </footer>
     <script type="text/javascript" defer src="js/libs.js"> </script>
     <script type="text/javascript" defer src="js/main.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) { 
+      	$('.sorting-table').DataTable({
+      		scrollX: true,
+      		paging: false,
+      		ordering: false,
+      		info: false,
+      		language: {
+      		    search: '',
+      		    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+      		  }
+      	});
+      });
+    </script>
   </body>
 </html>

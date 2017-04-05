@@ -2662,9 +2662,21 @@ section.investors{
 
 .trade-information{
 	.container{
+		#menuClose{
+			position:absolute;
+			right:0;
+		}
+		margin-top: 30px;
+		h2{
+			font-weight:normal;
+			text-align:center;
+			font-size:36px;
+			text-transform: uppercase;
+			margin-top: 30px;
+		}
 		.trade-information__tabs.tabs{
 			border-bottom:2px solid rgba(0,0,0,0.1);
-			margin-bottom:30px;
+//			margin-bottom:30px;
 			ul.nav{
 				@include respond-to(large){
 					width:50%;
@@ -2694,65 +2706,213 @@ section.investors{
 			}
 		}
 		.tab-content{
-			.period__charts{
-				>div{
-					height:360px;
-					>.trade-information__donut-description{
-						position:absolute;
-						width: calc(100% - 20px);
-						text-align: center;
-						top: 50px;
-						p{
-							font-weight: normal;
-							font-size: 36px;
-							span{
-								font-weight:normal;
-								font-size:12px;
-							}
-							&:nth-child(2){
-								line-height: 10px;
-							}
+			.tab-pane#period{
+				.period__document{
+					margin:15px 0;
+					>a{
+						margin-top: 3px;
+						position:relative;
+						float:right;
+						&:before {
+							display: block;
+							font-family: FontAwesome;
+							position: absolute;
+							left: -20px;
+							top: 0;
+							content: "\f0f6";
 						}
 					}
-					>.trade-information__donut{
-						margin:0 auto;
-						width:200px;
-						height:200px;
-						border:1px solid rgba(0,0,0,0.2);
-						border-radius:90%;
-						overflow:visible !important;
-						a{
-							display:none !important;
-						}
-						svg{
-							left:0 !important;
+					.small-dropdown{
+						float:right;
+						margin-right: 50px;
+						.dropdown{
+							width:150px;
 						}
 					}
-					.trade-information__donut-legends{
-						width:200px;
-						margin:15px auto;
-						p{
-							text-transform: uppercase;
-							text-align:center;
-							font-weight:bold;
-						}
-						ul{
-							padding-left: 40px;
-							li{
-								list-style-type:none;
-								position:relative;
+				}
+				.period__charts{
+					>div{
+						height:360px;
+						>.trade-information__donut-description{
+							position:absolute;
+							width: calc(100% - 20px);
+							text-align: center;
+							top: 50px;
+							p{
+								font-weight: normal;
+								font-size: 36px;
 								span{
-									position:absolute;
-									display:block;
-									border-radius:90%;
-									width: 10px;
-									height: 10px;
-									border: 2px solid;
-									left: -20px;
-   								top: 3px;
+									font-weight:normal;
+									font-size:12px;
+								}
+								&:nth-child(2){
+									line-height: 10px;
 								}
 							}
 						}
+						>.trade-information__donut{
+							margin:0 auto;
+							width:200px;
+							height:200px;
+							border:1px solid rgba(0,0,0,0.2);
+							border-radius:90%;
+							overflow:visible !important;
+							a{
+								display:none !important;
+							}
+							svg{
+								left:0 !important;
+							}
+						}
+						.trade-information__donut-legends{
+							width:200px;
+							margin:15px auto;
+							p{
+								text-transform: uppercase;
+								text-align:center;
+								font-weight:bold;
+							}
+							ul{
+								padding-left: 40px;
+								li{
+									list-style-type:none;
+									position:relative;
+									span{
+										position:absolute;
+										display:block;
+										border-radius:90%;
+										width: 10px;
+										height: 10px;
+										border: 2px solid;
+										left: -20px;
+										top: 3px;
+									}
+								}
+							}
+						}
+					}
+				}
+				.period__results{
+					border-top:1px solid rgba(0,0,0,0.1);
+					padding-top:20px;
+					p{
+						text-align:center;
+						text-transform: uppercase;
+						font-weight:normal;
+						&:nth-child(2){
+							font-size:36px;
+							color:#008822;
+						}
+						&:nth-child(3){
+							font-size:12px;
+							color:rgba(0,0,0,0.6);
+						}
+					}
+				}
+				.period__sector-table{
+					>p{
+						margin-top:40px;
+						margin-bottom:80px;
+					}
+					.sector-table__title{
+						border-bottom:1px solid rgba(0,0,0,0.2);
+						padding-bottom:30px;
+						p{
+							font-size:16px;
+							font-weight:normal;
+							float:left;
+							margin-left: 15px;
+						}
+						.sector-table__file{
+							float:right;
+							a{
+								position:relative;
+								&:before {
+									display: block;
+									font-family: FontAwesome;
+									position: absolute;
+									left: -20px;
+									top: 0;
+									content: "\f0f6";
+								}
+							}
+						}
+					}
+					>span{
+						width:100%;
+						display:block;
+						text-align:right;
+						margin-top: 10px;
+					}
+
+					.main-table{
+						margin-top: 15px;
+						overflow-x:scroll;
+						@include respond-to(large){
+							overflow-x:hidden;
+							table{
+								width:100%;
+							}
+						}
+						table{
+							*{
+								border:1px solid rgba(0,0,0,0.1);
+							}
+							thead{
+								>tr{
+									th{
+										font-weight:normal;
+										padding:15px;
+									}
+									&:first-child{
+										th{
+											text-align:right;
+											&:first-child{
+												width:50%;
+											}
+										}
+									}
+									&:nth-child(2){
+										background-color: #464650;
+										th{
+											padding:15px;
+											color:#fff;
+										}
+									}
+								}
+							}
+							tbody{
+								tr{
+									&.bggreen{
+										background-color: #e6f3e9;
+									}
+									&.results{
+										background-color: #68b87d;
+										td{
+											color:#fff;
+										}
+									}
+									td{
+										padding:5px;
+										padding-left:15px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.tab-pane#day{
+				>p{
+					margin-top: 30px;
+				}
+				.accordion{
+					margin-bottom:0;
+					tr.title{
+						background-color: #e6e9ed;
+					}
+					.dropdown{
+						min-width:350px;
 					}
 				}
 			}

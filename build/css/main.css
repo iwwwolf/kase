@@ -2076,76 +2076,182 @@ section.investors .container > img {
   font-weight: 300;
   color: #45464f; }
 
-.trade-information .container .trade-information__tabs.tabs {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px; }
-  .trade-information .container .trade-information__tabs.tabs ul.nav {
-    margin: 0 auto; }
-    @media only screen and (min-width: 992px) {
-      .trade-information .container .trade-information__tabs.tabs ul.nav {
-        width: 50%; } }
-    .trade-information .container .trade-information__tabs.tabs ul.nav li {
-      width: 49%;
-      display: inline-block;
-      text-align: center;
-      border-bottom: 2px solid transparent; }
-      .trade-information .container .trade-information__tabs.tabs ul.nav li a {
-        color: #000; }
-      .trade-information .container .trade-information__tabs.tabs ul.nav li:hover a {
-        background-color: #fff; }
-      .trade-information .container .trade-information__tabs.tabs ul.nav li.active {
-        font-weight: bold;
-        border-bottom: 2px solid #33952b; }
-        .trade-information .container .trade-information__tabs.tabs ul.nav li.active a {
-          background-color: #fff; }
-
-.trade-information .container .tab-content .period__charts > div {
-  height: 360px; }
-  .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description {
+.trade-information .container {
+  margin-top: 30px; }
+  .trade-information .container #menuClose {
     position: absolute;
-    width: calc(100% - 20px);
+    right: 0; }
+  .trade-information .container h2 {
+    font-weight: normal;
     text-align: center;
-    top: 50px; }
-    .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description p {
-      font-weight: normal;
-      font-size: 36px; }
-      .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description p span {
-        font-weight: normal;
-        font-size: 12px; }
-      .trade-information .container .tab-content .period__charts > div > .trade-information__donut-description p:nth-child(2) {
-        line-height: 10px; }
-  .trade-information .container .tab-content .period__charts > div > .trade-information__donut {
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 90%;
-    overflow: visible !important; }
-    .trade-information .container .tab-content .period__charts > div > .trade-information__donut a {
-      display: none !important; }
-    .trade-information .container .tab-content .period__charts > div > .trade-information__donut svg {
-      left: 0 !important; }
-  .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends {
-    width: 200px;
-    margin: 15px auto; }
-    .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends p {
-      text-transform: uppercase;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-top: 30px; }
+  .trade-information .container .trade-information__tabs.tabs {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+    .trade-information .container .trade-information__tabs.tabs ul.nav {
+      margin: 0 auto; }
+      @media only screen and (min-width: 992px) {
+        .trade-information .container .trade-information__tabs.tabs ul.nav {
+          width: 50%; } }
+      .trade-information .container .trade-information__tabs.tabs ul.nav li {
+        width: 49%;
+        display: inline-block;
+        text-align: center;
+        border-bottom: 2px solid transparent; }
+        .trade-information .container .trade-information__tabs.tabs ul.nav li a {
+          color: #000; }
+        .trade-information .container .trade-information__tabs.tabs ul.nav li:hover a {
+          background-color: #fff; }
+        .trade-information .container .trade-information__tabs.tabs ul.nav li.active {
+          font-weight: bold;
+          border-bottom: 2px solid #33952b; }
+          .trade-information .container .trade-information__tabs.tabs ul.nav li.active a {
+            background-color: #fff; }
+  .trade-information .container .tab-content .tab-pane#period .period__document {
+    margin: 15px 0; }
+    .trade-information .container .tab-content .tab-pane#period .period__document > a {
+      margin-top: 3px;
+      position: relative;
+      float: right; }
+      .trade-information .container .tab-content .tab-pane#period .period__document > a:before {
+        display: block;
+        font-family: FontAwesome;
+        position: absolute;
+        left: -20px;
+        top: 0;
+        content: "\f0f6"; }
+    .trade-information .container .tab-content .tab-pane#period .period__document .small-dropdown {
+      float: right;
+      margin-right: 50px; }
+      .trade-information .container .tab-content .tab-pane#period .period__document .small-dropdown .dropdown {
+        width: 150px; }
+  .trade-information .container .tab-content .tab-pane#period .period__charts > div {
+    height: 360px; }
+    .trade-information .container .tab-content .tab-pane#period .period__charts > div > .trade-information__donut-description {
+      position: absolute;
+      width: calc(100% - 20px);
       text-align: center;
-      font-weight: bold; }
-    .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends ul {
-      padding-left: 40px; }
-      .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends ul li {
-        list-style-type: none;
+      top: 50px; }
+      .trade-information .container .tab-content .tab-pane#period .period__charts > div > .trade-information__donut-description p {
+        font-weight: normal;
+        font-size: 36px; }
+        .trade-information .container .tab-content .tab-pane#period .period__charts > div > .trade-information__donut-description p span {
+          font-weight: normal;
+          font-size: 12px; }
+        .trade-information .container .tab-content .tab-pane#period .period__charts > div > .trade-information__donut-description p:nth-child(2) {
+          line-height: 10px; }
+    .trade-information .container .tab-content .tab-pane#period .period__charts > div > .trade-information__donut {
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 90%;
+      overflow: visible !important; }
+      .trade-information .container .tab-content .tab-pane#period .period__charts > div > .trade-information__donut a {
+        display: none !important; }
+      .trade-information .container .tab-content .tab-pane#period .period__charts > div > .trade-information__donut svg {
+        left: 0 !important; }
+    .trade-information .container .tab-content .tab-pane#period .period__charts > div .trade-information__donut-legends {
+      width: 200px;
+      margin: 15px auto; }
+      .trade-information .container .tab-content .tab-pane#period .period__charts > div .trade-information__donut-legends p {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold; }
+      .trade-information .container .tab-content .tab-pane#period .period__charts > div .trade-information__donut-legends ul {
+        padding-left: 40px; }
+        .trade-information .container .tab-content .tab-pane#period .period__charts > div .trade-information__donut-legends ul li {
+          list-style-type: none;
+          position: relative; }
+          .trade-information .container .tab-content .tab-pane#period .period__charts > div .trade-information__donut-legends ul li span {
+            position: absolute;
+            display: block;
+            border-radius: 90%;
+            width: 10px;
+            height: 10px;
+            border: 2px solid;
+            left: -20px;
+            top: 3px; }
+  .trade-information .container .tab-content .tab-pane#period .period__results {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px; }
+    .trade-information .container .tab-content .tab-pane#period .period__results p {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: normal; }
+      .trade-information .container .tab-content .tab-pane#period .period__results p:nth-child(2) {
+        font-size: 36px;
+        color: #008822; }
+      .trade-information .container .tab-content .tab-pane#period .period__results p:nth-child(3) {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6); }
+  .trade-information .container .tab-content .tab-pane#period .period__sector-table > p {
+    margin-top: 40px;
+    margin-bottom: 80px; }
+  .trade-information .container .tab-content .tab-pane#period .period__sector-table .sector-table__title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 30px; }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .sector-table__title p {
+      font-size: 16px;
+      font-weight: normal;
+      float: left;
+      margin-left: 15px; }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .sector-table__title .sector-table__file {
+      float: right; }
+      .trade-information .container .tab-content .tab-pane#period .period__sector-table .sector-table__title .sector-table__file a {
         position: relative; }
-        .trade-information .container .tab-content .period__charts > div .trade-information__donut-legends ul li span {
-          position: absolute;
+        .trade-information .container .tab-content .tab-pane#period .period__sector-table .sector-table__title .sector-table__file a:before {
           display: block;
-          border-radius: 90%;
-          width: 10px;
-          height: 10px;
-          border: 2px solid;
+          font-family: FontAwesome;
+          position: absolute;
           left: -20px;
-          top: 3px; }
+          top: 0;
+          content: "\f0f6"; }
+  .trade-information .container .tab-content .tab-pane#period .period__sector-table > span {
+    width: 100%;
+    display: block;
+    text-align: right;
+    margin-top: 10px; }
+  .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table {
+    margin-top: 15px;
+    overflow-x: scroll; }
+    @media only screen and (min-width: 992px) {
+      .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table {
+        overflow-x: hidden; }
+        .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table {
+          width: 100%; } }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table * {
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table thead > tr th {
+      font-weight: normal;
+      padding: 15px; }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table thead > tr:first-child th {
+      text-align: right; }
+      .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table thead > tr:first-child th:first-child {
+        width: 50%; }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table thead > tr:nth-child(2) {
+      background-color: #464650; }
+      .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table thead > tr:nth-child(2) th {
+        padding: 15px;
+        color: #fff; }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table tbody tr.bggreen {
+      background-color: #e6f3e9; }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table tbody tr.results {
+      background-color: #68b87d; }
+      .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table tbody tr.results td {
+        color: #fff; }
+    .trade-information .container .tab-content .tab-pane#period .period__sector-table .main-table table tbody tr td {
+      padding: 5px;
+      padding-left: 15px; }
+  .trade-information .container .tab-content .tab-pane#day > p {
+    margin-top: 30px; }
+  .trade-information .container .tab-content .tab-pane#day .accordion {
+    margin-bottom: 0; }
+    .trade-information .container .tab-content .tab-pane#day .accordion tr.title {
+      background-color: #e6e9ed; }
+    .trade-information .container .tab-content .tab-pane#day .accordion .dropdown {
+      min-width: 350px; }
 
 .cabinet-header-main {
   box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);

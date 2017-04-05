@@ -4,6 +4,11 @@ block content
 	.trade-information
 		.container
 			.col-xs-12
+				a#menuClose.menu__close(href='#')
+					svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 16 16', enable-background='new 0 0 16 16', xml:space='preserve')
+						path(fill-rule='evenodd', clip-rule='evenodd', fill='#47464e', d='M1.5,0L16,14.5L14.5,16L0,1.5L1.5,0z')
+						path(fill-rule='evenodd', clip-rule='evenodd', fill='#47464e', d='M14.5,0L16,1.5L1.5,16L0,14.5L14.5,0z')
+
 				h2 Торговая информация
 				.trade-information__tabs.tabs
 					ul.nav(role="tablist")
@@ -14,7 +19,18 @@ block content
 			
 			.col-xs-12.tab-content
 				.tab-pane#period.active
-					a(href="#") Получить файл
+					.col-xs-12.period__document
+						a(href="#") Получить файл
+						.small-dropdown.flex.accordion__hide-in-closed.period Период:
+							.dropdown
+								a.dropdown-link(href="#", data-toggle="dropdown", role="button") За август
+								ul.dropdown-menu
+									li: a(href="#") За август
+									li: a(href="#") За что то другое
+									li: a(href="#") За что то другое
+									li: a(href="#") За что то другое
+									li: a(href="#") За что то другое
+									li: a(href="#") За что то другое
 					.period__charts
 						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
 							.trade-information__donut-description
@@ -106,43 +122,585 @@ block content
 								p Фьючерсы
 								ul
 					
-					.col-xs-12.period__results
+					.col-xs-12.col-md-8.col-md-offset-2.period__results
 						p Всего объем торгов
 						p.period__results-percent 100%
-							span 4 000 000,00 #[br] млн KZT
+						p: span 4 000 000,00 #[br] млн KZT
 							
 					.col-xs-12.period__sector-table
 						.sector-table__title
 							p 2015 год
 							.sector-table__file
 								a(href="#") Получить файл
-						table
-							thead
-								tr
-									th 1-12.2015
-									th 1-12.2014
-									th Тренд
-								tr
-									th Сектор биржевого рынка
-									th Объем
-									th %
-									th Объем
-									th %
-									th Объем
-									th %
-							tbody
-								tr
-									td Иностранных валют
-									td 33 770,2
-									td 72,3
-									td 18 374,8
-									td 57,4
-									td 13,395,4
-									td 83,8
+						span млрд KZT
+						.main-table
+							table
+								thead
+									tr
+										th(colspan="3") 1-12.2015
+										th(colspan="2") 1-12.2014
+										th(colspan="2") Тренд
+									tr
+										th Сектор биржевого рынка
+										th Объем
+										th %
+										th Объем
+										th %
+										th Объем
+										th %
+								tbody
+									tr.bggreen
+										td Иностранных валют
+										td 33 770,2
+										td 72,3
+										td 18 374,8
+										td 57,4
+										td 13,395,4
+										td 83,8
 						
-								
-
-
-
+									tr.bggreen
+										td Иностранных валют
+										td 33 770,2
+										td 72,3
+										td 18 374,8
+										td 57,4
+										td 13,395,4
+										td 83,8
+						
+									tr
+										td Иностранных валют
+										td 33 770,2
+										td 72,3
+										td 18 374,8
+										td 57,4
+										td 13,395,4
+										td 83,8
+						
+									tr
+										td Иностранных валют
+										td 33 770,2
+										td 72,3
+										td 18 374,8
+										td 57,4
+										td 13,395,4
+										td 83,8
+						
+									tr.bggreen
+										td Иностранных валют
+										td 33 770,2
+										td 72,3
+										td 18 374,8
+										td 57,4
+										td 13,395,4
+										td 83,8
+						
+									tr.results
+										td ВСЕГО объем торгов
+										td 33 770,2
+										td 72,3
+										td 18 374,8
+										td 57,4
+										td 13,395,4
+										td 83,8
+						
+						p #[b Примечания к таблицам]: ГЦБ - государственные эмиссионные ценные бумаги и прочий прочий текст
 				.tab-pane#day
-					p За день
+				
+				
+				
+					p: span Результаты торгов за 88.88.88
+
+
+
+
+
+
+					.accordion.closed
+						.accordion__head
+							a.accordion__head-link(href="#") Рынок акций и паев
+								i.fa.fa-angle-down
+							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
+								.dropdown
+									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Акции и паи
+									ul.dropdown-menu
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+						.accordion__body
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th Код
+										th Лучшая котировка на покупку
+										th Лучшая котировка на продажу
+										th Цена первой сделки
+										th Макс. цена сделки
+										th Мин. цена сделки
+										th Цена посл. сделки
+										th Изменение цены за день, %
+										th Средневзвеш. цена
+										th Количество сделок
+										th Объем сделок, млн KZT
+								tbody
+									tr
+										td AKZM
+										td 16 067,39
+										td 16 149,90
+										td 16 150,00
+										td 16 150,00
+										td 16 000,00
+										td 16 067,40
+										td 0,74
+										td 16 077,82
+										td 18
+										td 7,5
+									tr
+										td AKZM
+										td 16 067,39
+										td 16 149,90
+										td 16 150,00
+										td 16 150,00
+										td 16 000,00
+										td 16 067,40
+										td 0,74
+										td 16 077,82
+										td 18
+										td 7,5
+									tr.title
+										td Итого:
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td 237
+										td 159,2
+
+
+
+
+
+
+					.accordion.closed
+						.accordion__head
+							a.accordion__head-link(href="#") Рынок корп. облигаций и МФО
+								i.fa.fa-angle-down
+							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
+								.dropdown
+									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Корпоративные облигации и ценные бумаги МФО
+									ul.dropdown-menu
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+						.accordion__body
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th Код
+										th Лучшая котировка на покупку
+										th Лучшая котировка на продажу
+										th Цена первой сделки
+										th Макс. цена сделки
+										th Мин. цена сделки
+										th Цена посл. сделки
+										th Изменение цены за день, %
+										th Средневзвеш. цена
+										th Дни до погашения
+										th Количество сделок
+										th Объем сделок, млн KZT
+								tbody
+									tr
+										td KKGBe17
+										td 97,5000
+										td 100,4250
+										td 100,0000
+										td 100,0000
+										td 100,0000
+										td 100,0000
+										td 1,9825
+										td 100,0000
+										td 157
+										td 1
+										td 1,8
+									tr
+										td KKGBe17
+										td 97,5000
+										td 100,4250
+										td 100,0000
+										td 100,0000
+										td 100,0000
+										td 100,0000
+										td 1,9825
+										td 100,0000
+										td 157
+										td 1
+										td 1,8
+									tr.title
+										td Итого:
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td 3
+										td 4,2
+
+
+
+
+
+
+
+
+					.accordion.closed
+						.accordion__head
+							a.accordion__head-link(href="#") Рынок операций РЕПО
+								i.fa.fa-angle-down
+							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
+								.dropdown
+									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Рынок операций репо
+									ul.dropdown-menu
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+						.accordion__body
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th Вид операции
+										th Срок
+										th Цена открытия
+										th Мин.цена
+										th Макс.цена
+										th Цена посл.сделки
+										th Средневзвеш.цена
+										th Изменение средневзвеш.цены, %
+										th Средневзвеш. эффективная доходность
+										th Изменение средневзвеш. доходности, %
+										th Количество сделок
+										th "Объем сделок, млн KZT"
+								tbody
+									tr
+										td Открытие
+										td 1
+										td 14,00
+										td 12,00
+										td 15,00
+										td 12,25
+										td 12,18
+										td 0,74
+										td 12,95
+										td 0,84
+										td 156
+										td 210 445,0
+									tr
+										td Открытие
+										td 1
+										td 14,00
+										td 12,00
+										td 15,00
+										td 12,25
+										td 12,18
+										td 0,74
+										td 12,95
+										td 0,84
+										td 156
+										td 210 445,0
+									tr.title
+										td Итого
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td 223 
+										td 231 528,3
+									tr
+										td Закрытие
+										td 1
+										td 14,00
+										td 12,00
+										td 15,00
+										td 12,25
+										td 12,18
+										td 0,74
+										td 12,95
+										td 0,84
+										td 156
+										td 210 445,0
+									tr
+										td Закрытие
+										td 1
+										td 14,00
+										td 12,00
+										td 15,00
+										td 12,25
+										td 12,18
+										td 0,74
+										td 12,95
+										td 0,84
+										td 156
+										td 210 445,0
+									tr.title
+										td Итого
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td 242
+										td 199 775,5
+									tr.title
+										td Брутто-оборот
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td 242
+										td 199 775,5
+
+
+
+
+
+
+
+
+
+					.accordion.closed
+						.accordion__head
+							a.accordion__head-link(href="#") Иностранные валюты
+								i.fa.fa-angle-down
+							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
+								.dropdown
+									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Рынок операций репо
+									ul.dropdown-menu
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+						.accordion__body
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th(rowspan="2") Инструмент
+										th(colspan="4") Курс
+										th(rowspan="2") Объем инструментов
+										th(rowspan="2") Число сделок
+										th(colspan="2") Лучшее на закрытие
+									tr
+										th Мин.
+										th Макс.
+										th Последн.
+										th Средневзвеш.
+										th Спрос
+										th Предлож.
+									tr
+										th(colspan="9") Утренняя сессия
+								tbody
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+									tr.title
+										td Дневная
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+									tr.title
+										td Утренняя + дневная сессии
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+										td
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th(rowspan="2") Код
+										th(colspan="4") Доходность, % годовых
+										th(rowspan="2") Объем инструментов
+										th(rowspan="2") Число сделок
+										th(colspan="2") Лучшее на закрытие
+									tr
+										th Мин.
+										th Макс.
+										th Последн.
+										th Средневзвеш.
+										th Спрос
+										th Предлож.
+								tbody
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+
+
+
+
+
+
+					.accordion.closed
+						.accordion__head
+							a.accordion__head-link(href="#") Деривативы
+								i.fa.fa-angle-down
+							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
+								.dropdown
+									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Деривативы
+									ul.dropdown-menu
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+										li: a(href="#") Другая выборка
+						.accordion__body
+							table.sorting-table.table.table-striped
+								thead
+									tr
+										th(rowspan="2") Инструмент
+										th(colspan="3") Цена KZT
+										th(rowspan="2") Объем сделок, KZT
+										th(rowspan="2") Число сделок
+										th(rowspan="2") Открытых позиций
+										th(colspan="2") Лучшие на закрытие
+									tr
+										th Мин.
+										th Макс.
+										th Последн.
+										th Спрос
+										th Предлож.
+								tbody
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+									tr
+										td: a(href="#") CNYKZT_TOD
+										td 50,5300
+										td 50,5500
+										td 50,5300
+										td 50,5467
+										td 600
+										td 6
+										td 50,5400
+										td 50,5500
+
+
+
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				paging: false,
+				ordering: false,
+				info: false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});
