@@ -162,11 +162,15 @@ block content
 								p. 
 									#[b Системы KASE поддерживают соединение посредством международного протокола FIX версия 5.0. Использование FIX-APi доступно только для участников торгов, имеющих допуск к торгам соответствующей категории. ]
 								p.
-									#[b FIX &dash; Financial Information eXchnge &dash;] международный стандарт передачи биржевых данных в режиме реального времени. FIX является сессионным протоколом поверх TCP/IP, каждое сообщение которого состоит из набора пар тэг-значение, разделенных ascii-символами 0x01. Каждое сообщение состоит из заголовка, тела сообщения и окончания. В заголовка содержется информация об отправителе и адресате, тип сообщения и другая системная информация, в конце сообщения находится и контрольная сумма. #[br] Обмен сообщениями ведется асинхронно, все запросы имеют уникальный референс, по которому сопоставляется полученный ответ.
+									#[b FIX &dash; Financial Information eXchnge &dash;] международный стандарт передачи биржевых данных в режиме реального времени. FIX является сессионным протоколом поверх TCP/IP, каждое сообщение которого состоит из набора пар тэг-значение, разделенных ascii-символами 0x01. Каждое сообщение состоит из заголовка, тела сообщения и окончания. В заголовка содержется информация об отправителе и адресате, тип сообщения и другая системная информация, в конце сообщения находится и контрольная сумма. #[br]#[br] Обмен сообщениями ведется асинхронно, все запросы имеют уникальный референс, по которому сопоставляется полученный ответ.
 								p.
-									В качестве реализации FIX-движка можно взять бесплатный QuickFix #[a(href="www.quickfixengine.org") www.quickfixengine.org], его Java-реализацию: #[a(href="#") quickfixj.org], либо его KASE-версию в проекте: #[a(href="https://github.com/kase-dev/fix-api") github.com/kase-dev/fix-api ] #[br]Также, в открытом доступе находится калькулятор доходности (для облигаций, котирующихся на KASe): #[a(href="https://github.com/kase-dev/bond-calculator") github.com/kase-dev/bond-calculator]
-						br
-						.row
+									В качестве реализации FIX-движка можно взять бесплатный QuickFix #[a(href="www.quickfixengine.org") www.quickfixengine.org], его Java-реализацию: #[a(href="#") quickfixj.org], либо его KASE-версию в проекте: #[a(href="https://github.com/kase-dev/fix-api") github.com/kase-dev/fix-api ] #[br] #[br]Также, в открытом доступе находится калькулятор доходности (для облигаций, котирующихся на KASe): #[a(href="https://github.com/kase-dev/bond-calculator") github.com/kase-dev/bond-calculator]
+								p: b Для подключения используются следующие адреса и настройки
+								a.underline(href="#")
+									i.fa.fa-print
+									|  Настройки
+						//br
+						//.row
 							.col-md-4
 								h4.green Валютный рынок
 								b Боевая система:
@@ -203,31 +207,31 @@ block content
 								b По интернету:
 								p IP: 212.19.144.73
 								p Port: 9898
-						br
-						br
-						h2 Для подключения используются следующие адреса и настройки
-						.row.row--includes
+						//br
+						//br
+						//h2 Для подключения используются следующие адреса и настройки
+						//.row.row--includes
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") Fix Сообщения, поддерживаемые KASE
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") SecurityList
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") MarketDataIncrementalRefresh
-						.row.row--includes
+						//.row.row--includes
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") ExecutionReport
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionReport
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") NewOrderSingle
-						.row.row--includes
+						//.row.row--includes
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") OrderCancelRequest
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionTransferInstruction
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") SecurityListRequest
-						.row.row--includes
+						//.row.row--includes
 							.col-xs-4
 								button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") MarketDataRequest
 							.col-xs-4

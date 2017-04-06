@@ -494,80 +494,84 @@
                 <div class="row">
                   <div class="col-md-12">
                     <p><b>Системы KASE поддерживают соединение посредством международного протокола FIX версия 5.0. Использование FIX-APi доступно только для участников торгов, имеющих допуск к торгам соответствующей категории. </b></p>
-                    <p><b>FIX &dash; Financial Information eXchnge &dash;</b> международный стандарт передачи биржевых данных в режиме реального времени. FIX является сессионным протоколом поверх TCP/IP, каждое сообщение которого состоит из набора пар тэг-значение, разделенных ascii-символами 0x01. Каждое сообщение состоит из заголовка, тела сообщения и окончания. В заголовка содержется информация об отправителе и адресате, тип сообщения и другая системная информация, в конце сообщения находится и контрольная сумма. <br> Обмен сообщениями ведется асинхронно, все запросы имеют уникальный референс, по которому сопоставляется полученный ответ.</p>
-                    <p>В качестве реализации FIX-движка можно взять бесплатный QuickFix <a href="www.quickfixengine.org">www.quickfixengine.org</a>, его Java-реализацию: <a href="#">quickfixj.org</a>, либо его KASE-версию в проекте: <a href="https://github.com/kase-dev/fix-api">github.com/kase-dev/fix-api </a> <br>Также, в открытом доступе находится калькулятор доходности (для облигаций, котирующихся на KASe): <a href="https://github.com/kase-dev/bond-calculator">github.com/kase-dev/bond-calculator</a></p>
-                  </div>
-                </div><br>
-                <div class="row">
-                  <div class="col-md-4">
-                    <h4 class="green">Валютный рынок</h4><b>Боевая система:</b>
-                    <p>TargetCompID: FIX5-Forex-Prod</p><b>по выделенному каналу:</b>
-                    <p>IP: 192.168.111.202</p>
-                    <p>Port: 9898</p><b>По интернету: </b>
-                    <p>IP: 212.19.144.73</p>
-                    <p>Port: 9898</p><b>Тестовая система: </b>
-                    <p>TargetCompID: KASE</p><b>по выделенному каналу:</b>
-                    <p>IP: 192.168.111.202</p>
-                    <p>Port: 9898</p><b>По интернету:</b>
-                    <p>IP: 212.19.144.73</p>
-                    <p>Port: 9898</p>
-                  </div>
-                  <div class="col-md-4">
-                    <h4 class="green">Фондовый рынок</h4><b>Боевая система:</b>
-                    <p>TargetCompID: FIX5-Forex-Prod</p><b>по выделенному каналу:</b>
-                    <p>IP: 192.168.111.202</p>
-                    <p>Port: 9898</p><b>По интернету: </b>
-                    <p>IP: 212.19.144.73</p>
-                    <p>Port: 9898</p><b>Тестовая система: </b>
-                    <p>TargetCompID: KASE</p><b>по выделенному каналу:</b>
-                    <p>IP: 192.168.111.202</p>
-                    <p>Port: 9898</p><b>По интернету:</b>
-                    <p>IP: 212.19.144.73</p>
-                    <p>Port: 9898</p>
-                  </div>
-                </div><br><br>
-                <h2>Для подключения используются следующие адреса и настройки</h2>
-                <div class="row row--includes">
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">Fix Сообщения, поддерживаемые KASE</button>
-                  </div>
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">SecurityList</button>
-                  </div>
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">MarketDataIncrementalRefresh</button>
+                    <p><b>FIX &dash; Financial Information eXchnge &dash;</b> международный стандарт передачи биржевых данных в режиме реального времени. FIX является сессионным протоколом поверх TCP/IP, каждое сообщение которого состоит из набора пар тэг-значение, разделенных ascii-символами 0x01. Каждое сообщение состоит из заголовка, тела сообщения и окончания. В заголовка содержется информация об отправителе и адресате, тип сообщения и другая системная информация, в конце сообщения находится и контрольная сумма. <br><br> Обмен сообщениями ведется асинхронно, все запросы имеют уникальный референс, по которому сопоставляется полученный ответ.</p>
+                    <p>В качестве реализации FIX-движка можно взять бесплатный QuickFix <a href="www.quickfixengine.org">www.quickfixengine.org</a>, его Java-реализацию: <a href="#">quickfixj.org</a>, либо его KASE-версию в проекте: <a href="https://github.com/kase-dev/fix-api">github.com/kase-dev/fix-api </a> <br> <br>Также, в открытом доступе находится калькулятор доходности (для облигаций, котирующихся на KASe): <a href="https://github.com/kase-dev/bond-calculator">github.com/kase-dev/bond-calculator</a></p>
+                    <p><b>Для подключения используются следующие адреса и настройки</b></p><a href="#" class="underline"><i class="fa fa-print"></i> Настройки</a>
                   </div>
                 </div>
-                <div class="row row--includes">
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">ExecutionReport</button>
-                  </div>
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">PositionReport</button>
-                  </div>
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">NewOrderSingle</button>
-                  </div>
-                </div>
-                <div class="row row--includes">
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">OrderCancelRequest</button>
-                  </div>
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">PositionTransferInstruction</button>
-                  </div>
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">SecurityListRequest</button>
-                  </div>
-                </div>
-                <div class="row row--includes">
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">MarketDataRequest</button>
-                  </div>
-                  <div class="col-xs-4">
-                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg">PositionTransferInstruction</button>
-                  </div>
-                </div>
+                <!--br-->
+                <!--.row
+                .col-md-4
+                	h4.green Валютный рынок
+                	b Боевая система:
+                	p TargetCompID: FIX5-Forex-Prod
+                	b по выделенному каналу:
+                	p IP: 192.168.111.202
+                	p Port: 9898
+                	b По интернету: 
+                	p IP: 212.19.144.73
+                	p Port: 9898
+                	b Тестовая система: 
+                	p TargetCompID: KASE
+                	b по выделенному каналу:
+                	p IP: 192.168.111.202
+                	p Port: 9898
+                	b По интернету:
+                	p IP: 212.19.144.73
+                	p Port: 9898
+                .col-md-4
+                	h4.green Фондовый рынок
+                	b Боевая система:
+                	p TargetCompID: FIX5-Forex-Prod
+                	b по выделенному каналу:
+                	p IP: 192.168.111.202
+                	p Port: 9898
+                	b По интернету: 
+                	p IP: 212.19.144.73
+                	p Port: 9898
+                	b Тестовая система: 
+                	p TargetCompID: KASE
+                	b по выделенному каналу:
+                	p IP: 192.168.111.202
+                	p Port: 9898
+                	b По интернету:
+                	p IP: 212.19.144.73
+                	p Port: 9898
+                -->
+                <!--br-->
+                <!--br-->
+                <!--h2 Для подключения используются следующие адреса и настройки-->
+                <!--.row.row--includes
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") Fix Сообщения, поддерживаемые KASE
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") SecurityList
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") MarketDataIncrementalRefresh
+                -->
+                <!--.row.row--includes
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") ExecutionReport
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionReport
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") NewOrderSingle
+                -->
+                <!--.row.row--includes
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") OrderCancelRequest
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionTransferInstruction
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") SecurityListRequest
+                -->
+                <!--.row.row--includes
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") MarketDataRequest
+                .col-xs-4
+                	button.btn.btn-primary.btn-lg(data-toggle="modal", data-target="#myModal") PositionTransferInstruction
+                
+                -->
               </div>
             </div>
           </div>
