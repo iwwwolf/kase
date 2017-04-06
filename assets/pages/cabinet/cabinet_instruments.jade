@@ -32,3 +32,219 @@ block content
 						li.gradient-tabs__tab.gradient-tabs__tab--green
 							a(href="#")
 								span Календарь корпоративных собитий эмитентов
+								
+	.container.cabinet-instruments
+		.cabinet-instruments__main-table.col-xs-12
+			h2 Мой список инструментов
+			.col-xs-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3.tools
+				select
+					option Список 1
+					option Список 2
+					option Список 3
+					option Список 4
+					option Список 5
+
+				.edit
+					a(href="#"): img(src="images/cabinet-instruments-icon-edit.png")
+				.del
+					a(href="#"): img(src="images/cabinet-instruments-icon-del.png")
+				.add
+					a(href="#"): img(src="images/cabinet-instruments-icon-add.png")
+			.col-xs-12.search
+				.char-search
+					span Поиск по букве
+					br
+					a(href="#") A 
+					a(href="#") B 
+					a(href="#") C 
+					a(href="#") D 
+					a(href="#") E 
+					a(href="#") F 
+					a(href="#") G 
+					a(href="#") H 
+					a(href="#") I 
+					a(href="#") J 
+					a(href="#") K 
+					a(href="#") L 
+					a(href="#") M 
+					a(href="#") N 
+					a(href="#") O 
+					a(href="#") P 
+					a(href="#") Q 
+					a(href="#") R 
+					a(href="#") S 
+					a(href="#") T 
+					a(href="#") U 
+					a(href="#") V 
+					a(href="#") W 
+					a(href="#") X 
+					a(href="#") Y 
+					a(href="#") Z 
+					a(href="#") 1-9
+				.market-select
+					span Выберите рынок
+					.small-dropdown.flex.accordion__hide-in-closed.period
+						.dropdown
+							a.dropdown-link(href="#", data-toggle="dropdown", role="button") Акции и паи
+							ul.dropdown-menu
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+								li: a(href="#") 00.00.0000
+				.search__block
+					span Поиск
+					include ../../modules/search-block/module
+			.cabinet-instruments__table
+				table.table
+					thead
+						tr
+							th Код
+							th Дата последней сделки
+							th Текущая цена
+							th Изменение KZT
+							th Изменение %
+							th Мин. цена за день
+							th Макс.цена за день
+							th Средневзв. цена за день
+							th Число сделок
+							th Объем сделок, млн KZT
+							th Рыночная капитализация компании
+							th.list-operations
+					tbody
+						tr
+							td: a(href="#") 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td.list-operations
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon1.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon2.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-delete.png')
+						tr
+							td: a(href="#") 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td.list-operations
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon1.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon2.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-delete.png')
+						tr
+							td: a(href="#") 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td.list-operations
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon1.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon2.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-delete.png')
+						tr
+							td: a(href="#") 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td.list-operations
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon1.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon2.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-delete.png')
+						tr
+							td: a(href="#") 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td 123
+							td.list-operations
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon1.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-icon2.png')
+								span
+									a(href='#')
+										img(src='images/cabinet-instruments-table-delete.png')
+										
+		.cabinet-instruments__news.col-xs-12.col-md-8.col-ms-offset-2.col-lg-6.col-lg-offset-3
+			h3 Новости
+			.cabinet-instruments__news-new
+				p: span 15 июня 13:00 #[a(href="#") KAZ Minerals PLC [KAZ]]
+				p "Народный сберегательный банк Казахстана" сообщило об изменении места нахождения своего головного офиса
+			.cabinet-instruments__news-new
+				p: span 15 июня 13:00 #[a(href="#") KAZ Minerals PLC [KAZ]]
+				p "Народный сберегательный банк Казахстана" сообщило об изменении места нахождения своего головного офиса
+			.cabinet-instruments__news-new
+				p: span 15 июня 13:00 #[a(href="#") KAZ Minerals PLC [KAZ]]
+				p "Народный сберегательный банк Казахстана" сообщило об изменении места нахождения своего головного офиса
+			.cabinet-instruments__news-new
+				p: span 15 июня 13:00 #[a(href="#") KAZ Minerals PLC [KAZ]]
+				p "Народный сберегательный банк Казахстана" сообщило об изменении места нахождения своего головного офиса
+			.cabinet-instruments__news-new
+				p: span 15 июня 13:00 #[a(href="#") KAZ Minerals PLC [KAZ]]
+				p "Народный сберегательный банк Казахстана" сообщило об изменении места нахождения своего головного офиса
+			.cabinet-instruments__news-new
+				p: span 15 июня 13:00 #[a(href="#") KAZ Minerals PLC [KAZ]]
+				p "Народный сберегательный банк Казахстана" сообщило об изменении места нахождения своего головного офиса
+				form(action="?#").form-submit
+					input(type="submit" value="Загрузить еще")
+
+
