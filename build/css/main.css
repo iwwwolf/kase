@@ -2250,8 +2250,34 @@ section.investors .container > img {
     margin-bottom: 0; }
     .trade-information .container .tab-content .tab-pane#day .accordion tr.title {
       background-color: #e6e9ed; }
-    .trade-information .container .tab-content .tab-pane#day .accordion .dropdown {
-      min-width: 350px; }
+    @media only screen and (min-width: 992px) {
+      .trade-information .container .tab-content .tab-pane#day .accordion .dropdown {
+        min-width: 350px; } }
+
+.container.member-kase h1 span {
+  color: #000;
+  font-size: 12px;
+  font-weight: bold; }
+
+.container.member-kase #activity.accordion .kase-activity-block {
+  margin-right: 15px;
+  float: left;
+  width: 100px; }
+  .container.member-kase #activity.accordion .kase-activity-block .kase-activity-block_circle {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 90%; }
+    .container.member-kase #activity.accordion .kase-activity-block .kase-activity-block_circle p {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 100px;
+      margin-top: 0; }
+  .container.member-kase #activity.accordion .kase-activity-block p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px; }
 
 .cabinet-header-main {
   box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);

@@ -2912,17 +2912,52 @@ section.investors{
 						background-color: #e6e9ed;
 					}
 					.dropdown{
-						min-width:350px;
+						@include respond-to(large){
+							min-width:350px;
+						}
 					}
 				}
 			}
 		}
 	}
 }
-
+//Страница члена KASE
+.container.member-kase{
+	h1{
+		span{
+			color:#000;
+			font-size:12px;
+			font-weight:bold;
+		}
+	}
+	#activity.accordion{
+		.kase-activity-block{
+			margin-right: 15px;
+			float:left;
+			width:100px;
+			.kase-activity-block_circle{
+				width:100px;
+				height:100px;
+				border:1px solid rgba(0,0,0,0.15);
+				border-radius:90%;
+				p{
+					text-align:center;
+					font-size:36px;
+					font-weight:bold;
+					line-height:100px;
+					margin-top: 0;
+				}
+			}
+			p{
+				font-size:14px;
+				text-align:center;
+				margin-top: 15px;
+			}
+		}
+	}
+}
 //ЛИЧНЫЙ КАБИНЕТ
 //шапка кабинета
-
 .cabinet-header-main{
 	-webkit-box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);

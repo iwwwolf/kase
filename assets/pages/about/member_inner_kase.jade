@@ -1,0 +1,463 @@
+extends ../../templates/base
+block variables
+	- bodyClass = "body__with-button-block"
+
+block content
+	.markets-top
+		.container
+			-
+				var marketsListTitle = "Членство"
+				var marketsList = [
+					{
+						'title': 'Список инструментов KASE',
+						'active': true
+					},
+					{
+						'title': 'Рэнкинг активности'
+					},
+					{
+						'title': 'Клиринговые участники'
+					}
+					,
+					{
+						'title': 'Услуги прямого доступа'
+					}
+					,
+					{
+						'title': 'Дипломаты номинации KASE'
+					}
+				]
+			include ../../modules/markets-menu/module
+
+	.container
+		.right-content-column
+			-
+				var breadcrumbs = [
+					'Главная',
+					'Продукты и услуги',
+					'Членство',
+					'Список членов KASE'
+				]
+
+			include ../../modules/breadcrumbs/module
+
+			.container.member-kase
+				.h1-block.h1-block--with-logo
+					a.arrow-back(href="#")
+						i.fa.fa-angle-left
+					.flex
+						.h1-block__logo
+							img(src="img-content/img-3.png", alt="")
+						h1 АО Дочерняя Организация Народного Банка Казахстана "Halyk Finance" (HFIN)
+							br
+							span: b Дипломат номинации KASE
+							br
+							span: a(href="#") Участник DMA
+
+				.button-block
+					a.button-block__button.button-block__button--green(href="#")
+						i.fa.fa-pencil-square-o
+						|Подписаться на новости
+
+				.info-table
+					.info-table__row
+						.info-table__cell.
+							Контакты:
+						.info-table__cell.
+							Республика Казахстан, A26M3K5, г. Алматы, пр. Аль-Фараби, 40;
+							#[br]
+							Телефон:  (727) 259 07 77
+							#[br]
+							Факс: (727) 259 02 71
+
+					.info-table__row
+						.info-table__cell.
+							Интернет-сайт:
+						.info-table__cell
+							a(href="http://www.halykbank.kz/") http://www.halykbank.kz/
+
+					.info-table__row
+						.info-table__cell.
+							E-mail:
+						.info-table__cell
+							a(href="mailto:halykbank@halykbank.kz") halykbank@halykbank.kz
+
+					.info-table__row
+						.info-table__cell.
+							Основная деятельность:
+						.info-table__cell
+							a(href="mailto:halykbank@halykbank.kz") halykbank@halykbank.kz
+
+					.info-table__row
+						.info-table__cell.
+							Первый руководитель:
+						.info-table__cell.
+							Председатель Правления Шаяхметова Умут Болатхановна
+
+
+					.info-table__row
+						.info-table__cell.
+							Категории членства:
+						.info-table__cell.
+							Фондовая с 15.02.05
+							#[br]
+							Деривативы с 04.10.10
+
+				-
+					var gradientTabs = [
+						{
+							'title' : 'Активность',
+							'href' : 'activity',
+							'active': true
+						},
+						{
+							'title' : 'Трейдеры',
+							'href' : 'traders'
+						},
+						{
+							'title' : 'Финансовые показатели',
+							'href' : 'results'
+						},
+						{
+							'title' : 'Маркет-мейкер',
+							'href' : 'market-maker'
+						},
+						{
+							'title' : 'Документы',
+							'href' : 'documents'
+						}
+						]
+
+				.gradient-tabs.gradient-tabs--not-margin
+					ul#anchors.nav(style="border: none; padding: 0;")
+						each item in gradientTabs
+							if (item.active == true)
+								li.gradient-tabs__tab.gradient-tabs__tab--green.active
+									a(href="#" + item.href): span= item.title
+							else
+								li.gradient-tabs__tab.gradient-tabs__tab--green
+									a(href="#" + item.href): span= item.title
+
+				#activity.accordion.accordion--custom-green
+					.accordion__head
+						a.accordion__head-link(href="#") Активность на KASE в 2016 году
+							i.fa.fa-angle-down
+					.accordion__body
+						.kase-activity-block
+							.kase-activity-block_circle
+								p 5
+							p Долевые ценные бумаги
+						.kase-activity-block
+							.kase-activity-block_circle
+								p 6
+							p Долговые ценные бумаги
+						.kase-activity-block
+							.kase-activity-block_circle
+								p 10
+							p Репо
+						.kase-activity-block
+							.kase-activity-block_circle
+								p 2
+							p Государственные ценные бумаги
+
+
+				#traders.accordion.closed.accordion--custom-green
+					.accordion__head
+						a.accordion__head-link(href="#") Список трейдеров
+							i.fa.fa-angle-down
+					.accordion__body
+
+						.sortin-table
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th(rowspan="2") Полное имя трейдера члена Биржи
+										th(rowspan="2") ID
+										th(rowspan="2") Наименование организации
+										th(rowspan="2") Категория членства
+										th(colspan="3"): b Свидетельство о прохождении сертификата
+										th(rowspan="2") Дата
+									tr
+										th Номер
+										th Дата выдачи
+										th Срок действия
+								tbody
+									tr
+										td Смаилов Нариман Нурланович
+										td 12929
+										td АО "Дочерняя организация народного Банка Казахстана Halyk Finance"
+										td Фондовый рынок
+										td T1291256
+										td 14.01.2016
+										td 3 года
+										td 14.01.2019
+									tr
+										td Смаилов Нариман Нурланович
+										td 12929
+										td АО "Дочерняя организация народного Банка Казахстана Halyk Finance"
+										td Фондовый рынок
+										td T1291256
+										td 14.01.2016
+										td 3 года
+										td 14.01.2019
+									tr
+										td Смаилов Нариман Нурланович
+										td 12929
+										td АО "Дочерняя организация народного Банка Казахстана Halyk Finance"
+										td Фондовый рынок
+										td T1291256
+										td 14.01.2016
+										td 3 года
+										td 14.01.2019
+
+				
+				#results.accordion.closed.accordion--custom-green
+					.accordion__head
+						a.accordion__head-link(href="#") Финансовые показатели
+							i.fa.fa-angle-down
+					.accordion__body
+						.sortin-table
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Показатель
+										th На 01.10.16
+										th На 01.07.16
+								tbody
+									tr
+										td Уставный капитал
+										td 11 240 188,00 тыс. тенге
+										td 11 240 188,00 тыс. тенге
+									tr
+										td Уставный капитал
+										td 11 240 188,00 тыс. тенге
+										td 11 240 188,00 тыс. тенге
+									tr
+										td Уставный капитал
+										td 11 240 188,00 тыс. тенге
+										td 11 240 188,00 тыс. тенге
+									tr
+										td Уставный капитал
+										td 11 240 188,00 тыс. тенге
+										td 11 240 188,00 тыс. тенге
+									tr
+										td Уставный капитал
+										td 11 240 188,00 тыс. тенге
+										td 11 240 188,00 тыс. тенге
+
+				#market-maker.accordion.closed.accordion--custom-green
+					.accordion__head
+						a.accordion__head-link(href="#") Маркет-мейкер
+							i.fa.fa-angle-down
+					.accordion__body
+						.sortin-table
+							table.sorting-table--false.table.table-striped
+								thead
+									tr
+										th Торговый код
+										th НИН и ISIN
+										th Сектор
+										th Категория
+										th Торги
+										th Индекс
+								tbody
+									tr
+										td: a(href="#") HSBK
+										td 0000000000000#[br]0000000000000
+										td Акции
+										td Первая
+										td 16.09.98
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td 0000000000000#[br]0000000000000
+										td Акции
+										td Первая
+										td 16.09.98
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td 0000000000000#[br]0000000000000
+										td Акции
+										td Первая
+										td 16.09.98
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td 0000000000000#[br]0000000000000
+										td Акции
+										td Первая
+										td 16.09.98
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td 0000000000000#[br]0000000000000
+										td Акции
+										td Первая
+										td 16.09.98
+										td KASE
+									tr
+										td: a(href="#") HSBK
+										td 0000000000000#[br]0000000000000
+										td Акции
+										td Первая
+										td 16.09.98
+										td KASE
+						.help-block.pull-left
+							a(href="#") Посмотреть все
+
+				#documents.accordion.closed.accordion--custom-green
+					.accordion__head
+						a.accordion__head-link(href="#") Документы
+							i.fa.fa-angle-down
+					.accordion__body
+						-
+							var gradientTabs = [
+								{
+									'title' : 'Отчетность',
+									'href' : 'otchetnost',
+									'active': true
+								},
+								{
+									'title' : 'Проспекты',
+									'href' : 'prospects'
+								},
+								{
+									'title' : 'Учредительные документы',
+									'href' : 'uchdocs'
+								},
+								{
+									'title' : 'Корп.события',
+									'href' : 'corpevents'
+								},
+								{
+									'title' : 'Протоколы',
+									'href' : 'protocols'
+								}
+								]
+
+						.gradient-tabs.gradient-tabs--not-margin
+							ul.nav(role="tablist")
+								each item in gradientTabs
+									if (item.active == true)
+										li.gradient-tabs__tab.gradient-tabs__tab--green.active(role="presentation")
+											a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+									else
+										li.gradient-tabs__tab.gradient-tabs__tab--green(role="presentation")
+											a(href="#" + item.href, role="tab", data-toggle="tab"): span= item.title
+							.tab-content
+								.tab-pane.fade.active.in(id="otchetnost", role="tabpanel")
+									table.sorting-table--false.table.table-striped
+										thead
+											tr
+												th Название документа
+												th Срок предоставления
+												th Дата предоставления
+										tbody
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Неполная финансовая отчетность за январь-сентябрь 2016 года
+												td 00.00.00
+												td 00.00.00
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Неполная финансовая отчетность за январь-сентябрь 2016 года
+												td 00.00.00
+												td 00.00.00
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Неполная финансовая отчетность за январь-сентябрь 2016 года
+												td 00.00.00
+												td 00.00.00
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Неполная финансовая отчетность за январь-сентябрь 2016 года
+												td 00.00.00
+												td 00.00.00
+								.tab-pane.fade(id="prospects", role="tabpanel")
+									table.sorting-table--false.table.table-striped
+										thead
+											tr
+												th Название документа
+												th Срок предоставления
+												th Дата предоставления
+										tbody
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Проспекты
+												td 00.00.00
+												td 00.00.00
+								.tab-pane.fade(id="uchdocs", role="tabpanel")
+									table.sorting-table--false.table.table-striped
+										thead
+											tr
+												th Название документа
+												th Срок предоставления
+												th Дата предоставления
+										tbody
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Учредительные документы
+												td 00.00.00
+												td 00.00.00
+								.tab-pane.fade(id="corpevents", role="tabpanel")
+									table.sorting-table--false.table.table-striped
+										thead
+											tr
+												th Название документа
+												th Срок предоставления
+												th Дата предоставления
+										tbody
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Корпоративные события
+												td 00.00.00
+												td 00.00.00
+								.tab-pane.fade(id="protocols", role="tabpanel")
+									table.sorting-table--false.table.table-striped
+										thead
+											tr
+												th Название документа
+												th Срок предоставления
+												th Дата предоставления
+										tbody
+											tr
+												td
+													.reference-info.reference-info--big
+														ul: li: a(href="#").
+															Прокотолы
+												td 00.00.00
+												td 00.00.00
+block scripts
+	script(type="text/javascript").
+		document.addEventListener("DOMContentLoaded", function(event) {
+			$('.sorting-table').DataTable({
+				scrollX: true,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+			$('.sorting-table--false').DataTable({
+				scrollX: true,
+				bSort : false,
+				language: {
+				    search: '',
+				    searchPlaceholder: "Поиск по всем бумагам (по коду или названию)"
+				  }
+			});
+		});
