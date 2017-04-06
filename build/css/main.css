@@ -2625,7 +2625,7 @@ span.cabinet-horizont-line {
       background-color: #e8e8e8; }
 
 .container.cabinet-instruments .cabinet-instruments__news {
-  margin-top: 30px; }
+  margin-top: 60px; }
   .container.cabinet-instruments .cabinet-instruments__news h3 {
     text-transform: uppercase;
     color: #0094de; }
@@ -2658,6 +2658,82 @@ span.cabinet-horizont-line {
       .container.cabinet-instruments .cabinet-instruments__news .form-submit input:hover {
         background-color: transparent;
         color: #fff; }
+
+.container.cabinet-calendar {
+  margin-top: 60px; }
+  .container.cabinet-calendar > div {
+    margin-bottom: 150px; }
+  .container.cabinet-calendar > div > p {
+    margin-top: 30px; }
+  .container.cabinet-calendar h3 {
+    font-size: 36px;
+    text-align: left; }
+  .container.cabinet-calendar input {
+    width: 100%;
+    padding: 5px 10px;
+    border-color: rgba(0, 0, 0, 0.1); }
+  .container.cabinet-calendar ul.accordion__nav {
+    margin-top: 15px; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar {
+    margin-top: 15px;
+    height: 450px;
+    padding: 0;
+    position: relative; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar * {
+      border: none; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header {
+      background-color: #fff;
+      border: 1px solid #cacdce; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header * {
+        border: none !important;
+        background: none !important; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header > * {
+        height: inherit;
+        position: absolute;
+        top: 0;
+        padding-top: 5px; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__prev {
+        background-image: url(../images/cabinet-calendar-prev-icon.png) !important; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__next {
+        background-image: url(../images/cabinet-calendar-next-icon.png) !important; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__prev,
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__next {
+        background-color: #fff;
+        background-repeat: no-repeat !important;
+        background-position: center center !important; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__year {
+        border-left: 1px solid #cacdce !important; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__week-head {
+      background-color: #fff;
+      border: 1px solid #cacdce;
+      border-top: none; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__week-head tr td {
+        color: #000; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td {
+      position: relative;
+      font-size: 24px;
+      font-weight: 300;
+      border: 1px solid #cacdce;
+      padding: 19px 0; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td.bordered {
+        border: 1px solid #3cbd0d; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td:after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: 17px;
+        font-size: 20px;
+        text-align: right;
+        color: #3cbd0d; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td:hover {
+        background-color: #d8f2cf;
+        color: #757575; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td.ic__day_state_selected {
+        background-color: #3cbd0d; }
+      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td.ic__day-empty {
+        background: #fff !important; }
 
 .btn {
   font-size: 100%;

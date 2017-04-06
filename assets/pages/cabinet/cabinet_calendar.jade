@@ -1,0 +1,64 @@
+extends ../../templates/base
+
+block content
+	div.cabinet-header-main
+		.container
+			.cabinet-header
+				.cabinet-header__avatar
+					.avatar-img
+						img(src="images/example-cabinet-avatar.jpg")
+					.avatar-text
+						p Кто То
+				.cabinet-header__navigation.gradient-tabs.gradient-tabs--not-margin
+					ul.nav
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Профиль
+						li.gradient-tabs__tab.gradient-tabs__tab--green.active
+							a(href="#")
+								span Рассылка
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Платные услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Мой список инструментов
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Продукты и услуги
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Калькулятор доходности
+						li.gradient-tabs__tab.gradient-tabs__tab--green
+							a(href="#")
+								span Календарь корпоративных собитий эмитентов
+	.container.cabinet-calendar
+		.col-xs-12.col-md-8.col-md-offset-2.col-lg-6.col-lg-offset-3
+			h3 Календарь событий эмитентов
+			form(action="?#")
+				input(type="text" placeholder="Укажите код или название эмитентов")
+			div
+				ul.accordion__nav
+					li.active: a(href="#") Все
+
+			.cabinet-calendar__calendar#calendar
+			
+			p 1 Августа, 2016
+				br
+				span: a(href="#") Первый Вице-президент Сабитов Идель Марсильевич и директор Расчетной палаты Сайденова Майя Галимуллаевна были награждены юбилейной медалью к 20-летию Независимости Республики Казахстан
+				
+			p 1 Августа, 2016
+				br
+				span: a(href="#") Первый Вице-президент Сабитов Идель Марсильевич и директор Расчетной палаты Сайденова Майя Галимуллаевна были награждены юбилейной медалью к 20-летию Независимости Республики Казахстан
+				
+			p 1 Августа, 2016
+				br
+				span: a(href="#") Первый Вице-президент Сабитов Идель Марсильевич и директор Расчетной палаты Сайденова Майя Галимуллаевна были награждены юбилейной медалью к 20-летию Независимости Республики Казахстан
+				
+			p 1 Августа, 2016
+				br
+				span: a(href="#") Первый Вице-президент Сабитов Идель Марсильевич и директор Расчетной палаты Сайденова Майя Галимуллаевна были награждены юбилейной медалью к 20-летию Независимости Республики Казахстан
+				
+			p 1 Августа, 2016
+				br
+				span: a(href="#") Первый Вице-президент Сабитов Идель Марсильевич и директор Расчетной палаты Сайденова Майя Галимуллаевна были награждены юбилейной медалью к 20-летию Независимости Республики Казахстан
