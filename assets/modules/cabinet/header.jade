@@ -1,0 +1,19 @@
+div.cabinet-header-main
+	.container
+		.cabinet-header
+			.cabinet-header__avatar
+				.avatar-img
+					img(src="images/example-cabinet-avatar.jpg")
+				.avatar-text
+					p Кто То
+			.cabinet-header__navigation.gradient-tabs.gradient-tabs--not-margin
+				ul.nav
+					each item in cabinetMainHeader
+						if (item.active == true)
+							li.gradient-tabs__tab.gradient-tabs__tab--green.active
+								a(href=""+item.href)
+									span= item.title
+						else
+							li.gradient-tabs__tab.gradient-tabs__tab--green
+								a(href=""+item.href)
+									span= item.title

@@ -1,0 +1,79 @@
+extends ../../templates/base
+
+block content
+	.container.cabinet.cabinet-personal-data
+		.col-xs-12.col-md-8.col-md-offset-2
+			form(action="?#")
+				.col.xs-12.identity-data
+					h2 Персональные данные
+					.col-xs-12
+						p.title Личные данные
+					.col-xs-12.col-md-6
+						label Имя
+							input(type="text")
+					.col-xs-12.col-md-6
+						label Фамилия
+							input(type="text")
+				.col-xs-12.address
+					.col-xs-12
+						p.title Адрес
+					.col-xs-12.col-md-6
+						label Страна
+							select
+								option Страна
+					.col-xs-12.col-md-6
+						label Город
+							select
+								option Выборка
+					.col-xs-12.col-md-6
+						label Область
+							select
+								option Выборка
+					.col-xs-12.col-md-6
+						label Индекс
+							input(type="text")
+					.col-xs-12.col-md-6
+						label Улица
+							input(type="text")
+					.col-xs-12.col-md-6
+						label Дом, корпус, строение
+							input(type="text")
+				.col-xs-12.contacts
+					.col-xs-12
+						p.title Контакты
+					.col-xs-12.col-md-6
+						label Телефон
+							input(type="text")
+					.col-xs-12.col-md-6
+						label Факс
+							input(type="text")
+					.col-xs-12
+						label E-mail
+							input(type="text")
+				.col-xs-12.about
+					.col-xs-12
+						p.title О компании
+					.col-xs-12
+						label Сектор компании
+							select
+								option выборка
+					.col-xs-12
+						label Должность
+							input(type="text")
+				.col-xs-12.account
+					.col-xs-12
+						p.title Учетная запись
+					.col-xs-12
+						label Псевдоним
+							input(type="text")
+					.col-xs-12.col-md-6
+						label Пароль
+							input(type="password")
+					.col-xs-12.col-md-6
+						label Повторите пароль
+							input(type="password")
+				.col-xs-12
+					div.form-submit
+						input(type="submit" value="Сохранить изменения")
+					p.del: a(href="#") Удалить акаунт
+				

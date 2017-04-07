@@ -1,0 +1,122 @@
+extends ../../templates/base
+
+block content
+	-
+		var cabinetMainHeader = [
+			{
+				'title': 'Профиль',
+				'href': 'cabinet_main.html'
+			},
+			{
+				'title': 'Рассылка',
+				'href': 'cabinet_newsletter.html'
+			},
+			{
+				'title': 'Платные услуги',
+				'href': 'cabinet_services.html'
+			},
+			{
+				'title': 'Мой список инструментов',
+				'href': 'cabinet_instruments.html'
+			},
+			{
+				'title': 'Продукты и услуги',
+				'href': 'cabinet_products.html'
+			},
+			{
+				'title': 'Калькулятор доходности',
+				'href': 'cabinet_calculator.html',
+				'active': true
+			},
+			{
+				'title': 'Календарь корпоративных событий эмитентов',
+				'href': 'cabinet_calendar.html'
+			}
+		]
+	include ../../modules/cabinet/header
+
+
+
+	.container.cabinet.cabinet-calculator
+		.col-xs-12.col-sm-8.col-sm-offset-2
+			form(action="?#")
+				.col-xs-12.emmision
+					h2 Калькулятор доходности
+					.col-xs-12
+						p.title Выбрать существующую эммисию
+						label Выберите эммисию из базы данных CBonds:
+							input(type="text" placeholder="Эмитент / № / Гос.per / ISIN")
+					.col-xs-12.tabs
+						ul.nav(role="tablist")
+							li.active
+								a.resident-link(href='#calc1', data-toggle="tab") Расчет доходности по цене
+							li
+								a.resident-link(href='#calc2', data-toggle="tab") Расчет цены по доходности
+					.tab-content
+						.fade.in.active#calc1
+							.col-xs-12.col-md-4
+								label Цена:
+									input(type="text")
+							.col-xs-12.col-md-4
+								label Тип:
+									select
+										option В % от номинала
+							.col-xs-12.col-md-4
+								label НКД:
+									select
+										option Цена без учета НКД
+						.fade#calc2
+							.col-xs-12
+								p Другой контент
+					.col-xs-12
+						div.form-submit
+							input(type="submit" value="Выполнить расчет")
+						p.clearall: a(href="#") Очистить
+				.col-xs-12.model_emmision
+					.col-xs-12
+						p.title Смоделировать эммисию
+					.col-xs-12
+						p Краткосрочные бескупонные облигации и векселя
+					.col-xs-12.col-md-6
+						label Срок до погашения (дни)
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Текущая цена (% номинала) 
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Доходность к погашению (эффективная)
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Доходность к погашению (номинальная)
+						input(type="text")
+					.col-xs-12
+						div.form-submit
+							input(type="submit" value="Выполнить расчет")
+						p.clearall: a(href="#") Очистить
+				.col-xs-12.obligation
+					.col-xs-12
+						p Купонные и долгосрочные бескупонные облигации
+					.col-xs-12.col-md-6
+						label Ставка купона (% годовых) 
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Срок до погашения (лет) 
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Частота выплаты купона (в год)
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Текущая цена (% номинала)
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Доходность к погашению (эффективная)
+						input(type="text")
+					.col-xs-12.col-md-6
+						label Доходность к погашению (номинальная)
+						input(type="text")
+					.col-xs-12
+						div.form-submit
+							input(type="submit" value="Выполнить расчет")
+						p.clearall: a(href="#") Очистить
+						
+						

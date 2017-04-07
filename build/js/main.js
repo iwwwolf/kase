@@ -1594,15 +1594,15 @@ $(document).ready(function(){
 
 	});
 
-	
-
 	//Календарь в личном кабинете
 
 	$(document).ready(function(){
 
-		if($('.cabinet-calendar__calendar#calendar').length){
+		var calendar = $('.cabinet-calendar__calendar#calendar');
 
-			$(".cabinet-calendar__calendar#calendar").ionCalendar({
+		if(calendar.length){
+
+			calendar.ionCalendar({
 
 				lang: "ru",
 
@@ -1612,17 +1612,9 @@ $(document).ready(function(){
 
 				hideArrows: false,
 
-				format: "DD.MM.YYYY",
-
-				onClick: function(date){
-
-					alert('Это событие можно изменить в default.js, данные поля: '+date);
-
-				}
+				format: "DD.MM.YYYY"
 
 			});
-
-			$('tbody tr:nth-child(2)').after("<p>segik</p>");
 
 		}
 

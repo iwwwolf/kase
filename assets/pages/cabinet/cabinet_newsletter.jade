@@ -1,42 +1,47 @@
 extends ../../templates/base
 
 block content
-	div.cabinet-header-main
-		.container
-			.cabinet-header
-				.cabinet-header__avatar
-					.avatar-img
-						img(src="images/example-cabinet-avatar.jpg")
-					.avatar-text
-						p Кто То
-				.cabinet-header__navigation.gradient-tabs.gradient-tabs--not-margin
-					ul.nav
-						li.gradient-tabs__tab.gradient-tabs__tab--green
-							a(href="#")
-								span Профиль
-						li.gradient-tabs__tab.gradient-tabs__tab--green.active
-							a(href="#")
-								span Рассылка
-						li.gradient-tabs__tab.gradient-tabs__tab--green
-							a(href="#")
-								span Платные услуги
-						li.gradient-tabs__tab.gradient-tabs__tab--green
-							a(href="#")
-								span Мой список инструментов
-						li.gradient-tabs__tab.gradient-tabs__tab--green
-							a(href="#")
-								span Продукты и услуги
-						li.gradient-tabs__tab.gradient-tabs__tab--green
-							a(href="#")
-								span Калькулятор доходности
-						li.gradient-tabs__tab.gradient-tabs__tab--green
-							a(href="#")
-								span Календарь корпоративных собитий эмитентов
-	.container.cabinet-newsletter
+	-
+		var cabinetMainHeader = [
+			{
+				'title': 'Профиль',
+				'href': 'cabinet_main.html'
+			},
+			{
+				'title': 'Рассылка',
+				'href': 'cabinet_newsletter.html',
+				'active': true
+			},
+			{
+				'title': 'Платные услуги',
+				'href': 'cabinet_services.html'
+			},
+			{
+				'title': 'Мой список инструментов',
+				'href': 'cabinet_instruments.html'
+			},
+			{
+				'title': 'Продукты и услуги',
+				'href': 'cabinet_products.html'
+			},
+			{
+				'title': 'Калькулятор доходности',
+				'href': 'cabinet_calculator.html'
+			},
+			{
+				'title': 'Календарь корпоративных событий эмитентов',
+				'href': 'cabinet_calendar.html'
+			}
+		]
+	include ../../modules/cabinet/header
+
+
+
+	.container.cabinet.cabinet-newsletter
 		.col-xs-12.col-sm-8.col-sm-offset-2
+			h2 Рассылка
 			form(action="#")
 				.col-xs-12
-					p Рассылка
 					label(for="address")
 						span Адрес получения рассылки
 						br

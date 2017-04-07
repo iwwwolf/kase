@@ -2279,6 +2279,38 @@ section.investors .container > img {
     text-align: center;
     margin-top: 15px; }
 
+.container.cabinet > div:first-child {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  background-color: #f8faf9; }
+  .container.cabinet > div:first-child > h2 {
+    font-size: 31px;
+    color: #333333;
+    font-weight: 100; }
+
+.container.cabinet div.form-submit {
+  background: -webkit-linear-gradient(38deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
+  background: linear-gradient(52deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
+  margin: 20px auto;
+  border-radius: 70px;
+  padding: 2px 0;
+  width: 260px; }
+  .container.cabinet div.form-submit input {
+    display: block;
+    width: 256px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+    padding: 5px 0;
+    color: #3cbd0d;
+    border-radius: 70px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .container.cabinet div.form-submit input:hover {
+      background-color: transparent;
+      color: #fff; }
+
 .cabinet-header-main {
   box-shadow: 0 7px 17px 0px rgba(0, 0, 0, 0.1);
   background-color: #f8faf9; }
@@ -2365,68 +2397,43 @@ section.investors .container > img {
         bottom: 0;
         right: 0; }
 
-.container.cabinet-newsletter {
-  margin-top: 30px;
-  border-top: 1px solid transparent;
+.container.cabinet-newsletter form > div p {
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.container.cabinet-newsletter form > div ul {
+  padding-left: 0;
   margin-bottom: 30px; }
-  .container.cabinet-newsletter > div {
-    padding: 30px 50px;
-    background-color: #f8faf9; }
-  .container.cabinet-newsletter form > div p {
-    font-weight: normal;
-    font-size: 14px;
-    text-transform: uppercase; }
-  .container.cabinet-newsletter form > div ul {
-    padding-left: 0;
-    margin-bottom: 30px; }
-    .container.cabinet-newsletter form > div ul li {
-      list-style-type: none;
-      margin-top: 10px; }
-  .container.cabinet-newsletter form > div:first-child {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.17);
-    padding-bottom: 15px; }
-    .container.cabinet-newsletter form > div:first-child p {
-      font-size: 26px;
-      text-transform: none; }
-    .container.cabinet-newsletter form > div:first-child label {
-      width: 50%;
-      margin-top: 15px; }
-      .container.cabinet-newsletter form > div:first-child label span {
-        font-size: 11px;
-        font-weight: normal; }
-      @media only screen and (min-width: 992px) {
-        .container.cabinet-newsletter form > div:first-child label input {
-          padding: 5px;
-          width: 100%;
-          border: 1px solid rgba(0, 0, 0, 0.2); } }
-  .container.cabinet-newsletter form > div:nth-child(9) {
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.17); }
-  .container.cabinet-newsletter form > div:last-child div.form-submit {
-    background: -webkit-linear-gradient(38deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
-    background: linear-gradient(52deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
-    padding: 2px 0;
-    margin: 0 auto;
-    width: 250px;
-    border-radius: 70px;
-    margin-bottom: 50px; }
-    .container.cabinet-newsletter form > div:last-child div.form-submit input {
-      display: block;
-      margin: 0 auto;
-      background-color: #fff;
-      border: none;
-      color: #3cbd0d;
-      color: #3cbd0d;
-      padding: 10px 80px;
-      border-radius: 70px;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s; }
-      .container.cabinet-newsletter form > div:last-child div.form-submit input:hover {
-        background-color: transparent;
-        color: #fff; }
-  .container.cabinet-newsletter form > div:nth-child(2),
-  .container.cabinet-newsletter form > div:last-child {
+  .container.cabinet-newsletter form > div ul li {
+    list-style-type: none;
+    margin-top: 10px; }
+
+.container.cabinet-newsletter form > div:first-child {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.17);
+  padding-bottom: 15px; }
+  .container.cabinet-newsletter form > div:first-child p {
+    font-size: 26px;
+    text-transform: none; }
+  .container.cabinet-newsletter form > div:first-child label {
+    width: 50%;
     margin-top: 15px; }
+    .container.cabinet-newsletter form > div:first-child label span {
+      font-size: 11px;
+      font-weight: normal; }
+    @media only screen and (min-width: 992px) {
+      .container.cabinet-newsletter form > div:first-child label input {
+        padding: 5px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2); } }
+
+.container.cabinet-newsletter form > div:nth-child(9) {
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.17); }
+
+.container.cabinet-newsletter form > div:nth-child(2),
+.container.cabinet-newsletter form > div:last-child {
+  margin-top: 15px; }
 
 span.cabinet-horizont-line {
   display: block;
@@ -2434,123 +2441,92 @@ span.cabinet-horizont-line {
   border-top: 2px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 13px; }
 
-.container.cabinet-services {
-  margin-top: 30px; }
-  .container.cabinet-services .cabinet-services__description span {
-    font-size: 12px; }
-  .container.cabinet-services div.cabinet-services__content {
-    background-color: #e4e9ed;
-    padding-top: 50px 0;
-    margin-bottom: 50px;
-    margin-top: 50px; }
-    .container.cabinet-services div.cabinet-services__content .tabs ul li {
-      position: relative; }
-      @media only screen and (min-width: 992px) {
-        .container.cabinet-services div.cabinet-services__content .tabs ul li {
-          width: 48%;
-          display: inline-block; } }
-      .container.cabinet-services div.cabinet-services__content .tabs ul li a {
-        background-color: #e4e9ed; }
-      .container.cabinet-services div.cabinet-services__content .tabs ul li.active a {
-        color: #3bbc0c; }
-        .container.cabinet-services div.cabinet-services__content .tabs ul li.active a:before {
-          content: ' ';
-          width: 6px;
-          height: 6px;
-          border-radius: 90%;
-          background-color: #3bbc0c;
-          position: absolute;
-          left: -5px;
-          top: 15px; }
-    .container.cabinet-services div.cabinet-services__content form > div {
-      text-align: center; }
-      .container.cabinet-services div.cabinet-services__content form > div > p {
-        margin-top: 30px; }
-      .container.cabinet-services div.cabinet-services__content form > div div.form-submit {
-        background: -webkit-linear-gradient(38deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
-        background: linear-gradient(52deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
-        padding: 2px 0;
+.container.cabinet-services .cabinet-services__description span {
+  font-size: 12px; }
+
+.container.cabinet-services div.cabinet-services__content {
+  background-color: #e4e9ed;
+  padding-top: 50px 0;
+  margin-bottom: 50px;
+  margin-top: 50px; }
+  .container.cabinet-services div.cabinet-services__content .tabs ul li {
+    position: relative; }
+    @media only screen and (min-width: 992px) {
+      .container.cabinet-services div.cabinet-services__content .tabs ul li {
+        width: 48%;
+        display: inline-block; } }
+    .container.cabinet-services div.cabinet-services__content .tabs ul li a {
+      background-color: #e4e9ed; }
+    .container.cabinet-services div.cabinet-services__content .tabs ul li.active a {
+      color: #3bbc0c; }
+      .container.cabinet-services div.cabinet-services__content .tabs ul li.active a:before {
+        content: ' ';
+        width: 6px;
+        height: 6px;
+        border-radius: 90%;
+        background-color: #3bbc0c;
+        position: absolute;
+        left: -5px;
+        top: 15px; }
+  .container.cabinet-services div.cabinet-services__content form > div {
+    text-align: center; }
+    .container.cabinet-services div.cabinet-services__content form > div > p {
+      margin-top: 30px; }
+    .container.cabinet-services div.cabinet-services__content form > div > div {
+      margin-top: 30px; }
+      .container.cabinet-services div.cabinet-services__content form > div > div label {
+        background-color: #fff;
+        text-align: center;
+        display: block;
         margin: 0 auto;
-        width: 250px;
-        border-radius: 70px;
-        margin-bottom: 50px; }
-        .container.cabinet-services div.cabinet-services__content form > div div.form-submit input {
-          display: block;
-          margin: 0 auto;
-          background-color: #fff;
-          border: none;
-          color: #3cbd0d;
-          color: #3cbd0d;
-          padding: 10px 92px;
-          border-radius: 70px;
-          -webkit-transition: all 0.3s;
-          transition: all 0.3s; }
-          .container.cabinet-services div.cabinet-services__content form > div div.form-submit input:hover {
-            background-color: transparent;
-            color: #fff; }
-      .container.cabinet-services div.cabinet-services__content form > div > div {
-        margin-top: 30px; }
-        .container.cabinet-services div.cabinet-services__content form > div > div label {
-          background-color: #fff;
-          text-align: center;
-          display: block;
-          margin: 0 auto;
-          height: 200px;
-          position: relative;
-          width: 200px;
-          padding: 15px; }
-          .container.cabinet-services div.cabinet-services__content form > div > div label > p {
-            margin-top: 10px;
-            font-weight: bold; }
-          .container.cabinet-services div.cabinet-services__content form > div > div label .cabinet-services__resident-bottom-text {
+        height: 200px;
+        position: relative;
+        width: 200px;
+        padding: 15px; }
+        .container.cabinet-services div.cabinet-services__content form > div > div label > p {
+          margin-top: 10px;
+          font-weight: bold; }
+        .container.cabinet-services div.cabinet-services__content form > div > div label .cabinet-services__resident-bottom-text {
+          position: absolute;
+          width: 100%;
+          height: 75px;
+          left: 0; }
+          .container.cabinet-services div.cabinet-services__content form > div > div label .cabinet-services__resident-bottom-text span {
             position: absolute;
             width: 100%;
-            height: 75px;
-            left: 0; }
-            .container.cabinet-services div.cabinet-services__content form > div > div label .cabinet-services__resident-bottom-text span {
-              position: absolute;
+            left: 0;
+            bottom: 0; }
+        .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input {
+          margin: 0 auto;
+          width: 40px; }
+          .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input .checkbox__styled {
+            min-width: 40px;
+            min-height: 40px;
+            max-width: 40px;
+            max-height: 40px;
+            border-radius: 90%;
+            border: 1px solid rgba(0, 0, 0, 0.2); }
+          .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input input:checked + .checkbox__styled {
+            border: 1px solid #3bbc0c;
+            background-color: #3bbc0c;
+            font-size: 22px; }
+            .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input input:checked + .checkbox__styled:after {
+              content: ' ';
               width: 100%;
+              height: 200px;
+              position: absolute;
+              top: 0;
               left: 0;
-              bottom: 0; }
-          .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input {
-            margin: 0 auto;
-            width: 40px; }
-            .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input .checkbox__styled {
-              min-width: 40px;
-              min-height: 40px;
-              max-width: 40px;
-              max-height: 40px;
-              border-radius: 90%;
-              border: 1px solid rgba(0, 0, 0, 0.2); }
-            .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input input:checked + .checkbox__styled {
-              border: 1px solid #3bbc0c;
-              background-color: #3bbc0c;
-              font-size: 22px; }
-              .container.cabinet-services div.cabinet-services__content form > div > div label .centered-input input:checked + .checkbox__styled:after {
-                content: ' ';
-                width: 100%;
-                height: 200px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border: 2px solid #3bbc0c; }
+              border: 2px solid #3bbc0c; }
 
-.container.cabinet-products {
-  margin: 50px auto;
-  background-color: #f8faf9; }
-  .container.cabinet-products .cabinet-products__content .about-membership-block__description {
-    max-width: 400px; }
+.container.cabinet-products .cabinet-products__content .about-membership-block__description {
+  max-width: 400px; }
 
 .container.cabinet-instruments .cabinet-instruments__main-table {
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: 40px;
-  padding-top: 30px;
-  background-color: #f8faf9; }
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
   .container.cabinet-instruments .cabinet-instruments__main-table h2 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: normal; }
+    text-align: center; }
   .container.cabinet-instruments .cabinet-instruments__main-table .tools {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2624,116 +2600,117 @@ span.cabinet-horizont-line {
     .container.cabinet-instruments .cabinet-instruments__main-table .cabinet-instruments__table table.table tbody > tr:nth-child(2n) {
       background-color: #e8e8e8; }
 
-.container.cabinet-instruments .cabinet-instruments__news {
-  margin-top: 60px; }
-  .container.cabinet-instruments .cabinet-instruments__news h3 {
-    text-transform: uppercase;
-    color: #0094de; }
-  .container.cabinet-instruments .cabinet-instruments__news .cabinet-instruments__news-new {
-    margin-top: 15px; }
-    .container.cabinet-instruments .cabinet-instruments__news .cabinet-instruments__news-new p {
-      margin-bottom: 5px; }
-    .container.cabinet-instruments .cabinet-instruments__news .cabinet-instruments__news-new span {
-      font-size: 12px;
-      color: rgba(0, 0, 0, 0.6); }
-  .container.cabinet-instruments .cabinet-instruments__news .form-submit {
-    background: -webkit-linear-gradient(38deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
-    background: linear-gradient(52deg, #038726 0%, #3cbd0d 47%, #9ed110 100%);
-    padding: 2px 0;
-    margin: 30px auto 70px;
-    width: 150px;
-    border-radius: 70px;
-    margin-bottom: 50px; }
-    .container.cabinet-instruments .cabinet-instruments__news .form-submit input {
-      display: block;
-      margin: 0 auto;
-      background-color: #fff;
-      border: none;
-      color: #3cbd0d;
-      color: #3cbd0d;
-      padding: 10px 26px;
-      border-radius: 70px;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s; }
-      .container.cabinet-instruments .cabinet-instruments__news .form-submit input:hover {
-        background-color: transparent;
-        color: #fff; }
+.container.cabinet-instruments .cabinet-instruments__news .cabinet-instruments__news-new {
+  margin-top: 15px; }
+  .container.cabinet-instruments .cabinet-instruments__news .cabinet-instruments__news-new p {
+    margin-bottom: 5px; }
+  .container.cabinet-instruments .cabinet-instruments__news .cabinet-instruments__news-new span {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6); }
 
-.container.cabinet-calendar {
-  margin-top: 60px; }
-  .container.cabinet-calendar > div {
-    margin-bottom: 150px; }
-  .container.cabinet-calendar > div > p {
-    margin-top: 30px; }
-  .container.cabinet-calendar h3 {
-    font-size: 36px;
-    text-align: left; }
-  .container.cabinet-calendar input {
-    width: 100%;
-    padding: 5px 10px;
-    border-color: rgba(0, 0, 0, 0.1); }
-  .container.cabinet-calendar ul.accordion__nav {
-    margin-top: 15px; }
-  .container.cabinet-calendar .cabinet-calendar__calendar#calendar {
-    margin-top: 15px;
-    height: 450px;
-    padding: 0;
-    position: relative; }
-    .container.cabinet-calendar .cabinet-calendar__calendar#calendar * {
-      border: none; }
-    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header {
-      background-color: #fff;
-      border: 1px solid #cacdce; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header * {
-        border: none !important;
-        background: none !important; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header > * {
-        height: inherit;
-        position: absolute;
-        top: 0;
-        padding-top: 5px; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__prev {
-        background-image: url(../images/cabinet-calendar-prev-icon.png) !important; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__next {
-        background-image: url(../images/cabinet-calendar-next-icon.png) !important; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__prev,
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__next {
-        background-color: #fff;
-        background-repeat: no-repeat !important;
-        background-position: center center !important; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__header .ic__year {
-        border-left: 1px solid #cacdce !important; }
-    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__week-head {
-      background-color: #fff;
-      border: 1px solid #cacdce;
-      border-top: none; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__week-head tr td {
-        color: #000; }
-    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td {
-      position: relative;
-      font-size: 24px;
-      font-weight: 300;
-      border: 1px solid #cacdce;
-      padding: 19px 0; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td.bordered {
-        border: 1px solid #3cbd0d; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td:after {
-        content: ' ';
-        display: block;
-        width: 100%;
-        height: 5px;
-        position: absolute;
-        bottom: 17px;
-        font-size: 20px;
-        text-align: right;
-        color: #3cbd0d; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td:hover {
-        background-color: #d8f2cf;
-        color: #757575; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td.ic__day_state_selected {
-        background-color: #3cbd0d; }
-      .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__container .ic__days tr td.ic__day-empty {
-        background: #fff !important; }
+.container.cabinet-calendar > div > p {
+  margin-top: 30px; }
+
+.container.cabinet-calendar input {
+  width: 100%;
+  padding: 5px 10px;
+  border-color: rgba(0, 0, 0, 0.1); }
+
+.container.cabinet-calendar ul.accordion__nav {
+  margin-top: 15px; }
+
+.cabinet-calculator > div:first-child,
+.cabinet.cabinet-personal-data > div:first-child {
+  padding: 0 !important; }
+
+.cabinet-calculator form p.del,
+.cabinet.cabinet-personal-data form p.del {
+  text-transform: none; }
+
+.cabinet-calculator form .address,
+.cabinet-calculator form .contacts,
+.cabinet-calculator form .about,
+.cabinet-calculator form .account,
+.cabinet.cabinet-personal-data form .address,
+.cabinet.cabinet-personal-data form .contacts,
+.cabinet.cabinet-personal-data form .about,
+.cabinet.cabinet-personal-data form .account {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+
+.cabinet-calculator form .tabs ul li,
+.cabinet.cabinet-personal-data form .tabs ul li {
+  position: relative; }
+  @media only screen and (min-width: 992px) {
+    .cabinet-calculator form .tabs ul li,
+    .cabinet.cabinet-personal-data form .tabs ul li {
+      width: 49%;
+      display: inline-block; } }
+  .cabinet-calculator form .tabs ul li a,
+  .cabinet.cabinet-personal-data form .tabs ul li a {
+    background: none !important; }
+  .cabinet-calculator form .tabs ul li.active a,
+  .cabinet.cabinet-personal-data form .tabs ul li.active a {
+    color: #3bbc0c; }
+    .cabinet-calculator form .tabs ul li.active a:before,
+    .cabinet.cabinet-personal-data form .tabs ul li.active a:before {
+      content: ' ';
+      width: 6px;
+      height: 6px;
+      border-radius: 90%;
+      background-color: #3bbc0c;
+      position: absolute;
+      left: -5px;
+      top: 15px; }
+
+.cabinet-calculator form > div,
+.cabinet.cabinet-personal-data form > div {
+  padding: 50px; }
+  .cabinet-calculator form > div h2,
+  .cabinet.cabinet-personal-data form > div h2 {
+    font-size: 31px;
+    font-weight: 100; }
+
+.cabinet-calculator form p,
+.cabinet.cabinet-personal-data form p {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center; }
+
+.cabinet-calculator form p.title,
+.cabinet.cabinet-personal-data form p.title {
+  text-align: left;
+  font-weight: normal; }
+
+.cabinet-calculator form label,
+.cabinet.cabinet-personal-data form label {
+  font-size: 12px;
+  width: 100%;
+  margin-top: 20px; }
+
+.cabinet-calculator form input, .cabinet-calculator form select,
+.cabinet.cabinet-personal-data form input,
+.cabinet.cabinet-personal-data form select {
+  width: 100%;
+  height: 31px;
+  border: 2px solid #99adb2;
+  padding-left: 10px; }
+
+.cabinet-calculator form p.clearall,
+.cabinet.cabinet-personal-data form p.clearall {
+  text-align: center;
+  font-size: 14px;
+  text-transform: none; }
+
+.cabinet-calculator form .model_emmision,
+.cabinet-calculator form .obligation,
+.cabinet.cabinet-personal-data form .model_emmision,
+.cabinet.cabinet-personal-data form .obligation {
+  background-color: #e4e9ed; }
+
+.cabinet-calculator form .obligation,
+.cabinet.cabinet-personal-data form .obligation {
+  border-top: 2px dashed rgba(0, 0, 0, 0.3); }
 
 .btn {
   font-size: 100%;
