@@ -2961,6 +2961,9 @@ section.investors{
 	>div:first-child{
 		margin-top: 50px;
 		margin-bottom:50px;
+		@include respond-to(small){
+			padding:10px;
+		}
 		padding: 50px;
 		background-color: #f8faf9;
 		>h2{
@@ -3118,6 +3121,10 @@ section.investors{
 .container.cabinet-newsletter{
 	form{
 		>div{
+			@include respond-to(small){
+				padding-left:0 !important;
+				padding-right:0 !important;
+			}
 			p{
 				font-weight:normal;
 				font-size:14px;
@@ -3212,9 +3219,21 @@ span.cabinet-horizont-line{
 				}
 			}
 		}
+		.tab-content{
+			>div{
+				@include respond-to(small){
+					padding-left:0 !important;
+					padding-right:0 !important;
+				}
+			}
+		}
 		form{
 			>div{
 				text-align:center;
+				@include respond-to(small){
+					padding-left:0 !important;
+					padding-right:0 !important;
+				}
 				>p{
 					margin-top: 30px;
 				}
@@ -3409,6 +3428,122 @@ span.cabinet-horizont-line{
 	ul.accordion__nav{
 		margin-top: 15px;
 	}
+	.cabinet-calendar__calendar#calendar{
+		.ic__header{
+			background:#FFF;
+			border: 1px solid #ebebeb;
+			border-bottom:none;
+			.ic__prev,
+			.ic__next{
+				background-color:#FFF;
+				background-repeat: no-repeat;
+				background-position:center center;
+				height:33px;
+				>div{
+					display:none;
+				}
+			}
+			.ic__month,
+			.ic__year{
+				height:inherit;
+				top:0;
+				select{
+					border:none;
+					height:33px;
+				}
+			}
+			.ic__month{
+				border-right:1px solid #ebebeb;
+			}
+			.ic__prev{
+				background-image:url(../images/cabinet-calendar-prev-icon.png);
+			}
+			.ic__next{
+				background-image:url(../images/cabinet-calendar-next-icon.png);
+			}
+		}
+		.ic__week-head{
+			border: 1px solid #ebebeb;
+			td{
+				border:none;
+				color:#000;
+			}
+		}
+		.ic__days{
+			.day-description{
+				td{
+					&:hover{
+						background-color:#fff;
+					}
+					padding:30px;
+					padding-bottom:0;
+					padding-left:50px;
+					p{
+						color:#000;
+						font-weight:normal;
+						text-transform: none;
+						position:relative;
+						margin-bottom: 30px;
+						&:after{
+							content: '';
+							display: block;
+							position: absolute;
+							left: -16px;
+							width: 5px;
+							height: 5px;
+							border-radius: 50px;
+							background-color: #41c122;
+							top: 4px;
+						}
+							b{
+							font-weight:bold;
+						}
+					}
+				}
+			}
+			td{
+				height:50px;
+				text-align:left;
+				padding:10px;
+				font-weight:bold;
+				font-size:12px;
+				position:relative;
+				&:hover{
+					background-color: #f4f4f4;
+					color:#000;
+				}
+				&.evented{
+					border:2px solid #41c122;
+				}
+				.day-dots{
+					position: absolute;
+					height: 10px;
+					width: 100%;
+					right:0;
+					bottom: 5px;
+					text-align:right;
+					span{
+						display: inline-block;
+						width: 5px;
+						height: 5px;
+						border-radius: 50px;
+						background-color: #41c122;
+						margin-right: 3px;
+					}
+				}
+				&.ic__day_state_selected{
+					background-color: #41c122;
+					border:2px solid #41c122;
+					color:#fff;
+					.day-dots{
+						span{
+							background-color:#FFF;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 //Калькулятор доходности и персональные данные
 .cabinet-calculator,
@@ -3417,9 +3552,17 @@ span.cabinet-horizont-line{
 		padding:0 !important;
 	}
 	form{
+		>div{
+			@include respond-to(small){
+				padding-left:0 !important;
+				padding-right:0 !important;
+				h2{
+					padding:10px;
+				}
+			}
+		}
 		p.del{
 			text-transform: none;
-			
 		}
 		.address,
 		.contacts,
@@ -3462,6 +3605,9 @@ span.cabinet-horizont-line{
 				font-weight:100;
 			}
 			padding:50px;
+			@include respond-to(small){
+				padding:10px;
+			}
 		}
 		p{
 			font-weight: 100;

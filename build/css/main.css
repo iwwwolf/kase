@@ -2284,6 +2284,9 @@ section.investors .container > img {
   margin-bottom: 50px;
   padding: 50px;
   background-color: #f8faf9; }
+  @media only screen and (max-width: 649px) {
+    .container.cabinet > div:first-child {
+      padding: 10px; } }
   .container.cabinet > div:first-child > h2 {
     font-size: 31px;
     color: #333333;
@@ -2397,6 +2400,11 @@ section.investors .container > img {
         bottom: 0;
         right: 0; }
 
+@media only screen and (max-width: 649px) {
+  .container.cabinet-newsletter form > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important; } }
+
 .container.cabinet-newsletter form > div p {
   font-weight: normal;
   font-size: 14px;
@@ -2468,8 +2476,16 @@ span.cabinet-horizont-line {
         position: absolute;
         left: -5px;
         top: 15px; }
+  @media only screen and (max-width: 649px) {
+    .container.cabinet-services div.cabinet-services__content .tab-content > div {
+      padding-left: 0 !important;
+      padding-right: 0 !important; } }
   .container.cabinet-services div.cabinet-services__content form > div {
     text-align: center; }
+    @media only screen and (max-width: 649px) {
+      .container.cabinet-services div.cabinet-services__content form > div {
+        padding-left: 0 !important;
+        padding-right: 0 !important; } }
     .container.cabinet-services div.cabinet-services__content form > div > p {
       margin-top: 30px; }
     .container.cabinet-services div.cabinet-services__content form > div > div {
@@ -2619,9 +2635,110 @@ span.cabinet-horizont-line {
 .container.cabinet-calendar ul.accordion__nav {
   margin-top: 15px; }
 
+.container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header {
+  background: #FFF;
+  border: 1px solid #ebebeb;
+  border-bottom: none; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__prev,
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__next {
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 33px; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__prev > div,
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__next > div {
+      display: none; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__month,
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__year {
+    height: inherit;
+    top: 0; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__month select,
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__year select {
+      border: none;
+      height: 33px; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__month {
+    border-right: 1px solid #ebebeb; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__prev {
+    background-image: url(../images/cabinet-calendar-prev-icon.png); }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__header .ic__next {
+    background-image: url(../images/cabinet-calendar-next-icon.png); }
+
+.container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__week-head {
+  border: 1px solid #ebebeb; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__week-head td {
+    border: none;
+    color: #000; }
+
+.container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days .day-description td {
+  padding: 30px;
+  padding-bottom: 0;
+  padding-left: 50px; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days .day-description td:hover {
+    background-color: #fff; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days .day-description td p {
+    color: #000;
+    font-weight: normal;
+    text-transform: none;
+    position: relative;
+    margin-bottom: 30px; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days .day-description td p:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -16px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50px;
+      background-color: #41c122;
+      top: 4px; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days .day-description td p b {
+      font-weight: bold; }
+
+.container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days td {
+  height: 50px;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days td:hover {
+    background-color: #f4f4f4;
+    color: #000; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days td.evented {
+    border: 2px solid #41c122; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days td .day-dots {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    right: 0;
+    bottom: 5px;
+    text-align: right; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days td .day-dots span {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50px;
+      background-color: #41c122;
+      margin-right: 3px; }
+  .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days td.ic__day_state_selected {
+    background-color: #41c122;
+    border: 2px solid #41c122;
+    color: #fff; }
+    .container.cabinet-calendar .cabinet-calendar__calendar#calendar .ic__days td.ic__day_state_selected .day-dots span {
+      background-color: #FFF; }
+
 .cabinet-calculator > div:first-child,
 .cabinet.cabinet-personal-data > div:first-child {
   padding: 0 !important; }
+
+@media only screen and (max-width: 649px) {
+  .cabinet-calculator form > div,
+  .cabinet.cabinet-personal-data form > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+    .cabinet-calculator form > div h2,
+    .cabinet.cabinet-personal-data form > div h2 {
+      padding: 10px; } }
 
 .cabinet-calculator form p.del,
 .cabinet.cabinet-personal-data form p.del {
@@ -2669,6 +2786,10 @@ span.cabinet-horizont-line {
   .cabinet.cabinet-personal-data form > div h2 {
     font-size: 31px;
     font-weight: 100; }
+  @media only screen and (max-width: 649px) {
+    .cabinet-calculator form > div,
+    .cabinet.cabinet-personal-data form > div {
+      padding: 10px; } }
 
 .cabinet-calculator form p,
 .cabinet.cabinet-personal-data form p {

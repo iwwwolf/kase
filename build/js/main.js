@@ -1616,6 +1616,150 @@ $(document).ready(function(){
 
 			});
 
+			var dataDay = '';
+
+			var dataDayDots = '';
+
+		
+
+			var eventsLength = allEvents.length;
+
+			function eventsDots(){
+
+				for(i=1 ; i<=9 ; i++){
+
+					for(j=1 ; j<8 ; j++){
+
+						calendar.find('tbody > tr:nth-child('+i+') td:nth-child('+j+')').append('<div class="day-dots"></div>');
+
+						var localDay = calendar.find('tbody > tr:nth-child('+i+') td:nth-child('+j+') .day-dots');
+
+						var localData = localDay.parent('td').attr('data-day');
+
+						for(k=0 ;  k<eventsLength;  k++){
+
+							if(allEvents[k].date == localData){
+
+								for(l=0 ;  l<allEvents[k].events.length; l++){
+
+									localDay.append('<span></span>')
+
+									calendar.find('tbody > tr:nth-child('+i+') td:nth-child('+j+')').addClass('evented');
+
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+	
+
+			function dayDescription(){
+
+				var block = calendar.find('.day-description td');
+
+				block.fadeOut(1).fadeIn(500);
+
+				for(i=0;i<eventsLength;i++){
+
+					if(allEvents[i].date == dataDay){
+
+						 for(j=0;j<allEvents[i].events.length; j++){
+
+							block.append('<p>'+allEvents[i].events[j]+'</p>');
+
+						}
+
+					}
+
+				}
+
+			}
+
+	
+
+			function calendarStart(){
+
+				for(i=1 ; i<=9 ; i++){
+
+					calendar.find('.ic__days tr:nth-child('+i+')').attr('id', i);
+
+				}
+
+				calendar.find('.ic__prev').click(function(){
+
+					calendarListener();
+
+				});
+
+				calendar.find('.ic__next').click(function(){
+
+					calendarListener();
+
+				});
+
+				calendar.find('.ic__header select').on('change', function(){
+
+					calendarListener();
+
+				});
+
+				eventsDots();
+
+				calendar.find('.ic__day').click(function(){
+
+					calendarListener();
+
+					dataDay = $(this).attr('data-day');
+
+					var parentStroke = $(this).parent('tr').attr('id');
+
+					console.log(parentStroke);
+
+					console.log(dataDay);
+
+					for(i=0;i<allEvents.length;i++){
+
+						if(allEvents[i].date == dataDay){
+
+							calendar.find('.ic__days tr:nth-child('+parentStroke+')').after('<tr class="day-description"><td colspan="7" ></td></tr>');
+
+							dayDescription();
+
+						}
+
+					}
+
+				});
+
+			}
+
+			function calendarListener(){
+
+				if($('.ic__day').length){
+
+					calendarStart();
+
+				} else {
+
+						setTimeOut(function(){
+
+							calendarStart();
+
+					}, 500);
+
+				}
+
+			}
+
+			calendarListener();
+
 		}
 
 	});
