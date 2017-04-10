@@ -1831,12 +1831,14 @@ section.landing-section.investors-support {
 .container.events .container.events-list#events-cal {
   margin-bottom: 250px; }
   .container.events .container.events-list#events-cal .events-list__show {
-    height: 450px;
+    min-height: 450px;
     padding: 0;
     background-color: rgba(232, 237, 240, 0.94); }
     .container.events .container.events-list#events-cal .events-list__show h3 {
       text-align: center;
       font-size: 25px; }
+    .container.events .container.events-list#events-cal .events-list__show div.no-event {
+      padding-left: 20px; }
     .container.events .container.events-list#events-cal .events-list__show div.event {
       border-bottom: 2px solid #cacdce;
       padding-bottom: 15px;
@@ -1913,26 +1915,12 @@ section.landing-section.investors-support {
       background-color: rgba(60, 189, 13, 0.94); }
       .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__week-head tr td {
         color: #fff; }
-    .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr:nth-child(2) td:nth-child(5):after {
-      content: '●'; }
-    .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr:nth-child(2) td:nth-child(6):after {
-      content: '●●●'; }
     .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td {
       position: relative;
       font-size: 24px;
       font-weight: 300;
       border: 1px solid #cacdce;
       padding: 19px 0; }
-      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td:after {
-        content: ' ';
-        display: block;
-        width: 100%;
-        height: 5px;
-        position: absolute;
-        bottom: 17px;
-        font-size: 20px;
-        text-align: right;
-        color: #3cbd0d; }
       .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td:hover {
         background-color: #d8f2cf;
         color: #757575; }
@@ -1940,6 +1928,27 @@ section.landing-section.investors-support {
         background-color: #d8f2cf; }
       .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td.ic__day-empty {
         background: #fff !important; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td .day-dots {
+        position: absolute;
+        font-size: 12px;
+        height: 10px;
+        width: 100%;
+        right: 0;
+        bottom: 5px;
+        text-align: right; }
+        .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td .day-dots span {
+          display: inline-block;
+          width: 5px;
+          height: 5px;
+          border-radius: 50px;
+          background-color: #41c122;
+          margin-right: 3px; }
+      .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td.ic__day_state_selected {
+        background-color: #41c122;
+        border: 2px solid #41c122;
+        color: #fff; }
+        .container.events .container.events-list#events-cal .events-list__calendar .ic__container .ic__days tr td.ic__day_state_selected .day-dots span {
+          background-color: #FFF; }
 
 .private-investors.attention {
   margin: 0 auto;

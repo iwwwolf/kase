@@ -175,20 +175,143 @@ if($('#map').length>0){
 	});
 }
 //Мероприятия календарь
+//$(document).ready(function(){
+//	if($('.events-list__calendar-cal#calendar').length){
+//		$(".events-list__calendar-cal#calendar").ionCalendar({
+//			lang: "ru",
+//			sundayFirst: false,
+//			years: "5",
+//			hideArrows: true,
+//			format: "DD.MM.YYYY",
+//			onClick: function(date){
+//					alert('Это событие можно изменить в default.js, данные поля: '+date);
+//			}
+//		});
+//	}
+//});
 $(document).ready(function(){
-	if($('.events-list__calendar-cal#calendar').length){
-		$(".events-list__calendar-cal#calendar").ionCalendar({
+	var calendar = $('.events-list__calendar-cal#calendar');
+	if(calendar.length){
+		calendar.ionCalendar({
 			lang: "ru",
 			sundayFirst: false,
 			years: "5",
 			hideArrows: true,
 			format: "DD.MM.YYYY",
-			onClick: function(date){
-					alert('Это событие можно изменить в default.js, данные поля: '+date);
-			}
 		});
+		var dataDay = '';
+		var eventFlag = false;
+		var dataDayDots = '';
+		var today = false;
+		var eventsLength = allEvents.length;
+		function eventsDots(){
+			for(i=1 ; i<=9 ; i++){
+				for(j=1 ; j<8 ; j++){
+					calendar.find('tbody > tr:nth-child('+i+') td:nth-child('+j+')').append('<div class="day-dots"></div>');
+					var localDay = calendar.find('tbody > tr:nth-child('+i+') td:nth-child('+j+') .day-dots');
+					var localData = localDay.parent('td').attr('data-day');
+					for(k=0 ;  k<eventsLength;  k++){
+						if(allEvents[k].date == localData){
+							for(l=0 ;  l<allEvents[k].events.length; l++){
+								localDay.append('<span></span>')
+								calendar.find('tbody > tr:nth-child('+i+') td:nth-child('+j+')').addClass('evented');
+							}
+						}
+					}
+				}
+			}
+		}
+
+		function dayDescription(){
+			var block = $('.events-list__show');
+			block.html(' ');
+			block.fadeOut(1).fadeIn(500);
+			if(today == true){
+				block.append('<h3>Сегодня</h3>');
+			} else{
+				block.append('<h3>'+dataDay+'</h3>');
+			}
+			for(i=0;i<allEvents.length;i++){
+				if(allEvents[i].date == dataDay){
+					for(j=0;j<allEvents[i].events.length;j++){
+						block.append('<div class="event" id="'+(j+1)+'"><a href="'+allEvents[i].events[j].href+'"><div class="event__title"><div class="event__title-preview"><img src="images/'+allEvents[i].events[j].imageSrc+'"></div><div class="event__title-text"><p><b>'+allEvents[i].events[j].eventTitle+'</b><br><span>'+allEvents[i].events[j].eventTime+'</span></p></div></div><div class="event__description"><p>'+allEvents[i].events[j].eventText+'</p></a></div>');
+					}
+				}
+			}
+		}
+		function noDayDescription(){
+			var block = $('.events-list__show');
+			block.html(' ');
+			block.fadeOut(1).fadeIn(500);
+			if(today == true){
+				block.append('<h3>Сегодня</h3>');
+			} else{
+				block.append('<h3>'+dataDay+'</h3>');
+			}
+			block.append('<div class="no-event"><p>На этот день нет никаких мероприятий</p></div>');
+		}
+
+		function todayDescription(){
+			dataDay = calendar.find('.ic__day_state_current').attr('data-day');
+			today = true;
+			for(i=0;i<allEvents.length;i++){
+				if(allEvents[i].date == dataDay){
+					dayDescription();
+				} else {
+					noDayDescription();
+				}
+			}
+		}
+
+		function calendarStart(){
+			for(i=1 ; i<=9 ; i++){
+				calendar.find('.ic__days tr:nth-child('+i+')').attr('id', i);
+			}
+			calendar.find('.ic__prev').click(function(){
+				calendarListener();
+			});
+			calendar.find('.ic__next').click(function(){
+				calendarListener();
+			});
+			calendar.find('.ic__header select').on('change', function(){
+				calendarListener();
+			});
+			eventsDots();
+			calendar.find('.ic__day').click(function(){
+				today = false;
+				calendarListener();
+				dataDay = $(this).attr('data-day');
+				for(i=0;i<allEvents.length;i++){
+					if(allEvents[i].date == dataDay){
+						eventFlag = true;
+					}
+				}
+				if(eventFlag == true){
+					eventFlag = false;
+					dayDescription();
+				} else {
+					noDayDescription();
+				}
+			});
+		}
+		todayDescription();
+		function calendarListener(){
+			if($('.ic__day').length){
+				calendarStart();
+			} else {
+					setTimeOut(function(){
+						calendarStart();
+				}, 500);
+			}
+		}
+		calendarListener();
 	}
 });
+
+
+
+
+
 //Торговая информация
 $(document).ready(function(){
 	if($('.trade-information__donut').length){
