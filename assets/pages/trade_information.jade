@@ -31,6 +31,16 @@ block content
 									li: a(href="#") За что то другое
 									li: a(href="#") За что то другое
 									li: a(href="#") За что то другое
+						.small-dropdown.flex.accordion__hide-in-closed.period Год:
+							.dropdown
+								a.dropdown-link(href="#", data-toggle="dropdown", role="button") 2017
+								ul.dropdown-menu
+									li: a(href="#") 8888
+									li: a(href="#") 8888
+									li: a(href="#") 8888
+									li: a(href="#") 8888
+									li: a(href="#") 8888
+									li: a(href="#") 8888
 					.period__charts
 						.col-xs-12.col-sm-6.col-md-4.col-lg-1-5
 							.trade-information__donut-description
@@ -219,13 +229,6 @@ block content
 						.accordion__head
 							a.accordion__head-link(href="#") Рынок акций и паев
 								i.fa.fa-angle-down
-							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
-								.dropdown
-									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Акции и паи
-									ul.dropdown-menu
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
 						.accordion__body
 							table.sorting-table.table.table-striped
 								thead
@@ -288,13 +291,6 @@ block content
 						.accordion__head
 							a.accordion__head-link(href="#") Рынок корп. облигаций и МФО
 								i.fa.fa-angle-down
-							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
-								.dropdown
-									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Корпоративные облигации и ценные бумаги МФО
-									ul.dropdown-menu
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
 						.accordion__body
 							table.sorting-table.table.table-striped
 								thead
@@ -362,13 +358,6 @@ block content
 						.accordion__head
 							a.accordion__head-link(href="#") Рынок операций РЕПО
 								i.fa.fa-angle-down
-							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
-								.dropdown
-									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Рынок операций репо
-									ul.dropdown-menu
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
 						.accordion__body
 							table.sorting-table.table.table-striped
 								thead
@@ -490,13 +479,6 @@ block content
 						.accordion__head
 							a.accordion__head-link(href="#") Иностранные валюты
 								i.fa.fa-angle-down
-							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
-								.dropdown
-									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Рынок операций репо
-									ul.dropdown-menu
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
 						.accordion__body
 							table.sorting-table.table.table-striped
 								thead
@@ -642,13 +624,6 @@ block content
 						.accordion__head
 							a.accordion__head-link(href="#") Деривативы
 								i.fa.fa-angle-down
-							.small-dropdown.flex.accordion__hide-in-closed Результаты торгов за 88.88.88
-								.dropdown
-									a.dropdown-link(href="#", data-toggle="dropdown", role="button") Деривативы
-									ul.dropdown-menu
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
-										li: a(href="#") Другая выборка
 						.accordion__body
 							table.sorting-table.table.table-striped
 								thead
@@ -690,8 +665,9 @@ block content
 
 
 block scripts
+	script(type="text/javascript" src="js/trade-informations-charts.js")
 	script(type="text/javascript").
-		document.addEventListener("DOMContentLoaded", function(event) { 
+		document.addEventListener("DOMContentLoaded", function(event) {
 			$('.sorting-table').DataTable({
 				scrollX: true,
 				paging: false,
@@ -703,3 +679,4 @@ block scripts
 				  }
 			});
 		});
+	
