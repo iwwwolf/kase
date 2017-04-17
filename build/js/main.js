@@ -790,15 +790,15 @@ $(document).ready(function(){
 	
 	/* раскрывающиеся блоки страницы */
 	
-	if($('.accordion').length){
+	//if($('.accordion').length){
 	
-		$('.accordion.closed').each(function(index, el){
+	//	$('.accordion.closed').each(function(index, el){
 	
-			$(el).find('.accordion__body').slideUp();
+	//		$(el).find('.accordion__body').slideUp();
 	
-		});
+	//	});
 	
-	}
+	//}
 	
 	$(document).on('click', '.accordion__head-link', function( e ){
 	
@@ -810,15 +810,17 @@ $(document).ready(function(){
 	
 		if(!parent.hasClass('closed')){
 	
-			parent.addClass('closed');
+				target.slideUp(function() {
 	
-			target.slideUp();
+						parent.addClass('closed');
+	
+				});
 	
 		} else {
 	
-			parent.removeClass('closed');
+				target.slideDown();
 	
-			target.slideDown();
+				parent.removeClass('closed');
 	
 		}
 	
@@ -895,7 +897,7 @@ $(document).ready(function(){
 	
 			slidesToShow: 2,
 	
-			slidesToScroll: 1,
+			slidesToScroll: 2,
 	
 			mobileFirst: true,
 	
@@ -939,13 +941,33 @@ $(document).ready(function(){
 	
 			      settings: {
 	
-			        slidesToShow: 5
+			        slidesToShow: 5,
+	
+							slidesToScroll: 5,
 	
 			      }
 	
 			    }
 	
 		    ]
+	
+		}).mousewheel(function(e) {
+	
+				e.preventDefault();
+	
+	
+	
+				if (e.deltaY < 0) {
+	
+						$(this).slick('slickNext');
+	
+				}
+	
+				else {
+	
+						$(this).slick('slickPrev');
+	
+				}
 	
 		});
 	
@@ -2294,7 +2316,7 @@ $(document).ready(function(){
 	
 				if(index == 0) {
 	
-					console.log($(this))
+					//console.log($(this))
 	
 					$($(this).find('.title a').attr('href')).fadeIn().addClass('');
 	
@@ -2644,24 +2666,24 @@ $(document).ready(function(){
 		
 	$('.datepicker').datepicker({
 	
-		language: "ru",
+			language: "ru",
 	
-	    autoclose: true,
+			autoclose: true,
 	
-	    todayHighlight: true,
+			todayHighlight: true,
 	
-	    endDate: "current"
+			endDate: "current",
 	
-	    //datesDisabled: KASE_HOLIDAYS
+			datesDisabled: KASE_HOLIDAYS
 	
 	});
 	
 		
 	$('input[name="daterange"]').daterangepicker({
 	
-		//"parentEl": '#getDate',
-	
 	    "autoApply": true,
+	
+	    "singleDatePicker": false,
 	
 	    "locale": {
 	
@@ -2677,51 +2699,9 @@ $(document).ready(function(){
 	
 	        "weekLabel": "Нед.",
 	
-	        "daysOfWeek": [
+	        "daysOfWeek": ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
 	
-	            "Вс",
-	
-	            "Пн",
-	
-	            "Вт",
-	
-	            "Ср",
-	
-	            "Чт",
-	
-	            "Пт",
-	
-	            "Сб"
-	
-	        ],
-	
-	        "monthNames": [
-	
-	            "Январь",
-	
-	            "Февраль",
-	
-	            "Март",
-	
-	            "Апрель",
-	
-	            "Май",
-	
-	            "Июнь",
-	
-	            "Июль",
-	
-	            "Август",
-	
-	            "Сентябрь",
-	
-	            "Октябрь",
-	
-	            "Ноябрь",
-	
-	            "Декабрь"
-	
-	        ],
+	        "monthNames": ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
 	
 	        "firstDay": 1
 	
@@ -2729,17 +2709,125 @@ $(document).ready(function(){
 	
 	    "linkedCalendars": false,
 	
-	    "startDate": "01/12/2016",
+	    "minDate": "17.11.1993",
 	
-	    "endDate": "07/12/2016",
+	    "maxDate": new Date(),
+	
+	    isInvalidDate: function (date) {
+	
+	        var thisMonth = date._d.getMonth()+1;   // Months are 0 based
+	
+	        if (thisMonth<10){
+	
+	            thisMonth = "0"+thisMonth; // Leading 0
+	
+	        }
+	
+	        var thisDate = date._d.getDate();
+	
+	        if (thisDate<10){
+	
+	            thisDate = "0"+thisDate; // Leading 0
+	
+	        }
+	
+	        var thisYear = date._d.getYear()+1900;   // Years are 1900 based
+	
+	        var thisCompare = thisDate +"."+ thisMonth +"."+ thisYear;
+	
+	        if($.inArray(thisCompare,KASE_HOLIDAYS)!=-1)
+	
+	        {
+	
+	            return true;
+	
+	        }
+	
+	        else
+	
+	        {
+	
+	            return false;
+	
+	        }
+	
+	    },
 	
 	    "opens": "left"
 	
 	}, function(start, end, label) {
 	
-	  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
-	
 	});
+	
+	
+	
+	if($('#datePicker').length){
+	
+	    $('#datePicker input').daterangepicker({
+	
+	        "singleDatePicker": true,
+	
+	        "showDropdowns": true,
+	
+	        "locale": {
+	
+	            "direction": "ltr",
+	
+	            "format": "DD.MM.YYYY",
+	
+	            "daysOfWeek": ["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
+	
+	            "monthNames": ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+	
+	            "firstDay": 1
+	
+	        },
+	
+	        "minDate": "17.11.1993",
+	
+	        "maxDate": new Date(),
+	
+	        isInvalidDate: function (date) {
+	
+	            var thisMonth = date._d.getMonth()+1;   // Months are 0 based
+	
+	            if (thisMonth<10){
+	
+	                thisMonth = "0"+thisMonth; // Leading 0
+	
+	            }
+	
+	            var thisDate = date._d.getDate();
+	
+	            if (thisDate<10){
+	
+	                thisDate = "0"+thisDate; // Leading 0
+	
+	            }
+	
+	            var thisYear = date._d.getYear()+1900;   // Years are 1900 based
+	
+	
+	
+	            var thisCompare = thisDate +"."+ thisMonth +"."+ thisYear;
+	
+	
+	
+	            if($.inArray(thisCompare,KASE_HOLIDAYS)!=-1){
+	
+	                return date._pf = {userInvalidated: true};
+	
+	            }
+	
+	        },
+	
+	        "parentEl": "#datePicker"
+	
+	    }, function(start, end, label) {
+	
+	    }).focus();
+	
+	}
 	
 		
 	if($('#datePicker-events').length){

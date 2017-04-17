@@ -1,19 +1,20 @@
 /* раскрывающиеся блоки страницы */
-if($('.accordion').length){
-	$('.accordion.closed').each(function(index, el){
-		$(el).find('.accordion__body').slideUp();
-	});
-}
+//if($('.accordion').length){
+//	$('.accordion.closed').each(function(index, el){
+//		$(el).find('.accordion__body').slideUp();
+//	});
+//}
 $(document).on('click', '.accordion__head-link', function( e ){
 	var parent = $(this).parents('.accordion');
 	var target = parent.find('.accordion__body');
 	e.preventDefault();
 	if(!parent.hasClass('closed')){
-		parent.addClass('closed');
-		target.slideUp();
+			target.slideUp(function() {
+					parent.addClass('closed');
+			});
 	} else {
-		parent.removeClass('closed');
-		target.slideDown();
+			target.slideDown();
+			parent.removeClass('closed');
 	}
 });
 

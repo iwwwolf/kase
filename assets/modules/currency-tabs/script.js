@@ -13,7 +13,7 @@ $("#currencyTabs .currency-tabs__item a").click(function(e) {
 if($('#currencyTabs').length){
 	$('#currencyTabs').slick({
 		slidesToShow: 2,
-		slidesToScroll: 1,
+		slidesToScroll: 2,
 		mobileFirst: true,
 		infinite: false,
 		dots: true,
@@ -35,9 +35,19 @@ if($('#currencyTabs').length){
 		    {
 		      breakpoint: 850,
 		      settings: {
-		        slidesToShow: 5
+		        slidesToShow: 5,
+						slidesToScroll: 5,
 		      }
 		    }
 	    ]
+	}).mousewheel(function(e) {
+			e.preventDefault();
+
+			if (e.deltaY < 0) {
+					$(this).slick('slickNext');
+			}
+			else {
+					$(this).slick('slickPrev');
+			}
 	});
 }

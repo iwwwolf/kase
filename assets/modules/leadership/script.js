@@ -38,7 +38,7 @@ if($('#leadership').length) {
 	if(winWidth >= 992) {
 		$('#leadership .leadership__nav-item').each(function(index, obj){
 			if(index == 0) {
-				console.log($(this))
+				//console.log($(this))
 				$($(this).find('.title a').attr('href')).fadeIn().addClass('');
 				$(this).addClass('active');
 			}
